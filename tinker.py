@@ -27,9 +27,9 @@ class debugger():
 	def parsePrintArray(self, printObj):
 		# Prints array for parsing, in Excel or something
 		# time real imaginary magnitude, space-delineated, with those headings at the top
-		self.localPrint("time real imaginary magnitude")
+		self.localPrint("Time,Real Component,Imaginary Component,Magnitude")
 		for a in range(0, len(printObj)):
-			self.localPrint("{} {} {} {}".format(a, printObj[a].real, printObj[a].imag, np.sqrt((printObj[a].real*printObj[a].real)+(printObj[a].imag*printObj[a].imag))))
+			self.localPrint("{},{},{},{}".format(a, printObj[a].real, printObj[a].imag, np.sqrt((printObj[a].real*printObj[a].real)+(printObj[a].imag*printObj[a].imag))))
 
 	def localPrint(self, msg):
 		if(self.printFile!=None):
