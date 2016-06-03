@@ -30,7 +30,6 @@ def writeSample(name, data, sampleRate=44100):
 
 # Doing my tinkering
 db = debugger()
-
 srcData = readSample("440hz")
 
 fftD = np.fft.fft(srcData[1], int(44100/2))
@@ -39,4 +38,4 @@ db.parsePrintArray(fftD)
 
 scaled = scaleData(fftD)
 
-writeSample("output", scaled, srcData[0])
+# writeSample("output", scaled, srcData[0])
