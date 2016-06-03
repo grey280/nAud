@@ -56,14 +56,8 @@ parser.add_argument('i', metavar='I', nargs=1, type=str, default="440hz", help='
 parser.add_argument('-l', nargs='?', type=argparse.FileType('w'), default=sys.stdout, help='file to write logs to')
 args = parser.parse_args()
 dbug = debugger(args.l)
-dbug.localPrint("Debugger initialized.")
 srcData = readSample(args.i[0])
-dbug.localPrint("Sample read")
-
-dbug.debugPrintArray(srcData, "Source Data Wrapper")
-dbug.debugPrintArray(srcData[1], "Source Data")
 
 fftD = np.fft.fft(srcData[1], int(44100/2))
-dbug.localPrint("FFT complete")
 
 dbug.parsePrintArray(fftD)
