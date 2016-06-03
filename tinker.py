@@ -1,6 +1,8 @@
 import numpy				as np
 import scipy.io.wavfile		as wav
 
+
+# Helper Functions
 def debugPrintArray(printObj, message="Debug Print: "):
 	print(message)
 	print("		Type: {}".format(type(printObj)))
@@ -17,14 +19,24 @@ def altPrintArray(printObj):
 	for a in range(0, len(printObj)):
 		print("{} {} {} {}".format(a, printObj[a].real, printObj[a].imag, np.sqrt((printObj[a].real*printObj[a].real)+(printObj[a].imag*printObj[a].imag))))
 
+def readSample(name):
+	temp = "samples/{}.wav".format(name)
+	return wav.read(temp)
 
+def scaleData(data):
+	return np.int16(data.real/np.max(np.abs(data.real)) * 32767)
 
-srcData = wav.read("samples/440hz.wav")
+def writeSample(name, data, sampleRate=44100):
+	temp = "output/{}.wav".format(name)
+	wav.write(temp, sampleRate, data)
+
+# Doing my tinkering
+srcData = readSample("440hz")
 
 fftD = np.fft.fft(srcData[1], int(44100/2))
 
 altPrintArray(fftD)
 
-scaled = np.int16(fftD.real/np.max(np.abs(fftD.real)) * 32767)
+scaled = scaleData(fftD)
 
-# wav.write("output.wav", srcData[0], scaled)
+writeSample("output", scaled, srcData[0])
