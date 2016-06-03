@@ -3,18 +3,18 @@ import scipy.io.wavfile		as wav
 
 
 class debugger():
-	def debugPrintArray(self, printObj, message="Debug Print: "):
+	def debugPrintArray(self, printObj, message="Debug: "):
 		# Prints a neatly-formatted readout in style:
-		# message
-		#	Type: (type information)
-		#	Item Types: (type of array items)
-		#	Size: (size of array)
-		#	(array)
-		print(message)
-		print("		Type: {}".format(type(printObj)))
-		print("		Item Types: {}".format(type(printObj[0])))
-		print("		Size: {}".format(len(printObj)))
-		print("		{}".format(printObj))
+		# ############### (message)
+		# Type: (type information)
+		# Item Types: (type of array items)
+		# Size: (size of array)
+		# (array)
+		print("############### {}".format(message))
+		print("Type: {}".format(type(printObj)))
+		print("Item Types: {}".format(type(printObj[0])))
+		print("Size: {}".format(len(printObj)))
+		print("{}".format(printObj))
 
 	def parsePrintArray(self, printObj):
 		# Prints array for parsing, in Excel or something
@@ -29,6 +29,7 @@ def readSample(name):
 	return wav.read(temp)
 
 def scaleData(data):
+	# Scales data for output via scipy.io.wavfile: converts real components to integers
 	return np.int16(data.real/np.max(np.abs(data.real)) * 32767)
 
 def writeSample(name, data, sampleRate=44100):
