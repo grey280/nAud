@@ -54,6 +54,7 @@ def writeSample(name, data, sampleRate=44100):
 parser = argparse.ArgumentParser(description='Run an FFT on a sample.')
 parser.add_argument('i', metavar='I', nargs=1, type=str, default="440hz", help='name of sample to process (reads samples/[I].wav')
 parser.add_argument('-l', nargs='?', type=argparse.FileType('w'), default=sys.stdout, help='file to write logs to')
+# parser.add_argument('-o', nargs='?', type=str, default=None, help='file to write audio output to (writes output/[O].wav')
 args = parser.parse_args()
 dbug = debugger(args.l)
 srcData = readSample(args.i[0])
