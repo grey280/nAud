@@ -12,10 +12,6 @@ class debugger():
 		print("		{}".format(printObj))
 
 	def parsePrintArray(self, printObj):
-		for a in printObj:
-			print("{} {}".format(a.real, a.imag))
-
-	def altPrintArray(self, printObj):
 		print("time real imaginary magnitude")
 		for a in range(0, len(printObj)):
 			print("{} {} {} {}".format(a, printObj[a].real, printObj[a].imag, np.sqrt((printObj[a].real*printObj[a].real)+(printObj[a].imag*printObj[a].imag))))
@@ -39,7 +35,7 @@ srcData = readSample("440hz")
 
 fftD = np.fft.fft(srcData[1], int(44100/2))
 
-db.altPrintArray(fftD)
+db.parsePrintArray(fftD)
 
 scaled = scaleData(fftD)
 
