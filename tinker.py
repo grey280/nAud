@@ -2,9 +2,14 @@ import numpy				as np
 import scipy.io.wavfile		as wav
 
 
-# Debug stuff
 class debugger():
 	def debugPrintArray(self, printObj, message="Debug Print: "):
+		# Prints a neatly-formatted readout in style:
+		# message
+		#	Type: (type information)
+		#	Item Types: (type of array items)
+		#	Size: (size of array)
+		#	(array)
 		print(message)
 		print("		Type: {}".format(type(printObj)))
 		print("		Item Types: {}".format(type(printObj[0])))
@@ -12,11 +17,13 @@ class debugger():
 		print("		{}".format(printObj))
 
 	def parsePrintArray(self, printObj):
+		# Prints array for parsing, in Excel or something
+		# time real imaginary magnitude, space-delineated, with those headings at the top
 		print("time real imaginary magnitude")
 		for a in range(0, len(printObj)):
 			print("{} {} {} {}".format(a, printObj[a].real, printObj[a].imag, np.sqrt((printObj[a].real*printObj[a].real)+(printObj[a].imag*printObj[a].imag))))
 
-# Helper Functions
+# Helper functions
 def readSample(name):
 	temp = "samples/{}.wav".format(name)
 	return wav.read(temp)
@@ -29,12 +36,12 @@ def writeSample(name, data, sampleRate=44100):
 	wav.write(temp, sampleRate, data)
 
 # Doing my tinkering
-db = debugger()
+dbug = debugger()
 srcData = readSample("440hz")
 
 fftD = np.fft.fft(srcData[1], int(44100/2))
 
-db.parsePrintArray(fftD)
+dbug.parsePrintArray(fftD)
 
 scaled = scaleData(fftD)
 
