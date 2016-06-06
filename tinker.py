@@ -48,7 +48,7 @@ def scale_data(data):
 
 # Load variables and whatnot
 parser = argparse.ArgumentParser(description='Run an FFT on a sample.')
-parser.add_argument('i', metavar='I', nargs=1, type=str, default="440hz", help='name of sample to process (reads samples/[I].wav')
+parser.add_argument('i', metavar='I', nargs=1, type=str, default="440hz", help='name of sample to process (reads samples/[I].wav)')
 parser.add_argument('-l', nargs='?', type=argparse.FileType('w'), default=sys.stdout, help='file to write logs to')
 args = parser.parse_args()
 dbug = debugger(args.l)
