@@ -9,9 +9,34 @@ import plistlib
 # (The fact that Apple is using such a *weird* way of storing data for iTunes is really just par
 #  for the course, with iTunes.)
 
+# Helper functions
+def list_kinds(dataSet):
+	kinds = set()
+	for track, data in dataSet.items():
+		kinds.add(data.get("Kind", "Unknown kind"))
+
+	return kinds
+
+def print_track_metadata(track, data):
+	# have to use .get with default, because if there's no data then it'll just crash
+	kind = data.get("Kind", "Unknown kind")
+	if kind.endswith("audio file"):			# Only print songs - videos and stuff are mixed in with the raw data
+		genre = data.get("Genre", "unknown")
+		year = data.get("Year", "unknown")
+		bit_rate = data.get("Bit Rate", "unknown")
+		artist = data.get("Artist", "unknown artist")
+		name = data.get("Name", "Unknown name")
+		rating = data.get("Rating", 0)
+		rating = int(rating/20)
+		print("{} ({}) by {}. {}. {} kbps. {}/5".format(name, year, artist, genre, bit_rate, rating))
+
+
+# Import data
 data = plistlib.readPlist("./data/iTunes.plist")
 tracks = data["Tracks"]			# extricate the only part we actually care about
 
+
+
+# Print data
 for track, data in tracks.items():
-	if data.get("Year", 0)==2016: # have to use .get with default, because if there's no data then it'll just crash
-		print(data)
+	print_track_metadata(track, data)
