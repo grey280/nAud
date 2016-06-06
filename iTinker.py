@@ -35,8 +35,6 @@ def print_track_metadata(track, data):
 data = plistlib.readPlist("./data/iTunes.plist")
 tracks = data["Tracks"]			# extricate the only part we actually care about
 
-
-
 # Print data
 for track, data in tracks.items():
 	print_track_metadata(track, data)
