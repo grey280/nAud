@@ -39,13 +39,13 @@ def scale_rating(rating):
 	return float(rating/100)
 
 # Data handling class
-class Data_set(inpt):
+class Data_set:
 	start = 0
 	label = []
-	def __init__(self):
+	def __init__(self, inpt):
 		# initializer converts from the dictionary to an array, so I can iterate more easily
 		self.data=[]
-		for track, dt in inpt:
+		for track, dt in inpt.items():
 			self.data.append(dt)
 
 	def next_batch(self, batch_size):
@@ -100,6 +100,9 @@ def fill_feed_dict(data_obj, input_pl, rating_pl):
 
 tracks = plistlib.readPlist(input_data)["Tracks"]
 debug("Read plist")
+
+data_set = Data_set(tracks)
+debug("Data set created.")
 
 # [x] There are 55 genres in my iTunes library, use that as the scale (alphabetical order?)
 #		Just gonna use the same function as I'm using for artist/title
