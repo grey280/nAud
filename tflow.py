@@ -20,7 +20,7 @@ def scale_year(year):
 	return abs(float(year/2016))
 
 
-# Import data
+# Read in data to process
 data = plistlib.readPlist("./data/iTunes.plist")
 tracks = data["Tracks"]			# extricate the only part we actually care about
 
