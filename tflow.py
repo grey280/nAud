@@ -1,6 +1,11 @@
 import plistlib
 import tensorflow	as tf
 
+# Variables
+batch_size = 100
+input_data = "data/iTunes.plist"
+
+
 # Helper Functions
 def string_to_float(original_name):
 	# Convert a string to a float: not a *strict* mapping algorithm, but probably close enough to work
@@ -21,14 +26,17 @@ def scale_year(year):
 
 # TensorFlow Helper Funtions
 def create_placeholders(batch_size):
-	genre_placeholder = tf.placeholder(tf.float32)
-	year_placeholder = tf.placeholder(tf.float32)
-	bitrate_placeholder = tf.placeholder(tf.float32)
-	artist_placeholder = tf.placeholder(tf.float32)
-	title_placeholder = tf.placeholder(tf.float32)
+	input_placeholder = tf.placeholder(tf.float32, shape=(6, batch_size))
+	# make it a single placeholder that's wide, reads in each value as part of that one tensor
+	# genre_placeholder = tf.placeholder(tf.float32, shape=())
+	# year_placeholder = tf.placeholder(tf.float32)
+	# bitrate_placeholder = tf.placeholder(tf.float32)
+	# artist_placeholder = tf.placeholder(tf.float32)
+	# title_placeholder = tf.placeholder(tf.float32)
 
-	rating_placeholder = tf.placeholder(tf.float32)
-	return genre_placeholder, year_placeholder, bitrate_placeholder, artist_placeholder, title_placeholder
+	rating_placeholder = tf.placeholder(tf.float32, shape=(batch_size))
+	# return genre_placeholder, year_placeholder, bitrate_placeholder, artist_placeholder, title_placeholder
+	return input_placeholder, rating_placeholder
 
 
 def fill_feed_dict(data_set, genre_pl, year_pl, bitrate_pl, artist_pl, title_pl, rating_pl):
@@ -46,8 +54,7 @@ def fill_feed_dict(data_set, genre_pl, year_pl, bitrate_pl, artist_pl, title_pl,
 
 
 # Read in data to process
-data = plistlib.readPlist("./data/iTunes.plist")
-tracks = data["Tracks"]			# extricate the only part we actually care about
+tracks = plistlib.readPlist(input_data)["Tracks"]
 
 # [x] There are 55 genres in my iTunes library, use that as the scale (alphabetical order?)
 #		Just gonna use the same function as I'm using for artist/title
@@ -59,5 +66,5 @@ tracks = data["Tracks"]			# extricate the only part we actually care about
 
 # Ratings go from 0 to 5, inclusive
 
-
-
+input_placeholder, rating_placeholder = create_placeholders(batch_size)
+# 100 is a magic number for now, I just haven't figured out what the batch size is
