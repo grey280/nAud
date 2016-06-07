@@ -49,4 +49,5 @@ tracks = data["Tracks"]			# extricate the only part we actually care about
 
 # Print data
 for track, data in tracks.items():
-	print_track_metadata_csv(track, data)
+	print("name,year,artist,genre,bit_rate,rating")
+	print_track_metadata_CSV(track, data)
