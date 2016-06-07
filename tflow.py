@@ -49,19 +49,22 @@ def create_placeholders(batch_size):
 	return input_placeholder, rating_placeholder
 
 
-def fill_feed_dict(data_set, genre_pl, year_pl, bitrate_pl, artist_pl, title_pl, rating_pl):
+def fill_feed_dict(data_set, input_pl, rating_pl):
 	# TODO insert code to actually fill in the various _feed variables
 	#		They should each be a tensor of values
-	debug("Filling feed diciontary based on various inputs.")
+	debug("Filling feed dictionary based on various inputs.")
 	feed_dict = {
-		genre_pl: genre_feed,
-		year_pl: year_feed,
-		bitrate_pl: bitrate_feed,
-		artist_pl: artist_feed,
-		title_pl: title_feed,
+		input_pl: input_feed,
 		rating_pl: rating_feed,
 	}
 	return feed_dict
+
+class Data_set(inpt):
+	start = 0
+	label = []
+	def __init__(self):
+		self.data = inpt
+
 
 tracks = plistlib.readPlist(input_data)["Tracks"]
 debug("Read plist")
