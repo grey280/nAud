@@ -30,6 +30,18 @@ def print_track_metadata(track, data):
 		rating = int(rating/20)
 		print("{} ({}) by {}. {}. {} kbps. {}/5".format(name, year, artist, genre, bit_rate, rating))
 
+def print_track_metadata_CSV(track, data):
+	kind = data.get("Kind", "Unknown kind")
+	if kind.endswith("audio file"):
+		genre = data.get("Genre", "unknown")
+		year = data.get("Year", "unknown")
+		bit_rate = data.get("Bit Rate", "unknown")
+		artist = data.get("Artist", "unknown artist")
+		name = data.get("Name", "Unknown name")
+		rating = data.get("Rating", 0)
+		rating = int(rating/20)
+		print("{},{},{},{},{},{}".format(name, year, artist, genre, bit_rate, rating))
+
 
 # Import data
 data = plistlib.readPlist("./data/iTunes.plist")
@@ -37,4 +49,4 @@ tracks = data["Tracks"]			# extricate the only part we actually care about
 
 # Print data
 for track, data in tracks.items():
-	print_track_metadata(track, data)
+	print_track_metadata_csv(track, data)
