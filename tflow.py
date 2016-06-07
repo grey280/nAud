@@ -35,9 +35,3 @@ tracks = data["Tracks"]			# extricate the only part we actually care about
 # [x] Do the same for the song title
 
 # Ratings go from 0 to 5, inclusive
-
-
-# Print the data to make sure string_to_float works
-# for track, data in tracks.items():
-# 	n = data.get("Name", "Unknown name")
-# 	print("{}: {}".format(n, string_to_float(n)))
