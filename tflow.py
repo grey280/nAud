@@ -1,5 +1,5 @@
 import plistlib
-# import tensorflow	as tf
+import tensorflow	as tf
 
 # Helper Functions
 def string_to_float(original_name):
@@ -19,12 +19,35 @@ def scale_year(year):
 	# Scale year into a float; using 2016 as it's now, abs as some people have REALLY old music
 	return abs(float(year/2016))
 
+# TensorFlow Helper Funtions
+def create_placeholders(batch_size):
+	genre_placeholder = tf.placeholder(tf.float32)
+	year_placeholder = tf.placeholder(tf.float32)
+	bitrate_placeholder = tf.placeholder(tf.float32)
+	artist_placeholder = tf.placeholder(tf.float32)
+	title_placeholder = tf.placeholder(tf.float32)
+
+	rating_placeholder = tf.placeholder(tf.float32)
+	return genre_placeholder, year_placeholder, bitrate_placeholder, artist_placeholder, title_placeholder
+
+
+def fill_feed_dict(data_set, genre_pl, year_pl, bitrate_pl, artist_pl, title_pl, rating_pl):
+	# TODO insert code to actually fill in the various _feed variables
+	#		They should each be a tensor of values
+	feed_dict = {
+		genre_pl: genre_feed,
+		year_pl: year_feed,
+		bitrate_pl: bitrate_feed,
+		artist_pl: artist_feed,
+		title_pl: title_feed,
+		rating_pl: rating_feed,
+	}
+	return feed_dict
+
 
 # Read in data to process
 data = plistlib.readPlist("./data/iTunes.plist")
 tracks = data["Tracks"]			# extricate the only part we actually care about
-
-
 
 # [x] There are 55 genres in my iTunes library, use that as the scale (alphabetical order?)
 #		Just gonna use the same function as I'm using for artist/title
@@ -35,3 +58,6 @@ tracks = data["Tracks"]			# extricate the only part we actually care about
 # [x] Do the same for the song title
 
 # Ratings go from 0 to 5, inclusive
+
+
+
