@@ -33,37 +33,69 @@ def scale_year(year):
 	debug("Scaling year: {}".format(year))
 	return abs(float(year/2016))
 
+def scale_rating(rating):
+	# Given a rating in /100 format, convert it to [0,1] range
+	debug("Scaling rating: {}".format(rating))
+	return float(rating/100)
+
+# Data handling class
+class Data_set(inpt):
+	start = 0
+	label = []
+	def __init__(self):
+		# initializer converts from the dictionary to an array, so I can iterate more easily
+		self.data=[]
+		for track, dt in inpt:
+			self.data.append(dt)
+
+	def next_batch(self, batch_size):
+		if (start+batch_size)>len(data):
+			start = 0 # reset for next epoch, I suppose?
+			return # you're done! this will probably crash at the moment but oh well
+		# expected return: input_feed, rating_feed
+		input_feed = []
+		rating_feed = []
+		for i in range(batch_size):
+			data_point = self.data[i+start]
+			genre = data_point.get("Genre", "Unknown genre")
+			year = data_point.get("Year", "unknown")
+			bit_rate = data_point.get("Bit Rate", "unknown")
+			artist = data_point.get("Artist", "unknown artist")
+			title = data_point.get("Name", "Unknown name")
+			rating = data_point.get("Rating", 0)
+			rating = scale_rating(rating)
+			this_one = [genre, year, bit_rate, artist, title]
+			input_feed.append(this_one)
+			rating_feed.append(rating)
+		start += batch_size
+
+
 # TensorFlow Helper Funtions
 def create_placeholders(batch_size):
 	debug("Creating placeholders with batch size {}".format(batch_size))
-	input_placeholder = tf.placeholder(tf.float32, shape=(6, batch_size))
+	input_placeholder = tf.placeholder(tf.float32, shape=(batch_size, 6))
 	# make it a single placeholder that's wide, reads in each value as part of that one tensor
-	# genre_placeholder = tf.placeholder(tf.float32, shape=())
-	# year_placeholder = tf.placeholder(tf.float32)
-	# bitrate_placeholder = tf.placeholder(tf.float32)
-	# artist_placeholder = tf.placeholder(tf.float32)
-	# title_placeholder = tf.placeholder(tf.float32)
+	# used to be lots of placeholders, if I didn't do it like that:
+		# genre_placeholder = tf.placeholder(tf.float32, shape=())
+		# year_placeholder = tf.placeholder(tf.float32)
+		# bitrate_placeholder = tf.placeholder(tf.float32)
+		# artist_placeholder = tf.placeholder(tf.float32)
+		# title_placeholder = tf.placeholder(tf.float32)
 
 	rating_placeholder = tf.placeholder(tf.float32, shape=(batch_size))
-	# return genre_placeholder, year_placeholder, bitrate_placeholder, artist_placeholder, title_placeholder
 	return input_placeholder, rating_placeholder
 
 
-def fill_feed_dict(data_set, input_pl, rating_pl):
+def fill_feed_dict(data_obj, input_pl, rating_pl):
 	# TODO insert code to actually fill in the various _feed variables
 	#		They should each be a tensor of values
-	debug("Filling feed dictionary based on various inputs.")
+	debug("Filling feed dictionary, batch size: {}".format(batch_size))
+	input_feed, rating_feed = data_obj.next_batch(batch_size)
 	feed_dict = {
 		input_pl: input_feed,
 		rating_pl: rating_feed,
 	}
 	return feed_dict
-
-class Data_set(inpt):
-	start = 0
-	label = []
-	def __init__(self):
-		self.data = inpt
 
 
 tracks = plistlib.readPlist(input_data)["Tracks"]
