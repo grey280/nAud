@@ -80,9 +80,9 @@ debug("End: read plist")
 data_set = Data_set(tracks)
 debug("Data set created.")
 
-# Build Keras model
+# Build Keras model; based on one of the tutorial ones bc why not
 model = Sequential()
-model.add(Dense(64, input_dim=5, init='uniform'))
+model.add(Dense(64, input_dim=5, init='uniform')) # 5-dim input: genre,year,bit_rate,artist,title, float-ified
 model.add(Activation('tanh'))
 model.add(Dropout(0.5))
 model.add(Dense(64, init='uniform'))
