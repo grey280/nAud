@@ -1,9 +1,10 @@
 from keras.models import Sequential
-from keras.layers import Dense, Activation
+from keras.layers import Dense, Dropout, Activation
+from keras.optimizers import SGD
 import plistlib
 
 # Variables
-debug_mode = False
+debug_mode = True
 batch_size = 100
 input_data = "data/iTunes.plist"
 
@@ -48,6 +49,7 @@ class Data_set:
 		self.data=[]
 		for track, dt in inpt.items():
 			self.data.append(dt)
+		debug("Initializing data set object")
 
 	def next_batch(self, batch_size):
 		if (start+batch_size)>len(data):
@@ -71,8 +73,28 @@ class Data_set:
 		start += batch_size
 
 # Input handling
+debug("Start: read plist")
 tracks = plistlib.readPlist(input_data)["Tracks"]
-debug("Read plist")
+debug("End: read plist")
 
 data_set = Data_set(tracks)
 debug("Data set created.")
+
+# Build Keras model
+model = Sequential()
+model.add(Dense(64, input_dim=5, init='uniform'))
+model.add(Activation('tanh'))
+model.add(Dropout(0.5))
+model.add(Dense(64, init='uniform'))
+model.add(Activation('tanh'))
+model.add(Dropout(0.5))
+model.add(Dense(10, init='uniform'))
+model.add(Activation('softmax'))
+
+sgd = SGD(lr=0.1, decay=1e-6, momentum=0.9, nesterov=True)
+model.compile(loss='categorical_crossentropy', optimizer=sgd, metrics=['accuracy'])
+
+debug("Model and SGD prepared.")
+
+# model.fit(X-train, y_train, nb_epoch=20, batch_size=16)
+# score = model.evaluate(X_test, y_test, batch_size=16)
