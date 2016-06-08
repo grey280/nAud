@@ -41,17 +41,17 @@ d.debug_level = 3
 d.verbose("Verbose test 2")
 
 # Import data
-# data = plistlib.readPlist("./data/iTunes.xml")
-# tracks = data["Tracks"]			# extricate the only part we actually care about
+data = plistlib.readPlist("./data/iTunes.xml")
+tracks = data["Tracks"]			# extricate the only part we actually care about
 
-# # Print data
-# totalPlays = 0
-# totalSkips = 0
+# Print data
+totalPlays = 0
+totalSkips = 0
 
-# for track, data in tracks.items():
-# 	print_track_metadata(track, data)
-# 	totalPlays += data.get("Play Count",0)
-# 	totalSkips += data.get("Skip Count",0)
+for track, data in tracks.items():
+	print_track_metadata(track, data)
+	totalPlays += data.get("Play Count",0)
+	totalSkips += data.get("Skip Count",0)
 
-# print("Total Plays: {}".format(totalPlays))
-# print("Total Skips: {}".format(totalSkips))
+print("Total Plays: {}".format(totalPlays))
+print("Total Skips: {}".format(totalSkips))

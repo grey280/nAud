@@ -34,6 +34,16 @@ def scale_year(year):
 	d.verbose("Scaling year: {}".format(year))
 	return abs(float(year/2016))
 
+def scale_plays(plays):
+	# Total plays as of 2016-06-08 16:39: 91978
+	d.verbose("Scaling plays: {}".format(plays))
+	return float(plays/100000)
+
+def scale_skips(skips):
+	# Total skips as of 2016-06-08 16:39: 4327
+	d.verbose("Scaling skips: {}".format(skips))
+	return float(skips/5000)
+
 def scale_rating(rating):
 	# Given a rating in /100 format, convert it to [0,1] range
 	d.verbose("Scaling rating: {}".format(rating))
@@ -79,10 +89,16 @@ class Data_set:
 			title = data_point.get("Name", "Unknown name")
 			title = string_to_float(title)
 
+			play_count = data_point.get("Play Count", 0)
+			play_count = scale_plays(play_count)
+
+			skip_count = data_point.get("Skip Count", 0)
+			skip_count = scale_skips(skip_count)
+
 			rating = data_point.get("Rating", 0)
 			rating = scale_rating(rating)
 
-			this_one = [genre, year, bit_rate, artist, title]
+			this_one = [genre, year, bit_rate, artist, title, play_count, skip_count]
 			input_feed.append(this_one)
 			rating_feed.append(rating)
 		self.start += batch_size
@@ -127,7 +143,7 @@ d.debug("Converted to numpy ndarrays. Train points: {}. Test points: {}".format(
 
 # Build Keras model; based on one of the tutorial ones bc why not
 model = Sequential()
-model.add(Dense(64, input_dim=5 , init='uniform')) # 5-dim input: genre,year,bit_rate,artist,title, float-ified
+model.add(Dense(64, input_dim=7 , init='uniform')) # 5-dim input: genre,year,bit_rate,artist,title, float-ified
 model.add(Activation('tanh'))
 model.add(Dropout(0.5))
 model.add(Dense(64, init='uniform'))
@@ -142,7 +158,7 @@ model.compile(loss='categorical_crossentropy', optimizer=sgd, metrics=['accuracy
 d.debug("Model and SGD prepared.")
 model.summary()
 
-model.fit(X, y, nb_epoch=20, batch_size=16)
+model.fit(X, y, nb_epoch=50, batch_size=32)
 d.debug("Fit complete. Preparing to test.")
 score = model.evaluate(X_test, y_test, batch_size=16)
 d.debug("")
