@@ -14,28 +14,28 @@ d = gdebug.Debugger(debug_level = debug_mode)
 # Helper Functions
 def string_to_float(original_name):
 	# Convert a string to a float: not a *strict* mapping algorithm, but probably close enough to work
-	d.debug("Converting {} to float.".format(original_name))
+	d.verbose("Converting {} to float.".format(original_name))
 	multiplier = 0.01
 	outvar = 0.1
 	for c in original_name:
 		outvar = outvar + (multiplier * (ord(c) - 70))
 		multiplier = multiplier * 0.1
-	d.debug("		Result: {}".format(abs(outvar)))
+	d.verbose("		Result: {}".format(abs(outvar)))
 	return abs(outvar)
 
 def scale_bit_rate(bit_rate):
 	# Scale bitrate into a float; using 1500 as the peak value bc 1411 is the highest in my library
-	d.debug("Scaling bit rate: {}".format(bit_rate))
+	d.verbose("Scaling bit rate: {}".format(bit_rate))
 	return float(bit_rate/1500)
 
 def scale_year(year):
 	# Scale year into a float; using 2016 as it's now, abs as some people have REALLY old music
-	d.debug("Scaling year: {}".format(year))
+	d.verbose("Scaling year: {}".format(year))
 	return abs(float(year/2016))
 
 def scale_rating(rating):
 	# Given a rating in /100 format, convert it to [0,1] range
-	d.debug("Scaling rating: {}".format(rating))
+	d.verbose("Scaling rating: {}".format(rating))
 	return float(rating/100)
 
 # Data handling class
@@ -76,7 +76,7 @@ tracks = plistlib.readPlist(input_data)["Tracks"]
 d.debug("End: read plist")
 
 data_set = Data_set(tracks)
-d.debug("Data set created.")
+d.verbose("Data set created.")
 
 # Build Keras model; based on one of the tutorial ones bc why not
 model = Sequential()
