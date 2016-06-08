@@ -1,4 +1,4 @@
-# gDebug: my own local debugging stuff
+# gDebug: my own local debugging stuff, so I can be slightly fancier about this
 
 class Debugger:
 	def __init__(self, debug_level=0):
