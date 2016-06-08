@@ -2,42 +2,40 @@ from keras.models import Sequential
 from keras.layers import Dense, Dropout, Activation
 from keras.optimizers import SGD
 import plistlib
+import gdebug
 
 # Variables
-debug_mode = True
+debug_mode = 2 # 0: silent, 1: errors only, 2: normal, 3: verbose
 batch_size = 100
 input_data = "data/iTunes.plist"
 
-# Helper Functions
-def debug(string):
-	# I'm lazy, okay?
-	if debug_mode:
-		print(string)
+d = gdebug.Debugger(debug_level = debug_mode)
 
+# Helper Functions
 def string_to_float(original_name):
 	# Convert a string to a float: not a *strict* mapping algorithm, but probably close enough to work
-	debug("Converting {} to float.".format(original_name))
+	d.debug("Converting {} to float.".format(original_name))
 	multiplier = 0.01
 	outvar = 0.1
 	for c in original_name:
 		outvar = outvar + (multiplier * (ord(c) - 70))
 		multiplier = multiplier * 0.1
-	debug("		Result: {}".format(abs(outvar)))
+	d.debug("		Result: {}".format(abs(outvar)))
 	return abs(outvar)
 
 def scale_bit_rate(bit_rate):
 	# Scale bitrate into a float; using 1500 as the peak value bc 1411 is the highest in my library
-	debug("Scaling bit rate: {}".format(bit_rate))
+	d.debug("Scaling bit rate: {}".format(bit_rate))
 	return float(bit_rate/1500)
 
 def scale_year(year):
 	# Scale year into a float; using 2016 as it's now, abs as some people have REALLY old music
-	debug("Scaling year: {}".format(year))
+	d.debug("Scaling year: {}".format(year))
 	return abs(float(year/2016))
 
 def scale_rating(rating):
 	# Given a rating in /100 format, convert it to [0,1] range
-	debug("Scaling rating: {}".format(rating))
+	d.debug("Scaling rating: {}".format(rating))
 	return float(rating/100)
 
 # Data handling class
@@ -49,7 +47,7 @@ class Data_set:
 		self.data=[]
 		for track, dt in inpt.items():
 			self.data.append(dt)
-		debug("Initializing data set object")
+		d.debug("Initializing data set object")
 
 	def next_batch(self, batch_size):
 		if (start+batch_size)>len(data):
@@ -73,12 +71,12 @@ class Data_set:
 		start += batch_size
 
 # Input handling
-debug("Start: read plist")
+d.debug("Start: read plist")
 tracks = plistlib.readPlist(input_data)["Tracks"]
-debug("End: read plist")
+d.debug("End: read plist")
 
 data_set = Data_set(tracks)
-debug("Data set created.")
+d.debug("Data set created.")
 
 # Build Keras model; based on one of the tutorial ones bc why not
 model = Sequential()
@@ -94,7 +92,7 @@ model.add(Activation('softmax'))
 sgd = SGD(lr=0.1, decay=1e-6, momentum=0.9, nesterov=True)
 model.compile(loss='categorical_crossentropy', optimizer=sgd, metrics=['accuracy'])
 
-debug("Model and SGD prepared.")
+d.debug("Model and SGD prepared.")
 
 # model.fit(X-train, y_train, nb_epoch=20, batch_size=16)
 # score = model.evaluate(X_test, y_test, batch_size=16)
