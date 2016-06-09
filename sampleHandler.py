@@ -1,19 +1,39 @@
 import plistlib
-import gdebug
 import numpy				as np
 import subprocess
 import scipy.io.wavfile		as wav
-
-import random
+import random # testing only
 from urllib import parse
 import urllib
+import gdebug
 
-d = gdebug.Debugger(debug_level = 2) # 0: off 1: errors only 2: normal 3: verbose
+# Global stuff
+d = gdebug.Debugger(debug_level = 3) # 0: off 1: errors only 2: normal 3: verbose
 input_data = "data/iTunes.plist"
+output_data = "cache/data.plist"
+output_directory = "cache" # no trailing slash, script adds that
+
+# Helper functions
+def track_data_to_element(data):
+	genre = data.get("Genre", "unknown")
+	year = data.get("Year", 2016)
+	bit_rate = data.get("Bit Rate", 128)
+	artist = data.get("Artist", "unknown")
+	title = data.get("Name", "unknown")
+	play_count = data.get("Play Count", 0)
+	skip_count = data.get("Skip Count", 0)
+	rating = data.get("Rating", 0)
+	return {'year': year, 'artist': artist, 'title': title, 'genre': genre, 'bit_rate': bit_rate, 'play_count': play_count, 'skip_count': skip_count, 'rating': rating}
+	# return [year, artist, title, genre, bit_rate, play_count, skip_count, rating]
+
+
 
 d.verbose("Preparing to read tracks in.")
 tracks = plistlib.readPlist(input_data)["Tracks"]
 d.debug("Tracks read.")
+
+# We're going to store all of the metadata to a DIFFERENT plist file, since we're cutting out a bunch of files that aren't compatible.
+new_dictionary = {}
 
 # The kinds of files iTunes has: 'Matched AAC audio file', 'Protected MPEG-4 video file', 'MPEG audio file', 'MPEG-4 video file', 'unknown kind', 'WAV audio file', 'AAC audio file', 'Purchased AAC audio file', 'Purchased MPEG-4 video file', 'Protected AAC audio file'
 # Kinds we want to process: MPEG audio file, AAC audio file
@@ -27,26 +47,55 @@ d.debug("Tracks read.")
 
 this_song = random.choice(list(tracks.keys())) # picks a random track to look at
 this_song = tracks.get(this_song)
-					# eventually that'll be replaced by a for loop going through all of them
+					# eventually that'll be replaced by a 'for' loop going through all of them
 
 # Prep to process song
+d.verbose("Parsing track.")
 location = this_song.get("Location")
 location = parse.urlparse(location)
-location_path = parse.unquote(location.path)
+if "%" in location.path:
+	d.verbose("  Unquoting track location.")
+	location_path = parse.unquote(location.path)
+else:
+	d.verbose("  Track doesn't need unquoting.")
+	location_path = location.path
 year = this_song.get("Year", 2016)
 artist = this_song.get("Artist", "unknown")
 title = this_song.get("Name","unknown")
-write_path = "cache/{}.{}.{}.wav".format(year,artist,title)
+write_path = "{}/{}.{}.{}.wav".format(output_directory, year,artist,title)
 kind = this_song.get("Kind", "unknown kind")
+d.verbose("  Metadata prepped. Transferring.")
+if kind == "WAV audio file" or kind == "MPEG audio file" or kind == "AAC audio file":
+	d.verbose("  Using FFMPEG to convert and/or shorten to 20 seconds.")
+	subprocess.run(args=["./ffmpeg", "-ac", "1", "-t", "20", "-i", location_path, write_path])
+	new_dictionary[write_path] = track_data_to_element(this_song)
+	opened = wav.read(write_path)
+	d.debug(opened)
+else:
+	d.verbose("  Skipping song: incompatible file format.")
 
-if kind == "WAV audio file":
-	subprocess.run(args=["cp", location_path, write_path])
-elif kind == "MPEG audio file" or kind == "AAC audio file":
-	subprocess.run(args=["./ffmpeg", "-ac", "1", "-i", location_path, write_path])
-	# Fun story, that's *supposed* to be converting it to mono, but I don't know if it actually does
-	# On the other hand, the WAV audio files we get from the other one *also* won't be mono, so
-	# maybe I'll just write the AI input to deal with that. Or ignore the second track.
+# if kind == "WAV audio file":
+# 	d.verbose("  WAV file: copying.")
+# 	subprocess.run(args=["cp", location_path, write_path])
+# 	d.verbose("  WAV file: copied.")
+# 	new_dictionary[write_path] = track_data_to_element(this_song)
+# 	opened = wav.read(write_path)
+# 	d.debug(opened)
+# elif kind == "MPEG audio file" or kind == "AAC audio file":
+# 	d.verbose("  MPEG/AAC file: converting.")
+# 	subprocess.run(args=["./ffmpeg", "-ac", "1", "-t", "20", "-i", location_path, write_path])
+# 	d.verbose("  MPEG/AAC file: converted.")
+# 	# Fun story, that's *supposed* to be converting it to mono, but I don't know if it actually does
+# 	# On the other hand, the WAV audio files we get from the other one *also* won't be mono, so
+# 	# maybe I'll just write the AI input to deal with that. Or ignore the second track.
+# 	new_dictionary[write_path] = track_data_to_element(this_song)
+# 	opened = wav.read(write_path)
+# 	d.debug(opened)
 # no else, because we don't care beyond that - those ones get thrown out
 
-opened = wav.read(write_path)
-d.debug(opened)
+
+# At the end of our processing, save the new dictionary to a new plist file.
+d.verbose("Preparing to dump plist to file.")
+out = open(output_data, 'wb+')
+plistlib.dump(new_dictionary, out)
+d.verbose("  Plist dump complete.")
