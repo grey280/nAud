@@ -73,7 +73,9 @@ for song_id, this_song in tracks.items():
 	artist = artist.replace('/', '')
 	title = this_song.get("Name","unknown")
 	title = title.replace('/', '') # make the output file name safe
-	write_path = "{}/{}.{}.{}.wav".format(output_directory, year,artist,title)
+	album = this_song.get("Album", "unknown")
+	album = album.replace('/','')
+	write_path = "{}/{}.{}.{}.{}.wav".format(output_directory, year,artist,album,title)
 	kind = this_song.get("Kind", "unknown kind")
 	d.verbose("  Metadata prepped. Transferring.")
 	if kind == "WAV audio file" or kind == "MPEG audio file" or kind == "AAC audio file":
