@@ -15,6 +15,8 @@ output_directory = "cache" # no trailing slash, script adds that
 
 # Helper functions
 def track_data_to_element(data):
+	# Converts the 'data' chunk of a track to a nice dictionary for writing to our
+	#	own plist file later.
 	genre = data.get("Genre", "unknown")
 	year = data.get("Year", 2016)
 	bit_rate = data.get("Bit Rate", 128)
@@ -24,13 +26,12 @@ def track_data_to_element(data):
 	skip_count = data.get("Skip Count", 0)
 	rating = data.get("Rating", 0)
 	return {'year': year, 'artist': artist, 'title': title, 'genre': genre, 'bit_rate': bit_rate, 'play_count': play_count, 'skip_count': skip_count, 'rating': rating}
-	# return [year, artist, title, genre, bit_rate, play_count, skip_count, rating]
 
 
 
 d.verbose("Preparing to read tracks in.")
 tracks = plistlib.readPlist(input_data)["Tracks"]
-d.debug("Tracks read.")
+d.debug("Track database loaded.")
 
 # We're going to store all of the metadata to a DIFFERENT plist file, since we're cutting out a bunch of files that aren't compatible.
 new_dictionary = {}
@@ -45,6 +46,7 @@ new_dictionary = {}
 #		for the genre-guessing stuff, which I'm hoping to be able to reuse this code for. So.
 
 
+# LOOP START
 this_song = random.choice(list(tracks.keys())) # picks a random track to look at
 this_song = tracks.get(this_song)
 					# eventually that'll be replaced by a 'for' loop going through all of them
@@ -68,33 +70,15 @@ d.verbose("  Metadata prepped. Transferring.")
 if kind == "WAV audio file" or kind == "MPEG audio file" or kind == "AAC audio file":
 	d.verbose("  Using FFMPEG to convert and/or shorten to 20 seconds.")
 	subprocess.run(args=["./ffmpeg", "-ac", "1", "-t", "20", "-i", location_path, write_path])
+	# This is SUPPOSED to be converting them to single-track audio, but it doesn't appear to be working. Annoying.
+	# So either I'll have to deal with that before I do an FFT, or just... throw it all at the NN as-is?
 	new_dictionary[write_path] = track_data_to_element(this_song)
 	opened = wav.read(write_path)
 	d.debug(opened)
 else:
 	d.verbose("  Skipping song: incompatible file format.")
+# LOOP END
 
-# if kind == "WAV audio file":
-# 	d.verbose("  WAV file: copying.")
-# 	subprocess.run(args=["cp", location_path, write_path])
-# 	d.verbose("  WAV file: copied.")
-# 	new_dictionary[write_path] = track_data_to_element(this_song)
-# 	opened = wav.read(write_path)
-# 	d.debug(opened)
-# elif kind == "MPEG audio file" or kind == "AAC audio file":
-# 	d.verbose("  MPEG/AAC file: converting.")
-# 	subprocess.run(args=["./ffmpeg", "-ac", "1", "-t", "20", "-i", location_path, write_path])
-# 	d.verbose("  MPEG/AAC file: converted.")
-# 	# Fun story, that's *supposed* to be converting it to mono, but I don't know if it actually does
-# 	# On the other hand, the WAV audio files we get from the other one *also* won't be mono, so
-# 	# maybe I'll just write the AI input to deal with that. Or ignore the second track.
-# 	new_dictionary[write_path] = track_data_to_element(this_song)
-# 	opened = wav.read(write_path)
-# 	d.debug(opened)
-# no else, because we don't care beyond that - those ones get thrown out
-
-
-# At the end of our processing, save the new dictionary to a new plist file.
 d.verbose("Preparing to dump plist to file.")
 out = open(output_data, 'wb+')
 plistlib.dump(new_dictionary, out)
