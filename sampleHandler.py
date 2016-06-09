@@ -50,33 +50,42 @@ new_dictionary = {}
 this_song = random.choice(list(tracks.keys())) # picks a random track to look at
 this_song = tracks.get(this_song)
 					# eventually that'll be replaced by a 'for' loop going through all of them
+for song_id, this_song in tracks.items():
+	# Prep to process song
+	d.verbose("Parsing track.")
+	location = this_song.get("Location")
+	location = parse.urlparse(location)
+	d.verbose("  Unquoting location path.")
+	try:
+		location_path = parse.unquote(location.path)
+	except TypeError:
+		d.error("  Type error while unquoting location path; passing unedited")
+		location_path = location.path
 
-# Prep to process song
-d.verbose("Parsing track.")
-location = this_song.get("Location")
-location = parse.urlparse(location)
-if "%" in location.path:
-	d.verbose("  Unquoting track location.")
-	location_path = parse.unquote(location.path)
-else:
-	d.verbose("  Track doesn't need unquoting.")
-	location_path = location.path
-year = this_song.get("Year", 2016)
-artist = this_song.get("Artist", "unknown")
-title = this_song.get("Name","unknown")
-write_path = "{}/{}.{}.{}.wav".format(output_directory, year,artist,title)
-kind = this_song.get("Kind", "unknown kind")
-d.verbose("  Metadata prepped. Transferring.")
-if kind == "WAV audio file" or kind == "MPEG audio file" or kind == "AAC audio file":
-	d.verbose("  Using FFMPEG to convert and/or shorten to 20 seconds.")
-	subprocess.run(args=["./ffmpeg", "-ac", "1", "-t", "20", "-i", location_path, write_path])
-	# This is SUPPOSED to be converting them to single-track audio, but it doesn't appear to be working. Annoying.
-	# So either I'll have to deal with that before I do an FFT, or just... throw it all at the NN as-is?
-	new_dictionary[write_path] = track_data_to_element(this_song)
-	opened = wav.read(write_path)
-	d.debug(opened)
-else:
-	d.verbose("  Skipping song: incompatible file format.")
+	# if "%" in location.path:
+	# 	d.verbose("  Unquoting track location.")
+	# 	location_path = parse.unquote(location.path)
+	# else:
+	# 	d.verbose("  Track doesn't need unquoting.")
+	# 	location_path = location.path
+	year = this_song.get("Year", 2016)
+	artist = this_song.get("Artist", "unknown")
+	artist = artist.replace('/', '')
+	title = this_song.get("Name","unknown")
+	title = title.replace('/', '') # make the output file name safe
+	write_path = "{}/{}.{}.{}.wav".format(output_directory, year,artist,title)
+	kind = this_song.get("Kind", "unknown kind")
+	d.verbose("  Metadata prepped. Transferring.")
+	if kind == "WAV audio file" or kind == "MPEG audio file" or kind == "AAC audio file":
+		d.verbose("  Using FFMPEG to convert and/or shorten to 20 seconds.")
+		subprocess.run(args=["./ffmpeg", "-ac", "1", "-t", "20", "-i", location_path, write_path])
+		# This is SUPPOSED to be converting them to single-track audio, but it doesn't appear to be working. Annoying.
+		# So either I'll have to deal with that before I do an FFT, or just... throw it all at the NN as-is?
+		new_dictionary[write_path] = track_data_to_element(this_song)
+		opened = wav.read(write_path)
+		d.debug(opened)
+	else:
+		d.verbose("  Skipping song: incompatible file format.")
 # LOOP END
 
 d.verbose("Preparing to dump plist to file.")
