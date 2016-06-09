@@ -81,9 +81,13 @@ for song_id, this_song in tracks.items():
 		subprocess.run(args=["./ffmpeg", "-ac", "1", "-t", "20", "-i", location_path, write_path])
 		# This is SUPPOSED to be converting them to single-track audio, but it doesn't appear to be working. Annoying.
 		# So either I'll have to deal with that before I do an FFT, or just... throw it all at the NN as-is?
-		new_dictionary[write_path] = track_data_to_element(this_song)
-		opened = wav.read(write_path)
-		d.debug(opened)
+		try:
+			opened = wav.read(write_path)
+			new_dictionary[write_path] = track_data_to_element(this_song)
+			d.verbose("  File succesfully transferred.")
+			d.debug(opened)
+		except FileNotFoundError:
+			d.error("  Failed to write song: not found.")
 	else:
 		d.verbose("  Skipping song: incompatible file format.")
 # LOOP END
