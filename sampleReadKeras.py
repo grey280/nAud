@@ -35,24 +35,23 @@ d.debug("End: read plist")
 
 # Feed builders
 data_feed = [] # [mapped_title, mapped_artist, mapped_year, mapped_bitrate, sample_data (extended out)]
-answer_feed = [] # mapped genres
+answer_feed = [] # mapped_genre
+sample_count_feed = []
 for track, data in tracks.items():
 	title = data.get("title", "unknown")
+	title = conv.string_to_float(title)
 	artist = data.get("artist", "unknown")
+	artist = conv.string_to_float(artist)
 	year = data.get("year", 2016)
+	year = conv.scale_year(year)
+	bitrate = data.get("bit_rate", 128)
+	bitrate = conv.scale_bit_rate(bitrate)
+	sample_data = wav.read(track)
+	sample_count_feed.append(sample_data[0])
+	genre = data.get("genre", "Unknown")
+	genre = conv.convert_genre(genre)
+	answer_feed.append(genre)
+	sample_data = np.ndarray.flatten(sample_data[1])
+	output = [title, artist, year, bitrate, sample_data]
+	data_feed.append(output)
 
-
-
-
-# Testing code
-this_song = random.choice(list(tracks.keys())) # picks a random track to look at
-this_song_data = tracks.get(this_song)
-
-sample = wav.read(this_song)
-d.debug(sample)
-d.debug(this_song_data)
-
-genre = conv.convert_genre(this_song_data.get("genre", "Unknown"))
-d.debug(genre)
-
-d.debug(conv.genre_to_label(conv.descale_genre(genre)))
