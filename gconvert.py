@@ -1,4 +1,5 @@
 import hashlib
+import numpy			as np
 
 def string_to_int(original_name):
 	# uses a hash function to convert, no weird scaling stuff
@@ -35,13 +36,18 @@ def scale_skips(skips):
 
 def scale_rating(rating):
 	# Given a rating in /100 format, convert it to [0,1] range
-	output = np.zeros(6)
+	output = np.zeros(6, dtype=int)
 	out = int(rating/20)
 	output[out] = 1
 	return output
 
+def scale_genre(genre):
+	output = np.zeros(number_of_genres, dtype=int)
+	output[genre] = 1
+	return output
+
 # Genre parsing
-number_of_genres = 12
+number_of_genres = 13
 genre_labels = {
 	"Unknown": 0,
 	"Pop": 1,

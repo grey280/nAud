@@ -9,12 +9,12 @@ import scipy.io.wavfile	as wav
 import gdebug
 import gconvert			as conv
 
-import random			# for testing only; once the this_song = random.choice() line is gone, take this out
-from sys import getsizeof # used for profiling during testing only
-
 # Settings
-debug_mode = 3 # 0: silent, 1: errors only, 2: normal, 3: verbose
-batch_size = 100
+debug_mode = 2 # 0: silent, 1: errors only, 2: normal, 3: verbose
+batch_size = 64 # The NN itself will use a batch size of 16, for now; this is the size of the data-parsing batch
+NN_batch_size = 16 # Size of batch the NN will use within each sub-epoch
+epoch_count = 5
+sub_epoch_count = 5 # NN epochs per dataset epoch
 input_data = "cache/data.plist"
 
 # Tools
@@ -22,11 +22,7 @@ d = gdebug.Debugger(debug_level = debug_mode)
 
 # Helper functions
 def parse_track(track, data):
-	global debug_counter
 	d.verbose("  Parsing track: {}".format(track))
-	debug_counter += 1
-	d.verbose("    Track {} of {}".format(debug_counter, total_count))
-
 	# Process metadata
 	title_orig = data.get("title", "unknown")
 	title = conv.string_to_int(title_orig)
@@ -36,38 +32,46 @@ def parse_track(track, data):
 	bitrate = int(data.get("bit_rate", 128))
 	genre_orig = data.get("genre", "Unknown")
 	genre = int(conv.convert_genre(genre_orig))
-	# answer_feed.append(genre)
+	scaled_genre = conv.scale_genre(genre)
 
 	# Process sample
 	sample_data = wav.read(track)
-	# if debug_counter == 1:
-	# 	d.debug(sample_data[1][:500])
 	d.verbose("    Samples: {}".format(len(sample_data[1])))
-	# sample_rate_feed.append(sample_data[0])
-	# sample_data = np.ndarray.flatten(sample_data[1]) # numpy is apparently the memory hog, so try without it
 	data = [int(val) for sublist in sample_data[1] for val in sublist]
 	del sample_data
 	output = [title, artist, year, bitrate]
-	d.debug("    Sample list kind: {}".format(type(data)))
+	d.verbose("    Sample list kind: {}".format(type(data)))
 	output.extend(data)
-	return genre, output
 
-# @profile
-def parse_tracks(tracks):
-	d.debug("Building feeds.")
-	data_feed = [] # [mapped_title, mapped_artist, mapped_year, mapped_bitrate, sample_data (extended out)]
-	answer_feed = [] # mapped_genre
-	global debug_counter
-	for track, data in tracks.items():
-		genre, output = parse_track(track, data)
-		answer_feed.append(genre)
-		data_feed.append(output)
-		del output
-		del genre
-		d.debug("    Current size of data_feed: {}".format(getsizeof(data_feed)))
-		# if debug_counter >= 10:
-		# 	break
-	return data_feed, answer_feed
+	return scaled_genre, output[:441004] # force it to be that size, so the NN doesn't complain
+
+class Dataset:
+	# TODO: implement a way for this to keep some data points aside as test data
+	start = 0
+	def __init__(self, inpt):
+		self.data=[]
+		self.locations=[]
+		for track, data in inpt.items():
+			self.locations.append(track)
+			self.data.append(data)
+		d.debug("Initializing data set object")
+	def next_batch(self, batch_size):
+		if (self.start+batch_size)>len(self.data):
+			self.start = 0 # reset for next epoch, I suppose?
+			return # you're done! this will probably crash at the moment but oh well
+		# expected return: data_feed, answer_feed
+		data_feed = []
+		answer_feed = []
+		for i in range(batch_size):
+			data_point = self.data[i+self.start]
+			location = self.locations[i+self.start]
+			genre, output = parse_track(location, data_point)
+			
+			data_feed.append(output)
+			answer_feed.append(genre)
+		self.start += batch_size
+		answer_array_feed = np.asarray(answer_feed)
+		return data_feed, answer_array_feed
 
 
 # Import data
@@ -84,43 +88,39 @@ d.debug("End: read plist")
 # And have it training towards the genres. Which I should probably convert into a numerical system, set in stone,
 #	so that it can be consistent across trainings and whatnot. I'll go write that.
 
-# Feed builders
+data_set = Dataset(tracks)
+d.debug("Dataset built.")
 
+model = Sequential()
+model.add(Dense(64, input_dim=441004 , init='uniform')) # number of data points being fed in: 4 metatags, 441000 samples (10 sec@44.1kHz)
+model.add(Activation('tanh'))
+model.add(Dropout(0.5))
+model.add(Dense(64, init='uniform'))
+model.add(Activation('tanh'))
+model.add(Dropout(0.5))
+model.add(Dense(conv.number_of_genres, init='uniform')) # hopefully this works; keeps it dynamic
+model.add(Activation('softmax'))
 
-# sample_rate_feed = []
+sgd = SGD(lr=0.1, decay=1e-6, momentum=0.9, nesterov=True)
+model.compile(loss='categorical_crossentropy', optimizer=sgd, metrics=['accuracy'])
 
-debug_counter = 0
-total_count = len(tracks)
-data_feed, answer_feed = parse_tracks(tracks)
+d.debug("Model and SGD prepared.")
+if debug_mode == 3: # only need to print the model in Verbose mode
+	model.summary()
 
+for i in range(epoch_count):
+	d.debug("Epoch {} of {}.".format(i, epoch_count))
+	data_feed, answer_feed = data_set.next_batch(batch_size)
+	model.fit(data_feed, answer_feed, nb_epoch=sub_epoch_count, batch_size=NN_batch_size)
 
-# np.save("tempdump1.npy", answer_feed)
-# d.debug("Saved answer feed to disk.")
+d.debug("Fit complete. Preparing to test.")
+test_data, test_answers = data_set.next_batch(batch_size)
+score = model.evaluate(test_data, test_answers, batch_size=16)
+d.debug("")
+d.debug("Test complete. Loss: {}. Accuracy: {}%".format(score[0], score[1]*100))
 
-# np.save("tempdump.npy", data_feed)
-# d.debug("Saved data feed to disk.")
-
-d.debug("Feeds constructed.")
-d.debug("{} {} {} {} {} {}".format(data_feed[0][0], data_feed[0][1], data_feed[0][2], data_feed[0][3], data_feed[0][4], data_feed[0][5]))
-d.debug("Length of first data_feed item: {}".format(len(data_feed[0])))
-# model = Sequential()
-# model.add(Dense(64, input_dim=7 , init='uniform')) # 5-dim input: genre,year,bit_rate,artist,title, float-ified
-# model.add(Activation('tanh'))
-# model.add(Dropout(0.5))
-# model.add(Dense(64, init='uniform'))
-# model.add(Activation('tanh'))
-# model.add(Dropout(0.5))
-# model.add(Dense(6, init='uniform')) # 6 because the ratings are range(0,5)
-# model.add(Activation('softmax'))
-
-# sgd = SGD(lr=0.1, decay=1e-6, momentum=0.9, nesterov=True)
-# model.compile(loss='categorical_crossentropy', optimizer=sgd, metrics=['accuracy'])
-
-# d.debug("Model and SGD prepared.")
-
-# model.fit(X, y, nb_epoch=50, batch_size=32)
-# d.debug("Fit complete. Preparing to test.")
-# model.summary()
-# score = model.evaluate(X_test, y_test, batch_size=16)
-# d.debug("")
-# d.debug("Test complete. Loss: {}. Accuracy: {}%".format(score[0], score[1]*100))
+# new plan: instead of putting the full-loaded dataset into memory as a MASSIVE array,
+# just write a function that'll spit out a more manageable chunk at a time, and use that to 
+# manually do epochs - wrap the model.fit() function in a loop, giving different training
+# data each time the loop runs, and have it only do one epoch at a time. Manual override for epochs,
+# allowing for intelligent feed-in of data in a way that doesn't require a bloody TB of memory
