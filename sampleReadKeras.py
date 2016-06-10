@@ -40,7 +40,7 @@ def parse_track(track, data):
 	d.verbose("    Sample list kind: {}".format(type(data)))
 	output.extend(data)
 
-	return genre, output
+	return genre, output[:441004] # force it to be that size, so the NN doesn't complain
 
 class Dataset:
 	# TODO: implement a way for this to keep some data points aside as test data
@@ -65,7 +65,7 @@ class Dataset:
 			genre, output = parse_track(location, data_point)
 			
 			data_feed.append(output)
-			answer_feed.append(rating)
+			answer_feed.append(genre)
 		self.start += batch_size
 		return data_feed, answer_feed
 
@@ -88,13 +88,13 @@ data_set = Dataset(tracks)
 d.debug("Dataset built.")
 
 model = Sequential()
-model.add(Dense(64, input_dim=7 , init='uniform')) # TODO: figure out the dimensionality of the input
+model.add(Dense(64, input_dim=441004 , init='uniform')) # number of data points being fed in: 4 metatags, 441000 samples (10 sec@44.1kHz)
 model.add(Activation('tanh'))
 model.add(Dropout(0.5))
 model.add(Dense(64, init='uniform'))
 model.add(Activation('tanh'))
 model.add(Dropout(0.5))
-model.add(Dense(6, init='uniform')) # TODO: figure out the dimensionality of the output
+model.add(Dense(conv.number_of_genres, init='uniform')) # hopefully this works; keeps it dynamic
 model.add(Activation('softmax'))
 
 sgd = SGD(lr=0.1, decay=1e-6, momentum=0.9, nesterov=True)
