@@ -37,7 +37,8 @@ def parse_track(track, data):
 	# Process sample
 	sample_data = wav.read(track)
 	d.verbose("    Samples: {}".format(len(sample_data[1])))
-	data = [int(val) for sublist in sample_data[1] for val in sublist]
+	# data = [int(val) for sublist in sample_data[1] for val in sublist]
+	data = np.ndarray.flatten(sample_data[1])
 	del sample_data
 	# output = [title, artist, year, bitrate]
 	# d.verbose("    Sample list kind: {}".format(type(data)))
@@ -71,7 +72,8 @@ class Dataset:
 			answer_feed.append(genre)
 		self.start += batch_size
 		answer_array_feed = np.asarray(answer_feed)
-		return data_feed, answer_array_feed
+		data_array_feed = np.asarray(data_feed)
+		return data_array_feed, answer_array_feed
 
 
 # Import data
@@ -114,7 +116,7 @@ for i in range(epoch_count):
 	model.fit(data_feed, answer_feed, nb_epoch=sub_epoch_count, batch_size=NN_batch_size)
 
 d.debug("Fit complete. Preparing to test.")
-test_data, test_answers = data_set.next_batch(batch_size)
+test_data, test_answers = data_set.next_batch(batch_size*4)
 score = model.evaluate(test_data, test_answers, batch_size=16)
 d.debug("")
 d.debug("Test complete. Loss: {}. Accuracy: {}%".format(score[0], score[1]*100))
