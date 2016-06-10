@@ -1,3 +1,10 @@
+#################### TODO #####################
+# [x] Speed it up - use numpy
+# [ ] Saving - implement stuff so I don't need to retrain every time
+# [ ] Testing - verify that it's actually accurate
+# [ ] Parsing - write stuff so I can throw a song at it and get a genre back, via command line?
+###############################################
+
 from keras.models import Sequential, model_from_json
 from keras.layers import Dense, Dropout, Activation
 from keras.optimizers import SGD
@@ -11,10 +18,10 @@ import gconvert			as conv
 
 # Settings
 debug_mode = 2 # 0: silent, 1: errors only, 2: normal, 3: verbose
-batch_size = 64 # The NN itself will use a batch size of 16, for now; this is the size of the data-parsing batch
+batch_size = 64*4 # The NN itself will use a batch size of 16, for now; this is the size of the data-parsing batch
 NN_batch_size = 16 # Size of batch the NN will use within each sub-epoch
 epoch_count = 5
-sub_epoch_count = 5 # NN epochs per dataset epoch
+sub_epoch_count = 50 # NN epochs per dataset epoch
 input_data = "cache/data.plist"
 
 # Tools
@@ -103,7 +110,7 @@ model.add(Dropout(0.5))
 model.add(Dense(conv.number_of_genres, init='uniform')) # hopefully this works; keeps it dynamic
 model.add(Activation('softmax'))
 
-sgd = SGD(lr=0.1, decay=1e-6, momentum=0.9, nesterov=True)
+sgd = SGD(lr=0.01, decay=1e-6, momentum=0.9, nesterov=True)
 model.compile(loss='categorical_crossentropy', optimizer=sgd, metrics=['accuracy'])
 
 d.debug("Model and SGD prepared.")
