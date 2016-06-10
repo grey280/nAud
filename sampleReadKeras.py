@@ -22,14 +22,14 @@ d = gdebug.Debugger(debug_level = debug_mode)
 
 # Helper functions
 def parse_track(track, data):
-	d.verbose("  Parsing track: {}".format(track))
+	d.debug("  Parsing track: {}".format(track))
 	# Process metadata
-	title_orig = data.get("title", "unknown")
-	title = conv.string_to_int(title_orig)
-	artist_orig = data.get("artist", "unknown")
-	artist = conv.string_to_int(artist_orig)
-	year = int(data.get("year", 2016))
-	bitrate = int(data.get("bit_rate", 128))
+	# title_orig = data.get("title", "unknown")
+	# title = conv.string_to_int(title_orig)
+	# artist_orig = data.get("artist", "unknown")
+	# artist = conv.string_to_int(artist_orig)
+	# year = int(data.get("year", 2016))
+	# bitrate = int(data.get("bit_rate", 128))
 	genre_orig = data.get("genre", "Unknown")
 	genre = int(conv.convert_genre(genre_orig))
 	scaled_genre = conv.scale_genre(genre)
@@ -39,11 +39,11 @@ def parse_track(track, data):
 	d.verbose("    Samples: {}".format(len(sample_data[1])))
 	data = [int(val) for sublist in sample_data[1] for val in sublist]
 	del sample_data
-	output = [title, artist, year, bitrate]
-	d.verbose("    Sample list kind: {}".format(type(data)))
-	output.extend(data)
+	# output = [title, artist, year, bitrate]
+	# d.verbose("    Sample list kind: {}".format(type(data)))
+	# output.extend(data)
 
-	return scaled_genre, output[:441004] # force it to be that size, so the NN doesn't complain
+	return scaled_genre, data[:441000] # force it to be that size, so the NN doesn't complain
 
 class Dataset:
 	# TODO: implement a way for this to keep some data points aside as test data
@@ -92,7 +92,7 @@ data_set = Dataset(tracks)
 d.debug("Dataset built.")
 
 model = Sequential()
-model.add(Dense(64, input_dim=441004 , init='uniform')) # number of data points being fed in: 4 metatags, 441000 samples (10 sec@44.1kHz)
+model.add(Dense(64, input_dim=441000 , init='uniform')) # number of data points being fed in: 4 metatags, 441000 samples (10 sec@44.1kHz)
 model.add(Activation('tanh'))
 model.add(Dropout(0.5))
 model.add(Dense(64, init='uniform'))
