@@ -1,6 +1,6 @@
 #################### TODO #####################
 # [x] Speed it up - use numpy
-# [ ] Saving - implement stuff so I don't need to retrain every time
+# [x] Saving - implement stuff so I don't need to retrain every time
 # [ ] Testing - verify that it's actually accurate
 # [ ] Parsing - write stuff so I can throw a song at it and get a genre back, via command line?
 ###############################################
@@ -23,6 +23,12 @@ NN_batch_size = 16 # Size of batch the NN will use within each sub-epoch
 epoch_count = 5
 sub_epoch_count = 50 # NN epochs per dataset epoch
 input_data = "cache/data.plist"
+
+weights_path = "output/genre_model.json"
+model_path = "output/genre_weights.hdf5"
+load_model = False
+do_train = True
+do_save = True
 
 # Tools
 d = gdebug.Debugger(debug_level = debug_mode)
@@ -100,33 +106,49 @@ d.debug("End: read plist")
 data_set = Dataset(tracks)
 d.debug("Dataset built.")
 
-model = Sequential()
-model.add(Dense(64, input_dim=441000 , init='uniform')) # number of data points being fed in: 4 metatags, 441000 samples (10 sec@44.1kHz)
-model.add(Activation('tanh'))
-model.add(Dropout(0.5))
-model.add(Dense(64, init='uniform'))
-model.add(Activation('tanh'))
-model.add(Dropout(0.5))
-model.add(Dense(conv.number_of_genres, init='uniform')) # hopefully this works; keeps it dynamic
-model.add(Activation('softmax'))
+if not load_model:
+	model = Sequential()
+	model.add(Dense(64, input_dim=441000 , init='uniform')) # number of data points being fed in: 4 metatags, 441000 samples (10 sec@44.1kHz)
+	model.add(Activation('tanh'))
+	model.add(Dropout(0.5))
+	model.add(Dense(64, init='uniform'))
+	model.add(Activation('tanh'))
+	model.add(Dropout(0.5))
+	model.add(Dense(conv.number_of_genres, init='uniform')) # hopefully this works; keeps it dynamic
+	model.add(Activation('softmax'))
 
-sgd = SGD(lr=0.01, decay=1e-6, momentum=0.9, nesterov=True)
-model.compile(loss='categorical_crossentropy', optimizer=sgd, metrics=['accuracy'])
+	sgd = SGD(lr=0.01, decay=1e-6, momentum=0.9, nesterov=True)
+	model.compile(loss='categorical_crossentropy', optimizer=sgd, metrics=['accuracy'])
 
-d.debug("Model and SGD prepared.")
-if debug_mode == 3: # only need to print the model in Verbose mode
-	model.summary()
-
-for i in range(epoch_count):
-	d.debug("Epoch {} of {}.".format(i, epoch_count))
-	data_feed, answer_feed = data_set.next_batch(batch_size)
-	model.fit(data_feed, answer_feed, nb_epoch=sub_epoch_count, batch_size=NN_batch_size)
+	d.debug("Model and SGD prepared.")
+	if debug_mode == 3: # only need to print the model in Verbose mode
+		model.summary()
+else:
+	model = open(model_path, 'r').read()
+	model = model_from_json(model)
+	sgd = SGD(lr=0.1, decay=1e-6, momentum=0.9, nesterov=True)
+	model.compile(loss='categorical_crossentropy', optimizer=sgd, metrics=['accuracy'])
+	d.debug("Model loaded and SGD prepared.")
+	if load_weights:
+		model.load_weights(weights_path)
+		d.debug("Weights loaded.")
+if do_train:
+	for i in range(epoch_count):
+		d.debug("Epoch {} of {}.".format(i, epoch_count))
+		data_feed, answer_feed = data_set.next_batch(batch_size)
+		model.fit(data_feed, answer_feed, nb_epoch=sub_epoch_count, batch_size=NN_batch_size)
 
 d.debug("Fit complete. Preparing to test.")
 test_data, test_answers = data_set.next_batch(batch_size*4)
 score = model.evaluate(test_data, test_answers, batch_size=16)
 d.debug("")
 d.debug("Test complete. Loss: {}. Accuracy: {}%".format(score[0], score[1]*100))
+
+if do_save:
+	json_string = model.to_json()
+	model.save_weights(weights_path)
+	open(model_path, 'w+').write(json_string)
+	d.debug('Finished writing weights and model to disk.')
 
 # new plan: instead of putting the full-loaded dataset into memory as a MASSIVE array,
 # just write a function that'll spit out a more manageable chunk at a time, and use that to 
