@@ -33,6 +33,15 @@ d.debug("End: read plist")
 # And have it training towards the genres. Which I should probably convert into a numerical system, set in stone,
 #	so that it can be consistent across trainings and whatnot. I'll go write that.
 
+# Feed builders
+data_feed = [] # [mapped_title, mapped_artist, mapped_year, mapped_bitrate, sample_data (extended out)]
+answer_feed = [] # mapped genres
+for track, data in tracks.items():
+	title = data.get("title", "unknown")
+	artist = data.get("artist", "unknown")
+	year = data.get("year", 2016)
+
+
 
 
 # Testing code
