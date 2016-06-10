@@ -47,9 +47,8 @@ new_dictionary = {}
 
 
 # LOOP START
-this_song = random.choice(list(tracks.keys())) # picks a random track to look at
-this_song = tracks.get(this_song)
-					# eventually that'll be replaced by a 'for' loop going through all of them
+# this_song = random.choice(list(tracks.keys())) # picks a random track to look at
+# this_song = tracks.get(this_song) # these two lines were for testing before I implemented the loop
 for song_id, this_song in tracks.items():
 	# Prep to process song
 	d.verbose("Parsing track.")
