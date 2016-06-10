@@ -12,14 +12,14 @@ import gconvert			as conv
 import random			# for testing only; once the this_song = random.choice() line is gone, take this out
 
 # Settings
-debug_mode = 2 # 0: silent, 1: errors only, 2: normal, 3: verbose
+debug_mode = 3 # 0: silent, 1: errors only, 2: normal, 3: verbose
 batch_size = 100
 input_data = "cache/data.plist"
 
 # Tools
 d = gdebug.Debugger(debug_level = debug_mode)
 
-# Doing the thing
+# Import data
 d.debug("Start: read plist")
 tracks = plistlib.readPlist(input_data)
 d.debug("End: read plist")
@@ -34,10 +34,18 @@ d.debug("End: read plist")
 #	so that it can be consistent across trainings and whatnot. I'll go write that.
 
 # Feed builders
+d.debug("Building feeds.")
 data_feed = [] # [mapped_title, mapped_artist, mapped_year, mapped_bitrate, sample_data (extended out)]
 answer_feed = [] # mapped_genre
-sample_count_feed = []
+# sample_rate_feed = []
+
+debug_counter = 0
+total_count = len(tracks)
+
 for track, data in tracks.items():
+	d.verbose("  Parsing track: {}".format(track))
+	debug_counter += 1
+	d.verbose("  Track {} of {}".format(debug_counter, total_count))
 	title = data.get("title", "unknown")
 	title = conv.string_to_float(title)
 	artist = data.get("artist", "unknown")
@@ -47,11 +55,48 @@ for track, data in tracks.items():
 	bitrate = data.get("bit_rate", 128)
 	bitrate = conv.scale_bit_rate(bitrate)
 	sample_data = wav.read(track)
-	sample_count_feed.append(sample_data[0])
+	if debug_counter == 1:
+		d.debug(sample_data[1][:500])
+	d.verbose("    Samples: {}".format(len(sample_data[1])))
+	# sample_rate_feed.append(sample_data[0])
 	genre = data.get("genre", "Unknown")
 	genre = conv.convert_genre(genre)
 	answer_feed.append(genre)
 	sample_data = np.ndarray.flatten(sample_data[1])
-	output = [title, artist, year, bitrate, sample_data]
+	output = [title, artist, year, bitrate]
+	#sample_data = [float(x)/32768 for x in sample_data] # scale into float range
+	# okay rescaling that is HELLA SLOW, let's do the inverse
+	output = [int(x*32768) for x in output]
+	output.extend(sample_data)
 	data_feed.append(output)
+	del output
+	del sample_data
+	if debug_counter > 5:
+		break
 
+d.debug("Feeds constructed.")
+d.debug("{} {} {} {} {} {}".format(data_feed[0][0], data_feed[0][1], data_feed[0][2], data_feed[0][3], data_feed[0][4], data_feed[0][5]))
+d.debug(data_feed[0][:5000])
+# d.verbose("Count feed:{}".format(sample_rate_feed))
+d.debug(len(data_feed[0]))
+# model = Sequential()
+# model.add(Dense(64, input_dim=7 , init='uniform')) # 5-dim input: genre,year,bit_rate,artist,title, float-ified
+# model.add(Activation('tanh'))
+# model.add(Dropout(0.5))
+# model.add(Dense(64, init='uniform'))
+# model.add(Activation('tanh'))
+# model.add(Dropout(0.5))
+# model.add(Dense(6, init='uniform')) # 6 because the ratings are range(0,5)
+# model.add(Activation('softmax'))
+
+# sgd = SGD(lr=0.1, decay=1e-6, momentum=0.9, nesterov=True)
+# model.compile(loss='categorical_crossentropy', optimizer=sgd, metrics=['accuracy'])
+
+# d.debug("Model and SGD prepared.")
+
+# model.fit(X, y, nb_epoch=50, batch_size=32)
+# d.debug("Fit complete. Preparing to test.")
+# model.summary()
+# score = model.evaluate(X_test, y_test, batch_size=16)
+# d.debug("")
+# d.debug("Test complete. Loss: {}. Accuracy: {}%".format(score[0], score[1]*100))
