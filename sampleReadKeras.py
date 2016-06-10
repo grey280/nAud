@@ -124,3 +124,11 @@ d.debug("Length of first data_feed item: {}".format(len(data_feed[0])))
 # score = model.evaluate(X_test, y_test, batch_size=16)
 # d.debug("")
 # d.debug("Test complete. Loss: {}. Accuracy: {}%".format(score[0], score[1]*100))
+
+
+
+# new plan: instead of putting the full-loaded dataset into memory as a MASSIVE array,
+# just write a function that'll spit out a more manageable chunk at a time, and use that to 
+# manually do epochs - wrap the model.fit() function in a loop, giving different training
+# data each time the loop runs, and have it only do one epoch at a time. Manual override for epochs,
+# allowing for intelligent feed-in of data in a way that doesn't require a bloody TB of memory
