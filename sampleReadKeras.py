@@ -9,9 +9,6 @@ import scipy.io.wavfile	as wav
 import gdebug
 import gconvert			as conv
 
-import random			# for testing only; once the this_song = random.choice() line is gone, take this out
-from sys import getsizeof # used for profiling during testing only
-
 # Settings
 debug_mode = 3 # 0: silent, 1: errors only, 2: normal, 3: verbose
 batch_size = 100
@@ -22,11 +19,7 @@ d = gdebug.Debugger(debug_level = debug_mode)
 
 # Helper functions
 def parse_track(track, data):
-	global debug_counter
 	d.verbose("  Parsing track: {}".format(track))
-	debug_counter += 1
-	d.verbose("    Track {} of {}".format(debug_counter, total_count))
-
 	# Process metadata
 	title_orig = data.get("title", "unknown")
 	title = conv.string_to_int(title_orig)
@@ -36,38 +29,43 @@ def parse_track(track, data):
 	bitrate = int(data.get("bit_rate", 128))
 	genre_orig = data.get("genre", "Unknown")
 	genre = int(conv.convert_genre(genre_orig))
-	# answer_feed.append(genre)
 
 	# Process sample
 	sample_data = wav.read(track)
-	# if debug_counter == 1:
-	# 	d.debug(sample_data[1][:500])
 	d.verbose("    Samples: {}".format(len(sample_data[1])))
-	# sample_rate_feed.append(sample_data[0])
-	# sample_data = np.ndarray.flatten(sample_data[1]) # numpy is apparently the memory hog, so try without it
 	data = [int(val) for sublist in sample_data[1] for val in sublist]
 	del sample_data
 	output = [title, artist, year, bitrate]
-	d.debug("    Sample list kind: {}".format(type(data)))
+	d.verbose("    Sample list kind: {}".format(type(data)))
 	output.extend(data)
+	
 	return genre, output
 
-# @profile
-def parse_tracks(tracks):
-	d.debug("Building feeds.")
-	data_feed = [] # [mapped_title, mapped_artist, mapped_year, mapped_bitrate, sample_data (extended out)]
-	answer_feed = [] # mapped_genre
-	global debug_counter
-	for track, data in tracks.items():
-		genre, output = parse_track(track, data)
-		answer_feed.append(genre)
-		data_feed.append(output)
-		del output
-		del genre
-		d.debug("    Current size of data_feed: {}".format(getsizeof(data_feed)))
-		# if debug_counter >= 10:
-		# 	break
-	return data_feed, answer_feed
+class Dataset:
+	start = 0
+	def __init__(self, inpt):
+		self.data=[]
+		self.locations=[]
+		for track, data in inpt.items():
+			self.locations.append(track)
+			self.data.append(data)
+		d.debug("Initializing data set object")
+	def next_batch(self, batch_size):
+		if (self.start+batch_size)>len(self.data):
+			self.start = 0 # reset for next epoch, I suppose?
+			return # you're done! this will probably crash at the moment but oh well
+		# expected return: data_feed, answer_feed
+		data_feed = []
+		answer_feed = []
+		for i in range(batch_size):
+			data_point = self.data[i+self.start]
+			location = self.locations[i+self.start]
+			genre, output = parse_track(location, data_point)
+			
+			data_feed.append(output)
+			answer_feed.append(rating)
+		self.start += batch_size
+		return data_feed, answer_feed
 
 
 # Import data
@@ -93,16 +91,6 @@ debug_counter = 0
 total_count = len(tracks)
 data_feed, answer_feed = parse_tracks(tracks)
 
-
-# np.save("tempdump1.npy", answer_feed)
-# d.debug("Saved answer feed to disk.")
-
-# np.save("tempdump.npy", data_feed)
-# d.debug("Saved data feed to disk.")
-
-d.debug("Feeds constructed.")
-d.debug("{} {} {} {} {} {}".format(data_feed[0][0], data_feed[0][1], data_feed[0][2], data_feed[0][3], data_feed[0][4], data_feed[0][5]))
-d.debug("Length of first data_feed item: {}".format(len(data_feed[0])))
 # model = Sequential()
 # model.add(Dense(64, input_dim=7 , init='uniform')) # 5-dim input: genre,year,bit_rate,artist,title, float-ified
 # model.add(Activation('tanh'))
