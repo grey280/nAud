@@ -10,9 +10,11 @@ import gdebug
 import gconvert			as conv
 
 # Settings
-debug_mode = 3 # 0: silent, 1: errors only, 2: normal, 3: verbose
-batch_size = 16 # The NN itself will use a batch size of 16, for now; this is the size of the data-parsing batch
-epoch_count = 50
+debug_mode = 2 # 0: silent, 1: errors only, 2: normal, 3: verbose
+batch_size = 64 # The NN itself will use a batch size of 16, for now; this is the size of the data-parsing batch
+NN_batch_size = 16 # Size of batch the NN will use within each sub-epoch
+epoch_count = 5
+sub_epoch_count = 5 # NN epochs per dataset epoch
 input_data = "cache/data.plist"
 
 # Tools
@@ -68,7 +70,8 @@ class Dataset:
 			data_feed.append(output)
 			answer_feed.append(genre)
 		self.start += batch_size
-		return data_feed, answer_feed
+		answer_array_feed = np.asarray(answer_feed)
+		return data_feed, answer_array_feed
 
 
 # Import data
@@ -108,11 +111,11 @@ if debug_mode == 3: # only need to print the model in Verbose mode
 for i in range(epoch_count):
 	d.debug("Epoch {} of {}.".format(i, epoch_count))
 	data_feed, answer_feed = data_set.next_batch(batch_size)
-	model.fit(data_feed, answer_feed, nb_epoch=1, batch_size=16)
+	model.fit(data_feed, answer_feed, nb_epoch=sub_epoch_count, batch_size=NN_batch_size)
 
 d.debug("Fit complete. Preparing to test.")
 test_data, test_answers = data_set.next_batch(batch_size)
-score = model.evaluate(X_test, y_test, batch_size=16)
+score = model.evaluate(test_data, test_answers, batch_size=16)
 d.debug("")
 d.debug("Test complete. Loss: {}. Accuracy: {}%".format(score[0], score[1]*100))
 
