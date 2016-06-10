@@ -1,3 +1,10 @@
+import hashlib
+
+def string_to_int(original_name):
+	# uses a hash function to convert, no weird scaling stuff
+	temp = int(haslib.sha1(original_name).hexdigest(), 16) % (2**15)
+	return temp
+
 def string_to_float(original_name):
 	# Convert a string to a float: not a *strict* mapping algorithm, but probably close enough to work
 	multiplier = 0.01
