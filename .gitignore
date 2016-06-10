@@ -2,3 +2,6 @@ Output
 __pycache__
 ffmpeg
 cache
+20cache
+tempdump.npy
+tempdump1.npy

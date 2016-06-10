@@ -1,3 +1,11 @@
+import hashlib
+import numpy			as np
+
+def string_to_int(original_name):
+	# uses a hash function to convert, no weird scaling stuff
+	temp = int(hashlib.sha1(original_name.encode('utf-8')).hexdigest(), 16) % (2**14)
+	return int(temp)
+
 def string_to_float(original_name):
 	# Convert a string to a float: not a *strict* mapping algorithm, but probably close enough to work
 	multiplier = 0.01
@@ -28,13 +36,18 @@ def scale_skips(skips):
 
 def scale_rating(rating):
 	# Given a rating in /100 format, convert it to [0,1] range
-	output = np.zeros(6)
+	output = np.zeros(6, dtype=int)
 	out = int(rating/20)
 	output[out] = 1
 	return output
 
+def scale_genre(genre):
+	output = np.zeros(number_of_genres, dtype=int)
+	output[genre] = 1
+	return output
+
 # Genre parsing
-number_of_genres = 12
+number_of_genres = 13
 genre_labels = {
 	"Unknown": 0,
 	"Pop": 1,
@@ -106,11 +119,10 @@ def convert_genre(genre):
 		"Singer/Songwriter": 51,
 		"Soundtrack": 52,
 		"Synthpop": 53,
-		"Trance": 54,
-		"Voice Memo": 55,
+		"Trance": 54
 	}
-	genres_convert = [0, 3, 3, 3, 3, 3, 3, 11, 10, 12, 12, 7, 12, 10, 8, 8, 8, 8, 10, 6, 9, 8, 4, 4, 4, 4, 4, 4, 7, 12, 1, 12, 12, 7, 7, 1, 1, 1, 11, 2, 2, 2, 6, 6, 6, 6, 12, 2, 2, 7, 11, 4, 7, 1, 11, 12]
-	temp = genres.get(genre)
+	genres_convert = [0, 3, 3, 3, 3, 3, 3, 11, 10, 12, 12, 7, 12, 10, 8, 8, 8, 8, 10, 6, 9, 8, 4, 4, 4, 4, 4, 4, 7, 12, 1, 12, 12, 7, 7, 1, 1, 1, 11, 2, 2, 2, 6, 6, 6, 6, 12, 2, 2, 7, 11, 4, 7, 1, 11]
+	temp = genres.get(genre, 0)
 	return float(float(genres_convert[temp])/number_of_genres) # I *really* want it to be a float, okay
 
 def genre_to_label(genre):
