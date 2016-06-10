@@ -17,7 +17,10 @@ def scale_bit_rate(bit_rate):
 def scale_year(year):
 	# Scale year into a float; using 2016 as it's now, abs as some people have REALLY old music
 	d.verbose("Scaling year: {}".format(year))
-	return abs(float(year/2016))
+	try: 
+		return abs(float(year/2016))
+	except TypeError:
+		return 1.0 # we'll just call it 2016 if it's a string or something
 
 def scale_plays(plays):
 	# Total plays as of 2016-06-08 16:39: 91978
