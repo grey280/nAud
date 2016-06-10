@@ -55,27 +55,36 @@ for track, data in tracks.items():
 	bitrate = data.get("bit_rate", 128)
 	bitrate = conv.scale_bit_rate(bitrate)
 	sample_data = wav.read(track)
-	if debug_counter == 1:
-		d.debug(sample_data[1][:500])
+	# if debug_counter == 1:
+	# 	d.debug(sample_data[1][:500])
 	d.verbose("    Samples: {}".format(len(sample_data[1])))
 	# sample_rate_feed.append(sample_data[0])
 	genre = data.get("genre", "Unknown")
 	genre = conv.convert_genre(genre)
 	answer_feed.append(genre)
-	sample_data = np.ndarray.flatten(sample_data[1])
+	# sample_data = np.ndarray.flatten(sample_data[1]) # numpy is apparently the memory hog, so try without it
+	sample_data = [val for sublist in sample_data[1] for val in sublist]
 	output = [title, artist, year, bitrate]
 	#sample_data = [float(x)/32768 for x in sample_data] # scale into float range
 	# okay rescaling that is HELLA SLOW, let's do the inverse
 	output = [int(x*32768) for x in output]
 	output.extend(sample_data)
 	data_feed.append(output)
+
 	del output
 	del sample_data
-	if debug_counter > 5:
+	if debug_counter >= 10:
 		break
+
+np.save("tempdump1.npy", answer_feed)
+d.debug("Saved answer feed to disk.")
+
+np.save("tempdump.npy", data_feed)
+d.debug("Saved data feed to disk.")
 
 d.debug("Feeds constructed.")
 d.debug("{} {} {} {} {} {}".format(data_feed[0][0], data_feed[0][1], data_feed[0][2], data_feed[0][3], data_feed[0][4], data_feed[0][5]))
+print(type(data_feed[0][5]))
 d.debug(data_feed[0][:5000])
 # d.verbose("Count feed:{}".format(sample_rate_feed))
 d.debug(len(data_feed[0]))
