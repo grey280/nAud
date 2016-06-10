@@ -1,8 +1,8 @@
 #################### TODO #####################
 # [x] Speed it up - use numpy
 # [x] Saving - implement stuff so I don't need to retrain every time
-# [ ] Testing - verify that it's actually accurate
-# [ ] Parsing - write stuff so I can throw a song at it and get a genre back, via command line?
+# [x] Testing - verify that it's actually accurate
+# [x] Parsing - write stuff so I can throw a song at it and get a genre back, via command line?
 ###############################################
 
 from keras.models import Sequential, model_from_json
