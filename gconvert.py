@@ -2,7 +2,7 @@ import hashlib
 
 def string_to_int(original_name):
 	# uses a hash function to convert, no weird scaling stuff
-	temp = int(haslib.sha1(original_name).hexdigest(), 16) % (2**15)
+	temp = int(hashlib.sha1(original_name.encode('utf-8')).hexdigest(), 16) % (2**15)
 	return temp
 
 def string_to_float(original_name):
@@ -113,11 +113,10 @@ def convert_genre(genre):
 		"Singer/Songwriter": 51,
 		"Soundtrack": 52,
 		"Synthpop": 53,
-		"Trance": 54,
-		"Voice Memo": 55,
+		"Trance": 54
 	}
-	genres_convert = [0, 3, 3, 3, 3, 3, 3, 11, 10, 12, 12, 7, 12, 10, 8, 8, 8, 8, 10, 6, 9, 8, 4, 4, 4, 4, 4, 4, 7, 12, 1, 12, 12, 7, 7, 1, 1, 1, 11, 2, 2, 2, 6, 6, 6, 6, 12, 2, 2, 7, 11, 4, 7, 1, 11, 12]
-	temp = genres.get(genre)
+	genres_convert = [0, 3, 3, 3, 3, 3, 3, 11, 10, 12, 12, 7, 12, 10, 8, 8, 8, 8, 10, 6, 9, 8, 4, 4, 4, 4, 4, 4, 7, 12, 1, 12, 12, 7, 7, 1, 1, 1, 11, 2, 2, 2, 6, 6, 6, 6, 12, 2, 2, 7, 11, 4, 7, 1, 11]
+	temp = genres.get(genre, 0)
 	return float(float(genres_convert[temp])/number_of_genres) # I *really* want it to be a float, okay
 
 def genre_to_label(genre):
