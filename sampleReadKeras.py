@@ -1,10 +1,3 @@
-#################### TODO #####################
-# [x] Speed it up - use numpy
-# [x] Saving - implement stuff so I don't need to retrain every time
-# [x] Testing - verify that it's actually accurate
-# [x] Parsing - write stuff so I can throw a song at it and get a genre back, via command line?
-###############################################
-
 from keras.models import Sequential, model_from_json
 from keras.layers import Dense, Dropout, Activation
 from keras.optimizers import SGD
@@ -71,9 +64,8 @@ class Dataset:
 			self.data.append(data)
 		d.debug("Initializing data set object")
 	def next_batch(self, batch_size):
-		if (self.start+batch_size)>len(self.data):
-			self.start = 0 # reset for next epoch, I suppose?
-			#return # you're done! this will probably crash at the moment but oh well. update: yeah it crashed
+		if(self.start+batch_size >= len(self.data)):
+			self.start = 0
 		# expected return: data_feed, answer_feed
 		data_feed = []
 		answer_feed = []
@@ -84,6 +76,8 @@ class Dataset:
 			
 			data_feed.append(output)
 			answer_feed.append(genre)
+			if (self.start+i+2)>len(self.data):
+				self.start = 0 # start over at the beginning
 		self.start += batch_size
 		answer_array_feed = np.asarray(answer_feed)
 		data_array_feed = np.asarray(data_feed)
