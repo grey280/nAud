@@ -12,6 +12,7 @@ import gconvert			as conv
 # Settings
 debug_mode = 3 # 0: silent, 1: errors only, 2: normal, 3: verbose
 batch_size = 100
+epoch_count = 50
 input_data = "cache/data.plist"
 
 # Tools
@@ -38,10 +39,11 @@ def parse_track(track, data):
 	output = [title, artist, year, bitrate]
 	d.verbose("    Sample list kind: {}".format(type(data)))
 	output.extend(data)
-	
+
 	return genre, output
 
 class Dataset:
+	# TODO: implement a way for this to keep some data points aside as test data
 	start = 0
 	def __init__(self, inpt):
 		self.data=[]
@@ -82,38 +84,36 @@ d.debug("End: read plist")
 # And have it training towards the genres. Which I should probably convert into a numerical system, set in stone,
 #	so that it can be consistent across trainings and whatnot. I'll go write that.
 
-# Feed builders
+data_set = Dataset(tracks)
+d.debug("Dataset built.")
 
+model = Sequential()
+model.add(Dense(64, input_dim=7 , init='uniform')) # TODO: figure out the dimensionality of the input
+model.add(Activation('tanh'))
+model.add(Dropout(0.5))
+model.add(Dense(64, init='uniform'))
+model.add(Activation('tanh'))
+model.add(Dropout(0.5))
+model.add(Dense(6, init='uniform')) # TODO: figure out the dimensionality of the output
+model.add(Activation('softmax'))
 
-# sample_rate_feed = []
+sgd = SGD(lr=0.1, decay=1e-6, momentum=0.9, nesterov=True)
+model.compile(loss='categorical_crossentropy', optimizer=sgd, metrics=['accuracy'])
 
-debug_counter = 0
-total_count = len(tracks)
-data_feed, answer_feed = parse_tracks(tracks)
+d.debug("Model and SGD prepared.")
+if debug_mode == 3: # only need to print the model in Verbose mode
+	model.summary()
 
-# model = Sequential()
-# model.add(Dense(64, input_dim=7 , init='uniform')) # 5-dim input: genre,year,bit_rate,artist,title, float-ified
-# model.add(Activation('tanh'))
-# model.add(Dropout(0.5))
-# model.add(Dense(64, init='uniform'))
-# model.add(Activation('tanh'))
-# model.add(Dropout(0.5))
-# model.add(Dense(6, init='uniform')) # 6 because the ratings are range(0,5)
-# model.add(Activation('softmax'))
+for i in range(epoch_count):
+	d.debug("Epoch {} of {}.".format(i, epoch_count))
+	data_feed, answer_feed = data_set.next_batch(batch_size)
+	model.fit(data_feed, answer_feed, nb_epoch=1, batch_size=16)
 
-# sgd = SGD(lr=0.1, decay=1e-6, momentum=0.9, nesterov=True)
-# model.compile(loss='categorical_crossentropy', optimizer=sgd, metrics=['accuracy'])
-
-# d.debug("Model and SGD prepared.")
-
-# model.fit(X, y, nb_epoch=50, batch_size=32)
-# d.debug("Fit complete. Preparing to test.")
-# model.summary()
-# score = model.evaluate(X_test, y_test, batch_size=16)
-# d.debug("")
-# d.debug("Test complete. Loss: {}. Accuracy: {}%".format(score[0], score[1]*100))
-
-
+d.debug("Fit complete. Preparing to test.")
+test_data, test_answers = data_set.next_batch(batch_size)
+score = model.evaluate(X_test, y_test, batch_size=16)
+d.debug("")
+d.debug("Test complete. Loss: {}. Accuracy: {}%".format(score[0], score[1]*100))
 
 # new plan: instead of putting the full-loaded dataset into memory as a MASSIVE array,
 # just write a function that'll spit out a more manageable chunk at a time, and use that to 
