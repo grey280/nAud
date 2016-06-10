@@ -133,9 +133,9 @@ else:
 		model.load_weights(weights_path)
 		d.debug("Weights loaded.")
 if do_train:
-	for i in range(epoch_count):
-		d.debug("Epoch {} of {}.".format(i, epoch_count))
+	for i in range(epoch_count-1):
 		data_feed, answer_feed = data_set.next_batch(batch_size)
+		d.debug("Meta-epoch {} of {}.".format(i+1, epoch_count+1))
 		model.fit(data_feed, answer_feed, nb_epoch=sub_epoch_count, batch_size=NN_batch_size)
 
 d.debug("Fit complete. Preparing to test.")
