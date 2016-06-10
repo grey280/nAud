@@ -20,13 +20,14 @@ import gconvert			as conv
 debug_mode = 2 # 0: silent, 1: errors only, 2: normal, 3: verbose
 batch_size = 64*4 # The NN itself will use a batch size of 16, for now; this is the size of the data-parsing batch
 NN_batch_size = 16 # Size of batch the NN will use within each sub-epoch
-epoch_count = 5
-sub_epoch_count = 50 # NN epochs per dataset epoch
+epoch_count = 1
+sub_epoch_count = 25 # NN epochs per dataset epoch
 input_data = "cache/data.plist"
 
 weights_path = "output/genre_model.json"
 model_path = "output/genre_weights.hdf5"
 load_model = False
+load_weights = False
 do_train = True
 do_save = True
 
@@ -72,7 +73,7 @@ class Dataset:
 	def next_batch(self, batch_size):
 		if (self.start+batch_size)>len(self.data):
 			self.start = 0 # reset for next epoch, I suppose?
-			return # you're done! this will probably crash at the moment but oh well
+			#return # you're done! this will probably crash at the moment but oh well. update: yeah it crashed
 		# expected return: data_feed, answer_feed
 		data_feed = []
 		answer_feed = []
@@ -133,9 +134,9 @@ else:
 		model.load_weights(weights_path)
 		d.debug("Weights loaded.")
 if do_train:
-	for i in range(epoch_count-1):
+	for i in range(epoch_count):
 		data_feed, answer_feed = data_set.next_batch(batch_size)
-		d.debug("Meta-epoch {} of {}.".format(i+1, epoch_count+1))
+		d.debug("Meta-epoch {} of {}.".format(i, epoch_count))
 		model.fit(data_feed, answer_feed, nb_epoch=sub_epoch_count, batch_size=NN_batch_size)
 
 d.debug("Fit complete. Preparing to test.")
@@ -149,6 +150,25 @@ if do_save:
 	model.save_weights(weights_path)
 	open(model_path, 'w+').write(json_string)
 	d.debug('Finished writing weights and model to disk.')
+
+
+# specific_song_to_test = "cache/2016.Ten Fé.NOON  189.Elodie.wav"
+# that_data = {"genre": "Indie"}
+
+# d1 = []
+# scaled_genre, data = parse_track(specific_song_to_test, that_data)
+# print("scaled_genre: {}".format(scaled_genre))
+# d1.append(data)
+# outer_data = np.asarray(d1)
+
+# result = model.predict(outer_data, batch_size=1, verbose=0)
+# print(result)
+# intified = conv.one_hot_to_int(result[0])
+# as_genre = conv.genre_to_label(intified)
+# descaled_actual_genre = conv.one_hot_to_int(scaled_genre)
+# print(descaled_actual_genre)
+# d.debug("Predicted genre: {}. Actual: {}".format(as_genre, conv.genre_to_label(descaled_actual_genre)))
+# print(conv.convert_genre("Indie"))
 
 # new plan: instead of putting the full-loaded dataset into memory as a MASSIVE array,
 # just write a function that'll spit out a more manageable chunk at a time, and use that to 

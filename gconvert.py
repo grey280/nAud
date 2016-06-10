@@ -123,7 +123,8 @@ def convert_genre(genre):
 	}
 	genres_convert = [0, 3, 3, 3, 3, 3, 3, 11, 10, 12, 12, 7, 12, 10, 8, 8, 8, 8, 10, 6, 9, 8, 4, 4, 4, 4, 4, 4, 7, 12, 1, 12, 12, 7, 7, 1, 1, 1, 11, 2, 2, 2, 6, 6, 6, 6, 12, 2, 2, 7, 11, 4, 7, 1, 11]
 	temp = genres.get(genre, 0)
-	return float(float(genres_convert[temp])/number_of_genres) # I *really* want it to be a float, okay
+	return genres_convert[temp]
+	# return float(float(genres_convert[temp])/number_of_genres) # I *really* want it to be a float, okay
 
 def genre_to_label(genre):
 	titles=["Unknown", "Pop", "Rock", "Alternative", "Indie", "Soundtrack", "Rap", "Classical", "Electronic", "Holiday", "Country", "Ambient", "Other"]
@@ -133,3 +134,13 @@ def genre_to_label(genre):
 
 def descale_genre(genre):
 	return int(genre*number_of_genres)
+
+def one_hot_to_int(one_hot):
+	currentMax = 0.0
+	currentMaxId = 0
+	for i in range(len(one_hot)):
+		if one_hot[i] > currentMax:
+			currentMax = one_hot[i]
+			currentMaxId = i
+
+	return currentMaxId
