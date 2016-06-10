@@ -76,6 +76,9 @@ for song_id, this_song in tracks.items():
 	album = album.replace('/','')
 	write_path = "{}/{}.{}.{}.{}.wav".format(output_directory, year,artist,album,title)
 	kind = this_song.get("Kind", "unknown kind")
+	genre = this_song.get("Genre", "unknown")
+	if genre == "Voice Memo":
+		continue
 	d.verbose("  Metadata prepped. Transferring.")
 	if kind == "WAV audio file" or kind == "MPEG audio file" or kind == "AAC audio file":
 		d.verbose("  Using FFMPEG to convert and/or shorten to 20 seconds.")
