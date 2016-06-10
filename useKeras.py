@@ -1,4 +1,4 @@
-from keras.models import Sequential
+from keras.models import Sequential, model_from_json
 from keras.layers import Dense, Dropout, Activation
 from keras.optimizers import SGD
 import plistlib
@@ -9,6 +9,12 @@ import numpy 			as np
 debug_mode = 2 # 0: silent, 1: errors only, 2: normal, 3: verbose
 batch_size = 100
 input_data = "data/iTunes.plist"
+
+load_model = False
+load_weights = False
+# The paths are used as where to load from if loading is enabled, and where to save to.
+model_path = "output/model.json"
+weights_path = "output/weights.hdf5"
 
 d = gdebug.Debugger(debug_level = debug_mode)
 
@@ -142,24 +148,39 @@ X_test = np.vstack(X_test)
 d.debug("Converted to numpy ndarrays. Train points: {}. Test points: {}".format(data_points_train, data_points_test))
 
 # Build Keras model; based on one of the tutorial ones bc why not
-model = Sequential()
-model.add(Dense(64, input_dim=7 , init='uniform')) # 5-dim input: genre,year,bit_rate,artist,title, float-ified
-model.add(Activation('tanh'))
-model.add(Dropout(0.5))
-model.add(Dense(64, init='uniform'))
-model.add(Activation('tanh'))
-model.add(Dropout(0.5))
-model.add(Dense(6, init='uniform')) # 6 because the ratings are range(0,5)
-model.add(Activation('softmax'))
+if not load_model:
+	model = Sequential()
+	model.add(Dense(64, input_dim=7 , init='uniform')) # 5-dim input: genre,year,bit_rate,artist,title, float-ified
+	model.add(Activation('tanh'))
+	model.add(Dropout(0.5))
+	model.add(Dense(64, init='uniform'))
+	model.add(Activation('tanh'))
+	model.add(Dropout(0.5))
+	model.add(Dense(6, init='uniform')) # 6 because the ratings are range(0,5)
+	model.add(Activation('softmax'))
 
-sgd = SGD(lr=0.1, decay=1e-6, momentum=0.9, nesterov=True)
-model.compile(loss='categorical_crossentropy', optimizer=sgd, metrics=['accuracy'])
+	sgd = SGD(lr=0.1, decay=1e-6, momentum=0.9, nesterov=True)
+	model.compile(loss='categorical_crossentropy', optimizer=sgd, metrics=['accuracy'])
 
-d.debug("Model and SGD prepared.")
+	d.debug("Model and SGD prepared.")
+
+	model.fit(X, y, nb_epoch=50, batch_size=32)
+	d.debug("Fit complete. Preparing to test.")
+else:
+	model = open(model_path, 'r').read()
+	model = model_from_json(model)
+	sgd = SGD(lr=0.1, decay=1e-6, momentum=0.9, nesterov=True)
+	model.compile(loss='categorical_crossentropy', optimizer=sgd, metrics=['accuracy'])
+	d.debug("Model loaded and SGD prepared.")
+	if load_weights:
+		model.load_weights(weights_path)
+		d.debug("Weights loaded.")
+
 model.summary()
-
-model.fit(X, y, nb_epoch=50, batch_size=32)
-d.debug("Fit complete. Preparing to test.")
 score = model.evaluate(X_test, y_test, batch_size=16)
 d.debug("")
-d.debug("Test complete. Loss: {}. Accuracy: {}".format(score[0], score[1]))
+d.debug("Test complete. Loss: {}. Accuracy: {}%".format(score[0], score[1]*100))
+# Save the model and weights
+json_string = model.to_json()
+model.save_weights(weights_path)
+open(model_path, 'w+').write(json_string)
