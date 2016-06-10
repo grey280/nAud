@@ -11,7 +11,7 @@ import gconvert			as conv
 
 # Settings
 debug_mode = 3 # 0: silent, 1: errors only, 2: normal, 3: verbose
-batch_size = 100
+batch_size = 16 # The NN itself will use a batch size of 16, for now; this is the size of the data-parsing batch
 epoch_count = 50
 input_data = "cache/data.plist"
 
@@ -30,6 +30,7 @@ def parse_track(track, data):
 	bitrate = int(data.get("bit_rate", 128))
 	genre_orig = data.get("genre", "Unknown")
 	genre = int(conv.convert_genre(genre_orig))
+	scaled_genre = conv.scale_genre(genre)
 
 	# Process sample
 	sample_data = wav.read(track)
@@ -40,7 +41,7 @@ def parse_track(track, data):
 	d.verbose("    Sample list kind: {}".format(type(data)))
 	output.extend(data)
 
-	return genre, output[:441004] # force it to be that size, so the NN doesn't complain
+	return scaled_genre, output[:441004] # force it to be that size, so the NN doesn't complain
 
 class Dataset:
 	# TODO: implement a way for this to keep some data points aside as test data
