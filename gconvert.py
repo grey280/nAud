@@ -3,7 +3,7 @@ import hashlib
 def string_to_int(original_name):
 	# uses a hash function to convert, no weird scaling stuff
 	temp = int(hashlib.sha1(original_name.encode('utf-8')).hexdigest(), 16) % (2**14)
-	return temp
+	return int(temp)
 
 def string_to_float(original_name):
 	# Convert a string to a float: not a *strict* mapping algorithm, but probably close enough to work
