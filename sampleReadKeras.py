@@ -40,7 +40,7 @@ d = gdebug.Debugger(debug_level = debug_mode)
 
 # Helper functions
 def parse_track(track, data):
-	d.debug("  Parsing track: {}".format(track))
+	
 	genre_orig = data.get("genre", "Unknown")
 	genre = int(conv.convert_genre(genre_orig))
 	scaled_genre = conv.scale_genre(genre)
@@ -105,6 +105,7 @@ class Dataset:
 			location = self.locations[i+self.start]
 			data_point = self.input_values.get(location)
 			genre, output = parse_track(location, data_point)
+			d.progress("  Parsed track: {}".format(location),i,data_point_count)
 			d.verbose("Data point size: {}".format(output.shape))
 			data_feed = np.vstack((data_feed,output)) # TODO: fix this
 								# it works, but it gets slower and slower over time until it's

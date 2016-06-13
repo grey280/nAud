@@ -1,4 +1,5 @@
 # gDebug: my own local debugging stuff, so I can be slightly fancier about this
+import sys
 
 class Debugger:
 	def __init__(self, debug_level=0):
@@ -26,6 +27,15 @@ class Debugger:
 	def verbose(self, string):
 		if self.debug_level > 2:
 			print(string)
-	def progress(self, message, minval, maxval):
+	def progress(self, message, currentval, maxval):
 		if self.debug_level > 1:
-			print("\r{}\n{}/{}".format(message, minval, maxval))
+			pbar = self._progress_bar_(currentval, maxval)
+			sys.stdout.write("\r{}\n{} {}/{}".format(message, pbar, currentval, maxval))
+
+	def _progress_bar_(self, currentval, maxval):
+		output = ""
+		for i in range(int(20*currentval/maxval)):
+			output = "{}=".format(output)
+		for i in range(int(20-(20*currentval/maxval))):
+			output = "{} ".format(output)
+		return "[{}]".format(output)
