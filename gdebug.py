@@ -30,7 +30,10 @@ class Debugger:
 	def progress(self, message, currentval, maxval):
 		if self.debug_level > 1:
 			pbar = self._progress_bar_(currentval, maxval)
-			sys.stdout.write("\r{}\n{} {}/{}".format(message, pbar, currentval, maxval))
+			if not currentval == maxval:
+				sys.stdout.write("\r{}\n{} {}/{}".format(message, pbar, currentval, maxval))
+			else:
+				sys.stdout.write("\r{}\n{} complete".format(message, pbar))
 
 	def _progress_bar_(self, currentval, maxval):
 		output = ""
