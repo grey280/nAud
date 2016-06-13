@@ -77,7 +77,10 @@ for song_id, this_song in tracks.items():
 	write_path = "{}/{}.{}.{}.{}.wav".format(output_directory, year,artist,album,title)
 	kind = this_song.get("Kind", "unknown kind")
 	genre = this_song.get("Genre", "unknown")
+	time = this_song.get("Total Time", 0)
 	if genre == "Voice Memo":
+		continue
+	if time < 20000: # songs that're too short cause Problems
 		continue
 	d.verbose("  Metadata prepped. Transferring.")
 	if kind == "WAV audio file" or kind == "MPEG audio file" or kind == "AAC audio file":
