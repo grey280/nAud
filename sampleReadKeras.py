@@ -1,3 +1,8 @@
+# Things to try
+# * Various transforms of the input data to a different setup
+# * Pull samples from a different part of the song - :30-:40 instead of :00-:10, or something
+# * Restructure the neural network model
+
 from keras.models import Sequential, model_from_json
 from keras.layers import Dense, Dropout, Activation
 from keras.optimizers import SGD
@@ -11,16 +16,20 @@ import gdebug
 import gconvert			as conv
 
 # Settings
+## Debug Settings
 debug_mode = 2 # 0: silent, 1: errors only, 2: normal, 3: verbose
-# batch_size = 2**9 #2**9 # This is the size of the data-parsing batch
-batch_size = 2235
-NN_batch_size = 16 # Size of batch the NN will use within each sub-epoch
-epoch_count = 1 # TODO: test value, switch back to 5 later
-sub_epoch_count = 50 #25 # NN epochs per dataset epoch # TODO: try this as 50
-input_data = "cache/data.plist"
 
-weights_file_name = "genre_model.json"
-model_file_name = "genre_weights.hdf5"
+## Neural Network settings
+batch_size = 16
+epoch_count = 50
+evaluation_data_point_count = 256 # number of data points to evaluate against
+
+## IO settings
+input_data = "cache/data.plist"
+weights_file_name = "genre_model2.json"
+model_file_name = "genre_weights2.hdf5"
+
+## Operational settings
 load_model = False
 load_weights = False
 do_train = True
@@ -32,13 +41,6 @@ d = gdebug.Debugger(debug_level = debug_mode)
 # Helper functions
 def parse_track(track, data):
 	d.debug("  Parsing track: {}".format(track))
-	# Process metadata
-	# title_orig = data.get("title", "unknown")
-	# title = conv.string_to_int(title_orig)
-	# artist_orig = data.get("artist", "unknown")
-	# artist = conv.string_to_int(artist_orig)
-	# year = int(data.get("year", 2016))
-	# bitrate = int(data.get("bit_rate", 128))
 	genre_orig = data.get("genre", "Unknown")
 	genre = int(conv.convert_genre(genre_orig))
 	scaled_genre = conv.scale_genre(genre)
@@ -46,12 +48,8 @@ def parse_track(track, data):
 	# Process sample
 	sample_data = wav.read(track)
 	d.verbose("    Samples: {}".format(len(sample_data[1])))
-	# data = [int(val) for sublist in sample_data[1] for val in sublist]
 	data = np.ndarray.flatten(sample_data[1])
 	del sample_data
-	# output = [title, artist, year, bitrate]
-	# d.verbose("    Sample list kind: {}".format(type(data)))
-	# output.extend(data)
 
 	return scaled_genre, data[:441000] # force it to be that size, so the NN doesn't complain
 
@@ -72,15 +70,11 @@ class Dataset:
 	# TODO: implement a way for this to keep some data points aside as test data
 	start = 0
 	def __init__(self, inpt):
-		self.data=[]
 		self.input_values = inpt
 		self.locations=[]
 		for track, data in inpt.items():
 			self.locations.append(track)
-			# self.data.append(data)
 		d.debug("Initializing data set object")
-	# def shuffle(self):
-	# 	random.shuffle(self.data) # that won't work, then locations and data are mismatched
 	def shuffle(self):
 		random.shuffle(self.locations)
 		self.start = 0
@@ -92,10 +86,9 @@ class Dataset:
 		d.debug("Array feed shape: {}".format(data_array_feed.shape))
 		return data_array_feed
 
-	def next_batch(self, batch_size):
-		if(self.start+batch_size+2 >= len(self.locations)):
+	def next_batch(self, data_point_count):
+		if(self.start+data_point_count+2 >= len(self.locations)):
 			self.shuffle()
-			# self.start = 0
 		# expected return: data_feed, answer_feed
 		location = self.locations[self.start]
 		data_point = self.input_values.get(location)
@@ -108,7 +101,7 @@ class Dataset:
 			temp_output = output
 		data_feed = temp_output
 		d.verbose("Data point size: {}".format(data_feed.shape))
-		for i in range(1, batch_size):
+		for i in range(1, data_point_count):
 			location = self.locations[i+self.start]
 			data_point = self.input_values.get(location)
 			genre, output = parse_track(location, data_point)
@@ -123,7 +116,7 @@ class Dataset:
 			answer_feed.append(genre)
 			if (self.start+i+2)>len(self.locations):
 				self.start = 0 # start over at the beginning
-		self.start += batch_size
+		self.start += data_point_count
 		answer_array_feed = np.asarray(answer_feed)
 		data_array_feed = np.asarray(data_feed)
 		output_data_array_feed = self.safe_shape_data_feed(data_array_feed)
@@ -146,10 +139,12 @@ d.debug("End: read plist")
 data_set = Dataset(tracks)
 d.debug("Dataset built.")
 d.verbose("Dataset size: {}".format(data_set.get_data_point_count()))
+data_point_count = data_set.get_data_point_count()
 
+# Build the model, either from scratch or from disk
 if not load_model:
 	model = Sequential()
-	model.add(Dense(64, input_dim=441000 , init='uniform')) # number of data points being fed in: 4 metatags, 441000 samples (10 sec@44.1kHz)
+	model.add(Dense(128, input_dim=441000 , init='uniform')) # number of data points being fed in: 4 metatags, 441000 samples (10 sec@44.1kHz)
 	model.add(Activation('tanh'))
 	model.add(Dropout(0.5))
 	model.add(Dense(64, init='uniform'))
@@ -173,21 +168,16 @@ else:
 	if load_weights:
 		model.load_weights(weights_file_name)
 		d.debug("Weights loaded.")
+# Training
 if do_train:
-	for train_count in range(epoch_count):
-		data_feed, answer_feed = data_set.next_batch(batch_size)
-		d.debug("Meta-epoch {} of {}.".format(train_count, epoch_count))
-		model.fit(data_feed, answer_feed, nb_epoch=sub_epoch_count, batch_size=NN_batch_size)
-		# save_epoch_model_name = "{}.{}".format(train_count, model_file_name)
-		save_epoch_weight_name = "{}.{}".format(train_count, weights_file_name)
-		# save_model(model, save_epoch_model_name)
-		save_weights(model, save_epoch_weight_name)
+	data_feed, answer_feed = data_set.next_batch(data_point_count)
+	model.fit(data_feed, answer_feed, nb_epoch=epoch_count, data_point_count=batch_size)
+	d.debug("Fit complete. Preparing to test.")
 
-d.debug("Fit complete. Preparing to test.")
-test_data, test_answers = data_set.next_batch(batch_size)
-score = model.evaluate(test_data, test_answers, batch_size=16)
-d.debug("")
-d.debug("Test complete. Loss: {}. Accuracy: {}%".format(score[0], score[1]*100))
+# Evaluate against test data
+test_data, test_answers = data_set.next_batch(evaluation_data_point_count)
+score = model.evaluate(test_data, test_answers, data_point_count=16)
+d.debug("\nTest complete. Loss: {}. Accuracy: {}%".format(score[0], score[1]*100))
 
 save_model(model)
 save_weights(model)
@@ -202,7 +192,7 @@ save_weights(model)
 # d1.append(data)
 # outer_data = np.asarray(d1)
 
-# result = model.predict(outer_data, batch_size=1, verbose=0)
+# result = model.predict(outer_data, data_point_count=1, verbose=0)
 # print(result)
 # intified = conv.one_hot_to_int(result[0])
 # as_genre = conv.genre_to_label(intified)
