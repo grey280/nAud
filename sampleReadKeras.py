@@ -62,7 +62,7 @@ def save_model(model, path=model_file_name):
 
 def save_weights(model, path=weights_file_name):
 	if do_save:
-		path = "outputs/{}".format(path)
+		path = "output/{}".format(path)
 		model.save_weights(path)
 		d.debug("Finished writing weights to disk.")
 
