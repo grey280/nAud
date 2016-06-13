@@ -84,6 +84,9 @@ class Dataset:
 		random.shuffle(self.locations)
 		self.start = 0
 
+	def get_data_point_count(self):
+		return len(self.locations)
+
 	def safe_shape_data_feed(self, data_array_feed):
 		d.debug("Array feed shape: {}".format(data_array_feed.shape))
 		return data_array_feed
@@ -96,19 +99,16 @@ class Dataset:
 		location = self.locations[self.start]
 		data_point = self.input_values.get(location)
 		genre, output = parse_track(location, data_point)
+		answer_feed = []
+		answer_feed.append(genre)
 
 		try:
 			temp_output = output.asarray()
 		except:
 			temp_output = output
-		# temp_output.shape = (1,441000)
 
 		data_feed = temp_output
 		d.debug("Data feed size: {}".format(data_feed.shape))
-
-
-		# data_feed = []
-		answer_feed = []
 		for i in range(1, batch_size):
 			# data_point = self.data[i+self.start]
 			location = self.locations[i+self.start]
