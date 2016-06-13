@@ -76,15 +76,16 @@ class Dataset:
 		self.locations=[]
 		for track, data in inpt.items():
 			self.locations.append(track)
-			self.data.append(data)
+			# self.data.append(data)
 		d.debug("Initializing data set object")
 	# def shuffle(self):
 	# 	random.shuffle(self.data) # that won't work, then locations and data are mismatched
 	def shuffle(self):
 		random.shuffle(self.locations)
+		self.start = 0
 
 	def next_batch(self, batch_size):
-		if(self.start+batch_size >= len(self.data)):
+		if(self.start+batch_size >= len(self.locations)):
 			self.start = 0
 		# expected return: data_feed, answer_feed
 		data_feed = []
@@ -97,7 +98,7 @@ class Dataset:
 			
 			data_feed.append(output)
 			answer_feed.append(genre)
-			if (self.start+i+2)>len(self.data):
+			if (self.start+i+2)>len(self.locations):
 				self.start = 0 # start over at the beginning
 		self.start += batch_size
 		answer_array_feed = np.asarray(answer_feed)
