@@ -13,12 +13,12 @@ import gconvert			as conv
 debug_mode = 2 # 0: silent, 1: errors only, 2: normal, 3: verbose
 batch_size = 64*4 # The NN itself will use a batch size of 16, for now; this is the size of the data-parsing batch
 NN_batch_size = 16 # Size of batch the NN will use within each sub-epoch
-epoch_count = 1
+epoch_count = 5
 sub_epoch_count = 25 # NN epochs per dataset epoch
 input_data = "cache/data.plist"
 
-weights_path = "output/genre_model.json"
-model_path = "output/genre_weights.hdf5"
+weights_file_name = "output/genre_model.json"
+model_file_name = "output/genre_weights.hdf5"
 load_model = False
 load_weights = False
 do_train = True
@@ -52,6 +52,19 @@ def parse_track(track, data):
 	# output.extend(data)
 
 	return scaled_genre, data[:441000] # force it to be that size, so the NN doesn't complain
+
+def save_model(model, path=model_file_name):
+	if do_save:
+		path = "output/{}".format(path)
+		json_string = model.to_json()
+		open(path, 'w+').write(json_string)
+		d.debug('Finished writing model to disk.')
+
+def save_weights(model, path=weights_file_name):
+	if do_save:
+		path = "outputs/{}".format(path)
+		model.save_weights(path)
+		d.debug("Finished writing weights to disk.")
 
 class Dataset:
 	# TODO: implement a way for this to keep some data points aside as test data
@@ -119,19 +132,23 @@ if not load_model:
 	if debug_mode == 3: # only need to print the model in Verbose mode
 		model.summary()
 else:
-	model = open(model_path, 'r').read()
+	model = open(model_file_name, 'r').read()
 	model = model_from_json(model)
 	sgd = SGD(lr=0.1, decay=1e-6, momentum=0.9, nesterov=True)
 	model.compile(loss='categorical_crossentropy', optimizer=sgd, metrics=['accuracy'])
 	d.debug("Model loaded and SGD prepared.")
 	if load_weights:
-		model.load_weights(weights_path)
+		model.load_weights(weights_file_name)
 		d.debug("Weights loaded.")
 if do_train:
 	for i in range(epoch_count):
 		data_feed, answer_feed = data_set.next_batch(batch_size)
 		d.debug("Meta-epoch {} of {}.".format(i, epoch_count))
 		model.fit(data_feed, answer_feed, nb_epoch=sub_epoch_count, batch_size=NN_batch_size)
+		save_epoch_model_name = "{}.{}".format(i, model_file_name)
+		save_epoch_weight_name = "{}.{}".format(i, weights_file_name)
+		save_model(model, save_epoch_model_name)
+		save_weights(model, save_epoch_weight_name)
 
 d.debug("Fit complete. Preparing to test.")
 test_data, test_answers = data_set.next_batch(batch_size*4)
@@ -139,11 +156,8 @@ score = model.evaluate(test_data, test_answers, batch_size=16)
 d.debug("")
 d.debug("Test complete. Loss: {}. Accuracy: {}%".format(score[0], score[1]*100))
 
-if do_save:
-	json_string = model.to_json()
-	model.save_weights(weights_path)
-	open(model_path, 'w+').write(json_string)
-	d.debug('Finished writing weights and model to disk.')
+save_model(model)
+save_weights(model)
 
 
 # specific_song_to_test = "cache/2016.Ten Fé.NOON  189.Elodie.wav"
