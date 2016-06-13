@@ -17,8 +17,8 @@ epoch_count = 5
 sub_epoch_count = 25 # NN epochs per dataset epoch
 input_data = "cache/data.plist"
 
-weights_file_name = "output/genre_model.json"
-model_file_name = "output/genre_weights.hdf5"
+weights_file_name = "genre_model.json"
+model_file_name = "genre_weights.hdf5"
 load_model = False
 load_weights = False
 do_train = True
