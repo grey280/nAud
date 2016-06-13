@@ -119,7 +119,8 @@ class Dataset:
 			# 	output = output.tolist()
 			# except:
 			# 	pass
-			np.append(data_feed, output, axis=0)
+			# data_feed = np.append(data_feed, output, axis=0)
+			data_feed = np.vstack((data_feed,output))
 			# data_feed.append(output)
 			answer_feed.append(genre)
 			if (self.start+i+2)>len(self.locations):
@@ -181,9 +182,9 @@ if do_train:
 		data_feed, answer_feed = data_set.next_batch(batch_size)
 		d.debug("Meta-epoch {} of {}.".format(train_count, epoch_count))
 		model.fit(data_feed, answer_feed, nb_epoch=sub_epoch_count, batch_size=NN_batch_size)
-		save_epoch_model_name = "{}.{}".format(train_count, model_file_name)
+		# save_epoch_model_name = "{}.{}".format(train_count, model_file_name)
 		save_epoch_weight_name = "{}.{}".format(train_count, weights_file_name)
-		save_model(model, save_epoch_model_name)
+		# save_model(model, save_epoch_model_name)
 		save_weights(model, save_epoch_weight_name)
 
 d.debug("Fit complete. Preparing to test.")
