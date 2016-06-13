@@ -12,10 +12,10 @@ import gconvert			as conv
 
 # Settings
 debug_mode = 2 # 0: silent, 1: errors only, 2: normal, 3: verbose
-batch_size = 2**9 # This is the size of the data-parsing batch
+batch_size = 2**9 #2**9 # This is the size of the data-parsing batch
 NN_batch_size = 16 # Size of batch the NN will use within each sub-epoch
-epoch_count = 1 # TODO: test value, switch back to 5 later
-sub_epoch_count = 25 # NN epochs per dataset epoch # TODO: try this as 50
+epoch_count = 5 # TODO: test value, switch back to 5 later
+sub_epoch_count = 1 #25 # NN epochs per dataset epoch # TODO: try this as 50
 input_data = "cache/data.plist"
 
 weights_file_name = "genre_model.json"
@@ -84,9 +84,14 @@ class Dataset:
 		random.shuffle(self.locations)
 		self.start = 0
 
+	def safe_shape_data_feed(self, data_array_feed):
+		d.debug("Array feed shape: {}".format(data_array_feed.shape))
+		return data_array_feed
+
 	def next_batch(self, batch_size):
-		if(self.start+batch_size >= len(self.locations)):
-			self.start = 0
+		if(self.start+batch_size+2 >= len(self.locations)):
+			self.shuffle()
+			# self.start = 0
 		# expected return: data_feed, answer_feed
 		data_feed = []
 		answer_feed = []
@@ -95,7 +100,10 @@ class Dataset:
 			location = self.locations[i+self.start]
 			data_point = self.input_values.get(location)
 			genre, output = parse_track(location, data_point)
-			
+			try:
+				output = output.tolist()
+			except:
+				pass
 			data_feed.append(output)
 			answer_feed.append(genre)
 			if (self.start+i+2)>len(self.locations):
@@ -103,7 +111,10 @@ class Dataset:
 		self.start += batch_size
 		answer_array_feed = np.asarray(answer_feed)
 		data_array_feed = np.asarray(data_feed)
-		return data_array_feed, answer_array_feed
+		d.debug(data_array_feed)
+		# d.debug(answer_array_feed)
+		output_data_array_feed = self.safe_shape_data_feed(data_array_feed)
+		return output_data_array_feed, answer_array_feed
 
 
 # Import data
@@ -150,17 +161,17 @@ else:
 		model.load_weights(weights_file_name)
 		d.debug("Weights loaded.")
 if do_train:
-	for i in range(epoch_count):
+	for train_count in range(epoch_count):
 		data_feed, answer_feed = data_set.next_batch(batch_size)
-		d.debug("Meta-epoch {} of {}.".format(i, epoch_count))
+		d.debug("Meta-epoch {} of {}.".format(train_count, epoch_count))
 		model.fit(data_feed, answer_feed, nb_epoch=sub_epoch_count, batch_size=NN_batch_size)
-		save_epoch_model_name = "{}.{}".format(i, model_file_name)
-		save_epoch_weight_name = "{}.{}".format(i, weights_file_name)
+		save_epoch_model_name = "{}.{}".format(train_count, model_file_name)
+		save_epoch_weight_name = "{}.{}".format(train_count, weights_file_name)
 		save_model(model, save_epoch_model_name)
 		save_weights(model, save_epoch_weight_name)
 
 d.debug("Fit complete. Preparing to test.")
-test_data, test_answers = data_set.next_batch(batch_size*4)
+test_data, test_answers = data_set.next_batch(batch_size)
 score = model.evaluate(test_data, test_answers, batch_size=16)
 d.debug("")
 d.debug("Test complete. Loss: {}. Accuracy: {}%".format(score[0], score[1]*100))
