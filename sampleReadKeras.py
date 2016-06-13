@@ -12,10 +12,11 @@ import gconvert			as conv
 
 # Settings
 debug_mode = 2 # 0: silent, 1: errors only, 2: normal, 3: verbose
-batch_size = 2**9 #2**9 # This is the size of the data-parsing batch
+# batch_size = 2**9 #2**9 # This is the size of the data-parsing batch
+batch_size = 2235
 NN_batch_size = 16 # Size of batch the NN will use within each sub-epoch
-epoch_count = 5 # TODO: test value, switch back to 5 later
-sub_epoch_count = 1 #25 # NN epochs per dataset epoch # TODO: try this as 50
+epoch_count = 1 # TODO: test value, switch back to 5 later
+sub_epoch_count = 50 #25 # NN epochs per dataset epoch # TODO: try this as 50
 input_data = "cache/data.plist"
 
 weights_file_name = "genre_model.json"
@@ -101,35 +102,30 @@ class Dataset:
 		genre, output = parse_track(location, data_point)
 		answer_feed = []
 		answer_feed.append(genre)
-
 		try:
 			temp_output = output.asarray()
 		except:
 			temp_output = output
-
 		data_feed = temp_output
-		d.debug("Data feed size: {}".format(data_feed.shape))
+		d.verbose("Data point size: {}".format(data_feed.shape))
 		for i in range(1, batch_size):
-			# data_point = self.data[i+self.start]
 			location = self.locations[i+self.start]
 			data_point = self.input_values.get(location)
 			genre, output = parse_track(location, data_point)
-			d.debug("Data point size: {}".format(output.shape))
-			# try:
-			# 	output = output.tolist()
-			# except:
-			# 	pass
-			# data_feed = np.append(data_feed, output, axis=0)
-			data_feed = np.vstack((data_feed,output))
-			# data_feed.append(output)
+			d.verbose("Data point size: {}".format(output.shape))
+			data_feed = np.vstack((data_feed,output)) # TODO: fix this
+								# it works, but it gets slower and slower over time until it's
+								# just downright ungodly. probably because np.vstack doesnt't
+								# edit in place, it does a full copy and edits the copy.
+								# so increasing efficiency options:
+								# * find something that edits in place, I don't need copying
+								# * copy by batches - combine into fives or something?
 			answer_feed.append(genre)
 			if (self.start+i+2)>len(self.locations):
 				self.start = 0 # start over at the beginning
 		self.start += batch_size
 		answer_array_feed = np.asarray(answer_feed)
 		data_array_feed = np.asarray(data_feed)
-		d.debug(data_array_feed)
-		# d.debug(answer_array_feed)
 		output_data_array_feed = self.safe_shape_data_feed(data_array_feed)
 		return output_data_array_feed, answer_array_feed
 
@@ -145,11 +141,11 @@ d.debug("End: read plist")
 #	Year
 #	Bitrate?
 #	Sample data
-# And have it training towards the genres. Which I should probably convert into a numerical system, set in stone,
-#	so that it can be consistent across trainings and whatnot. I'll go write that.
+# And it's trying to identify the genre.
 
 data_set = Dataset(tracks)
 d.debug("Dataset built.")
+d.verbose("Dataset size: {}".format(data_set.get_data_point_count()))
 
 if not load_model:
 	model = Sequential()
