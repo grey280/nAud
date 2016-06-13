@@ -26,8 +26,8 @@ evaluation_data_point_count = 256 # number of data points to evaluate against
 
 ## IO settings
 input_data = "cache/data.plist"
-weights_file_name = "genre_model.json"
-model_file_name = "genre_weights.hdf5"
+weights_file_name = "genre_model2.json"
+model_file_name = "genre_weights2.hdf5"
 
 ## Operational settings
 load_model = False
@@ -144,7 +144,7 @@ data_point_count = data_set.get_data_point_count()
 # Build the model, either from scratch or from disk
 if not load_model:
 	model = Sequential()
-	model.add(Dense(64, input_dim=441000 , init='uniform')) # number of data points being fed in: 4 metatags, 441000 samples (10 sec@44.1kHz)
+	model.add(Dense(128, input_dim=441000 , init='uniform')) # number of data points being fed in: 4 metatags, 441000 samples (10 sec@44.1kHz)
 	model.add(Activation('tanh'))
 	model.add(Dropout(0.5))
 	model.add(Dense(64, init='uniform'))
