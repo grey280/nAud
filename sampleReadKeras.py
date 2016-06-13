@@ -5,6 +5,7 @@ from keras.optimizers import SGD
 import plistlib
 import numpy 			as np
 import scipy.io.wavfile	as wav
+import random
 
 import gdebug
 import gconvert			as conv
@@ -71,11 +72,17 @@ class Dataset:
 	start = 0
 	def __init__(self, inpt):
 		self.data=[]
+		self.input_values = inpt
 		self.locations=[]
 		for track, data in inpt.items():
 			self.locations.append(track)
 			self.data.append(data)
 		d.debug("Initializing data set object")
+	# def shuffle(self):
+	# 	random.shuffle(self.data) # that won't work, then locations and data are mismatched
+	def shuffle(self):
+		random.shuffle(self.locations)
+
 	def next_batch(self, batch_size):
 		if(self.start+batch_size >= len(self.data)):
 			self.start = 0
@@ -83,8 +90,9 @@ class Dataset:
 		data_feed = []
 		answer_feed = []
 		for i in range(batch_size):
-			data_point = self.data[i+self.start]
+			# data_point = self.data[i+self.start]
 			location = self.locations[i+self.start]
+			data_point = self.input_values.get(location)
 			genre, output = parse_track(location, data_point)
 			
 			data_feed.append(output)
