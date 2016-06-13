@@ -93,18 +93,34 @@ class Dataset:
 			self.shuffle()
 			# self.start = 0
 		# expected return: data_feed, answer_feed
-		data_feed = []
+		location = self.locations[self.start]
+		data_point = self.input_values.get(location)
+		genre, output = parse_track(location, data_point)
+
+		try:
+			temp_output = output.asarray()
+		except:
+			temp_output = output
+		# temp_output.shape = (1,441000)
+
+		data_feed = temp_output
+		d.debug("Data feed size: {}".format(data_feed.shape))
+
+
+		# data_feed = []
 		answer_feed = []
-		for i in range(batch_size):
+		for i in range(1, batch_size):
 			# data_point = self.data[i+self.start]
 			location = self.locations[i+self.start]
 			data_point = self.input_values.get(location)
 			genre, output = parse_track(location, data_point)
-			try:
-				output = output.tolist()
-			except:
-				pass
-			data_feed.append(output)
+			d.debug("Data point size: {}".format(output.shape))
+			# try:
+			# 	output = output.tolist()
+			# except:
+			# 	pass
+			np.append(data_feed, output, axis=0)
+			# data_feed.append(output)
 			answer_feed.append(genre)
 			if (self.start+i+2)>len(self.locations):
 				self.start = 0 # start over at the beginning
