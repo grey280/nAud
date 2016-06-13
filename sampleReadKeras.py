@@ -12,10 +12,10 @@ import gconvert			as conv
 
 # Settings
 debug_mode = 2 # 0: silent, 1: errors only, 2: normal, 3: verbose
-batch_size = 64*4 # The NN itself will use a batch size of 16, for now; this is the size of the data-parsing batch
+batch_size = 2**9 # This is the size of the data-parsing batch
 NN_batch_size = 16 # Size of batch the NN will use within each sub-epoch
-epoch_count = 5
-sub_epoch_count = 25 # NN epochs per dataset epoch
+epoch_count = 1 # TODO: test value, switch back to 5 later
+sub_epoch_count = 25 # NN epochs per dataset epoch # TODO: try this as 50
 input_data = "cache/data.plist"
 
 weights_file_name = "genre_model.json"
