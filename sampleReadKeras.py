@@ -1,3 +1,8 @@
+# Things to try
+# * Various transforms of the input data to a different setup
+# * Pull samples from a different part of the song - :30-:40 instead of :00-:10, or something
+# * Restructure the neural network model
+
 from keras.models import Sequential, model_from_json
 from keras.layers import Dense, Dropout, Activation
 from keras.optimizers import SGD
@@ -172,8 +177,7 @@ if do_train:
 # Evaluate against test data
 test_data, test_answers = data_set.next_batch(evaluation_data_point_count)
 score = model.evaluate(test_data, test_answers, data_point_count=16)
-d.debug("")
-d.debug("Test complete. Loss: {}. Accuracy: {}%".format(score[0], score[1]*100))
+d.debug("\nTest complete. Loss: {}. Accuracy: {}%".format(score[0], score[1]*100))
 
 save_model(model)
 save_weights(model)

@@ -26,3 +26,6 @@ class Debugger:
 	def verbose(self, string):
 		if self.debug_level > 2:
 			print(string)
+	def progress(self, message, minval, maxval):
+		if self.debug_level > 1:
+			print("\r{}\n{}/{}".format(message, minval, maxval))
