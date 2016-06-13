@@ -82,10 +82,6 @@ class Dataset:
 	def get_data_point_count(self):
 		return len(self.locations)
 
-	def safe_shape_data_feed(self, data_array_feed):
-		d.debug("Array feed shape: {}".format(data_array_feed.shape))
-		return data_array_feed
-
 	def next_batch(self, data_point_count):
 		if(self.start+data_point_count+2 >= len(self.locations)):
 			self.shuffle()
@@ -120,8 +116,7 @@ class Dataset:
 		self.start += data_point_count
 		answer_array_feed = np.asarray(answer_feed)
 		data_array_feed = np.asarray(data_feed)
-		output_data_array_feed = self.safe_shape_data_feed(data_array_feed)
-		return output_data_array_feed, answer_array_feed
+		return data_array_feed, answer_array_feed
 
 
 # Import data
@@ -172,12 +167,12 @@ else:
 # Training
 if do_train:
 	data_feed, answer_feed = data_set.next_batch(data_point_count)
-	model.fit(data_feed, answer_feed, nb_epoch=epoch_count, data_point_count=batch_size)
+	model.fit(data_feed, answer_feed, nb_epoch=epoch_count, batch_size=batch_size)
 	d.debug("Fit complete. Preparing to test.")
 
 # Evaluate against test data
 test_data, test_answers = data_set.next_batch(evaluation_data_point_count)
-score = model.evaluate(test_data, test_answers, data_point_count=16)
+score = model.evaluate(test_data, test_answers, batch_size=16)
 d.debug("\nTest complete. Loss: {}. Accuracy: {}%".format(score[0], score[1]*100))
 
 save_model(model)
