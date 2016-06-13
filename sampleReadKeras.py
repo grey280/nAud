@@ -12,9 +12,9 @@ import gconvert			as conv
 
 # Settings
 debug_mode = 2 # 0: silent, 1: errors only, 2: normal, 3: verbose
-NN_data_point_count = 16 # Size of batch the NN will use within each sub-epoch
-epoch_count = 1 # TODO: test value, switch back to 5 later
-sub_epoch_count = 50 #25 # NN epochs per dataset epoch # TODO: try this as 50
+
+batch_size = 16 # Size of batch the NN will use within each sub-epoch
+epoch_count = 50 #25 # NN epochs per dataset epoch # TODO: try this as 50
 input_data = "cache/data.plist"
 
 weights_file_name = "genre_model.json"
@@ -173,14 +173,8 @@ else:
 		model.load_weights(weights_file_name)
 		d.debug("Weights loaded.")
 if do_train:
-	for train_count in range(epoch_count):
-		data_feed, answer_feed = data_set.next_batch(data_point_count)
-		d.debug("Meta-epoch {} of {}.".format(train_count, epoch_count))
-		model.fit(data_feed, answer_feed, nb_epoch=sub_epoch_count, data_point_count=NN_data_point_count)
-		# save_epoch_model_name = "{}.{}".format(train_count, model_file_name)
-		save_epoch_weight_name = "{}.{}".format(train_count, weights_file_name)
-		# save_model(model, save_epoch_model_name)
-		save_weights(model, save_epoch_weight_name)
+	data_feed, answer_feed = data_set.next_batch(data_point_count)
+	model.fit(data_feed, answer_feed, nb_epoch=epoch_count, data_point_count=batch_size)
 
 d.debug("Fit complete. Preparing to test.")
 test_data, test_answers = data_set.next_batch(data_point_count)
