@@ -31,10 +31,10 @@ weights_file_name = "genre_model2.json"
 model_file_name = "genre_weights2.hdf5"
 
 ## Operational settings
-load_model = False
-load_weights = False
-do_train = True
-do_save = True
+load_model = True
+load_weights = True
+do_train = False
+do_save = False
 
 # Tools
 d = gdebug.Debugger(debug_level = debug_mode)
@@ -160,13 +160,13 @@ if not load_model:
 	if debug_mode == 3: # only need to print the model in Verbose mode
 		model.summary()
 else:
-	model = open(model_file_name, 'r').read()
+	model = open("output/{}".format(model_file_name), 'r').read()
 	model = model_from_json(model)
 	sgd = SGD(lr=0.1, decay=1e-6, momentum=0.9, nesterov=True)
 	model.compile(loss='categorical_crossentropy', optimizer=sgd, metrics=['accuracy'])
 	d.debug("Model loaded and SGD prepared.")
 	if load_weights:
-		model.load_weights(weights_file_name)
+		model.load_weights("output/{}".format(weights_file_name))
 		d.debug("Weights loaded.")
 # Training
 if do_train:
