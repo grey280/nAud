@@ -171,7 +171,13 @@ else:
 # Training
 if do_train:
 	data_feed, answer_feed = data_set.next_batch(data_point_count)
-	model.fit(data_feed, answer_feed, nb_epoch=epoch_count, batch_size=batch_size, shuffle=shuffle_at_epoch, validation_split=NN_validation_split)
+	if d.debug_level == 3:
+		NN_log_level = 2
+	elif d.debug_level == 2:
+		NN_log_level = 1
+	else:
+		NN_log_level = 0
+	model.fit(data_feed, answer_feed, nb_epoch=epoch_count, batch_size=batch_size, shuffle=shuffle_at_epoch, validation_split=NN_validation_split, verbose=NN_log_level)
 	d.debug("Fit complete. Preparing to test.")
 
 # Evaluate against test data
