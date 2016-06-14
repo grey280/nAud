@@ -6,6 +6,7 @@
 from keras.models import Sequential, model_from_json
 from keras.layers import Dense, Dropout, Activation
 from keras.optimizers import SGD
+from keras.callbacks import EarlyStopping
 
 import plistlib
 import numpy 			as np
@@ -24,11 +25,13 @@ batch_size = 16
 epoch_count = 50
 data_point_count = 0 # number of data points to use for training; set to 0 for 'all'
 evaluation_data_point_count = 256 # number of data points to evaluate against; set to 0 for 'all'
+shuffle_at_epoch = True
+NN_validation_split = 0.1 # fraction of data to be held out as validation data, 0.<x<1
 
 ## IO settings
 input_data = "cache/data.plist"
-weights_file_name = "genre_model2.json"
-model_file_name = "genre_weights2.hdf5"
+weights_file_name = "4genres.json"
+model_file_name = "4genres.hdf5"
 vstack_split_size = 50
 
 ## Operational settings
@@ -169,7 +172,14 @@ else:
 # Training
 if do_train:
 	data_feed, answer_feed = data_set.next_batch(data_point_count)
-	model.fit(data_feed, answer_feed, nb_epoch=epoch_count, batch_size=batch_size)
+	if d.debug_level == 3:
+		NN_log_level = 2
+	elif d.debug_level == 2:
+		NN_log_level = 1
+	else:
+		NN_log_level = 0
+	early_stopping = EarlyStopping(monitor='val_loss', patience=2)
+	model.fit(data_feed, answer_feed, nb_epoch=epoch_count, batch_size=batch_size, shuffle=shuffle_at_epoch, validation_split=NN_validation_split, verbose=NN_log_level, callbacks=[early_stopping])
 	d.debug("Fit complete. Preparing to test.")
 
 # Evaluate against test data
