@@ -27,18 +27,19 @@ class Debugger:
 	def verbose(self, string):
 		if self.debug_level > 2:
 			print(string)
-	def progress(self, message, currentval, maxval):
+	def progress(self, message, currentval, maxval, bar_length=20):
 		if self.debug_level > 1:
-			pbar = self._progress_bar_(currentval, maxval)
+			pbar = self._progress_bar_(currentval, maxval, length=bar_length)
 			if not currentval == maxval:
 				sys.stdout.write("\r{}\n{} {}/{}".format(message, pbar, currentval, maxval))
 			else:
 				sys.stdout.write("\r{}\n{} complete\n".format(message, pbar))
 
-	def _progress_bar_(self, currentval, maxval):
+	def _progress_bar_(self, currentval, maxval, length=20):
 		output = ""
-		for i in range(int(20*currentval/maxval)):
-			output = "{}=".format(output)
-		for i in range(int(20-(20*currentval/maxval))):
-			output = "{} ".format(output)
+		for i in range(length):
+			if int(length*currentval/maxval) > i:
+				output = "{}=".format(output)
+			else:
+				output = "{} ".format(output)
 		return "[{}]".format(output)

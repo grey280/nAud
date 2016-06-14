@@ -29,6 +29,7 @@ evaluation_data_point_count = 256 # number of data points to evaluate against; s
 input_data = "cache/data.plist"
 weights_file_name = "genre_model2.json"
 model_file_name = "genre_weights2.hdf5"
+vstack_split_size = 50
 
 ## Operational settings
 load_model = False
@@ -84,39 +85,36 @@ class Dataset:
 		return len(self.locations)
 
 	def next_batch(self, data_point_count):
-		if(self.start+data_point_count+2 >= len(self.locations)):
-			self.shuffle()
-		# expected return: data_feed, answer_feed
 		location = self.locations[self.start]
 		data_point = self.input_values.get(location)
 		genre, output = parse_track(location, data_point)
-		answer_feed = []
-		answer_feed.append(genre)
+		answer_feed = [genre]
 		try:
-			temp_output = output.asarray()
+			output = output.asarray()
 		except:
-			temp_output = output
-		data_feed = temp_output
-		d.verbose("Data point size: {}".format(data_feed.shape))
+			pass
+		data_feed_holder = output
+		data_feed = np.empty((441000,),dtype='int16')
 		for i in range(1, data_point_count):
-			location = self.locations[i+self.start]
+			if(self.start + 2 >= len(self.locations)):
+				self.shuffle()
+			if(i%vstack_split_size == 0):
+				data_feed = np.vstack((data_feed, data_feed_holder))
+				d.debug(data_feed_holder.shape)
+				del data_feed_holder
+			location = self.locations[self.start]
+			self.start += 1
 			data_point = self.input_values.get(location)
 			genre, output = parse_track(location, data_point)
-			d.progress("  Parsed track: {}".format(location),i,data_point_count)
-			d.verbose("Data point size: {}".format(output.shape))
-			data_feed = np.vstack((data_feed,output)) # TODO: fix this
-								# it works, but it gets slower and slower over time until it's
-								# just downright ungodly. probably because np.vstack doesnt't
-								# edit in place, it does a full copy and edits the copy.
-								# so increasing efficiency options:
-								# * find something that edits in place, I don't need copying
-								# * copy by batches - combine into fives or something?
+			d.progress("  Track: {}".format(location),i+1,data_point_count)
+			if(i%vstack_split_size==0): # fixes an off-by-vstack_split_size error, because np.empty is *weird*
+				data_feed_holder = output
+			else:
+				data_feed_holder = np.vstack((data_feed_holder,output))
 			answer_feed.append(genre)
-			if (self.start+i+2)>len(self.locations):
-				self.start = 0 # start over at the beginning
-		self.start += data_point_count
+		data_feed = np.vstack((data_feed,data_feed_holder))
+		data_array_feed = np.asarray(data_feed)[1:] # fixes an off-by-one error that you get from the way np.empty works
 		answer_array_feed = np.asarray(answer_feed)
-		data_array_feed = np.asarray(data_feed)
 		return data_array_feed, answer_array_feed
 
 
@@ -160,13 +158,13 @@ if not load_model:
 	if debug_mode == 3: # only need to print the model in Verbose mode
 		model.summary()
 else:
-	model = open(model_file_name, 'r').read()
+	model = open("output/{}".format(model_file_name), 'r').read()
 	model = model_from_json(model)
 	sgd = SGD(lr=0.1, decay=1e-6, momentum=0.9, nesterov=True)
 	model.compile(loss='categorical_crossentropy', optimizer=sgd, metrics=['accuracy'])
 	d.debug("Model loaded and SGD prepared.")
 	if load_weights:
-		model.load_weights(weights_file_name)
+		model.load_weights("output/{}".format(weights_file_name))
 		d.debug("Weights loaded.")
 # Training
 if do_train:
