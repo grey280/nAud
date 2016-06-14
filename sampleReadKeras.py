@@ -29,6 +29,7 @@ evaluation_data_point_count = 256 # number of data points to evaluate against; s
 input_data = "cache/data.plist"
 weights_file_name = "genre_model2.json"
 model_file_name = "genre_weights2.hdf5"
+vstack_split_size = 5
 
 ## Operational settings
 load_model = True
@@ -84,26 +85,23 @@ class Dataset:
 		return len(self.locations)
 
 	def next_batch(self, data_point_count):
-		if(self.start+data_point_count+2 >= len(self.locations)):
-			self.shuffle()
-		# expected return: data_feed, answer_feed
 		location = self.locations[self.start]
 		data_point = self.input_values.get(location)
 		genre, output = parse_track(location, data_point)
-		answer_feed = []
-		answer_feed.append(genre)
+		answer_feed = [genre]
 		try:
-			temp_output = output.asarray()
+			output = output.asarray()
 		except:
-			temp_output = output
-		data_feed = temp_output
-		d.verbose("Data point size: {}".format(data_feed.shape))
+			pass
+		data_feed = output
 		for i in range(1, data_point_count):
-			location = self.locations[i+self.start]
+			if(self.start + 2 >= len(self.locations)):
+				self.shuffle()
+			location = self.locations[self.start]
+			self.start += 1
 			data_point = self.input_values.get(location)
 			genre, output = parse_track(location, data_point)
-			d.progress("  Parsed track: {}".format(location),i,data_point_count)
-			d.verbose("Data point size: {}".format(output.shape))
+			d.progress("  Track: {}".format(location),i+1,data_point_count)
 			data_feed = np.vstack((data_feed,output)) # TODO: fix this
 								# it works, but it gets slower and slower over time until it's
 								# just downright ungodly. probably because np.vstack doesnt't
@@ -112,11 +110,8 @@ class Dataset:
 								# * find something that edits in place, I don't need copying
 								# * copy by batches - combine into fives or something?
 			answer_feed.append(genre)
-			if (self.start+i+2)>len(self.locations):
-				self.start = 0 # start over at the beginning
-		self.start += data_point_count
-		answer_array_feed = np.asarray(answer_feed)
 		data_array_feed = np.asarray(data_feed)
+		answer_array_feed = np.asarray(answer_feed)
 		return data_array_feed, answer_array_feed
 
 
