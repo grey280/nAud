@@ -22,7 +22,8 @@ debug_mode = 2 # 0: silent, 1: errors only, 2: normal, 3: verbose
 ## Neural Network settings
 batch_size = 16
 epoch_count = 50
-evaluation_data_point_count = 256 # number of data points to evaluate against
+data_point_count = 0 # number of data points to use for training; set to 0 for 'all'
+evaluation_data_point_count = 256 # number of data points to evaluate against; set to 0 for 'all'
 
 ## IO settings
 input_data = "cache/data.plist"
@@ -135,7 +136,10 @@ d.debug("End: read plist")
 data_set = Dataset(tracks)
 d.debug("Dataset built.")
 d.verbose("Dataset size: {}".format(data_set.get_data_point_count()))
-data_point_count = data_set.get_data_point_count()
+if data_point_count == 0:
+	data_point_count = data_set.get_data_point_count()
+if evaluation_data_point_count == 0:
+	evaluation_data_point_count = data_set.get_data_point_count()
 
 # Build the model, either from scratch or from disk
 if not load_model:
