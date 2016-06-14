@@ -27,8 +27,8 @@ evaluation_data_point_count = 256 # number of data points to evaluate against; s
 
 ## IO settings
 input_data = "cache/data.plist"
-weights_file_name = "genre_model2.json"
-model_file_name = "genre_weights2.hdf5"
+weights_file_name = "4genres.json"
+model_file_name = "4genres.hdf5"
 vstack_split_size = 50
 
 ## Operational settings
