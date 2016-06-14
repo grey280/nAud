@@ -35,10 +35,11 @@ class Debugger:
 			else:
 				sys.stdout.write("\r{}\n{} complete\n".format(message, pbar))
 
-	def _progress_bar_(self, currentval, maxval):
+	def _progress_bar_(self, currentval, maxval, length=20):
 		output = ""
-		for i in range(int(20*currentval/maxval)):
-			output = "{}=".format(output)
-		for i in range(int(20-(20*currentval/maxval))):
-			output = "{} ".format(output)
+		for i in range(length):
+			if int(length*currentval/maxval) > i:
+				output = "{}=".format(output)
+			else:
+				output = "{} ".format(output)
 		return "[{}]".format(output)
