@@ -24,6 +24,8 @@ batch_size = 16
 epoch_count = 50
 data_point_count = 0 # number of data points to use for training; set to 0 for 'all'
 evaluation_data_point_count = 256 # number of data points to evaluate against; set to 0 for 'all'
+shuffle_at_epoch = True
+NN_validation_split = 0.1 # fraction of data to be held out as validation data, 0.<x<1
 
 ## IO settings
 input_data = "cache/data.plist"
@@ -169,7 +171,7 @@ else:
 # Training
 if do_train:
 	data_feed, answer_feed = data_set.next_batch(data_point_count)
-	model.fit(data_feed, answer_feed, nb_epoch=epoch_count, batch_size=batch_size)
+	model.fit(data_feed, answer_feed, nb_epoch=epoch_count, batch_size=batch_size, shuffle=shuffle_at_epoch, validation_split=NN_validation_split)
 	d.debug("Fit complete. Preparing to test.")
 
 # Evaluate against test data
