@@ -27,9 +27,9 @@ class Debugger:
 	def verbose(self, string):
 		if self.debug_level > 2:
 			print(string)
-	def progress(self, message, currentval, maxval):
+	def progress(self, message, currentval, maxval, bar_length=20):
 		if self.debug_level > 1:
-			pbar = self._progress_bar_(currentval, maxval)
+			pbar = self._progress_bar_(currentval, maxval, length=bar_length)
 			if not currentval == maxval:
 				sys.stdout.write("\r{}\n{} {}/{}".format(message, pbar, currentval, maxval))
 			else:
