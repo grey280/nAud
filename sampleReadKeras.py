@@ -29,13 +29,13 @@ evaluation_data_point_count = 256 # number of data points to evaluate against; s
 input_data = "cache/data.plist"
 weights_file_name = "genre_model2.json"
 model_file_name = "genre_weights2.hdf5"
-vstack_split_size = 5
+vstack_split_size = 50
 
 ## Operational settings
-load_model = True
-load_weights = True
-do_train = False
-do_save = False
+load_model = False
+load_weights = False
+do_train = True
+do_save = True
 
 # Tools
 d = gdebug.Debugger(debug_level = debug_mode)
@@ -93,24 +93,27 @@ class Dataset:
 			output = output.asarray()
 		except:
 			pass
-		data_feed = output
+		data_feed_holder = output
+		data_feed = np.empty((441000,),dtype='int16')
 		for i in range(1, data_point_count):
 			if(self.start + 2 >= len(self.locations)):
 				self.shuffle()
+			if(i%vstack_split_size == 0):
+				data_feed = np.vstack((data_feed, data_feed_holder))
+				d.debug(data_feed_holder.shape)
+				del data_feed_holder
 			location = self.locations[self.start]
 			self.start += 1
 			data_point = self.input_values.get(location)
 			genre, output = parse_track(location, data_point)
 			d.progress("  Track: {}".format(location),i+1,data_point_count)
-			data_feed = np.vstack((data_feed,output)) # TODO: fix this
-								# it works, but it gets slower and slower over time until it's
-								# just downright ungodly. probably because np.vstack doesnt't
-								# edit in place, it does a full copy and edits the copy.
-								# so increasing efficiency options:
-								# * find something that edits in place, I don't need copying
-								# * copy by batches - combine into fives or something?
+			if(i%vstack_split_size==0): # fixes an off-by-vstack_split_size error, because np.empty is *weird*
+				data_feed_holder = output
+			else:
+				data_feed_holder = np.vstack((data_feed_holder,output))
 			answer_feed.append(genre)
-		data_array_feed = np.asarray(data_feed)
+		data_feed = np.vstack((data_feed,data_feed_holder))
+		data_array_feed = np.asarray(data_feed)[1:] # fixes an off-by-one error that you get from the way np.empty works
 		answer_array_feed = np.asarray(answer_feed)
 		return data_array_feed, answer_array_feed
 
