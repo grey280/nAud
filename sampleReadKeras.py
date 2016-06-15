@@ -55,8 +55,9 @@ def parse_track(track, data):
 	d.verbose("    Samples: {}".format(len(sample_data[1])))
 	data = np.ndarray.flatten(sample_data[1])
 	del sample_data
-
-	return scaled_genre, data[:441000] # force it to be that size, so the NN doesn't complain
+	start_point = 30*44100
+	end_point = 40*44100
+	return scaled_genre, data[start_point:end_point] # force it to be that size, so the NN doesn't complain
 
 def save_model(model, path=model_file_name):
 	if do_save:
