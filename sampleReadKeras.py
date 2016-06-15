@@ -73,7 +73,9 @@ def save_weights(model, path=weights_file_name):
 		d.debug("Finished writing weights to disk.")
 
 def scheduler(epoch):
-	if epoch >= 5:
+	if epoch >= 10:
+		return 0.01
+	elif epoch >= 5:
 		return 0.05
 	else:
 		return 0.1
