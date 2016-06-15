@@ -35,8 +35,8 @@ model_file_name = "midpoint4.hdf5"
 vstack_split_size = 35					# controls the speed/memory usage of loading tracks. 25-50 works well.
 
 ## Operational settings
-load_model = False
-load_weights = False
+load_model = True
+load_weights = True
 do_train = True
 do_save = True
 
