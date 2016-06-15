@@ -30,8 +30,8 @@ NN_validation_split = 0.1 # fraction of data to be held out as validation data, 
 
 ## IO settings
 input_data = "cache/data.plist"
-weights_file_name = "4genres.json"
-model_file_name = "4genres.hdf5"
+weights_file_name = "2genres.json"
+model_file_name = "2genres.hdf5"
 vstack_split_size = 50
 
 ## Operational settings

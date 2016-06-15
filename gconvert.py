@@ -132,14 +132,14 @@ def scale_genre(genre):
 # 		return titles[0]
 # 	return titles[genre]
 
-number_of_genres = 4
+number_of_genres = 2
 genre_labels = {
 	"Unknown": 0,
 	"Rock": 1,
 	"Classical": 2,
 	"Acoustic": 3
 }
-def convert_genre(genre):
+def convert_genre_four(genre):
 	genres = {
 		"Unknown": 0,
 		"Acoustic": 1,
@@ -201,6 +201,15 @@ def convert_genre(genre):
 	genres_convert_2 = [0, 1, 1, 3, 3, 2, 1, 2, 1, 0, 3, 0, 0]
 	temp = genres.get(genre, 0)
 	return genres_convert_2[genres_convert[temp]]
+
+def convert_genre(genre):
+	temp = convert_genre_four(genre)
+	genres_convert_1 = [1, 1, 0, 0]
+	return genres_convert_1[temp]
+	genre_two = {
+		"Soft": 0,
+		"Loud": 1
+	}
 
 def genre_to_label(genre):
 	titles=["Unknown", "Rock", "Classical", "Acoustic"]
