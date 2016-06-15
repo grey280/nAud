@@ -5,7 +5,7 @@
 from keras.models import Sequential, model_from_json
 from keras.layers import Dense, Dropout, Activation
 from keras.optimizers import SGD
-from keras.callbacks import EarlyStopping
+from keras.callbacks import EarlyStopping, LearningRateScheduler
 
 import plistlib
 import numpy 			as np
@@ -22,7 +22,7 @@ debug_mode = 2 							# 0: silent, 1: errors only, 2: normal, 3: verbose
 ## Neural Network settings
 batch_size = 16
 epoch_count = 50
-data_point_count = 512 					# number of data points to use for training; set to 0 for 'all'
+data_point_count = 0 					# number of data points to use for training; set to 0 for 'all'
 evaluation_data_point_count = 256 		# number of data points to evaluate against; set to 0 for 'all'
 shuffle_at_epoch = True
 NN_validation_split = 0.1 				# fraction of data to be held out as validation data, 0.<x<1
@@ -71,6 +71,12 @@ def save_weights(model, path=weights_file_name):
 		path = "output/{}".format(path)
 		model.save_weights(path)
 		d.debug("Finished writing weights to disk.")
+
+def scheduler(epoch):
+	if epoch >= 5:
+		return 0.05
+	else:
+		return 0.1
 
 class Dataset:
 	# TODO: implement a way for this to keep some data points aside as test data
@@ -179,8 +185,10 @@ if do_train:
 		NN_log_level = 1
 	else:
 		NN_log_level = 0
+
+	change_lr = LearningRateScheduler(scheduler)
 	early_stopping = EarlyStopping(monitor='val_loss', patience=early_stopping_patience)
-	model.fit(data_feed, answer_feed, nb_epoch=epoch_count, batch_size=batch_size, shuffle=shuffle_at_epoch, validation_split=NN_validation_split, verbose=NN_log_level, callbacks=[early_stopping])
+	model.fit(data_feed, answer_feed, nb_epoch=epoch_count, batch_size=batch_size, shuffle=shuffle_at_epoch, validation_split=NN_validation_split, verbose=NN_log_level, callbacks=[early_stopping, change_lr])
 	d.debug("Fit complete. Preparing to test.")
 
 # Evaluate against test data
