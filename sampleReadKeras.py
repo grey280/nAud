@@ -1,7 +1,6 @@
 # Things to try
 # * Various transforms of the input data to a different setup
 # * Pull samples from a different part of the song - :30-:40 instead of :00-:10, or something
-# * Restructure the neural network model
 
 from keras.models import Sequential, model_from_json
 from keras.layers import Dense, Dropout, Activation
@@ -18,22 +17,22 @@ import gconvert			as conv
 
 # Settings
 ## Debug Settings
-debug_mode = 2 # 0: silent, 1: errors only, 2: normal, 3: verbose
+debug_mode = 2 							# 0: silent, 1: errors only, 2: normal, 3: verbose
 
 ## Neural Network settings
 batch_size = 16
 epoch_count = 50
-data_point_count = 0 # number of data points to use for training; set to 0 for 'all'
-evaluation_data_point_count = 256 # number of data points to evaluate against; set to 0 for 'all'
+data_point_count = 0 					# number of data points to use for training; set to 0 for 'all'
+evaluation_data_point_count = 256 		# number of data points to evaluate against; set to 0 for 'all'
 shuffle_at_epoch = True
-NN_validation_split = 0.1 # fraction of data to be held out as validation data, 0.<x<1
-early_stopping_patience = 3 # how many epochs without improvement it'll go before stopping
+NN_validation_split = 0.1 				# fraction of data to be held out as validation data, 0.<x<1
+early_stopping_patience = 3 			# how many epochs without improvement it'll go before stopping
 
 ## IO settings
 input_data = "cache/data.plist"
 weights_file_name = "2genres.json"
 model_file_name = "2genres.hdf5"
-vstack_split_size = 50
+vstack_split_size = 50					# controls the speed/memory usage of loading tracks. 25-50 works well.
 
 ## Operational settings
 load_model = False
