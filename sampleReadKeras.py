@@ -27,6 +27,7 @@ data_point_count = 0 # number of data points to use for training; set to 0 for '
 evaluation_data_point_count = 256 # number of data points to evaluate against; set to 0 for 'all'
 shuffle_at_epoch = True
 NN_validation_split = 0.1 # fraction of data to be held out as validation data, 0.<x<1
+early_stopping_patience = 3 # how many epochs without improvement it'll go before stopping
 
 ## IO settings
 input_data = "cache/data.plist"
@@ -178,13 +179,13 @@ if do_train:
 		NN_log_level = 1
 	else:
 		NN_log_level = 0
-	early_stopping = EarlyStopping(monitor='val_loss', patience=2)
+	early_stopping = EarlyStopping(monitor='val_loss', patience=early_stopping_patience)
 	model.fit(data_feed, answer_feed, nb_epoch=epoch_count, batch_size=batch_size, shuffle=shuffle_at_epoch, validation_split=NN_validation_split, verbose=NN_log_level, callbacks=[early_stopping])
 	d.debug("Fit complete. Preparing to test.")
 
 # Evaluate against test data
 test_data, test_answers = data_set.next_batch(evaluation_data_point_count)
-score = model.evaluate(test_data, test_answers, batch_size=16)
+score = model.evaluate(test_data, test_answers, batch_size=batch_size)
 d.debug("\nTest complete. Loss: {}. Accuracy: {}%".format(score[0], score[1]*100))
 
 save_model(model)
