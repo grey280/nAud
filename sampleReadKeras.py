@@ -30,8 +30,8 @@ early_stopping_patience = 3 			# how many epochs without improvement it'll go be
 
 ## IO settings
 input_data = "cache/data.plist"
-weights_file_name = "start3.3.json"
-model_file_name = "start3.3.hdf5"
+weights_file_name = "startdouble3.3.json"
+model_file_name = "startdouble3.3.hdf5"
 vstack_split_size = 35					# controls the speed/memory usage of loading tracks. 25-50 works well.
 start_point = 0 						# seconds into the sample to read ((start_point+10)<sample length)
 
@@ -57,7 +57,7 @@ def parse_track(track, data):
 	data = np.ndarray.flatten(sample_data[1])
 	del sample_data
 	start_point_calc = start_point*44100
-	end_point_calc = (start_point+10)*44100
+	end_point_calc = (start_point+20)*44100
 	return scaled_genre, data[start_point_calc:end_point_calc] # force it to be that size, so the NN doesn't complain
 
 def save_model(model, path=model_file_name):
@@ -107,7 +107,7 @@ class Dataset:
 		except:
 			pass
 		data_feed_holder = output
-		data_feed = np.empty((441000,),dtype='int16')
+		data_feed = np.empty((441000*2,),dtype='int16')
 		for i in range(1, data_point_count):
 			if(self.start + 2 >= len(self.locations)):
 				self.shuffle()
@@ -155,7 +155,7 @@ if evaluation_data_point_count == 0:
 # Build the model, either from scratch or from disk
 if not load_model:
 	model = Sequential()
-	model.add(Dense(128, input_dim=441000 , init='uniform')) # number of data points being fed in: 4 metatags, 441000 samples (10 sec@44.1kHz)
+	model.add(Dense(128, input_dim=441000*2 , init='uniform')) # number of data points being fed in: 4 metatags, 441000 samples (10 sec@44.1kHz)
 	model.add(Activation('tanh'))
 	model.add(Dropout(0.5))
 	model.add(Dense(64, init='uniform'))
