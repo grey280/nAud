@@ -30,10 +30,10 @@ early_stopping_patience = 3 			# how many epochs without improvement it'll go be
 
 ## IO settings
 input_data = "cache/data.plist"
-weights_file_name = "newshape3.3.json"
-model_file_name = "newshape3.3.hdf5"
+weights_file_name = "widernn3.1.json"
+model_file_name = "widernn3.1.hdf5"
 vstack_split_size = 35					# controls the speed/memory usage of loading tracks. 25-50 works well.
-start_point = 0 						# seconds into the sample to read ((start_point+10)<sample length)
+start_point = 10 						# seconds into the sample to read ((start_point+10)<sample length)
 
 ## Operational settings
 load_model = False
