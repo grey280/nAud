@@ -125,12 +125,15 @@ def scale_genre(genre):
 # 	temp = genres.get(genre, 0)
 # 	return genres_convert[temp]
 
-number_of_genres = 4
+number_of_genres = 3
 genre_labels = {
-	"Unknown": 0,
-	"Rock": 1,
-	"Classical": 2,
-	"Acoustic": 3
+	# "Unknown": 0,
+	# "Rock": 1,
+	# "Classical": 2,
+	# "Acoustic": 3
+	"Art Music": 0,
+	"Popular Music": 1,
+	"Traditional Music": 2
 }
 def convert_genre(genre):
 	genres = {
@@ -188,12 +191,15 @@ def convert_genre(genre):
 		"Singer/Songwriter": 51,
 		"Soundtrack": 52,
 		"Synthpop": 53,
-		"Trance": 54
+		"Trance": 54,
+		"World": 55
 	}
-	genres_convert = [0, 3, 3, 3, 3, 3, 3, 11, 10, 12, 12, 7, 12, 10, 8, 8, 8, 8, 10, 6, 9, 8, 4, 4, 4, 4, 4, 4, 7, 12, 1, 12, 12, 7, 7, 1, 1, 1, 11, 2, 2, 2, 6, 6, 6, 6, 12, 2, 2, 7, 11, 4, 7, 1, 11]
-	genres_convert_2 = [0, 1, 1, 3, 3, 2, 1, 2, 1, 0, 3, 0, 0]
+	# genres_convert = [0, 3, 3, 3, 3, 3, 3, 11, 10, 12, 12, 7, 12, 10, 8, 8, 8, 8, 10, 6, 9, 8, 4, 4, 4, 4, 4, 4, 7, 12, 1, 12, 12, 7, 7, 1, 1, 1, 11, 2, 2, 2, 6, 6, 6, 6, 12, 2, 2, 7, 11, 4, 7, 1, 11]
+	# genres_convert_2 = [0, 1, 1, 3, 3, 2, 1, 2, 1, 0, 3, 0, 0]
+	genres_convert = [1,1,1,1,1,1,1,0,2,1,0,0,1,2,1,1,1,1,2,1,2,1,1,1,1,2,1,1,0,0,1,2,1,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,1,2,0,1,1,2]
 	temp = genres.get(genre, 0)
-	return genres_convert_2[genres_convert[temp]]
+	# return genres_convert_2[genres_convert[temp]]
+	return genres_convert[temp]
 
 def genre_to_label(genre):
 	titles=["Unknown", "Pop", "Rock", "Alternative", "Indie", "Soundtrack", "Rap", "Classical", "Electronic", "Holiday", "Country", "Ambient", "Other"]

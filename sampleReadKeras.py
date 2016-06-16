@@ -30,13 +30,13 @@ early_stopping_patience = 3 			# how many epochs without improvement it'll go be
 
 ## IO settings
 input_data = "cache/data.plist"
-weights_file_name = "midpoint4.json"
-model_file_name = "midpoint4.hdf5"
+weights_file_name = "midpoint3.3.json"
+model_file_name = "midpoint3.3.hdf5"
 vstack_split_size = 35					# controls the speed/memory usage of loading tracks. 25-50 works well.
 
 ## Operational settings
-load_model = True
-load_weights = True
+load_model = False
+load_weights = False
 do_train = True
 do_save = True
 
