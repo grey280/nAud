@@ -5,7 +5,7 @@
 from keras.models import Sequential, model_from_json
 from keras.layers import Dense, Dropout, Activation
 from keras.optimizers import SGD
-from keras.callbacks import EarlyStopping
+from keras.callbacks import EarlyStopping, LearningRateScheduler
 
 import plistlib
 import numpy 			as np
@@ -30,9 +30,9 @@ early_stopping_patience = 3 			# how many epochs without improvement it'll go be
 
 ## IO settings
 input_data = "cache/data.plist"
-weights_file_name = "2genres.json"
-model_file_name = "2genres.hdf5"
-vstack_split_size = 50					# controls the speed/memory usage of loading tracks. 25-50 works well.
+weights_file_name = "midpoint.json"
+model_file_name = "midpoint.hdf5"
+vstack_split_size = 35					# controls the speed/memory usage of loading tracks. 25-50 works well.
 
 ## Operational settings
 load_model = False
@@ -55,8 +55,9 @@ def parse_track(track, data):
 	d.verbose("    Samples: {}".format(len(sample_data[1])))
 	data = np.ndarray.flatten(sample_data[1])
 	del sample_data
-
-	return scaled_genre, data[:441000] # force it to be that size, so the NN doesn't complain
+	start_point = 30*44100
+	end_point = 40*44100
+	return scaled_genre, data[start_point:end_point] # force it to be that size, so the NN doesn't complain
 
 def save_model(model, path=model_file_name):
 	if do_save:
@@ -70,6 +71,14 @@ def save_weights(model, path=weights_file_name):
 		path = "output/{}".format(path)
 		model.save_weights(path)
 		d.debug("Finished writing weights to disk.")
+
+def scheduler(epoch):
+	if epoch >= 10:
+		return 0.01
+	elif epoch >= 5:
+		return 0.05
+	else:
+		return 0.1
 
 class Dataset:
 	# TODO: implement a way for this to keep some data points aside as test data
@@ -178,8 +187,10 @@ if do_train:
 		NN_log_level = 1
 	else:
 		NN_log_level = 0
+
+	change_lr = LearningRateScheduler(scheduler)
 	early_stopping = EarlyStopping(monitor='val_loss', patience=early_stopping_patience)
-	model.fit(data_feed, answer_feed, nb_epoch=epoch_count, batch_size=batch_size, shuffle=shuffle_at_epoch, validation_split=NN_validation_split, verbose=NN_log_level, callbacks=[early_stopping])
+	model.fit(data_feed, answer_feed, nb_epoch=epoch_count, batch_size=batch_size, shuffle=shuffle_at_epoch, validation_split=NN_validation_split, verbose=NN_log_level, callbacks=[early_stopping, change_lr])
 	d.debug("Fit complete. Preparing to test.")
 
 # Evaluate against test data
