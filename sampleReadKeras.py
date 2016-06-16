@@ -30,8 +30,8 @@ early_stopping_patience = 3 			# how many epochs without improvement it'll go be
 
 ## IO settings
 input_data = "cache/data.plist"
-weights_file_name = "newshape3.3.json"
-model_file_name = "newshape3.3.hdf5"
+weights_file_name = "deeper3.1.json"
+model_file_name = "deeper3.1.hdf5"
 vstack_split_size = 35					# controls the speed/memory usage of loading tracks. 25-50 works well.
 start_point = 0 						# seconds into the sample to read ((start_point+10)<sample length)
 
@@ -159,6 +159,9 @@ if not load_model:
 	model.add(Activation('tanh'))
 	model.add(Dropout(0.5))
 	model.add(Dense(128, init='uniform'))
+	model.add(Activation('tanh'))
+	model.add(Dropout(0.5))
+	model.add(Dense(64, init='uniform'))
 	model.add(Activation('tanh'))
 	model.add(Dropout(0.5))
 	model.add(Dense(conv.number_of_genres, init='uniform')) # hopefully this works; keeps it dynamic
