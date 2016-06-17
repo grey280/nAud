@@ -108,7 +108,7 @@ class Dataset:
 		except:
 			pass
 		data_feed_holder = output
-		data_feed = np.empty((441000*2,),dtype='int16')
+		data_feed = np.empty((44100*sample_duration,),dtype='int16')
 		for i in range(1, data_point_count):
 			if(self.start + 2 >= len(self.locations)):
 				self.shuffle()
@@ -156,7 +156,7 @@ if evaluation_data_point_count == 0:
 # Build the model, either from scratch or from disk
 if not load_model:
 	model = Sequential()
-	model.add(Dense(128, input_dim=441000*2 , init='uniform')) # number of data points being fed in: 4 metatags, 441000 samples (10 sec@44.1kHz)
+	model.add(Dense(128, input_dim=44100*sample_duration , init='uniform')) # number of data points being fed in: 4 metatags, 441000 samples (10 sec@44.1kHz)
 	model.add(Activation('tanh'))
 	model.add(Dropout(0.5))
 	model.add(Dense(64, init='uniform'))
