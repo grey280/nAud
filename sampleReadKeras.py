@@ -30,8 +30,8 @@ early_stopping_patience = 3 			# how many epochs without improvement it'll go be
 
 ## IO settings
 input_data = "cache/data.plist"
-weights_file_name = "15MT.1.json"
-model_file_name = "15MT.1.hdf5"
+weights_file_name = "15MX.1.json"
+model_file_name = "15MX.1.hdf5"
 vstack_split_size = 35					# controls the speed/memory usage of loading tracks. 25-50 works well.
 start_point = 60 						# seconds into the sample to read ((start_point+sample_duration)<sample length)
 sample_duration = 15					# seconds of sample to read ((start_point+sample_duration)<sample length)
@@ -62,6 +62,9 @@ def parse_track(track, data):
 	return scaled_genre, data[start_point_calc:end_point_calc] # force it to be that size, so the NN doesn't complain
 
 def random_parse_track(track, data):
+	# TODO remove next line when done with testing
+	return random_parse_track(track, data)
+
 	genre_orig = data.get("genre", "Unknown")
 	genre = int(conv.convert_genre(genre_orig))
 	scaled_genre = conv.scale_genre(genre)
