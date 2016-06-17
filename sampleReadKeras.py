@@ -33,7 +33,8 @@ input_data = "cache/data.plist"
 weights_file_name = "startdouble3.3.json"
 model_file_name = "startdouble3.3.hdf5"
 vstack_split_size = 35					# controls the speed/memory usage of loading tracks. 25-50 works well.
-start_point = 0 						# seconds into the sample to read ((start_point+10)<sample length)
+start_point = 0 						# seconds into the sample to read ((start_point+sample_duration)<sample length)
+sample_duration = 15					# seconds of sample to read ((start_point+sample_duration)<sample length)
 
 ## Operational settings
 load_model = False
@@ -57,7 +58,7 @@ def parse_track(track, data):
 	data = np.ndarray.flatten(sample_data[1])
 	del sample_data
 	start_point_calc = start_point*44100
-	end_point_calc = (start_point+20)*44100
+	end_point_calc = (start_point+sample_duration)*44100
 	return scaled_genre, data[start_point_calc:end_point_calc] # force it to be that size, so the NN doesn't complain
 
 def save_model(model, path=model_file_name):
