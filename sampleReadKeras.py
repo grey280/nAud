@@ -1,6 +1,5 @@
 # Things to try
 # * Various transforms of the input data to a different setup
-# * Pull samples from a different part of the song - :30-:40 instead of :00-:10, or something
 
 from keras.models import Sequential, model_from_json
 from keras.layers import Dense, Dropout, Activation
