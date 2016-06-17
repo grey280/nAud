@@ -30,10 +30,12 @@ early_stopping_patience = 3 			# how many epochs without improvement it'll go be
 
 ## IO settings
 input_data = "cache/data.plist"
-weights_file_name = "startdouble3.3.json"
-model_file_name = "startdouble3.3.hdf5"
+weights_file_name = "15MX.3.json"
+model_file_name = "15MX.3.hdf5"
 vstack_split_size = 35					# controls the speed/memory usage of loading tracks. 25-50 works well.
-start_point = 0 						# seconds into the sample to read ((start_point+10)<sample length)
+start_point = 60 						# seconds into the sample to read ((start_point+sample_duration)<sample length)
+sample_duration = 15					# seconds of sample to read ((start_point+sample_duration)<sample length)
+do_random_parse = False					# true will use three 5-second clips from random places in the song, rather than a single 15-second block
 
 ## Operational settings
 load_model = False
@@ -46,6 +48,8 @@ d = gdebug.Debugger(debug_level = debug_mode)
 
 # Helper functions
 def parse_track(track, data):
+	if do_random_parse:
+		return random_parse_track(track, data)
 	
 	genre_orig = data.get("genre", "Unknown")
 	genre = int(conv.convert_genre(genre_orig))
@@ -57,8 +61,31 @@ def parse_track(track, data):
 	data = np.ndarray.flatten(sample_data[1])
 	del sample_data
 	start_point_calc = start_point*44100
-	end_point_calc = (start_point+20)*44100
+	end_point_calc = (start_point+sample_duration)*44100
 	return scaled_genre, data[start_point_calc:end_point_calc] # force it to be that size, so the NN doesn't complain
+
+def random_parse_track(track, data):
+	# return random_parse_track(track, data)
+
+	genre_orig = data.get("genre", "Unknown")
+	genre = int(conv.convert_genre(genre_orig))
+	scaled_genre = conv.scale_genre(genre)
+
+	# Process sample
+	sample_data = wav.read(track)
+	d.verbose("    Samples: {}".format(len(sample_data[1])))
+	total_samples = len(sample_data[1])
+	data = np.ndarray.flatten(sample_data[1])
+	del sample_data
+	start_point_1 = random.randrange(total_samples - ((sample_duration/3)*44100))
+	start_point_2 = random.randrange(total_samples - ((sample_duration/3)*44100))
+	start_point_3 = random.randrange(total_samples - ((sample_duration/3)*44100))
+	data_1 = data[start_point_1:(start_point_1 + ((sample_duration/3)*44100))]
+	data_2 = data[start_point_2:(start_point_2 + ((sample_duration/3)*44100))]
+	data_3 = data[start_point_3:(start_point_3 + ((sample_duration/3)*44100))]
+	return scaled_genre, np.concatenate((data_1, data_2, data_3))
+
+
 
 def save_model(model, path=model_file_name):
 	if do_save:
@@ -107,7 +134,7 @@ class Dataset:
 		except:
 			pass
 		data_feed_holder = output
-		data_feed = np.empty((441000*2,),dtype='int16')
+		data_feed = np.empty((44100*sample_duration,),dtype='int16')
 		for i in range(1, data_point_count):
 			if(self.start + 2 >= len(self.locations)):
 				self.shuffle()
@@ -155,7 +182,7 @@ if evaluation_data_point_count == 0:
 # Build the model, either from scratch or from disk
 if not load_model:
 	model = Sequential()
-	model.add(Dense(128, input_dim=441000*2 , init='uniform')) # number of data points being fed in: 4 metatags, 441000 samples (10 sec@44.1kHz)
+	model.add(Dense(128, input_dim=44100*sample_duration , init='uniform')) # number of data points being fed in: 4 metatags, 441000 samples (10 sec@44.1kHz)
 	model.add(Activation('tanh'))
 	model.add(Dropout(0.5))
 	model.add(Dense(64, init='uniform'))

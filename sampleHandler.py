@@ -12,7 +12,7 @@ d = gdebug.Debugger(debug_level = 3) # 0: off 1: errors only 2: normal 3: verbos
 input_data = "data/iTunes.plist"
 output_data = "cache/data.plist"
 output_directory = "cache" # no trailing slash, script adds that
-seconds_per_song = 40
+seconds_per_song = 75
 
 # Helper functions
 def track_data_to_element(data):
@@ -79,14 +79,14 @@ for song_id, this_song in tracks.items():
 	kind = this_song.get("Kind", "unknown kind")
 	genre = this_song.get("Genre", "unknown")
 	time = this_song.get("Total Time", 0)
-	if genre == "Voice Memo":
+	if genre == "Voice Memo" or genre == "Comedy":
 		continue
 	if time < 1000 * seconds_per_song: # songs that're too short cause Problems
 		continue
 	d.verbose("  Metadata prepped. Transferring.")
 	if kind == "WAV audio file" or kind == "MPEG audio file" or kind == "AAC audio file":
 		d.verbose("  Using FFMPEG to convert and/or shorten to {} seconds.".format(seconds_per_song))
-		subprocess.run(args=["./ffmpeg", "-ac", "1", "-t", "{}".format(seconds_per_song), "-i", location_path, write_path])
+		subprocess.run(args=["./ffmpeg", "-ac", "1", "-i", location_path, write_path])
 		# This is SUPPOSED to be converting them to single-track audio, but it doesn't appear to be working. Annoying.
 		# So either I'll have to deal with that before I do an FFT, or just... throw it all at the NN as-is?
 		try:
