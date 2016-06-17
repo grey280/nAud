@@ -29,8 +29,8 @@ early_stopping_patience = 3 			# how many epochs without improvement it'll go be
 
 ## IO settings
 input_data = "cache/data.plist"
-weights_file_name = "15MX.3.json"
-model_file_name = "15MX.3.hdf5"
+weights_file_name = "default.json"
+model_file_name = "default.hdf5"
 vstack_split_size = 35					# controls the speed/memory usage of loading tracks. 25-50 works well.
 start_point = 60 						# seconds into the sample to read ((start_point+sample_duration)<sample length)
 sample_duration = 15					# seconds of sample to read ((start_point+sample_duration)<sample length)
@@ -46,6 +46,14 @@ do_save = True
 d = gdebug.Debugger(debug_level = debug_mode)
 
 # Helper functions
+def scheduler(epoch):
+	if epoch >= 10:
+		return 0.01
+	elif epoch >= 5:
+		return 0.05
+	else:
+		return 0.1
+
 def parse_track(track, data):
 	if do_random_parse:
 		return random_parse_track(track, data)
@@ -84,8 +92,6 @@ def random_parse_track(track, data):
 	data_3 = data[start_point_3:(start_point_3 + ((sample_duration/3)*44100))]
 	return scaled_genre, np.concatenate((data_1, data_2, data_3))
 
-
-
 def save_model(model, path=model_file_name):
 	if do_save:
 		path = "output/{}".format(path)
@@ -99,16 +105,7 @@ def save_weights(model, path=weights_file_name):
 		model.save_weights(path)
 		d.debug("Finished writing weights to disk.")
 
-def scheduler(epoch):
-	if epoch >= 10:
-		return 0.01
-	elif epoch >= 5:
-		return 0.05
-	else:
-		return 0.1
-
 class Dataset:
-	# TODO: implement a way for this to keep some data points aside as test data
 	start = 0
 	def __init__(self, inpt):
 		self.input_values = inpt
@@ -161,18 +158,11 @@ class Dataset:
 d.debug("Start: read plist")
 tracks = plistlib.readPlist(input_data)
 d.debug("End: read plist")
-# Example key/value pair, for ease of reading: cache/2013.OK Go.Twelve Months of OK Go.Get Over It (Elevator Version).wav: {'title': 'Get Over It (Elevator Version)', 'year': 2013, 'play_count': 0, 'bit_rate': 320, 'genre': 'Indie Rock', 'artist': 'OK Go', 'skip_count': 0, 'rating': 40}
-# So, for the neural network, we'll feed it:
-#	Title
-#	Artist
-#	Year
-#	Bitrate?
-#	Sample data
-# And it's trying to identify the genre.
-
 data_set = Dataset(tracks)
 d.debug("Dataset built.")
 d.verbose("Dataset size: {}".format(data_set.get_data_point_count()))
+
+# Load configuration, if necessary
 if data_point_count == 0:
 	data_point_count = data_set.get_data_point_count()
 if evaluation_data_point_count == 0:
@@ -181,13 +171,13 @@ if evaluation_data_point_count == 0:
 # Build the model, either from scratch or from disk
 if not load_model:
 	model = Sequential()
-	model.add(Dense(128, input_dim=44100*sample_duration , init='uniform')) # number of data points being fed in: 4 metatags, 441000 samples (10 sec@44.1kHz)
+	model.add(Dense(128, input_dim=44100*sample_duration , init='uniform'))
 	model.add(Activation('tanh'))
 	model.add(Dropout(0.5))
 	model.add(Dense(64, init='uniform'))
 	model.add(Activation('tanh'))
 	model.add(Dropout(0.5))
-	model.add(Dense(conv.number_of_genres, init='uniform')) # hopefully this works; keeps it dynamic
+	model.add(Dense(conv.number_of_genres, init='uniform'))
 	model.add(Activation('softmax'))
 
 	sgd = SGD(lr=0.01, decay=1e-6, momentum=0.9, nesterov=True)
@@ -246,9 +236,3 @@ save_weights(model)
 # print(descaled_actual_genre)
 # d.debug("Predicted genre: {}. Actual: {}".format(as_genre, conv.genre_to_label(descaled_actual_genre)))
 # print(conv.convert_genre("Indie"))
-
-# new plan: instead of putting the full-loaded dataset into memory as a MASSIVE array,
-# just write a function that'll spit out a more manageable chunk at a time, and use that to 
-# manually do epochs - wrap the model.fit() function in a loop, giving different training
-# data each time the loop runs, and have it only do one epoch at a time. Manual override for epochs,
-# allowing for intelligent feed-in of data in a way that doesn't require a bloody TB of memory
