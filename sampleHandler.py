@@ -86,7 +86,7 @@ for song_id, this_song in tracks.items():
 	d.verbose("  Metadata prepped. Transferring.")
 	if kind == "WAV audio file" or kind == "MPEG audio file" or kind == "AAC audio file":
 		d.verbose("  Using FFMPEG to convert and/or shorten to {} seconds.".format(seconds_per_song))
-		subprocess.run(args=["./ffmpeg", "-ac", "1", "-t", "{}".format(seconds_per_song), "-i", location_path, write_path])
+		subprocess.run(args=["./ffmpeg", "-ac", "1", "-i", location_path, write_path])
 		# This is SUPPOSED to be converting them to single-track audio, but it doesn't appear to be working. Annoying.
 		# So either I'll have to deal with that before I do an FFT, or just... throw it all at the NN as-is?
 		try:
