@@ -30,10 +30,10 @@ early_stopping_patience = 3 			# how many epochs without improvement it'll go be
 
 ## IO settings
 input_data = "cache/data.plist"
-weights_file_name = "widernn3.3.json"
-model_file_name = "widernn3.3.hdf5"
+weights_file_name = "startdouble3.3.json"
+model_file_name = "startdouble3.3.hdf5"
 vstack_split_size = 35					# controls the speed/memory usage of loading tracks. 25-50 works well.
-start_point = 10 						# seconds into the sample to read ((start_point+10)<sample length)
+start_point = 0 						# seconds into the sample to read ((start_point+10)<sample length)
 
 ## Operational settings
 load_model = False
@@ -158,7 +158,7 @@ if not load_model:
 	model.add(Dense(128, input_dim=441000*2 , init='uniform')) # number of data points being fed in: 4 metatags, 441000 samples (10 sec@44.1kHz)
 	model.add(Activation('tanh'))
 	model.add(Dropout(0.5))
-	model.add(Dense(128, init='uniform'))
+	model.add(Dense(64, init='uniform'))
 	model.add(Activation('tanh'))
 	model.add(Dropout(0.5))
 	model.add(Dense(conv.number_of_genres, init='uniform')) # hopefully this works; keeps it dynamic
