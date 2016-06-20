@@ -1,18 +1,22 @@
 import plistlib
 import numpy				as np
+
 import subprocess
 import scipy.io.wavfile		as wav
-import random # testing only
-from urllib import parse
+
+from urllib 				import parse
 import urllib
+
 import gdebug
 
-# Global stuff
+# Settings
+input_data = "data/iTunes.plist"	# "data/iTunes.plist" the plist file to read in
+output_data = "cache/data.plist"	# "cache/data.plist" the plist file to write to when done
+output_directory = "cache" 			# "cache" the directory (no trailing slash) to write processed songs to
+seconds_per_song = 0				# number of seconds of each song to keep; 0 for 'all'
+
+# Tools
 d = gdebug.Debugger(debug_level = 3) # 0: off 1: errors only 2: normal 3: verbose
-input_data = "data/iTunes.plist"
-output_data = "cache/data.plist"
-output_directory = "cache" # no trailing slash, script adds that
-seconds_per_song = 75
 
 # Helper functions
 def track_data_to_element(data):
@@ -28,7 +32,14 @@ def track_data_to_element(data):
 	rating = data.get("Rating", 0)
 	return {'year': year, 'artist': artist, 'title': title, 'genre': genre, 'bit_rate': bit_rate, 'play_count': play_count, 'skip_count': skip_count, 'rating': rating}
 
-
+def convert_song(location_path, write_path):
+	# Handle the actual conversion of the song - simplifying the loop a bit
+	if seconds_per_song == 0:
+		d.verbose("  Using FFMPEG to convert/transfer song.")
+		subprocess.run(args=["./ffmpeg", "-ac", "1", "-nostats", "-loglevel", "0", "-i", location_path, write_path])
+	else:
+		d.verbose("  Using FFMPEG to convert and/or shorten to {} seconds.".format(seconds_per_song))
+		subprocess.run(args=["./ffmpeg", "-ac", "1", "-nostats", "-loglevel", "0", "-t", "{}".format(seconds_per_song), "-i", location_path, write_path])
 
 d.verbose("Preparing to read tracks in.")
 tracks = plistlib.readPlist(input_data)["Tracks"]
@@ -46,10 +57,6 @@ new_dictionary = {}
 # 		This format isn't *super great* for the rating prediction stuff, but it's what we'll have
 #		for the genre-guessing stuff, which I'm hoping to be able to reuse this code for. So.
 
-
-# LOOP START
-# this_song = random.choice(list(tracks.keys())) # picks a random track to look at
-# this_song = tracks.get(this_song) # these two lines were for testing before I implemented the loop
 for song_id, this_song in tracks.items():
 	# Prep to process song
 	d.verbose("Parsing track.")
@@ -62,12 +69,6 @@ for song_id, this_song in tracks.items():
 		d.error("  Type error while unquoting location path; passing unedited")
 		location_path = location.path
 
-	# if "%" in location.path:
-	# 	d.verbose("  Unquoting track location.")
-	# 	location_path = parse.unquote(location.path)
-	# else:
-	# 	d.verbose("  Track doesn't need unquoting.")
-	# 	location_path = location.path
 	year = this_song.get("Year", 2016)
 	artist = this_song.get("Artist", "unknown")
 	artist = artist.replace('/', '')
@@ -81,12 +82,11 @@ for song_id, this_song in tracks.items():
 	time = this_song.get("Total Time", 0)
 	if genre == "Voice Memo" or genre == "Comedy":
 		continue
-	if time < 1000 * seconds_per_song: # songs that're too short cause Problems
+	if time < 1000 * seconds_per_song: # songs that're too short cause Problems later on
 		continue
 	d.verbose("  Metadata prepped. Transferring.")
 	if kind == "WAV audio file" or kind == "MPEG audio file" or kind == "AAC audio file":
-		d.verbose("  Using FFMPEG to convert and/or shorten to {} seconds.".format(seconds_per_song))
-		subprocess.run(args=["./ffmpeg", "-ac", "1", "-i", location_path, write_path])
+		convert_song(location_path, write_path)
 		# This is SUPPOSED to be converting them to single-track audio, but it doesn't appear to be working. Annoying.
 		# So either I'll have to deal with that before I do an FFT, or just... throw it all at the NN as-is?
 		try:

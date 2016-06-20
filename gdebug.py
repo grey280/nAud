@@ -1,4 +1,4 @@
-# gDebug: my own local debugging stuff, so I can be slightly fancier about this
+# gDebug: a quick-and-dirty debugging library for my own personal use
 import sys
 
 class Debugger:
