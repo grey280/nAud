@@ -26,12 +26,12 @@ early_stopping_patience = 3 			# how many epochs without improvement it'll go be
 
 ## IO settings
 input_data = "cache/data.plist"
-weights_file_name = "default.json"
-model_file_name = "default.hdf5"
+weights_file_name = "lessen_dropout.3.json"
+model_file_name = "lessen_dropout.3.hdf5"
 vstack_split_size = 35					# controls the speed/memory usage of loading tracks. 25-50 works well.
 start_point = 60 						# seconds into the sample to read ((start_point+sample_duration)<sample length)
 sample_duration = 15					# seconds of sample to read ((start_point+sample_duration)<sample length)
-do_random_parse = False					# true will use three 5-second clips from random places in the song, rather than a single 15-second block
+do_random_parse = True					# true will use three 5-second clips from random places in the song, rather than a single 15-second block
 
 ## Operational settings
 load_model = False
@@ -83,12 +83,12 @@ def random_parse_track(track, data):
 	total_samples = len(sample_data[1])
 	data = np.ndarray.flatten(sample_data[1])
 	del sample_data
-	start_point_1 = random.randrange(total_samples - ((sample_duration/3)*44100))
-	start_point_2 = random.randrange(total_samples - ((sample_duration/3)*44100))
-	start_point_3 = random.randrange(total_samples - ((sample_duration/3)*44100))
-	data_1 = data[start_point_1:(start_point_1 + ((sample_duration/3)*44100))]
-	data_2 = data[start_point_2:(start_point_2 + ((sample_duration/3)*44100))]
-	data_3 = data[start_point_3:(start_point_3 + ((sample_duration/3)*44100))]
+	start_point_1 = int(random.randrange(total_samples - ((sample_duration/3)*44100)))
+	start_point_2 = int(random.randrange(total_samples - ((sample_duration/3)*44100)))
+	start_point_3 = int(random.randrange(total_samples - ((sample_duration/3)*44100)))
+	data_1 = data[start_point_1:int(start_point_1 + ((sample_duration/3)*44100))]
+	data_2 = data[start_point_2:int(start_point_2 + ((sample_duration/3)*44100))]
+	data_3 = data[start_point_3:int(start_point_3 + ((sample_duration/3)*44100))]
 	return scaled_genre, np.concatenate((data_1, data_2, data_3))
 
 def save_model(model, path=model_file_name):
@@ -181,10 +181,10 @@ if not load_model:
 	model = Sequential()
 	model.add(Dense(128, input_dim=44100*sample_duration , init='uniform'))
 	model.add(Activation('tanh'))
-	model.add(Dropout(0.5))
+	model.add(Dropout(0.25))
 	model.add(Dense(64, init='uniform'))
 	model.add(Activation('tanh'))
-	model.add(Dropout(0.5))
+	model.add(Dropout(0.25))
 	model.add(Dense(conv.number_of_genres, init='uniform'))
 	model.add(Activation('softmax'))
 
