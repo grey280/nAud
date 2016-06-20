@@ -1,6 +1,3 @@
-# Things to try
-# * Various transforms of the input data to a different setup
-
 from keras.models import Sequential, model_from_json
 from keras.layers import Dense, Dropout, Activation
 from keras.optimizers import SGD
@@ -16,7 +13,7 @@ import gconvert			as conv
 
 # Settings
 ## Debug Settings
-debug_mode = 2 							# 0: silent, 1: errors only, 2: normal, 3: verbose
+log_level = 2 							# 0: silent, 1: errors only, 2: normal, 3: verbose
 
 ## Neural Network settings
 batch_size = 16
@@ -43,10 +40,11 @@ do_train = True
 do_save = True
 
 # Tools
-d = gdebug.Debugger(debug_level = debug_mode)
+d = gdebug.Debugger(debug_level = log_level)
 
 # Helper functions
 def scheduler(epoch):
+	# Alters the learning rate depending on which epoch you're in.
 	if epoch >= 10:
 		return 0.01
 	elif epoch >= 5:
@@ -55,6 +53,7 @@ def scheduler(epoch):
 		return 0.1
 
 def parse_track(track, data):
+	# Handles track parsing - given the track and data, does whatever conversions and loading are necessary
 	if do_random_parse:
 		return random_parse_track(track, data)
 	
@@ -72,7 +71,7 @@ def parse_track(track, data):
 	return scaled_genre, data[start_point_calc:end_point_calc] # force it to be that size, so the NN doesn't complain
 
 def random_parse_track(track, data):
-	# return random_parse_track(track, data)
+	# Handles track parsing for the '3 5-second chunks from anywhere in the song' test group.
 
 	genre_orig = data.get("genre", "Unknown")
 	genre = int(conv.convert_genre(genre_orig))
@@ -93,6 +92,7 @@ def random_parse_track(track, data):
 	return scaled_genre, np.concatenate((data_1, data_2, data_3))
 
 def save_model(model, path=model_file_name):
+	# Saves the model - just a quick function to save some time
 	if do_save:
 		path = "output/{}".format(path)
 		json_string = model.to_json()
@@ -100,12 +100,15 @@ def save_model(model, path=model_file_name):
 		d.debug('Finished writing model to disk.')
 
 def save_weights(model, path=weights_file_name):
+	# Saves the weights - just a quick function to save some time
 	if do_save:
 		path = "output/{}".format(path)
 		model.save_weights(path)
 		d.debug("Finished writing weights to disk.")
 
 class Dataset:
+	# Having a class to handle the dataset makes a lot of things easier.
+	# Basically, hand it something opened by plistlib and it'll parse it out nice and pretty-like.
 	start = 0
 	def __init__(self, inpt):
 		self.input_values = inpt
@@ -114,13 +117,18 @@ class Dataset:
 			self.locations.append(track)
 		d.debug("Initializing data set object")
 	def shuffle(self):
+		# Shuffles the dataset. May be expanded in the future to better handle 'holding out test data' functionality.
 		random.shuffle(self.locations)
 		self.start = 0
 
 	def get_data_point_count(self):
+		# This function may get expanded in the future to better handle 'holding out test data' functionality.
 		return len(self.locations)
 
 	def next_batch(self, data_point_count):
+		# Loads the next batch - with optimizations, this can actually handle batch sizes in the (0,2000) range
+		# pretty well - don't actually know how big it gets without trouble, that's all I've tested.
+		# Of course, with big batches, loading *does* get slow, but there's not much you can do about that.
 		location = self.locations[self.start]
 		data_point = self.input_values.get(location)
 		genre, output = parse_track(location, data_point)
@@ -184,7 +192,7 @@ if not load_model:
 	model.compile(loss='categorical_crossentropy', optimizer=sgd, metrics=['accuracy'])
 
 	d.debug("Model and SGD prepared.")
-	if debug_mode == 3: # only need to print the model in Verbose mode
+	if log_level == 3: # only need to print the model in Verbose mode
 		model.summary()
 else:
 	model = open("output/{}".format(model_file_name), 'r').read()
