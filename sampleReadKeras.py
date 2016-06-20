@@ -83,12 +83,12 @@ def random_parse_track(track, data):
 	total_samples = len(sample_data[1])
 	data = np.ndarray.flatten(sample_data[1])
 	del sample_data
-	start_point_1 = random.randrange(total_samples - ((sample_duration/3)*44100))
-	start_point_2 = random.randrange(total_samples - ((sample_duration/3)*44100))
-	start_point_3 = random.randrange(total_samples - ((sample_duration/3)*44100))
-	data_1 = data[start_point_1:(start_point_1 + ((sample_duration/3)*44100))]
-	data_2 = data[start_point_2:(start_point_2 + ((sample_duration/3)*44100))]
-	data_3 = data[start_point_3:(start_point_3 + ((sample_duration/3)*44100))]
+	start_point_1 = int(random.randrange(total_samples - ((sample_duration/3)*44100)))
+	start_point_2 = int(random.randrange(total_samples - ((sample_duration/3)*44100)))
+	start_point_3 = int(random.randrange(total_samples - ((sample_duration/3)*44100)))
+	data_1 = data[start_point_1:int(start_point_1 + ((sample_duration/3)*44100))]
+	data_2 = data[start_point_2:int(start_point_2 + ((sample_duration/3)*44100))]
+	data_3 = data[start_point_3:int(start_point_3 + ((sample_duration/3)*44100))]
 	return scaled_genre, np.concatenate((data_1, data_2, data_3))
 
 def save_model(model, path=model_file_name):
