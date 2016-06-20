@@ -26,8 +26,8 @@ early_stopping_patience = 3 			# how many epochs without improvement it'll go be
 
 ## IO settings
 input_data = "cache/data.plist"
-weights_file_name = "default.json"
-model_file_name = "default.hdf5"
+weights_file_name = "lessen_dropout.1.json"
+model_file_name = "lessen_dropout.1.hdf5"
 vstack_split_size = 35					# controls the speed/memory usage of loading tracks. 25-50 works well.
 start_point = 60 						# seconds into the sample to read ((start_point+sample_duration)<sample length)
 sample_duration = 15					# seconds of sample to read ((start_point+sample_duration)<sample length)
@@ -181,10 +181,10 @@ if not load_model:
 	model = Sequential()
 	model.add(Dense(128, input_dim=44100*sample_duration , init='uniform'))
 	model.add(Activation('tanh'))
-	model.add(Dropout(0.5))
+	model.add(Dropout(0.25))
 	model.add(Dense(64, init='uniform'))
 	model.add(Activation('tanh'))
-	model.add(Dropout(0.5))
+	model.add(Dropout(0.25))
 	model.add(Dense(conv.number_of_genres, init='uniform'))
 	model.add(Activation('softmax'))
 
