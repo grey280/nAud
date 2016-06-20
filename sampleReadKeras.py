@@ -28,6 +28,8 @@ early_stopping_patience = 3 			# how many epochs without improvement it'll go be
 input_data = "cache/data.plist"
 weights_file_name = "MIXx.2.json"
 model_file_name = "MIXx.2.hdf5"
+test_series_name = "MIXx"
+tests_in_series = 5
 vstack_split_size = 35					# controls the speed/memory usage of loading tracks. 25-50 works well.
 start_point = 60 						# seconds into the sample to read ((start_point+sample_duration)<sample length)
 sample_duration = 15					# seconds of sample to read ((start_point+sample_duration)<sample length)
@@ -91,18 +93,18 @@ def random_parse_track(track, data):
 	data_3 = data[start_point_3:int(start_point_3 + ((sample_duration/3)*44100))]
 	return scaled_genre, np.concatenate((data_1, data_2, data_3))
 
-def save_model(model, path=model_file_name):
+def save_model(model, iteration, path=model_file_name):
 	# Saves the model - just a quick function to save some time
 	if do_save:
-		path = "output/{}".format(path)
+		path = "output/{}.{}.json".format(path, iteration)
 		json_string = model.to_json()
 		open(path, 'w+').write(json_string)
 		d.debug('Finished writing model to disk.')
 
-def save_weights(model, path=weights_file_name):
+def save_weights(model, iteration, path=weights_file_name):
 	# Saves the weights - just a quick function to save some time
 	if do_save:
-		path = "output/{}".format(path)
+		path = "output/{}.{}.hdf5".format(path, iteration)
 		model.save_weights(path)
 		d.debug("Finished writing weights to disk.")
 
@@ -176,56 +178,66 @@ if data_point_count == 0:
 if evaluation_data_point_count == 0:
 	evaluation_data_point_count = data_set.get_data_point_count()
 
-# Build the model, either from scratch or from disk
-if not load_model:
-	model = Sequential()
-	model.add(Dense(128, input_dim=44100*sample_duration , init='uniform'))
-	model.add(Activation('tanh'))
-	model.add(Dropout(0.5))
-	model.add(Dense(64, init='uniform'))
-	model.add(Activation('tanh'))
-	model.add(Dropout(0.5))
-	model.add(Dense(conv.number_of_genres, init='uniform'))
-	model.add(Activation('softmax'))
+# Multi-iteration crossing
+test_results = []
 
-	sgd = SGD(lr=0.01, decay=1e-6, momentum=0.9, nesterov=True)
-	model.compile(loss='categorical_crossentropy', optimizer=sgd, metrics=['accuracy'])
+for i in range(tests_in_series):
+	d.debug("Test {} of {}".format(i, tests_in_series))
 
-	d.debug("Model and SGD prepared.")
-	if log_level == 3: # only need to print the model in Verbose mode
-		model.summary()
-else:
-	model = open("output/{}".format(model_file_name), 'r').read()
-	model = model_from_json(model)
-	sgd = SGD(lr=0.1, decay=1e-6, momentum=0.9, nesterov=True)
-	model.compile(loss='categorical_crossentropy', optimizer=sgd, metrics=['accuracy'])
-	d.debug("Model loaded and SGD prepared.")
-	if load_weights:
-		model.load_weights("output/{}".format(weights_file_name))
-		d.debug("Weights loaded.")
-# Training
-if do_train:
-	data_feed, answer_feed = data_set.next_batch(data_point_count)
-	if d.debug_level == 3:
-		NN_log_level = 2
-	elif d.debug_level == 2:
-		NN_log_level = 1
+	# Build the model, either from scratch or from disk
+	if not load_model:
+		model = Sequential()
+		model.add(Dense(128, input_dim=44100*sample_duration , init='uniform'))
+		model.add(Activation('tanh'))
+		model.add(Dropout(0.5))
+		model.add(Dense(64, init='uniform'))
+		model.add(Activation('tanh'))
+		model.add(Dropout(0.5))
+		model.add(Dense(conv.number_of_genres, init='uniform'))
+		model.add(Activation('softmax'))
+
+		sgd = SGD(lr=0.01, decay=1e-6, momentum=0.9, nesterov=True)
+		model.compile(loss='categorical_crossentropy', optimizer=sgd, metrics=['accuracy'])
+
+		d.debug("Model and SGD prepared.")
+		if log_level == 3: # only need to print the model in Verbose mode
+			model.summary()
 	else:
-		NN_log_level = 0
+		model = open("output/{}".format(model_file_name), 'r').read()
+		model = model_from_json(model)
+		sgd = SGD(lr=0.1, decay=1e-6, momentum=0.9, nesterov=True)
+		model.compile(loss='categorical_crossentropy', optimizer=sgd, metrics=['accuracy'])
+		d.debug("Model loaded and SGD prepared.")
+		if load_weights:
+			model.load_weights("output/{}".format(weights_file_name))
+			d.debug("Weights loaded.")
+	# Training
+	if do_train:
+		data_feed, answer_feed = data_set.next_batch(data_point_count)
+		if d.debug_level == 3:
+			NN_log_level = 2
+		elif d.debug_level == 2:
+			NN_log_level = 1
+		else:
+			NN_log_level = 0
 
-	change_lr = LearningRateScheduler(scheduler)
-	early_stopping = EarlyStopping(monitor='val_loss', patience=early_stopping_patience)
-	model.fit(data_feed, answer_feed, nb_epoch=epoch_count, batch_size=batch_size, shuffle=shuffle_at_epoch, validation_split=NN_validation_split, verbose=NN_log_level, callbacks=[early_stopping, change_lr])
-	d.debug("Fit complete. Preparing to test.")
+		change_lr = LearningRateScheduler(scheduler)
+		early_stopping = EarlyStopping(monitor='val_loss', patience=early_stopping_patience)
+		model.fit(data_feed, answer_feed, nb_epoch=epoch_count, batch_size=batch_size, shuffle=shuffle_at_epoch, validation_split=NN_validation_split, verbose=NN_log_level, callbacks=[early_stopping, change_lr])
+		d.debug("Fit complete. Preparing to test.")
 
-# Evaluate against test data
-test_data, test_answers = data_set.next_batch(evaluation_data_point_count)
-score = model.evaluate(test_data, test_answers, batch_size=batch_size)
-d.debug("\nTest complete. Loss: {}. Accuracy: {}%".format(score[0], score[1]*100))
+	# Evaluate against test data
+	test_data, test_answers = data_set.next_batch(evaluation_data_point_count)
+	score = model.evaluate(test_data, test_answers, batch_size=batch_size)
+	result = "\nTest {} of {} complete. Loss: {}. Accuracy: {}%".format(i, tests_in_series, score[0], score[1]*100)
+	test_results.append(result)
+	d.debug(result)
 
-save_model(model)
-save_weights(model)
+	save_model(model, i)
+	save_weights(model, i)
 
+for result in test_results:
+	d.debug(result)
 
 # specific_song_to_test = "cache/2016.Ten Fé.NOON  189.Elodie.wav"
 # that_data = {"genre": "Indie"}
