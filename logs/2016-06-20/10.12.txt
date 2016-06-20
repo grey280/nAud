@@ -1,0 +1,2557 @@
+Greys-MacBook-Pro:nAud greypatterson$ python sampleReadKeras.py 
+Using Theano backend.
+Start: read plist
+End: read plist
+Initializing data set object
+Dataset built.
+Model and SGD prepared.
+sampleReadKeras.py:89: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+  data_1 = data[start_point_1:(start_point_1 + ((sample_duration/3)*44100))]
+sampleReadKeras.py:90: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+  data_2 = data[start_point_2:(start_point_2 + ((sample_duration/3)*44100))]
+sampleReadKeras.py:91: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+  data_3 = data[start_point_3:(start_point_3 + ((sample_duration/3)*44100))]
+  Track: cache/2015.Early Hours.Changehood.Changehood.wav
+  Track: cache/1997.Kenny Loggins.Yesterday, Today, Tomorrow: The Greatest Hits.Footloose.wav
+  Track: cache/2002.Coldplay.A Rush of Blood to the Head.God Put a Smile Upon Your Face.wav
+  Track: cache/2016.M83.Junk.Tension.wav
+  Track: cache/2015.Gordon's Tsunami Week.The Farewell Paradox.is.wav
+  Track: cache/2009.Super Mash Bros..All About The Scrilions.Livin The Dream (I'm On A Float).wav
+  Track: cache/2014.Milky Chance.Sadnecessary.Becoming.wav
+  Track: cache/2014.Angus & Julia Stone.Angus & Julia Stone (Deluxe Version).Little Whiskey.wav
+  Track: cache/2014.The Decemberists.What a Terrible World, What a Beautiful World.Anti-Summersong.wav
+  Track: cache/2015.Death Cab For Cutie.Kintsugi.Ingenue.wav
+  Track: cache/2003.Death Cab For Cutie.Transatlanticism.Transatlanticism.wav
+  Track: cache/2014.Fences.Lesser Oceans.Lesser Oceans.wav
+  Track: cache/2015.Vitamin String Quartet.VSQ Performs the Hits of 2014 Vol. 3.Take Me to Church (String Quartet Tribute to Hozier).wav
+  Track: cache/2014.Coldplay.Ghost Stories Live 2014.Always In My Head (Live At the Royal Albert Hall, London).wav
+  Track: cache/2016.Andrew McMahon in the Wilderness.Andrew McMahon in the Wilderness.Driving Through a Dream.wav
+  Track: cache/2006.Blue October.Foiled.What If We Could.wav
+  Track: cache/2015.Of Monsters And Men.Beneath The Skin.Organs.wav
+  Track: cache/2007.Linkin Park.Minutes to Midnight.Given Up.wav
+  Track: cache/2016.M83.Junk.Time Wind.wav
+  Track: cache/2016.Daniel Kim.Pop Danthology.2012.wav
+  Track: cache/2015.Fall Out Boy.American BeautyAmerican Psycho.Centuries.wav
+  Track: cache/2016.Kant.NOON  152.Nightcall.wav
+  Track: cache/2014.Pomplamoose.Season 2.Wake Me Up Before You Go-Go.wav
+  Track: cache/2016.Bon Iver.NOON  179.Haven, Mass (B-Side).wav
+  Track: cache/2014.Banda do Mar.Banda do Mar.Dia Clarear.wav
+  Track: cache/2015.Of Monsters And Men.Beneath The Skin.I Of The Storm (Alex Somers Remix).wav
+  Track: cache/2015.Zella Day.Insurgent (Original Motion Picture Soundtrack).Sacrifice.wav
+  Track: cache/2011.30 Seconds To Mars.Thirty Seconds To Mars Unplugged.Night Of The Hunter (Unplugged).wav
+  Track: cache/2014.Avicii.The Days  Nights WEB.The Days (Henrik B Remix).wav
+  Track: cache/2003.Death Cab For Cutie.Transatlanticism.Passenger Seat.wav
+  Track: cache/2002.Coldplay.A Rush of Blood to the Head.Daylight.wav
+  Track: cache/2016.MARINA.Um Lotty Da - The Album.Um Lotty Da.wav
+  Track: cache/2010.Linkin Park.A Thousand Suns.Jornada Del Muerto.wav
+  Track: cache/1998.Snow Patrol.Songs For Polarbears.Starfighter Pilot.wav
+[                    ] 35/2185(35, 661500)
+  Track: cache/2007.Enrique Iglesias.Insomniac.Miss You.wav
+  Track: cache/2014.Blake Mills.Heigh Ho.Don't Tell Our Friends About Me.wav
+  Track: cache/2015.They Might Be Giants.Glean.Madam, I Challenge You to a Duel.wav
+  Track: cache/2016.Lane 8.Rise (Remixed).Ghost feat. Patrick Baker (Audion Remix).wav
+  Track: cache/2014.The Neighbourhood.#000000 & #Ffffff.NSTYNCT Feat. Skeme & OG Maco.wav
+  Track: cache/2015.The Best Pessimist.The Half-World.Just Remember How We Were Smiling.wav
+  Track: cache/2015.Mumford & Sons.Wilder Mind (Deluxe Version).Ditmas.wav
+  Track: cache/2016.Lane 8.Rise (Remixed).Loving You feat. Lulu James (Moon Boots Remix).wav
+  Track: cache/2003.Evanescence.Fallen.Hello.wav
+  Track: cache/2015.Mumford & Sons.Wilder Mind (Deluxe Version).Believe.wav
+  Track: cache/2014.James Newton Howard.The Hunger Games - Mockingjay Pt. 1 (Original Motin Picture Score).Put Me On The Air.wav
+  Track: cache/2015.Vitamin String Quartet.The Geek Wedding Collection.The Princess Bride - Storybook Love.wav
+  Track: cache/2014.Damien Rice.My Favourite Faded Fantasy.Trusty And True.wav
+  Track: cache/2002.Death Cab For Cutie.You Can Play These Songs With Chords.Tv Trays.wav
+  Track: cache/2015.Florence + The Machine.How Big, How Blue, How Beautiful (Limited Deluxe Edition).Make Up Your Mind.wav
+  Track: cache/2015.Green River Ordinance.Chasing Down The Wind + Unreleased B Side.It Ain't Love.wav
+  Track: cache/2014.Beware of Safety.Lotusville.Repeater.wav
+  Track: cache/2004.Carbon Leaf.Indian Summer.When I'm Alone.wav
+  Track: cache/1998.Trans-Siberian Orchestra.The Christmas Attic.Music Box Blues.wav
+  Track: cache/2015.Of Monsters And Men.Beneath The Skin.Slow Life.wav
+  Track: cache/2014.Beware of Safety.Lotusville.Stare Down Orion.wav
+  Track: cache/2014.James Newton Howard.The Hunger Games - Mockingjay Pt. 1 (Original Motin Picture Score).Victory.wav
+  Track: cache/2001.Josh Ritter.Golden Age of Radio.Come and Find Me.wav
+  Track: cache/2014.Angus & Julia Stone.Angus & Julia Stone (Deluxe Version).Crash And Burn.wav
+  Track: cache/2015.Wild Child.Past & Present.Pillow Talk.wav
+  Track: cache/2015.Howie Day.Lanterns.Lanterns.wav
+  Track: cache/2010.Janis Ian.worktape.Welcome Home (The Nebulas Song) track mix.wav
+  Track: cache/2015.God Is An Astronaut.Helios | Erebus.Sea of Trees.wav
+  Track: cache/2015.Danny Elfman.Avengers: Age of Ultron.Ultron-Twins.wav
+  Track: cache/2014.Casa Murilo.Ignition.Firing Line.wav
+  Track: cache/2015.Brian Tyler.Avengers: Age of Ultron.Wish You Were Here.wav
+  Track: cache/2016.XYLØ.America.LA Love Song.wav
+  Track: cache/2014.Totorro.Home Alone.Tigers & Gorillas.wav
+  Track: cache/2014.Tove Lo.The Hunger Games: Mockingjay, Pt. 1 (Original Motion Picture Soundtrack).Scream My Name.wav
+  Track: cache/1994.The London Symphony Orchestra.The Performs Sting.Invisible Sun.wav
+[                    ] 70/2185(35, 661500)
+  Track: cache/2014.The Who.Who's Next (Deluxe Edition).Love Ain't for Keeping (Live).wav
+  Track: cache/2000.Coldplay.Acoustic.Careful Where You Stand.wav
+  Track: cache/2014.Linfield College Concert Choir.Christmas at Linfield.In the Bleak Midwinter.wav
+  Track: cache/2014.James Newton Howard.The Hunger Games - Mockingjay Pt. 1 (Original Motin Picture Score).The Hanging Tree.wav
+  Track: cache/2000.Coldplay.Brothers & Sisters.Brothers & Sisters.wav
+  Track: cache/2015.Godspeed You! Black Emperor.Asunder,Sweet and Other Distress.Piss Crowns Are Trebled.wav
+  Track: cache/2004.Carbon Leaf.Indian Summer.This Is My Song!.wav
+  Track: cache/2016.Peter Hollins Acappella.The Hobbit.Misty Mountains.wav
+  Track: cache/2015.The Barden Bellas.Pitch Perfect 2.World Championship Finale 2.wav
+  Track: cache/2014.The World is a Beautiful Place & I am No Longer Afraid to Die.Between Bodies.$100 Tip.wav
+  Track: cache/2015.Lowland Hum.Native Air.Noise Of Day.wav
+  Track: cache/2001.Bond.Born.Victory [Mike Batt Mix].wav
+  Track: cache/2014.Cold War Kids.Hold My Home.Harold Bloom.wav
+  Track: cache/2016.Matthew Mayfield.Wild Eyes Unplugged EP.Mess of a Man.wav
+  Track: cache/2015.Of Monsters And Men.Beneath The Skin.Black Water.wav
+  Track: cache/2009.Breaking Benjamin.Dear Agony.Hopeless.wav
+  Track: cache/2014.Pentatonix.That's Christmas To Me.Santa Claus Is Coming To Town.wav
+  Track: cache/2014.The Who.Who's Next (Deluxe Edition).I Don't Even Know Myself (Live).wav
+  Track: cache/2009.009 Sound System.009 Sound System.Speak To Angels.wav
+  Track: cache/2015.Imagine Dragons.Smoke + Mirrors (Deluxe Edition).Trouble.wav
+  Track: cache/2007.Enrique Iglesias.Insomniac.Don't You Forget About Me.wav
+  Track: cache/2016.Andy Kim.Greatest Hits.Rock Me Gently.wav
+  Track: cache/2009.Breaking Benjamin.Dear Agony.Lights Out.wav
+  Track: cache/2014.Totorro.Home Alone.Oaso San-Voyou Remix (Japan Exclusivity).wav
+  Track: cache/2001.Bond.Born.Bella Donna.wav
+  Track: cache/2002.Death Cab For Cutie.You Can Play These Songs With Chords.Two Cars.wav
+  Track: cache/2004.Explosions in the Sky.The Earth Is Not A Cold Dead Place.Memorial (Edit).wav
+  Track: cache/2014.The Decemberists.What a Terrible World, What a Beautiful World.Make You Better.wav
+  Track: cache/2015.Vitamin String Quartet.VSQ Performs the Hits of 2014 Vol. 3.Centuries (String Quartet Tribute to Fall out Boy).wav
+  Track: cache/2005.Coldplay.X&Y.What If.wav
+  Track: cache/2013.The National.Trouble Will Find Me.Sea Of Love.wav
+  Track: cache/2014.Have Mercy.A Place Of Our Own.Plastic Covered Furniture.wav
+  Track: cache/2016.P!nk.Funhouse.So What (Explicit).wav
+  Track: cache/2001.Daft Punk.Discovery.High Life.wav
+  Track: cache/2016.Lane 8.Rise (Remixed).Klara (Theo Kottis Remix).wav
+[                    ] 105/2185(35, 661500)
+  Track: cache/2015.Interpol.Spotify Sessions.Favorite Live Setting.wav
+  Track: cache/2014.Rise Against.The Black Market.People Live Here.wav
+  Track: cache/2011.Tualatin Crimsonnaires.Tualatin Fall Concert 2011.Prayer of the Children.wav
+  Track: cache/2014.Banda do Mar.Banda do Mar.Pode Ser.wav
+  Track: cache/2016.Pretty Haze.NOON  177.Summer Heart.wav
+  Track: cache/2000.Coldplay.Parachutes.Yellow.wav
+  Track: cache/2007.OneRepublic.Dreaming Out Loud.Apologize.wav
+  Track: cache/2015.Lowland Hum.Native Air.War Is Over.wav
+  Track: cache/2015.Will Young.85% Proof (Deluxe Edition).Joy.wav
+  Track: cache/2014.Coldplay.Ghost Stories Live 2014.Another's Arms (Live At the Beacon Theatre, New York).wav
+  Track: cache/2005.Flyleaf.Flyleaf.Fully Alive (Acoustic Version).wav
+  Track: cache/2015.Vitamin String Quartet.VSQ Performs the Hits of 2014 Vol. 3.Yellow Flicker Beat (String Quartet Tribute to Lorde).wav
+  Track: cache/2014.Robert Schumann.MUSC233 Exam 2.Carnaval, Op. 9: No. 5: Eusebius.wav
+  Track: cache/2003.Coldplay.Live 2003.Moses.wav
+  Track: cache/2016.Blue October.Home.Home (Tim Palmer Mix).wav
+  Track: cache/2016.Neutral Milk Hotel.Grey's Intro to Music Mixtape (Made With Love) [Vol.1].Holland, 1945.wav
+  Track: cache/1998.Snow Patrol.Songs For Polarbears.NYC.wav
+  Track: cache/2015.Angus & Julia Stone.Angus & Julia Stone: The Remixes.Grizzly Bear (Thom from Alt-J Remix).wav
+  Track: cache/2015.Beauvois.NOON  185.Used To Be.wav
+  Track: cache/2015.Death Cab For Cutie.Kintsugi.Good Help (Is So Hard to Find).wav
+  Track: cache/2014.Sam Smith.In The Lonely Hour (Deluxe Version).Stay With Me.wav
+  Track: cache/2015.Will Young.85% Proof (Deluxe Edition).Thank You.wav
+  Track: cache/2014.James Newton Howard.The Hunger Games - Mockingjay Pt. 1 (Original Motin Picture Score).Katniss' Nightmare.wav
+  Track: cache/1984.Bon Jovi.Bon Jovi.Shot Through the Heart.wav
+  Track: cache/2015.IAMX.Metanoia.Look Outside.wav
+  Track: cache/2014.We Were Promised Jetpacks.Unravelling.Safety In Numbers.wav
+  Track: cache/2002.Death Cab For Cutie.You Can Play These Songs With Chords.This Charming Man.wav
+  Track: cache/2012.Pentatonix.PTX vol 1.Love You Long Time.wav
+  Track: cache/2014.Linfield College Concert Choir.Christmas at Linfield.God Rest Ye Merry Gentlemen.wav
+  Track: cache/2012.Tyler Stenson.Some Days I'm a Lion.Leaves Blow By.wav
+  Track: cache/2000.Five for Fighting.America Town.Superman (It's Not Easy).wav
+  Track: cache/2000.Death Cab for Cutie.We Have The Facts And We're Voting Yes.Lowell, MA.wav
+  Track: cache/2014.OK Go.Hungry Ghosts.The One Moment.wav
+  Track: cache/2001.Daft Punk.Discovery.Harder, Better, Faster, Stronger.wav
+  Track: cache/2015.MOGWAI.Central Belters.How To Be A Werewolf.wav
+[=                   ] 140/2185(35, 661500)
+  Track: cache/2016.FRENSHIP.NOON  184.Carpet.wav
+  Track: cache/2015.Howie Day.Lanterns.Treetops.wav
+  Track: cache/2014.Banda do Mar.Banda do Mar.Mia.wav
+  Track: cache/2015.Nils Frahm.Screws Reworked.La (Sebastian Freij Rework).wav
+  Track: cache/2016.MK GRANDS.NOON  165.Rxssia.wav
+  Track: cache/2015.Beware of Safety.Mabon.Shutters.wav
+  Track: cache/2015.Of Monsters And Men.Beneath The Skin.Thousand Eyes.wav
+  Track: cache/2014.The Neighbourhood.#000000 & #Ffffff.TRL.wav
+  Track: cache/2015.Dawn And Hawkes.Golden Heart EP + Yours and Mine Preview.Polar Bears.wav
+  Track: cache/2014.Sam Smith.In The Lonely Hour (Deluxe Version).Reminds Me of You.wav
+  Track: cache/2014.Rise Against.The Black Market.Sudden Life.wav
+  Track: cache/2009.Breaking Benjamin.Dear Agony.Fade Away.wav
+  Track: cache/2002.Death Cab For Cutie.You Can Play These Songs With Chords.Prove My Hypotheses.wav
+  Track: cache/2016.2CELLOS(SULIC & HAUSER).Celloverse (Japan Version).Thunderstruck.wav
+  Track: cache/2005.Coldplay.X&Y.The Hardest Part.wav
+  Track: cache/2010.Daft Punk.Tron: Legacy (Amazon MP3 Exclusive Version).Disc Wars.wav
+  Track: cache/2015.Vitamin String Quartet.The Geek Wedding Collection.The Lord of The Rings. Fellowship of the Rings - Concerning Hobbits.wav
+  Track: cache/2016.Miike Snow.iii.My Trigger.wav
+  Track: cache/2015.Gordon's Tsunami Week.The Farewell Paradox.particular.wav
+  Track: cache/1994.The London Symphony Orchestra.The Performs Sting.Every Breath You Take.wav
+  Track: cache/2005.Nickelback.All the Right Reasons.If Everyone Cared.wav
+  Track: cache/2014.Palace.Lost In The Night (EP).Lost In The Night.wav
+  Track: cache/2012.Tyler Stenson.Some Days I'm a Lion.Devil Came Knocking.wav
+  Track: cache/1997.Modest Mouse.The Lonesome Crowded West.Trailer Trash.wav
+  Track: cache/2015.Vitamin String Quartet.VSQ Performs the Hits of 2014 Vol. 3.Blank Space (String Quartet Tribute to Taylor Swift).wav
+  Track: cache/2014.The Neighbourhood.#000000 & #Ffffff.Dangerous Feat. YG.wav
+  Track: cache/2015.Three Days Grace.Human.So What.wav
+  Track: cache/2015.Marina and The Diamonds.FROOT.Forget.wav
+  Track: cache/2001.Titiyo.Come Along.Come Along.wav
+  Track: cache/2015.Imagine Dragons.Smoke + Mirrors (Deluxe Edition).Gold.wav
+  Track: cache/2009.Sarah Kirkland Snider.Penelope.Calypso.wav
+  Track: cache/2016.Mogwai.Atomic.Weak Force.wav
+  Track: cache/2014.CHVRCHES.Under the Tide.The Mother We Share [Alucard Session].wav
+  Track: cache/2014.Sheppard.Bombs Away.Geronimo.wav
+  Track: cache/2014.Little Boots.Business Pleasure - EP.Heroine.wav
+[=                   ] 175/2185(35, 661500)
+  Track: cache/2014.Bastille.Oblivion.Oblivion.wav
+  Track: cache/2015.Imagine Dragons.Smoke + Mirrors (Deluxe Edition).The Unknown.wav
+  Track: cache/2016.The Dunwells.Light Up The Sky.Lucky Ones.wav
+  Track: cache/2014.Carbon Leaf.Indian Summer Revisited.Life Less Ordinary.wav
+  Track: cache/2003.Coldplay.Live 2003.Shiver.wav
+  Track: cache/2016.The Dunwells.Light Up The Sky.Best Is Yet To Come.wav
+  Track: cache/2014.The Neighbourhood.#000000 & #Ffffff.To.wav
+  Track: cache/2014.Seven Saturdays.Seven Saturdays (Ambient).Eleven Eleven (Ambient).wav
+  Track: cache/2001.Bond.Born.Quixote.wav
+  Track: cache/2015.Cold War Kids.Five Quick Cuts - EP.Stop  Rewind.wav
+  Track: cache/2015.Vitamin String Quartet.VSQ Performs the Hits of 2014 Vol. 3.All About That Bass (String Quartet Tribute to Meghan Trainor).wav
+  Track: cache/2015.Angus & Julia Stone.Angus & Julia Stone: The Remixes.A Heartbreak (Active Child Remix).wav
+  Track: cache/2014.Blake Mills.Heigh Ho.Gold Coast Sinkin'.wav
+  Track: cache/2003.Death Cab For Cutie.Transatlanticism.We Looked Like Giants.wav
+  Track: cache/2014.The Fray.Helios.Closer to Me.wav
+  Track: cache/1992.Little River Band.All-Time Greatest Hits.Help Is on the Way.wav
+  Track: cache/2016.Mogwai.Atomic.SCRAM.wav
+  Track: cache/2014.Fences.Lesser Oceans.Dusty Beds.wav
+  Track: cache/2015.Will Young.85% Proof (Deluxe Edition).Promise Me.wav
+  Track: cache/2014.XOV.The Hunger Games: Mockingjay, Pt. 1 (Original Motion Picture Soundtrack).Animal.wav
+  Track: cache/2015.Brian Tyler.Avengers: Age of Ultron.Outlook.wav
+  Track: cache/2014.Tarwater.Adrift.Homology Myself.wav
+  Track: cache/2014.Linfield College Concert Choir.Christmas at Linfield.A Hymn to the Virgin.wav
+  Track: cache/2016.unknown.2013 OMEA.Sing Unto God - Chorale.wav
+  Track: cache/2014.Pentatonix.That's Christmas To Me.White Winter Hymnal.wav
+  Track: cache/2015.Tyler Stenson.Say No More.As the Crow Flies.wav
+  Track: cache/2009.Train.Save Me, San Francisco.Marry Me.wav
+  Track: cache/2015.Breaking Benjamin.Dark Before Dawn.Dark.wav
+  Track: cache/2010.Tyler Stenson.Bittersweet Parade.Explode.wav
+  Track: cache/2009.Skillet.Awake (Deluxe).Monster (Alternate Radio Version).wav
+  Track: cache/2015.Fall Out Boy.American BeautyAmerican Psycho.Novocaine.wav
+  Track: cache/1996.The Verve Pipe.Villains.Cattle.wav
+  Track: cache/2014.The Rosebuds.Sand + Silence.In My Teeth.wav
+  Track: cache/2015.The Barden Bellas.Pitch Perfect 2.Convention Performance.wav
+  Track: cache/2015.Of Monsters And Men.Beneath The Skin.Black Water (Chris Taylor Of Grizzly Bear Remix).wav
+[=                   ] 210/2185(35, 661500)
+  Track: cache/2015.Howie Day.Lanterns.Medicine Ball.wav
+  Track: cache/2010.Linkin Park.A Thousand Suns.Blackout.wav
+  Track: cache/2016.Pentatonix.Pentatonix.Somebody That I Used To Know.wav
+  Track: cache/2014.Pentatonix.PTX, Vol. III.Rather Be.wav
+  Track: cache/2015.MOGWAI.Central Belters.Wizard Motor.wav
+  Track: cache/2014.Angus & Julia Stone.Angus & Julia Stone (Deluxe Version).Do Without (Bonus Track).wav
+  Track: cache/2014.La Roux.Trouble in Paradise.The Feeling.wav
+  Track: cache/2015.Simian Ghost.Angus & Julia Stone: The Remixes.Heart Beats Slow.wav
+  Track: cache/2016.Sleeping At Last.Atlas: Senses.Smell.wav
+  Track: cache/2013.Lowland Hum.unknown.Ballad of Saudade.wav
+  Track: cache/2015.The Lighthouse and the Whaler.Brothers Sampler.In Motion.wav
+  Track: cache/2015.God Is An Astronaut.Helios | Erebus.Finem Solis.wav
+  Track: cache/2014.The Life And Times.Lost Bees.Eyes And Teeth.wav
+  Track: cache/2014.Lower Than Atlantis.Lower Than Atlantis (Deluxe).Criminal.wav
+  Track: cache/2012.Tyler Stenson.Some Days I'm a Lion.Best Laid Plans.wav
+  Track: cache/2006.Snow Patrol.Eyes Open.The Finish Line.wav
+  Track: cache/2014.Bastille.Oblivion.Bad Blood (Live Piano Version).wav
+  Track: cache/2016.Imagine Dragons.Radioactive State of Mind.It's Time to Run Juliet.wav
+  Track: cache/2012.elmify.SoundCloud.Whistle.wav
+  Track: cache/2015.Derrival.Departure & Arrival.The Knife.wav
+  Track: cache/2016.Aperture Science Psychoacoustics Laboratory.Portal 2: Songs to Test By - Volume 3.Machiavellian Bach.wav
+  Track: cache/2016.Linkin Park.The Catalyst.The Catalyst, featuring DIGITALOMAT.wav
+  Track: cache/2016.Tall Heights.Man of Stone.Somewhere I Believe.wav
+  Track: cache/2015.Lowland Hum.Native Air.When The World Sleeps.wav
+  Track: cache/2006.Snow Patrol.Eyes Open.Beginning To Get To Me.wav
+  Track: cache/2015.The Barden Bellas.Pitch Perfect 2.Kennedy Center Performance.wav
+  Track: cache/2016.Murray Gold.Doctor Who: Season 4 [Original Television Soundtrack].All in the Mind.wav
+  Track: cache/2007.Binärpilot.Robot Wars.A New Galaxy.wav
+  Track: cache/2014.Kerretta.Pirohia.Sister, Come Home.wav
+  Track: cache/2016.Zedd.Evan Duffy.Clarity ft. Foxes (Evan Duffy Piano Cover).wav
+  Track: cache/2015.Fall Out Boy.American BeautyAmerican Psycho.Twin Skeleton's (Hotel In NYC).wav
+  Track: cache/2014.Casa Murilo.Ignition.Drive.wav
+  Track: cache/2014.Lower Than Atlantis.Lower Than Atlantis (Deluxe).Ain't No Friend (Alternative Version).wav
+  Track: cache/2016.Lane 8.Rise (Remixed).Loving You feat. Lulu James (Lane 8 Rework).wav
+  Track: cache/1997.Kenny Loggins.Yesterday, Today, Tomorrow: The Greatest Hits.Danger Zone.wav
+[==                  ] 245/2185(35, 661500)
+  Track: cache/2014.Cold War Kids.Hold My Home.Drive Desperate.wav
+  Track: cache/2016.BANNERS.The Royals Season 2.Start A Riot.wav
+  Track: cache/2015.Of Monsters And Men.Beneath The Skin.Crystals.wav
+  Track: cache/2004.Carbon Leaf.Indian Summer.One Prairie Outpost.wav
+  Track: cache/2006.Three Days Grace.One-X.Animal I Have Become.wav
+  Track: cache/2009.Breaking Benjamin.Dear Agony.Without You.wav
+  Track: cache/2014.Linfield College Concert Choir.Christmas at Linfield.Silver Bells.wav
+  Track: cache/2016.Fhin.NOON  179.But Now A Warm Feel Is Running.wav
+  Track: cache/2014.Little Boots.Business Pleasure - EP.Business Pleasure.wav
+  Track: cache/2015.Interpol.Spotify Sessions.My Desire.wav
+  Track: cache/2015.The Lighthouse and the Whaler.Brothers Sampler.Little Vessels.wav
+  Track: cache/2016.Imagine Dragons.iTunes Session - EP.Radioactive (iTunes Session).wav
+  Track: cache/2016.John Travolta.Gold.You're the One That I Want.wav
+  Track: cache/2007.Superchick.Beauty From Pain 1.1.Stand In The Rain.wav
+  Track: cache/2015.Will Young.85% Proof (Deluxe Edition).You Keep On Loving Me.wav
+  Track: cache/2016.Jungle.NOON  152.Stand In Your Line.wav
+  Track: cache/2010.Tyler Stenson.Bittersweet Parade.Wyoming.wav
+  Track: cache/2016.Anya Marina.Paper Plane.Snowflake.wav
+  Track: cache/2014.OK Go.Hungry Ghosts.Im Not Through.wav
+  Track: cache/2013.Kodaline.In A Perfect World.Pray.wav
+  Track: cache/2016.BANNERS.Half Light.Half Light.wav
+  Track: cache/2014.Banda do Mar.Banda do Mar.Faz Tempo.wav
+  Track: cache/2016.The New Seekers.We'd Like To Teach The World To Sing.I'd Like to Teach the World to Sing (In Perfect Harmony).wav
+  Track: cache/2015.Das Sound Machine.Pitch Perfect 2.Car Show.wav
+  Track: cache/2015.Lowland Hum.Native Air.Eden (Part One).wav
+  Track: cache/2014.James Newton Howard.The Hunger Games - Mockingjay Pt. 1 (Original Motin Picture Score).Remind Her Who The Enemy Is.wav
+  Track: cache/2011.Girls.Father, Son, Holy Ghost.Honey Bunny.wav
+  Track: cache/2016.GENERIK.NOON  192.LATE AT NIGHT.wav
+  Track: cache/2011.Marina & The Diamonds.Electra Heart.Starring Role.wav
+  Track: cache/2015.The Best Pessimist.The Half-World.It's Only Words.wav
+  Track: cache/2005.The Fray.How to Save a Life.All at Once.wav
+  Track: cache/2014.Blueneck.Night of the Meek.Driving Home for Christmas.wav
+  Track: cache/2015.Marina and The Diamonds.FROOT.Happy.wav
+  Track: cache/2015.Of Monsters And Men.Beneath The Skin.Winter Sound.wav
+  Track: cache/2014.On-The-Go.Young Hearts [WEB Edition].Lifeboat.wav
+[==                  ] 280/2185(35, 661500)
+  Track: cache/2014.MONO.The Last Dawn.Where We Begin.wav
+  Track: cache/2014.AJR.I`m Ready EP.I`m Ready.wav
+  Track: cache/2013.The National.Trouble Will Find Me.I Should Live In Salt.wav
+  Track: cache/2016.RAEKO.unknown.Mind Over Matter (RAEKO Remix).wav
+  Track: cache/2002.Frou Frou.Details (International Version).It's Good To Be In Love.wav
+  Track: cache/2014.James Newton Howard.The Hunger Games - Mockingjay Pt. 1 (Original Motin Picture Score).Don't Be A Fool Katniss.wav
+  Track: cache/2016.Harrison Brome.NOON  155.Pools.wav
+  Track: cache/2014.Haerts.Haerts.Be the One.wav
+  Track: cache/2015.Nils Frahm.Screws Reworked.Fa (Fred Yaddaden Rework).wav
+  Track: cache/2014.Have Mercy.A Place Of Our Own.Inch By Inch.wav
+  Track: cache/1996.The Verve Pipe.Villains.Drive You Mild.wav
+  Track: cache/2006.Three Days Grace.One-X.Gone Forever.wav
+  Track: cache/2009.Super Mash Bros..All About The Scrilions.This Is Definitely Not The 405.wav
+  Track: cache/1996.The Verve Pipe.Villains.Veneer.wav
+  Track: cache/2005.Flyleaf.Flyleaf.Fully Alive.wav
+  Track: cache/2015.Howie Day.Lanterns.Love Is Never Lost.wav
+  Track: cache/2007.Binärpilot.Robot Wars.On The Run.wav
+  Track: cache/2015.Danny Elfman.Avengers: Age of Ultron.Ultron Wakes.wav
+  Track: cache/2014.Rise Against.The Black Market.I Don't Want To Be Here Anymore.wav
+  Track: cache/2016.Toto.Toto IV.Rosanna.wav
+  Track: cache/2014.10cc.Guardians Of The Galaxy (Awesome Mix Vol. 1).I'm Not in Love.wav
+  Track: cache/2016.Anya Marina.Paper Plane.Shut Up.wav
+  Track: cache/2014.The Phoenix Foundation.Echoes.Return.wav
+  Track: cache/2016.Trey Songz.The Remixes Vol. 1.Say Aah (E-603 Remix).wav
+  Track: cache/2015.Derrival.Departure & Arrival.Canvas.wav
+  Track: cache/2015.Mumford & Sons.Wilder Mind (Deluxe Version).Snake Eyes - Live.wav
+  Track: cache/2014.This Will Destroy You.Another Language.Invitation.wav
+  Track: cache/2014.The Who.Who's Next (Deluxe Edition).Young Man Blues (Live).wav
+  Track: cache/2006.Snow Patrol.Eyes Open.You Could Be Happy.wav
+  Track: cache/2009.Skillet.Awake (Deluxe).Lucy.wav
+  Track: cache/2015.Vallis Alps.unknown.Thru.wav
+  Track: cache/2016.Birdman.The Remixes Vol. 1.Money To Blow (E-603 Remix).wav
+  Track: cache/2012.Aftermath.She's Better Than Dreams EP.Airplanes And Airwaves.wav
+  Track: cache/2012.Pentatonix.PTX vol 1.The Baddest Girl.wav
+  Track: cache/2015.The Best Pessimist.The Half-World.Call The Ambulance.wav
+[==                  ] 315/2185(35, 661500)
+  Track: cache/2000.Coldplay.Parachutes.Shiver.wav
+  Track: cache/2016.Casper Zazz.TRXYE - EP.Happy Little Pill (Casper Zazz Remix).wav
+  Track: cache/2015.Lowland Hum.Native Air.Eden (Part Two).wav
+  Track: cache/2012.Pentatonix.PTX vol 1.Aha!.wav
+  Track: cache/2016.Miike Snow.iii.I Feel The Weight.wav
+  Track: cache/2016.Train.My Private Nation.Calling All Angels - Radio Version.wav
+  Track: cache/2014.The World is a Beautiful Place & I am No Longer Afraid to Die.Between Bodies.Thanks.wav
+  Track: cache/2006.Three Days Grace.One-X.Get Out Alive.wav
+  Track: cache/2015.Marina and The Diamonds.FROOT.Solitaire.wav
+  Track: cache/2015.Lana Del Rey.High by the Beach.High by the Beach.wav
+  Track: cache/2013.OK Go.Twelve Months of OK Go.This Thing Has Started (2004 demo).wav
+  Track: cache/2014.The Neighbourhood.#000000 & #Ffffff.Silver.wav
+  Track: cache/2006.Pink.I'm Not Dead.U + Ur Hand.wav
+  Track: cache/2016.Aperture Science Psychoacoustics Laboratory.Portal 2: Songs to Test By - Volume 3.Wheatley Science.wav
+  Track: cache/2005.Coldplay.X&Y.Twisted Logic.wav
+  Track: cache/2016.Woodkid.Desierto (Original Motion Picture Score).Que Te Mate el Desierto.wav
+  Track: cache/2014.Perotinus.MUSC233 Exam 3.Viderunt omnes.wav
+  Track: cache/2015.Florence + The Machine.How Big, How Blue, How Beautiful (Limited Deluxe Edition).Ship To Wreck.wav
+  Track: cache/2015.Beware of Safety.Mabon.Prussian Blue.wav
+  Track: cache/2014.Have Mercy.A Place Of Our Own.Two Years.wav
+  Track: cache/2014.Haerts.Haerts.Wings.wav
+  Track: cache/2009.Neil Diamond.Reservoir Dogs.Hooked On A Feeling.wav
+  Track: cache/2015.Lowland Hum.Native Air.How Long.wav
+  Track: cache/2015.Of Monsters And Men.Beneath The Skin.Human.wav
+  Track: cache/2014.MONO.The Last Dawn.The Last Dawn.wav
+  Track: cache/2014.Igor Stravinksy.MUSC233 Exam 3.The Rite of Spring: Danse des adolescentes.wav
+  Track: cache/2014.Coldplay.Ghost Stories.Ghost Story.wav
+  Track: cache/2015.Will Young.85% Proof (Deluxe Edition).Dare.wav
+  Track: cache/2004.Barlowgirl.Barlowgirl.Never Alone.wav
+  Track: cache/2006.Snow Patrol.Eyes Open.Chasing Cars.wav
+  Track: cache/2013.Lana Del Rey.Born to Die.Born to Die.wav
+  Track: cache/2015.Danny Elfman.Avengers: Age of Ultron.Farmhouse.wav
+  Track: cache/2014.Wolfgang Amadeus Mozart.MUSC233 Exam 2.Don Giovanni: Act I, Scene 1.wav
+  Track: cache/2015.Tyler Stenson.Say No More.Big Hearts (Remix).wav
+  Track: cache/2015.Derrival.Departure & Arrival.Romanticized.wav
+[===                 ] 350/2185(35, 661500)
+  Track: cache/2015.Green River Ordinance.Chasing Down The Wind.Cannery River.wav
+  Track: cache/2000.Coldplay.Safety.No More Keeping My Feet On The Ground.wav
+  Track: cache/2016.ForOrchestra.ForOrchestra.A World Without Danger - Orchestral.wav
+  Track: cache/2016.The Dunwells.Light Up The Sky.Hurts.wav
+  Track: cache/2015.White Morning.Scores.Sustenance.wav
+  Track: cache/1998.Trans-Siberian Orchestra.The Christmas Attic.An Angel's Share.wav
+  Track: cache/2006.The Weepies.Say I Am You.Stars.wav
+  Track: cache/2015.Amber Run.5AM (Deluxe) WEB.Noah.wav
+  Track: cache/2014.Bastille.Vs. (Other People's Heartache,Pt. III).Bad_News (Bastille Vs. Mnek) (Crossfaded Version) - Mnek.wav
+  Track: cache/2015.The Saint Johns.Noisetrade Sampler.Shadowplay (Album Version).wav
+  Track: cache/2015.Nils Frahm.Screws Reworked.You (Bug Lover Rework).wav
+  Track: cache/2015.Tyler Stenson.Say No More.That Moon.wav
+  Track: cache/2015.Zeke Duhon.Zeke Duhon.Hold Fast.wav
+  Track: cache/2015.Imagine Dragons.Smoke + Mirrors (Deluxe Edition).Friction.wav
+  Track: cache/2016.The Dunwells.Light Up The Sky.Never Too Late.wav
+  Track: cache/2005.Death Cab For Cutie.Plans.What Sarah Said.wav
+  Track: cache/2006.Three Days Grace.One-X.Over and Over.wav
+  Track: cache/2006.John Mayer.Continuum.Slow Dancing in a Burning Room.wav
+  Track: cache/2003.Linkin Park.Meteora.Numb.wav
+  Track: cache/2014.Carbon Leaf.Indian Summer Revisited.Raise The Roof.wav
+  Track: cache/2014.Haerts.Haerts.Giving Up.wav
+  Track: cache/2014.Cold War Kids.Hold My Home.All This Could Be Yours.wav
+  Track: cache/2014.James Newton Howard.The Hunger Games - Mockingjay Pt. 1 (Original Motin Picture Score).It's Gonna Be A Long Night.wav
+  Track: cache/2015.Breaking Benjamin.Dark Before Dawn.Close to Heaven.wav
+  Track: cache/2016.Eels.Beautiful Freak.Beautiful Freak.wav
+  Track: cache/2015.Pen Pals.Gold.Camp.wav
+  Track: cache/2005.Flyleaf.Flyleaf.Red Sam.wav
+  Track: cache/2016.dvsn.NOON  184.Hallucations.wav
+  Track: cache/2015.Florence + The Machine.How Big, How Blue, How Beautiful (Limited Deluxe Edition).Third Eye.wav
+  Track: cache/2014.OK Go.Hungry Ghosts.Lullaby.wav
+  Track: cache/2016.OK Go.Twelve Months of OK Go.I'm Not Through.wav
+  Track: cache/2016.Jack Garratt.NOON  178.Fire.wav
+  Track: cache/2014.Lorde.The Hunger Games: Mockingjay, Pt. 1 (Original Motion Picture Soundtrack).Yellow Flicker Beat.wav
+  Track: cache/2015.Marina and The Diamonds.FROOT.Immortal.wav
+  Track: cache/2014.Angus & Julia Stone.Angus & Julia Stone (Deluxe Version).Other Things.wav
+[===                 ] 385/2185(35, 661500)
+  Track: cache/2016.The Paper Kites.Woodland.Bloom.wav
+  Track: cache/2001.Daft Punk.Discovery.Digital Love.wav
+  Track: cache/2015.MOGWAI.Central Belters.I Know You Are But What Am I?.wav
+  Track: cache/2004.Breaking Benjamin.We Are Not Alone.So Cold.wav
+  Track: cache/2016.M83.Junk.Atlantique Sud.wav
+  Track: cache/2005.Rihanna.Music of the Sun.Pon De Replay.wav
+  Track: cache/2016.Yellowcard.When You're Through Thinking, Say Yes (Acoustic).Hang You Up (Acoustic).wav
+  Track: cache/2016.Liss.First.Good Enough.wav
+  Track: cache/2014.MONO.The Last Dawn.Katana.wav
+  Track: cache/2009.The Lights.The Listening.Drive My Soul.wav
+  Track: cache/2014.Angus & Julia Stone.Angus & Julia Stone (Deluxe Version).All This Love (Bonus Track).wav
+  Track: cache/2014.The Neighbourhood.#000000 & #Ffffff.Jealousy Feat. Casey Veggies & 100s.wav
+  Track: cache/2016.Woodkid.Desierto (Original Motion Picture Score).Web of Thorns.wav
+  Track: cache/2009.Breaking Benjamin.Dear Agony.Dear Agony.wav
+  Track: cache/2003.Linkin Park.Live in Texas.Papercut.wav
+  Track: cache/2016.Without.NOON  152.Your Love.wav
+  Track: cache/2010.Daft Punk.Tron: Legacy (Amazon MP3 Exclusive Version).C.L.U..wav
+  Track: cache/2015.Death Cab For Cutie.Kintsugi.Everything's A Ceiling.wav
+  Track: cache/2015.Howie Day.Lanterns.Harley.wav
+  Track: cache/2012.Binärpilot.Songs For Alan Turing.Sanzhi District.wav
+  Track: cache/2015.Beware of Safety.Mabon.Husbands and Hangmen.wav
+  Track: cache/2014.Bastille.Vs. (Other People's Heartache,Pt. III).Axe To Grind (Bastille Vs. Tyde Vs. Rationale) (Crossfaded Version) - Tyde, Rationale.wav
+  Track: cache/2006.Blue October.Foiled.Everlasting Friend.wav
+  Track: cache/2015.Imagine Dragons.Smoke + Mirrors (Deluxe Edition).Release.wav
+  Track: cache/2014.Tarwater.Adrift.Inreturn.wav
+  Track: cache/2016.P!nk.Funhouse.Funhouse (Explicit).wav
+  Track: cache/2014.The Phoenix Foundation.Echoes.Fooling.wav
+  Track: cache/2010.Binärpilot.Nordland.Draugen.wav
+  Track: cache/2015.Will Young.85% Proof (Deluxe Edition).Where Are You Tonight.wav
+  Track: cache/2014.Blake Mills.Heigh Ho.Seven.wav
+  Track: cache/2014.Carbon Leaf.Indian Summer Revisited.What About Everything.wav
+  Track: cache/2006.Blue October.Foiled.X Amount of Words.wav
+  Track: cache/2001.Collective Soul.7even Year Itch: Collective Soul's Greatest Hits 1994-2001.Forgiveness.wav
+  Track: cache/2014.CHVRCHES.Under the Tide.Under the Tide [Single Version].wav
+  Track: cache/2014.The World is a Beautiful Place & I am No Longer Afraid to Die.Between Bodies.Space Explorations To Solve Earthly Crises.wav
+[===                 ] 420/2185(35, 661500)
+  Track: cache/2016.OK Go.Twelve Months of OK Go.Return (Live at Tipitina's Uptown: New Orleans, LA, 11610).wav
+  Track: cache/2013.OK Go.Twelve Months of OK Go.Oliver's Army (Elvis Costello cover).wav
+  Track: cache/2014.The Life And Times.Lost Bees.King Of The Hive.wav
+  Track: cache/2014.Modest Mouse.Too Many Fiestas For Rueben.Cowboy Dan.wav
+  Track: cache/2015.Florence + The Machine.How Big, How Blue, How Beautiful (Limited Deluxe Edition).St Jude.wav
+  Track: cache/2014.Coldplay.Ghost Stories.All Your Friends.wav
+  Track: cache/2003.Linkin Park.Meteora.Easier to Run.wav
+  Track: cache/2015.Vitamin String Quartet.The Geek Wedding Collection.Star Wars -The Imperial March (Darth Vader's Theme).wav
+  Track: cache/2015.Three Days Grace.Human.Landmine.wav
+  Track: cache/2012.Pentatonix.PTX vol 1.We Are Young.wav
+  Track: cache/2016.M83.Junk.The Wizard.wav
+  Track: cache/2006.Blue OctoberImogen Heap.Foiled.Congratulations.wav
+  Track: cache/2001.Death Cab for Cutie.The Photo Album.Debate Exposes Doubt.wav
+  Track: cache/2015.Howie Day.Lanterns.Anyone.wav
+  Track: cache/2015.The Saint Johns.Noisetrade Sampler.Shadowplay (Live Acoustic).wav
+  Track: cache/2009.Skillet.Awake (Deluxe).Would It Matter (Bonus Track).wav
+  Track: cache/2016.Mogwai.Atomic.Tzar.wav
+  Track: cache/2014.The Decemberists.What a Terrible World, What a Beautiful World.Easy Come, Easy Go.wav
+  Track: cache/2015.Vitamin String Quartet.The Geek Wedding Collection.Birdhouse In Your Soul.wav
+  Track: cache/2016.Mogwai.Atomic.Little Boy.wav
+  Track: cache/2014.AJR.I`m Ready EP.Growing Old On Bleecker Street.wav
+  Track: cache/2014.Banda do Mar.Banda do Mar.Vamo Embora.wav
+  Track: cache/2016.Tom Petty.Grey's Intro to Music Mixtape (Made With Love) [Vol.1].I Won't Back Down.wav
+  Track: cache/2015.Logan Mays.I Still Remember.The Weight of Living.wav
+  Track: cache/2015.Pentatonix.PTX.Problem.wav
+  Track: cache/2016.The Dunwells.Light Up The Sky.Ghosts.wav
+  Track: cache/2015.Angus & Julia Stone.Angus & Julia Stone: The Remixes.A Heartbreak (RAC Remix).wav
+  Track: cache/2014.Bastille.Oblivion.bad_news.wav
+  Track: cache/2016.Watsky and Mody.Grey's Intro to Music Mixtape (Made With Love) [Vol.1].Man of Constant Sorrow.wav
+  Track: cache/2016.Woodkid.Desierto (Original Motion Picture Score).False Hopes.wav
+  Track: cache/2016.Ruth Koleva.R U T H.Clarity.wav
+  Track: cache/2004.Jay-ZLinkin Park.Collision Course.Big Pimpin'Papercut.wav
+  Track: cache/2015.Marina and The Diamonds.FROOT.Weeds.wav
+  Track: cache/2015.Howie Day.Lanterns.Favorite Song.wav
+  Track: cache/2006.Snow Patrol.Eyes Open.Shut Your Eyes.wav
+[====                ] 455/2185(35, 661500)
+  Track: cache/2015.Florence + The Machine.How Big, How Blue, How Beautiful (Limited Deluxe Edition).Queen Of Peace.wav
+  Track: cache/2014.So Cow.The Long Con.Sugar Factory.wav
+  Track: cache/2003.Muse.Absolution.Time Is Running Out.wav
+  Track: cache/2006.The Kooks.Inside in Inside Out.Seaside.wav
+  Track: cache/2016.Ten Fé.NOON  189.Elodie.wav
+  Track: cache/2016.Biffy Clyro.Grey's Intro to Music Mixtape (Made With Love) [Vol.1].Black Chandelier.wav
+  Track: cache/2001.Death Cab for Cutie.The Photo Album.We Laugh Indoors.wav
+  Track: cache/2014.Seven Saturdays.Seven Saturdays (Ambient).Southern Lights (Ambient).wav
+  Track: cache/2004.Breaking Benjamin.We Are Not Alone.Break My Fall.wav
+  Track: cache/2014.The Who.Who's Next (Deluxe Edition).Baby Don't You Do It (New York Record Plant Session).wav
+  Track: cache/2015.Logan Mays.I Still Remember.If....wav
+  Track: cache/2005.Coldplay.X&Y.Til Kingdom Come [Hidden Track].wav
+  Track: cache/2014.The Fray.Helios.Hurricane.wav
+  Track: cache/2015.Angus & Julia Stone.Spotify Sessions.Little Whiskey.wav
+  Track: cache/2015.Lana Del Rey.Honeymoon.Honeymoon.wav
+  Track: cache/2001.Death Cab for Cutie.The Photo Album.Blacking Out the Friction.wav
+  Track: cache/1998.Trans-Siberian Orchestra.The Christmas Attic.The March of the KingsHark! The Herald Angels Sing.wav
+  Track: cache/2016.Passion Pit and Imagine Dragons.unknown.It's Time.wav
+  Track: cache/2015.Derrival.Departure & Arrival.Original Script.wav
+  Track: cache/2016.YOKE LORE.NOON  187.Hold Me Down.wav
+  Track: cache/2009.Metric.Fantasies.Gimme Sympathy.wav
+  Track: cache/1998.Trans-Siberian Orchestra.The Christmas Attic.Christmas Canon.wav
+  Track: cache/2005.The Fray.How to Save a Life.Hundred.wav
+  Track: cache/2016.2CELLOS(SULIC & HAUSER).Celloverse (Japan Version).The Trooper (Overture).wav
+  Track: cache/2013.The National.Trouble Will Find Me.Hard To Find.wav
+  Track: cache/2016.Eels.Grey's Intro to Music Mixtape (Made With Love) [Vol.1].Beautiful Freak.wav
+  Track: cache/2016.LostBoyCrow.NOON  191.Thursday.wav
+  Track: cache/2010.Linkin Park.A Thousand Suns.Wisdom, Justice, And Love.wav
+  Track: cache/2014.Ludwig van Beethoven.MUSC233 Exam 2.String Quartet in C-sharp Minor, Op. 131: Second movement, Allegro molto vivace.wav
+  Track: cache/2010.Binärpilot.Nordland.Røykmaskin.wav
+  Track: cache/2009.Breaking Benjamin.Dear Agony.I Will Not Bow.wav
+  Track: cache/2005.Coldplay.X&Y.Fix You.wav
+  Track: cache/2015.Angus & Julia Stone.Spotify Sessions.Stay With Me.wav
+  Track: cache/2016.Blue October.Home.I Want It.wav
+  Track: cache/2012.Neil Davidge.Halo 4 (Original Soundtrack).The Beauty Of Cortana (Apocalyptica vs Neil Davidge).wav
+[====                ] 490/2185(35, 661500)
+  Track: cache/2015.Brian Tyler.Avengers: Age of Ultron.Sacrifice.wav
+  Track: cache/2014.Beware of Safety.Lotusville.Wash Ashore in Pieces.wav
+  Track: cache/2009.Regina Spektor.Far.Eet.wav
+  Track: cache/2005.The Fray.How to Save a Life.Fall Away.wav
+  Track: cache/2015.Brian Tyler.Avengers: Age of Ultron.The Vault.wav
+  Track: cache/2015.Pen Pals.Gold.Away.wav
+  Track: cache/2015.Breaking Benjamin.Dark Before Dawn.Bury Me Alive.wav
+  Track: cache/2003.Madonna.unknown.Hollywood [Radio Edit].wav
+  Track: cache/2015.Pentatonix, The Filharmonic, The Cantasticos, The Singboks, Penn Masala.Pitch Perfect 2.Any Way You Want It (World Championship Medley).wav
+  Track: cache/2014.Engineers.Always Returning.Smoke and Mirrors.wav
+  Track: cache/2014.The Neighbourhood.#000000 & #Ffffff.icanteven Feat. French Montana.wav
+  Track: cache/1971.Marvin Gaye.What's Going On.What's Going On.wav
+  Track: cache/2003.Muse.Absolution.Ruled by Secrecy.wav
+  Track: cache/2001.Daft Punk.Discovery.Short Circuit.wav
+  Track: cache/2005.Flyleaf.Flyleaf.So I Thought.wav
+  Track: cache/2014.Bastille.Vs. (Other People's Heartache,Pt. III).Torn Apart (Crossfaded Version  Vocal Up) - Grades.wav
+  Track: cache/2015.Logan Mays.I Still Remember.<3.wav
+  Track: cache/2015.Jessie J.Pitch Perfect 2.Flashlight.wav
+  Track: cache/2014.Lower Than Atlantis.Lower Than Atlantis (Deluxe).Number One.wav
+  Track: cache/2006.Three Days Grace.One-X.Never Too Late.wav
+  Track: cache/2016.Deutsch Duke.NOON  160.Harder Without You.wav
+  Track: cache/2015.Snoop Dogg, Anna Kendrick.Pitch Perfect 2.Winter Wonderland  Here Comes Santa Claus.wav
+  Track: cache/2014.Claudio Monteverdi.MUSC233 Exam 3.L'Orfeo: Act II: Recitative, Tu se' morta.wav
+  Track: cache/2015.The Glitch Mob.Piece of the Indestructible.Better Hide, Better Run (feat. Mark Johns).wav
+  Track: cache/2007.Binärpilot.Robot Wars.Tokyomatrix 3000.wav
+  Track: cache/2015.Dawn And Hawkes.Golden Heart EP + Yours and Mine Preview.Yours and Mine (bonus).wav
+  Track: cache/2015.The Best Pessimist.The Half-World.Lets Meet In Our Dreams Tonight.wav
+  Track: cache/2014.Coldplay.Ghost Stories Live 2014.True Love (Live At the Enmore Theatre, Sydney).wav
+  Track: cache/2016.Lane 8.Rise (Remixed).Ghost feat. Patrick Baker (Bwana Remix).wav
+  Track: cache/2015.Lowland Hum.Native Air.Pocket Knife.wav
+  Track: cache/2014.The Best Pessimist.Flowers Blossom In The Space.Flowers Say It All.wav
+  Track: cache/2015.IAMX.Metanoia.Oh Cruel Darkness Embrace Me.wav
+  Track: cache/2014.Bastille.Vs. (Other People's Heartache,Pt. III).The Driver (Crossfaded Version).wav
+  Track: cache/2016.Miike Snow.iii.Over And Over.wav
+  Track: cache/2016.PLGRMS.NOON  193.Fools And Their Gold.wav
+[====                ] 525/2185(35, 661500)
+  Track: cache/2014.James Newton Howard.The Hunger Games - Mockingjay Pt. 1 (Original Motin Picture Score).Taunting The Car.wav
+  Track: cache/2015.Vitamin String Quartet.VSQ Performs the Hits of 2014 Vol. 3.Riptide (String Quartet Tribute to Vance Joy).wav
+  Track: cache/2013.Kodaline.In A Perfect World.All I Want.wav
+  Track: cache/2012.Track & Field.Warehouse 13 Season 3.Running Up That Hill.wav
+  Track: cache/2015.They Might Be Giants.Glean.I'm a Coward.wav
+  Track: cache/2016.Digitalism.Grey's Intro to Music Mixtape (Made With Love) [Vol.1].Digitalism in Cairo.wav
+  Track: cache/2004.Snow Patrol.Final Straw.Run.wav
+  Track: cache/2015.MOGWAI.Central Belters.Devil Rides.wav
+  Track: cache/2015.MOGWAI.Central Belters.Helicon 1.wav
+  Track: cache/2014.Redbone.Guardians Of The Galaxy (Awesome Mix Vol. 1).Come and Get Your Love.wav
+  Track: cache/2014.La Roux.Trouble in Paradise.Paradise Is You.wav
+  Track: cache/2003.Evanescence.Fallen.Everybody's Fool.wav
+  Track: cache/2015.Will Young.85% Proof (Deluxe Edition).Like a River.wav
+  Track: cache/2014.Coldplay.Ghost Stories Live 2014.Midnight (Live At the Royal Albert Hall, London).wav
+  Track: cache/2015.M83 With HAIM.Insurgent (Original Motion Picture Soundtrack).Holes In the Sky.wav
+  Track: cache/2016.Murray Gold.Doctor Who.I Am The Doctor (Extended).wav
+  Track: cache/1989.Jimmy Buffett.Off to See the Lizard.Off to See the Lizard.wav
+  Track: cache/2016.Westerman.NOON  181.Mistantropé.wav
+  Track: cache/2014.So Cow.The Long Con.Guess Who's Dead.wav
+  Track: cache/2014.The Rosebuds.Sand + Silence.Blue Eyes.wav
+  Track: cache/2014.Linfield College Concert Choir.Christmas at Linfield.O Holy Night.wav
+  Track: cache/2014.The Phoenix Foundation.Echoes.Pattern.wav
+  Track: cache/2015.Vitamin String Quartet.The Geek Wedding Collection.Edward Scissorhands - Ice Dance.wav
+  Track: cache/2016.Albin Lee Meldau.Lovers - EP.Darling.wav
+  Track: cache/2010.Linkin Park.A Thousand Suns.The Catalyst.wav
+  Track: cache/2003.Muse.Absolution.Stockholm Syndrome.wav
+  Track: cache/2009.Bon Iver.Blood Bank.Woods.wav
+  Track: cache/2016.Mogwai.Atomic.Pripyat.wav
+  Track: cache/2014.Wolfgang Amadeus Mozart.MUSC233 Exam 2.Symphony No. 41 in C Major (Jupiter) K. 551: Finale.wav
+  Track: cache/2006.Snow Patrol.Eyes Open.Headlights On Dark Roads.wav
+  Track: cache/2016.Liss.First.Sorry.wav
+  Track: cache/2014.AJR.I`m Ready EP.Buy You A Rose.wav
+  Track: cache/2015.Logan Mays.I Still Remember.Outro.wav
+  Track: cache/2014.Sheppard.Bombs Away.Halfway To Hell.wav
+  Track: cache/2014.Peter Hollins.unknown.Angels From the Realms of Glory.wav
+[=====               ] 560/2185(35, 661500)
+  Track: cache/2014.Tarwater.Adrift.The Glove.wav
+  Track: cache/2008.Nickelback.Dark Horse.Gotta Be Somebody.wav
+  Track: cache/2014.Totorro.Home Alone.Festival Bini.wav
+  Track: cache/2015.Breaking Benjamin.Dark Before Dawn.Angels Fall.wav
+  Track: cache/2014.Mogwai.Music Industry 3. Fitness Industry 1 [EP].No Medicine For Regret (Pye Corner Audio Mix).wav
+  Track: cache/2015.Beware of Safety.Mabon.Rise By Sin.wav
+  Track: cache/2016.Anya Marina.Paper Plane.Is This Love.wav
+  Track: cache/2015.Hinkstep.My Forest Queen.Dream Again.wav
+  Track: cache/1999.Enrique Iglesias.Enrique Disc 1.Mas Es Amar.wav
+  Track: cache/2015.Nils Frahm.Screws Reworked.Do (Databoy78 Rework).wav
+  Track: cache/1996.The Verve Pipe.Villains.Barely (If at All).wav
+  Track: cache/2016.Mogwai.Atomic.U-235.wav
+  Track: cache/2003.José González.Veneer.Heartbeats.wav
+  Track: cache/2014.The Sunshine Underground.Start.Start (Radio Edit).wav
+  Track: cache/2016.Ruth Koleva.R U T H.Falling Back.wav
+  Track: cache/2016.Meatloaf.Bat Out of Hell II: Back Into Hell.I Would Do Anything For Love (But I Won't Do That).wav
+  Track: cache/2016.Blue October.Home.Home.wav
+  Track: cache/2014.Pentatonix.That's Christmas To Me.It's The Most Wonderful Time Of The Year.wav
+  Track: cache/2014.We Were Promised Jetpacks.Unravelling.Bright Minds.wav
+  Track: cache/2014.CHVRCHES.Under the Tide.Gun [Alucard Session].wav
+  Track: cache/2015.Vitamin String Quartet.VSQ Performs the Hits of 2014 Vol. 3.Rather Be (String Quartet Tribute to Clean Bandit).wav
+  Track: cache/2014.Tinashé.The Hunger Games: Mockingjay, Pt. 1 (Original Motion Picture Soundtrack).The Leap.wav
+  Track: cache/2015.Fall Out Boy.American BeautyAmerican Psycho.Immortals.wav
+  Track: cache/2014.Haerts.Haerts.Call My Name.wav
+  Track: cache/2015.MOGWAI.Central Belters.Earth Division.wav
+  Track: cache/2007.Linkin Park.Minutes to Midnight.What I've Done.wav
+  Track: cache/2010.Daft Punk.Tron: Legacy (Amazon MP3 Exclusive Version).Armory.wav
+  Track: cache/2005.The Partridge Family.The Partridge Family Album.I Think I Love You.wav
+  Track: cache/2010.Daft Punk.Tron: Legacy (Amazon MP3 Exclusive Version).Arrival.wav
+  Track: cache/2014.Sheppard.Bombs Away.Something's Missing.wav
+  Track: cache/2015.Imagine Dragons.Smoke + Mirrors (Deluxe Edition).Thief.wav
+  Track: cache/2015.MOGWAI.Central Belters.Summer.wav
+  Track: cache/2016.Libera.Adoramus.Adoramus.wav
+  Track: cache/2010.Daft Punk.Tron: Legacy (Amazon MP3 Exclusive Version).Nocturne.wav
+  Track: cache/2014.Damien Rice.My Favourite Faded Fantasy.Long Long Way.wav
+[=====               ] 595/2185(35, 661500)
+  Track: cache/2016.Tall Heights.Man of Stone.Learn Again.wav
+  Track: cache/2010.Harlem.Hippies.Someday Soon.wav
+  Track: cache/2015.White Morning.Scores.Withdrawn.wav
+  Track: cache/2015.The Best Pessimist.The Half-World.New Day.wav
+  Track: cache/2005.Panic! at the Disco.A Fever You Can't Sweat Out.Build God, Then We'll Talk.wav
+  Track: cache/2009.Skillet.Awake (Deluxe).Awake And Alive.wav
+  Track: cache/2003.Snow Patrol.Final Straw.Grazed Knees.wav
+  Track: cache/2010.Binärpilot.Nordland.Underground.wav
+  Track: cache/2005.Panic! at the Disco.A Fever You Can't Sweat Out.The Only Difference Between Martyrdom and Suicide Is Press Coverage.wav
+  Track: cache/2014.The Life And Times.Lost Bees.Again.wav
+  Track: cache/2015.IAMX.Metanoia.No Maker Made Me.wav
+  Track: cache/2002.Coldplay.A Rush of Blood to the Head.A Whisper.wav
+  Track: cache/2003.Muse.Absolution.Falling Away With You.wav
+  Track: cache/2014.The Decemberists.What a Terrible World, What a Beautiful World.Till the Water Is All Long Gone.wav
+  Track: cache/2015.MOGWAI.Central Belters.Tell Everyone That I love Them.wav
+  Track: cache/2007.Linkin Park.Minutes to Midnight.Bleed It Out.wav
+  Track: cache/2014.Tunturia.Halls Of Sky.Ritual.wav
+  Track: cache/2001.Death Cab for Cutie.The Photo Album.Why You'd Want to Live Here.wav
+  Track: cache/2016.2CELLOS(SULIC & HAUSER).Celloverse (Japan Version).Time.wav
+  Track: cache/2010.Tyler Stenson.Bittersweet Parade.Fight til Dying Day.wav
+  Track: cache/2002.Death Cab For Cutie.You Can Play These Songs With Chords.That's Incentive.wav
+  Track: cache/2015.Amber Run.5AM (Deluxe) WEB.Just My Soul Responding.wav
+  Track: cache/2005.Maroon 5.Songs About Jane.Sunday Morning.wav
+  Track: cache/2016.Two Another.NOON  189.Shouldn't Have Done That.wav
+  Track: cache/2015.Beware of Safety.Mabon.Mulberry and Heather.wav
+  Track: cache/2014.The Best Pessimist.Flowers Blossom In The Space.Love Is.wav
+  Track: cache/2009.Skillet.Awake (Deluxe).Don't Wake Me.wav
+  Track: cache/2015.God Is An Astronaut.Helios | Erebus.Helios Erebus.wav
+  Track: cache/2016.Anya Marina.Paper Plane.Something Sweet.wav
+  Track: cache/2015.Fall Out Boy.American BeautyAmerican Psycho.Favorite Record.wav
+  Track: cache/2014.The Who.Who's Next (Deluxe Edition).Going Mobile.wav
+  Track: cache/2014.Blake Mills.Heigh Ho.Shed Your Head.wav
+  Track: cache/2005.The Fray.How to Save a Life.Over My Head (Cable Car).wav
+  Track: cache/2016.Five for Fighting.The Battle for Everything.Maybe I.wav
+  Track: cache/2015.MOGWAI.Central Belters.Mogwai Fear Satan.wav
+[=====               ] 630/2185(35, 661500)
+  Track: cache/2014.James Newton Howard.The Hunger Games - Mockingjay Pt. 1 (Original Motin Picture Score).Inside The Tribute Center.wav
+  Track: cache/2015.White Morning.Scores.Catch It (Part II).wav
+  Track: cache/2016.Jonny Lang.Long Time Coming.Red Light.wav
+  Track: cache/2000.Death Cab for Cutie.We Have The Facts And We're Voting Yes.For What Reason.wav
+  Track: cache/2015.Mumford & Sons.Wilder Mind (Deluxe Version).Broad-Shouldered Beasts.wav
+  Track: cache/2015.Royal Blood.Insurgent (Original Motion Picture Soundtrack).Blood Hands.wav
+  Track: cache/2005.Flyleaf.Flyleaf.Cassie (Acoustic Version).wav
+  Track: cache/2015.Wild Child.Past & Present.Fools.wav
+  Track: cache/2014.Blueneck.King Nine.Broken Fingers.wav
+  Track: cache/2016.Ruth Koleva.R U T H.Freak and Fly.wav
+  Track: cache/2016.Tall Heights.Rafters.Rafters.wav
+  Track: cache/2016.Mogwai.Atomic.Are You a Dancer?.wav
+  Track: cache/2014.OK Go.Hungry Ghosts.Another Set Of Issues.wav
+  Track: cache/2003.Snow Patrol.Final Straw.How To Be Dead.wav
+  Track: cache/1985.Jimmy Buffet.Songs You Know By Heart.Son Of A Son Of A Sailor.wav
+  Track: cache/2016.Tall Heights.Man of Stone.Eastern Standard Time.wav
+  Track: cache/2014.Blueneck.King Nine.Counting Out.wav
+  Track: cache/1992.Jimmy Buffett.Boats, Beaches, Bars & Ballads Disc 1.Take It Back.wav
+  Track: cache/2002.Linkin Park.Reanimation.Rnw@y.wav
+  Track: cache/2003.Muse.Absolution.The Small Print.wav
+  Track: cache/2014.Pentatonix.That's Christmas To Me.Winter Wonderland  Don't Worry, Be Happy (Feat. Tori Kelly).wav
+  Track: cache/2016.XYLØ.America.Between the Devil and the Deep Blue Sea.wav
+  Track: cache/2013.The National.Trouble Will Find Me.Graceless.wav
+  Track: cache/2015.Amber Run.5AM (Deluxe) WEB.5AM.wav
+  Track: cache/2014.OK Go.Hungry Ghosts.Bright As Your Eyes.wav
+  Track: cache/2014.Kerretta.Pirohia.The Roar.wav
+  Track: cache/2015.Interpol.Spotify Sessions.Writing As A Trio.wav
+  Track: cache/1998.Snow Patrol.Songs For Polarbears.Get Balsamic Vinegar...Quick Y.wav
+  Track: cache/2014.The Who.Who's Next (Deluxe Edition).Behind Blue Eyes.wav
+  Track: cache/2015.Pentatonix.PTX.Say Something.wav
+  Track: cache/2015.Great States.Great States.Cordova, NM.wav
+  Track: cache/2002.Coldplay.A Rush of Blood to the Head.Clocks.wav
+  Track: cache/2016.The Kite String Tangle.Vessel.Arcadia.wav
+  Track: cache/2015.Vitamin String Quartet.The Geek Wedding Collection.Island in the Sun.wav
+  Track: cache/2014.Beware of Safety.Lotusville.Icarus.wav
+[======              ] 665/2185(35, 661500)
+  Track: cache/2015.MOGWAI.Central Belters.Rano Pano.wav
+  Track: cache/2014.MONO.The Last Dawn.The Land Between Tides  Glory.wav
+  Track: cache/2016.Explosions in the Sky.Friday Night Lights [Original Movie Soundtrack].From West Texas.wav
+  Track: cache/2005.Coldplay.X&Y.X&Y.wav
+  Track: cache/2001.Daft Punk.Discovery.Aerodynamic.wav
+  Track: cache/2014.Cold War Kids.Hold My Home.Hotel Anywhere.wav
+  Track: cache/2016.Blue October.Home.Coal Makes Diamonds.wav
+  Track: cache/2016.Tom Cochrane.Mad Mad World.Sinking Like a Sunset.wav
+  Track: cache/2003.Muse.Absolution.Butterflies and Hurricanes.wav
+  Track: cache/2014.Cold War Kids.Hold My Home.First.wav
+  Track: cache/2013.OK Go.Twelve Months of OK Go.Make Up Your Mind (Tim demo with Andy Duncan).wav
+  Track: cache/2013.Tyler Stenson.Lovely Little Victory.Stars and Scars.wav
+  Track: cache/2015.MOGWAI.Central Belters.Burn Girl Prom Queen.wav
+  Track: cache/2014.Banda do Mar.Banda do Mar.Muitos Chocolates.wav
+  Track: cache/2014.Blake Mills.Heigh Ho.Curable Disease.wav
+  Track: cache/2015.Mumford & Sons.Wilder Mind (Deluxe Version).Snake Eyes.wav
+  Track: cache/2016.XYLØ.America.Bang Bang.wav
+  Track: cache/2009.Skillet.Awake (Deluxe).Never Surrender.wav
+  Track: cache/2016.The Hotelier.Home, Like Noplace Is There.Among The Wildflowers.wav
+  Track: cache/2014.The Life And Times.Lost Bees.Palatine.wav
+  Track: cache/1973.Lynyrd Skynyrd.Second Helping.Sweet Home Alabama.wav
+  Track: cache/2016.Collective Soul.Blender.Turn Around.wav
+  Track: cache/2014.Tarwater.Adrift.The Tape.wav
+  Track: cache/2015.They Might Be Giants.Glean.Good to Be Alive.wav
+  Track: cache/2013.OK Go.Twelve Months of OK Go.The Office Song (2004 demo).wav
+  Track: cache/2014.Avicii.The Days  Nights WEB.The Days.wav
+  Track: cache/2015.Brian Tyler.Avengers: Age of Ultron.The Mission.wav
+  Track: cache/2009.Sasms.unknown.From Under the Blue.wav
+  Track: cache/2002.Death Cab For Cutie.You Can Play These Songs With Chords.Tomorrow.wav
+  Track: cache/2016.Wolf Colony.NOON  165.Forgiven - Millesim Remix.wav
+  Track: cache/2014.IRREVERSIBLE.Surface.(Husk) Corpse Pose.wav
+  Track: cache/2016.Blue October.Home.Leave It In The Dressing Room (Shake It Up).wav
+  Track: cache/2015.MOGWAI.Central Belters.CODY.wav
+  Track: cache/2015.God Is An Astronaut.Helios | Erebus.Vetus Memoria.wav
+  Track: cache/2016.Ruth Koleva.R U T H.Sista Said No.wav
+[======              ] 700/2185(35, 661500)
+  Track: cache/2000.Death Cab for Cutie.We Have The Facts And We're Voting Yes.Company Calls (Epilogue).wav
+  Track: cache/2014.MONO.The Last Dawn.Cyclone.wav
+  Track: cache/2015.Mumford & Sons.Wilder Mind (Deluxe Version).Just Smoke.wav
+  Track: cache/2007.Binärpilot.Robot Wars.Project Wildfire.wav
+  Track: cache/2014.This Will Destroy You.Another Language.Mother Opiate.wav
+  Track: cache/2014.Totorro.Home Alone.Motte-Rock.wav
+  Track: cache/2015.Ester Dean.Pitch Perfect 2.Crazy Youngsters.wav
+  Track: cache/2014.Blake Mills.Heigh Ho.Just Out Of View.wav
+  Track: cache/2009.Skillet.Awake (Deluxe).It's Not Me It's You.wav
+  Track: cache/2009.Super Mash Bros..All About The Scrilions.Kisses & Thugs.wav
+  Track: cache/2016.Mumford & Sons.Sigh No More.Little Lion Man.wav
+  Track: cache/2003.Coldplay.Live 2003.Clocks.wav
+  Track: cache/2014.Kerretta.Pirohia.Kawea Tatou Ki Nga Hiwi.wav
+  Track: cache/2016.Woodkid.Desierto (Original Motion Picture Score).Jump.wav
+  Track: cache/2006.Blue October.Foiled.Let It Go.wav
+  Track: cache/2016.Suzanne Vega.Charlie's Mix Tape.Gypsy.wav
+  Track: cache/2016.Albin Lee Meldau.Lovers - EP.Let Me Go.wav
+  Track: cache/2007.Enrique Iglesias.Insomniac.Little Girl.wav
+  Track: cache/2000.Linkin Park.Hybrid Theory.By Myself.wav
+  Track: cache/2016.Miike Snow.iii.Back Of The Car.wav
+  Track: cache/2002.Matchbox 20.More Than You Think You Are.Unwell.wav
+  Track: cache/2000.Death Cab for Cutie.Forbidden Love [EP].Photobooth.wav
+  Track: cache/2016.Tony Pops.NOON  184.Hands On You.wav
+  Track: cache/2016.Finger Eleven.Finger Eleven.One Thing.wav
+  Track: cache/2015.MOGWAI.Central Belters.Mexican Grand Prix.wav
+  Track: cache/2014.So Cow.The Long Con.Vigilanti Cura.wav
+  Track: cache/2015.Zeke Duhon.Zeke Duhon.Everything.wav
+  Track: cache/2014.Rise Against.The Black Market.Bridges.wav
+  Track: cache/2016.Steve Benjamins.NOON  183.The Infidelity of Language.wav
+  Track: cache/2007.The Swell Season.Once.Gold.wav
+  Track: cache/2016.M83.Junk.Do It, Try It.wav
+  Track: cache/2014.OK Go.Hungry Ghosts.The Writings On The Wall.wav
+  Track: cache/2007.Enrique Iglesias.Insomniac.Somebody's Me.wav
+  Track: cache/2015.Gordon's Tsunami Week.The Farewell Paradox.reason.wav
+  Track: cache/2015.Interpol.Spotify Sessions.Recording At Electric Lady.wav
+[======              ] 735/2185(35, 661500)
+  Track: cache/2014.Lower Than Atlantis.Lower Than Atlantis (Deluxe).English Kids in America (Alternative Version).wav
+  Track: cache/2010.Daft Punk.Tron: Legacy (Amazon MP3 Exclusive Version).Finale.wav
+  Track: cache/2010.Daft Punk.Tron: Legacy (Amazon MP3 Exclusive Version).End of Line.wav
+  Track: cache/2005.Flyleaf.Flyleaf.Cassie.wav
+  Track: cache/2005.Flyleaf.Flyleaf.There For You.wav
+  Track: cache/2014.So Cow.The Long Con.Science Fiction.wav
+  Track: cache/2016.unknown.unknown.Let It Go - Male Version.wav
+  Track: cache/2016.The Dunwells.Light Up The Sky.Hey Now.wav
+  Track: cache/2014.Cold War Kids.Hold My Home.Nights & Weekends.wav
+  Track: cache/2014.The Decemberists.What a Terrible World, What a Beautiful World.A Beginning Song.wav
+  Track: cache/2014.Pentatonix.That's Christmas To Me.Let It Go.wav
+  Track: cache/2006.Snow Patrol.Eyes Open.Open Your Eyes.wav
+  Track: cache/2015.White Morning.Scores.Eddie's Song.wav
+  Track: cache/2014.Haerts.Haerts.Heart.wav
+  Track: cache/2014.Banda do Mar.Banda do Mar.Cidade Nova.wav
+  Track: cache/2014.James Newton Howard.The Hunger Games - Mockingjay Pt. 1 (Original Motin Picture Score).District 12.wav
+  Track: cache/2010.Tame Impala.Innerspeaker.Lucidity.wav
+  Track: cache/2016.Sleeping At Last.Atlas: Senses.Hearing.wav
+  Track: cache/2016.Meatloaf.Bat Out of Hell.You Took The Words Right (Hot Summer Night).wav
+  Track: cache/2014.Fryderyk Chopin.MUSC233 Exam 2.Nocturne in D-flat Major, Op. 27, No.2.wav
+  Track: cache/2014.Coldplay.Ghost Stories Live 2014.Oceans (Live At E-Werk, Cologne).wav
+  Track: cache/1995.UB40.The Best of UB40, Vol. 1.Red, Red Wine.wav
+  Track: cache/2003.Snow Patrol.Final Straw.Chocolate.wav
+  Track: cache/2016.The Dunwells.Light Up The Sky.Animal.wav
+  Track: cache/2002.Coldplay.A Rush of Blood to the Head.Green Eyes.wav
+  Track: cache/2014.The Who.Who's Next (Deluxe Edition).Won't Get Fooled Again (New York Record Plant Session).wav
+  Track: cache/2003.Snow Patrol.Final Straw.Whatever`s Left.wav
+  Track: cache/2015.Breaking Benjamin.Dark Before Dawn.The Great Divide.wav
+  Track: cache/2007.Linkin Park.Minutes to Midnight.Valentine's Day.wav
+  Track: cache/2014.La Roux.Trouble in Paradise.Tropical Chancer.wav
+  Track: cache/2016.Ruth Koleva.R U T H.Better.wav
+  Track: cache/2015.MOGWAI.Central Belters.Christmas Steps.wav
+  Track: cache/2015.White Morning.Scores.Famine.wav
+  Track: cache/2014.Pomplamoose.Season 2.Fight Back.wav
+  Track: cache/2009.Breaking Benjamin.Dear Agony.Crawl.wav
+[=======             ] 770/2185(35, 661500)
+  Track: cache/2010.Linkin Park.A Thousand Suns.Robot Boy.wav
+  Track: cache/2006.Blue October.Foiled.Hate Me.wav
+  Track: cache/2015.Pentatonix.PTX.Can't Hold Us.wav
+  Track: cache/2014.The Who.Who's Next (Deluxe Edition).Behind Blue Eyes (Live).wav
+  Track: cache/1985.Billy Joel.Greatest Hits, Vols. 1 & 2 (1973-1985) Disc 1.Piano Man.wav
+  Track: cache/2002.Linkin Park.Reanimation.PPr:Kut.wav
+  Track: cache/2016.Tall Heights.Man of Stone.Murmuring State.wav
+  Track: cache/2015.Angus & Julia Stone.Angus & Julia Stone: The Remixes.Heart Beats Slow (Suna~ Remix).wav
+  Track: cache/2014.Franz Liszt.MUSC233 Exam 2.Trois études de concert: No. 3, Un sospiro.wav
+  Track: cache/2014.Pentatonix.PTX, Vol. III.See Through.wav
+  Track: cache/1998.Trans-Siberian Orchestra.The Christmas Attic.The Snow Came Down.wav
+  Track: cache/2016.Matthew Mayfield.Wild Eyes Unplugged EP.Wild Eyes.wav
+  Track: cache/2014.Coldplay.Ghost Stories.O (Reprise).wav
+  Track: cache/1996.The Verve Pipe.Villains.Ominous Man.wav
+  Track: cache/2014.The World is a Beautiful Place & I am No Longer Afraid to Die.Between Bodies.Autotonsorialist.wav
+  Track: cache/2014.Fences.Lesser Oceans.Songs About Angels.wav
+  Track: cache/2015.Pen Pals.Gold.Mary & Martha.wav
+  Track: cache/2014.Damien Rice.My Favourite Faded Fantasy.The Greatest Bastard.wav
+  Track: cache/2015.Marina and The Diamonds.FROOT.Froot.wav
+  Track: cache/2014.Lower Than Atlantis.Lower Than Atlantis (Deluxe).Live Slow, Die Old.wav
+  Track: cache/2008.Rihanna.Good Girl Gone Bad: Reloaded.Breakin' Dishes.wav
+  Track: cache/2015.Vitamin String Quartet.The Geek Wedding Collection.Kingdom Hearts - Dearly Beloved.wav
+  Track: cache/2015.MOGWAI.Central Belters.Two Rights Make One Wrong.wav
+  Track: cache/2007.Binärpilot.Robot Wars.Smile (Make Your Body Move).wav
+  Track: cache/2014.Tunturia.Halls Of Sky.Is It For All Time This Feeling of Joy.wav
+  Track: cache/2014.The Rosebuds.Sand + Silence.Esse Quam Videri.wav
+  Track: cache/2014.Pomplamoose.Season 2.Come Out To Play.wav
+  Track: cache/2014.Engineers.Always Returning.Searched for Answers.wav
+  Track: cache/2016.Daniel Kim.Pop Danthology.2014.wav
+  Track: cache/2014.Milky Chance.Sadnecessary.Fairytale.wav
+  Track: cache/2015.Breaking Benjamin.Dark Before Dawn.Breaking the Silence.wav
+  Track: cache/2014.James Newton Howard.The Hunger Games - Mockingjay Pt. 1 (Original Motin Picture Score).Air Raid Drill.wav
+  Track: cache/2015.Four Tet.MorningEvening.Evening Side.wav
+  Track: cache/2015.Death Cab For Cutie.Kintsugi.Black Sun.wav
+  Track: cache/2010.Tyler Stenson.Bittersweet Parade.Blush.wav
+[=======             ] 805/2185(35, 661500)
+  Track: cache/2015.God Is An Astronaut.Helios | Erebus.Centralia.wav
+  Track: cache/2009.Super Mash Bros..All About The Scrilions.Bruce Willis Was Dead The Whole Time.wav
+  Track: cache/2015.White Morning.Scores.Catch It (Part I).wav
+  Track: cache/2016.XYLØ.America.BLK CLD.wav
+  Track: cache/2016.OK Go.Twelve Months of OK Go.Oh, My Little Kitten.wav
+  Track: cache/2015.White Morning.Scores.They Shall Be Called (Part II).wav
+  Track: cache/2003.Snow Patrol.Final Straw.Ways And Means.wav
+  Track: cache/2016.Local Natives.The Remixes Vol. 1.Wide Eyes (E-603 Remix).wav
+  Track: cache/2005.Nickelback.All the Right Reasons.Rockstar.wav
+  Track: cache/2004.Toby Keith.Toby Keith.Should've Been a Cowboy [Live].wav
+  Track: cache/2014.On-The-Go.Young Hearts [WEB Edition].Wait.wav
+  Track: cache/2014.Milky Chance.Sadnecessary.Stunner.wav
+  Track: cache/2014.Beware of Safety.Lotusville.First Sleep.wav
+  Track: cache/2014.Lower Than Atlantis.Lower Than Atlantis (Deluxe).Here We Go (Alternative Version).wav
+  Track: cache/2003.Evanescence.Fallen.Going Under.wav
+  Track: cache/2009.Super Mash Bros..All About The Scrilions.From Honor Roll To Out Of Control.wav
+  Track: cache/2015.Florence + The Machine.How Big, How Blue, How Beautiful (Limited Deluxe Edition).Various Storms & Saints.wav
+  Track: cache/2010.Daft Punk.Tron: Legacy (Amazon MP3 Exclusive Version).Overture.wav
+  Track: cache/2015.Of Monsters And Men.Beneath The Skin.Empire.wav
+  Track: cache/2000.Bay City Rollers.Alexa Mix.S.A.T.U.R.D.A.Y night.wav
+  Track: cache/2015.Tyler Stenson.Say No More.This Too Shall Pass.wav
+  Track: cache/2010.Daft Punk.Tron: Legacy (Amazon MP3 Exclusive Version).Solar Sailer.wav
+  Track: cache/2016.Bonnie Tyler.Faster Than the Speed of Night.Total Eclipse of the Heart.wav
+  Track: cache/2015.They Might Be Giants.Glean.Aaa.wav
+  Track: cache/2015.Pentatonix.That's Christmas to Me: Deluxe Tracks - EP.Have Yourself a Merry Little Christmas.wav
+  Track: cache/2014.Haerts.Haerts.All the Days.wav
+  Track: cache/2014.The Chemical Brothers.The Hunger Games: Mockingjay, Pt. 1 (Original Motion Picture Soundtrack).This Is Not a Game (feat. Miguel).wav
+  Track: cache/2007.Enrique Iglesias.Insomniac.Alguien Soy Yo.wav
+  Track: cache/2015.Green River Ordinance.Chasing Down The Wind.Ain't Afraid Of Dying.wav
+  Track: cache/2014.The Fray.Helios.Our Last Days.wav
+  Track: cache/2012.Tyler Stenson.Some Days I'm a Lion.Lover Things.wav
+  Track: cache/2014.The Life And Times.Lost Bees.Maserati.wav
+  Track: cache/2016.M83.Junk.For The Kids.wav
+  Track: cache/2010.Linkin Park.A Thousand Suns.The Requiem.wav
+  Track: cache/2015.Vitamin String Quartet.The Geek Wedding Collection.Game of Thrones - Main Title.wav
+[=======             ] 840/2185(35, 661500)
+  Track: cache/2014.Rise Against.The Black Market.Tragedy+Time.wav
+  Track: cache/2009.Super Mash Bros..All About The Scrilions.Boom Boom Pau.wav
+  Track: cache/2013.Kodaline.In A Perfect World.After The Fall.wav
+  Track: cache/2014.Blake Mills.Heigh Ho.Cry To Laugh.wav
+  Track: cache/2016.Andrew McMahon in the Wilderness.Andrew McMahon in the Wilderness.Cecilia and the Satellite.wav
+  Track: cache/2014.Carbon Leaf.Indian Summer Revisited.This Is My Song!.wav
+  Track: cache/2008.Rihanna.Good Girl Gone Bad: Reloaded.Take A Bow.wav
+  Track: cache/2014.Tarwater.Adrift.Ray.wav
+  Track: cache/2013.The National.Trouble Will Find Me.Slipped.wav
+  Track: cache/2001.Train.Drops of Jupiter.Drops of Jupiter.wav
+  Track: cache/2014.Banda do Mar.Banda do Mar.Me Sinto Ótima.wav
+  Track: cache/2001.Enrique Iglesias.Escape.She Be the One.wav
+  Track: cache/2016.Tall Heights.Rafters.The Hollow.wav
+  Track: cache/2015.Will Young.85% Proof (Deluxe Edition).Blue.wav
+  Track: cache/2014.The Life And Times.Lost Bees.God Only Knows.wav
+  Track: cache/2014.Pomplamoose.Season 2.Get That Body Back.wav
+  Track: cache/2014.Rise Against.The Black Market.Awake Too Long.wav
+  Track: cache/2015.The Ballroom Thieves.A Wolf in the Doorway.The Loneliness Waltz.wav
+  Track: cache/2015.Imagine Dragons.Smoke + Mirrors (Deluxe Edition).It Comes Back To You.wav
+  Track: cache/2013.The National.Trouble Will Find Me.Don't Swallow The Cap.wav
+  Track: cache/2014.The Decemberists.What a Terrible World, What a Beautiful World.The Wrong Year.wav
+  Track: cache/2015.Brian Tyler.Avengers: Age of Ultron.The Battle.wav
+  Track: cache/2009.Super Mash Bros..All About The Scrilions.@LaurenConrad Get Us On The Hills!.wav
+  Track: cache/2014.Angus & Julia Stone.Angus & Julia Stone (Deluxe Version).Get Home.wav
+  Track: cache/2014.Blake Mills.Heigh Ho.Three Weeks In Havana.wav
+  Track: cache/2016.Blue October.Home.Break Ground.wav
+  Track: cache/2014.The Who.Who's Next (Deluxe Edition).Water (Live).wav
+  Track: cache/2016.Bastille.Live in Paris.Pompeii (Acoustic).wav
+  Track: cache/2014.On-The-Go.Young Hearts [WEB Edition].Dimensions.wav
+  Track: cache/2007.Enrique Iglesias.Insomniac.Amigo Vulnerable.wav
+  Track: cache/2004.Carbon Leaf.Indian Summer.Let Your Troubles Roll By.wav
+  Track: cache/2014.Tunturia.Halls Of Sky.Dark Summer Dawn.wav
+  Track: cache/2015.Pentatonix.PTX.Standing By.wav
+  Track: cache/2014.James Newton Howard.The Hunger Games - Mockingjay Pt. 1 (Original Motin Picture Score).District 8 Hospital.wav
+  Track: cache/2015.Interpol.Spotify Sessions.Anywhere.wav
+[========            ] 875/2185(35, 661500)
+  Track: cache/2015.Nils Frahm.Screws Reworked.Me (Analogue Dear Rework).wav
+  Track: cache/2015.Godspeed You! Black Emperor.Asunder,Sweet and Other Distress.Peasantry Or 'Light! Inside Of Light!'.wav
+  Track: cache/2003.John Mayer.Heavier Things.Daughters.wav
+  Track: cache/2003.Death Cab For Cutie.Transatlanticism.The New Year.wav
+  Track: cache/2014.The Neighbourhood.#000000 & #Ffffff.When I Get Back Feat. G-Eazy.wav
+  Track: cache/2014.CHVRCHES.Under the Tide.Strong Hand.wav
+  Track: cache/2014.The Rosebuds.Sand + Silence.Wait A Minute.wav
+  Track: cache/2014.The Life And Times.Lost Bees.We Are.wav
+  Track: cache/2015.Angus & Julia Stone.Angus & Julia Stone: The Remixes.Grizzly Bear (Lakechild Remix).wav
+  Track: cache/2014.Haerts.Haerts.Lights Out.wav
+  Track: cache/2015.Imagine Dragons.Smoke + Mirrors (Deluxe Edition).Dream.wav
+  Track: cache/2015.Woodkid.Insurgent (Original Motion Picture Soundtrack).Never Let You Down (feat. Lykke Li).wav
+  Track: cache/2016.We Were Promised Jetpacks.These Four Walls.Quiet Little Voices.wav
+  Track: cache/2014.On-The-Go.Young Hearts [WEB Edition].At Bay.wav
+  Track: cache/2014.Sheppard.Bombs Away.This Electric Feeling.wav
+  Track: cache/2004.Breaking Benjamin.We Are Not Alone.Breakdown.wav
+  Track: cache/2015.Cold War Kids.Five Quick Cuts - EP.Amazing.wav
+  Track: cache/2014.Angus & Julia Stone.Angus & Julia Stone (Deluxe Version).Wherever You Are.wav
+  Track: cache/2000.Linkin Park.Hybrid Theory.Papercut.wav
+  Track: cache/2010.Linkin Park.A Thousand Suns.Iridescent.wav
+  Track: cache/2008.Coldplay.Viva La Vida.Viva La Vida.wav
+  Track: cache/2015.Green River Ordinance.Chasing Down The Wind.Fool For You.wav
+  Track: cache/2016.M83.Junk.Sunday Night 1987.wav
+  Track: cache/2003.Linkin Park.Meteora.Lying from You.wav
+  Track: cache/2015.MOGWAI.Central Belters.Hasenheide.wav
+  Track: cache/2015.Nils Frahm.Screws Reworked.Si (Plasma R##by Rework).wav
+  Track: cache/2014.This Will Destroy You.Another Language.The Puritan.wav
+  Track: cache/2014.So Cow.The Long Con.I Want Out.wav
+  Track: cache/2016.Blue October.Home.The Still.wav
+  Track: cache/2001.Daft PunkTodd Edwards.Discovery.Face to Face.wav
+  Track: cache/2015.Hinkstep.My Forest Queen.My Forest Queen.wav
+  Track: cache/2010.Daft Punk.Tron: Legacy (Amazon MP3 Exclusive Version).Flynn Lives.wav
+  Track: cache/2008.Rihanna.Disturbia.Disturbia.wav
+  Track: cache/2010.Tyler Stenson.Bittersweet Parade.You Already Know.wav
+  Track: cache/2010.Daft Punk.Tron: Legacy (Amazon MP3 Exclusive Version).Arena.wav
+[========            ] 910/2185(35, 661500)
+  Track: cache/2014.Pomplamoose.Season 2.Pharrell Mashup.wav
+  Track: cache/2010.Binärpilot.Nordland.Penguin (Rachael's Theme).wav
+  Track: cache/2015.Brian Tyler.Avengers: Age of Ultron.Vision.wav
+  Track: cache/1998.Trans-Siberian Orchestra.The Christmas Attic.Christmas in the Air.wav
+  Track: cache/2010.Binärpilot.Nordland.Forte Da Funk.wav
+  Track: cache/2004.Bob Acri.Bob Acri.Sleep Away.wav
+  Track: cache/2014.The World is a Beautiful Place & I am No Longer Afraid to Die.Between Bodies.Lioness.wav
+  Track: cache/2015.Lowland Hum.Native Air.Albatross.wav
+  Track: cache/2015.Brian Tyler.Avengers: Age of Ultron.Darkest of Intentions.wav
+  Track: cache/2014.James Newton Howard.The Hunger Games - Mockingjay Pt. 1 (Original Motin Picture Score).Peeta's Broadcast.wav
+  Track: cache/2014.MONO.The Last Dawn.Elysian Castles.wav
+  Track: cache/2014.Beware of Safety.Lotusville.The Fever.wav
+  Track: cache/2014.Seven Saturdays.Seven Saturdays (Ambient).Aspers (Ambient).wav
+  Track: cache/2016.Mogwai.Atomic.Bitterness Centrifuge.wav
+  Track: cache/2002.Coldplay.A Rush of Blood to the Head.In My Place.wav
+  Track: cache/2015.Interpol.Spotify Sessions.On "My Desire" and "All The Rage Back Home".wav
+  Track: cache/2003.Linkin Park.Live in Texas Disc 1.P5hng Me A*wy.wav
+  Track: cache/2012.Imagine Dragons.Continued Silence EP.It's Time - Double.wav
+  Track: cache/2014.The Who.Who's Next (Deluxe Edition).Too Much of Anything (Live).wav
+  Track: cache/2014.Engineers.Always Returning.Drive Your Car.wav
+  Track: cache/2010.Daft Punk.Tron: Legacy (Amazon MP3 Exclusive Version).Recognizer.wav
+  Track: cache/2014.Ludwig van Beethoven.MUSC233 Exam 2.String Quartet in C-sharp Minor, Op. 131: First movement, Adagio ma non troppo e molto espressivo.wav
+  Track: cache/2006.Binärpilot.You Can't Stop Da Funk.Bend.wav
+  Track: cache/2006.The Weepies.Say I Am You.World Spins Madly On.wav
+  Track: cache/2014.Rise Against.The Black Market.Zero Visibility.wav
+  Track: cache/2014.The Neighbourhood.#000000 & #Ffffff.Warm Feat. Raury.wav
+  Track: cache/2015.Dawn And Hawkes.Golden Heart EP + Yours and Mine Preview.A Catch.wav
+  Track: cache/2014.The World is a Beautiful Place & I am No Longer Afraid to Die.Between Bodies.Shoppers Beef.wav
+  Track: cache/2007.Linkin Park.Minutes to Midnight.In Between.wav
+  Track: cache/2016.Pepper Rabbit.The Remixes Vol. 1.Murder Room (E-603 Remix).wav
+  Track: cache/2016.Matthew Mayfield.Wild Eyes Unplugged EP.Team (Lorde Cover).wav
+  Track: cache/2001.Death Cab for Cutie.The Photo Album.I Was a Kaleidoscope.wav
+  Track: cache/2014.La Roux.Trouble in Paradise.Uptight Downtown.wav
+  Track: cache/2003.Snow Patrol.Final Straw.Same.wav
+  Track: cache/2003.Death Cab For Cutie.Transatlanticism.Title And Registration.wav
+[========            ] 945/2185(35, 661500)
+  Track: cache/2014.Lorde.The Hunger Games: Mockingjay, Pt. 1 (Original Motion Picture Soundtrack).Ladder Song.wav
+  Track: cache/2014.Totorro.Home Alone.Cheavalier Bulltoe.wav
+  Track: cache/2015.Death Cab For Cutie.Kintsugi.El Dorado.wav
+  Track: cache/2016.2CELLOS(SULIC & HAUSER).Celloverse (Japan Version).Hysteria.wav
+  Track: cache/2007.Linkin Park.Minutes to Midnight.Leave out All the Rest.wav
+  Track: cache/2014.Have Mercy.A Place Of Our Own.To Convey.wav
+  Track: cache/2007.Enrique Iglesias.Insomniac.Stay Here Tonight.wav
+  Track: cache/2015.IAMX.Metanoia.Surrender.wav
+  Track: cache/2003.Blue Man Group.The Complex-ADVANCE.Your Attention.wav
+  Track: cache/2015.IAMX.Metanoia.Say Hello Melancholia.wav
+  Track: cache/2000.Coldplay.Brothers & Sisters.Easy to Please.wav
+  Track: cache/2010.Daft Punk.Tron: Legacy (Amazon MP3 Exclusive Version).Rinzler.wav
+  Track: cache/2015.Brian Tyler.Avengers: Age of Ultron.Fighting Back.wav
+  Track: cache/2014.The Fray.Helios.Wherever This Goes.wav
+  Track: cache/2015.Of Monsters And Men.Beneath The Skin.Hunger.wav
+  Track: cache/2014.Rise Against.The Black Market.The Eco-Terrorist In Me.wav
+  Track: cache/2014.OK Go.Hungry Ghosts.Turn Up The Radio.wav
+  Track: cache/2014.Pentatonix.PTX, Vol. III.Standing By.wav
+  Track: cache/2015.Amber Run.5AM (Deluxe) WEB.Hurricane.wav
+  Track: cache/2006.Daniel Powter.Love You Lately.Love You Lately (Album Version).wav
+  Track: cache/2014.Stromae.The Hunger Games: Mockingjay, Pt. 1 (Original Motion Picture Soundtrack).Meltdown (feat. Lorde, Pusha T, Q-Tip & HAIM).wav
+  Track: cache/2014.So Cow.The Long Con.To Be Confirmed.wav
+  Track: cache/2013.Kodaline.In A Perfect World.One Day.wav
+  Track: cache/2014.Have Mercy.A Place Of Our Own.Pete Rose And Babe Ruth.wav
+  Track: cache/2014.Totorro.Home Alone.Ghislain Fracapane (Japan Exclusivity).wav
+  Track: cache/2005.Coldplay.X&Y.Swallowed in the Sea.wav
+  Track: cache/2014.Engineers.Always Returning.Bless the Painter.wav
+  Track: cache/2016.Woodkid.Desierto (Original Motion Picture Score).Tracker.wav
+  Track: cache/2016.Starfucker.Grey's Intro to Music Mixtape (Made With Love) [Vol.1].German Love.wav
+  Track: cache/2004.Jay-ZLinkin Park.Collision Course.NumbEncore.wav
+  Track: cache/2014.Totorro.Home Alone.Oaso San.wav
+  Track: cache/2016.The Bravery.Grey's Intro to Music Mixtape (Made With Love) [Vol.1].Believe.wav
+  Track: cache/2014.Bastille.Vs. (Other People's Heartache,Pt. III).Weapon (Bastille Vs. Angel Haze Vs. F*U*G*Z Vs. Braque) (Crossfaded Version) - Angel Haze, F*U*G*Z, Braque.wav
+  Track: cache/2016.unknown.2013 OMEA.How Can I Keep from Singing.wav
+  Track: cache/2009.Super Mash Bros..All About The Scrilions.Gucci Loafers (Our First Paycheck).wav
+[========            ] 980/2185(35, 661500)
+  Track: cache/2016.Blue October.Home.Time Changes Everything.wav
+  Track: cache/2014.Foo Fighters.Sonic Highways.The Feast and The Famine.wav
+  Track: cache/2014.Beware of Safety.Lotusville.Trigger Finger.wav
+  Track: cache/2015.Florence + The Machine.How Big, How Blue, How Beautiful (Limited Deluxe Edition).Hiding.wav
+  Track: cache/2014.Linkin Park.Final Masquerade CDS.Until It's Gone (Live at Rock Am Ring).wav
+  Track: cache/2015.Angus & Julia Stone.Angus & Julia Stone: The Remixes.A Heartbreak (Odesza Remix).wav
+  Track: cache/2015.Vitamin String Quartet.The Geek Wedding Collection.Harry Potter and The Goblet of Fire - Harry In Winter.wav
+  Track: cache/2014.Rise Against.The Black Market.The Black Market.wav
+  Track: cache/2015.Amber Run.5AM (Deluxe) WEB.See You Soon.wav
+  Track: cache/2010.Daft Punk.Tron: Legacy (Amazon MP3 Exclusive Version).The Grid.wav
+  Track: cache/2016.Bryson Andres.unknown.Glad You Came.wav
+  Track: cache/2001.Daft Punk.Discovery.Superheroes.wav
+  Track: cache/2014.Have Mercy.A Place Of Our Own.The Place You Love.wav
+  Track: cache/2015.Hinkstep.My Forest Queen.Naranja.wav
+  Track: cache/2016.Andrew McMahon in the Wilderness.Andrew McMahon in the Wilderness.Halls.wav
+  Track: cache/1994.The London Symphony Orchestra.The Performs Sting.King of Pain.wav
+  Track: cache/2014.Sheppard.Bombs Away.These People.wav
+  Track: cache/2015.Das Sound Machine, Tone Hangers, The Barden Bellas, Green Bay Packers, The Treblemakers.Pitch Perfect 2.Riff Off.wav
+  Track: cache/2000.Coldplay.Parachutes.Careful Where You Stand.wav
+  Track: cache/2014.The Sunshine Underground.Start.All Your Luck.wav
+  Track: cache/2009.Paramore.Radio 1 Live Lounge.Use Somebody.wav
+  Track: cache/2014.Engineers.Always Returning.Always Returning.wav
+  Track: cache/2014.IRREVERSIBLE.Surface.Nuwaubian Plutocracy.wav
+  Track: cache/2014.Cold War Kids.Hold My Home.Go Quietly.wav
+  Track: cache/2015.Mumford & Sons.Wilder Mind (Deluxe Version).Tompkins Square Park - Live.wav
+  Track: cache/2014.The Best Pessimist.Flowers Blossom In The Space.I Just Want To Be Your Everything.wav
+  Track: cache/2014.The Who.Who's Next (Deluxe Edition).(I'm a) Road Runner (Live).wav
+  Track: cache/2014.Bucketheadland.Snow Slug.G 81.wav
+  Track: cache/2016.Ruth Koleva.R U T H.Dissonant.wav
+  Track: cache/2014.Blueneck.King Nine.Man Of Lies.wav
+  Track: cache/2004.Breaking Benjamin.We Are Not Alone.Firefly.wav
+  Track: cache/2016.Blue October.Home.Driver.wav
+  Track: cache/2015.Gordon's Tsunami Week.The Farewell Paradox.no.wav
+  Track: cache/2015.They Might Be Giants.Glean.Underwater Woman.wav
+  Track: cache/2014.The Who.Who's Next (Deluxe Edition).Bargain (Live).wav
+[=========           ] 1015/2185(35, 661500)
+  Track: cache/2016.Anya Marina.Paper Plane.Ordinary Dude (feat. Eric Hutchinson).wav
+  Track: cache/2014.Bucketheadland.Snow Slug.O 38.wav
+  Track: cache/2014.Milky Chance.Sadnecessary.Stolen Dance.wav
+  Track: cache/2014.Fences.Lesser Oceans.The Lake.wav
+  Track: cache/2010.Linkin Park.A Thousand Suns.Fallout.wav
+  Track: cache/2015.Mendum.unknown.Elysium.wav
+  Track: cache/1985.The Outfield.Play Deep.Your Love.wav
+  Track: cache/2014.Kerretta.Pirohia.Iron Hail.wav
+  Track: cache/2014.Coldplay.Ghost Stories Live 2014.O (Live At Royce Hall, Los Angeles).wav
+  Track: cache/2005.The Fray.How to Save a Life.Vienna.wav
+  Track: cache/2016.The Waterboys.This Is The Sea.The Whole of the Moon.wav
+  Track: cache/2015.Amber Run.5AM (Deluxe) WEB.Kites.wav
+  Track: cache/2009.Breaking Benjamin.Dear Agony.Into The Nothing.wav
+  Track: cache/2016.Tall Heights.Rafters.Do Not Resuscitate.wav
+  Track: cache/2003.Coldplay.Live 2003.One I Love.wav
+  Track: cache/2011.Avicii.Fade Into Darkness.Fade Into Darkness (Vocal Radio Edit).wav
+  Track: cache/2005.Flyleaf.Flyleaf.Breathe Today.wav
+  Track: cache/2014.The Phoenix Foundation.Echoes.All Comes Back.wav
+  Track: cache/2014.CHVRCHES.The Hunger Games: Mockingjay, Pt. 1 (Original Motion Picture Soundtrack).Dead Air.wav
+  Track: cache/2014.Carbon Leaf.Indian Summer Revisited.Paloma.wav
+  Track: cache/2015.Imagine Dragons.Smoke + Mirrors (Deluxe Edition).Shots.wav
+  Track: cache/2014.Fences.Lesser Oceans.Temple Dreaming.wav
+  Track: cache/2016.Tender.NOON  160.Bleed.wav
+  Track: cache/2008.The Dodos.The Visiter.Walking.wav
+  Track: cache/2016.Blue October.Home.We Know Where You Go.wav
+  Track: cache/2015.IAMX.Metanoia.North Star (X Edit).wav
+  Track: cache/2010.Daft Punk.Tron: Legacy (Amazon MP3 Exclusive Version).Rectifier.wav
+  Track: cache/2014.Pentatonix.PTX, Vol. III.Papaoutai.wav
+  Track: cache/2015.MOGWAI.Central Belters.The Lord Is Out of Control.wav
+  Track: cache/2015.Owl City.Unbelievable.Unbelievable.wav
+  Track: cache/2003.Train.My Private Nation.Calling All Angels.wav
+  Track: cache/2014.James Newton Howard.The Hunger Games - Mockingjay Pt. 1 (Original Motin Picture Score).Jamming The Capitol.wav
+  Track: cache/2016.Ellie Goulding.The Remixes Vol. 1.Lights (E-603 Remix).wav
+  Track: cache/2000.Coldplay.Acoustic.See You Soon.wav
+  Track: cache/2005.Nickelback.All the Right Reasons.Photograph.wav
+[=========           ] 1050/2185(35, 661500)
+  Track: cache/2006.Blue October.Foiled.Drilled a Wire Through My Cheek.wav
+  Track: cache/2001.Daft PunkRomanthony.Discovery.Too Long.wav
+  Track: cache/2013.Kodaline.In A Perfect World.All Comes Down.wav
+  Track: cache/2014.Joseph Haydn.MUSC233 Exam 2.String Quartet in E-flat Major, Op. 33, No. 2 (The Joke), Hob. III:38: Fourth movement, Finale: Presto.wav
+  Track: cache/2001.Death Cab for Cutie.The Photo Album.Steadier Footing.wav
+  Track: cache/2015.The Best Pessimist.The Half-World.The Half-World.wav
+  Track: cache/2015.MOGWAI.Central Belters.My Father My King.wav
+  Track: cache/2015.Will Young.85% Proof (Deluxe Edition).Brave Man.wav
+  Track: cache/2001.Enrique Iglesias.Escape.Escapar.wav
+  Track: cache/2014.Kerretta.Pirohia.His Streets Of Honey, Her Mouth Of Gold.wav
+  Track: cache/2015.Interpol.Spotify Sessions.On "Take You On A Cruise".wav
+  Track: cache/2016.BANNERS.unknown.Shine A Light.wav
+  Track: cache/2016.Miike Snow.iii.The Heart Of Me.wav
+  Track: cache/2014.Haerts.Haerts.No One Needs to Know.wav
+  Track: cache/2014.Pomplamoose.Season 2.Believe.wav
+  Track: cache/2015.Breaking Benjamin.Dark Before Dawn.Failure.wav
+  Track: cache/2015.Anna Calvi.Insurgent (Original Motion Picture Soundtrack).The Heart of You.wav
+  Track: cache/2010.Tyler Stenson.Bittersweet Parade.I Get No Sleep.wav
+  Track: cache/2012.DJ MikeA.Best of Bootie 2012 (Unmixed).Die Young In The Cave (Bootie Edit) (Mumford & Sons vs. Ke$ha).wav
+  Track: cache/2014.Milky Chance.Sadnecessary.Running.wav
+  Track: cache/2014.Cold War Kids.Hold My Home.Hear My Baby Call.wav
+  Track: cache/2014.Mitis.Oasis - EP.Prism.wav
+  Track: cache/2014.Linfield College Concert Choir.Christmas at Linfield.The Holly and the Ivy.wav
+  Track: cache/2015.Joseph Trapanese.Insurgent (Original Motion Picture Soundtrack).Convergence (Score Suite From "Insurgent").wav
+  Track: cache/2014.Blueneck.King Nine.Father, Sister.wav
+  Track: cache/2014.Linfield College Concert Choir.Christmas at Linfield.What Child is This?.wav
+  Track: cache/2016.Sleeping At Last.Atlas: Senses.Touch.wav
+  Track: cache/2003.Muse.Absolution.Sing for Absolution.wav
+  Track: cache/2014.James Newton Howard.The Hunger Games - Mockingjay Pt. 1 (Original Motin Picture Score).Snow's Speech.wav
+  Track: cache/2014.Carbon Leaf.Indian Summer Revisited.Changeless.wav
+  Track: cache/2015.Pentatonix.That's Christmas to Me: Deluxe Tracks - EP.Mary, Did You Know? (feat. The String Mob).wav
+  Track: cache/2016.Miike Snow.iii.For U (feat. Charli XCX).wav
+  Track: cache/2016.Andrew McMahon in the Wilderness.Andrew McMahon in the Wilderness.Canyon Moon.wav
+  Track: cache/2014.Banda do Mar.Banda do Mar.Mais Ninguém.wav
+  Track: cache/2016.PSY.PSY's Best Sixth 6th Part 1.Gangnam Duo.wav
+[=========           ] 1085/2185(35, 661500)
+  Track: cache/2004.Carbon Leaf.Indian Summer.The Sea.wav
+  Track: cache/2014.Linfield College Concert Choir.Christmas at Linfield.Lo, How a Rose E'er Blooming.wav
+  Track: cache/2016.Tropics.NOON  155.Harbor.wav
+  Track: cache/2014.Casa Murilo.Ignition.Swtlo.wav
+  Track: cache/2001.Daft Punk.Discovery.Something About Us.wav
+  Track: cache/2014.The Fray.Helios.Love Don't Die.wav
+  Track: cache/2016.2CELLOS(SULIC & HAUSER).Celloverse (Japan Version).Satisfaction.wav
+  Track: cache/2016.OMEA All-State Choir 2012-2013.2013 OMEA.Tides of Ocean.wav
+  Track: cache/2014.Seven Saturdays.Seven Saturdays (Ambient).Passing Glance (Ambient).wav
+  Track: cache/2014.Blueneck.Night of the Meek.Silent Night.wav
+  Track: cache/2014.Avicii.The Days  Nights WEB.The Nights (Felix Jaehn Remix).wav
+  Track: cache/2014.The Who.Who's Next (Deluxe Edition).Behind Blue Eyes (New York Record Plant Session).wav
+  Track: cache/2016.Tim Legend.NOON  170.808s & birthdaycakes.wav
+  Track: cache/2015.Adam Devine.Pitch Perfect 2.All Of Me (Bumper's Audition).wav
+  Track: cache/2012.Pentatonix.PTX vol 1.Somebody That I Used to Know.wav
+  Track: cache/2015.Zeke Duhon.Zeke Duhon.Best Mistake.wav
+  Track: cache/2014.Tunturia.Halls Of Sky.And there goes the Child of the Universe.wav
+  Track: cache/2016.Lane 8.NOON  174.Midnight.wav
+  Track: cache/2016.The Dunwells.Light Up The Sky.Strange Feeling.wav
+  Track: cache/2014.The Who.Who's Next (Deluxe Edition).Getting In Tune.wav
+  Track: cache/2015.Marina and The Diamonds.FROOT.Can't Pin Me Down.wav
+  Track: cache/2015.Sohn.Insurgent (Original Motion Picture Soundtrack).Carry Me Home.wav
+  Track: cache/2001.Enrique Iglesias.Escape.Escape.wav
+  Track: cache/2015.Tyler Stenson.Say No More.We Grow.wav
+  Track: cache/2014.The Life And Times.Lost Bees.Ice Cream Eyes.wav
+  Track: cache/2015.Zeke Duhon.Zeke Duhon.Gravity (Time To Run).wav
+  Track: cache/2015.Mumford & Sons.Wilder Mind (Deluxe Version).Only Love.wav
+  Track: cache/2006.John Mayer.Continuum.Waiting on the World to Change.wav
+  Track: cache/2014.Lower Than Atlantis.Lower Than Atlantis (Deluxe).Damn Nation.wav
+  Track: cache/2014.The Neighbourhood.#000000 & #Ffffff.H8M4CH1N3 Feat. Danny Brown.wav
+  Track: cache/2015.Three Days Grace.Human.Nothing's Fair In Love And War.wav
+  Track: cache/2015.Pentatonix.That's Christmas to Me: Deluxe Tracks - EP.Joy to the World.wav
+  Track: cache/1994.The London Symphony Orchestra.The Performs Sting.They Dance Alone.wav
+  Track: cache/2016.The Black Keys.Grey's Intro to Music Mixtape (Made With Love) [Vol.1].Psychotic Girl.wav
+  Track: cache/2014.Pentatonix.PTX, Vol. III.La La Latch.wav
+[==========          ] 1120/2185(35, 661500)
+  Track: cache/2003.Linkin Park.Live in Texas.Lying from You.wav
+  Track: cache/2014.Blue Swede.Guardians Of The Galaxy (Awesome Mix Vol. 1).Hooked on a Feeling.wav
+  Track: cache/2014.Lorde.The Hunger Games: Mockingjay, Pt. 1 (Original Motion Picture Soundtrack).Flicker (Kanye West Rework).wav
+  Track: cache/1998.Trans-Siberian Orchestra.The Christmas Attic.The World That She Sees.wav
+  Track: cache/2016.Free n Losh.unknown.Rose.wav
+  Track: cache/2016.Ruth Koleva.R U T H.Turn This Around.wav
+  Track: cache/2014.The Rosebuds.Sand + Silence.Tiny Bones.wav
+  Track: cache/2006.Breaking Benjamin.Phobia.The Diary Of Jane.wav
+  Track: cache/2016.Aperture Science Psychoacoustics Laboratory.Portal 2: Songs to Test By - Volume 3.Robot Waiting Room #4.wav
+  Track: cache/2006.Blue October.Foiled.Overweight.wav
+  Track: cache/2000.Coldplay.Parachutes.Don't Panic.wav
+  Track: cache/2008.Kings Of Leon.Only By The Night.Be Somebody.wav
+  Track: cache/2006.Imogen Heap.Plague Songs.Glittering Clouds (Locusts).wav
+  Track: cache/2002.Death Cab For Cutie.You Can Play These Songs With Chords.Hindsight.wav
+  Track: cache/2014.Fences.Lesser Oceans.Dogs At The Table.wav
+  Track: cache/2016.Blood Cultures.NOON  152.Indian Summer.wav
+  Track: cache/2014.The Rosebuds.Sand + Silence.Sand + Silence.wav
+  Track: cache/2007.Linkin Park.Minutes to Midnight.No More Sorrow.wav
+  Track: cache/2015.Marina and The Diamonds.FROOT.Better Than That.wav
+  Track: cache/2006.Binärpilot.You Can't Stop Da Funk.Robot Wars.wav
+  Track: cache/2016.Woodkid.Desierto (Original Motion Picture Score).The Frontier.wav
+  Track: cache/2014.The Who.Who's Next (Deluxe Edition).Time Is Passing (Live).wav
+  Track: cache/2016.Two Door Cinema Club.The Remixes Vol. 1.What You Know (E-603 Remix).wav
+  Track: cache/1999.Kim Carnes.Best of Kim Carnes.Crazy in the Night (Barking at Airplanes).wav
+  Track: cache/2014.Mitis.Oasis - EP.For So Long.wav
+  Track: cache/2015.Interpol.Spotify Sessions.Snowbound Near Buffalo.wav
+  Track: cache/2014.La Roux.Trouble in Paradise.Let Me Down Gently.wav
+  Track: cache/2015.Three Days Grace.Human.Tell Me Why.wav
+  Track: cache/2015.Three Days Grace.Human.The End Is Not The Answer.wav
+  Track: cache/2015.The Glitch Mob.Piece of the Indestructible.Head Full of Shadows.wav
+  Track: cache/2006.Damien Rice.9 [Explicit].9 Crimes.wav
+  Track: cache/2016.Hotel Garuda.NOON  182.Smoke Signals.wav
+  Track: cache/2016.Tom Cochrane.Mad Mad World.Washed Away.wav
+  Track: cache/2005.The Fray.How to Save a Life.Little House.wav
+  Track: cache/2002.The All-American Rejects.All-American Rejects.Swing, Swing.wav
+[==========          ] 1155/2185(35, 661500)
+  Track: cache/2014.Blake Mills.Heigh Ho.Before It Fell.wav
+  Track: cache/2014.The Who.Who's Next (Deluxe Edition).Getting In Tune (Live).wav
+  Track: cache/2015.Hinkstep.My Forest Queen.Not Dead Just Forgotten.wav
+  Track: cache/2015.The Lighthouse and the Whaler.Brothers Sampler.Brothers.wav
+  Track: cache/2014.The Fray.Helios.Hold My Hand.wav
+  Track: cache/2015.Green River Ordinance.Chasing Down The Wind.Better Love.wav
+  Track: cache/2014.We Were Promised Jetpacks.Unravelling.Peaks And Troughs.wav
+  Track: cache/2006.Snow Patrol.Eyes Open.You're All I Have.wav
+  Track: cache/2014.Seven Saturdays.Seven Saturdays (Ambient).One In 3 (Ambient).wav
+  Track: cache/1996.The Verve Pipe.Villains.The Freshmen.wav
+  Track: cache/2014.Cold War Kids.Hold My Home.Flower Drum Song.wav
+  Track: cache/2002.Linkin Park.Reanimation.My{Dsmbr.wav
+  Track: cache/2008.Missy Higgins.On A Clear Night.Where I Stood .wav
+  Track: cache/2014.Mogwai.Music Industry 3. Fitness Industry 1 [EP].Teenage Exorcists.wav
+  Track: cache/2016.Andrew McMahon in the Wilderness.Andrew McMahon in the Wilderness.Rainy Girl.wav
+  Track: cache/2014.The Who.Who's Next (Deluxe Edition).Getting In Tune (New York Record Plant Session).wav
+  Track: cache/2014.Joseph Haydn.MUSC233 Exam 3.String Quartet in E-flat Major, Op. 33, No. 2 (The Joke), Hob. III:38: Second movement, Scherzo: Allegro.wav
+  Track: cache/2016.COBRYAMA feat. Gibbz.NOON  193.Someone Like You .wav
+  Track: cache/2015.Mumford & Sons.Wilder Mind (Deluxe Version).Hot Gates.wav
+  Track: cache/2014.Banda do Mar.Banda do Mar.Hey Nana.wav
+  Track: cache/2013.OK Go.Twelve Months of OK Go.Nite Klub (The Specials cover).wav
+  Track: cache/2003.Death Cab For Cutie.Transatlanticism.Tiny Vessels.wav
+  Track: cache/2014.The Decemberists.What a Terrible World, What a Beautiful World.Carolina Low.wav
+  Track: cache/2015.Dawn And Hawkes.Golden Heart EP + Yours and Mine Preview.Lightning Strikes (bonus).wav
+  Track: cache/2016.Majical Cloudz.NOON  160.Downtown.wav
+  Track: cache/2016.Westerman.NOON  187.Jericho.wav
+  Track: cache/2014.So Cow.The Long Con.Say Hello.wav
+  Track: cache/2015.Amber Run.5AM (Deluxe) WEB.Good Morning.wav
+  Track: cache/2016.Anya Marina.Paper Plane.Candy #1.wav
+  Track: cache/2016.Miike Snow.iii.Genghis Khan.wav
+  Track: cache/2015.Dawn And Hawkes.Golden Heart EP + Yours and Mine Preview.Golden Heart.wav
+  Track: cache/2015.Pen Pals.Gold.Gold.wav
+  Track: cache/2014.Marvin Gaye.Guardians Of The Galaxy (Awesome Mix Vol. 1).Ain't No Mountain High Enough.wav
+  Track: cache/2015.Three Days Grace.Human.Painkiller.wav
+  Track: cache/2014.This Will Destroy You.Another Language.God's Teeth.wav
+[==========          ] 1190/2185(35, 661500)
+  Track: cache/2015.Beware of Safety.Mabon.The Birds Are Chirping.wav
+  Track: cache/2016.Tall Heights.Man of Stone.Field of Snow.wav
+  Track: cache/2014.AJR.I`m Ready EP.Woody Allen.wav
+  Track: cache/2016.Fall Out Boy.Grey's Intro to Music Mixtape (Made With Love) [Vol.1].I Slept With Someone....wav
+  Track: cache/2015.The Glitch Mob.Piece of the Indestructible.The Clouds Breathe for You.wav
+  Track: cache/1999.Enrique Iglesias.Enrique Disc 1.Bailamos.wav
+  Track: cache/2015.They Might Be Giants.Glean.End of the Rope.wav
+  Track: cache/2004.Carbon Leaf.Indian Summer.Grey Sky Eyes.wav
+  Track: cache/2015.Marina and The Diamonds.FROOT.Blue.wav
+  Track: cache/2000.Coldplay.Parachutes.We Never Change.wav
+  Track: cache/2009.Super Mash Bros..All About The Scrilions.Jaein Off On My Day Off.wav
+  Track: cache/2001.John Mayer.Room for Squares.Why Georgia.wav
+  Track: cache/2014.OK Go.Hungry Ghosts.If I Had A Mountain.wav
+  Track: cache/2016.Lane 8.Rise (Remixed).Ghost feat. Patrick Baker (Lane 8 Rework).wav
+  Track: cache/2009.Train.Save Me, San Francisco.Save Me, San Francisco.wav
+  Track: cache/2014.George Frideric Handel.MUSC233 Exam 3.Giulio Cesare: Act II, Scene 2: Aria, V’adoro, pupille.wav
+  Track: cache/2014.Seven Saturdays.Seven Saturdays (Ambient).Dreamboat (Ambient).wav
+  Track: cache/2016.XYLØ.America.Afterlife.wav
+  Track: cache/2014.Blake Mills.Heigh Ho.If I'm Unworthy.wav
+  Track: cache/2013.Kodaline.In A Perfect World.Big Bad World.wav
+  Track: cache/2015.Florence + The Machine.How Big, How Blue, How Beautiful (Limited Deluxe Edition).Delilah.wav
+  Track: cache/2015.Interpol.Spotify Sessions.Take You On A Cruise.wav
+  Track: cache/2000.Coldplay.Acoustic.Sparks.wav
+  Track: cache/2002.Linkin Park.Reanimation.Krwlng.wav
+  Track: cache/2001.Bond.Born.Victory.wav
+  Track: cache/2016.Woodkid.Desierto (Original Motion Picture Score).Shoot Them Down.wav
+  Track: cache/2014.Bucketheadland.Snow Slug.S 17.wav
+  Track: cache/2014.Elvin Bishop.Guardians Of The Galaxy (Awesome Mix Vol. 1).Fooled Around And Fell In Love.wav
+  Track: cache/2015.Amber Run.5AM (Deluxe) WEB.Don't Wanna Fight.wav
+  Track: cache/2015.Pentatonix.PTX.Rather Be.wav
+  Track: cache/2012.MitiS.unknown.Born.wav
+  Track: cache/2014.Bat for Lashes.The Hunger Games: Mockingjay, Pt. 1 (Original Motion Picture Soundtrack).Plan the Escape.wav
+  Track: cache/2007.Enrique Iglesias Feat. Lil Wayne.Insomniac.Push.wav
+  Track: cache/2014.This Will Destroy You.Another Language.War Prayer.wav
+  Track: cache/1996.Van Halen.The Best of Van Halen, Vol. 1.Panama.wav
+[===========         ] 1225/2185(35, 661500)
+  Track: cache/2016.Uncle Kracker.Double Wide.Follow Me.wav
+  Track: cache/2003.Muse.Absolution.Thoughts of a Dying Atheist.wav
+  Track: cache/2015.Wild Child.Past & Present.Crazy Bird.wav
+  Track: cache/2016.Oyster Kids.NOON  160.Creepy.wav
+  Track: cache/2004.Five for Fighting.The Battle for Everything.100 Years.wav
+  Track: cache/2015.Fall Out Boy.American BeautyAmerican Psycho.Irresistible.wav
+  Track: cache/2015.Florence + The Machine.How Big, How Blue, How Beautiful (Limited Deluxe Edition).Which Witch (Demo).wav
+  Track: cache/2015.Danny Elfman.Avengers: Age of Ultron.Nothing Lasts Forever.wav
+  Track: cache/2015.Breaking Benjamin.Dark Before Dawn.Defeated.wav
+  Track: cache/2014.Damien Rice.My Favourite Faded Fantasy.My Favourite Faded Fantasy.wav
+  Track: cache/2000.Coldplay.Live 2003.I'll See You Soon.wav
+  Track: cache/2003.Snow Patrol.Final Straw.Tiny Little Fractures.wav
+  Track: cache/2015.Breaking Benjamin.Dark Before Dawn.Hollow.wav
+  Track: cache/2012.The Lumineers.The Lumineers.Slow It Down.wav
+  Track: cache/1998.Trans-Siberian Orchestra.The Christmas Attic.Midnight Christmas Eve.wav
+  Track: cache/2014.Blueneck.King Nine.Spiderlegs.wav
+  Track: cache/2016.M83.Junk.Walkway Blues.wav
+  Track: cache/2012.Pentatonix.PTX vol 1.Show You How to Love.wav
+  Track: cache/2015.MOGWAI.Central Belters.Friend of the Night.wav
+  Track: cache/2016.Dirty Projectors.Grey's Intro to Music Mixtape (Made With Love) [Vol.1].Cannibal Resource.wav
+  Track: cache/2014.Tarwater.Adrift.Adrift.wav
+  Track: cache/2014.Henry Purcell.MUSC233 Exam 3.Dido and Aeneas: Lament, When I am laid in earth.wav
+  Track: cache/2003.Muse.Absolution.Endlessly.wav
+  Track: cache/2013.Kodaline.In A Perfect World.Love Like This.wav
+  Track: cache/2002.Breaking Benjamin.Saturate.Medicate.wav
+  Track: cache/2009.Skillet.Awake (Deluxe).Should've When You Could've.wav
+  Track: cache/2016.The Vaccines.Grey's Intro to Music Mixtape (Made With Love) [Vol.1].Post Break-Up Sex.wav
+  Track: cache/1998.Snow Patrol.Songs For Polarbears.Downhill From Here.wav
+  Track: cache/2015.Florence + The Machine.How Big, How Blue, How Beautiful (Limited Deluxe Edition).How Big, How Blue, How Beautiful.wav
+  Track: cache/2015.IAMX.Metanoia.Wildest Wind.wav
+  Track: cache/2015.Angus & Julia Stone.Angus & Julia Stone: The Remixes.A Heartbreak (Tigerz Remix).wav
+  Track: cache/2015.Death Cab For Cutie.Kintsugi.You've Haunted Me All Your Life.wav
+  Track: cache/2016.Magic Man.You Are Here.Paris.wav
+  Track: cache/2016.Matthew Mayfield.Wild Eyes Unplugged EP.On Your Knees.wav
+  Track: cache/2014.The Runaways.Guardians Of The Galaxy (Awesome Mix Vol. 1).Cherry Bomb.wav
+[===========         ] 1260/2185(35, 661500)
+  Track: cache/1996.The Verve Pipe.Villains.Reverend Girl.wav
+  Track: cache/2016.Inventions.Maze of Woods.Springworlds.wav
+  Track: cache/1989.Pat Benatar.Best Shots.Hit Me With Your Best Shot.wav
+  Track: cache/2016.Mumford & Sons.Sigh No More.White Blank Page.wav
+  Track: cache/2013.Gregory Alan Isakov.The Weatherman.All Shades of Blue.wav
+  Track: cache/2014.Bastille.Oblivion.Oblivion (Slinger Remix).wav
+  Track: cache/2015.Tyler Stenson.Say No More.The Arsonist.wav
+  Track: cache/2015.Danny Elfman.Avengers: Age of Ultron.New Avengers - Avengers: Age of Ultron.wav
+  Track: cache/2003.Evanescence.Fallen.Bring Me to Life.wav
+  Track: cache/2015.MOGWAI.Central Belters.Stanley Kubrick.wav
+  Track: cache/2000.Coldplay.Acoustic.Yellow (acoustic version from Jo Whiley's Lunchtime Social).wav
+  Track: cache/2014.The Neighbourhood.#000000 & #Ffffff.Givin N Takin Feat. Danny Seth & DeJ Loaf.wav
+  Track: cache/2015.Will Young.85% Proof (Deluxe Edition).Gold.wav
+  Track: cache/2016.Tall Heights.Man of Stone.Man of Stone.wav
+  Track: cache/2016.M83.Junk.Ludivine.wav
+  Track: cache/2013.Zedd.iTunes Session [EP].Spectrum.wav
+  Track: cache/2004.Modest Mouse.Good News For People Who Love Bad News.Float On.wav
+  Track: cache/2015.Radiohead.unknown.Spectre.wav
+  Track: cache/1998.Trans-Siberian Orchestra.The Christmas Attic.Find Our Way Home.wav
+  Track: cache/2015.Pentatonix.That's Christmas to Me: Deluxe Tracks - EP.The First Noel.wav
+  Track: cache/2014.So Cow.The Long Con.The Other One.wav
+  Track: cache/2016.Tall Heights.Man of Stone.The Running of the Bulls.wav
+  Track: cache/2014.Have Mercy.A Place Of Our Own.Howl.wav
+  Track: cache/2016.Woodkid.Desierto (Original Motion Picture Score).The Ridge.wav
+  Track: cache/2006.Breaking Benjamin.Phobia.You.wav
+  Track: cache/2014.Engineers.Always Returning.A Million Voices.wav
+  Track: cache/2014.Foo Fighters.Sonic Highways.What Did I Do?God As My Witness.wav
+  Track: cache/2014.Mogwai.Music Industry 3. Fitness Industry 1 [EP].Re-Remurdered (Blanck Mass Remix).wav
+  Track: cache/2015.Pentatonix.PTX.Daft Punk.wav
+  Track: cache/2016.Liss.First.Miles Apart.wav
+  Track: cache/2004.Breaking Benjamin.We Are Not Alone.Forget It.wav
+  Track: cache/2016.Albin Lee Meldau.Lovers - EP.Lovers.wav
+  Track: cache/2009.Skillet.Awake (Deluxe).Believe.wav
+  Track: cache/2001.Enrique Iglesias.Escape.Hero.wav
+  Track: cache/2014.Grace Jones.The Hunger Games: Mockingjay, Pt. 1 (Original Motion Picture Soundtrack).Original Beast.wav
+[===========         ] 1295/2185(35, 661500)
+  Track: cache/2016.Aperture Science Psychoacoustics Laboratory.Portal 2: Songs to Test By - Volume 3.Reconstructing More Science.wav
+  Track: cache/2010.Linkin Park.A Thousand Suns.When They Come For Me.wav
+  Track: cache/2016.Anya Marina.Paper Plane.Go to Bed.wav
+  Track: cache/2001.Bond.Born.Dalalai.wav
+  Track: cache/2015.Brian Tyler.Avengers: Age of Ultron.Uprising.wav
+  Track: cache/2004.Jay-ZLinkin Park.Collision Course.Points of Authority99 ProblemsOne Step Closer.wav
+  Track: cache/2015.Lowland Hum.Native Air.My House Is Empty.wav
+  Track: cache/2015.Green River Ordinance.Chasing Down The Wind.She Is In The Air.wav
+  Track: cache/2016.Down Time.NOON  152.Go.wav
+  Track: cache/2016.Blue October.Home.The Lucky One.wav
+  Track: cache/2010.Tyler Stenson.Bittersweet Parade.Welcome the Change.wav
+  Track: cache/2016.Jack Johnson.In Between Dreams.Breakdown.wav
+  Track: cache/2016.johan.NOON  187.stard(us)t.wav
+  Track: cache/2015.Imagine Dragons.Smoke + Mirrors (Deluxe Edition).The Fall.wav
+  Track: cache/2014.Lower Than Atlantis.Lower Than Atlantis (Deluxe).Words Don't Come So Easily (Alternative Version).wav
+  Track: cache/2006.Three Days Grace.One-X.One-X.wav
+  Track: cache/2014.Seven Saturdays.Seven Saturdays (Ambient).Quiet Days (Ambient).wav
+  Track: cache/2014.The Who.Who's Next (Deluxe Edition).My Wife.wav
+  Track: cache/2009.Breaking Benjamin.Dear Agony.Give Me A Sign.wav
+  Track: cache/2014.Arnold Schoenberg.MUSC233 Exam 3.Pierrot lunaire, Op. 21: No. 8: Nacht.wav
+  Track: cache/2006.Blue October.Foiled.Into the Ocean.wav
+  Track: cache/2014.On-The-Go.Young Hearts [WEB Edition].Young Hearts.wav
+  Track: cache/2016.RALPH.NOON  193.Cold to the Touch.wav
+  Track: cache/2016.Andrew McMahon in the Wilderness.Andrew McMahon in the Wilderness.All Our Lives.wav
+  Track: cache/1995.Oasis.(What's the Story) Morning Glory?.Wonderwall.wav
+  Track: cache/2015.The Lighthouse and the Whaler.Brothers Sampler.In the Open.wav
+  Track: cache/2015.IAMX.Metanoia.Insomnia.wav
+  Track: cache/1998.Trans-Siberian Orchestra.The Christmas Attic.Boughs of Holly.wav
+  Track: cache/2006.Daniel Powter.Daniel Powter.Jimmy Gets High.wav
+  Track: cache/2016.OMEA All-State Choir 2012-2013.2013 OMEA.The Ground.wav
+  Track: cache/2014.Linkin Park.Final Masquerade CDS.Final Masquerade.wav
+  Track: cache/2015.Pentatonix.PTX.Hey Momma  Hit the Road Jack.wav
+  Track: cache/2000.Coldplay.Parachutes.For you.wav
+  Track: cache/2016.RAEKO feat. Mating Ritual.NOON  151.Everybody Knows.wav
+  Track: cache/2001.Enrique Iglesias.Escape.If the World Crashes Down.wav
+[============        ] 1330/2185(35, 661500)
+  Track: cache/2015.Hinkstep.My Forest Queen.Feeling Like A Sunset.wav
+  Track: cache/2012.Binärpilot.Songs For Alan Turing.ITAPPMONROBOT.wav
+  Track: cache/2014.Modest Mouse.White Lies, Yellow Teeth  Buttons To Push the Buttons - Single.Buttons To Push Buttons.wav
+  Track: cache/2003.Coldplay.Live 2003.See You Soon.wav
+  Track: cache/2010.Binärpilot.Nordland.aXXo.wav
+  Track: cache/2014.James Newton Howard.The Hunger Games - Mockingjay Pt. 1 (Original Motin Picture Score).White Roses.wav
+  Track: cache/2014.Blueneck.Night of the Meek.White Christmas.wav
+  Track: cache/2014.Milky Chance.Sadnecessary.Indigo.wav
+  Track: cache/2014.Kerretta.Pirohia.Warnlands.wav
+  Track: cache/2013.OK Go.Twelve Months of OK Go.Get Over It (Elevator Version).wav
+  Track: cache/2015.Fall Out Boy.American BeautyAmerican Psycho.Jet Pack Blues.wav
+  Track: cache/2015.Hinkstep.My Forest Queen.All Of You.wav
+  Track: cache/2001.Martina McBride.Greatest Hits.Concrete Angel.wav
+  Track: cache/2014.We Were Promised Jetpacks.Unravelling.A Part Of It.wav
+  Track: cache/2016.Shakadaktal.Grey's Intro to Music Mixtape (Made With Love) [Vol.1].Dance Bear.wav
+  Track: cache/2016.John Mayer.Any Given Thursday (2).Why Georgia.wav
+  Track: cache/2014.Carbon Leaf.Indian Summer Revisited.One Prairie Outpost.wav
+  Track: cache/2015.Howie Day.Lanterns.Torches.wav
+  Track: cache/2014.The Decemberists.What a Terrible World, What a Beautiful World.Lake Song.wav
+  Track: cache/2015.Pentatonix.PTX.Natural Disaster.wav
+  Track: cache/2014.The Phoenix Foundation.Echoes.Promise.wav
+  Track: cache/2009.Train.Save Me, San Francisco.Breakfast In Bed.wav
+  Track: cache/2016.Toto.Toto IV.Africa.wav
+  Track: cache/2014.Rise Against.The Black Market.Methadone.wav
+  Track: cache/2014.Lower Than Atlantis.Lower Than Atlantis (Deluxe).Stays the Same.wav
+  Track: cache/2016.Aperture Science Psychoacoustics Laboratory.Portal 2: Songs to Test By - Volume 3.Your Precious Moon.wav
+  Track: cache/1994.The London Symphony Orchestra.The Performs Sting.Wrapped Around Your Finger.wav
+  Track: cache/2010.Daft Punk.Tron: Legacy (Amazon MP3 Exclusive Version).Adagio For Tron.wav
+  Track: cache/2016.unknown.2013 OMEA.Tides of Ocean.wav
+  Track: cache/2014.Seven Saturdays.Seven Saturdays (Ambient).Only Love (Ambient).wav
+  Track: cache/2005.The Fray.How to Save a Life.How to Save a Life.wav
+  Track: cache/2006.Three Days Grace.One-X.Pain.wav
+  Track: cache/1998.Snow Patrol.Songs For Polarbears.Little Hide.wav
+  Track: cache/2016.P!nk.Funhouse.Ave Mary A (Explicit).wav
+  Track: cache/2007.Enrique Iglesias.Insomniac.Dímelo.wav
+[============        ] 1365/2185(35, 661500)
+  Track: cache/2010.Daft Punk.Tron: Legacy (Amazon MP3 Exclusive Version).The Son of Flynn.wav
+  Track: cache/2015.Angus & Julia Stone.Spotify Sessions.All This Love.wav
+  Track: cache/2014.Seven Saturdays.Seven Saturdays (Ambient).Standing On Shadows Still (Ambient).wav
+  Track: cache/2014.James Newton Howard.The Hunger Games - Mockingjay Pt. 1 (Original Motin Picture Score).They're Back.wav
+  Track: cache/2014.OK Go.Hungry Ghosts.The Great Fire.wav
+  Track: cache/2014.Little Boots.Business Pleasure - EP.Pretty Tough.wav
+  Track: cache/2015.Mumford & Sons.Wilder Mind (Deluxe Version).Believe - Live.wav
+  Track: cache/1994.The London Symphony Orchestra.The Performs Sting.Fortress Around Your Heart.wav
+  Track: cache/2016.M83.Junk.Bibi The Dog.wav
+  Track: cache/2014.Pomplamoose.Season 2.The Internet Is Awesome.wav
+  Track: cache/2016.Anya Marina.Paper Plane.Not Mine.wav
+  Track: cache/2013.AviciiAloe Blacc.True.Wake Me Up.wav
+  Track: cache/2016.Miike Snow.iii.Longshot (7 Nights).wav
+  Track: cache/2016.YATES.NOON  181.MERCURY.wav
+  Track: cache/1996.The Verve Pipe.Villains.Cup of Tea.wav
+  Track: cache/2014.The Fray.Helios.Break Your Plans.wav
+  Track: cache/2016.Simon and Garfunkel.Sounds of Silence.Sounds Of Silence.wav
+  Track: cache/2014.Banda do Mar.Banda do Mar.Seja Como For.wav
+  Track: cache/2009.Skillet.Awake (Deluxe).Sometimes.wav
+  Track: cache/2014.Rise Against.The Black Market.The Great Die-Off.wav
+  Track: cache/2014.Pomplamoose.Season 2.Keep It Together.wav
+  Track: cache/2016.Ruth Koleva.R U T H.4 Am.wav
+  Track: cache/2014.Bucketheadland.Snow Slug.U 12.wav
+  Track: cache/2014.Raspberries.Guardians Of The Galaxy (Awesome Mix Vol. 1).Go All the Way.wav
+  Track: cache/2014.Milky Chance.Sadnecessary.Flashed Junk Mind.wav
+  Track: cache/1994.The London Symphony Orchestra.The Performs Sting.Moon over Bourbon Street.wav
+  Track: cache/2014.Bastille.Oblivion.bad_news (Instrumental).wav
+  Track: cache/2014.The Decemberists.What a Terrible World, What a Beautiful World.Cavalry Captain.wav
+  Track: cache/2007.Enrique Iglesias.Insomniac.Tired Of Being Sorry.wav
+  Track: cache/2001.Bond.Born.Hymn.wav
+  Track: cache/2014.Claude Debussy.MUSC233 Exam 3.Nocturnes: No. 1, Nuages.wav
+  Track: cache/2016.Tall Heights.Rafters.To Be Young.wav
+  Track: cache/2015.Three Days Grace.Human.I Am Machine.wav
+  Track: cache/2015.Will Young.85% Proof (Deluxe Edition).Always On My Mind.wav
+  Track: cache/2015.Four Tet.MorningEvening.Morning Side.wav
+[============        ] 1400/2185(35, 661500)
+  Track: cache/2015.Of Monsters And Men.Beneath The Skin.Backyard.wav
+  Track: cache/2014.Sheppard.Bombs Away.Lingering.wav
+  Track: cache/2016.XYLØ.America.America.wav
+  Track: cache/2015.MOGWAI.Central Belters.Travel Is Dangerous.wav
+  Track: cache/2016.Ruth Koleva.R U T H.Gone (ft Stamina MC).wav
+  Track: cache/2014.The Who.Who's Next (Deluxe Edition).The Song Is Over.wav
+  Track: cache/2015.IAMX.Metanoia.Happiness.wav
+  Track: cache/2002.The All-American Rejects.All-American Rejects.My Paper Heart.wav
+  Track: cache/2008.Nickelback.Dark Horse.Never Gonna Be Alone.wav
+  Track: cache/2015.Pentatonix.PTX.Papaoutai.wav
+  Track: cache/2014.Milky Chance.Sadnecessary.Sadnecessary.wav
+  Track: cache/2003.Muse.Absolution.Hysteria.wav
+  Track: cache/2014.The Neighbourhood.#000000 & #Ffffff.U&I.wav
+  Track: cache/2014.Sheppard.Bombs Away.Find Someone.wav
+  Track: cache/2015.Imagine Dragons.Smoke + Mirrors (Deluxe Edition).Polaroid.wav
+  Track: cache/2014.Pentatonix.PTX, Vol. III.Problem.wav
+  Track: cache/2015.Imagine Dragons.Smoke + Mirrors (Deluxe Edition).Smoke And Mirrors.wav
+  Track: cache/1997.Kenny Wayne Shepherd.Trouble Is.Blue on Black.wav
+  Track: cache/2014.Lower Than Atlantis.Lower Than Atlantis (Deluxe).English Kids in America.wav
+  Track: cache/2014.Bucketheadland.Snow Slug.SL 52.wav
+  Track: cache/2016.Woodkid.Desierto (Original Motion Picture Score).Sam and Moises.wav
+  Track: cache/2015.The Lighthouse and the Whaler.Brothers Sampler.Venice (Acoustic).wav
+  Track: cache/2015.MOGWAI.Central Belters.Auto Rock.wav
+  Track: cache/2016.Nelly.Suit.Over and Over.wav
+  Track: cache/2015.Lowland Hum.Native Air.Linens.wav
+  Track: cache/2016.LostBoyCrow.NOON  165.Talk Back to Me.wav
+  Track: cache/2013.Imagine Dragons.unknown.Radioactive (vs. Marina and the Diamonds).wav
+  Track: cache/2005.Flyleaf.Flyleaf.All Around Me (Acoustic Version).wav
+  Track: cache/2005.The Fray.How to Save a Life.Look After You.wav
+  Track: cache/2015.Lowland Hum.Native Air.Twine.wav
+  Track: cache/2014.Charli XCX.The Hunger Games: Mockingjay, Pt. 1 (Original Motion Picture Soundtrack).Kingdom (feat. Simon Le Bon).wav
+  Track: cache/2002.Uncle Kracker.No Stranger To Shame.Drift Away.wav
+  Track: cache/2005.Panic! at the Disco.A Fever You Can't Sweat Out.Lying Is the Most Fun a Girl Can Have Without Taking Her Clothes Off.wav
+  Track: cache/2016.Dumbfounded.Grey's Intro to Music Mixtape (Made With Love) [Vol.1].Cell Phone.wav
+  Track: cache/2016.M83.Junk.Solitude.wav
+[=============       ] 1435/2185(35, 661500)
+  Track: cache/2014.Angus & Julia Stone.Angus & Julia Stone (Deluxe Version).Grizzly Bear.wav
+  Track: cache/2014.The Rosebuds.Sand + Silence.Looking For.wav
+  Track: cache/2014.Angus & Julia Stone.Angus & Julia Stone (Deluxe Version).My Word For It.wav
+  Track: cache/2014.Rise Against.The Black Market.A Beautiful Indifference.wav
+  Track: cache/2015.Three Days Grace.Human.Car Crash.wav
+  Track: cache/2015.Vitamin String Quartet.The Geek Wedding Collection.Portal - Still Alive.wav
+  Track: cache/2012.Tyler Stenson.Some Days I'm a Lion.Often & Much.wav
+  Track: cache/2016.Olivver the Kid.NOON  179.BBBlue.wav
+  Track: cache/2014.AJR.I`m Ready EP.AfterHours.wav
+  Track: cache/2015.Zeke Duhon.Zeke Duhon.Faith And Hope.wav
+  Track: cache/2015.Logan Mays.I Still Remember.Fade.wav
+  Track: cache/2014.Tarwater.Adrift.They Told Me in the Alley.wav
+  Track: cache/2002.KutMasta Kurt.Reanimation.Enth E Nd.wav
+  Track: cache/2016.VANIC.unknown.Skinny Love (VANIC Remix).wav
+  Track: cache/2012.Emeli Sandé.Our Version Of Events.Next To Me.wav
+  Track: cache/2015.Fall Out Boy.American BeautyAmerican Psycho.Fourth Of July.wav
+  Track: cache/2015.Howie Day.Lanterns.I Saw Everything.wav
+  Track: cache/2012.Tyler Stenson.Some Days I'm a Lion.Easy, No.wav
+  Track: cache/2013.The National.Trouble Will Find Me.Fireproof.wav
+  Track: cache/2006.John Mayer.Continuum.Gravity.wav
+  Track: cache/2015.Rebel Wilson, Adam Devine.Pitch Perfect 2.We Belong.wav
+  Track: cache/2015.Pentatonix.PTX.Royals.wav
+  Track: cache/2010.Daft Punk.Tron: Legacy (Amazon MP3 Exclusive Version).Sea of Simulation (Amazon Exclusive).wav
+  Track: cache/2014.Bastille.Oblivion.Pompeii (Live With Film Orchestra).wav
+  Track: cache/2001.Death Cab for Cutie.The Photo Album.Coney Island.wav
+  Track: cache/2016.OMEA All-State Choir 2012-2013.2013 OMEA.Os Justi.wav
+  Track: cache/2015.Three Days Grace.Human.Fallen Angel.wav
+  Track: cache/2013.The National.Trouble Will Find Me.Demons.wav
+  Track: cache/2014.CHVRCHES.Under the Tide.Recover [KDA Remix].wav
+  Track: cache/2014.Cold War Kids.Hold My Home.Hold My Home.wav
+  Track: cache/2013.Avicii.True.Hey Brother.wav
+  Track: cache/2010.Daft Punk.Tron: Legacy (Amazon MP3 Exclusive Version).The Game Has Changed.wav
+  Track: cache/2016.The National.Portal 2.Exile Vilify.wav
+  Track: cache/2014.James Newton Howard.The Hunger Games - Mockingjay Pt. 1 (Original Motin Picture Score).The Arsenal.wav
+  Track: cache/2014.La Roux.Trouble in Paradise.Kiss and Not Tell.wav
+[=============       ] 1470/2185(35, 661500)
+  Track: cache/2016.Mako.Smoke Filled Room - Single.Smoke Filled Room (Acoustic).wav
+  Track: cache/2014.We Were Promised Jetpacks.Unravelling.I Keep It Composed.wav
+  Track: cache/2003.Coldplay.Live 2003.A Rush of Blood to the Head.wav
+  Track: cache/2016.Woodkid.Desierto (Original Motion Picture Score).Flare Gun.wav
+  Track: cache/2003.Madonna.American Life.Die Another Day (From The MGM.wav
+  Track: cache/2016.BANNERS.Teen Wolf Season 5.Ghosts.wav
+  Track: cache/2014.Casa Murilo.Ignition.Low Road.wav
+  Track: cache/2016.2CELLOS(SULIC & HAUSER).Celloverse (Japan Version).Live and Let Die.wav
+  Track: cache/2016.Elton John.Peachtree Road.Turn the Lights Out When You Leave.wav
+  Track: cache/2015.Pentatonix.PTX.On My Way Home.wav
+  Track: cache/2015.Interpol.Spotify Sessions.Our Social World.wav
+  Track: cache/1996.Norman Greenbaum.Alexa Mix.Spirit in the Sky.wav
+  Track: cache/2014.Carbon Leaf.Indian Summer Revisited.Grey Sky Eyes.wav
+  Track: cache/1999.Death Cab For Cutie.Something About Airplanes.Amputations.wav
+  Track: cache/2016.Liss.First.Without Me.wav
+  Track: cache/2002.Death Cab For Cutie.You Can Play These Songs With Chords.Champagne From A Paper Cup.wav
+  Track: cache/2014.Modest Mouse.Too Many Fiestas For Rueben.Too Many Fiestas For Rueben.wav
+  Track: cache/2014.The Who.Who's Next (Deluxe Edition).Love Ain't for Keeping.wav
+  Track: cache/2015.Three Days Grace.Human.One Too Many.wav
+  Track: cache/2014.Blake Mills.Heigh Ho.Half Asleep.wav
+  Track: cache/2014.We Were Promised Jetpacks.Unravelling.Disconnecting.wav
+  Track: cache/2014.Sheppard.Bombs Away.Smile.wav
+  Track: cache/2014.Banda do Mar.Banda do Mar.Solar.wav
+  Track: cache/2012.Tyler Stenson.Some Days I'm a Lion.The Arsonist.wav
+  Track: cache/2009.Skillet.Awake (Deluxe).Monster.wav
+  Track: cache/2016.Will Young.Echoes.Come On (Acoustic).wav
+  Track: cache/2014.Pentatonix.That's Christmas To Me.Hark! The Herald Angels Sing.wav
+  Track: cache/2002.Death Cab For Cutie.You Can Play These Songs With Chords.New Candles.wav
+  Track: cache/2000.Linkin Park.Hybrid Theory.In the End.wav
+  Track: cache/2003.Linkin Park.Meteora.Breaking the Habit.wav
+  Track: cache/2015.Nils Frahm.Screws Reworked.Sol (Ruhe Rework).wav
+  Track: cache/2015.God Is An Astronaut.Helios | Erebus.Agneya.wav
+  Track: cache/2015.Interpol.Spotify Sessions.All The Rage Back Home.wav
+  Track: cache/1994.The London Symphony Orchestra.The Performs Sting.Russians.wav
+  Track: cache/2013.Kodaline.In A Perfect World.Talk.wav
+[=============       ] 1505/2185(35, 661500)
+  Track: cache/2016.Ke$ha.Deconstructed.Die Young.wav
+  Track: cache/2016.Zedd.unknown.Clarity feat. Foxes (Andrew Rayel Remix).wav
+  Track: cache/2016.OMEA All-State Choir 2012-2013.2013 OMEA.Rejoice.wav
+  Track: cache/2001.Bond.Born.Oceanic.wav
+  Track: cache/1985.Jimmy Buffett.Songs You Know By Heart [1990].Volcano.wav
+  Track: cache/2014.James Newton Howard.The Hunger Games - Mockingjay Pt. 1 (Original Motin Picture Score).Incoming Bombers.wav
+  Track: cache/2007.Alex Parks.Introduction.Mad World.wav
+  Track: cache/2002.Coldplay.A Rush of Blood to the Head.Politik.wav
+  Track: cache/2000.Linkin Park.Hybrid Theory.Runaway.wav
+  Track: cache/2015.Brian Tyler.Avengers: Age of Ultron.Hulkbuster.wav
+  Track: cache/2014.Bastille.Vs. (Other People's Heartache,Pt. III).Remains (Bastille Vs. Rag N Bone Man Vs. Skunk Anansie) (Crossfaded Version) - Rag N Bone Man, Skunk Anansie.wav
+  Track: cache/2015.Lane 8.Ghost Remixes.Ghost ft. Patrick Baker (Lane 8 Rework).wav
+  Track: cache/2014.Tarwater.Adrift.Rice and Fish.wav
+  Track: cache/2016.Sleeping At Last.Atlas: Senses.Sight.wav
+  Track: cache/2005.Coldplay.X&Y.Square One.wav
+  Track: cache/2014.The World is a Beautiful Place & I am No Longer Afraid to Die.Between Bodies.If And When I Die.wav
+  Track: cache/2016.Married to the Sea.Cold War Love.I Dreamed I Was Disappearing.wav
+  Track: cache/2016.UB40.Labour of Love.Red, Red Wine.wav
+  Track: cache/2014.Have Mercy.A Place Of Our Own.Pawn Takes Rook.wav
+  Track: cache/2014.Kerretta.Pirohia.Ossein Trail.wav
+  Track: cache/2014.Beware of Safety.Lotusville.Bullet.wav
+  Track: cache/2014.So Cow.The Long Con.Get Down off That Thing.wav
+  Track: cache/2014.Milky Chance.Sadnecessary.Down By The River.wav
+  Track: cache/2014.Angus & Julia Stone.Angus & Julia Stone (Deluxe Version).A Heartbreak.wav
+  Track: cache/2016.Ke$ha.Deconstructed.Blow.wav
+  Track: cache/2014.Foo Fighters.Sonic Highways.Subterranean.wav
+  Track: cache/2015.MOGWAI.Central Belters.Batcat.wav
+  Track: cache/2013.Fall Out Boy.Save Rock and Roll.The Phoenix.wav
+  Track: cache/2004.Carbon Leaf.Indian Summer.Raise the Roof.wav
+  Track: cache/2003.Death Cab For Cutie.Transatlanticism.Expo '86.wav
+  Track: cache/2015.Logan Mays.I Still Remember.The Superhero Song.wav
+  Track: cache/2016.OMEA All-State Choir 2012-2013.2013 OMEA.How Can I Keep from Singing?.wav
+  Track: cache/2016.Nickelback.The State.Build Me Up Buttercup.wav
+  Track: cache/2014.Lower Than Atlantis.Lower Than Atlantis (Deluxe).Ain't No Friend.wav
+  Track: cache/2015.Green River Ordinance.Chasing Down The Wind.Flying.wav
+[==============      ] 1540/2185(35, 661500)
+  Track: cache/2014.This Will Destroy You.Another Language.New Topia.wav
+  Track: cache/2014.Angus & Julia Stone.Angus & Julia Stone (Deluxe Version).Death Defying Acts.wav
+  Track: cache/2014.The Neighbourhood.#000000 & #Ffffff.Unfair.wav
+  Track: cache/2014.Haerts.Haerts.Hope.wav
+  Track: cache/1996.The Verve Pipe.Villains.Real.wav
+  Track: cache/2016.Blue October.Home.Heart Go Bang.wav
+  Track: cache/2016.Blue October.Home.Houston Heights.wav
+  Track: cache/2016.Linkin Park.The Catalyst.The Catalyst, featuring ill Audio.wav
+  Track: cache/1998.Trans-Siberian Orchestra.The Christmas Attic.JoyAngels We Have Heard on High.wav
+  Track: cache/2014.Ludwig van Beethoven.MUSC233 Exam 2.Piano Sonata in C Minor, Op. 13 (Pathétique): First movement.wav
+  Track: cache/2010.Binärpilot.Nordland.Tjære For Alltid.wav
+  Track: cache/2014.The Who.Who's Next (Deluxe Edition).Naked Eye (Live).wav
+  Track: cache/2005.Flyleaf.Flyleaf.All Around Me.wav
+  Track: cache/2015.They Might Be Giants.Glean.I Can Help the Next in Line.wav
+  Track: cache/2001.Enrique Iglesias.Escape.Don't Turn Off the Lights.wav
+  Track: cache/2014.Bucketheadland.Snow Slug.W 1.wav
+  Track: cache/2014.Have Mercy.A Place Of Our Own.Nails And Teeth In Pavement.wav
+  Track: cache/2015.The Treblemakers.Pitch Perfect 2.Lollipop.wav
+  Track: cache/2013.Tyler Stenson.Lovely Little Victory.Opus of the Pines.wav
+  Track: cache/2016.Fiona Apple.Grey's Intro to Music Mixtape (Made With Love) [Vol.1].Paper Bag.wav
+  Track: cache/2014.Arnold Schoenberg.MUSC233 Exam 3.Pierrot lunaire, Op. 21: No. 8: No. 13: Enthauptung.wav
+  Track: cache/2015.Green River Ordinance.Chasing Down The Wind.Hold Me Together (b-side).wav
+  Track: cache/2015.Breaking Benjamin.Dark Before Dawn.Never Again.wav
+  Track: cache/2014.The Fray.Helios.Same As You.wav
+  Track: cache/2014.Beware of Safety.Lotusville.Iron Ribs.wav
+  Track: cache/2010.Linkin Park.A Thousand Suns.Burning In The Skies.wav
+  Track: cache/2012.Tyler Stenson.Some Days I'm a Lion.That I'll Know You....wav
+  Track: cache/2016.Daniel Kim.Pop Danthology.2013.wav
+  Track: cache/2016.Tall Heights.Man of Stone.Out of the Ground.wav
+  Track: cache/2015.Das Sound Machine, Tone Hangers, The Treblemakers, Green Bay Packers.Pitch Perfect 2.Jump.wav
+  Track: cache/2015.Danny Elfman.Avengers: Age of Ultron.It Begins.wav
+  Track: cache/2014.The Decemberists.What a Terrible World, What a Beautiful World.Philomena.wav
+  Track: cache/2001.Death Cab for Cutie.The Photo Album.Information Travels Faster.wav
+  Track: cache/2016.Matthew Wilder.I Don't Speak The Language.Break My Stride.wav
+  Track: cache/2016.Local Natives.NOON  189.Past Lives.wav
+[==============      ] 1575/2185(35, 661500)
+  Track: cache/1985.Jimmy Buffet.Jimmy Buffet's Greatest Hits.Cheeseburger In Paradise.wav
+  Track: cache/2015.Owl City.My Everything.My Everything.wav
+  Track: cache/2005.Coldplay.X&Y.Low.wav
+  Track: cache/2016.The Dunwells.Light Up The Sky.Communicate.wav
+  Track: cache/2004.Carbon Leaf.Indian Summer.Life Less Ordinary.wav
+  Track: cache/2015.Fall Out Boy.American BeautyAmerican Psycho.American BeautyAmerican Psych.wav
+  Track: cache/2014.Major Lazer.The Hunger Games: Mockingjay, Pt. 1 (Original Motion Picture Soundtrack).All My Love (feat. Ariana Grande).wav
+  Track: cache/2015.Marina and The Diamonds.FROOT.Gold.wav
+  Track: cache/2016.Randy Meisner.One More Song.Hearts on Fire.wav
+  Track: cache/2006.Three Days Grace.One-X.Time Of Dying.wav
+  Track: cache/2003.Jimmy Buffett.Meet Me in Margaritaville: The Ultimate Collection.Coconut Telegraph.wav
+  Track: cache/2016.M83.Junk.Laser Gun.wav
+  Track: cache/2015.Brian Tyler.Avengers: Age of Ultron.The Last One.wav
+  Track: cache/2015.Logan Mays.I Still Remember.Waiting for Angels.wav
+  Track: cache/2014.Foo Fighters.Sonic Highways.Outside.wav
+  Track: cache/2014.The Who.Who's Next (Deluxe Edition).Baba O'Riley.wav
+  Track: cache/2015.Wild Child.Past & Present.Rillo Talk.wav
+  Track: cache/2014.Haerts.Haerts.Hemiplegia.wav
+  Track: cache/2014.Pentatonix.PTX, Vol. III.On My Way Home.wav
+  Track: cache/2016.Navarra.NOON  152.Fast Car.wav
+  Track: cache/2014.Mitis.Oasis - EP.Oasis (Instrumental Mix).wav
+  Track: cache/1984.The Smiths.Hatful Of Hollow.How Soon Is Now.wav
+  Track: cache/2014.The Phoenix Foundation.Echoes.Wine Song.wav
+  Track: cache/2015.Pentatonix.PTX.Somebody That I Used to Know.wav
+  Track: cache/2013.Kodaline.In A Perfect World.Brand New Day.wav
+  Track: cache/2014.Angus & Julia Stone.Angus & Julia Stone (Deluxe Version).From The Stalls.wav
+  Track: cache/1999.Death Cab For Cutie.Something About Airplanes.Pictures In An Exhibition.wav
+  Track: cache/2015.Imagine Dragons.Insurgent (Original Motion Picture Soundtrack).Warriors.wav
+  Track: cache/2015.Great States.Great States.West Egg.wav
+  Track: cache/2009.Super Mash Bros..All About The Scrilions.Fixies & Ferraris.wav
+  Track: cache/2016.Styx.The Grand Illusion.Come Sail Away.wav
+  Track: cache/2003.Coldplay.Live 2003.Politik.wav
+  Track: cache/2014.We Were Promised Jetpacks.Unravelling.Ricochet.wav
+  Track: cache/2009.Brand New.Daisy.You Stole.wav
+  Track: cache/2014.The Who.Who's Next (Deluxe Edition).Love Ain't for Keeping (New York Record Plant Session).wav
+[==============      ] 1610/2185(35, 661500)
+  Track: cache/2016.M83.Junk.Moon Crystal.wav
+  Track: cache/2010.Binärpilot.Nordland.Geeks.wav
+  Track: cache/2015.MOGWAI.Central Belters.We're No Here.wav
+  Track: cache/2016.Duck House.NOON  179.Your Call.wav
+  Track: cache/2016.Swimming.Grey's Intro to Music Mixtape (Made With Love) [Vol.1].Neutron Wireless Crystal.wav
+  Track: cache/2012.Tyler Stenson.Some Days I'm a Lion.My Love, My Love.wav
+  Track: cache/2016.2CELLOS(SULIC & HAUSER).Celloverse (Japan Version).Celloverse.wav
+  Track: cache/2016.Woodkid.Desierto (Original Motion Picture Score).Land of All.wav
+  Track: cache/2010.Tyler Stenson.Bittersweet Parade.Push That River.wav
+  Track: cache/2016.Jonny Lang.Lie To Me.When I Come to You.wav
+  Track: cache/2014.Bastille.Vs. (Other People's Heartache,Pt. III).Bite Down (Bastille Vs. Haim) (Crossfaded Version) - Haim.wav
+  Track: cache/2015.Florence + The Machine.How Big, How Blue, How Beautiful (Limited Deluxe Edition).How Big, How Blue, How Beautiful (Demo).wav
+  Track: cache/2012.Pentatonix.PTX vol 1.Starships.wav
+  Track: cache/2014.Fences.Lesser Oceans.Arrows (feat. Macklemore & Ryan Lewis).wav
+  Track: cache/2016.Anya Marina.Paper Plane.We Were Happy Once (feat. Bess Rogers).wav
+  Track: cache/2003.Coldplay.Live 2003.God Put a Smile Upon Your Face.wav
+  Track: cache/2013.The National.Trouble Will Find Me.Humiliation.wav
+  Track: cache/2014.Fences.Lesser Oceans.Running Off The Gods.wav
+  Track: cache/2015.Death Cab For Cutie.Kintsugi.The Ghosts Of Beverly Drive.wav
+  Track: cache/2016.Lane 8.Rise (Remixed).Loving You feat. Lulu James (Kiwi Remix).wav
+  Track: cache/2014.Franz Schubert.MUSC233 Exam 2.Gretchen am Spinnrade, D. 118.wav
+  Track: cache/2016.Leo Kalyan.NOON  183.Daydream.wav
+  Track: cache/2014.Pentatonix.That's Christmas To Me.Sleigh Ride.wav
+  Track: cache/2015.Imagine Dragons.Smoke + Mirrors (Deluxe Edition).I Bet My Life.wav
+  Track: cache/2016.The Dunwells.Light Up The Sky.She Whispers.wav
+  Track: cache/2007.Enrique Iglesias.Insomniac.Do You Know? (The Ping Pong Song).wav
+  Track: cache/2015.They Might Be Giants.Glean.Let Me Tell You About My Operation.wav
+  Track: cache/2016.2CELLOS(SULIC & HAUSER).Celloverse (Japan Version).I Will Wait.wav
+  Track: cache/2016.2CELLOS(SULIC & HAUSER).Celloverse (Japan Version).Street Spirit (Fade Out).wav
+  Track: cache/2015.Great States.Great States.Arcadia.wav
+  Track: cache/2016.Kellen.NOON  193.SeeThroughDreams.wav
+  Track: cache/2016.P!nk.Funhouse.Sober (Explicit).wav
+  Track: cache/2015.Imagine Dragons.Smoke + Mirrors (Deluxe Edition).Second Chances.wav
+  Track: cache/2015.Interpol.Spotify Sessions.On "Anywhere".wav
+  Track: cache/2014.Lower Than Atlantis.Lower Than Atlantis (Deluxe).Here We Go.wav
+[===============     ] 1645/2185(35, 661500)
+  Track: cache/2015.Mark Mothersbaugh.Pitch Perfect 2.Pitch Perfect 2 End Credit Medley.wav
+  Track: cache/2014.Angus & Julia Stone.Angus & Julia Stone (Deluxe Version).Please You.wav
+  Track: cache/2016.Mogwai.Atomic.Ether.wav
+  Track: cache/2014.Pomplamoose.Season 2.Video Killed the Radio Star.wav
+  Track: cache/2014.The Who.Who's Next (Deluxe Edition).Bargain.wav
+  Track: cache/2015.Amber Run.5AM (Deluxe) WEB.Heaven.wav
+  Track: cache/2014.Modest Mouse.White Lies, Yellow Teeth  Buttons To Push the Buttons - Single.White Lies, Yellow Teeth.wav
+  Track: cache/2015.Tyler Stenson.Say No More.Say No More.wav
+  Track: cache/1996.The Verve Pipe.Villains.Photograph.wav
+  Track: cache/2014.This Will Destroy You.Another Language.Dustism.wav
+  Track: cache/2016.Koresma.NOON  189.Bridges.wav
+  Track: cache/2015.Florence + The Machine.How Big, How Blue, How Beautiful (Limited Deluxe Edition).What Kind Of Man.wav
+  Track: cache/2002.Coldplay.A Rush of Blood to the Head.A Rush of Blood to the Head.wav
+  Track: cache/2016.Elton John.Peachtree Road.It's Getting Dark In Here.wav
+  Track: cache/2016.John Mayer.Any Given Thursday (2).Your Body is a Wonderland.wav
+  Track: cache/2014.Coldplay.Ghost Stories Live 2014.Magic (Live At the Enmore Theatre, Sydney).wav
+  Track: cache/2013.Tyler Stenson.Lovely Little Victory.Ramblin Kind.wav
+  Track: cache/2014.Pentatonix.That's Christmas To Me.Mary, Did You Know?.wav
+  Track: cache/2014.This Will Destroy You.Another Language.Serpent Mound.wav
+  Track: cache/2014.Casa Murilo.Ignition.Ignition.wav
+  Track: cache/2000.Linkin Park.Hybrid Theory.One Step Closer.wav
+  Track: cache/2015.They Might Be Giants.Glean.Music Jail, Pt. 1 & 2.wav
+  Track: cache/2014.Coldplay.Ghost Stories Live 2014.Ink (Live At Le Casino De Paris, Paris).wav
+  Track: cache/2015.Pentatonix.PTX.La La Latch.wav
+  Track: cache/2014.The Best Pessimist.Flowers Blossom In The Space.Sleep Well.wav
+  Track: cache/2015.Logan Mays.I Still Remember.Screw Up (Ft. Megan Michele of the Resistance).wav
+  Track: cache/2014.Pentatonix.That's Christmas To Me.That's Christmas To Me.wav
+  Track: cache/2015.Dawn And Hawkes.Golden Heart EP + Yours and Mine Preview.Holler.wav
+  Track: cache/2015.They Might Be Giants.Glean.Glean.wav
+  Track: cache/2002.Switchfoot.A Walk to Remember.Dare You to Move.wav
+  Track: cache/2007.Linkin Park.Minutes to Midnight.Wake.wav
+  Track: cache/2015.Brian Tyler.Avengers: Age of Ultron.Birth of Ultron.wav
+  Track: cache/2014.Mitis & Crywolf.Oasis - EP.Oasis (Vocal Mix).wav
+  Track: cache/2016.Andrew McMahon in the Wilderness.Andrew McMahon in the Wilderness.High Dive.wav
+  Track: cache/2003.Snow Patrol.Final Straw.Spitting Games.wav
+[===============     ] 1680/2185(35, 661500)
+  Track: cache/2014.Raury.The Hunger Games: Mockingjay, Pt. 1 (Original Motion Picture Soundtrack).Lost Souls.wav
+  Track: cache/2015.Brian Tyler.Avengers: Age of Ultron.Keys to the Past.wav
+  Track: cache/2015.Imagine Dragons.Smoke + Mirrors (Deluxe Edition).Hopeless Opus.wav
+  Track: cache/2001.Enrique Iglesias.Escape.I Will Survive.wav
+  Track: cache/2015.Nils Frahm.Screws Reworked.Mi (Soul Channel Rework).wav
+  Track: cache/2009.Skillet.Awake (Deluxe).Forgiven.wav
+  Track: cache/2014.This Will Destroy You.Another Language.Memory Loss.wav
+  Track: cache/2014.Have Mercy.A Place Of Our Own.Lean.wav
+  Track: cache/2015.Vitamin String Quartet.VSQ Performs the Hits of 2014 Vol. 3.Habits (Stay High) [String Quartet Tribute to Tove Lo].wav
+  Track: cache/2004.Carbon Leaf.Indian Summer.What About Everything?.wav
+  Track: cache/2012.The Staves.Dead & Born & Grown.Winter Trees.wav
+  Track: cache/2016.Lane 8.Rise (Remixed).Undercover feat. Matthew Dear (Yotto Remix).wav
+  Track: cache/2015.MOGWAI.Central Belters.Remurdered.wav
+  Track: cache/2016.Miguel.The Remixes Vol. 1.Sure Thing (E-603 Remix).wav
+  Track: cache/2008.Rihanna.Good Girl Gone Bad: Reloaded.Shut Up and Drive.wav
+  Track: cache/2015.Marina and The Diamonds.FROOT.Savages.wav
+  Track: cache/2014.Palace.Lost In The Night (EP).Veins.wav
+  Track: cache/2015.Hinkstep.My Forest Queen.Snö.wav
+  Track: cache/2014.IRREVERSIBLE.Surface.Side Effects Of Living.wav
+  Track: cache/2016.Tall Heights.Man of Stone.Flash Boom.wav
+  Track: cache/2014.On-The-Go.Young Hearts [WEB Edition].Keep Pretending.wav
+  Track: cache/2009.Super Mash Bros..All About The Scrilions.Adler Girl Pt. II (I Can Change!).wav
+  Track: cache/2014.Linfield College Concert Choir.Christmas at Linfield.Have Yourself a Merry Little Christmas.wav
+  Track: cache/2015.Angus & Julia Stone.Angus & Julia Stone: The Remixes.From The Stalls (Fever 105 Remix).wav
+  Track: cache/2000.Coldplay.Parachutes.Spies.wav
+  Track: cache/2009.DarkChameleon.unknown.Bendy.wav
+  Track: cache/2003.Coldplay.Live 2003.In My Place.wav
+  Track: cache/2007.Linkin Park.Minutes to Midnight.In Pieces.wav
+  Track: cache/2014.Lower Than Atlantis.Lower Than Atlantis (Deluxe).Words Don't Come So Easily.wav
+  Track: cache/2016.Aperture Science Psychoacoustics Laboratory.Portal 2: Songs to Test By - Volume 3.Want You Gone.wav
+  Track: cache/2014.La Roux.Trouble in Paradise.Silent Partner.wav
+  Track: cache/2003.Jimmy Buffett.Meet Me in Margaritaville: The Ultimate Collection.Jolly Mon Sing.wav
+  Track: cache/2014.Casa Murilo.Ignition.Faultless.wav
+  Track: cache/2014.Lower Than Atlantis.Lower Than Atlantis (Deluxe).Time.wav
+  Track: cache/2015.Interpol.Spotify Sessions.On Untitled.wav
+[===============     ] 1715/2185(35, 661500)
+  Track: cache/2014.Mogwai.Music Industry 3. Fitness Industry 1 [EP].HMP Shaun William Ryder.wav
+  Track: cache/2015.Amber Run.5AM (Deluxe) WEB.Spark.wav
+  Track: cache/2015.Death Cab For Cutie.Kintsugi.Hold No Guns.wav
+  Track: cache/2012.Owl City.The Midsummer Station.Bombshell Blonde.wav
+  Track: cache/2007.Linkin Park.Minutes to Midnight.Shadow of the Day.wav
+  Track: cache/2006.Evanescence.The Open Door.Lithium.wav
+  Track: cache/2015.The Best Pessimist.The Half-World.My Long Goodbye.wav
+  Track: cache/2014.The Fray.Helios.Shadow and a Dancer.wav
+  Track: cache/2009.Metric.Fantasies.Help I'm Alive.wav
+  Track: cache/2015.The Best Pessimist.The Half-World.Hearts.wav
+  Track: cache/2014.Claudin de Sermisy.MUSC233 Exam 3.Tant que vivray.wav
+  Track: cache/2015.Amber Run.5AM (Deluxe) WEB.Pilot.wav
+  Track: cache/2014.The Who.Who's Next (Deluxe Edition).Pure and Easy (New York Record Plant Session).wav
+  Track: cache/2009.The Lights.The Listening.Ice.wav
+  Track: cache/2016.Miike Snow.iii.Heart Is Full [Remix] (feat. Run The Jewels).wav
+  Track: cache/2015.The Barden Bellas.Pitch Perfect 2.Back To Basics.wav
+  Track: cache/2005.The Fray.How to Save a Life.Dead Wrong.wav
+  Track: cache/2004.Jay-ZLinkin Park.Collision Course.Dirt Off Your ShoulderLying from You.wav
+  Track: cache/2015.Howie Day.Lanterns.Worry.wav
+  Track: cache/2015.Pen Pals.Gold.July.wav
+  Track: cache/2014.Damien Rice.My Favourite Faded Fantasy.Colour Me In.wav
+  Track: cache/2016.The Kingston Trio.Very Best of the Kingston Trio.The Lion Sleeps Tonight.wav
+  Track: cache/2015.MOGWAI.Central Belters.Take Me Somewhere Nice.wav
+  Track: cache/2001.Pink.M!ssundaztood.Get the Party Started.wav
+  Track: cache/2010.Linkin Park.A Thousand Suns.Wretches And Kings.wav
+  Track: cache/2015.Fall Out Boy.American BeautyAmerican Psycho.Uma Thurman.wav
+  Track: cache/2014.La Roux.Trouble in Paradise.Cruel Sexuality.wav
+  Track: cache/2015.God Is An Astronaut.Helios | Erebus.Pig Powder.wav
+  Track: cache/2001.Daft Punk.Discovery.Voyager.wav
+  Track: cache/2014.Damien Rice.My Favourite Faded Fantasy.It Takes A Lot To Know A Man.wav
+  Track: cache/2012.phenste.Viva La Primadonna.Viva La Primadonna [Marina and the Diamonds vs. Coldplay].wav
+  Track: cache/2005.Flyleaf.Flyleaf.Perfect.wav
+  Track: cache/2005.Flyleaf.Flyleaf.Red Sam (Acoustic Version).wav
+  Track: cache/2016.The Dunwells.Light Up The Sky.Light Up The Sky.wav
+  Track: cache/2015.Logan Mays.I Still Remember.Little Things.wav
+[================    ] 1750/2185(35, 661500)
+  Track: cache/2015.MOGWAI.Central Belters.I'm Jim Morrison, I'm Dead.wav
+  Track: cache/2014.Haerts.Giving Up.Call My Name.wav
+  Track: cache/2015.Howie Day.Lanterns.Make Peace.wav
+  Track: cache/2014.Foo Fighters.Sonic Highways.I Am A River.wav
+  Track: cache/2008.Mr. Scruff.Ninja Tuna.Kalimba.wav
+  Track: cache/2010.Linkin Park.A Thousand Suns.The Messenger.wav
+  Track: cache/2016.HUMANS.NOON  183.Water Water.wav
+  Track: cache/2016.Explosions in the Sky.Friday Night Lights [Original Movie Soundtrack].Your Hand In Mine.wav
+  Track: cache/2016.TOURIST.NOON  182.Run.wav
+  Track: cache/2004.Carbon Leaf.Indian Summer.Changeless.wav
+  Track: cache/2016.Cameron Stahl.Cameron Stahl.C# Low.wav
+  Track: cache/2006.John Mayer.Continuum.Belief.wav
+  Track: cache/2014.Lower Than Atlantis.Lower Than Atlantis (Deluxe).Just What You Need.wav
+  Track: cache/2015.Mumford & Sons.Wilder Mind (Deluxe Version).The Wolf.wav
+  Track: cache/2015.MOGWAI.Central Belters.Hungry Face.wav
+  Track: cache/2000.Death Cab for Cutie.Forbidden Love [EP].Company Calls Epilogue [Altern.wav
+  Track: cache/2005.Nickelback.All the Right Reasons.Far Away.wav
+  Track: cache/2015.Death Cab For Cutie.Kintsugi.No Room In Frame.wav
+  Track: cache/2014.Hector Berlioz.MUSC233 Exam 3.Symphonie fantastique: Fifth movement, “Dream of a Witches’ Sabbath”.wav
+  Track: cache/2005.Coldplay.X&Y.Speed of Sound.wav
+  Track: cache/2016.Wolfmother.Grey's Intro to Music Mixtape (Made With Love) [Vol.1].Where Eagles Have Been.wav
+  Track: cache/2001.Bond.Born.Alexander the Great.wav
+  Track: cache/2015.MOGWAI.Central Belters.Hugh Dallas.wav
+  Track: cache/2016.Albin Lee Meldau.NOON  182.Lou Lou.wav
+  Track: cache/1992.Queen.Hot Space.Under Pressure.wav
+  Track: cache/2014.OK Go.Hungry Ghosts.Obsession.wav
+  Track: cache/2014.The Five Stairsteps.Guardians Of The Galaxy (Awesome Mix Vol. 1).O-O-H Child.wav
+  Track: cache/2014.Palace.Lost In The Night (EP).Ocean Deep.wav
+  Track: cache/1996.The Verve Pipe.Villains.Villains.wav
+  Track: cache/2015.Angus & Julia Stone.Angus & Julia Stone: The Remixes.A Heartbreak (Ten Ven Remix).wav
+  Track: cache/2014.Seven Saturdays.Seven Saturdays (Ambient).Fields (Ambient).wav
+  Track: cache/2008.Rihanna.Good Girl Gone Bad: Reloaded.Umbrella.wav
+  Track: cache/2014.Norman Greenbaum.Guardians Of The Galaxy (Awesome Mix Vol. 1).Spirit in the Sky.wav
+  Track: cache/2009.Rufus Wainwright.Hallelujah.Hallelujah.wav
+  Track: cache/2014.The Decemberists.What a Terrible World, What a Beautiful World.Mistral.wav
+[================    ] 1785/2185(35, 661500)
+  Track: cache/2014.Pomplamoose.Season 2.Puttin' On the Ritz.wav
+  Track: cache/2016.Passion Pit.The Remixes Vol. 1.Seaweed Song (E-603 Remix).wav
+  Track: cache/2006.Glen Hansard and Marketa Irglova.The Swell Season.Falling Slowly.wav
+  Track: cache/2014.Damien Rice.My Favourite Faded Fantasy.I Don't Want To Change You.wav
+  Track: cache/2000.David Cassidy.The Definitive Collection.I Think I Love You.wav
+  Track: cache/2001.Death Cab for Cutie.The Photo Album.Styrofoam Plates.wav
+  Track: cache/2015.Wild Child.Past & Present.Bullets.wav
+  Track: cache/2015.Howie Day.Lanterns.Life-Sized.wav
+  Track: cache/2015.Godspeed You! Black Emperor.Asunder,Sweet and Other Distress.Lambs' Breath.wav
+  Track: cache/2007.Gladys Knight & The Pips.Midnight Train To Georgia - The Best Of.Midnight Train To Georgia.wav
+  Track: cache/2016.Blue October.Home.Heart Go Bang (Night Mix Prod. by The Egg).wav
+  Track: cache/2014.Totorro.Home Alone.Eric Colson.wav
+  Track: cache/2014.Blueneck.King Nine.Sirens.wav
+  Track: cache/2015.Angus & Julia Stone.Spotify Sessions.Heart Beats Slow.wav
+  Track: cache/2014.Engineers.Always Returning.It Rings So True.wav
+  Track: cache/2013.Tyler Stenson.Lovely Little Victory.This Too Shall Pass (Remix).wav
+  Track: cache/2005.Coldplay.X&Y.Talk.wav
+  Track: cache/2016.The Neighbourhood.I Love You..Sweater Weather.wav
+  Track: cache/2007.Carrie Underwood.Carnival Ride.Flat On The Floor.wav
+  Track: cache/2015.Florence + The Machine.How Big, How Blue, How Beautiful (Limited Deluxe Edition).Mother.wav
+  Track: cache/2014.La Roux.Trouble in Paradise.Sexotheque.wav
+  Track: cache/2013.Tyler Stenson.Lovely Little Victory.Monday and a Mountain.wav
+  Track: cache/2002.Death Cab For Cutie.You Can Play These Songs With Chords.President Of What.wav
+  Track: cache/2015.Cold War Kids.Five Quick Cuts - EP.Thunderhearts.wav
+  Track: cache/2014.Bastille.Vs. (Other People's Heartache,Pt. III).Fall Into Your Arms (Bastille Vs. The Gemma Sharples Quartet) (Crossfaded Version) - The Gemma Sharples Quartet.wav
+  Track: cache/2016.Ruth Koleva.R U T H.What Am I Supposed To?.wav
+  Track: cache/1994.The Cranberries.No Need to Argue.Zombie.wav
+  Track: cache/1985.Neil Diamond.His 12 Greatest Hits.Shilo.wav
+  Track: cache/2016.M83.Junk.Road Blaster.wav
+  Track: cache/2001.Bond.Born.Kismet.wav
+  Track: cache/2010.Daft Punk.Tron: Legacy (Amazon MP3 Exclusive Version).Fall.wav
+  Track: cache/2014.Damien Rice.My Favourite Faded Fantasy.The Box.wav
+  Track: cache/2009.Skillet.Awake (Deluxe).Hero.wav
+  Track: cache/2014.The Rosebuds.Sand + Silence.Death Of An Old Bike.wav
+  Track: cache/2014.Foo Fighters.Sonic Highways.Congregation.wav
+[================    ] 1820/2185(35, 661500)
+  Track: cache/2013.OK Go.Twelve Months of OK Go.Do You Love Me Now? (The Breeders cover).wav
+  Track: cache/2016.Cold War Kids.Robbers and Cowards.Hang Me Up To Dry.wav
+  Track: cache/2000.Coldplay.Parachutes.Trouble.wav
+  Track: cache/2012.Tyler Stenson.Some Days I'm a Lion.True Royal Blue.wav
+  Track: cache/2014.Little Boots.Business Pleasure - EP.Taste It.wav
+  Track: cache/2015.Of Monsters And Men.Beneath The Skin.I Of The Storm.wav
+  Track: cache/1998.Trans-Siberian Orchestra.The Christmas Attic.Dream Child (A Christmas Dream).wav
+  Track: cache/2003.Evanescence.Fallen.Tourniquet.wav
+  Track: cache/2016.Ruth Koleva.R U T H.Dizzy Love Affair.wav
+  Track: cache/2015.Mumford & Sons.Wilder Mind (Deluxe Version).Cold Arms.wav
+  Track: cache/2014.Haerts.Giving Up.Giving Up.wav
+  Track: cache/2016.Biblio.NOON  165.Petals.wav
+  Track: cache/2015.Death Cab For Cutie.Kintsugi.Binary Sea.wav
+  Track: cache/2016.The Dunwells.Light Up The Sky.Will You Wait For Me.wav
+  Track: cache/2015.MOGWAI.Central Belters.Half Time.wav
+  Track: cache/2014.So Cow.The Long Con.Barry Richardson.wav
+  Track: cache/2014.Palace.Lost In The Night (EP).I Want What You Got.wav
+  Track: cache/2014.James Newton Howard.The Hunger Games - Mockingjay Pt. 1 (Original Motin Picture Score).The Mockingjay.wav
+  Track: cache/2016.Korusho.Kongregate.Info Storm.wav
+  Track: cache/2014.Coldplay.Ghost Stories Live 2014.A Sky Full of Stars (Live At the Royal Albert Hall, London).wav
+  Track: cache/2012.Tyler Stenson.Some Days I'm a Lion.Head & Heart.wav
+  Track: cache/2014.Beware of Safety.Lotusville.To Be Curious is Dangerous Enough.wav
+  Track: cache/2005.Flyleaf.Flyleaf.I'm Sorry.wav
+  Track: cache/2014.OK Go.Hungry Ghosts.I Won't Let You Down.wav
+  Track: cache/2006.Breaking Benjamin.Phobia.Evil Angel.wav
+  Track: cache/2014.Have Mercy.A Place Of Our Own.Spacecrafts.wav
+  Track: cache/2005.Coldplay.X&Y.White Shadows.wav
+  Track: cache/2014.Mogwai.Music Industry 3. Fitness Industry 1 [EP].The Lord is Out of Control (Nils Frahm Remix).wav
+  Track: cache/2013.The National.Trouble Will Find Me.This Is The Last Time.wav
+  Track: cache/2014.Palace.Lost In The Night (EP).Bitter.wav
+  Track: cache/2014.The Neighbourhood.#000000 & #Ffffff.1 Of Those Weaks.wav
+  Track: cache/2014.Buckethead.Pike 91.Pike 91.wav
+  Track: cache/2008.The Avett Brothers.The Second Gleam (ep).Murder In The City.wav
+  Track: cache/2014.Carbon Leaf.Indian Summer Revisited.The Sea.wav
+  Track: cache/2015.Florence + The Machine.How Big, How Blue, How Beautiful (Limited Deluxe Edition).Long & Lost.wav
+[================    ] 1855/2185(35, 661500)
+  Track: cache/2001.Bond.Born.The 1812.wav
+  Track: cache/2015.Pentatonix.PTX.I Need Your Love.wav
+  Track: cache/2015.They Might Be Giants.Glean.Erase.wav
+  Track: cache/2016.ΔUGUST.NOON  187.SWORD.wav
+  Track: cache/2016.2CELLOS(SULIC & HAUSER).Celloverse (Japan Version).They Don't Care About Us.wav
+  Track: cache/2015.Pentatonix.PTX.See Through.wav
+  Track: cache/2001.Enrique Iglesias.Escape.One Night Stand.wav
+  Track: cache/2001.Enrique Iglesias.Escape.Heroe.wav
+  Track: cache/2015.MOGWAI.Central Belters.The Sun Smells Too Loud.wav
+  Track: cache/2002.Coldplay.A Rush of Blood to the Head.The Scientist.wav
+  Track: cache/2016.Anya Marina.Paper Plane.Power of Love.wav
+  Track: cache/2016.ParagonX9.Newgrounds Audio Portal.Chaoz Fantasy.wav
+  Track: cache/2015.Dawn And Hawkes.Golden Heart EP + Yours and Mine Preview.Ten Leap Years.wav
+  Track: cache/2015.Will Young.85% Proof (Deluxe Edition).I Don't Need a Lover.wav
+  Track: cache/2014.The Decemberists.What a Terrible World, What a Beautiful World.Better Not Wake the Baby.wav
+  Track: cache/2014.The Rosebuds.Sand + Silence.Mine Mine.wav
+  Track: cache/2014.We Were Promised Jetpacks.Unravelling.Moral Compass.wav
+  Track: cache/2014.We Were Promised Jetpacks.Unravelling.Night Terror.wav
+  Track: cache/2015.Brian Tyler.Avengers: Age of Ultron.Breaking and Entering.wav
+  Track: cache/2011.Coldplay.Until Now.Every Teardrop Is A Waterfall (Swedish House Mafia Remix).wav
+  Track: cache/2016.LOYAL.NOON  179.House for You.wav
+  Track: cache/2016.Anya Marina.Paper Plane.Gimme Resurrection.wav
+  Track: cache/2016.XY&O.NOON  185.I'm Not Right.wav
+  Track: cache/2003.Evanescence.Fallen.My Immortal.wav
+  Track: cache/2002.Breaking Benjamin.Saturate.Polyamorous.wav
+  Track: cache/2014.Lower Than Atlantis.Lower Than Atlantis (Deluxe).Emily.wav
+  Track: cache/2016.Aperture Science Psychoacoustics Laboratory.Portal 2: Songs to Test By - Volume 3.Cara Mia Addio.wav
+  Track: cache/2014.The Decemberists.What a Terrible World, What a Beautiful World.The Singer Addresses His Audience.wav
+  Track: cache/2016.Woodkid.The Golden Age.I Love You (Quintet Version).wav
+  Track: cache/2014.The Who.Who's Next (Deluxe Edition).Pure and Easy (Live).wav
+  Track: cache/2007.Enrique Iglesias.Insomniac.Sweet Isabel.wav
+  Track: cache/2016.Aperture Science Psychoacoustics Laboratory.Portal 2: Songs to Test By - Volume 3.Robot Waiting Room #3.wav
+  Track: cache/2015.Mumford & Sons.Wilder Mind (Deluxe Version).Monster.wav
+  Track: cache/2015.Cold War Kids.Five Quick Cuts - EP.One Song at a Time.wav
+  Track: cache/2005.Panic! at the Disco.A Fever You Can't Sweat Out.I Write Sins Not Tragedies.wav
+[=================   ] 1890/2185(35, 661500)
+  Track: cache/2011.The Head And The Heart.The Head And The Heart.Down In The Valley.wav
+  Track: cache/2006.Snow Patrol.Eyes Open.Set The Fire To The Third Bar.wav
+  Track: cache/2015.Amber Run.5AM (Deluxe) WEB.CF (Interlude).wav
+  Track: cache/2015.Pen Pals.Gold.Open Door.wav
+  Track: cache/2014.Engineers.Always Returning.Smiling Back.wav
+  Track: cache/2007.Matchbox Twenty.Exile on Mainstream.3 AM.wav
+  Track: cache/2015.Great States.Great States.Carraway.wav
+  Track: cache/2015.Of Monsters And Men.Beneath The Skin.We Sink [explicit].wav
+  Track: cache/2016.Kim Carnes.Mistaken Identity.Betty Davis Eyes.wav
+  Track: cache/2014.Foo Fighters.Sonic Highways.In The Clear.wav
+  Track: cache/2014.Jackson 5.Guardians Of The Galaxy (Awesome Mix Vol. 1).I Want You Back.wav
+  Track: cache/2009.Skillet.Awake (Deluxe).One Day Too Late.wav
+  Track: cache/2015.IAMX.Metanoia.Aphrodisiac.wav
+  Track: cache/2015.Breaking Benjamin.Dark Before Dawn.Dawn.wav
+  Track: cache/2015.Mumford & Sons.Wilder Mind (Deluxe Version).The Wolf - Live.wav
+  Track: cache/2007.Enrique Iglesias.Insomniac.On Top Of You.wav
+  Track: cache/2012.Binärpilot.Songs For Alan Turing.Pageantry.wav
+  Track: cache/2005.The Fray.How to Save a Life.She Is.wav
+  Track: cache/2005.Flyleaf.Flyleaf.I'm So Sick.wav
+  Track: cache/2015.Nils Frahm.Screws Reworked.Re (Helios Rework).wav
+  Track: cache/2016.FløwKelly.Concrete Roses.Overlooked Passengers (Feat. Adrian Clifford).wav
+  Track: cache/2016.Blondfire.Grey's Intro to Music Mixtape (Made With Love) [Vol.1].Oxygen.wav
+  Track: cache/2002.Death Cab For Cutie.You Can Play These Songs With Chords.Line Of Best Fit.wav
+  Track: cache/2011.Rise Against.Endgame.Make It Stop (September's Children).wav
+  Track: cache/2015.Das Sound Machine.Pitch Perfect 2.World Championship Finale 1.wav
+  Track: cache/2003.Snow Patrol.Final Straw.Wow.wav
+  Track: cache/2007.Alex BandSantana.Ultimate Santana.Why Don't You & I.wav
+  Track: cache/2012.Trampled By Turtles.Stars and Satellites.Midnight on the Interstate.wav
+  Track: cache/2016.Lane 8.Rise (Remixed).Sunlight (Jody Wisternoff Remix).wav
+  Track: cache/1986.The Smiths.The Queen Is Dead.There Is A Light That Never Goes Out.wav
+  Track: cache/2014.Blueneck.Night of the Meek.Blue Christmas.wav
+  Track: cache/2016.Johnny Stimson.NOON  178.You Can't Save Me.wav
+  Track: cache/2015.Danny Elfman.Avengers: Age of Ultron.Inevitability-One Good Eye.wav
+  Track: cache/2010.Mike Posner.31 Minutes To Takeoff.Synthesizer.wav
+  Track: cache/2016.2CELLOS(SULIC & HAUSER).Celloverse (Japan Version).Wake Me Up.wav
+[=================   ] 1925/2185(35, 661500)
+  Track: cache/2006.Binärpilot.You Can't Stop Da Funk.Destroy The Popollution.wav
+  Track: cache/2005.Death Cab For Cutie.Marching Bands Of Manhattan.Marching Bands Of Manhattan.wav
+  Track: cache/2004.Jay-ZLinkin Park.Collision Course.IzzoIn the End.wav
+  Track: cache/2014.Bucketheadland.Snow Slug.N 6.wav
+  Track: cache/2010.Binärpilot.Nordland.Nordland.wav
+  Track: cache/2014.The Who.Who's Next (Deluxe Edition).Won't Get Fooled Again.wav
+  Track: cache/2014.Blueneck.King Nine.King Nine.wav
+  Track: cache/2014.Foo Fighters.Sonic Highways.Something From Nothing.wav
+  Track: cache/2012.Ariel Pink's Haunted Graffiti.Mature Themes.Only In My Dreams.wav
+  Track: cache/2016.Ten Fé.NOON  180.In the Air - Star Slinger Remix.wav
+  Track: cache/2016.Miike Snow.iii.Heart Is Full.wav
+  Track: cache/2015.Brian Tyler.Avengers: Age of Ultron.Rise Together.wav
+  Track: cache/2010.Daft Punk.Tron: Legacy (Amazon MP3 Exclusive Version).Derezzed.wav
+  Track: cache/2016.KOLIDESCOPES.NOON  193.Memory Lane.wav
+  Track: cache/2009.Skillet.Awake (Deluxe).Dead Inside (Bonus Track).wav
+  Track: cache/1996.The Verve Pipe.Villains.Myself.wav
+  Track: cache/2015.Imagine Dragons.Smoke + Mirrors (Deluxe Edition).Summer.wav
+  Track: cache/2014.Milky Chance.Sadnecessary.Sweet Sun.wav
+  Track: cache/2014.The Rosebuds.Sand + Silence.Give Me A Reason.wav
+  Track: cache/2016.unknown.2013 OMEA.The Ground - Ola Gjeilo.wav
+  Track: cache/2001.Death Cab for Cutie.The Photo Album.A Movie Script Ending.wav
+  Track: cache/2013.The National.Trouble Will Find Me.I Need My Girl.wav
+  Track: cache/2010.Tyler Stenson.Bittersweet Parade.Great Man's Funeral.wav
+  Track: cache/2015.Pentatonix.PTX.Radioactive.wav
+  Track: cache/2014.Angus & Julia Stone.Angus & Julia Stone (Deluxe Version).Main Street.wav
+  Track: cache/1975.America.History.A Horse With No Name.wav
+  Track: cache/2016.OMEA All-State Choir 2012-2013.2013 OMEA.Sing Unto God.wav
+  Track: cache/2016.Robyn.The Remixes Vol. 1.Dancing On My Own (E-603 Remix).wav
+  Track: cache/2015.Wild Child.Past & Present.Silly Things.wav
+  Track: cache/2005.Flyleaf.Flyleaf.I'm So Sick (Acoustic Version).wav
+  Track: cache/2002.Coldplay.A Rush of Blood to the Head.Amsterdam.wav
+  Track: cache/2010.Daft Punk.Tron: Legacy (Amazon MP3 Exclusive Version).Tron Legacy (End Titles).wav
+  Track: cache/2009.Breaking Benjamin.Dear Agony.Anthem Of The Angels.wav
+  Track: cache/2016.Tall Heights.Rafters.Hell and High Water.wav
+  Track: cache/2014.So Cow.The Long Con.Turning into You.wav
+[=================   ] 1960/2185(35, 661500)
+  Track: cache/2014.So Cow.The Long Con.Second Last Line of the National Anthem.wav
+  Track: cache/2011.Girls.Father, Son, Holy Ghost.Jamie Marie.wav
+  Track: cache/2014.Milky Chance.Sadnecessary.Loveland.wav
+  Track: cache/2015.Fall Out Boy.American BeautyAmerican Psycho.The Kids Aren't Alright.wav
+  Track: cache/2014.Franz Schubert.MUSC233 Exam 3.Gretchen am Spinnrade, D. 118.wav
+  Track: cache/2011.Avicii feat. Etta James.True.Levels.wav
+  Track: cache/2016.Albin Lee Meldau.Lovers - EP.Lou Lou.wav
+  Track: cache/2014.Fences.Lesser Oceans.My Mountain Is Cold.wav
+  Track: cache/2015.Derrival.Departure & Arrival.Shoes Grow Smaller.wav
+  Track: cache/2010.Christina Perri.Jar Of Hearts.Jar Of Hearts.wav
+  Track: cache/2015.IAMX.Metanoia.The Background Noise.wav
+  Track: cache/2015.Lowland Hum.Native Air.White Stone.wav
+  Track: cache/2002.Frou Frou.Details.Psychobabble.wav
+  Track: cache/2016.Von Sell.NOON  187.I Insist.wav
+  Track: cache/2015.The Best Pessimist.The Half-World.Make A Wish.wav
+  Track: cache/2015.Hinkstep.My Forest Queen.Drifting Away.wav
+  Track: cache/1998.Trans-Siberian Orchestra.The Christmas Attic.Appalachian Snowfall.wav
+  Track: cache/2007.Binärpilot.Robot Wars.KDR Assault.wav
+  Track: cache/2016.Sleeping Lion.NOON  166.Rug.wav
+  Track: cache/2016.Miike Snow.iii.Lonely Life.wav
+  Track: cache/2005.Death Cab For Cutie.Plans.Soul Meets Body.wav
+  Track: cache/2015.White Morning.Scores.Refuge.wav
+  Track: cache/2014.The Phoenix Foundation.Echoes.Leavetaking.wav
+  Track: cache/2002.Coldplay.A Rush of Blood to the Head.Warning Sign.wav
+  Track: cache/2015.Pentatonix.PTX.Run to You.wav
+  Track: cache/2015.Imagine Dragons.Smoke + Mirrors (Deluxe Edition).I'm So Sorry.wav
+  Track: cache/2008.Little Boots.Hands.Remedy (album version).wav
+  Track: cache/2015.Will Young.85% Proof (Deluxe Edition).U Think I'm Sexy.wav
+  Track: cache/2014.Tarwater.Adrift.Log of the Sloop.wav
+  Track: cache/2003.Coldplay.Live 2003.Everything's Not Lost.wav
+  Track: cache/1985.Jimmy Buffett.Songs You Know By Heart [1990].Cheeseburger in Paradise.wav
+  Track: cache/2002.Frou Frou.Details.Breathe In.wav
+  Track: cache/2016.Elton John.Peachtree Road.Weight of the World.wav
+  Track: cache/2014.Totorro.Home Alone.Tonton Alain Michel.wav
+  Track: cache/2015.They Might Be Giants.Glean.Unpronounceable.wav
+[==================  ] 1995/2185(35, 661500)
+  Track: cache/2014.Casa Murilo.Ignition.Jenny.wav
+  Track: cache/1989.Jimmy Buffett.Off to See the Lizard.The Pascagoula Run.wav
+  Track: cache/2016.Ariel Pink's Haunted Graffiti.Before Today.Fright Night (Nevermore).wav
+  Track: cache/1994.Bon Jovi.Cross Road.You Give Love a Bad Name.wav
+  Track: cache/2014.The Who.Who's Next (Deluxe Edition).Won't Get Fooled Again (Live).wav
+  Track: cache/2000.Linkin Park.Hybrid Theory.Crawling.wav
+  Track: cache/2003.Muse.Absolution.Blackout.wav
+  Track: cache/1994.Bon Jovi.Cross Road.Wanted Dead or Alive.wav
+  Track: cache/2016.Tim McGraw.Live Like You Were Dying.Live Like You Were Dying.wav
+  Track: cache/2014.The Fray.Helios.Give It Away.wav
+  Track: cache/2016.DUTCH.NOON  184.NO MEASURE.wav
+  Track: cache/2014.Cold War Kids.Hold My Home.Hot Coals.wav
+  Track: cache/2014.Casa Murilo.Ignition.Lina.wav
+  Track: cache/2014.Engineers.Always Returning.Innsbruck.wav
+  Track: cache/2016.Leo Kalyan.NOON  152.Silver Linings.wav
+  Track: cache/2015.MOGWAI.Central Belters.D to E.wav
+  Track: cache/1998.Trans-Siberian Orchestra.The Christmas Attic.The Ghost of Christmas Eve.wav
+  Track: cache/2014.The Who.Who's Next (Deluxe Edition).My Generation (Live).wav
+  Track: cache/2005.Flyleaf.Flyleaf.Sorrow.wav
+  Track: cache/2014.Blueneck.King Nine.Anything Other Than Breathing.wav
+  Track: cache/2014.The Life And Times.Lost Bees.Passion Pit.wav
+  Track: cache/2000.Death Cab for Cutie.We Have The Facts And We're Voting Yes.No Joy In Mudville.wav
+  Track: cache/2016.Haux.NOON  165.Homegrown - Mahama Remix.wav
+  Track: cache/2014.The Fray.Helios.Keep On Wanting.wav
+  Track: cache/2014.Seven Saturdays.Seven Saturdays (Ambient).Make Note Of Every Sound (Ambient).wav
+  Track: cache/2016.Sleeping At Last.Atlas: Senses.Taste.wav
+  Track: cache/2014.Milky Chance.Sadnecessary.Feathery.wav
+  Track: cache/2006.Binärpilot.You Can't Stop Da Funk.Markell Fiksen.wav
+  Track: cache/2013.Kodaline.In A Perfect World.Way Back When.wav
+  Track: cache/2014.On-The-Go.Young Hearts [WEB Edition].Hung Up [Prod. by Mojimotor].wav
+  Track: cache/2009.Super Mash Bros..All About The Scrilions.NPH FTW.wav
+  Track: cache/2006.Blue October.Foiled.Sound of Pulling Heaven Down.wav
+  Track: cache/2015.Interpol.Spotify Sessions.Untitled.wav
+  Track: cache/2014.Sheppard.Bombs Away.The Best Is Yet To Come.wav
+  Track: cache/2000.Coldplay.Parachutes.Everything's Not Lost.wav
+[==================  ] 2030/2185(35, 661500)
+  Track: cache/2015.Florence + The Machine.How Big, How Blue, How Beautiful (Limited Deluxe Edition).Caught.wav
+  Track: cache/2015.Imagine Dragons.Smoke + Mirrors (Deluxe Edition).Warriors.wav
+  Track: cache/2008.Kid Rock.Rock N Roll Jesus.All Summer Long.wav
+  Track: cache/2014.Ludwig van Beethoven.MUSC233 Exam 3.Symphony No. 3 in E-flat Major, Op. 55 (Eroica): First movement, Allegro con brio.wav
+  Track: cache/2002.Linkin Park.Reanimation.Pts.Of.Athrty.wav
+  Track: cache/2009.The Canadian Tenors.The Canadian Tenors.Hallelujah.wav
+  Track: cache/2003.Snow Patrol.Final Straw.Somewhere A Clock Is Ticking.wav
+  Track: cache/2015.MOGWAI.Central Belters.Hunted by a Freak.wav
+  Track: cache/2000.Death Cab for Cutie.We Have The Facts And We're Voting Yes.The Employment Pages.wav
+  Track: cache/2003.Muse.Absolution.Apocalypse Please.wav
+  Track: cache/2001.Daft PunkRomanthony.Discovery.One More Time.wav
+  Track: cache/2015.Amber Run.5AM (Deluxe) WEB.Little Ghost.wav
+  Track: cache/2014.Avicii.The Days  Nights WEB.The Nights.wav
+  Track: cache/2012.Tyler Stenson.Some Days I'm a Lion.This Too Shall Pass.wav
+  Track: cache/2015.White Morning.Scores.They Shall Be Called (Part I).wav
+  Track: cache/2014.We Were Promised Jetpacks.Unravelling.Peace Of Mind.wav
+  Track: cache/2014.Blueneck.King Nine.Mutatis.wav
+  Track: cache/2000.Coldplay.Parachutes.High Speed.wav
+  Track: cache/2010.Linkin Park.A Thousand Suns.Waiting For The End.wav
+  Track: cache/2014.Engineers.Always Returning.Fight or Flight.wav
+  Track: cache/2014.Tarwater.Adrift.Devon Saturday.wav
+  Track: cache/2009.Breaking Benjamin.Dear Agony.What Lies Beneath.wav
+  Track: cache/2015.Mumford & Sons.Wilder Mind (Deluxe Version).Tompkins Square Park.wav
+  Track: cache/2003.Snow Patrol.Final Straw.Gleaming Auction.wav
+  Track: cache/2000.Coldplay.Parachutes.Sparks.wav
+  Track: cache/2010.Tyler Stenson.Bittersweet Parade.The Road.wav
+  Track: cache/2015.Three Days Grace.Human.The Real You.wav
+  Track: cache/2014.Angus & Julia Stone.Angus & Julia Stone (Deluxe Version).Heart Beats Slow.wav
+  Track: cache/2003.Jimmy Buffett.Meet Me in Margaritaville: The Ultimate Collection.Brown Eyed Girl.wav
+  Track: cache/1994.The London Symphony Orchestra.The Performs Sting.Synchronicity II.wav
+  Track: cache/2015.Amber Run.5AM (Deluxe) WEB.Shiver.wav
+  Track: cache/2005.The Fray.How to Save a Life.Heaven Forbid.wav
+  Track: cache/2015.They Might Be Giants.Glean.Answer.wav
+  Track: cache/2016.M83.Junk.Go!.wav
+  Track: cache/2007.Enrique Iglesias.Insomniac.Wish I Was Your Lover.wav
+[==================  ] 2065/2185(35, 661500)
+  Track: cache/2016.John Travolta.Gold.Summer Nights.wav
+  Track: cache/2015.They Might Be Giants.Glean.All the Lazy Boyfriends.wav
+  Track: cache/2014.Totorro.Home Alone.Home Alone.wav
+  Track: cache/2003.Coldplay.Live 2003.Yellow.wav
+  Track: cache/2016.Andrew McMahon in the Wilderness.Andrew McMahon in the Wilderness.Black and White Movies.wav
+  Track: cache/2007.Linkin Park.Minutes to Midnight.Hands Held High.wav
+  Track: cache/2007.Enrique Iglesias.Insomniac.Ring My Bells.wav
+  Track: cache/2013.The National.Trouble Will Find Me.Pink Rabbits.wav
+  Track: cache/2014.OK Go.Hungry Ghosts.Upside Down & Inside Out.wav
+  Track: cache/2016.Marconi Union.Weightless.Weightless.wav
+  Track: cache/2015.The Saint Johns.Noisetrade Sampler.Dead Of Night (Live Acoustic).wav
+  Track: cache/2014.Pentatonix.That's Christmas To Me.Silent Night.wav
+  Track: cache/2015.Florence + The Machine.How Big, How Blue, How Beautiful (Limited Deluxe Edition).Third Eye (Demo).wav
+  Track: cache/2014.IRREVERSIBLE.Surface.Degloving Injury.wav
+  Track: cache/2004.Carbon Leaf.Indian Summer.Paloma.wav
+  Track: cache/2006.Daniel Powter.Daniel Powter.Bad Day.wav
+  Track: cache/2014.So Cow.The Long Con.Operating at a Loss.wav
+  Track: cache/2016.Tom Redwood.NOON  185.I've Fallen For You.wav
+  Track: cache/2016.Aperture Science Psychoacoustics Laboratory.Portal 2: Songs to Test By - Volume 3.The Part Where He Kills You.wav
+  Track: cache/2016.Anya Marina.Whatever You Like [Digital 45].Whatever You Like.wav
+  Track: cache/2015.Gordon's Tsunami Week.The Farewell Paradox.there.wav
+  Track: cache/2016.Gareth Emery.unknown.Concrete Angel feat. Christina Novelli (Acoustic Version).wav
+  Track: cache/2005.The Fray.How to Save a Life.Trust Me.wav
+  Track: cache/2013.The National.Trouble Will Find Me.Heavenfaced.wav
+  Track: cache/2010.Binärpilot.Nordland.Elektroll.wav
+  Track: cache/2014.Tarwater.Adrift.Stone in Exile.wav
+  Track: cache/2015.Pentatonix.That's Christmas to Me: Deluxe Tracks - EP.Just for Now.wav
+  Track: cache/2016.Andrew McMahon in the Wilderness.Andrew McMahon in the Wilderness.See Her On the Weekend.wav
+  Track: cache/2014.Tarwater.Adrift.The Evening Pilgrims.wav
+  Track: cache/2014.James Newton Howard.The Hunger Games - Mockingjay Pt. 1 (Original Motin Picture Score).Please Welcome Peeta.wav
+  Track: cache/2016.Anya Marina.Paper Plane.My Mama Said It.wav
+  Track: cache/2010.The Tallest Man On Earth.The Wild Hunt.A Lion's Heart.wav
+  Track: cache/2015.Vitamin String Quartet.The Geek Wedding Collection.Superman - the Movie - Love Theme From Superman.wav
+  Track: cache/1998.Trans-Siberian Orchestra.The Christmas Attic.The Music Box.wav
+  Track: cache/2014.We Were Promised Jetpacks.Unravelling.Peace Sign.wav
+[=================== ] 2100/2185(35, 661500)
+  Track: cache/2015.Godspeed You! Black Emperor.Asunder,Sweet and Other Distress.Asunder, Sweet.wav
+  Track: cache/2014.Sheppard.Bombs Away.Let Me Down Easy.wav
+  Track: cache/2014.Rupert Holmes.Guardians Of The Galaxy (Awesome Mix Vol. 1).Escape (The Piña Colada Song).wav
+  Track: cache/2016.Damien Jurado.Caught in the Trees.Sheets.wav
+  Track: cache/2016.Woodkid.Desierto (Original Motion Picture Score).Dusk Talks.wav
+  Track: cache/2015.Vitamin String Quartet.VSQ Performs the Hits of 2014 Vol. 3.Cool Kids (String Quartet Tribute to Echosmith).wav
+  Track: cache/2015.Hinkstep.My Forest Queen.Serotonin Storm.wav
+  Track: cache/2013.OK Go.Twelve Months of OK Go.You Are Dead (Andy Duncan demo).wav
+  Track: cache/2006.Breaking Benjamin.Phobia.The Diary Of Jane (Acoustic Version).wav
+  Track: cache/2014.Mogwai.Music Industry 3. Fitness Industry 1 [EP].History Day.wav
+  Track: cache/2014.Pentatonix.That's Christmas To Me.Dance Of The Sugar Plum Fairy.wav
+  Track: cache/2015.Brian Tyler.Avengers: Age of Ultron.Seoul Searching.wav
+  Track: cache/2012.Imagine Dragons.Continued Silence EP.Demons.wav
+  Track: cache/1998.Snow Patrol.Songs For Polarbears.Mahogany.wav
+  Track: cache/1996.The Verve Pipe.Villains.Penny Is Poison.wav
+  Track: cache/2016.Liss.NOON  185.Sorry.wav
+  Track: cache/2010.Daft Punk.Tron: Legacy (Amazon MP3 Exclusive Version).Outlands.wav
+  Track: cache/2016.Down Time.NOON  184.Home.wav
+  Track: cache/2014.The Phoenix Foundation.Echoes.Echoes.wav
+  Track: cache/2016.Andrew McMahon in the Wilderness.Andrew McMahon in the Wilderness.Maps For the Getaway.wav
+  Track: cache/2003.Jimmy Buffett.Meet Me in Margaritaville: The Ultimate Collection.School Boy Heart.wav
+  Track: cache/2002.Breaking Benjamin.Saturate.Saturate.wav
+  Track: cache/2014.The Life And Times.Lost Bees.Bored To Death.wav
+  Track: cache/2014.Kerretta.Pirohia.The Last Rivers.wav
+  Track: cache/2016.Tame Impala.Lonerism.Elephant.wav
+  Track: cache/2015.They Might Be Giants.Glean.Hate the Villanelle.wav
+  Track: cache/2016.Crystal Castles.Grey's Intro to Music Mixtape (Made With Love) [Vol.1].Crimewave.wav
+  Track: cache/2015.Death Cab For Cutie.Kintsugi.Little Wanderer.wav
+  Track: cache/1999.Coldplay.The Blue Room EP.Bigger Stronger.wav
+  Track: cache/2014.The Decemberists.What a Terrible World, What a Beautiful World.12-17-12.wav
+  Track: cache/2006.Snow Patrol.Eyes Open.Hands Open.wav
+  Track: cache/2015.Will Young.85% Proof (Deluxe Edition).Love Revolution.wav
+  Track: cache/1999.Death Cab For Cutie.Something About Airplanes.Fake Frowns.wav
+  Track: cache/2014.Seven Saturdays.Seven Saturdays (Ambient).xxx (Ambient).wav
+  Track: cache/2014.Carbon Leaf.Indian Summer Revisited.Let Your Troubles Roll By.wav
+[=================== ] 2135/2185(35, 661500)
+  Track: cache/2013.Lana Del Rey.Born to Die.Young And Beautiful.wav
+  Track: cache/2013.Kodaline.In A Perfect World.High Hopes.wav
+  Track: cache/2016.Matthew Mayfield.Wild Eyes Unplugged EP.Quiet Lies.wav
+  Track: cache/2014.David Bowie.Guardians Of The Galaxy (Awesome Mix Vol. 1).Moonage Daydream.wav
+  Track: cache/2015.Amber Run.5AM (Deluxe) WEB.Where Do We Go From Here.wav
+  Track: cache/2014.The Best Pessimist.Flowers Blossom In The Space.Oceanica.wav
+  Track: cache/2016.Coldplay.Speed of Sound.Speed Of Sound.wav
+  Track: cache/2016.OMEA All-State Choir 2012-2013.2013 OMEA.Dubula.wav
+  Track: cache/2016.Tall Heights.Man of Stone.Controlled Burn.wav
+  Track: cache/2006.Snow Patrol.Eyes Open.Make This Go On Forever.wav
+  Track: cache/2014.Tarwater.Adrift.Coconut Signal.wav
+  Track: cache/2015.Interpol.Spotify Sessions.Choosing The Titles.wav
+  Track: cache/2015.Dawn And Hawkes.Golden Heart EP + Yours and Mine Preview.Quietly.wav
+  Track: cache/2015.Tyler Stenson.Say No More.Best Laid Plans.wav
+  Track: cache/2015.God Is An Astronaut.Helios | Erebus.Obscura Somnia.wav
+  Track: cache/2014.Fences.Lesser Oceans.Sunburns.wav
+  Track: cache/1994.The London Symphony Orchestra.The Performs Sting.Why Should I Cry for You?.wav
+  Track: cache/2015.Three Days Grace.Human.Human Race.wav
+  Track: cache/2010.Tyler Stenson.Bittersweet Parade.As the Crow Flies.wav
+  Track: cache/2015.Amber Run.5AM (Deluxe) WEB.I Found.wav
+  Track: cache/2014.Carbon Leaf.Indian Summer Revisited.When I'm Alone.wav
+  Track: cache/2014.The World is a Beautiful Place & I am No Longer Afraid to Die.Between Bodies.Blank #8  Precipice.wav
+  Track: cache/2016.2CELLOS(SULIC & HAUSER).Celloverse (Japan Version).Mombasa.wav
+  Track: cache/2012.Lana Del Rey.Born To Die.Summertime Sadness.wav
+  Track: cache/2006.Evanescence.The Open Door.Sweet Sacrifice.wav
+  Track: cache/1998.Trans-Siberian Orchestra.The Christmas Attic.The Three Kings and I (What Really Happened).wav
+  Track: cache/2014.On-The-Go.Young Hearts [WEB Edition].Brother.wav
+  Track: cache/2005.Coldplay.X&Y.A Message.wav
+  Track: cache/2015.Of Monsters And Men.Beneath The Skin.Wolves Without Teeth.wav
+  Track: cache/2011.Ben Howard.Every Kingdom.Old Pine.wav
+  Track: cache/2015.Danny Elfman.Avengers: Age of Ultron.Heroes.wav
+  Track: cache/2015.Mumford & Sons.Wilder Mind (Deluxe Version).Wilder Mind.wav
+  Track: cache/2016.Mogwai.Atomic.Fat Man.wav
+  Track: cache/2003.Staind.14 Shades of Grey.So Far Away.wav
+  Track: cache/2014.The Rosebuds.Sand + Silence.Walking.wav
+[=================== ] 2170/2185(35, 661500)
+  Track: cache/2014.Linfield College Concert Choir.Christmas at Linfield.Baby, It's Cold Outside.wav
+  Track: cache/2014.Tunturia.Halls Of Sky.Halls of Sky.wav
+  Track: cache/2014.Blueneck.King Nine.Man of Lies (live acoustic).wav
+  Track: cache/2014.James Newton Howard.The Hunger Games - Mockingjay Pt. 1 (Original Motin Picture Score).District 12 Ruins.wav
+  Track: cache/2014.Pomplamoose.Season 2.Lorde 2Pac Beck Mashup.wav
+  Track: cache/2006.Rascal Flatts.Cars.Life Is A Highway.wav
+  Track: cache/2009.Super Mash Bros..All About The Scrilions.Still Bleeding.wav
+  Track: cache/2015.Zeke Duhon.Zeke Duhon.Always Is Now.wav
+  Track: cache/2016.2CELLOS(SULIC & HAUSER).Celloverse (Japan Version).Shape of My Heart.wav
+  Track: cache/2015.Breaking Benjamin.Dark Before Dawn.Ashes of Eden.wav
+  Track: cache/2015.Vitamin String Quartet.The Geek Wedding Collection.Star Trek - The Next Generation Theme.wav
+  Track: cache/2015.Interpol.Spotify Sessions.Everything Is Wrong.wav
+  Track: cache/2016.FLAUSEN feat. Ben Cocks.unknown.Fly Away For A Summer (Achtabahn Mix).wav
+  Track: cache/2014.Sheppard.Bombs Away.A Grade Playa.wav
+  Track: cache/2015.White Morning.Scores.They Shall Be Called (Part II).wav
+[====================] complete
+Train on 1966 samples, validate on 219 samples
+Epoch 1/50
+1966/1966 [==============================] - 110s - loss: 0.9675 - acc: 0.7116 - val_loss: 1.3004 - val_acc: 0.6621
+Epoch 2/50
+1966/1966 [==============================] - 109s - loss: 1.3602 - acc: 0.6694 - val_loss: 1.6535 - val_acc: 0.6256
+Epoch 3/50
+1966/1966 [==============================] - 109s - loss: 1.4662 - acc: 0.6765 - val_loss: 1.2988 - val_acc: 0.6941
+Epoch 4/50
+1966/1966 [==============================] - 109s - loss: 1.4183 - acc: 0.6638 - val_loss: 1.4576 - val_acc: 0.6895
+Epoch 5/50
+1966/1966 [==============================] - 110s - loss: 1.5575 - acc: 0.6597 - val_loss: 1.3904 - val_acc: 0.7078
+Epoch 6/50
+1966/1966 [==============================] - 117s - loss: 1.2304 - acc: 0.7106 - val_loss: 0.8189 - val_acc: 0.7580
+Epoch 7/50
+1966/1966 [==============================] - 150s - loss: 0.9677 - acc: 0.7055 - val_loss: 0.8832 - val_acc: 0.7489
+Epoch 8/50
+1966/1966 [==============================] - 198s - loss: 0.9728 - acc: 0.7040 - val_loss: 1.0111 - val_acc: 0.7352
+Epoch 9/50
+1966/1966 [==============================] - 219s - loss: 0.9218 - acc: 0.7253 - val_loss: 0.9886 - val_acc: 0.6667
+Epoch 10/50
+1966/1966 [==============================] - 227s - loss: 0.9576 - acc: 0.7030 - val_loss: 0.9371 - val_acc: 0.6941
+Fit complete. Preparing to test.
+sampleReadKeras.py:89: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+  data_1 = data[start_point_1:int(start_point_1 + ((sample_duration/3)*44100))]
+sampleReadKeras.py:90: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+  data_2 = data[start_point_2:int(start_point_2 + ((sample_duration/3)*44100))]
+sampleReadKeras.py:91: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+  data_3 = data[start_point_3:int(start_point_3 + ((sample_duration/3)*44100))]
+  Track: cache/2005.The Fray.How to Save a Life.She Is.wav
+  Track: cache/2015.Of Monsters And Men.Beneath The Skin.Crystals.wav
+  Track: cache/2015.Florence + The Machine.How Big, How Blue, How Beautiful (Limited Deluxe Edition).Third Eye.wav
+  Track: cache/2005.Coldplay.X&Y.What If.wav
+  Track: cache/2001.Daft Punk.Discovery.High Life.wav
+  Track: cache/2014.Sheppard.Bombs Away.Halfway To Hell.wav
+  Track: cache/2014.Pentatonix.That's Christmas To Me.Winter Wonderland  Don't Worry, Be Happy (Feat. Tori Kelly).wav
+  Track: cache/2016.The Dunwells.Light Up The Sky.Never Too Late.wav
+  Track: cache/1995.Oasis.(What's the Story) Morning Glory?.Wonderwall.wav
+  Track: cache/2015.Florence + The Machine.How Big, How Blue, How Beautiful (Limited Deluxe Edition).Long & Lost.wav
+  Track: cache/2014.The Life And Times.Lost Bees.We Are.wav
+  Track: cache/2016.Anya Marina.Paper Plane.My Mama Said It.wav
+  Track: cache/2015.Derrival.Departure & Arrival.Shoes Grow Smaller.wav
+  Track: cache/2015.The Barden Bellas.Pitch Perfect 2.Back To Basics.wav
+  Track: cache/2014.Kerretta.Pirohia.Sister, Come Home.wav
+  Track: cache/2012.Pentatonix.PTX vol 1.We Are Young.wav
+  Track: cache/2016.Blue October.Home.Break Ground.wav
+  Track: cache/2001.Daft Punk.Discovery.Superheroes.wav
+  Track: cache/2000.Linkin Park.Hybrid Theory.One Step Closer.wav
+  Track: cache/2014.James Newton Howard.The Hunger Games - Mockingjay Pt. 1 (Original Motin Picture Score).District 8 Hospital.wav
+  Track: cache/2014.La Roux.Trouble in Paradise.Tropical Chancer.wav
+  Track: cache/2014.Rupert Holmes.Guardians Of The Galaxy (Awesome Mix Vol. 1).Escape (The Piña Colada Song).wav
+  Track: cache/2006.Snow Patrol.Eyes Open.The Finish Line.wav
+  Track: cache/2004.Jay-ZLinkin Park.Collision Course.IzzoIn the End.wav
+  Track: cache/2016.Blood Cultures.NOON  152.Indian Summer.wav
+  Track: cache/1985.Jimmy Buffett.Songs You Know By Heart [1990].Cheeseburger in Paradise.wav
+  Track: cache/1998.Snow Patrol.Songs For Polarbears.Mahogany.wav
+  Track: cache/2014.Carbon Leaf.Indian Summer Revisited.The Sea.wav
+  Track: cache/2016.Meatloaf.Bat Out of Hell.You Took The Words Right (Hot Summer Night).wav
+  Track: cache/2010.Mike Posner.31 Minutes To Takeoff.Synthesizer.wav
+  Track: cache/2015.MOGWAI.Central Belters.Helicon 1.wav
+  Track: cache/2006.Evanescence.The Open Door.Sweet Sacrifice.wav
+  Track: cache/2009.Skillet.Awake (Deluxe).Lucy.wav
+  Track: cache/2015.Brian Tyler.Avengers: Age of Ultron.Hulkbuster.wav
+[==                  ] 35/256(35, 661500)
+  Track: cache/2005.Flyleaf.Flyleaf.Fully Alive.wav
+  Track: cache/2014.The Who.Who's Next (Deluxe Edition).Getting In Tune.wav
+  Track: cache/2015.Howie Day.Lanterns.I Saw Everything.wav
+  Track: cache/2009.Train.Save Me, San Francisco.Marry Me.wav
+  Track: cache/2016.Blue October.Home.Time Changes Everything.wav
+  Track: cache/2016.Tall Heights.Man of Stone.Somewhere I Believe.wav
+  Track: cache/2015.Pentatonix.PTX.Natural Disaster.wav
+  Track: cache/2003.Snow Patrol.Final Straw.Chocolate.wav
+  Track: cache/2015.Dawn And Hawkes.Golden Heart EP + Yours and Mine Preview.Quietly.wav
+  Track: cache/2013.Kodaline.In A Perfect World.After The Fall.wav
+  Track: cache/2016.The Dunwells.Light Up The Sky.Communicate.wav
+  Track: cache/2014.The Rosebuds.Sand + Silence.Esse Quam Videri.wav
+  Track: cache/2002.Coldplay.A Rush of Blood to the Head.God Put a Smile Upon Your Face.wav
+  Track: cache/2014.The Who.Who's Next (Deluxe Edition).My Generation (Live).wav
+  Track: cache/2014.Milky Chance.Sadnecessary.Running.wav
+  Track: cache/2010.Linkin Park.A Thousand Suns.The Catalyst.wav
+  Track: cache/2014.Milky Chance.Sadnecessary.Sadnecessary.wav
+  Track: cache/2015.Breaking Benjamin.Dark Before Dawn.Dark.wav
+  Track: cache/2016.Bastille.Live in Paris.Pompeii (Acoustic).wav
+  Track: cache/2015.Hinkstep.My Forest Queen.Snö.wav
+  Track: cache/2015.Amber Run.5AM (Deluxe) WEB.Hurricane.wav
+  Track: cache/2010.Daft Punk.Tron: Legacy (Amazon MP3 Exclusive Version).Arena.wav
+  Track: cache/2014.The Life And Times.Lost Bees.Ice Cream Eyes.wav
+  Track: cache/2015.Will Young.85% Proof (Deluxe Edition).Joy.wav
+  Track: cache/2005.The Partridge Family.The Partridge Family Album.I Think I Love You.wav
+  Track: cache/2015.Joseph Trapanese.Insurgent (Original Motion Picture Soundtrack).Convergence (Score Suite From "Insurgent").wav
+  Track: cache/2001.John Mayer.Room for Squares.Why Georgia.wav
+  Track: cache/2015.Will Young.85% Proof (Deluxe Edition).Like a River.wav
+  Track: cache/2001.Bond.Born.Oceanic.wav
+  Track: cache/2006.Three Days Grace.One-X.Never Too Late.wav
+  Track: cache/2010.Daft Punk.Tron: Legacy (Amazon MP3 Exclusive Version).Outlands.wav
+  Track: cache/2015.Florence + The Machine.How Big, How Blue, How Beautiful (Limited Deluxe Edition).Third Eye (Demo).wav
+  Track: cache/2014.So Cow.The Long Con.To Be Confirmed.wav
+  Track: cache/2014.The Rosebuds.Sand + Silence.Looking For.wav
+  Track: cache/2016.Woodkid.Desierto (Original Motion Picture Score).Dusk Talks.wav
+[=====               ] 70/256(35, 661500)
+  Track: cache/2015.Pentatonix.That's Christmas to Me: Deluxe Tracks - EP.Joy to the World.wav
+  Track: cache/2016.XYLØ.America.LA Love Song.wav
+  Track: cache/2016.Ruth Koleva.R U T H.What Am I Supposed To?.wav
+  Track: cache/2002.Coldplay.A Rush of Blood to the Head.A Whisper.wav
+  Track: cache/2010.Binärpilot.Nordland.Elektroll.wav
+  Track: cache/2014.This Will Destroy You.Another Language.Invitation.wav
+  Track: cache/2015.IAMX.Metanoia.Aphrodisiac.wav
+  Track: cache/2015.The Best Pessimist.The Half-World.Lets Meet In Our Dreams Tonight.wav
+  Track: cache/2012.Binärpilot.Songs For Alan Turing.ITAPPMONROBOT.wav
+  Track: cache/2016.Anya Marina.Paper Plane.Shut Up.wav
+  Track: cache/2014.The Sunshine Underground.Start.Start (Radio Edit).wav
+  Track: cache/2014.The Best Pessimist.Flowers Blossom In The Space.Oceanica.wav
+  Track: cache/2015.MOGWAI.Central Belters.The Lord Is Out of Control.wav
+  Track: cache/2014.Bastille.Oblivion.bad_news.wav
+  Track: cache/2015.Interpol.Spotify Sessions.Choosing The Titles.wav
+  Track: cache/2015.Mumford & Sons.Wilder Mind (Deluxe Version).Believe - Live.wav
+  Track: cache/2014.Banda do Mar.Banda do Mar.Me Sinto Ótima.wav
+  Track: cache/2014.Modest Mouse.White Lies, Yellow Teeth  Buttons To Push the Buttons - Single.White Lies, Yellow Teeth.wav
+  Track: cache/2009.Breaking Benjamin.Dear Agony.I Will Not Bow.wav
+  Track: cache/2014.Pentatonix.That's Christmas To Me.Silent Night.wav
+  Track: cache/2015.Breaking Benjamin.Dark Before Dawn.Hollow.wav
+  Track: cache/2001.Death Cab for Cutie.The Photo Album.Information Travels Faster.wav
+  Track: cache/2015.They Might Be Giants.Glean.All the Lazy Boyfriends.wav
+  Track: cache/2014.CHVRCHES.Under the Tide.Gun [Alucard Session].wav
+  Track: cache/2016.Woodkid.Desierto (Original Motion Picture Score).Jump.wav
+  Track: cache/2015.Hinkstep.My Forest Queen.Naranja.wav
+  Track: cache/2016.XYLØ.America.Between the Devil and the Deep Blue Sea.wav
+  Track: cache/2015.Gordon's Tsunami Week.The Farewell Paradox.there.wav
+  Track: cache/2014.Blake Mills.Heigh Ho.Just Out Of View.wav
+  Track: cache/2015.Howie Day.Lanterns.Love Is Never Lost.wav
+  Track: cache/2014.Bucketheadland.Snow Slug.N 6.wav
+  Track: cache/2015.Florence + The Machine.How Big, How Blue, How Beautiful (Limited Deluxe Edition).Queen Of Peace.wav
+  Track: cache/2003.Snow Patrol.Final Straw.Ways And Means.wav
+  Track: cache/2001.Bond.Born.Hymn.wav
+  Track: cache/2016.Toto.Toto IV.Rosanna.wav
+[========            ] 105/256(35, 661500)
+  Track: cache/2014.This Will Destroy You.Another Language.God's Teeth.wav
+  Track: cache/2007.Binärpilot.Robot Wars.On The Run.wav
+  Track: cache/2015.Of Monsters And Men.Beneath The Skin.Backyard.wav
+  Track: cache/2015.Vitamin String Quartet.VSQ Performs the Hits of 2014 Vol. 3.Yellow Flicker Beat (String Quartet Tribute to Lorde).wav
+  Track: cache/2016.Suzanne Vega.Charlie's Mix Tape.Gypsy.wav
+  Track: cache/2016.Crystal Castles.Grey's Intro to Music Mixtape (Made With Love) [Vol.1].Crimewave.wav
+  Track: cache/2001.Death Cab for Cutie.The Photo Album.Debate Exposes Doubt.wav
+  Track: cache/2016.Tall Heights.Man of Stone.Man of Stone.wav
+  Track: cache/2014.Engineers.Always Returning.Innsbruck.wav
+  Track: cache/2014.Coldplay.Ghost Stories Live 2014.Magic (Live At the Enmore Theatre, Sydney).wav
+  Track: cache/2015.Will Young.85% Proof (Deluxe Edition).U Think I'm Sexy.wav
+  Track: cache/2015.Of Monsters And Men.Beneath The Skin.Organs.wav
+  Track: cache/2014.On-The-Go.Young Hearts [WEB Edition].Wait.wav
+  Track: cache/2015.Pen Pals.Gold.Mary & Martha.wav
+  Track: cache/2014.Mitis.Oasis - EP.Prism.wav
+  Track: cache/2016.Kim Carnes.Mistaken Identity.Betty Davis Eyes.wav
+  Track: cache/2016.Watsky and Mody.Grey's Intro to Music Mixtape (Made With Love) [Vol.1].Man of Constant Sorrow.wav
+  Track: cache/2016.Woodkid.Desierto (Original Motion Picture Score).Sam and Moises.wav
+  Track: cache/2015.Florence + The Machine.How Big, How Blue, How Beautiful (Limited Deluxe Edition).Various Storms & Saints.wav
+  Track: cache/2015.Logan Mays.I Still Remember.Fade.wav
+  Track: cache/2015.Tyler Stenson.Say No More.Say No More.wav
+  Track: cache/2016.The Dunwells.Light Up The Sky.Will You Wait For Me.wav
+  Track: cache/1996.The Verve Pipe.Villains.Cup of Tea.wav
+  Track: cache/2014.Coldplay.Ghost Stories Live 2014.Ink (Live At Le Casino De Paris, Paris).wav
+  Track: cache/2016.Sleeping At Last.Atlas: Senses.Smell.wav
+  Track: cache/2016.The Dunwells.Light Up The Sky.Hey Now.wav
+  Track: cache/1999.Death Cab For Cutie.Something About Airplanes.Amputations.wav
+  Track: cache/2014.Blueneck.King Nine.Man Of Lies.wav
+  Track: cache/2015.They Might Be Giants.Glean.Music Jail, Pt. 1 & 2.wav
+  Track: cache/2014.James Newton Howard.The Hunger Games - Mockingjay Pt. 1 (Original Motin Picture Score).Katniss' Nightmare.wav
+  Track: cache/2014.Totorro.Home Alone.Home Alone.wav
+  Track: cache/2015.Imagine Dragons.Smoke + Mirrors (Deluxe Edition).Hopeless Opus.wav
+  Track: cache/2007.Linkin Park.Minutes to Midnight.In Pieces.wav
+  Track: cache/2015.Tyler Stenson.Say No More.We Grow.wav
+  Track: cache/2016.The Dunwells.Light Up The Sky.Animal.wav
+[==========          ] 140/256(35, 661500)
+  Track: cache/2011.Girls.Father, Son, Holy Ghost.Honey Bunny.wav
+  Track: cache/2015.Imagine Dragons.Smoke + Mirrors (Deluxe Edition).Warriors.wav
+  Track: cache/2016.Woodkid.Desierto (Original Motion Picture Score).Shoot Them Down.wav
+  Track: cache/2014.Casa Murilo.Ignition.Drive.wav
+  Track: cache/2014.Bucketheadland.Snow Slug.O 38.wav
+  Track: cache/2016.Ruth Koleva.R U T H.Gone (ft Stamina MC).wav
+  Track: cache/2008.Nickelback.Dark Horse.Gotta Be Somebody.wav
+  Track: cache/2003.Train.My Private Nation.Calling All Angels.wav
+  Track: cache/2013.Avicii.True.Hey Brother.wav
+  Track: cache/2016.Miguel.The Remixes Vol. 1.Sure Thing (E-603 Remix).wav
+  Track: cache/2014.Seven Saturdays.Seven Saturdays (Ambient).Fields (Ambient).wav
+  Track: cache/2015.Howie Day.Lanterns.Favorite Song.wav
+  Track: cache/2014.Mogwai.Music Industry 3. Fitness Industry 1 [EP].The Lord is Out of Control (Nils Frahm Remix).wav
+  Track: cache/2015.Vitamin String Quartet.VSQ Performs the Hits of 2014 Vol. 3.Cool Kids (String Quartet Tribute to Echosmith).wav
+  Track: cache/1986.The Smiths.The Queen Is Dead.There Is A Light That Never Goes Out.wav
+  Track: cache/2014.Ludwig van Beethoven.MUSC233 Exam 3.Symphony No. 3 in E-flat Major, Op. 55 (Eroica): First movement, Allegro con brio.wav
+  Track: cache/2014.Carbon Leaf.Indian Summer Revisited.One Prairie Outpost.wav
+  Track: cache/2015.Will Young.85% Proof (Deluxe Edition).Love Revolution.wav
+  Track: cache/2012.Trampled By Turtles.Stars and Satellites.Midnight on the Interstate.wav
+  Track: cache/2012.Pentatonix.PTX vol 1.Love You Long Time.wav
+  Track: cache/2016.The Kite String Tangle.Vessel.Arcadia.wav
+  Track: cache/2015.Gordon's Tsunami Week.The Farewell Paradox.is.wav
+  Track: cache/2016.The Waterboys.This Is The Sea.The Whole of the Moon.wav
+  Track: cache/2016.Passion Pit.The Remixes Vol. 1.Seaweed Song (E-603 Remix).wav
+  Track: cache/2016.XYLØ.America.Afterlife.wav
+  Track: cache/1998.Trans-Siberian Orchestra.The Christmas Attic.The World That She Sees.wav
+  Track: cache/2016.Mogwai.Atomic.Ether.wav
+  Track: cache/2015.Death Cab For Cutie.Kintsugi.You've Haunted Me All Your Life.wav
+  Track: cache/2016.Tall Heights.Man of Stone.Flash Boom.wav
+  Track: cache/2016.Matthew Mayfield.Wild Eyes Unplugged EP.Team (Lorde Cover).wav
+  Track: cache/2015.Breaking Benjamin.Dark Before Dawn.The Great Divide.wav
+  Track: cache/2007.Binärpilot.Robot Wars.Smile (Make Your Body Move).wav
+  Track: cache/2016.OMEA All-State Choir 2012-2013.2013 OMEA.Os Justi.wav
+  Track: cache/2015.Mumford & Sons.Wilder Mind (Deluxe Version).Snake Eyes.wav
+  Track: cache/2016.unknown.2013 OMEA.Tides of Ocean.wav
+[=============       ] 175/256(35, 661500)
+  Track: cache/2004.Carbon Leaf.Indian Summer.Paloma.wav
+  Track: cache/2015.They Might Be Giants.Glean.Glean.wav
+  Track: cache/2014.Elvin Bishop.Guardians Of The Galaxy (Awesome Mix Vol. 1).Fooled Around And Fell In Love.wav
+  Track: cache/2014.So Cow.The Long Con.Operating at a Loss.wav
+  Track: cache/2014.OK Go.Hungry Ghosts.If I Had A Mountain.wav
+  Track: cache/2010.Daft Punk.Tron: Legacy (Amazon MP3 Exclusive Version).End of Line.wav
+  Track: cache/2014.AJR.I`m Ready EP.Buy You A Rose.wav
+  Track: cache/2016.Tall Heights.Man of Stone.Learn Again.wav
+  Track: cache/2010.Daft Punk.Tron: Legacy (Amazon MP3 Exclusive Version).The Game Has Changed.wav
+  Track: cache/2015.Breaking Benjamin.Dark Before Dawn.Never Again.wav
+  Track: cache/2016.Matthew Mayfield.Wild Eyes Unplugged EP.Quiet Lies.wav
+  Track: cache/2016.Blue October.Home.Home.wav
+  Track: cache/2016.Lane 8.Rise (Remixed).Sunlight (Jody Wisternoff Remix).wav
+  Track: cache/2013.The National.Trouble Will Find Me.Heavenfaced.wav
+  Track: cache/2014.Totorro.Home Alone.Festival Bini.wav
+  Track: cache/2014.The Decemberists.What a Terrible World, What a Beautiful World.Till the Water Is All Long Gone.wav
+  Track: cache/2004.Carbon Leaf.Indian Summer.The Sea.wav
+  Track: cache/2014.Lower Than Atlantis.Lower Than Atlantis (Deluxe).Stays the Same.wav
+  Track: cache/2016.M83.Junk.Time Wind.wav
+  Track: cache/2002.Switchfoot.A Walk to Remember.Dare You to Move.wav
+  Track: cache/2016.Fall Out Boy.Grey's Intro to Music Mixtape (Made With Love) [Vol.1].I Slept With Someone....wav
+  Track: cache/2014.The Decemberists.What a Terrible World, What a Beautiful World.Cavalry Captain.wav
+  Track: cache/2013.The National.Trouble Will Find Me.I Need My Girl.wav
+  Track: cache/2015.Of Monsters And Men.Beneath The Skin.I Of The Storm (Alex Somers Remix).wav
+  Track: cache/2016.Aperture Science Psychoacoustics Laboratory.Portal 2: Songs to Test By - Volume 3.Reconstructing More Science.wav
+  Track: cache/2005.The Fray.How to Save a Life.Little House.wav
+  Track: cache/2014.Pentatonix.PTX, Vol. III.Problem.wav
+  Track: cache/2007.Binärpilot.Robot Wars.Project Wildfire.wav
+  Track: cache/2014.Mogwai.Music Industry 3. Fitness Industry 1 [EP].History Day.wav
+  Track: cache/2014.We Were Promised Jetpacks.Unravelling.Disconnecting.wav
+  Track: cache/2015.Will Young.85% Proof (Deluxe Edition).Always On My Mind.wav
+  Track: cache/2014.So Cow.The Long Con.Say Hello.wav
+  Track: cache/2016.Zedd.Evan Duffy.Clarity ft. Foxes (Evan Duffy Piano Cover).wav
+  Track: cache/2016.Ruth Koleva.R U T H.Clarity.wav
+  Track: cache/2015.Vitamin String Quartet.The Geek Wedding Collection.Star Wars -The Imperial March (Darth Vader's Theme).wav
+[================    ] 210/256(35, 661500)
+  Track: cache/2015.Imagine Dragons.Smoke + Mirrors (Deluxe Edition).Smoke And Mirrors.wav
+  Track: cache/2015.The Best Pessimist.The Half-World.New Day.wav
+  Track: cache/2015.Dawn And Hawkes.Golden Heart EP + Yours and Mine Preview.Golden Heart.wav
+  Track: cache/2005.Flyleaf.Flyleaf.Cassie.wav
+  Track: cache/2015.Vitamin String Quartet.VSQ Performs the Hits of 2014 Vol. 3.Centuries (String Quartet Tribute to Fall out Boy).wav
+  Track: cache/2014.Banda do Mar.Banda do Mar.Vamo Embora.wav
+  Track: cache/2014.James Newton Howard.The Hunger Games - Mockingjay Pt. 1 (Original Motin Picture Score).Inside The Tribute Center.wav
+  Track: cache/2015.Three Days Grace.Human.I Am Machine.wav
+  Track: cache/2001.Bond.Born.Bella Donna.wav
+  Track: cache/2014.OK Go.Hungry Ghosts.The Great Fire.wav
+  Track: cache/2005.Flyleaf.Flyleaf.Breathe Today.wav
+  Track: cache/2014.Milky Chance.Sadnecessary.Stunner.wav
+  Track: cache/2015.Lowland Hum.Native Air.Eden (Part Two).wav
+  Track: cache/2010.Linkin Park.A Thousand Suns.Fallout.wav
+  Track: cache/2015.MOGWAI.Central Belters.Wizard Motor.wav
+  Track: cache/2016.Sleeping At Last.Atlas: Senses.Taste.wav
+  Track: cache/2015.Lowland Hum.Native Air.War Is Over.wav
+  Track: cache/2005.Flyleaf.Flyleaf.So I Thought.wav
+  Track: cache/2002.Matchbox 20.More Than You Think You Are.Unwell.wav
+  Track: cache/2014.Little Boots.Business Pleasure - EP.Taste It.wav
+  Track: cache/2016.Miike Snow.iii.My Trigger.wav
+  Track: cache/2016.Woodkid.Desierto (Original Motion Picture Score).False Hopes.wav
+  Track: cache/2014.James Newton Howard.The Hunger Games - Mockingjay Pt. 1 (Original Motin Picture Score).The Hanging Tree.wav
+  Track: cache/2006.Pink.I'm Not Dead.U + Ur Hand.wav
+  Track: cache/2006.Blue October.Foiled.Hate Me.wav
+  Track: cache/2015.Florence + The Machine.How Big, How Blue, How Beautiful (Limited Deluxe Edition).What Kind Of Man.wav
+  Track: cache/2003.Muse.Absolution.Endlessly.wav
+  Track: cache/2014.Kerretta.Pirohia.His Streets Of Honey, Her Mouth Of Gold.wav
+  Track: cache/2015.IAMX.Metanoia.Oh Cruel Darkness Embrace Me.wav
+  Track: cache/1994.The London Symphony Orchestra.The Performs Sting.King of Pain.wav
+  Track: cache/2014.Pentatonix.PTX, Vol. III.Rather Be.wav
+  Track: cache/2003.Linkin Park.Meteora.Lying from You.wav
+  Track: cache/2016.Tall Heights.Man of Stone.The Running of the Bulls.wav
+  Track: cache/1998.Snow Patrol.Songs For Polarbears.Downhill From Here.wav
+  Track: cache/1998.Snow Patrol.Songs For Polarbears.Little Hide.wav
+[=================== ] 245/256(35, 661500)
+  Track: cache/2015.Imagine Dragons.Smoke + Mirrors (Deluxe Edition).I'm So Sorry.wav
+  Track: cache/2015.Howie Day.Lanterns.Torches.wav
+  Track: cache/2015.Marina and The Diamonds.FROOT.Immortal.wav
+  Track: cache/2015.Cold War Kids.Five Quick Cuts - EP.Stop  Rewind.wav
+  Track: cache/2016.Aperture Science Psychoacoustics Laboratory.Portal 2: Songs to Test By - Volume 3.Robot Waiting Room #4.wav
+  Track: cache/2010.Daft Punk.Tron: Legacy (Amazon MP3 Exclusive Version).The Grid.wav
+  Track: cache/2016.Ruth Koleva.R U T H.Better.wav
+  Track: cache/2015.Brian Tyler.Avengers: Age of Ultron.Rise Together.wav
+  Track: cache/2013.The National.Trouble Will Find Me.Pink Rabbits.wav
+  Track: cache/2016.Jonny Lang.Lie To Me.When I Come to You.wav
+  Track: cache/2015.Marina and The Diamonds.FROOT.Forget.wav
+[====================] complete
+256/256 [==============================] - 1s     
+
+Test complete. Loss: 1.089504038915038. Accuracy: 70.3125%
+Finished writing model to disk.
+Finished writing weights to disk.
+Greys-MacBook-Pro:nAud greypatterson$ 
