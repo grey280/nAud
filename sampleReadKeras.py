@@ -26,10 +26,10 @@ early_stopping_patience = 3 			# how many epochs without improvement it'll go be
 
 ## IO settings
 input_data = "cache/data.plist"
-weights_file_name = "MIXx.2.json"
-model_file_name = "MIXx.2.hdf5"
-test_series_name = "MIXx"
-tests_in_series = 5
+weights_file_name = "default.json"		# name of model file to load
+model_file_name = "default.hdf5"		# name of weights file to load
+test_series_name = "MIXx"				# name of the test series - files are saved as test_series_name.iteration.json/hdf5
+tests_in_series = 5 					# number of tests to run in this series
 vstack_split_size = 35					# controls the speed/memory usage of loading tracks. 25-50 works well.
 start_point = 60 						# seconds into the sample to read ((start_point+sample_duration)<sample length)
 sample_duration = 15					# seconds of sample to read ((start_point+sample_duration)<sample length)
