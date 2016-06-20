@@ -93,7 +93,7 @@ def random_parse_track(track, data):
 	data_3 = data[start_point_3:int(start_point_3 + ((sample_duration/3)*44100))]
 	return scaled_genre, np.concatenate((data_1, data_2, data_3))
 
-def save_model(model, iteration, path=model_file_name):
+def save_model(model, iteration, path=test_series_name):
 	# Saves the model - just a quick function to save some time
 	if do_save:
 		path = "output/{}.{}.json".format(path, iteration)
@@ -101,7 +101,7 @@ def save_model(model, iteration, path=model_file_name):
 		open(path, 'w+').write(json_string)
 		d.debug('Finished writing model to disk.')
 
-def save_weights(model, iteration, path=weights_file_name):
+def save_weights(model, iteration, path=test_series_name):
 	# Saves the weights - just a quick function to save some time
 	if do_save:
 		path = "output/{}.{}.hdf5".format(path, iteration)
