@@ -1,0 +1,74 @@
+gpatt11-1:nAud greypatterson$ python sampleReadKeras.py 
+Using Theano backend.
+Start: read plist
+End: read plist
+Initializing data set object
+Dataset built.
+Test 0 of 3
+Model loaded and SGD prepared.
+Weights loaded.
+Loading tracks: [====================] complete5
+Train on 1966 samples, validate on 219 samples
+Epoch 1/50
+1966/1966 [==============================] - 111s - loss: 2.6249 - acc: 0.6668 - val_loss: 3.1065 - val_acc: 0.6484
+Epoch 2/50
+1966/1966 [==============================] - 106s - loss: 2.6336 - acc: 0.7019 - val_loss: 2.6721 - val_acc: 0.7123
+Epoch 3/50
+1966/1966 [==============================] - 107s - loss: 2.5246 - acc: 0.6953 - val_loss: 2.7419 - val_acc: 0.6758
+Epoch 4/50
+1966/1966 [==============================] - 110s - loss: 2.6258 - acc: 0.6836 - val_loss: 2.9326 - val_acc: 0.6849
+Epoch 5/50
+1966/1966 [==============================] - 108s - loss: 2.6494 - acc: 0.6882 - val_loss: 3.0839 - val_acc: 0.7032
+Epoch 6/50
+1966/1966 [==============================] - 106s - loss: 2.1730 - acc: 0.7131 - val_loss: 1.9108 - val_acc: 0.6941
+Epoch 7/50
+1966/1966 [==============================] - 122s - loss: 1.4337 - acc: 0.6892 - val_loss: 1.5023 - val_acc: 0.6895
+Epoch 8/50
+1966/1966 [==============================] - 141s - loss: 1.2862 - acc: 0.6958 - val_loss: 1.1958 - val_acc: 0.6849
+Epoch 9/50
+1966/1966 [==============================] - 177s - loss: 1.2814 - acc: 0.6851 - val_loss: 1.2430 - val_acc: 0.7078
+Epoch 10/50
+1966/1966 [==============================] - 189s - loss: 1.1680 - acc: 0.7055 - val_loss: 1.4127 - val_acc: 0.6804
+Epoch 11/50
+1966/1966 [==============================] - 194s - loss: 1.0131 - acc: 0.7350 - val_loss: 0.9585 - val_acc: 0.7260
+Epoch 12/50
+1966/1966 [==============================] - 194s - loss: 0.7415 - acc: 0.7859 - val_loss: 0.8746 - val_acc: 0.7260
+Epoch 13/50
+1966/1966 [==============================] - 197s - loss: 0.7227 - acc: 0.7818 - val_loss: 0.8113 - val_acc: 0.7260
+Epoch 14/50
+1966/1966 [==============================] - 194s - loss: 0.7083 - acc: 0.7762 - val_loss: 0.7696 - val_acc: 0.7260
+Epoch 15/50
+1966/1966 [==============================] - 205s - loss: 0.7160 - acc: 0.7864 - val_loss: 0.8022 - val_acc: 0.7260
+Epoch 16/50
+1966/1966 [==============================] - 193s - loss: 0.7207 - acc: 0.7843 - val_loss: 0.8273 - val_acc: 0.7260
+Epoch 17/50
+1966/1966 [==============================] - 196s - loss: 0.7249 - acc: 0.7828 - val_loss: 0.8353 - val_acc: 0.7260
+Epoch 18/50
+1966/1966 [==============================] - 221s - loss: 0.7281 - acc: 0.7833 - val_loss: 0.8141 - val_acc: 0.7260
+Fit complete. Preparing to test.
+Loading tracks: [====================] complete
+256/256 [==============================] - 1s     
+
+Test 0 of 3 complete. Loss: 0.761975672096014. Accuracy: 76.953125%
+Traceback (most recent call last):
+  File "sampleReadKeras.py", line 257, in <module>
+    save_model(model, i)
+  File "sampleReadKeras.py", line 121, in save_model
+    open(path, 'w+').write(json_string)
+FileNotFoundError: [Errno 2] No such file or directory: 'output/output/MTRN1.0.json.0.1466523066.673877.json'
+gpatt11-1:nAud greypatterson$ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

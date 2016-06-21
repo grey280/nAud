@@ -7,6 +7,7 @@ import plistlib
 import numpy 			as np
 import scipy.io.wavfile	as wav
 import random
+import time
 
 import gdebug
 import gconvert			as conv
@@ -18,7 +19,7 @@ log_level = 2 							# 0: silent, 1: errors only, 2: normal, 3: verbose
 ## Neural Network settings
 batch_size = 16
 epoch_count = 50
-data_point_count = 2185*2 				# number of data points to use for training; set to 0 for 'all'
+data_point_count = 0 					# number of data points to use for training; set to 0 for 'all'
 evaluation_data_point_count = 256 		# number of data points to evaluate against; set to 0 for 'all'
 shuffle_at_epoch = True
 NN_validation_split = 0.1 				# fraction of data to be held out as validation data, 0.<x<1
@@ -28,8 +29,8 @@ early_stopping_patience = 3 			# how many epochs without improvement it'll go be
 input_data = "cache/data.plist"
 weights_file_name = "default.json"		# name of model file to load
 model_file_name = "default.hdf5"		# name of weights file to load
-test_series_name = "MIXx"				# name of the test series - files are saved as test_series_name.iteration.json/hdf5
-tests_in_series = 5 					# number of tests to run in this series
+test_series_name = "default"			# name of the test series - files are saved as test_series_name.iteration.json/hdf5
+tests_in_series = 3 					# number of tests to run in this series
 vstack_split_size = 35					# controls the speed/memory usage of loading tracks. 25-50 works well.
 start_point = 60 						# seconds into the sample to read ((start_point+sample_duration)<sample length)
 sample_duration = 15					# seconds of sample to read ((start_point+sample_duration)<sample length)
@@ -38,6 +39,7 @@ do_random_parse = True					# true will use three 5-second clips from random plac
 ## Operational settings
 load_model = False
 load_weights = False
+load_from_previous_trial = False
 do_train = True
 do_save = True
 
@@ -93,19 +95,39 @@ def random_parse_track(track, data):
 	data_3 = data[start_point_3:int(start_point_3 + ((sample_duration/3)*44100))]
 	return scaled_genre, np.concatenate((data_1, data_2, data_3))
 
+def load_model(iteration=0, path=test_series_name):
+	if load_from_previous_trial:
+		load_path = "output/{}.{}.json".format(path, iteration)
+	else:
+		load_path = "output/{}".format(model_file_name)
+	model = open(load_path, 'r').read()
+	return model_from_json(model)
+
+def load_weights(iteration=0, path=test_series_name):
+	global model
+	if load_from_previous_trial:
+		load_path = "output/{}.{}.hdf5".format(path, iteration)
+	else:
+		load_path = "output/{}.hdf5".format(path)
+	model.load_weights(load_path)
+
 def save_model(model, iteration, path=test_series_name):
 	# Saves the model - just a quick function to save some time
 	if do_save:
-		path = "output/{}.{}.json".format(path, iteration)
+		outpath = "output/{}.{}.json".format(path, iteration)
+		if load_from_previous_trial:
+			outpath = "output/{}.{}.{}.json".format(path, iteration, time.time())
 		json_string = model.to_json()
-		open(path, 'w+').write(json_string)
+		open(outpath, 'w+').write(json_string)
 		d.debug('Finished writing model to disk.')
 
 def save_weights(model, iteration, path=test_series_name):
 	# Saves the weights - just a quick function to save some time
 	if do_save:
-		path = "output/{}.{}.hdf5".format(path, iteration)
-		model.save_weights(path)
+		outpath = "output/{}.{}.hdf5".format(path, iteration)
+		if load_from_previous_trial:
+			outpath = "output/{}.{}.{}.hdf5".format(path, iteration, time.time())
+		model.save_weights(outpath)
 		d.debug("Finished writing weights to disk.")
 
 class Dataset:
@@ -203,13 +225,12 @@ for i in range(tests_in_series):
 		if log_level == 3: # only need to print the model in Verbose mode
 			model.summary()
 	else:
-		model = open("output/{}".format(model_file_name), 'r').read()
-		model = model_from_json(model)
+		model = load_model(iteration=i)
 		sgd = SGD(lr=0.1, decay=1e-6, momentum=0.9, nesterov=True)
 		model.compile(loss='categorical_crossentropy', optimizer=sgd, metrics=['accuracy'])
 		d.debug("Model loaded and SGD prepared.")
 		if load_weights:
-			model.load_weights("output/{}".format(weights_file_name))
+			load_weights(iteration=i)
 			d.debug("Weights loaded.")
 	# Training
 	if do_train:
