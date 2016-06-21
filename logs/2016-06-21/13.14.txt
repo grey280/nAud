@@ -1,0 +1,149 @@
+gpatt11-1:nAud greypatterson$ python sampleReadKeras.py 
+Using Theano backend.
+Start: read plist
+End: read plist
+Initializing data set object
+Dataset built.
+Test 0 of 3
+Model loaded and SGD prepared.
+Weights loaded.
+Loading tracks: [====================] complete5
+Train on 1966 samples, validate on 219 samples
+Epoch 1/50
+1966/1966 [==============================] - 119s - loss: 2.6145 - acc: 0.6775 - val_loss: 2.2377 - val_acc: 0.7215
+Epoch 2/50
+1966/1966 [==============================] - 120s - loss: 2.5731 - acc: 0.6918 - val_loss: 2.1065 - val_acc: 0.7717
+Epoch 3/50
+1966/1966 [==============================] - 108s - loss: 2.6488 - acc: 0.6785 - val_loss: 2.0531 - val_acc: 0.7717
+Epoch 4/50
+1966/1966 [==============================] - 105s - loss: 2.4650 - acc: 0.6648 - val_loss: 1.9503 - val_acc: 0.7489
+Epoch 5/50
+1966/1966 [==============================] - 110s - loss: 2.4837 - acc: 0.6714 - val_loss: 2.3391 - val_acc: 0.7215
+Epoch 6/50
+1966/1966 [==============================] - 107s - loss: 1.9997 - acc: 0.7075 - val_loss: 1.2959 - val_acc: 0.7215
+Epoch 7/50
+1966/1966 [==============================] - 130s - loss: 1.2900 - acc: 0.6882 - val_loss: 1.0200 - val_acc: 0.7580
+Epoch 8/50
+1966/1966 [==============================] - 143s - loss: 1.3277 - acc: 0.6775 - val_loss: 0.9779 - val_acc: 0.7580
+Epoch 9/50
+1966/1966 [==============================] - 172s - loss: 1.2623 - acc: 0.6836 - val_loss: 1.1122 - val_acc: 0.7763
+Epoch 10/50
+1966/1966 [==============================] - 198s - loss: 1.3038 - acc: 0.6806 - val_loss: 1.0972 - val_acc: 0.7489
+Epoch 11/50
+1966/1966 [==============================] - 202s - loss: 0.9997 - acc: 0.7406 - val_loss: 0.8168 - val_acc: 0.7900
+Epoch 12/50
+1966/1966 [==============================] - 208s - loss: 0.7704 - acc: 0.7782 - val_loss: 0.7025 - val_acc: 0.7900
+Epoch 13/50
+1966/1966 [==============================] - 228s - loss: 0.7419 - acc: 0.7737 - val_loss: 0.7137 - val_acc: 0.7900
+Epoch 14/50
+1966/1966 [==============================] - 236s - loss: 0.7373 - acc: 0.7767 - val_loss: 0.7234 - val_acc: 0.7900
+Epoch 15/50
+1966/1966 [==============================] - 238s - loss: 0.7437 - acc: 0.7762 - val_loss: 0.6797 - val_acc: 0.7900
+Epoch 16/50
+1966/1966 [==============================] - 216s - loss: 0.7403 - acc: 0.7737 - val_loss: 0.6937 - val_acc: 0.7900
+Epoch 17/50
+1966/1966 [==============================] - 205s - loss: 0.7344 - acc: 0.7782 - val_loss: 0.7122 - val_acc: 0.7900
+Epoch 18/50
+1966/1966 [==============================] - 201s - loss: 0.7359 - acc: 0.7782 - val_loss: 0.7019 - val_acc: 0.7854
+Epoch 19/50
+1966/1966 [==============================] - 204s - loss: 0.7313 - acc: 0.7747 - val_loss: 0.7039 - val_acc: 0.7900
+Fit complete. Preparing to test.
+Loading tracks: [====================] complete
+256/256 [==============================] - 1s     
+
+Test 0 of 3 complete. Loss: 0.6513566700741649. Accuracy: 80.078125%
+Finished writing model to disk.
+Finished writing weights to disk.
+Test 1 of 3
+Model loaded and SGD prepared.
+Weights loaded.
+Loading tracks: [====================] complete5
+Train on 1966 samples, validate on 219 samples
+Epoch 1/50
+1966/1966 [==============================] - 114s - loss: 2.8149 - acc: 0.6887 - val_loss: 2.7508 - val_acc: 0.7489
+Epoch 2/50
+1966/1966 [==============================] - 114s - loss: 2.7474 - acc: 0.6816 - val_loss: 2.9363 - val_acc: 0.7397
+Epoch 3/50
+1966/1966 [==============================] - 111s - loss: 2.8969 - acc: 0.6958 - val_loss: 2.7560 - val_acc: 0.6941
+Epoch 4/50
+1966/1966 [==============================] - 110s - loss: 2.8084 - acc: 0.7065 - val_loss: 2.8893 - val_acc: 0.7306
+Epoch 5/50
+1966/1966 [==============================] - 114s - loss: 2.7545 - acc: 0.6979 - val_loss: 2.5833 - val_acc: 0.7260
+Epoch 6/50
+1966/1966 [==============================] - 106s - loss: 2.4895 - acc: 0.6999 - val_loss: 1.9337 - val_acc: 0.7352
+Epoch 7/50
+1966/1966 [==============================] - 116s - loss: 1.5883 - acc: 0.6801 - val_loss: 1.2921 - val_acc: 0.7078
+Epoch 8/50
+1966/1966 [==============================] - 150s - loss: 1.3384 - acc: 0.6801 - val_loss: 1.0437 - val_acc: 0.7215
+Epoch 9/50
+1966/1966 [==============================] - 176s - loss: 1.2948 - acc: 0.6785 - val_loss: 1.1619 - val_acc: 0.7169
+Epoch 10/50
+1966/1966 [==============================] - 200s - loss: 1.2948 - acc: 0.6755 - val_loss: 1.1094 - val_acc: 0.7123
+Epoch 11/50
+1966/1966 [==============================] - 212s - loss: 1.0867 - acc: 0.7325 - val_loss: 0.9147 - val_acc: 0.7534
+Epoch 12/50
+1966/1966 [==============================] - 243s - loss: 0.7808 - acc: 0.7665 - val_loss: 0.8003 - val_acc: 0.7580
+Epoch 13/50
+1966/1966 [==============================] - 246s - loss: 0.7484 - acc: 0.7726 - val_loss: 0.8017 - val_acc: 0.7580
+Epoch 14/50
+1966/1966 [==============================] - 213s - loss: 0.7414 - acc: 0.7757 - val_loss: 0.7789 - val_acc: 0.7534
+Epoch 15/50
+1966/1966 [==============================] - 233s - loss: 0.7441 - acc: 0.7731 - val_loss: 0.7748 - val_acc: 0.7580
+Epoch 16/50
+1966/1966 [==============================] - 230s - loss: 0.7422 - acc: 0.7731 - val_loss: 0.7925 - val_acc: 0.7534
+Epoch 17/50
+1966/1966 [==============================] - 264s - loss: 0.7461 - acc: 0.7721 - val_loss: 0.7876 - val_acc: 0.7580
+Epoch 18/50
+1966/1966 [==============================] - 234s - loss: 0.7388 - acc: 0.7742 - val_loss: 0.7725 - val_acc: 0.7580
+Epoch 19/50
+1966/1966 [==============================] - 233s - loss: 0.7377 - acc: 0.7737 - val_loss: 0.7698 - val_acc: 0.7580
+Epoch 20/50
+1966/1966 [==============================] - 226s - loss: 0.7406 - acc: 0.7762 - val_loss: 0.7740 - val_acc: 0.7580
+Epoch 21/50
+1966/1966 [==============================] - 235s - loss: 0.7368 - acc: 0.7798 - val_loss: 0.7536 - val_acc: 0.7626
+Epoch 22/50
+1966/1966 [==============================] - 212s - loss: 0.7494 - acc: 0.7691 - val_loss: 0.7385 - val_acc: 0.7580
+Epoch 23/50
+1966/1966 [==============================] - 202s - loss: 0.7351 - acc: 0.7737 - val_loss: 0.7508 - val_acc: 0.7580
+Epoch 24/50
+1966/1966 [==============================] - 212s - loss: 0.7388 - acc: 0.7747 - val_loss: 0.7940 - val_acc: 0.7534
+Epoch 25/50
+1966/1966 [==============================] - 205s - loss: 0.7408 - acc: 0.7701 - val_loss: 0.7822 - val_acc: 0.7580
+Epoch 26/50
+1966/1966 [==============================] - 201s - loss: 0.7491 - acc: 0.7762 - val_loss: 0.7460 - val_acc: 0.7580
+Fit complete. Preparing to test.
+Loading tracks: [====================] complete
+256/256 [==============================] - 1s     
+
+Test 1 of 3 complete. Loss: 0.7324563451111317. Accuracy: 76.953125%
+Finished writing model to disk.
+Finished writing weights to disk.
+Test 2 of 3
+Model loaded and SGD prepared.
+Weights loaded.
+Loading tracks: [====================] complete5
+Train on 1966 samples, validate on 219 samples
+Epoch 1/50
+1966/1966 [==============================] - 109s - loss: 2.4952 - acc: 0.6836 - val_loss: 2.6406 - val_acc: 0.7534
+Epoch 2/50
+1966/1966 [==============================] - 106s - loss: 2.6713 - acc: 0.7035 - val_loss: 3.3685 - val_acc: 0.7306
+Epoch 3/50
+1966/1966 [==============================] - 111s - loss: 2.7457 - acc: 0.7152 - val_loss: 2.9055 - val_acc: 0.7489
+Epoch 4/50
+1966/1966 [==============================] - 105s - loss: 2.7211 - acc: 0.6984 - val_loss: 2.7487 - val_acc: 0.7489
+Epoch 5/50
+1966/1966 [==============================] - 105s - loss: 2.6282 - acc: 0.7040 - val_loss: 2.8544 - val_acc: 0.7123
+Fit complete. Preparing to test.
+Loading tracks: [====================] complete
+256/256 [==============================] - 1s     
+
+Test 2 of 3 complete. Loss: 2.1891950611025095. Accuracy: 73.4375%
+Finished writing model to disk.
+Finished writing weights to disk.
+
+Test 0 of 3 complete. Loss: 0.6513566700741649. Accuracy: 80.078125%
+
+Test 1 of 3 complete. Loss: 0.7324563451111317. Accuracy: 76.953125%
+
+Test 2 of 3 complete. Loss: 2.1891950611025095. Accuracy: 73.4375%
+gpatt11-1:nAud greypatterson$ 
