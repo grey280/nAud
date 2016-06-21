@@ -37,8 +37,8 @@ sample_duration = 15					# seconds of sample to read ((start_point+sample_durati
 do_random_parse = True					# true will use three 5-second clips from random places in the song, rather than a single 15-second block
 
 ## Operational settings
-load_model = False
-load_weights = False
+load_model = True
+load_weights = True
 load_from_previous_trial = True
 do_train = True
 do_save = True
@@ -103,7 +103,7 @@ def load_model(iteration=0, path=test_series_name):
 	model = open(load_path, 'r').read()
 	return model_from_json(model)
 
-def load_weights(model, iteration=0, path=test_series_name):
+def load_weights(iteration=0, path=test_series_name):
 	global model
 	if load_from_previous_trial:
 		load_path = "output/{}.{}.hdf5".format(path, iteration)
@@ -230,7 +230,7 @@ for i in range(tests_in_series):
 		model.compile(loss='categorical_crossentropy', optimizer=sgd, metrics=['accuracy'])
 		d.debug("Model loaded and SGD prepared.")
 		if load_weights:
-			load_weights(model, iteration=i)
+			load_weights(iteration=i)
 			d.debug("Weights loaded.")
 	# Training
 	if do_train:
