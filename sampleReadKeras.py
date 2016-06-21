@@ -146,13 +146,13 @@ class Dataset:
 				self.shuffle()
 			if(i%vstack_split_size == 0):
 				data_feed = np.vstack((data_feed, data_feed_holder))
-				d.debug(data_feed_holder.shape)
+				d.verbose(data_feed_holder.shape)
 				del data_feed_holder
 			location = self.locations[self.start]
 			self.start += 1
 			data_point = self.input_values.get(location)
 			genre, output = parse_track(location, data_point)
-			d.progress("  Track: {}".format(location),i+1,data_point_count)
+			d.progress("Loading tracks".format(location),i+1,data_point_count)
 			if(i%vstack_split_size==0): # fixes an off-by-vstack_split_size error, because np.empty is *weird*
 				data_feed_holder = output
 			else:
