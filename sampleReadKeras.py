@@ -114,20 +114,20 @@ def load_weights(iteration=0, path=test_series_name):
 def save_model(model, iteration, path=test_series_name):
 	# Saves the model - just a quick function to save some time
 	if do_save:
-		path = "output/{}.{}.json".format(path, iteration)
+		outpath = "output/{}.{}.json".format(path, iteration)
 		if load_from_previous_trial:
-			path = "output/{}.{}.{}.json".format(path, iteration, time.time())
+			outpath = "output/{}.{}.{}.json".format(path, iteration, time.time())
 		json_string = model.to_json()
-		open(path, 'w+').write(json_string)
+		open(outpath, 'w+').write(json_string)
 		d.debug('Finished writing model to disk.')
 
 def save_weights(model, iteration, path=test_series_name):
 	# Saves the weights - just a quick function to save some time
 	if do_save:
-		path = "output/{}.{}.hdf5".format(path, iteration)
+		outpath = "output/{}.{}.hdf5".format(path, iteration)
 		if load_from_previous_trial:
-			path = "output/{}.{}.{}.hdf5".format(path, iteration, time.time())
-		model.save_weights(path)
+			outpath = "output/{}.{}.{}.hdf5".format(path, iteration, time.time())
+		model.save_weights(outpath)
 		d.debug("Finished writing weights to disk.")
 
 class Dataset:
