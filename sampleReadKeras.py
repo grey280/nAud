@@ -38,6 +38,7 @@ do_random_parse = True					# true will use three 5-second clips from random plac
 ## Operational settings
 load_model = False
 load_weights = False
+load_from_previous_trial = True
 do_train = True
 do_save = True
 
@@ -92,6 +93,22 @@ def random_parse_track(track, data):
 	data_2 = data[start_point_2:int(start_point_2 + ((sample_duration/3)*44100))]
 	data_3 = data[start_point_3:int(start_point_3 + ((sample_duration/3)*44100))]
 	return scaled_genre, np.concatenate((data_1, data_2, data_3))
+
+def load_model(iteration=0, path=test_series_name):
+	if load_from_previous_trial:
+		load_path = "output/{}.{}.json".format(path, iteration)
+	else:
+		load_path = "output/{}".format(model_file_name)
+	model = open(load_path, 'r').read()
+	return model_from_json(model)
+
+def load_weights(model, iteration=0, path=test_series_name):
+	global model
+	if load_from_previous_trial:
+		load_path = "output/{}.{}.hdf5".format(path, iteration)
+	else:
+		load_path = "output/{}.hdf5".format(path)
+	model.load_weights(load_path)
 
 def save_model(model, iteration, path=test_series_name):
 	# Saves the model - just a quick function to save some time
@@ -203,13 +220,12 @@ for i in range(tests_in_series):
 		if log_level == 3: # only need to print the model in Verbose mode
 			model.summary()
 	else:
-		model = open("output/{}".format(model_file_name), 'r').read()
-		model = model_from_json(model)
+		model = load_model(iteration=i)
 		sgd = SGD(lr=0.1, decay=1e-6, momentum=0.9, nesterov=True)
 		model.compile(loss='categorical_crossentropy', optimizer=sgd, metrics=['accuracy'])
 		d.debug("Model loaded and SGD prepared.")
 		if load_weights:
-			model.load_weights("output/{}".format(weights_file_name))
+			load_weights(model, iteration=i)
 			d.debug("Weights loaded.")
 	# Training
 	if do_train:
