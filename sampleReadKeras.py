@@ -29,7 +29,7 @@ early_stopping_patience = 3 			# how many epochs without improvement it'll go be
 input_data = "cache/data.plist"
 weights_file_name = "default.json"		# name of model file to load
 model_file_name = "default.hdf5"		# name of weights file to load
-test_series_name = "MTRN1"				# name of the test series - files are saved as test_series_name.iteration.json/hdf5
+test_series_name = "default"			# name of the test series - files are saved as test_series_name.iteration.json/hdf5
 tests_in_series = 3 					# number of tests to run in this series
 vstack_split_size = 35					# controls the speed/memory usage of loading tracks. 25-50 works well.
 start_point = 60 						# seconds into the sample to read ((start_point+sample_duration)<sample length)
@@ -37,9 +37,9 @@ sample_duration = 15					# seconds of sample to read ((start_point+sample_durati
 do_random_parse = True					# true will use three 5-second clips from random places in the song, rather than a single 15-second block
 
 ## Operational settings
-load_model = True
-load_weights = True
-load_from_previous_trial = True
+load_model = False
+load_weights = False
+load_from_previous_trial = False
 do_train = True
 do_save = True
 
