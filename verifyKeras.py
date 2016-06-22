@@ -23,9 +23,9 @@ data_point_count = 0 					# number of data points to use for training; set to 0 
 
 ## IO settings
 input_data = "cache/data.plist"
-weights_file_name = "newCategories.json"		# name of model file to load
-model_file_name = "newCategories.hdf5"		# name of weights file to load
-test_series_name = "newCategories"			# name of the test series - files are saved as test_series_name.iteration.json/hdf5
+weights_file_name = ".json"		# name of model file to load
+model_file_name = ".hdf5"		# name of weights file to load
+test_series_name = ""			# name of the test series - files are saved as test_series_name.iteration.json/hdf5
 tests_in_series = 3 					# number of tests to run in this series
 vstack_split_size = 35					# controls the speed/memory usage of loading tracks. 25-50 works well.
 start_point = 60 						# seconds into the sample to read ((start_point+sample_duration)<sample length)
