@@ -34,6 +34,7 @@ do_random_parse = True					# true will use three 5-second clips from random plac
 
 ## Operational settings
 load_from_previous_trial = True
+trial_iteration_to_load = 1
 
 # Tools
 d = gdebug.Debugger(debug_level = log_level)
@@ -165,11 +166,11 @@ data_set = Dataset(tracks)
 if data_point_count == 0:
 	data_point_count = data_set.get_data_point_count()
 
-model = load_model()
+model = load_model(iteration=trial_iteration_to_load)
 sgd = SGD(lr=0.1, decay=1e-6, momentum=0.9, nesterov=True)
 model.compile(loss='categorical_crossentropy', optimizer=sgd, metrics=['accuracy'])
 # d.debug("Model loaded and SGD prepared.")
-load_weights()
+load_weights(iteration=trial_iteration_to_load)
 # d.debug("Weights loaded.")
 d.debug("song identifier|likelihood_art|likelihood_pop|likelihood_tradition|likely_type|was_art|was_pop|was_tradition|was_type")
 data_array_feed, answer_array_feed, information_feed = data_set.next_batch(data_point_count)
