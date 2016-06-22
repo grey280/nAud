@@ -19,7 +19,7 @@ log_level = 2 							# 0: silent, 1: errors only, 2: normal, 3: verbose
 ## Neural Network settings
 batch_size = 16
 epoch_count = 50
-data_point_count = 5 					# number of data points to use for training; set to 0 for 'all'
+data_point_count = 0 					# number of data points to use for training; set to 0 for 'all'
 
 ## IO settings
 input_data = "cache/data.plist"
@@ -51,7 +51,7 @@ def parse_track(track, data):
 
 	# Process sample
 	sample_data = wav.read(track)
-	d.verbose("    Samples: {}".format(len(sample_data[1])))
+	# d.verbose("    Samples: {}".format(len(sample_data[1])))
 	data = np.ndarray.flatten(sample_data[1])
 	del sample_data
 	start_point_calc = start_point*44100
@@ -67,7 +67,7 @@ def random_parse_track(track, data):
 
 	# Process sample
 	sample_data = wav.read(track)
-	d.verbose("    Samples: {}".format(len(sample_data[1])))
+	# d.verbose("    Samples: {}".format(len(sample_data[1])))
 	total_samples = len(sample_data[1])
 	data = np.ndarray.flatten(sample_data[1])
 	del sample_data
@@ -95,25 +95,6 @@ def load_weights(iteration=0, path=test_series_name):
 		load_path = "output/{}.hdf5".format(path)
 	model.load_weights(load_path)
 
-def save_model(model, iteration, path=test_series_name):
-	# Saves the model - just a quick function to save some time
-	if do_save:
-		outpath = "output/{}.{}.json".format(path, iteration)
-		if load_from_previous_trial:
-			outpath = "output/{}.{}.{}.json".format(path, iteration, time.time())
-		json_string = model.to_json()
-		open(outpath, 'w+').write(json_string)
-		d.debug('Finished writing model to disk.')
-
-def save_weights(model, iteration, path=test_series_name):
-	# Saves the weights - just a quick function to save some time
-	if do_save:
-		outpath = "output/{}.{}.hdf5".format(path, iteration)
-		if load_from_previous_trial:
-			outpath = "output/{}.{}.{}.hdf5".format(path, iteration, time.time())
-		model.save_weights(outpath)
-		d.debug("Finished writing weights to disk.")
-
 class Dataset:
 	# Having a class to handle the dataset makes a lot of things easier.
 	# Basically, hand it something opened by plistlib and it'll parse it out nice and pretty-like.
@@ -123,7 +104,7 @@ class Dataset:
 		self.locations=[]
 		for track, data in inpt.items():
 			self.locations.append(track)
-		d.debug("Initializing data set object")
+		# d.debug("Initializing data set object")
 	def shuffle(self):
 		# Shuffles the dataset. May be expanded in the future to better handle 'holding out test data' functionality.
 		random.shuffle(self.locations)
@@ -160,7 +141,7 @@ class Dataset:
 			self.start += 1
 			data_point = self.input_values.get(location)
 			genre, output = parse_track(location, data_point)
-			d.progress("Loading tracks".format(location),i+1,data_point_count)
+			d.vprogress("Loading tracks".format(location),i+1,data_point_count)
 			if(i%vstack_split_size==0): # fixes an off-by-vstack_split_size error, because np.empty is *weird*
 				data_feed_holder = output
 			else:
@@ -173,12 +154,12 @@ class Dataset:
 
 
 # Import data
-d.debug("Start: read plist")
+# d.debug("Start: read plist")
 tracks = plistlib.readPlist(input_data)
-d.debug("End: read plist")
+# d.debug("End: read plist")
 data_set = Dataset(tracks)
-d.debug("Dataset built.")
-d.verbose("Dataset size: {}".format(data_set.get_data_point_count()))
+# d.debug("Dataset built.")
+# d.verbose("Dataset size: {}".format(data_set.get_data_point_count()))
 
 # Load configuration, if necessary
 if data_point_count == 0:
@@ -187,9 +168,10 @@ if data_point_count == 0:
 model = load_model()
 sgd = SGD(lr=0.1, decay=1e-6, momentum=0.9, nesterov=True)
 model.compile(loss='categorical_crossentropy', optimizer=sgd, metrics=['accuracy'])
-d.debug("Model loaded and SGD prepared.")
+# d.debug("Model loaded and SGD prepared.")
 load_weights()
-d.debug("Weights loaded.")
+# d.debug("Weights loaded.")
+d.debug("song identifier, likelihood_art, likelihood_pop, likelihood_tradition, likely_type, was_art, was_pop, was_tradition, was_type")
 data_array_feed, answer_array_feed, information_feed = data_set.next_batch(data_point_count)
 for i in range(len(data_array_feed)):
 	# Prep for analysis
@@ -201,18 +183,21 @@ for i in range(len(data_array_feed)):
 	result = model.predict(outer_data, batch_size=1, verbose=0)
 
 	# Prep result for printing
-	one_hot = result[0]
+	# one_hot = result[0]
 	as_int = conv.one_hot_to_int(one_hot)
-	as_label = conv.genre_to_label(as_int)
+	# as_label = conv.genre_to_label(as_int)
 
 	# Prep 'correct' for printing
 	orig_as_int = conv.one_hot_to_int(answer_array_feed[i])
-	orig_as_label = conv.genre_to_label(orig_as_int)
+	# orig_as_label = conv.genre_to_label(orig_as_int)
 
 	# Print
-	d.debug("Orig int: {} Orig label: {}".format(orig_as_int, orig_as_label))
-	d.debug("{}: Guess: {} Correct: {}".format(information_feed[i], as_label, orig_as_label))
-	d.debug("  Guess: {}  Correct: {}".format(result[0], answer_array_feed[i]))
+	# d.debug("Orig int: {} Orig label: {}".format(orig_as_int, orig_as_label))
+	# d.debug("{}: Guess: {} Correct: {}".format(information_feed[i], as_label, orig_as_label))
+	# d.debug("  Guess: {}  Correct: {}".format(result[0], answer_array_feed[i]))
+	d.debug("{},{},{},{},{},{},{},{},{}".format(information_feed[i],result[0][0],result[0][1],result[0][2],as_int,answer_array_feed[0][0],answer_array_feed[0][1],answer_array_feed[0][2],orig_as_int))
+
+	# Output: song_identifier, likelihood_art, likelihood_pop, likelihood_tradition, was_art, was_pop, was_tradition
 
 
 # specific_song_to_test = "cache/2016.Ten Fé.NOON  189.Elodie.wav"
