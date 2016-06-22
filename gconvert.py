@@ -46,172 +46,81 @@ def scale_genre(genre):
 	output[genre] = 1
 	return output
 
-# Genre parsing
-# number_of_genres = 13
-# genre_labels = {
-# 	"Unknown": 0,
-# 	"Pop": 1,
-# 	"Rock": 2,
-# 	"Alternative": 3,
-# 	"Indie": 4,
-# 	"Soundtrack": 5,
-# 	"Rap": 6,
-# 	"Classical": 7,
-# 	"Electronic": 8,
-# 	"Holiday": 9,
-# 	"Country": 10,
-# 	"Ambient": 11,
-# 	"Other": 12
-# }
-# def convert_genre(genre):
-# 	genres = {
-# 		"Unknown": 0,
-# 		"Acoustic": 1,
-# 		"Adult Alternative": 2,
-# 		"Alternative": 3,
-# 		"Alternative Pop": 4,
-# 		"Alternative Punk": 5,
-# 		"Alternative Rock": 6,
-# 		"Ambient": 7,
-# 		"Bluegrass": 8,
-# 		"Children's Music": 9,
-# 		"Christian & Gospel": 10,
-# 		"Classical": 11,
-# 		"Comedy": 12,
-# 		"Country": 13,
-# 		"Dance": 14,
-# 		"Disco": 15,
-# 		"Dubstep": 16,
-# 		"Electronic": 17,
-# 		"Folk": 18,
-# 		"Hip Hop/Rap": 19,
-# 		"Holiday": 20,
-# 		"House": 21,
-# 		"Indie": 22,
-# 		"Indie Alternative": 23,
-# 		"Indie Electronic": 24,
-# 		"Indie Folk": 25,
-# 		"Indie Pop": 26,
-# 		"Indie Rock": 27,
-# 		"Instrumental": 28,
-# 		"Jazz": 29,
-# 		"K-Pop": 30,
-# 		"Latin": 31,
-# 		"Mashup": 32,
-# 		"Modern": 33,
-# 		"Modern Classical": 34,
-# 		"Pop": 35,
-# 		"Pop Punk": 36,
-# 		"Pop Rock": 37,
-# 		"Post Rock": 38,
-# 		"Post-Punk": 39,
-# 		"Punk": 40,
-# 		"Punk Rock": 41,
-# 		"R&B": 42,
-# 		"R&B/Pop": 43,
-# 		"R&B/Soul": 44,
-# 		"Rap": 45,
-# 		"Remix": 46,
-# 		"Rock": 47,
-# 		"Rock/Pop": 48,
-# 		"Score": 49,
-# 		"Shoegaze": 50,
-# 		"Singer/Songwriter": 51,
-# 		"Soundtrack": 52,
-# 		"Synthpop": 53,
-# 		"Trance": 54
-# 	}
-# 	genres_convert = [0, 3, 3, 3, 3, 3, 3, 11, 10, 12, 12, 7, 12, 10, 8, 8, 8, 8, 10, 6, 9, 8, 4, 4, 4, 4, 4, 4, 7, 12, 1, 12, 12, 7, 7, 1, 1, 1, 11, 2, 2, 2, 6, 6, 6, 6, 12, 2, 2, 7, 11, 4, 7, 1, 11]
-# 	temp = genres.get(genre, 0)
-# 	return genres_convert[temp]
+number_of_genres = 4
+meta_genres = {
+		"Other": 0,
+		"Art": 1,
+		"Pop": 2,
+		"Traditional": 3
+	}
 
-number_of_genres = 3
-genre_labels = {
-	# "Unknown": 0,
-	# "Rock": 1,
-	# "Classical": 2,
-	# "Acoustic": 3
-	"Art Music": 0,
-	"Popular Music": 1,
-	"Traditional Music": 2
-}
 def convert_genre(genre):
 	genres = {
-		"Unknown": 0,
-		"Acoustic": 1,
-		"Adult Alternative": 2,
-		"Alternative": 3,
-		"Alternative Pop": 4,
-		"Alternative Punk": 5,
-		"Alternative Rock": 6,
-		"Ambient": 7,
-		"Bluegrass": 8,
-		"Children's Music": 9,
-		"Christian & Gospel": 10,
-		"Classical": 11,
-		"Comedy": 12,
-		"Country": 13,
-		"Dance": 14,
-		"Disco": 15,
-		"Dubstep": 16,
-		"Electronic": 17,
-		"Folk": 18,
-		"Hip Hop/Rap": 19,
-		"Holiday": 20,
-		"House": 21,
-		"Indie": 22,
-		"Indie Alternative": 23,
-		"Indie Electronic": 24,
-		"Indie Folk": 25,
-		"Indie Pop": 26,
-		"Indie Rock": 27,
-		"Instrumental": 28,
-		"Jazz": 29,
-		"K-Pop": 30,
-		"Latin": 31,
-		"Mashup": 32,
-		"Modern": 33,
-		"Modern Classical": 34,
-		"Pop": 35,
-		"Pop Punk": 36,
-		"Pop Rock": 37,
-		"Post Rock": 38,
-		"Post-Punk": 39,
-		"Punk": 40,
-		"Punk Rock": 41,
-		"R&B": 42,
-		"R&B/Pop": 43,
-		"R&B/Soul": 44,
-		"Rap": 45,
-		"Remix": 46,
-		"Rock": 47,
-		"Rock/Pop": 48,
-		"Score": 49,
-		"Shoegaze": 50,
-		"Singer/Songwriter": 51,
-		"Soundtrack": 52,
-		"Synthpop": 53,
-		"Trance": 54,
-		"World": 55
+		"Unknown": "Other",
+		"Acoustic": "Pop",
+		"Adult Alternative": "Pop",
+		"Alternative": "Pop",
+		"Alternative Pop": "Pop",
+		"Alternative Punk": "Pop",
+		"Alternative Rock": "Pop",
+		"Ambient":"Pop",
+		"Bluegrass":"Traditional",
+		"Children's Music":"Pop",
+		"Christian & Gospel": "Art",
+		"Classical": "Art",
+		"Comedy": "Other",
+		"Country": "Pop",
+		"Dance": "Pop",
+		"Disco": "Pop",
+		"Dubstep": "Pop",
+		"Electronic": "Pop",
+		"Folk": "Traditional",
+		"Hip Hop/Rap": "Pop",
+		"Holiday": "Pop",
+		"House": "Pop",
+		"Indie": "Pop",
+		"Indie Alternative": "Pop",
+		"Indie Electronic": "Pop",
+		"Indie Folk": "Traditional",
+		"Indie Pop": "Pop",
+		"Indie Rock": "Pop",
+		"Instrumental": "Art",
+		"Jazz": "Pop",
+		"K-Pop": "Pop",
+		"Latin": "Pop",
+		"Mashup": "Pop",
+		"Modern": "Art",
+		"Modern Classical": "Art",
+		"Pop": "Pop",
+		"Pop Punk": "Pop",
+		"Pop Rock": "Pop",
+		"Post Rock": "Pop",
+		"Post-Punk": "Pop",
+		"Punk": "Pop",
+		"Punk Rock": "Pop",
+		"R&B": "Pop",
+		"R&B/Pop": "Pop",
+		"R&B/Soul": "Pop",
+		"Rap": "Pop",
+		"Remix": "Pop",
+		"Rock": "Pop",
+		"Rock/Pop": "Pop",
+		"Score": "Art",
+		"Shoegaze": "Pop",
+		"Singer/Songwriter": "Pop",
+		"Soundtrack": "Pop",
+		"Synthpop": "Pop",
+		"Trance": "Pop",
+		"World": "Traditional"
 	}
-	# genres_convert = [0, 3, 3, 3, 3, 3, 3, 11, 10, 12, 12, 7, 12, 10, 8, 8, 8, 8, 10, 6, 9, 8, 4, 4, 4, 4, 4, 4, 7, 12, 1, 12, 12, 7, 7, 1, 1, 1, 11, 2, 2, 2, 6, 6, 6, 6, 12, 2, 2, 7, 11, 4, 7, 1, 11]
-	# genres_convert_2 = [0, 1, 1, 3, 3, 2, 1, 2, 1, 0, 3, 0, 0]
-	genres_convert = [1,1,1,1,1,1,1,0,2,1,0,0,1,2,1,1,1,1,2,1,2,1,1,1,1,2,1,1,0,0,1,2,1,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,1,2,0,1,1,2]
-	temp = genres.get(genre, 0)
-	# return genres_convert_2[genres_convert[temp]]
-	return genres_convert[temp]
+	temp = genres.get(genre, "Other")
+	return meta_genres.get(temp, 0)
 
-def genre_to_label(genre):
-	titles=["Unknown", "Pop", "Rock", "Alternative", "Indie", "Soundtrack", "Rap", "Classical", "Electronic", "Holiday", "Country", "Ambient", "Other"]
-	if genre > len(titles)-1:
-		return titles[0]
-	return titles[genre]
-
-def genre_to_label(genre):
-	titles=["Unknown", "Rock", "Classical", "Acoustic"]
-	if genre > len(titles)-1:
-		return titles[0]
-	return titles[genre]
+def number_to_label(genre_id):
+	meta_genres = ["Other", "Art", "Pop", "Traditional"]
+	if genre_id > len(meta_genres):
+		return meta_genres[0]
+	return meta_genres[genre_id]
 
 def descale_genre(genre):
 	return int(genre*number_of_genres)
@@ -223,5 +132,4 @@ def one_hot_to_int(one_hot):
 		if one_hot[i] > currentMax:
 			currentMax = one_hot[i]
 			currentMaxId = i
-
 	return currentMaxId

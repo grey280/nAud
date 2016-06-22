@@ -27,9 +27,9 @@ early_stopping_patience = 3 			# how many epochs without improvement it'll go be
 
 ## IO settings
 input_data = "cache/data.plist"
-weights_file_name = "default.json"		# name of model file to load
-model_file_name = "default.hdf5"		# name of weights file to load
-test_series_name = "default"			# name of the test series - files are saved as test_series_name.iteration.json/hdf5
+weights_file_name = "newCategories.json"# name of model file to load
+model_file_name = "newCategories.hdf5"	# name of weights file to load
+test_series_name = "newCategories"		# name of the test series - files are saved as test_series_name.iteration.json/hdf5
 tests_in_series = 3 					# number of tests to run in this series
 vstack_split_size = 35					# controls the speed/memory usage of loading tracks. 25-50 works well.
 start_point = 60 						# seconds into the sample to read ((start_point+sample_duration)<sample length)
@@ -272,8 +272,8 @@ for result in test_results:
 # result = model.predict(outer_data, data_point_count=1, verbose=0)
 # print(result)
 # intified = conv.one_hot_to_int(result[0])
-# as_genre = conv.genre_to_label(intified)
+# as_genre = conv.number_to_label(intified)
 # descaled_actual_genre = conv.one_hot_to_int(scaled_genre)
 # print(descaled_actual_genre)
-# d.debug("Predicted genre: {}. Actual: {}".format(as_genre, conv.genre_to_label(descaled_actual_genre)))
+# d.debug("Predicted genre: {}. Actual: {}".format(as_genre, conv.number_to_label(descaled_actual_genre)))
 # print(conv.convert_genre("Indie"))

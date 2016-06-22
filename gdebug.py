@@ -41,7 +41,7 @@ class Debugger:
 			if not currentval == maxval:
 				sys.stdout.write("\r{}: {} {}/{}".format(message, pbar, currentval, maxval))
 			else:
-				sys.stdout.write("\r{}: {} complete\n".format(message, pbar))
+				sys.stdout.write("\r{}: {} complete    \n".format(message, pbar))
 
 	def _progress_bar_(self, currentval, maxval, length=20):
 		output = ""
