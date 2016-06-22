@@ -37,8 +37,8 @@ sample_duration = 15					# seconds of sample to read ((start_point+sample_durati
 do_random_parse = True					# true will use three 5-second clips from random places in the song, rather than a single 15-second block
 
 ## Operational settings
-load_model = False
-load_weights = False
+do_load_model = False
+do_load_weights = False
 load_from_previous_trial = False
 do_train = True
 do_save = True
@@ -207,7 +207,7 @@ for i in range(tests_in_series):
 	d.debug("Test {} of {}".format(i, tests_in_series))
 
 	# Build the model, either from scratch or from disk
-	if not load_model:
+	if not do_load_model:
 		model = Sequential()
 		model.add(Dense(128, input_dim=44100*sample_duration , init='uniform'))
 		model.add(Activation('tanh'))
@@ -229,7 +229,7 @@ for i in range(tests_in_series):
 		sgd = SGD(lr=0.1, decay=1e-6, momentum=0.9, nesterov=True)
 		model.compile(loss='categorical_crossentropy', optimizer=sgd, metrics=['accuracy'])
 		d.debug("Model loaded and SGD prepared.")
-		if load_weights:
+		if do_load_weights:
 			load_weights(iteration=i)
 			d.debug("Weights loaded.")
 	# Training
