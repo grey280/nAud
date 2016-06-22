@@ -201,14 +201,15 @@ def convert_genre(genre):
 	# return genres_convert_2[genres_convert[temp]]
 	return genres_convert[temp]
 
-def genre_to_label(genre):
-	titles=["Unknown", "Pop", "Rock", "Alternative", "Indie", "Soundtrack", "Rap", "Classical", "Electronic", "Holiday", "Country", "Ambient", "Other"]
-	if genre > len(titles)-1:
-		return titles[0]
-	return titles[genre]
+# def genre_to_label(genre):
+# 	titles=["Unknown", "Pop", "Rock", "Alternative", "Indie", "Soundtrack", "Rap", "Classical", "Electronic", "Holiday", "Country", "Ambient", "Other"]
+# 	if genre > len(titles)-1:
+# 		return titles[0]
+# 	return titles[genre]
 
 def genre_to_label(genre):
-	titles=["Unknown", "Rock", "Classical", "Acoustic"]
+	# titles=["Unknown", "Rock", "Classical", "Acoustic"]
+	titles = ["Art", "Pop", "Traditional"]
 	if genre > len(titles)-1:
 		return titles[0]
 	return titles[genre]
