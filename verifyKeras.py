@@ -199,7 +199,7 @@ d.debug("Weights loaded.")
 data_array_feed, answer_array_feed, information_feed = data_set.next_batch(data_point_count)
 for i in range(len(data_array_feed)):
 	result = model.predict(data_array_feed[i], data_point_count=1, verbose=0)
-	d.debug("{}: {}\n  Correct: {}".format(information_feed[i], result, answer_array_feed[i]))
+	d.debug("{}: {}\n  Correct: {}".format(information_feed[i], conv.genre_to_label(conv.one_hot_to_int(result[0])), conv.descale_genre(answer_array_feed[i])))
 
 
 # specific_song_to_test = "cache/2016.Ten Fé.NOON  189.Elodie.wav"
