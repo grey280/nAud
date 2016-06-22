@@ -23,9 +23,9 @@ data_point_count = 0 					# number of data points to use for training; set to 0 
 
 ## IO settings
 input_data = "cache/data.plist"
-weights_file_name = "default.json"		# name of model file to load
-model_file_name = "default.hdf5"		# name of weights file to load
-test_series_name = "default"			# name of the test series - files are saved as test_series_name.iteration.json/hdf5
+weights_file_name = "newCategories.json"		# name of model file to load
+model_file_name = "newCategories.hdf5"		# name of weights file to load
+test_series_name = "newCategories"			# name of the test series - files are saved as test_series_name.iteration.json/hdf5
 tests_in_series = 3 					# number of tests to run in this series
 vstack_split_size = 35					# controls the speed/memory usage of loading tracks. 25-50 works well.
 start_point = 60 						# seconds into the sample to read ((start_point+sample_duration)<sample length)
@@ -34,7 +34,7 @@ do_random_parse = True					# true will use three 5-second clips from random plac
 
 ## Operational settings
 load_from_previous_trial = True
-trial_iteration_to_load = 2
+trial_iteration_to_load = 0
 
 # Tools
 d = gdebug.Debugger(debug_level = log_level)
@@ -186,11 +186,11 @@ for i in range(len(data_array_feed)):
 	# Prep result for printing
 	# one_hot = result[0]
 	as_int = conv.one_hot_to_int(result[0])
-	# as_label = conv.genre_to_label(as_int)
+	# as_label = conv.number_to_label(as_int)
 
 	# Prep 'correct' for printing
 	orig_as_int = conv.one_hot_to_int(answer_array_feed[i])
-	# orig_as_label = conv.genre_to_label(orig_as_int)
+	# orig_as_label = conv.number_to_label(orig_as_int)
 
 	# Print
 	# d.debug("Orig int: {} Orig label: {}".format(orig_as_int, orig_as_label))
@@ -213,8 +213,8 @@ for i in range(len(data_array_feed)):
 # result = model.predict(outer_data, batch_size=1, verbose=0)
 # print(result)
 # intified = conv.one_hot_to_int(result[0])
-# as_genre = conv.genre_to_label(intified)
+# as_genre = conv.number_to_label(intified)
 # descaled_actual_genre = conv.one_hot_to_int(scaled_genre)
 # print(descaled_actual_genre)
-# d.debug("Predicted genre: {}. Actual: {}".format(as_genre, conv.genre_to_label(descaled_actual_genre)))
+# d.debug("Predicted genre: {}. Actual: {}".format(as_genre, conv.number_to_label(descaled_actual_genre)))
 # print(conv.convert_genre("Indie"))
