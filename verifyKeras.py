@@ -172,7 +172,7 @@ model.compile(loss='categorical_crossentropy', optimizer=sgd, metrics=['accuracy
 # d.debug("Model loaded and SGD prepared.")
 load_weights(iteration=trial_iteration_to_load)
 # d.debug("Weights loaded.")
-d.debug("song identifier|likelihood_art|likelihood_pop|likelihood_tradition|likely_type|was_art|was_pop|was_tradition|was_type")
+d.debug("song identifier/likelihood_art/likelihood_pop/likelihood_tradition/likely_type/was_art/was_pop/was_tradition/was_type")
 data_array_feed, answer_array_feed, information_feed = data_set.next_batch(data_point_count)
 for i in range(len(data_array_feed)):
 	# Prep for analysis
@@ -196,7 +196,7 @@ for i in range(len(data_array_feed)):
 	# d.debug("Orig int: {} Orig label: {}".format(orig_as_int, orig_as_label))
 	# d.debug("{}: Guess: {} Correct: {}".format(information_feed[i], as_label, orig_as_label))
 	# d.debug("  Guess: {}  Correct: {}".format(result[0], answer_array_feed[i]))
-	d.debug("{}|{}|{}|{}|{}|{}|{}|{}|{}".format(information_feed[i],result[0][0],result[0][1],result[0][2],as_int,answer_array_feed[0][0],answer_array_feed[0][1],answer_array_feed[0][2],orig_as_int))
+	d.debug("{}/{}/{}/{}/{}/{}/{}/{}/{}".format(information_feed[i],result[0][0],result[0][1],result[0][2],as_int,answer_array_feed[0][0],answer_array_feed[0][1],answer_array_feed[0][2],orig_as_int))
 
 	# Output: song_identifier, likelihood_art, likelihood_pop, likelihood_tradition, was_art, was_pop, was_tradition
 
