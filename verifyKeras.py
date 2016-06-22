@@ -184,7 +184,7 @@ for i in range(len(data_array_feed)):
 
 	# Prep result for printing
 	# one_hot = result[0]
-	as_int = conv.one_hot_to_int(one_hot)
+	as_int = conv.one_hot_to_int(result[0])
 	# as_label = conv.genre_to_label(as_int)
 
 	# Prep 'correct' for printing
@@ -195,7 +195,7 @@ for i in range(len(data_array_feed)):
 	# d.debug("Orig int: {} Orig label: {}".format(orig_as_int, orig_as_label))
 	# d.debug("{}: Guess: {} Correct: {}".format(information_feed[i], as_label, orig_as_label))
 	# d.debug("  Guess: {}  Correct: {}".format(result[0], answer_array_feed[i]))
-	d.debug("{},{},{},{},{},{},{},{},{}".format(information_feed[i],result[0][0],result[0][1],result[0][2],as_int,answer_array_feed[0][0],answer_array_feed[0][1],answer_array_feed[0][2],orig_as_int))
+	d.debug("{}|||{}|||{}|||{}|||{}|||{}|||{}|||{}|||{}".format(information_feed[i],result[0][0],result[0][1],result[0][2],as_int,answer_array_feed[0][0],answer_array_feed[0][1],answer_array_feed[0][2],orig_as_int))
 
 	# Output: song_identifier, likelihood_art, likelihood_pop, likelihood_tradition, was_art, was_pop, was_tradition
 
