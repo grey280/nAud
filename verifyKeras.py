@@ -37,7 +37,7 @@ sample_duration = 15					# seconds of sample to read ((start_point+sample_durati
 do_random_parse = True					# true will use three 5-second clips from random places in the song, rather than a single 15-second block
 
 ## Operational settings
-load_from_previous_trial = False
+load_from_previous_trial = True
 
 # Tools
 d = gdebug.Debugger(debug_level = log_level)
@@ -190,11 +190,11 @@ if data_point_count == 0:
 if evaluation_data_point_count == 0:
 	evaluation_data_point_count = data_set.get_data_point_count()
 
-model = load_model(iteration=i)
+model = load_model()
 sgd = SGD(lr=0.1, decay=1e-6, momentum=0.9, nesterov=True)
 model.compile(loss='categorical_crossentropy', optimizer=sgd, metrics=['accuracy'])
 d.debug("Model loaded and SGD prepared.")
-load_weights(iteration=i)
+load_weights()
 d.debug("Weights loaded.")
 data_array_feed, answer_array_feed, information_feed = data_set.next_batch(data_point_count)
 for i in range(len(data_array_feed)):
