@@ -56,6 +56,7 @@ new_dictionary = {}
 # File name format: "year.artist.title.wav"
 # 		This format isn't *super great* for the rating prediction stuff, but it's what we'll have
 #		for the genre-guessing stuff, which I'm hoping to be able to reuse this code for. So.
+count = 0
 
 for song_id, this_song in tracks.items():
 	# Prep to process song
@@ -87,6 +88,7 @@ for song_id, this_song in tracks.items():
 	d.verbose("  Metadata prepped. Transferring.")
 	if kind == "WAV audio file" or kind == "MPEG audio file" or kind == "AAC audio file":
 		convert_song(location_path, write_path)
+		count += 1
 		# This is SUPPOSED to be converting them to single-track audio, but it doesn't appear to be working. Annoying.
 		# So either I'll have to deal with that before I do an FFT, or just... throw it all at the NN as-is?
 		try:
@@ -99,7 +101,7 @@ for song_id, this_song in tracks.items():
 	else:
 		d.verbose("  Skipping song: incompatible file format.")
 # LOOP END
-
+d.debug("Handled {} songs.".format(count))
 d.verbose("Preparing to dump plist to file.")
 out = open(output_data, 'wb+')
 plistlib.dump(new_dictionary, out)
