@@ -60,7 +60,7 @@ count = 0
 
 for song_id, this_song in tracks.items():
 	# Prep to process song
-	d.verbose("Parsing track.")
+	d.debug("Parsing track ID: {}".format(song_id))
 	location = this_song.get("Location")
 	location = parse.urlparse(location)
 	d.verbose("  Unquoting location path.")
@@ -82,8 +82,10 @@ for song_id, this_song in tracks.items():
 	genre = this_song.get("Genre", "unknown")
 	time = this_song.get("Total Time", 0)
 	if genre == "Voice Memo" or genre == "Comedy":
+		d.verbose("  Excluded genre. Skipping.")
 		continue
 	if time < 1000 * seconds_per_song: # songs that're too short cause Problems later on
+		d.verbose("  Song too short. Skipping.")
 		continue
 	d.verbose("  Metadata prepped. Transferring.")
 	if kind == "WAV audio file" or kind == "MPEG audio file" or kind == "AAC audio file":
@@ -95,14 +97,14 @@ for song_id, this_song in tracks.items():
 			opened = wav.read(write_path)
 			new_dictionary[write_path] = track_data_to_element(this_song)
 			d.verbose("  File succesfully transferred.")
-			d.debug(opened)
+			# d.debug(opened)
 		except FileNotFoundError:
 			d.error("  Failed to write song: not found.")
 	else:
 		d.verbose("  Skipping song: incompatible file format.")
 # LOOP END
 d.debug("Handled {} songs.".format(count))
-d.verbose("Preparing to dump plist to file.")
+d.verbose("Preparing to write plist to file.")
 out = open(output_data, 'wb+')
 plistlib.dump(new_dictionary, out)
-d.verbose("  Plist dump complete.")
+d.verbose("  Plist write complete.")
