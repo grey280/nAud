@@ -25,7 +25,7 @@ data_point_count = 0 					# number of data points to use for training; set to 0 
 input_data = "cache/data.plist"
 weights_file_name = ".json"		# name of model file to load
 model_file_name = ".hdf5"		# name of weights file to load
-test_series_name = ""			# name of the test series - files are saved as test_series_name.iteration.json/hdf5
+test_series_name = "nDS"			# name of the test series - files are saved as test_series_name.iteration.[json/hdf5]
 tests_in_series = 3 					# number of tests to run in this series
 vstack_split_size = 35					# controls the speed/memory usage of loading tracks. 25-50 works well.
 start_point = 60 						# seconds into the sample to read ((start_point+sample_duration)<sample length)
@@ -68,16 +68,19 @@ def random_parse_track(track, data):
 
 	# Process sample
 	sample_data = wav.read(track)
-	# d.verbose("    Samples: {}".format(len(sample_data[1])))
+	d.verbose("    Samples: {}".format(len(sample_data[1])))
 	total_samples = len(sample_data[1])
 	data = np.ndarray.flatten(sample_data[1])
 	del sample_data
-	start_point_1 = int(random.randrange(total_samples - ((sample_duration/3)*44100)))
-	start_point_2 = int(random.randrange(total_samples - ((sample_duration/3)*44100)))
-	start_point_3 = int(random.randrange(total_samples - ((sample_duration/3)*44100)))
-	data_1 = data[start_point_1:int(start_point_1 + ((sample_duration/3)*44100))]
-	data_2 = data[start_point_2:int(start_point_2 + ((sample_duration/3)*44100))]
-	data_3 = data[start_point_3:int(start_point_3 + ((sample_duration/3)*44100))]
+	duration = ((sample_duration/3)*44100)
+	if duration >= total_samples:
+		raise ValueError('Song is not long enough.')
+	start_point_1 = int(random.randrange(total_samples - duration))
+	start_point_2 = int(random.randrange(total_samples - duration))
+	start_point_3 = int(random.randrange(total_samples - duration))
+	data_1 = data[start_point_1:int(start_point_1 + duration)]
+	data_2 = data[start_point_2:int(start_point_2 + duration)]
+	data_3 = data[start_point_3:int(start_point_3 + duration)]
 	return scaled_genre, np.concatenate((data_1, data_2, data_3))
 
 def load_model(iteration=0, path=test_series_name):
@@ -138,10 +141,13 @@ class Dataset:
 				d.verbose(data_feed_holder.shape)
 				del data_feed_holder
 			location = self.locations[self.start]
-			information_feed.append(location)
 			self.start += 1
 			data_point = self.input_values.get(location)
-			genre, output = parse_track(location, data_point)
+			try:
+				genre, output = parse_track(location, data_point)
+			except ValueError:
+				continue
+			information_feed.append(location)
 			d.vprogress("Loading tracks".format(location),i+1,data_point_count)
 			if(i%vstack_split_size==0): # fixes an off-by-vstack_split_size error, because np.empty is *weird*
 				data_feed_holder = output
