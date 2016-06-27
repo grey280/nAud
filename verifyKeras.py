@@ -34,7 +34,7 @@ do_random_parse = True					# true will use three 5-second clips from random plac
 
 ## Operational settings
 load_from_previous_trial = True
-trial_iteration_to_load = 0
+trial_iteration_to_load = 2
 
 # Tools
 d = gdebug.Debugger(debug_level = log_level)
