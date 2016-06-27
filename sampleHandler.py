@@ -36,10 +36,10 @@ def convert_song(location_path, write_path):
 	# Handle the actual conversion of the song - simplifying the loop a bit
 	if seconds_per_song == 0:
 		d.verbose("  Using FFMPEG to convert/transfer song.")
-		subprocess.run(args=["./ffmpeg", "-ac", "1", "-nostats", "-loglevel", "0", "-i", location_path, write_path])
+		subprocess.run(args=["./ffmpeg", "-n", "-ac", "1", "-nostats", "-loglevel", "0", "-i", location_path, write_path])
 	else:
 		d.verbose("  Using FFMPEG to convert and/or shorten to {} seconds.".format(seconds_per_song))
-		subprocess.run(args=["./ffmpeg", "-ac", "1", "-nostats", "-loglevel", "0", "-t", "{}".format(seconds_per_song), "-i", location_path, write_path])
+		subprocess.run(args=["./ffmpeg", "-n","-ac", "1", "-nostats", "-loglevel", "0", "-t", "{}".format(seconds_per_song), "-i", location_path, write_path])
 
 d.verbose("Preparing to read tracks in.")
 tracks = plistlib.readPlist(input_data)["Tracks"]
