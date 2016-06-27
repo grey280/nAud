@@ -7,7 +7,6 @@ import plistlib
 import numpy 			as np
 import scipy.io.wavfile	as wav
 import random
-import time
 
 import gdebug
 import gconvert			as conv
@@ -27,9 +26,9 @@ early_stopping_patience = 3 			# how many epochs without improvement it'll go be
 
 ## IO settings
 input_data = "cache/data.plist"
-weights_file_name = "newCategories.json"# name of model file to load
-model_file_name = "newCategories.hdf5"	# name of weights file to load
-test_series_name = "newCategories"		# name of the test series - files are saved as test_series_name.iteration.json/hdf5
+weights_file_name = "nDS.json"			# name of model file to load
+model_file_name = "nDS.hdf5"			# name of weights file to load
+test_series_name = "nDS"				# name of the test series - files are saved as test_series_name.iteration.json/hdf5
 tests_in_series = 3 					# number of tests to run in this series
 vstack_split_size = 35					# controls the speed/memory usage of loading tracks. 25-50 works well.
 start_point = 60 						# seconds into the sample to read ((start_point+sample_duration)<sample length)
@@ -40,6 +39,7 @@ do_random_parse = True					# true will use three 5-second clips from random plac
 do_load_model = False
 do_load_weights = False
 load_from_previous_trial = False
+trial_iteration = 1 					# Which iteration of the trial series are you on? Used to load/save.
 do_train = True
 do_save = True
 
@@ -87,17 +87,20 @@ def random_parse_track(track, data):
 	total_samples = len(sample_data[1])
 	data = np.ndarray.flatten(sample_data[1])
 	del sample_data
-	start_point_1 = int(random.randrange(total_samples - ((sample_duration/3)*44100)))
-	start_point_2 = int(random.randrange(total_samples - ((sample_duration/3)*44100)))
-	start_point_3 = int(random.randrange(total_samples - ((sample_duration/3)*44100)))
-	data_1 = data[start_point_1:int(start_point_1 + ((sample_duration/3)*44100))]
-	data_2 = data[start_point_2:int(start_point_2 + ((sample_duration/3)*44100))]
-	data_3 = data[start_point_3:int(start_point_3 + ((sample_duration/3)*44100))]
+	duration = ((sample_duration/3)*44100)
+	if duration >= total_samples:
+		raise ValueError('Song is not long enough.')
+	start_point_1 = int(random.randrange(total_samples - duration))
+	start_point_2 = int(random.randrange(total_samples - duration))
+	start_point_3 = int(random.randrange(total_samples - duration))
+	data_1 = data[start_point_1:int(start_point_1 + duration)]
+	data_2 = data[start_point_2:int(start_point_2 + duration)]
+	data_3 = data[start_point_3:int(start_point_3 + duration)]
 	return scaled_genre, np.concatenate((data_1, data_2, data_3))
 
 def load_model(iteration=0, path=test_series_name):
 	if load_from_previous_trial:
-		load_path = "output/{}.{}.json".format(path, iteration)
+		load_path = "output/{}.{}.{}.json".format(path, iteration, trial_iteration)
 	else:
 		load_path = "output/{}".format(model_file_name)
 	model = open(load_path, 'r').read()
@@ -106,7 +109,7 @@ def load_model(iteration=0, path=test_series_name):
 def load_weights(iteration=0, path=test_series_name):
 	global model
 	if load_from_previous_trial:
-		load_path = "output/{}.{}.hdf5".format(path, iteration)
+		load_path = "output/{}.{}.{}.hdf5".format(path, iteration, trial_iteration)
 	else:
 		load_path = "output/{}.hdf5".format(path)
 	model.load_weights(load_path)
@@ -116,7 +119,7 @@ def save_model(model, iteration, path=test_series_name):
 	if do_save:
 		outpath = "output/{}.{}.json".format(path, iteration)
 		if load_from_previous_trial:
-			outpath = "output/{}.{}.{}.json".format(path, iteration, time.time())
+			outpath = "output/{}.{}.{}.json".format(path, iteration, trial_iteration)
 		json_string = model.to_json()
 		open(outpath, 'w+').write(json_string)
 		d.debug('Finished writing model to disk.')
@@ -126,7 +129,7 @@ def save_weights(model, iteration, path=test_series_name):
 	if do_save:
 		outpath = "output/{}.{}.hdf5".format(path, iteration)
 		if load_from_previous_trial:
-			outpath = "output/{}.{}.{}.hdf5".format(path, iteration, time.time())
+			outpath = "output/{}.{}.{}.hdf5".format(path, iteration, trial_iteration)
 		model.save_weights(outpath)
 		d.debug("Finished writing weights to disk.")
 
@@ -173,7 +176,10 @@ class Dataset:
 			location = self.locations[self.start]
 			self.start += 1
 			data_point = self.input_values.get(location)
-			genre, output = parse_track(location, data_point)
+			try:
+				genre, output = parse_track(location, data_point)
+			except ValueError:
+				continue
 			d.progress("Loading tracks".format(location),i+1,data_point_count)
 			if(i%vstack_split_size==0): # fixes an off-by-vstack_split_size error, because np.empty is *weird*
 				data_feed_holder = output
@@ -259,21 +265,3 @@ for i in range(tests_in_series):
 
 for result in test_results:
 	d.debug(result)
-
-# specific_song_to_test = "cache/2016.Ten Fé.NOON  189.Elodie.wav"
-# that_data = {"genre": "Indie"}
-
-# d1 = []
-# scaled_genre, data = parse_track(specific_song_to_test, that_data)
-# print("scaled_genre: {}".format(scaled_genre))
-# d1.append(data)
-# outer_data = np.asarray(d1)
-
-# result = model.predict(outer_data, data_point_count=1, verbose=0)
-# print(result)
-# intified = conv.one_hot_to_int(result[0])
-# as_genre = conv.number_to_label(intified)
-# descaled_actual_genre = conv.one_hot_to_int(scaled_genre)
-# print(descaled_actual_genre)
-# d.debug("Predicted genre: {}. Actual: {}".format(as_genre, conv.number_to_label(descaled_actual_genre)))
-# print(conv.convert_genre("Indie"))
