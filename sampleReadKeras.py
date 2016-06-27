@@ -7,7 +7,6 @@ import plistlib
 import numpy 			as np
 import scipy.io.wavfile	as wav
 import random
-import time
 
 import gdebug
 import gconvert			as conv
@@ -40,6 +39,7 @@ do_random_parse = True					# true will use three 5-second clips from random plac
 do_load_model = False
 do_load_weights = False
 load_from_previous_trial = False
+trial_iteration = 1 					# Which iteration of the trial series are you on? Used to load/save.
 do_train = True
 do_save = True
 
@@ -119,7 +119,7 @@ def save_model(model, iteration, path=test_series_name):
 	if do_save:
 		outpath = "output/{}.{}.json".format(path, iteration)
 		if load_from_previous_trial:
-			outpath = "output/{}.{}.{}.json".format(path, iteration, time.time())
+			outpath = "output/{}.{}.{}.json".format(path, iteration, trial_iteration)
 		json_string = model.to_json()
 		open(outpath, 'w+').write(json_string)
 		d.debug('Finished writing model to disk.')
@@ -129,7 +129,7 @@ def save_weights(model, iteration, path=test_series_name):
 	if do_save:
 		outpath = "output/{}.{}.hdf5".format(path, iteration)
 		if load_from_previous_trial:
-			outpath = "output/{}.{}.{}.hdf5".format(path, iteration, time.time())
+			outpath = "output/{}.{}.{}.hdf5".format(path, iteration, trial_iteration)
 		model.save_weights(outpath)
 		d.debug("Finished writing weights to disk.")
 
