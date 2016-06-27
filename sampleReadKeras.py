@@ -100,7 +100,7 @@ def random_parse_track(track, data):
 
 def load_model(iteration=0, path=test_series_name):
 	if load_from_previous_trial:
-		load_path = "output/{}.{}.json".format(path, iteration)
+		load_path = "output/{}.{}.{}.json".format(path, iteration, trial_iteration)
 	else:
 		load_path = "output/{}".format(model_file_name)
 	model = open(load_path, 'r').read()
@@ -109,7 +109,7 @@ def load_model(iteration=0, path=test_series_name):
 def load_weights(iteration=0, path=test_series_name):
 	global model
 	if load_from_previous_trial:
-		load_path = "output/{}.{}.hdf5".format(path, iteration)
+		load_path = "output/{}.{}.{}.hdf5".format(path, iteration, trial_iteration)
 	else:
 		load_path = "output/{}.hdf5".format(path)
 	model.load_weights(load_path)
