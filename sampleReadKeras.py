@@ -265,21 +265,3 @@ for i in range(tests_in_series):
 
 for result in test_results:
 	d.debug(result)
-
-# specific_song_to_test = "cache/2016.Ten Fé.NOON  189.Elodie.wav"
-# that_data = {"genre": "Indie"}
-
-# d1 = []
-# scaled_genre, data = parse_track(specific_song_to_test, that_data)
-# print("scaled_genre: {}".format(scaled_genre))
-# d1.append(data)
-# outer_data = np.asarray(d1)
-
-# result = model.predict(outer_data, data_point_count=1, verbose=0)
-# print(result)
-# intified = conv.one_hot_to_int(result[0])
-# as_genre = conv.number_to_label(intified)
-# descaled_actual_genre = conv.one_hot_to_int(scaled_genre)
-# print(descaled_actual_genre)
-# d.debug("Predicted genre: {}. Actual: {}".format(as_genre, conv.number_to_label(descaled_actual_genre)))
-# print(conv.convert_genre("Indie"))
