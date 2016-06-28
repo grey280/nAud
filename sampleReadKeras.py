@@ -193,6 +193,7 @@ class Dataset:
 					data_feed_holder = np.vstack((data_feed_holder,output))
 				answer_feed.append(genre)
 			except ValueError:
+				self.start += 1
 				continue
 			
 		data_feed = np.vstack((data_feed,data_feed_holder))
