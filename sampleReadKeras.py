@@ -67,11 +67,15 @@ def parse_track(track, data):
 
 	# Process sample
 	sample_data = wav.read(track)
-	d.verbose("    Samples: {}".format(len(sample_data[1])))
-	data = np.ndarray.flatten(sample_data[1])
-	del sample_data
+	total_samples = len(sample_data[1])
+	d.verbose("    Samples: {}".format(total_samples))
 	start_point_calc = start_point*44100
 	end_point_calc = (start_point+sample_duration)*44100
+	if end_point_calc >= total_samples:
+		raise ValueError('Song is not long enough.')
+	data = np.ndarray.flatten(sample_data[1])
+	del sample_data
+	
 	return scaled_genre, data[start_point_calc:end_point_calc] # force it to be that size, so the NN doesn't complain
 
 def random_parse_track(track, data):
