@@ -28,18 +28,18 @@ early_stopping_patience = 3 			# how many epochs without improvement it'll go be
 input_data = "cache/data.plist"
 # weights_file_name = "nDS.json"			# name of model file to load
 # model_file_name = "nDS.hdf5"			# name of weights file to load
-test_series_name = "nDS"				# name of the test series - files are saved as test_series_name.iteration.json/hdf5
+test_series_name = "2S1M"				# name of the test series - files are saved as test_series_name.iteration.json/hdf5
 tests_in_series = 3 					# number of tests to run in this series
 vstack_split_size = 35					# controls the speed/memory usage of loading tracks. 25-50 works well.
 start_point = 60 						# seconds into the sample to read ((start_point+sample_duration)<sample length)
-sample_duration = 15					# seconds of sample to read ((start_point+sample_duration)<sample length)
-do_random_parse = True					# true will use three 5-second clips from random places in the song, rather than a single 15-second block
+sample_duration = 20					# seconds of sample to read ((start_point+sample_duration)<sample length)
+do_random_parse = False					# true will use three 5-second clips from random places in the song, rather than a single 15-second block
 
 ## Operational settings
-do_load_model = True
-do_load_weights = True
-load_from_previous_trial = True
-trial_iteration = 1 					# Which iteration of the trial series are you on? Used to load/save. Starts at 0.
+do_load_model = False
+do_load_weights = False
+load_from_previous_trial = False
+trial_iteration = 0 					# Which iteration of the trial series are you on? Used to load/save. Starts at 0.
 do_train = True
 do_save = True
 
@@ -100,7 +100,7 @@ def random_parse_track(track, data):
 
 def load_model(iteration=0, path=test_series_name):
 	if load_from_previous_trial:
-		load_path = "output/{}.{}.{}.json".format(path, iteration, trial_iteration-1)
+		load_path = "output/{}.{}.{}.json".format(path, trial_iteration-1, iteration)
 	else:
 		load_path = "output/{}".format(path)
 	model = open(load_path, 'r').read()
@@ -109,7 +109,7 @@ def load_model(iteration=0, path=test_series_name):
 def load_weights(iteration=0, path=test_series_name):
 	global model
 	if load_from_previous_trial:
-		load_path = "output/{}.{}.{}.hdf5".format(path, iteration, trial_iteration-1)
+		load_path = "output/{}.{}.{}.hdf5".format(path, trial_iteration-1, iteration)
 	else:
 		load_path = "output/{}.hdf5".format(path)
 	model.load_weights(load_path)
@@ -119,7 +119,7 @@ def save_model(model, iteration, path=test_series_name):
 	if do_save:
 		outpath = "output/{}.{}.json".format(path, iteration)
 		if load_from_previous_trial:
-			outpath = "output/{}.{}.{}.json".format(path, iteration, trial_iteration)
+			outpath = "output/{}.{}.{}.json".format(path, trial_iteration, iteration)
 		json_string = model.to_json()
 		open(outpath, 'w+').write(json_string)
 		d.debug('Finished writing model to disk.')
@@ -129,7 +129,7 @@ def save_weights(model, iteration, path=test_series_name):
 	if do_save:
 		outpath = "output/{}.{}.hdf5".format(path, iteration)
 		if load_from_previous_trial:
-			outpath = "output/{}.{}.{}.hdf5".format(path, iteration, trial_iteration)
+			outpath = "output/{}.{}.{}.hdf5".format(path, trial_iteration, iteration)
 		model.save_weights(outpath)
 		d.debug("Finished writing weights to disk.")
 
