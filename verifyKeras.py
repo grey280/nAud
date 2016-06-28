@@ -34,7 +34,8 @@ do_random_parse = True					# true will use three 5-second clips from random plac
 
 ## Operational settings
 load_from_previous_trial = True
-trial_iteration_to_load = 2
+trial_iteration_to_load = 1
+trial_to_load = 0
 
 # Tools
 d = gdebug.Debugger(debug_level = log_level)
@@ -85,7 +86,7 @@ def random_parse_track(track, data):
 
 def load_model(iteration=0, path=test_series_name):
 	if load_from_previous_trial:
-		load_path = "output/{}.{}.json".format(path, iteration)
+		load_path = "output/{}.{}.{}.json".format(path, trial_to_load, iteration)
 	else:
 		load_path = "output/{}".format(model_file_name)
 	model = open(load_path, 'r').read()
@@ -94,7 +95,7 @@ def load_model(iteration=0, path=test_series_name):
 def load_weights(iteration=0, path=test_series_name):
 	global model
 	if load_from_previous_trial:
-		load_path = "output/{}.{}.hdf5".format(path, iteration)
+		load_path = "output/{}.{}.{}.hdf5".format(path, trial_to_load, iteration)
 	else:
 		load_path = "output/{}.hdf5".format(path)
 	model.load_weights(load_path)
