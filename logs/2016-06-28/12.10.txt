@@ -1,0 +1,74 @@
+Greys-MacBook-Pro:nAud greypatterson$ python sampleReadKeras.py 
+Using Theano backend.
+Start: read plist
+End: read plist
+Initializing data set object
+Dataset built.
+Test 0 of 3
+Model and SGD prepared.
+Loading tracks: [====================] complete    
+Train on 2161 samples, validate on 241 samples
+Epoch 1/50
+2161/2161 [==============================] - 175s - loss: 1.1104 - acc: 0.7552 - val_loss: 1.4270 - val_acc: 0.7552
+Epoch 2/50
+2161/2161 [==============================] - 172s - loss: 1.6431 - acc: 0.7571 - val_loss: 1.3217 - val_acc: 0.8299
+Epoch 3/50
+2161/2161 [==============================] - 178s - loss: 1.6881 - acc: 0.7580 - val_loss: 1.5038 - val_acc: 0.8299
+Epoch 4/50
+2161/2161 [==============================] - 168s - loss: 2.0229 - acc: 0.7816 - val_loss: 1.8919 - val_acc: 0.7925
+Epoch 5/50
+2161/2161 [==============================] - 167s - loss: 1.9660 - acc: 0.7728 - val_loss: 1.8433 - val_acc: 0.8133
+Epoch 6/50
+2161/2161 [==============================] - 183s - loss: 1.6828 - acc: 0.7969 - val_loss: 1.2723 - val_acc: 0.7759
+Epoch 7/50
+2161/2161 [==============================] - 243s - loss: 1.4491 - acc: 0.7645 - val_loss: 0.9423 - val_acc: 0.7925
+Epoch 8/50
+2161/2161 [==============================] - 266s - loss: 1.3371 - acc: 0.7524 - val_loss: 0.7584 - val_acc: 0.8174
+Epoch 9/50
+2161/2161 [==============================] - 295s - loss: 0.9223 - acc: 0.7723 - val_loss: 0.7295 - val_acc: 0.8174
+Epoch 10/50
+2161/2161 [==============================] - 317s - loss: 0.9234 - acc: 0.7733 - val_loss: 0.7754 - val_acc: 0.8174
+Epoch 11/50
+2161/2161 [==============================] - 329s - loss: 0.7366 - acc: 0.8047 - val_loss: 0.6007 - val_acc: 0.8423
+Epoch 12/50
+2161/2161 [==============================] - 338s - loss: 0.5711 - acc: 0.8371 - val_loss: 0.5228 - val_acc: 0.8423
+Epoch 13/50
+2161/2161 [==============================] - 346s - loss: 0.5452 - acc: 0.8417 - val_loss: 0.5427 - val_acc: 0.8340
+Epoch 14/50
+2161/2161 [==============================] - 350s - loss: 0.5440 - acc: 0.8376 - val_loss: 0.5525 - val_acc: 0.8423
+Epoch 15/50
+2161/2161 [==============================] - 359s - loss: 0.5326 - acc: 0.8339 - val_loss: 0.5426 - val_acc: 0.8423
+Epoch 16/50
+2161/2161 [==============================] - 360s - loss: 0.5277 - acc: 0.8385 - val_loss: 0.5195 - val_acc: 0.8423
+Epoch 17/50
+2161/2161 [==============================] - 346s - loss: 0.5367 - acc: 0.8394 - val_loss: 0.5307 - val_acc: 0.8423
+Epoch 18/50
+2161/2161 [==============================] - 346s - loss: 0.5323 - acc: 0.8422 - val_loss: 0.5020 - val_acc: 0.8423
+Epoch 19/50
+2161/2161 [==============================] - 357s - loss: 0.5349 - acc: 0.8366 - val_loss: 0.5261 - val_acc: 0.8382
+Epoch 20/50
+2161/2161 [==============================] - 362s - loss: 0.5316 - acc: 0.8292 - val_loss: 0.5249 - val_acc: 0.8382
+Epoch 21/50
+2161/2161 [==============================] - 359s - loss: 0.5266 - acc: 0.8417 - val_loss: 0.5362 - val_acc: 0.8423
+Epoch 22/50
+2161/2161 [==============================] - 357s - loss: 0.5337 - acc: 0.8380 - val_loss: 0.5234 - val_acc: 0.8423
+Fit complete. Preparing to test.
+Loading tracks: [====================] complete    
+251/251 [==============================] - 1s     
+
+Test 0 of 3 complete. Loss: 0.5754529932343152. Accuracy: 82.07171312366349%
+Finished writing model to disk.
+Finished writing weights to disk.
+Test 1 of 3
+Model and SGD prepared.
+Loading tracks: [===                 ] 422/2443Traceback (most recent call last):
+  File "sampleReadKeras.py", line 250, in <module>
+    data_feed, answer_feed = data_set.next_batch(data_point_count)
+  File "sampleReadKeras.py", line 194, in next_batch
+    data_feed_holder = np.vstack((data_feed_holder,output))
+UnboundLocalError: local variable 'data_feed_holder' referenced before assignment
+Greys-MacBook-Pro:nAud greypatterson$ 
+
+
+
+

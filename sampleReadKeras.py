@@ -171,6 +171,7 @@ class Dataset:
 			output = output.asarray()
 		except:
 			pass
+
 		data_feed_holder = output
 		data_feed = np.empty((44100*sample_duration,),dtype='int16')
 		for i in range(1, data_point_count):
@@ -185,14 +186,15 @@ class Dataset:
 			data_point = self.input_values.get(location)
 			try:
 				genre, output = parse_track(location, data_point)
+				d.progress("Loading tracks".format(location),i+1,data_point_count)
+				if(i%vstack_split_size==0): # fixes an off-by-vstack_split_size error, because np.empty is *weird*
+					data_feed_holder = output
+				else:
+					data_feed_holder = np.vstack((data_feed_holder,output))
+				answer_feed.append(genre)
 			except ValueError:
 				continue
-			d.progress("Loading tracks".format(location),i+1,data_point_count)
-			if(i%vstack_split_size==0): # fixes an off-by-vstack_split_size error, because np.empty is *weird*
-				data_feed_holder = output
-			else:
-				data_feed_holder = np.vstack((data_feed_holder,output))
-			answer_feed.append(genre)
+			
 		data_feed = np.vstack((data_feed,data_feed_holder))
 		data_array_feed = np.asarray(data_feed)[1:] # fixes an off-by-one error that you get from the way np.empty works
 		answer_array_feed = np.asarray(answer_feed)
