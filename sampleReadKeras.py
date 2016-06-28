@@ -175,18 +175,18 @@ class Dataset:
 		data_feed_holder = output
 		data_feed = np.empty((44100*sample_duration,),dtype='int16')
 		for i in range(1, data_point_count):
-			if(self.start + 2 >= len(self.locations)):
-				self.shuffle()
-			if(i%vstack_split_size == 0):
-				data_feed = np.vstack((data_feed, data_feed_holder))
-				d.verbose(data_feed_holder.shape)
-				del data_feed_holder
-			location = self.locations[self.start]
-			self.start += 1
-			data_point = self.input_values.get(location)
+			d.progress("Loading tracks",i+1,data_point_count)
 			try:
+				location = self.locations[self.start]
+				data_point = self.input_values.get(location)
 				genre, output = parse_track(location, data_point)
-				d.progress("Loading tracks".format(location),i+1,data_point_count)
+				if(self.start + 2 >= len(self.locations)):
+					self.shuffle()
+				if(i%vstack_split_size == 0):
+					data_feed = np.vstack((data_feed, data_feed_holder))
+					d.verbose(data_feed_holder.shape)
+					del data_feed_holder
+				self.start += 1
 				if(i%vstack_split_size==0): # fixes an off-by-vstack_split_size error, because np.empty is *weird*
 					data_feed_holder = output
 				else:
