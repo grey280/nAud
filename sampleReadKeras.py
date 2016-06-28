@@ -162,7 +162,10 @@ class Dataset:
 		# Of course, with big batches, loading *does* get slow, but there's not much you can do about that.
 		location = self.locations[self.start]
 		data_point = self.input_values.get(location)
-		genre, output = parse_track(location, data_point)
+		try:
+			genre, output = parse_track(location, data_point)
+		except ValueError:
+			return next_batch(data_point_count)
 		answer_feed = [genre]
 		try:
 			output = output.asarray()
