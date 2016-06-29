@@ -59,7 +59,7 @@ new_dictionary = {}
 # 		This format isn't *super great* for the rating prediction stuff, but it's what we'll have
 #		for the genre-guessing stuff, which I'm hoping to be able to reuse this code for. So.
 count = 0
-pop_count, art_count, tradition_count = 0, 0, 0
+pop_count, art_count, tradition_count, other_count = 0, 0, 0, 0
 
 for song_id, this_song in tracks.items():
 	# Prep to process song
@@ -88,29 +88,29 @@ for song_id, this_song in tracks.items():
 	if genre == "Voice Memo" or genre == "Comedy":
 		d.verbose("  Excluded genre. Skipping.")
 		continue
-	if converted_genre == 0: # "Other"
-		# other
-		continue
-	elif converted_genre == 1: # Art
-		if art_count > per_meta:
-			continue
-		else:
-			art_count += 1
-	elif converted_genre == 2: # Pop
-		if pop_count > per_meta:
-			continue
-		else:
-			pop_count += 1
-	elif converted_genre == 3: # Traditional
-		if tradition_count > per_meta:
-			continue
-		else:
-			tradition_count += 1
 	if time < 1000 * seconds_per_song: # songs that're too short cause Problems later on
 		d.verbose("  Song too short. Skipping.")
 		continue
 	d.verbose("  Metadata prepped. Transferring.")
 	if kind == "WAV audio file" or kind == "MPEG audio file" or kind == "AAC audio file":
+		if converted_genre == 0: # "Other"
+			other_count += 1
+			continue
+		elif converted_genre == 1: # Art
+			if art_count > per_meta:
+				continue
+			else:
+				art_count += 1
+		elif converted_genre == 2: # Pop
+			if pop_count > per_meta:
+				continue
+			else:
+				pop_count += 1
+		elif converted_genre == 3: # Traditional
+			if tradition_count > per_meta:
+				continue
+			else:
+				tradition_count += 1
 		convert_song(location_path, write_path)
 		count += 1
 		# This is SUPPOSED to be converting them to single-track audio, but it doesn't appear to be working. Annoying.
@@ -129,6 +129,7 @@ d.debug("Handled {} songs.".format(count))
 d.debug("  {} art".format(art_count))
 d.debug("  {} pop".format(pop_count))
 d.debug("  {} traditional".format(tradition_count))
+d.debug("  {} discarded as 'other'".format(other_count))
 d.verbose("Preparing to write plist to file.")
 out = open(output_data, 'wb+')
 plistlib.dump(new_dictionary, out)
