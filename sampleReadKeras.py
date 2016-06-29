@@ -28,18 +28,18 @@ early_stopping_patience = 3 			# how many epochs without improvement it'll go be
 input_data = "cache/data.plist"
 # weights_file_name = "nDS.json"			# name of model file to load
 # model_file_name = "nDS.hdf5"			# name of weights file to load
-test_series_name = "nDS"				# name of the test series - files are saved as test_series_name.iteration.json/hdf5
+test_series_name = "2S1M"				# name of the test series - files are saved as test_series_name.iteration.json/hdf5
 tests_in_series = 3 					# number of tests to run in this series
 vstack_split_size = 35					# controls the speed/memory usage of loading tracks. 25-50 works well.
 start_point = 60 						# seconds into the sample to read ((start_point+sample_duration)<sample length)
-sample_duration = 15					# seconds of sample to read ((start_point+sample_duration)<sample length)
-do_random_parse = True					# true will use three 5-second clips from random places in the song, rather than a single 15-second block
+sample_duration = 20					# seconds of sample to read ((start_point+sample_duration)<sample length)
+do_random_parse = False					# true will use three 5-second clips from random places in the song, rather than a single 15-second block
 
 ## Operational settings
-do_load_model = True
-do_load_weights = True
-load_from_previous_trial = True
-trial_iteration = 1 					# Which iteration of the trial series are you on? Used to load/save. Starts at 0.
+do_load_model = False
+do_load_weights = False
+load_from_previous_trial = False
+trial_iteration = 0 					# Which iteration of the trial series are you on? Used to load/save. Starts at 0.
 do_train = True
 do_save = True
 
@@ -67,11 +67,15 @@ def parse_track(track, data):
 
 	# Process sample
 	sample_data = wav.read(track)
-	d.verbose("    Samples: {}".format(len(sample_data[1])))
-	data = np.ndarray.flatten(sample_data[1])
-	del sample_data
+	total_samples = len(sample_data[1])
+	d.verbose("    Samples: {}".format(total_samples))
 	start_point_calc = start_point*44100
 	end_point_calc = (start_point+sample_duration)*44100
+	if end_point_calc >= total_samples:
+		raise ValueError('Song is not long enough.')
+	data = np.ndarray.flatten(sample_data[1])
+	del sample_data
+	
 	return scaled_genre, data[start_point_calc:end_point_calc] # force it to be that size, so the NN doesn't complain
 
 def random_parse_track(track, data):
@@ -100,7 +104,7 @@ def random_parse_track(track, data):
 
 def load_model(iteration=0, path=test_series_name):
 	if load_from_previous_trial:
-		load_path = "output/{}.{}.{}.json".format(path, iteration, trial_iteration-1)
+		load_path = "output/{}.{}.{}.json".format(path, trial_iteration-1, iteration)
 	else:
 		load_path = "output/{}".format(path)
 	model = open(load_path, 'r').read()
@@ -109,7 +113,7 @@ def load_model(iteration=0, path=test_series_name):
 def load_weights(iteration=0, path=test_series_name):
 	global model
 	if load_from_previous_trial:
-		load_path = "output/{}.{}.{}.hdf5".format(path, iteration, trial_iteration-1)
+		load_path = "output/{}.{}.{}.hdf5".format(path, trial_iteration-1, iteration)
 	else:
 		load_path = "output/{}.hdf5".format(path)
 	model.load_weights(load_path)
@@ -119,7 +123,7 @@ def save_model(model, iteration, path=test_series_name):
 	if do_save:
 		outpath = "output/{}.{}.json".format(path, iteration)
 		if load_from_previous_trial:
-			outpath = "output/{}.{}.{}.json".format(path, iteration, trial_iteration)
+			outpath = "output/{}.{}.{}.json".format(path, trial_iteration, iteration)
 		json_string = model.to_json()
 		open(outpath, 'w+').write(json_string)
 		d.debug('Finished writing model to disk.')
@@ -129,7 +133,7 @@ def save_weights(model, iteration, path=test_series_name):
 	if do_save:
 		outpath = "output/{}.{}.hdf5".format(path, iteration)
 		if load_from_previous_trial:
-			outpath = "output/{}.{}.{}.hdf5".format(path, iteration, trial_iteration)
+			outpath = "output/{}.{}.{}.hdf5".format(path, trial_iteration, iteration)
 		model.save_weights(outpath)
 		d.debug("Finished writing weights to disk.")
 
@@ -158,34 +162,40 @@ class Dataset:
 		# Of course, with big batches, loading *does* get slow, but there's not much you can do about that.
 		location = self.locations[self.start]
 		data_point = self.input_values.get(location)
-		genre, output = parse_track(location, data_point)
+		try:
+			genre, output = parse_track(location, data_point)
+		except ValueError:
+			return next_batch(data_point_count)
 		answer_feed = [genre]
 		try:
 			output = output.asarray()
 		except:
 			pass
+
 		data_feed_holder = output
 		data_feed = np.empty((44100*sample_duration,),dtype='int16')
 		for i in range(1, data_point_count):
-			if(self.start + 2 >= len(self.locations)):
-				self.shuffle()
-			if(i%vstack_split_size == 0):
-				data_feed = np.vstack((data_feed, data_feed_holder))
-				d.verbose(data_feed_holder.shape)
-				del data_feed_holder
-			location = self.locations[self.start]
-			self.start += 1
-			data_point = self.input_values.get(location)
+			d.progress("Loading tracks",i+1,data_point_count)
 			try:
+				location = self.locations[self.start]
+				data_point = self.input_values.get(location)
 				genre, output = parse_track(location, data_point)
+				if(self.start + 2 >= len(self.locations)):
+					self.shuffle()
+				if(i%vstack_split_size == 0):
+					data_feed = np.vstack((data_feed, data_feed_holder))
+					d.verbose(data_feed_holder.shape)
+					del data_feed_holder
+				self.start += 1
+				if(i%vstack_split_size==0): # fixes an off-by-vstack_split_size error, because np.empty is *weird*
+					data_feed_holder = output
+				else:
+					data_feed_holder = np.vstack((data_feed_holder,output))
+				answer_feed.append(genre)
 			except ValueError:
+				self.start += 1
 				continue
-			d.progress("Loading tracks".format(location),i+1,data_point_count)
-			if(i%vstack_split_size==0): # fixes an off-by-vstack_split_size error, because np.empty is *weird*
-				data_feed_holder = output
-			else:
-				data_feed_holder = np.vstack((data_feed_holder,output))
-			answer_feed.append(genre)
+			
 		data_feed = np.vstack((data_feed,data_feed_holder))
 		data_array_feed = np.asarray(data_feed)[1:] # fixes an off-by-one error that you get from the way np.empty works
 		answer_array_feed = np.asarray(answer_feed)
