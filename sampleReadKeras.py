@@ -27,8 +27,8 @@ NN_validation_split = 0.1 				# fraction of data to be held out as validation da
 early_stopping_patience = 3 			# how many epochs without improvement it'll go before stopping
 
 ## IO settings
-input_data = "cache/the_300.plist" 		# location of the .plist file to read from
-test_series_name = "T300"				# name of the test series - files are saved as test_series_name.iteration.json/hdf5
+input_data = "cache/the_120.plist" 		# location of the .plist file to read from
+test_series_name = "T120"				# name of the test series - files are saved as test_series_name.iteration.json/hdf5
 tests_in_series = 3 					# number of tests to run in this series
 
 ## Data set settings
