@@ -60,7 +60,7 @@ def load_weights(iteration=0, path=test_series_name):
 
 # Import data
 tracks = plistlib.readPlist(input_data)
-data_set = ds.Dataset(tracks)
+data_set = ds.Dataset(tracks, do_random=do_random_parse, sample_duration=sample_duration, start_point=start_point, vstack_split=vstack_split_size)
 
 # Load configuration, if necessary
 if data_point_count == 0:
@@ -79,23 +79,17 @@ for i in range(len(data_array_feed)):
 	d1 = []
 	d1.append(data_array_feed[i])
 	outer_data = np.asarray(d1)
-
 	# Run analysis
 	result = model.predict(outer_data, batch_size=1, verbose=0)
-
 	# Prep result for printing
 	# one_hot = result[0]
 	as_int = conv.one_hot_to_int(result[0])
 	# as_label = conv.number_to_label(as_int)
-
 	# Prep 'correct' for printing
 	orig_as_int = conv.one_hot_to_int(answer_array_feed[i])
 	# orig_as_label = conv.number_to_label(orig_as_int)
 
 	# Print
-	# d.debug("Orig int: {} Orig label: {}".format(orig_as_int, orig_as_label))
-	# d.debug("{}: Guess: {} Correct: {}".format(information_feed[i], as_label, orig_as_label))
-	# d.debug("  Guess: {}  Correct: {}".format(result[0], answer_array_feed[i]))
 	d.debug("{}/{}/{}/{}/{}/{}/{}/{}/{}".format(information_feed[i],result[0][0],result[0][1],result[0][2],as_int,answer_array_feed[0][0],answer_array_feed[0][1],answer_array_feed[0][2],orig_as_int))
 
 	# Output: song_identifier, likelihood_art, likelihood_pop, likelihood_tradition, was_art, was_pop, was_tradition

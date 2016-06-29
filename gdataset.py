@@ -15,10 +15,7 @@ import gconvert			as conv
 # Settings
 ## Debug Settings
 log_level = 2 							# 0: silent, 1: errors only, 2: normal, 3: verbose
-
-
-
-
+d = gdebug.Debugger(debug_level = log_level)
 
 class Dataset:
 	# Having a class to handle the dataset makes a lot of things easier.
@@ -52,8 +49,8 @@ class Dataset:
 		# d.verbose("    Samples: {}".format(len(sample_data[1])))
 		data = np.ndarray.flatten(sample_data[1])
 		del sample_data
-		start_point_calc = start_point*44100
-		end_point_calc = (start_point+sample_duration)*44100
+		start_point_calc = self.start_point*44100
+		end_point_calc = (self.start_point+self.sample_duration)*44100
 		return scaled_genre, data[start_point_calc:end_point_calc] # force it to be that size, so the NN doesn't complain
 
 	def random_parse_track(self, track, data):
