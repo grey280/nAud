@@ -30,7 +30,7 @@ class Dataset:
 			# self.locations.append(track)
 			temp_locs.append(track)
 		for i in range(len(temp_locs)):
-			if i/len(temp_locs) > train_size:
+			if i > int(train_size*len(temp_locs)):
 				self.test_locations.append(temp_locs[i])
 			else:
 				self.locations.append(temp_locs[i])
