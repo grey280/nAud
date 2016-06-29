@@ -42,49 +42,6 @@ trial_to_load = 0
 d = gdebug.Debugger(debug_level = log_level)
 
 # Helper functions
-
-def parse_track(track, data):
-	# Handles track parsing - given the track and data, does whatever conversions and loading are necessary
-	if do_random_parse:
-		return random_parse_track(track, data)
-	
-	genre_orig = data.get("genre", "Unknown")
-	genre = int(conv.convert_genre(genre_orig))
-	scaled_genre = conv.scale_genre(genre)
-
-	# Process sample
-	sample_data = wav.read(track)
-	# d.verbose("    Samples: {}".format(len(sample_data[1])))
-	data = np.ndarray.flatten(sample_data[1])
-	del sample_data
-	start_point_calc = start_point*44100
-	end_point_calc = (start_point+sample_duration)*44100
-	return scaled_genre, data[start_point_calc:end_point_calc] # force it to be that size, so the NN doesn't complain
-
-def random_parse_track(track, data):
-	# Handles track parsing for the '3 5-second chunks from anywhere in the song' test group.
-
-	genre_orig = data.get("genre", "Unknown")
-	genre = int(conv.convert_genre(genre_orig))
-	scaled_genre = conv.scale_genre(genre)
-
-	# Process sample
-	sample_data = wav.read(track)
-	d.verbose("    Samples: {}".format(len(sample_data[1])))
-	total_samples = len(sample_data[1])
-	data = np.ndarray.flatten(sample_data[1])
-	del sample_data
-	duration = ((sample_duration/3)*44100)
-	if duration >= total_samples:
-		raise ValueError('Song is not long enough.')
-	start_point_1 = int(random.randrange(total_samples - duration))
-	start_point_2 = int(random.randrange(total_samples - duration))
-	start_point_3 = int(random.randrange(total_samples - duration))
-	data_1 = data[start_point_1:int(start_point_1 + duration)]
-	data_2 = data[start_point_2:int(start_point_2 + duration)]
-	data_3 = data[start_point_3:int(start_point_3 + duration)]
-	return scaled_genre, np.concatenate((data_1, data_2, data_3))
-
 def load_model(iteration=0, path=test_series_name):
 	if load_from_previous_trial:
 		load_path = "output/{}.{}.{}.json".format(path, trial_to_load, iteration)
