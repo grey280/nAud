@@ -12,22 +12,18 @@ import time
 import gdebug
 import gconvert			as conv
 
-# Settings
-## Debug Settings
-log_level = 2 							# 0: silent, 1: errors only, 2: normal, 3: verbose
-d = gdebug.Debugger(debug_level = log_level)
-
 class Dataset:
 	# Having a class to handle the dataset makes a lot of things easier.
 	# Basically, hand it something opened by plistlib and it'll parse it out nice and pretty-like.
 	start = 0
-	def __init__(self, inpt, do_random=False, sample_duration=15, start_point=0, vstack_split=35):
+	def __init__(self, inpt, do_random=False, sample_duration=15, start_point=0, vstack_split=35, log_level=2):
 		self.input_values = inpt
 		self.locations=[]
 		self.rand = do_random
 		self.sample_duration = sample_duration
 		self.start_point = start_point
 		self.vstack_split_size = vstack_split
+		self.d = gdebug.Debugger(debug_level = log_level)
 		for track, data in inpt.items():
 			self.locations.append(track)
 		# d.debug("Initializing data set object")
@@ -46,7 +42,7 @@ class Dataset:
 
 		# Process sample
 		sample_data = wav.read(track)
-		# d.verbose("    Samples: {}".format(len(sample_data[1])))
+		# self.d.verbose("    Samples: {}".format(len(sample_data[1])))
 		data = np.ndarray.flatten(sample_data[1])
 		del sample_data
 		start_point_calc = self.start_point*44100
@@ -61,7 +57,7 @@ class Dataset:
 
 		# Process sample
 		sample_data = wav.read(track)
-		d.verbose("    Samples: {}".format(len(sample_data[1])))
+		self.d.verbose("    Samples: {}".format(len(sample_data[1])))
 		total_samples = len(sample_data[1])
 		data = np.ndarray.flatten(sample_data[1])
 		del sample_data
@@ -96,7 +92,7 @@ class Dataset:
 		data_feed_holder = output
 		data_feed = np.empty((44100*self.sample_duration,),dtype='int16')
 		for i in range(1, data_point_count):
-			d.progress("Loading tracks",i+1,data_point_count)
+			self.d.progress("Loading tracks",i+1,data_point_count)
 			try:
 				location = self.locations[self.start]
 				data_point = self.input_values.get(location)
