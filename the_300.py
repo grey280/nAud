@@ -83,7 +83,7 @@ for song_id, this_song in tracks.items():
 	write_path = "{}/{}.{}.{}.{}.wav".format(output_directory, year,artist,album,title)
 	kind = this_song.get("Kind", "unknown kind")
 	genre = this_song.get("Genre", "unknown")
-	converted_genre = conv.convert_genre(genre_orig)
+	converted_genre = conv.convert_genre(genre)
 	time = this_song.get("Total Time", 0)
 	if genre == "Voice Memo" or genre == "Comedy":
 		d.verbose("  Excluded genre. Skipping.")
