@@ -1,0 +1,74 @@
+gpatt11-1:nAud greypatterson$ python sampleReadKeras.py 
+Using Theano backend.
+Start: read plist
+End: read plist
+Dataset built.
+Test 0 of 1
+Model and SGD prepared.
+Loading tracks: [====================] complete    
+Train on 1640 samples, validate on 183 samples
+Epoch 1/50
+1640/1640 [==============================] - 257s - loss: 0.8540 - acc: 0.7787 - val_loss: 0.7854 - val_acc: 0.8415
+Epoch 2/50
+1640/1640 [==============================] - 251s - loss: 1.4831 - acc: 0.7457 - val_loss: 1.2660 - val_acc: 0.8306
+Epoch 3/50
+1640/1640 [==============================] - 289s - loss: 1.8074 - acc: 0.7646 - val_loss: 1.4077 - val_acc: 0.8251
+Epoch 4/50
+1640/1640 [==============================] - 276s - loss: 1.9155 - acc: 0.7506 - val_loss: 1.5835 - val_acc: 0.8361
+Epoch 5/50
+1640/1640 [==============================] - 242s - loss: 2.0341 - acc: 0.7512 - val_loss: 1.3931 - val_acc: 0.8251
+Fit complete. Preparing to test.
+Loading test tracks: [====================] complete    
+256/256 [==============================] - 2s     
+
+Test 0 of 1 complete. Loss: 1.517525341361761. Accuracy: 78.125%
+Finished writing model to disk.
+Finished writing weights to disk.
+
+Test 0 of 1 complete. Loss: 1.517525341361761. Accuracy: 78.125%
+gpatt11-1:nAud greypatterson$ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

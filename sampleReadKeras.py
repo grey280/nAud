@@ -20,18 +20,19 @@ log_level = 2 							# 0: silent, 1: errors only, 2: normal, 3: verbose
 batch_size = 16
 epoch_count = 50
 data_point_count = 0 					# number of data points to use for training; set to 0 for 'all'
-evaluation_data_point_count = 256 		# number of data points to evaluate against; set to 0 for 'all'
-shuffle_at_epoch = True
+evaluation_data_point_count = 0 		# number of data points to evaluate against; set to 0 for 'all'
+evaluation_split = 0.75 				# amount of dataset to use for training - in [0,1]. Default 0.75
+shuffle_at_epoch = True 				# shuffle the dataset at each epoch?
 NN_validation_split = 0.1 				# fraction of data to be held out as validation data, 0.<x<1
 early_stopping_patience = 3 			# how many epochs without improvement it'll go before stopping
 
 ## IO settings
-input_data = "cache/data.plist"
-test_series_name = "BGNN"				# name of the test series - files are saved as test_series_name.iteration.json/hdf5
+input_data = "cache/data.plist" 		# location of the .plist file to read from
+test_series_name = "default"			# name of the test series - files are saved as test_series_name.iteration.json/hdf5
 tests_in_series = 3 					# number of tests to run in this series
 
 ## Data set settings
-vstack_split_size = 25					# controls the speed/memory usage of loading tracks. 25-50 works well.
+vstack_split_size = 35					# controls the speed/memory usage of loading tracks. 25-50 works well.
 start_point = 60 						# seconds into the sample to read ((start_point+sample_duration)<sample length)
 sample_duration = 20					# seconds of sample to read ((start_point+sample_duration)<sample length)
 do_random_parse = False					# true will use three 5-second clips from random places in the song, rather than a single 15-second block
@@ -104,7 +105,7 @@ d.verbose("Dataset size: {}".format(data_set.get_data_point_count()))
 if data_point_count == 0:
 	data_point_count = data_set.get_data_point_count()
 if evaluation_data_point_count == 0:
-	evaluation_data_point_count = data_set.get_data_point_count()
+	evaluation_data_point_count = data_set.get_test_data_point_count()
 
 # Multi-iteration crossing
 test_results = []
@@ -158,7 +159,7 @@ for i in range(tests_in_series):
 		d.debug("Fit complete. Preparing to test.")
 
 	# Evaluate against test data
-	test_data, test_answers, test_info_feed = data_set.next_batch(evaluation_data_point_count)
+	test_data, test_answers, test_info_feed = data_set.next_test_batch(evaluation_data_point_count)
 	del test_info_feed
 	score = model.evaluate(test_data, test_answers, batch_size=batch_size)
 	result = "\nTest {} of {} complete. Loss: {}. Accuracy: {}%".format(i, tests_in_series, score[0], score[1]*100)

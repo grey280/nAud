@@ -7,7 +7,6 @@ import plistlib
 import numpy 			as np
 import scipy.io.wavfile	as wav
 import random
-import time
 
 import gdebug
 import gconvert			as conv
