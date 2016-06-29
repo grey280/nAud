@@ -121,7 +121,7 @@ def load_weights(iteration=0, path=test_series_name):
 def save_model(model, iteration, path=test_series_name):
 	# Saves the model - just a quick function to save some time
 	if do_save:
-		outpath = "output/{}.{}.json".format(path, iteration)
+		outpath = "output/{}.0.{}.json".format(path, iteration)
 		if load_from_previous_trial:
 			outpath = "output/{}.{}.{}.json".format(path, trial_iteration, iteration)
 		json_string = model.to_json()
@@ -131,7 +131,7 @@ def save_model(model, iteration, path=test_series_name):
 def save_weights(model, iteration, path=test_series_name):
 	# Saves the weights - just a quick function to save some time
 	if do_save:
-		outpath = "output/{}.{}.hdf5".format(path, iteration)
+		outpath = "output/{}.0.{}.hdf5".format(path, iteration)
 		if load_from_previous_trial:
 			outpath = "output/{}.{}.{}.hdf5".format(path, trial_iteration, iteration)
 		model.save_weights(outpath)
