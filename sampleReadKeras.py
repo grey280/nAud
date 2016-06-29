@@ -104,7 +104,7 @@ d.verbose("Dataset size: {}".format(data_set.get_data_point_count()))
 if data_point_count == 0:
 	data_point_count = data_set.get_data_point_count()
 if evaluation_data_point_count == 0:
-	evaluation_data_point_count = data_set.get_data_point_count()
+	evaluation_data_point_count = data_set.get_test_data_point_count()
 
 # Multi-iteration crossing
 test_results = []

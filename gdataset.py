@@ -79,8 +79,10 @@ class Dataset:
 		return scaled_genre, np.concatenate((data_1, data_2, data_3))
 
 	def get_data_point_count(self):
-		# This function may get expanded in the future to better handle 'holding out test data' functionality.
 		return len(self.locations)
+
+	def get_test_data_point_count(self):
+		return len(self.test_locations)
 
 	def next_batch(self, data_point_count):
 		# Loads the next batch - with optimizations, this can actually handle batch sizes in the (0,2000) range
