@@ -21,14 +21,14 @@ batch_size = 16
 epoch_count = 50
 data_point_count = 0 					# number of data points to use for training; set to 0 for 'all'
 evaluation_data_point_count = 0 		# number of data points to evaluate against; set to 0 for 'all'
-evaluation_split = 0.9 				# amount of dataset to use for training - in [0,1]. Default 0.75
+evaluation_split = 0.75 				# amount of dataset to use for training - in [0,1]. Default 0.75
 shuffle_at_epoch = True 				# shuffle the dataset at each epoch?
 NN_validation_split = 0.1 				# fraction of data to be held out as validation data, 0.<x<1
 early_stopping_patience = 3 			# how many epochs without improvement it'll go before stopping
 
 ## IO settings
-input_data = "cache/the_120.plist" 		# location of the .plist file to read from
-test_series_name = "T120"				# name of the test series - files are saved as test_series_name.iteration.json/hdf5
+input_data = "cache/data.plist" 		# location of the .plist file to read from
+test_series_name = "default"			# name of the test series - files are saved as test_series_name.iteration.json/hdf5
 tests_in_series = 3 					# number of tests to run in this series
 
 ## Data set settings
