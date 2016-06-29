@@ -30,6 +30,7 @@ class Dataset:
 		for track, data in inpt.items():
 			# self.locations.append(track)
 			temp_locs.append(track)
+		random.shuffle(temp_locs) # so you don't get a whole blob of one genre in the test data
 		for i in range(len(temp_locs)):
 			if i > int(train_size*len(temp_locs)):
 				self.test_locations.append(temp_locs[i])
