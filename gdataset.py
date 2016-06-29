@@ -16,17 +16,25 @@ class Dataset:
 	# Having a class to handle the dataset makes a lot of things easier.
 	# Basically, hand it something opened by plistlib and it'll parse it out nice and pretty-like.
 	start = 0
-	def __init__(self, inpt, do_random=False, sample_duration=15, start_point=0, vstack_split=35, log_level=2):
+	def __init__(self, inpt, do_random=False, sample_duration=15, start_point=0, vstack_split=35, log_level=2, train_size=0.75):
 		self.input_values = inpt
 		self.locations=[]
+		self.test_locations=[]
 		self.rand = do_random
 		self.sample_duration = sample_duration
 		self.start_point = start_point
 		self.vstack_split_size = vstack_split
 		self.d = gdebug.Debugger(debug_level = log_level)
+		temp_locs = []
 		for track, data in inpt.items():
-			self.locations.append(track)
-		# d.debug("Initializing data set object")
+			# self.locations.append(track)
+			temp_locs.append(track)
+		for i in range(len(temp_locs)):
+			if i/len(temp_locs) > train_size:
+				self.test_locations.append(temp_locs[i])
+			else:
+				self.locations.append(temp_locs[i])
+
 	def shuffle(self):
 		# Shuffles the dataset. May be expanded in the future to better handle 'holding out test data' functionality.
 		random.shuffle(self.locations)
