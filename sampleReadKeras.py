@@ -28,9 +28,9 @@ early_stopping_patience = 3 			# how many epochs without improvement it'll go be
 input_data = "cache/data.plist"
 # weights_file_name = "nDS.json"			# name of model file to load
 # model_file_name = "nDS.hdf5"			# name of weights file to load
-test_series_name = "2S1M"				# name of the test series - files are saved as test_series_name.iteration.json/hdf5
+test_series_name = "BGNN"				# name of the test series - files are saved as test_series_name.iteration.json/hdf5
 tests_in_series = 3 					# number of tests to run in this series
-vstack_split_size = 35					# controls the speed/memory usage of loading tracks. 25-50 works well.
+vstack_split_size = 25					# controls the speed/memory usage of loading tracks. 25-50 works well.
 start_point = 60 						# seconds into the sample to read ((start_point+sample_duration)<sample length)
 sample_duration = 20					# seconds of sample to read ((start_point+sample_duration)<sample length)
 do_random_parse = False					# true will use three 5-second clips from random places in the song, rather than a single 15-second block
@@ -121,7 +121,7 @@ def load_weights(iteration=0, path=test_series_name):
 def save_model(model, iteration, path=test_series_name):
 	# Saves the model - just a quick function to save some time
 	if do_save:
-		outpath = "output/{}.{}.json".format(path, iteration)
+		outpath = "output/{}.0.{}.json".format(path, iteration)
 		if load_from_previous_trial:
 			outpath = "output/{}.{}.{}.json".format(path, trial_iteration, iteration)
 		json_string = model.to_json()
@@ -131,7 +131,7 @@ def save_model(model, iteration, path=test_series_name):
 def save_weights(model, iteration, path=test_series_name):
 	# Saves the weights - just a quick function to save some time
 	if do_save:
-		outpath = "output/{}.{}.hdf5".format(path, iteration)
+		outpath = "output/{}.0.{}.hdf5".format(path, iteration)
 		if load_from_previous_trial:
 			outpath = "output/{}.{}.{}.hdf5".format(path, trial_iteration, iteration)
 		model.save_weights(outpath)
@@ -225,7 +225,10 @@ for i in range(tests_in_series):
 	# Build the model, either from scratch or from disk
 	if not do_load_model:
 		model = Sequential()
-		model.add(Dense(128, input_dim=44100*sample_duration , init='uniform'))
+		model.add(Dense(256, input_dim=44100*sample_duration , init='uniform'))
+		model.add(Activation('tanh'))
+		model.add(Dropout(0.5))
+		model.add(Dense(128, init='uniform'))
 		model.add(Activation('tanh'))
 		model.add(Dropout(0.5))
 		model.add(Dense(64, init='uniform'))

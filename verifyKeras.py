@@ -25,17 +25,17 @@ data_point_count = 0 					# number of data points to use for training; set to 0 
 input_data = "cache/data.plist"
 weights_file_name = ".json"		# name of model file to load
 model_file_name = ".hdf5"		# name of weights file to load
-test_series_name = "nDS"			# name of the test series - files are saved as test_series_name.iteration.[json/hdf5]
+test_series_name = "BGNN"			# name of the test series - files are saved as test_series_name.iteration.[json/hdf5]
 tests_in_series = 3 					# number of tests to run in this series
 vstack_split_size = 35					# controls the speed/memory usage of loading tracks. 25-50 works well.
 start_point = 60 						# seconds into the sample to read ((start_point+sample_duration)<sample length)
-sample_duration = 15					# seconds of sample to read ((start_point+sample_duration)<sample length)
-do_random_parse = True					# true will use three 5-second clips from random places in the song, rather than a single 15-second block
+sample_duration = 20					# seconds of sample to read ((start_point+sample_duration)<sample length)
+do_random_parse = False					# true will use three 5-second clips from random places in the song, rather than a single 15-second block
 
 ## Operational settings
 load_from_previous_trial = True
-trial_iteration_to_load = 1
-trial_to_load = 2
+trial_iteration_to_load = 0
+trial_to_load = 0
 
 # Tools
 d = gdebug.Debugger(debug_level = log_level)
@@ -206,22 +206,3 @@ for i in range(len(data_array_feed)):
 	d.debug("{}/{}/{}/{}/{}/{}/{}/{}/{}".format(information_feed[i],result[0][0],result[0][1],result[0][2],as_int,answer_array_feed[0][0],answer_array_feed[0][1],answer_array_feed[0][2],orig_as_int))
 
 	# Output: song_identifier, likelihood_art, likelihood_pop, likelihood_tradition, was_art, was_pop, was_tradition
-
-
-# specific_song_to_test = "cache/2016.Ten Fé.NOON  189.Elodie.wav"
-# that_data = {"genre": "Indie"}
-
-# d1 = []
-# scaled_genre, data = parse_track(specific_song_to_test, that_data)
-# print("scaled_genre: {}".format(scaled_genre))
-# d1.append(data)
-# outer_data = np.asarray(d1)
-
-# result = model.predict(outer_data, batch_size=1, verbose=0)
-# print(result)
-# intified = conv.one_hot_to_int(result[0])
-# as_genre = conv.number_to_label(intified)
-# descaled_actual_genre = conv.one_hot_to_int(scaled_genre)
-# print(descaled_actual_genre)
-# d.debug("Predicted genre: {}. Actual: {}".format(as_genre, conv.number_to_label(descaled_actual_genre)))
-# print(conv.convert_genre("Indie"))
