@@ -92,17 +92,20 @@ for song_id, this_song in tracks.items():
 		# other
 		continue
 	elif converted_genre == 1: # Art
-		art_count += 1
 		if art_count > per_meta:
 			continue
+		else:
+			art_count += 1
 	elif converted_genre == 2: # Pop
-		pop_count += 1
 		if pop_count > per_meta:
 			continue
+		else:
+			pop_count += 1
 	elif converted_genre == 3: # Traditional
-		tradition_count += 1
 		if tradition_count > per_meta:
 			continue
+		else:
+			tradition_count += 1
 	if time < 1000 * seconds_per_song: # songs that're too short cause Problems later on
 		d.verbose("  Song too short. Skipping.")
 		continue
@@ -123,6 +126,9 @@ for song_id, this_song in tracks.items():
 		d.verbose("  Skipping song: incompatible file format.")
 # LOOP END
 d.debug("Handled {} songs.".format(count))
+d.debug("  {} art".format(art_count))
+d.debug("  {} pop".format(pop_count))
+d.debug("  {} traditional".format(tradition_count))
 d.verbose("Preparing to write plist to file.")
 out = open(output_data, 'wb+')
 plistlib.dump(new_dictionary, out)
