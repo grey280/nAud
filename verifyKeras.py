@@ -29,8 +29,8 @@ test_series_name = "BGNN"			# name of the test series - files are saved as test_
 tests_in_series = 3 					# number of tests to run in this series
 vstack_split_size = 35					# controls the speed/memory usage of loading tracks. 25-50 works well.
 start_point = 60 						# seconds into the sample to read ((start_point+sample_duration)<sample length)
-sample_duration = 15					# seconds of sample to read ((start_point+sample_duration)<sample length)
-do_random_parse = True					# true will use three 5-second clips from random places in the song, rather than a single 15-second block
+sample_duration = 20					# seconds of sample to read ((start_point+sample_duration)<sample length)
+do_random_parse = False					# true will use three 5-second clips from random places in the song, rather than a single 15-second block
 
 ## Operational settings
 load_from_previous_trial = True
