@@ -101,7 +101,7 @@ class Dataset:
 					self.shuffle()
 				if(i%self.vstack_split_size == 0):
 					data_feed = np.vstack((data_feed, data_feed_holder))
-					d.verbose(data_feed_holder.shape)
+					self.d.verbose(data_feed_holder.shape)
 					del data_feed_holder
 				self.start += 1
 				if(i%self.vstack_split_size==0): # fixes an off-by-vstack_split_size error, because np.empty is *weird*
