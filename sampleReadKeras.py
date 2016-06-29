@@ -19,7 +19,7 @@ log_level = 2 							# 0: silent, 1: errors only, 2: normal, 3: verbose
 ## Neural Network settings
 batch_size = 16
 epoch_count = 50
-data_point_count = 100 					# number of data points to use for training; set to 0 for 'all'
+data_point_count = 0 					# number of data points to use for training; set to 0 for 'all'
 evaluation_data_point_count = 256 		# number of data points to evaluate against; set to 0 for 'all'
 shuffle_at_epoch = True
 NN_validation_split = 0.1 				# fraction of data to be held out as validation data, 0.<x<1
@@ -28,7 +28,7 @@ early_stopping_patience = 3 			# how many epochs without improvement it'll go be
 ## IO settings
 input_data = "cache/data.plist"
 test_series_name = "quickTest"				# name of the test series - files are saved as test_series_name.iteration.json/hdf5
-tests_in_series = 3 					# number of tests to run in this series
+tests_in_series = 1 					# number of tests to run in this series
 
 ## Data set settings
 vstack_split_size = 25					# controls the speed/memory usage of loading tracks. 25-50 works well.
