@@ -28,7 +28,7 @@ early_stopping_patience = 3 			# how many epochs without improvement it'll go be
 
 ## IO settings
 input_data = "cache/the_120.plist" 		# location of the .plist file to read from
-test_series_name = "120R"				# name of the test series - files are saved as test_series_name.iteration.json/hdf5
+test_series_name = "INGR"				# name of the test series - files are saved as test_series_name.iteration.json/hdf5
 tests_in_series = 3 					# number of tests to run in this series
 
 ## Data set settings
@@ -41,7 +41,7 @@ do_random_parse = True					# true will use three 5-second clips from random plac
 do_load_model = False
 do_load_weights = False
 load_from_previous_trial = False
-trial_iteration = 1 					# Which iteration of the trial series are you on? Used to load/save. Starts at 0.
+trial_iteration = 0 					# Which iteration of the trial series are you on? Used to load/save. Starts at 0.
 do_train = True
 do_save = True
 
@@ -141,7 +141,7 @@ for i in range(tests_in_series):
 	# Training
 	if do_train:
 		# data_feed, answer_feed, information_feed = data_set.next_batch(data_point_count)
-		del information_feed
+		# del information_feed
 		if d.debug_level == 3:
 			NN_log_level = 2
 		elif d.debug_level == 2:
@@ -152,7 +152,7 @@ for i in range(tests_in_series):
 		change_lr = LearningRateScheduler(scheduler)
 		early_stopping = EarlyStopping(monitor='val_loss', patience=early_stopping_patience)
 		# model.fit(data_feed, answer_feed, nb_epoch=epoch_count, batch_size=batch_size, shuffle=shuffle_at_epoch, validation_split=NN_validation_split, verbose=NN_log_level, callbacks=[early_stopping, change_lr])
-		model.fit_generator(data_set.get_next_song, samples_per_epoch=data_point_count, nb_epoch=epoch_count, verbose=1, callbacks=[early_stopping, change_lr], validation_data=data_set.get_next_song, nv_val_samples=int(data_point_count/10))
+		model.fit_generator(data_set.get_next_song(), samples_per_epoch=data_point_count, nb_epoch=epoch_count, verbose=NN_log_level, callbacks=[early_stopping, change_lr], validation_data=data_set.get_next_song(), nb_val_samples=int(data_point_count/10))
 		d.debug("Fit complete. Preparing to test.")
 
 	# Evaluate against test data
