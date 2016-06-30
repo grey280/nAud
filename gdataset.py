@@ -93,7 +93,8 @@ class Dataset:
 				self.start = 0
 			genre, output = self.parse_track(location, data_point)
 			out = output.reshape(1, len(output))
-			yield (out, genre)
+			g2 = genre.reshape(1, len(genre))
+			yield (out, g2)
 
 	def get_next_song(self):
 		location = self.locations[self.start]
@@ -104,7 +105,8 @@ class Dataset:
 		try:
 			genre, output = self.parse_track(location, data_point)
 			out = output.reshape(1, len(output))
-			yield (out, genre)
+			g2 = genre.reshape(1, len(genre))
+			yield (out, g2)
 		except:
 			self.d.error("Something went wrong in get_next_song! Location: {}".format(location))
 			yield self.get_next_song()
