@@ -162,7 +162,7 @@ for i in range(tests_in_series):
 	test_data, test_answers, test_info_feed = data_set.next_test_batch(evaluation_data_point_count)
 	del test_info_feed
 	score = model.evaluate(test_data, test_answers, batch_size=batch_size)
-	result = "\nTest {} of {} complete. Loss: {}. Accuracy: {}%".format(i, tests_in_series, score[0], score[1]*100)
+	result = "\nTest {} of {} complete. Loss: {}. Accuracy: {}%".format(i+1, tests_in_series, score[0], score[1]*100)
 	test_results.append(result)
 	d.debug(result)
 
