@@ -19,7 +19,7 @@ log_level = 2 							# 0: silent, 1: errors only, 2: normal, 3: verbose
 ## Neural Network settings
 batch_size = 16
 epoch_count = 50
-data_point_count = 0 					# number of data points to use for training; set to 0 for 'all'
+data_point_count = 120*3*3 					# number of data points to use for training; set to 0 for 'all'
 evaluation_data_point_count = 0 		# number of data points to evaluate against; set to 0 for 'all'
 evaluation_split = 0.75 				# amount of dataset to use for training - in [0,1]. Default 0.75
 shuffle_at_epoch = True 				# shuffle the dataset at each epoch?
@@ -27,21 +27,21 @@ NN_validation_split = 0.1 				# fraction of data to be held out as validation da
 early_stopping_patience = 3 			# how many epochs without improvement it'll go before stopping
 
 ## IO settings
-input_data = "cache/data.plist" 		# location of the .plist file to read from
-test_series_name = "default"			# name of the test series - files are saved as test_series_name.iteration.json/hdf5
+input_data = "cache/the_120.plist" 		# location of the .plist file to read from
+test_series_name = "120R"				# name of the test series - files are saved as test_series_name.iteration.json/hdf5
 tests_in_series = 3 					# number of tests to run in this series
 
 ## Data set settings
 vstack_split_size = 35					# controls the speed/memory usage of loading tracks. 25-50 works well.
 start_point = 60 						# seconds into the sample to read ((start_point+sample_duration)<sample length)
 sample_duration = 20					# seconds of sample to read ((start_point+sample_duration)<sample length)
-do_random_parse = False					# true will use three 5-second clips from random places in the song, rather than a single 15-second block
+do_random_parse = True					# true will use three 5-second clips from random places in the song, rather than a single 15-second block
 
 ## Operational settings
 do_load_model = False
 do_load_weights = False
 load_from_previous_trial = False
-trial_iteration = 0 					# Which iteration of the trial series are you on? Used to load/save. Starts at 0.
+trial_iteration = 1 					# Which iteration of the trial series are you on? Used to load/save. Starts at 0.
 do_train = True
 do_save = True
 
@@ -77,9 +77,7 @@ def load_weights(iteration=0, path=test_series_name):
 def save_model(model, iteration, path=test_series_name):
 	# Saves the model - just a quick function to save some time
 	if do_save:
-		outpath = "output/{}.0.{}.json".format(path, iteration)
-		if load_from_previous_trial:
-			outpath = "output/{}.{}.{}.json".format(path, trial_iteration, iteration)
+		outpath = "output/{}.{}.{}.json".format(path, trial_iteration, iteration)
 		json_string = model.to_json()
 		open(outpath, 'w+').write(json_string)
 		d.debug('Finished writing model to disk.')
@@ -87,9 +85,7 @@ def save_model(model, iteration, path=test_series_name):
 def save_weights(model, iteration, path=test_series_name):
 	# Saves the weights - just a quick function to save some time
 	if do_save:
-		outpath = "output/{}.0.{}.hdf5".format(path, iteration)
-		if load_from_previous_trial:
-			outpath = "output/{}.{}.{}.hdf5".format(path, trial_iteration, iteration)
+		outpath = "output/{}.{}.{}.hdf5".format(path, trial_iteration, iteration)
 		model.save_weights(outpath)
 		d.debug("Finished writing weights to disk.")
 
@@ -111,7 +107,7 @@ if evaluation_data_point_count == 0:
 test_results = []
 
 for i in range(tests_in_series):
-	d.debug("Test {} of {}".format(i, tests_in_series))
+	d.debug("Test {} of {}".format(i+1, tests_in_series))
 
 	# Build the model, either from scratch or from disk
 	if not do_load_model:
@@ -162,7 +158,7 @@ for i in range(tests_in_series):
 	test_data, test_answers, test_info_feed = data_set.next_test_batch(evaluation_data_point_count)
 	del test_info_feed
 	score = model.evaluate(test_data, test_answers, batch_size=batch_size)
-	result = "\nTest {} of {} complete. Loss: {}. Accuracy: {}%".format(i, tests_in_series, score[0], score[1]*100)
+	result = "\nTest {} of {} complete. Loss: {}. Accuracy: {}%".format(i+1, tests_in_series, score[0], score[1]*100)
 	test_results.append(result)
 	d.debug(result)
 
