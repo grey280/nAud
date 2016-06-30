@@ -93,7 +93,7 @@ class Dataset:
 				self.start = 0
 			genre, output = self.parse_track(location, data_point)
 			out = output.reshape(1, len(output))
-			yield (output, genre)
+			yield (out, genre)
 
 	def get_next_song(self):
 		location = self.locations[self.start]
