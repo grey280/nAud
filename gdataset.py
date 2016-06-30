@@ -53,8 +53,14 @@ class Dataset:
 			t_to_data = conv.scale_genre(genre)
 		elif self.train_to == "Bitrate":
 			br_orig = data.get("bitrate", 128)
-			br_orig.replace('vbr','')
-			t_to_data = int(br_orig)
+			try:
+				br_orig.replace('vbr','')
+			except:
+				pass
+			shifted_br = int(br_orig)
+			if shifted_br > 1024:
+				shifted_br = 1024
+			t_to_data = conv.int_to_one_hot(shifted_br, 1024)
 		# Process sample
 		sample_data = wav.read(track)
 		# self.d.verbose("    Samples: {}".format(len(sample_data[1])))
