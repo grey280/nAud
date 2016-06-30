@@ -140,7 +140,7 @@ for i in range(tests_in_series):
 			d.debug("Weights loaded.")
 	# Training
 	if do_train:
-		data_feed, answer_feed, information_feed = data_set.next_batch(data_point_count)
+		# data_feed, answer_feed, information_feed = data_set.next_batch(data_point_count)
 		del information_feed
 		if d.debug_level == 3:
 			NN_log_level = 2
@@ -151,7 +151,8 @@ for i in range(tests_in_series):
 
 		change_lr = LearningRateScheduler(scheduler)
 		early_stopping = EarlyStopping(monitor='val_loss', patience=early_stopping_patience)
-		model.fit(data_feed, answer_feed, nb_epoch=epoch_count, batch_size=batch_size, shuffle=shuffle_at_epoch, validation_split=NN_validation_split, verbose=NN_log_level, callbacks=[early_stopping, change_lr])
+		# model.fit(data_feed, answer_feed, nb_epoch=epoch_count, batch_size=batch_size, shuffle=shuffle_at_epoch, validation_split=NN_validation_split, verbose=NN_log_level, callbacks=[early_stopping, change_lr])
+		model.fit_generator(data_set.get_next_song, samples_per_epoch=data_point_count, nb_epoch=epoch_count, verbose=1, callbacks=[early_stopping, change_lr], validation_data=data_set.get_next_song, nv_val_samples=int(data_point_count/10))
 		d.debug("Fit complete. Preparing to test.")
 
 	# Evaluate against test data

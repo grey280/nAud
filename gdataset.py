@@ -84,6 +84,16 @@ class Dataset:
 	def get_test_data_point_count(self):
 		return len(self.test_locations)
 
+	def get_next_song(self):
+		location = self.locations[self.start]
+		data_point = self.input_values.get(location)
+		self.start += 1
+		try:
+			genre, output = self.parse_track(location, data_point)
+			return output, genre
+		except:
+			return self.get_next_song()
+
 	def next_batch(self, data_point_count):
 		# Loads the next batch - with optimizations, this can actually handle batch sizes in the (0,2000) range
 		# pretty well - don't actually know how big it gets without trouble, that's all I've tested.
