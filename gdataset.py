@@ -60,6 +60,8 @@ class Dataset:
 			shifted_br = int(br_orig)
 			if shifted_br > 1024:
 				shifted_br = 1024
+			if shifted_br < 1:
+				shifted_br = 1
 			t_to_data = conv.int_to_one_hot(shifted_br, 1024)
 		# Process sample
 		sample_data = wav.read(track)
