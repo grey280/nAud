@@ -96,21 +96,6 @@ class Dataset:
 			g2 = genre.reshape(1, len(genre))
 			yield (out, g2)
 
-	def get_next_song(self):
-		location = self.locations[self.start]
-		data_point = self.input_values.get(location)
-		self.start += 1
-		# if self.start >= len(self.locations):
-			# self.start = 0
-		try:
-			genre, output = self.parse_track(location, data_point)
-			out = output.reshape(1, len(output))
-			g2 = genre.reshape(1, len(genre))
-			yield (out, g2)
-		except:
-			self.d.error("Something went wrong in get_next_song! Location: {}".format(location))
-			yield self.get_next_song()
-
 	def next_batch_infoless(self, data_point_count):
 		data_array_feed, answer_array_feed, information_feed = self.next_batch(data_point_count)
 		return data_array_feed, answer_array_feed
