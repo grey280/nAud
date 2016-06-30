@@ -30,6 +30,7 @@ early_stopping_patience = 3 			# how many epochs without improvement it'll go be
 input_data = "cache/the_120.plist" 		# location of the .plist file to read from
 test_series_name = "INGR"				# name of the test series - files are saved as test_series_name.iteration.json/hdf5
 tests_in_series = 3 					# number of tests to run in this series
+train_to = "Genre"						# train to identify what? "Genre", "Bitrate". Defaults to genre.
 
 ## Data set settings
 vstack_split_size = 35					# controls the speed/memory usage of loading tracks. 25-50 works well.
@@ -93,7 +94,7 @@ def save_weights(model, iteration, path=test_series_name):
 d.debug("Start: read plist")
 tracks = plistlib.readPlist(input_data)
 d.debug("End: read plist")
-data_set = ds.Dataset(tracks, do_random=do_random_parse, sample_duration=sample_duration, start_point=start_point, vstack_split=vstack_split_size)
+data_set = ds.Dataset(tracks, do_random=do_random_parse, sample_duration=sample_duration, start_point=start_point, vstack_split=vstack_split_size, train_to=train_to)
 d.debug("Dataset built.")
 d.verbose("Dataset size: {}".format(data_set.get_data_point_count()))
 
@@ -121,7 +122,7 @@ for i in range(tests_in_series):
 		model.add(Dense(64, init='uniform'))
 		model.add(Activation('tanh'))
 		model.add(Dropout(0.5))
-		model.add(Dense(conv.number_of_genres, init='uniform'))
+		model.add(Dense(data_set.output_count, init='uniform'))
 		model.add(Activation('softmax'))
 
 		sgd = SGD(lr=0.01, decay=1e-6, momentum=0.9, nesterov=True)
