@@ -19,7 +19,7 @@ log_level = 2 							# 0: silent, 1: errors only, 2: normal, 3: verbose
 ## Neural Network settings
 batch_size = 16
 epoch_count = 50
-data_point_count = 0 					# number of data points to use for training; set to 0 for 'all'
+data_point_count = 120*3 					# number of data points to use for training; set to 0 for 'all'
 evaluation_data_point_count = 0 		# number of data points to evaluate against; set to 0 for 'all'
 evaluation_split = 0.75 				# amount of dataset to use for training - in [0,1]. Default 0.75
 shuffle_at_epoch = True 				# shuffle the dataset at each epoch?
@@ -27,15 +27,15 @@ NN_validation_split = 0.1 				# fraction of data to be held out as validation da
 early_stopping_patience = 3 			# how many epochs without improvement it'll go before stopping
 
 ## IO settings
-input_data = "cache/data.plist" 		# location of the .plist file to read from
-test_series_name = "default"			# name of the test series - files are saved as test_series_name.iteration.json/hdf5
+input_data = "cache/the_120.plist" 		# location of the .plist file to read from
+test_series_name = "120R"				# name of the test series - files are saved as test_series_name.iteration.json/hdf5
 tests_in_series = 3 					# number of tests to run in this series
 
 ## Data set settings
 vstack_split_size = 35					# controls the speed/memory usage of loading tracks. 25-50 works well.
 start_point = 60 						# seconds into the sample to read ((start_point+sample_duration)<sample length)
 sample_duration = 20					# seconds of sample to read ((start_point+sample_duration)<sample length)
-do_random_parse = False					# true will use three 5-second clips from random places in the song, rather than a single 15-second block
+do_random_parse = True					# true will use three 5-second clips from random places in the song, rather than a single 15-second block
 
 ## Operational settings
 do_load_model = False

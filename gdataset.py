@@ -127,7 +127,7 @@ class Dataset:
 		return data_array_feed, answer_array_feed, information_feed
 
 	def next_test_batch(self, data_point_count):
-		location = self.test_locations[self.start]
+		location = self.test_locations[self.test_start]
 		data_point = self.input_values.get(location)
 		genre, output = self.parse_track(location, data_point)
 		answer_feed = [genre]
