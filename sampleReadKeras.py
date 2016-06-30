@@ -111,7 +111,7 @@ if evaluation_data_point_count == 0:
 test_results = []
 
 for i in range(tests_in_series):
-	d.debug("Test {} of {}".format(i, tests_in_series))
+	d.debug("Test {} of {}".format(i+1, tests_in_series))
 
 	# Build the model, either from scratch or from disk
 	if not do_load_model:
