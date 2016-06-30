@@ -152,7 +152,7 @@ for i in range(tests_in_series):
 		change_lr = LearningRateScheduler(scheduler)
 		early_stopping = EarlyStopping(monitor='val_loss', patience=early_stopping_patience)
 		# model.fit(data_feed, answer_feed, nb_epoch=epoch_count, batch_size=batch_size, shuffle=shuffle_at_epoch, validation_split=NN_validation_split, verbose=NN_log_level, callbacks=[early_stopping, change_lr])
-		model.fit_generator(data_set.get_next_song(), samples_per_epoch=data_point_count, nb_epoch=epoch_count, verbose=NN_log_level, callbacks=[early_stopping, change_lr], validation_data=data_set.get_next_song(), nb_val_samples=int(data_point_count/10))
+		model.fit_generator(data_set.get_songs(), samples_per_epoch=16, nb_epoch=epoch_count, verbose=NN_log_level, callbacks=[early_stopping, change_lr], validation_data=data_set.get_songs(), nb_val_samples=int(10/10))
 		d.debug("Fit complete. Preparing to test.")
 
 	# Evaluate against test data

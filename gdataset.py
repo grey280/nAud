@@ -84,6 +84,17 @@ class Dataset:
 	def get_test_data_point_count(self):
 		return len(self.test_locations)
 
+	def get_songs(self):
+		while True:
+			location = self.locations[self.start]
+			data_point = self.input_values.get(location)
+			self.start += 1
+			if self.start >= len(self.locations)+1:
+				self.start = 0
+			genre, output = self.parse_track(location, data_point)
+			out = output.reshape(1, len(output))
+			yield (output, genre)
+
 	def get_next_song(self):
 		location = self.locations[self.start]
 		data_point = self.input_values.get(location)
@@ -93,10 +104,14 @@ class Dataset:
 		try:
 			genre, output = self.parse_track(location, data_point)
 			out = output.reshape(1, len(output))
-			return (out, genre)
+			yield (out, genre)
 		except:
 			self.d.error("Something went wrong in get_next_song! Location: {}".format(location))
-			return self.get_next_song()
+			yield self.get_next_song()
+
+	def next_batch_infoless(self, data_point_count):
+		data_array_feed, answer_array_feed, information_feed = self.next_batch(data_point_count)
+		return data_array_feed, answer_array_feed
 
 	def next_batch(self, data_point_count):
 		# Loads the next batch - with optimizations, this can actually handle batch sizes in the (0,2000) range
