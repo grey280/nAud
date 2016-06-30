@@ -19,7 +19,7 @@ log_level = 2 							# 0: silent, 1: errors only, 2: normal, 3: verbose
 ## Neural Network settings
 batch_size = 16
 epoch_count = 50
-data_point_count = 120*3 					# number of data points to use for training; set to 0 for 'all'
+data_point_count = 120*3*3 					# number of data points to use for training; set to 0 for 'all'
 evaluation_data_point_count = 0 		# number of data points to evaluate against; set to 0 for 'all'
 evaluation_split = 0.75 				# amount of dataset to use for training - in [0,1]. Default 0.75
 shuffle_at_epoch = True 				# shuffle the dataset at each epoch?
@@ -41,7 +41,7 @@ do_random_parse = True					# true will use three 5-second clips from random plac
 do_load_model = False
 do_load_weights = False
 load_from_previous_trial = False
-trial_iteration = 0 					# Which iteration of the trial series are you on? Used to load/save. Starts at 0.
+trial_iteration = 1 					# Which iteration of the trial series are you on? Used to load/save. Starts at 0.
 do_train = True
 do_save = True
 
