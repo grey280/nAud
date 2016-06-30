@@ -88,10 +88,14 @@ class Dataset:
 		location = self.locations[self.start]
 		data_point = self.input_values.get(location)
 		self.start += 1
+		# if self.start >= len(self.locations):
+			# self.start = 0
 		try:
 			genre, output = self.parse_track(location, data_point)
-			return output, genre
+			out = output.reshape(1, len(output))
+			return (out, genre)
 		except:
+			self.d.error("Something went wrong in get_next_song! Location: {}".format(location))
 			return self.get_next_song()
 
 	def next_batch(self, data_point_count):
