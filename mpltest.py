@@ -9,26 +9,30 @@ tdt_color = '#729fcf'
 
 
 X = np.linspace(0, 1, 32, endpoint=True)
+
+# Generate fake data
 art = np.random.uniform(low=0.0, high=0.5, size=(1,32))
 pop_feed = np.random.uniform(low=0.0, high=0.5, size=(1,32))
 pop = []
-print(pop_feed)
 random.shuffle(pop_feed[0])
-print(pop_feed)
 for num in range(len(pop_feed)):
 	pop.append(pop_feed[0][num]+art[num])
 
 art_array = np.asarray(art[0])
 pop_array = np.asarray(pop[0])
 
+# Plot fake data
 plt.plot(X, art_array, color=art_color)
 plt.plot(X, pop_array, color=pop_color)
 
+# Fill the spaces between
 plt.fill_between(X, 0, art_array, color=art_color)
 plt.fill_between(X, art_array, pop_array, color=pop_color)
 plt.fill_between(X, pop_array, 1.0, color=tdt_color)
 
-# axes = plt.gca()
-# axes.set_ylim([0, 1.5])
+# Set the size of the plot
+axes = plt.gca()
+axes.set_ylim([0, 1.0])
 
+# And draw it
 plt.show()
