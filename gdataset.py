@@ -10,7 +10,7 @@ class Dataset:
 	# Basically, hand it something opened by plistlib and it'll parse it out nice and pretty-like.
 	start = 0
 	test_start = 0
-	def __init__(self, inpt, do_random=False, sample_duration=15, start_point=0, vstack_split=35, log_level=2, train_size=0.75):
+	def __init__(self, inpt, do_random=False, sample_duration=15, start_point=0, vstack_split=35, log_level=2, train_size=0.75, train_to="Genre"):
 		self.input_values = inpt
 		self.locations=[]
 		self.test_locations=[]
@@ -19,6 +19,11 @@ class Dataset:
 		self.start_point = start_point
 		self.vstack_split_size = vstack_split
 		self.d = gdebug.Debugger(debug_level = log_level)
+		self.train_to = train_to
+		if self.train_to == "Genre":
+			self.output_count = conv.number_of_genres
+		elif self.train_to == "Bitrate":
+			self.output_count = 1024 # arbitrary, okay
 		temp_locs = []
 		for track, data in inpt.items():
 			# self.locations.append(track)
@@ -42,10 +47,22 @@ class Dataset:
 		# Handles track parsing - given the track and data, does whatever conversions and loading are necessary
 		if self.rand:
 			return self.random_parse_track(track, data)
-		genre_orig = data.get("genre", "Unknown")
-		genre = int(conv.convert_genre(genre_orig))
-		scaled_genre = conv.scale_genre(genre)
-
+		if self.train_to == "Genre":
+			genre_orig = data.get("genre", "Unknown")
+			genre = int(conv.convert_genre(genre_orig))
+			t_to_data = conv.scale_genre(genre)
+		elif self.train_to == "Bitrate":
+			br_orig = data.get("bitrate", 128)
+			try:
+				br_orig.replace('vbr','')
+			except:
+				pass
+			shifted_br = int(br_orig)
+			if shifted_br > 1024:
+				shifted_br = 1024
+			if shifted_br < 1:
+				shifted_br = 1
+			t_to_data = conv.int_to_one_hot(shifted_br, 1024)
 		# Process sample
 		sample_data = wav.read(track)
 		# self.d.verbose("    Samples: {}".format(len(sample_data[1])))
@@ -53,7 +70,7 @@ class Dataset:
 		del sample_data
 		start_point_calc = self.start_point*44100
 		end_point_calc = (self.start_point+self.sample_duration)*44100
-		return scaled_genre, data[start_point_calc:end_point_calc] # force it to be that size, so the NN doesn't complain
+		return t_to_data, data[start_point_calc:end_point_calc] # force it to be that size, so the NN doesn't complain
 
 	def random_parse_track(self, track, data):
 		# Handles track parsing for the '3 5-second chunks from anywhere in the song' test group.

@@ -54,6 +54,15 @@ meta_genres = {
 		"Traditional": 3
 	}
 
+def int_to_one_hot(input_val, oh_size=1024):
+	out = []
+	for i in range(oh_size):
+		if (i+1)==input_val:
+			out.append(1)
+		else:
+			out.append(0)
+	return out
+
 def convert_genre(genre):
 	genres = {
 		"Unknown": "Other",
