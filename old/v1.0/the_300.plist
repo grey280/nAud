@@ -1,0 +1,4623 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>cache/1989.Jimmy Buffett.Off to See the Lizard.The Pascagoula Run.wav</key>
+	<dict>
+		<key>artist</key>
+		<string>Jimmy Buffett</string>
+		<key>bit_rate</key>
+		<integer>192</integer>
+		<key>genre</key>
+		<string>Rock</string>
+		<key>play_count</key>
+		<integer>0</integer>
+		<key>rating</key>
+		<integer>40</integer>
+		<key>skip_count</key>
+		<integer>0</integer>
+		<key>title</key>
+		<string>The Pascagoula Run</string>
+		<key>year</key>
+		<integer>1989</integer>
+	</dict>
+	<key>cache/1994.The London Symphony Orchestra.The Performs Sting.Every Breath You Take.wav</key>
+	<dict>
+		<key>artist</key>
+		<string>The London Symphony Orchestra</string>
+		<key>bit_rate</key>
+		<integer>128</integer>
+		<key>genre</key>
+		<string>Acoustic</string>
+		<key>play_count</key>
+		<integer>0</integer>
+		<key>rating</key>
+		<integer>40</integer>
+		<key>skip_count</key>
+		<integer>0</integer>
+		<key>title</key>
+		<string>Every Breath You Take</string>
+		<key>year</key>
+		<integer>1994</integer>
+	</dict>
+	<key>cache/1994.The London Symphony Orchestra.The Performs Sting.Moon over Bourbon Street.wav</key>
+	<dict>
+		<key>artist</key>
+		<string>The London Symphony Orchestra</string>
+		<key>bit_rate</key>
+		<integer>128</integer>
+		<key>genre</key>
+		<string>Acoustic</string>
+		<key>play_count</key>
+		<integer>0</integer>
+		<key>rating</key>
+		<integer>40</integer>
+		<key>skip_count</key>
+		<integer>0</integer>
+		<key>title</key>
+		<string>Moon over Bourbon Street</string>
+		<key>year</key>
+		<integer>1994</integer>
+	</dict>
+	<key>cache/1994.The London Symphony Orchestra.The Performs Sting.They Dance Alone.wav</key>
+	<dict>
+		<key>artist</key>
+		<string>The London Symphony Orchestra</string>
+		<key>bit_rate</key>
+		<integer>128</integer>
+		<key>genre</key>
+		<string>Acoustic</string>
+		<key>play_count</key>
+		<integer>0</integer>
+		<key>rating</key>
+		<integer>40</integer>
+		<key>skip_count</key>
+		<integer>0</integer>
+		<key>title</key>
+		<string>They Dance Alone</string>
+		<key>year</key>
+		<integer>1994</integer>
+	</dict>
+	<key>cache/1995.UB40.The Best of UB40, Vol. 1.Red, Red Wine.wav</key>
+	<dict>
+		<key>artist</key>
+		<string>UB40</string>
+		<key>bit_rate</key>
+		<integer>251</integer>
+		<key>genre</key>
+		<string>Rock</string>
+		<key>play_count</key>
+		<integer>0</integer>
+		<key>rating</key>
+		<integer>40</integer>
+		<key>skip_count</key>
+		<integer>0</integer>
+		<key>title</key>
+		<string>Red, Red Wine</string>
+		<key>year</key>
+		<integer>1995</integer>
+	</dict>
+	<key>cache/1996.The Verve Pipe.Villains.Cup of Tea.wav</key>
+	<dict>
+		<key>artist</key>
+		<string>The Verve Pipe</string>
+		<key>bit_rate</key>
+		<integer>128</integer>
+		<key>genre</key>
+		<string>Rock</string>
+		<key>play_count</key>
+		<integer>1</integer>
+		<key>rating</key>
+		<integer>60</integer>
+		<key>skip_count</key>
+		<integer>0</integer>
+		<key>title</key>
+		<string>Cup of Tea</string>
+		<key>year</key>
+		<integer>1996</integer>
+	</dict>
+	<key>cache/1996.The Verve Pipe.Villains.Myself.wav</key>
+	<dict>
+		<key>artist</key>
+		<string>The Verve Pipe</string>
+		<key>bit_rate</key>
+		<integer>128</integer>
+		<key>genre</key>
+		<string>Rock</string>
+		<key>play_count</key>
+		<integer>1</integer>
+		<key>rating</key>
+		<integer>80</integer>
+		<key>skip_count</key>
+		<integer>0</integer>
+		<key>title</key>
+		<string>Myself</string>
+		<key>year</key>
+		<integer>1996</integer>
+	</dict>
+	<key>cache/1996.The Verve Pipe.Villains.Real.wav</key>
+	<dict>
+		<key>artist</key>
+		<string>The Verve Pipe</string>
+		<key>bit_rate</key>
+		<integer>128</integer>
+		<key>genre</key>
+		<string>Rock</string>
+		<key>play_count</key>
+		<integer>1</integer>
+		<key>rating</key>
+		<integer>60</integer>
+		<key>skip_count</key>
+		<integer>0</integer>
+		<key>title</key>
+		<string>Real</string>
+		<key>year</key>
+		<integer>1996</integer>
+	</dict>
+	<key>cache/1996.The Verve Pipe.Villains.Villains.wav</key>
+	<dict>
+		<key>artist</key>
+		<string>The Verve Pipe</string>
+		<key>bit_rate</key>
+		<integer>128</integer>
+		<key>genre</key>
+		<string>Rock</string>
+		<key>play_count</key>
+		<integer>1</integer>
+		<key>rating</key>
+		<integer>60</integer>
+		<key>skip_count</key>
+		<integer>0</integer>
+		<key>title</key>
+		<string>Villains</string>
+		<key>year</key>
+		<integer>1996</integer>
+	</dict>
+	<key>cache/1997.Kenny Wayne Shepherd.Trouble Is.Blue on Black.wav</key>
+	<dict>
+		<key>artist</key>
+		<string>Kenny Wayne Shepherd</string>
+		<key>bit_rate</key>
+		<integer>320</integer>
+		<key>genre</key>
+		<string>Rock</string>
+		<key>play_count</key>
+		<integer>386</integer>
+		<key>rating</key>
+		<integer>80</integer>
+		<key>skip_count</key>
+		<integer>3</integer>
+		<key>title</key>
+		<string>Blue on Black</string>
+		<key>year</key>
+		<integer>1997</integer>
+	</dict>
+	<key>cache/1998.Trans-Siberian Orchestra.The Christmas Attic.Music Box Blues.wav</key>
+	<dict>
+		<key>artist</key>
+		<string>Trans-Siberian Orchestra</string>
+		<key>bit_rate</key>
+		<integer>256</integer>
+		<key>genre</key>
+		<string>Holiday</string>
+		<key>play_count</key>
+		<integer>0</integer>
+		<key>rating</key>
+		<integer>20</integer>
+		<key>skip_count</key>
+		<integer>0</integer>
+		<key>title</key>
+		<string>Music Box Blues</string>
+		<key>year</key>
+		<integer>1998</integer>
+	</dict>
+	<key>cache/1999.Death Cab For Cutie.Something About Airplanes.Pictures In An Exhibition.wav</key>
+	<dict>
+		<key>artist</key>
+		<string>Death Cab For Cutie</string>
+		<key>bit_rate</key>
+		<integer>256</integer>
+		<key>genre</key>
+		<string>Rock</string>
+		<key>play_count</key>
+		<integer>1</integer>
+		<key>rating</key>
+		<integer>60</integer>
+		<key>skip_count</key>
+		<integer>0</integer>
+		<key>title</key>
+		<string>Pictures In An Exhibition</string>
+		<key>year</key>
+		<integer>1999</integer>
+	</dict>
+	<key>cache/2000.Coldplay.Acoustic.See You Soon.wav</key>
+	<dict>
+		<key>artist</key>
+		<string>Coldplay</string>
+		<key>bit_rate</key>
+		<integer>256</integer>
+		<key>genre</key>
+		<string>Alternative</string>
+		<key>play_count</key>
+		<integer>50</integer>
+		<key>rating</key>
+		<integer>100</integer>
+		<key>skip_count</key>
+		<integer>10</integer>
+		<key>title</key>
+		<string>See You Soon</string>
+		<key>year</key>
+		<integer>2000</integer>
+	</dict>
+	<key>cache/2000.Coldplay.Acoustic.Yellow (acoustic version from Jo Whiley's Lunchtime Social).wav</key>
+	<dict>
+		<key>artist</key>
+		<string>Coldplay</string>
+		<key>bit_rate</key>
+		<integer>256</integer>
+		<key>genre</key>
+		<string>Alternative</string>
+		<key>play_count</key>
+		<integer>57</integer>
+		<key>rating</key>
+		<integer>100</integer>
+		<key>skip_count</key>
+		<integer>4</integer>
+		<key>title</key>
+		<string>Yellow (acoustic version from Jo Whiley's Lunchtime Social)</string>
+		<key>year</key>
+		<integer>2000</integer>
+	</dict>
+	<key>cache/2000.Coldplay.Parachutes.High Speed.wav</key>
+	<dict>
+		<key>artist</key>
+		<string>Coldplay</string>
+		<key>bit_rate</key>
+		<integer>192</integer>
+		<key>genre</key>
+		<string>Rock</string>
+		<key>play_count</key>
+		<integer>8</integer>
+		<key>rating</key>
+		<integer>100</integer>
+		<key>skip_count</key>
+		<integer>0</integer>
+		<key>title</key>
+		<string>High Speed</string>
+		<key>year</key>
+		<integer>2000</integer>
+	</dict>
+	<key>cache/2001.Daft Punk.Discovery.Voyager.wav</key>
+	<dict>
+		<key>artist</key>
+		<string>Daft Punk</string>
+		<key>bit_rate</key>
+		<integer>192</integer>
+		<key>genre</key>
+		<string>Electronic</string>
+		<key>play_count</key>
+		<integer>12</integer>
+		<key>rating</key>
+		<integer>40</integer>
+		<key>skip_count</key>
+		<integer>1</integer>
+		<key>title</key>
+		<string>Voyager</string>
+		<key>year</key>
+		<integer>2001</integer>
+	</dict>
+	<key>cache/2001.Death Cab for Cutie.The Photo Album.Debate Exposes Doubt.wav</key>
+	<dict>
+		<key>artist</key>
+		<string>Death Cab for Cutie</string>
+		<key>bit_rate</key>
+		<integer>247</integer>
+		<key>genre</key>
+		<string>Rock</string>
+		<key>play_count</key>
+		<integer>0</integer>
+		<key>rating</key>
+		<integer>60</integer>
+		<key>skip_count</key>
+		<integer>0</integer>
+		<key>title</key>
+		<string>Debate Exposes Doubt</string>
+		<key>year</key>
+		<integer>2001</integer>
+	</dict>
+	<key>cache/2001.Enrique Iglesias.Escape.I Will Survive.wav</key>
+	<dict>
+		<key>artist</key>
+		<string>Enrique Iglesias</string>
+		<key>bit_rate</key>
+		<integer>256</integer>
+		<key>genre</key>
+		<string>Latin</string>
+		<key>play_count</key>
+		<integer>1</integer>
+		<key>rating</key>
+		<integer>40</integer>
+		<key>skip_count</key>
+		<integer>0</integer>
+		<key>title</key>
+		<string>I Will Survive</string>
+		<key>year</key>
+		<integer>2001</integer>
+	</dict>
+	<key>cache/2002.Coldplay.A Rush of Blood to the Head.Politik.wav</key>
+	<dict>
+		<key>artist</key>
+		<string>Coldplay</string>
+		<key>bit_rate</key>
+		<integer>160</integer>
+		<key>genre</key>
+		<string>Rock</string>
+		<key>play_count</key>
+		<integer>13</integer>
+		<key>rating</key>
+		<integer>100</integer>
+		<key>skip_count</key>
+		<integer>1</integer>
+		<key>title</key>
+		<string>Politik</string>
+		<key>year</key>
+		<integer>2002</integer>
+	</dict>
+	<key>cache/2002.Death Cab For Cutie.You Can Play These Songs With Chords.Two Cars.wav</key>
+	<dict>
+		<key>artist</key>
+		<string>Death Cab For Cutie</string>
+		<key>bit_rate</key>
+		<integer>235</integer>
+		<key>genre</key>
+		<string>Rock</string>
+		<key>play_count</key>
+		<integer>0</integer>
+		<key>rating</key>
+		<integer>60</integer>
+		<key>skip_count</key>
+		<integer>0</integer>
+		<key>title</key>
+		<string>Two Cars</string>
+		<key>year</key>
+		<integer>2002</integer>
+	</dict>
+	<key>cache/2003.Muse.Absolution.Thoughts of a Dying Atheist.wav</key>
+	<dict>
+		<key>artist</key>
+		<string>Muse</string>
+		<key>bit_rate</key>
+		<integer>256</integer>
+		<key>genre</key>
+		<string>Rock</string>
+		<key>play_count</key>
+		<integer>83</integer>
+		<key>rating</key>
+		<integer>60</integer>
+		<key>skip_count</key>
+		<integer>2</integer>
+		<key>title</key>
+		<string>Thoughts of a Dying Atheist</string>
+		<key>year</key>
+		<integer>2003</integer>
+	</dict>
+	<key>cache/2004.Barlowgirl.Barlowgirl.Never Alone.wav</key>
+	<dict>
+		<key>artist</key>
+		<string>Barlowgirl</string>
+		<key>bit_rate</key>
+		<integer>128</integer>
+		<key>genre</key>
+		<string>Christian &amp; Gospel</string>
+		<key>play_count</key>
+		<integer>320</integer>
+		<key>rating</key>
+		<integer>80</integer>
+		<key>skip_count</key>
+		<integer>29</integer>
+		<key>title</key>
+		<string>Never Alone</string>
+		<key>year</key>
+		<integer>2004</integer>
+	</dict>
+	<key>cache/2004.Carbon Leaf.Indian Summer.Life Less Ordinary.wav</key>
+	<dict>
+		<key>artist</key>
+		<string>Carbon Leaf</string>
+		<key>bit_rate</key>
+		<integer>254</integer>
+		<key>genre</key>
+		<string>Rock</string>
+		<key>play_count</key>
+		<integer>1</integer>
+		<key>rating</key>
+		<integer>60</integer>
+		<key>skip_count</key>
+		<integer>0</integer>
+		<key>title</key>
+		<string>Life Less Ordinary</string>
+		<key>year</key>
+		<integer>2004</integer>
+	</dict>
+	<key>cache/2004.Toby Keith.Toby Keith.Should've Been a Cowboy [Live].wav</key>
+	<dict>
+		<key>artist</key>
+		<string>Toby Keith</string>
+		<key>bit_rate</key>
+		<integer>128</integer>
+		<key>genre</key>
+		<string>Country</string>
+		<key>play_count</key>
+		<integer>0</integer>
+		<key>rating</key>
+		<integer>40</integer>
+		<key>skip_count</key>
+		<integer>0</integer>
+		<key>title</key>
+		<string>Should've Been a Cowboy [Live]</string>
+		<key>year</key>
+		<integer>2004</integer>
+	</dict>
+	<key>cache/2005.Coldplay.X&amp;Y.Swallowed in the Sea.wav</key>
+	<dict>
+		<key>artist</key>
+		<string>Coldplay</string>
+		<key>bit_rate</key>
+		<integer>128</integer>
+		<key>genre</key>
+		<string>Rock</string>
+		<key>play_count</key>
+		<integer>288</integer>
+		<key>rating</key>
+		<integer>80</integer>
+		<key>skip_count</key>
+		<integer>7</integer>
+		<key>title</key>
+		<string>Swallowed in the Sea</string>
+		<key>year</key>
+		<integer>2005</integer>
+	</dict>
+	<key>cache/2005.Death Cab For Cutie.Plans.Soul Meets Body.wav</key>
+	<dict>
+		<key>artist</key>
+		<string>Death Cab For Cutie</string>
+		<key>bit_rate</key>
+		<integer>320</integer>
+		<key>genre</key>
+		<string>Indie Alternative</string>
+		<key>play_count</key>
+		<integer>44</integer>
+		<key>rating</key>
+		<integer>80</integer>
+		<key>skip_count</key>
+		<integer>1</integer>
+		<key>title</key>
+		<string>Soul Meets Body</string>
+		<key>year</key>
+		<integer>2005</integer>
+	</dict>
+	<key>cache/2007.Binärpilot.Robot Wars.A New Galaxy.wav</key>
+	<dict>
+		<key>artist</key>
+		<string>Binärpilot</string>
+		<key>bit_rate</key>
+		<integer>145</integer>
+		<key>genre</key>
+		<string>Electronic</string>
+		<key>play_count</key>
+		<integer>1</integer>
+		<key>rating</key>
+		<integer>80</integer>
+		<key>skip_count</key>
+		<integer>0</integer>
+		<key>title</key>
+		<string>A New Galaxy</string>
+		<key>year</key>
+		<integer>2007</integer>
+	</dict>
+	<key>cache/2007.Enrique Iglesias.Insomniac.Don't You Forget About Me.wav</key>
+	<dict>
+		<key>artist</key>
+		<string>Enrique Iglesias</string>
+		<key>bit_rate</key>
+		<integer>256</integer>
+		<key>genre</key>
+		<string>Latin</string>
+		<key>play_count</key>
+		<integer>0</integer>
+		<key>rating</key>
+		<integer>40</integer>
+		<key>skip_count</key>
+		<integer>0</integer>
+		<key>title</key>
+		<string>Don't You Forget About Me</string>
+		<key>year</key>
+		<integer>2007</integer>
+	</dict>
+	<key>cache/2007.OneRepublic.Dreaming Out Loud.Apologize.wav</key>
+	<dict>
+		<key>artist</key>
+		<string>OneRepublic</string>
+		<key>bit_rate</key>
+		<integer>256</integer>
+		<key>genre</key>
+		<string>Alternative Rock</string>
+		<key>play_count</key>
+		<integer>0</integer>
+		<key>rating</key>
+		<integer>40</integer>
+		<key>skip_count</key>
+		<integer>0</integer>
+		<key>title</key>
+		<string>Apologize</string>
+		<key>year</key>
+		<integer>2007</integer>
+	</dict>
+	<key>cache/2008.The Avett Brothers.The Second Gleam (ep).Murder In The City.wav</key>
+	<dict>
+		<key>artist</key>
+		<string>The Avett Brothers</string>
+		<key>bit_rate</key>
+		<integer>173</integer>
+		<key>genre</key>
+		<string>Folk</string>
+		<key>play_count</key>
+		<integer>1</integer>
+		<key>rating</key>
+		<integer>60</integer>
+		<key>skip_count</key>
+		<integer>1</integer>
+		<key>title</key>
+		<string>Murder In The City</string>
+		<key>year</key>
+		<integer>2008</integer>
+	</dict>
+	<key>cache/2009.Breaking Benjamin.Dear Agony.Lights Out.wav</key>
+	<dict>
+		<key>artist</key>
+		<string>Breaking Benjamin</string>
+		<key>bit_rate</key>
+		<integer>284</integer>
+		<key>genre</key>
+		<string>Rock</string>
+		<key>play_count</key>
+		<integer>1</integer>
+		<key>rating</key>
+		<integer>40</integer>
+		<key>skip_count</key>
+		<integer>0</integer>
+		<key>title</key>
+		<string>Lights Out</string>
+		<key>year</key>
+		<integer>2009</integer>
+	</dict>
+	<key>cache/2009.Skillet.Awake (Deluxe).One Day Too Late.wav</key>
+	<dict>
+		<key>artist</key>
+		<string>Skillet</string>
+		<key>bit_rate</key>
+		<integer>256</integer>
+		<key>genre</key>
+		<string>Rock</string>
+		<key>play_count</key>
+		<integer>7</integer>
+		<key>rating</key>
+		<integer>40</integer>
+		<key>skip_count</key>
+		<integer>0</integer>
+		<key>title</key>
+		<string>One Day Too Late</string>
+		<key>year</key>
+		<integer>2009</integer>
+	</dict>
+	<key>cache/2009.Super Mash Bros..All About The Scrilions.NPH FTW.wav</key>
+	<dict>
+		<key>artist</key>
+		<string>Super Mash Bros.</string>
+		<key>bit_rate</key>
+		<integer>208</integer>
+		<key>genre</key>
+		<string>Mashup</string>
+		<key>play_count</key>
+		<integer>0</integer>
+		<key>rating</key>
+		<integer>80</integer>
+		<key>skip_count</key>
+		<integer>0</integer>
+		<key>title</key>
+		<string>NPH FTW</string>
+		<key>year</key>
+		<integer>2009</integer>
+	</dict>
+	<key>cache/2010.Daft Punk.Tron: Legacy (Amazon MP3 Exclusive Version).Arrival.wav</key>
+	<dict>
+		<key>artist</key>
+		<string>Daft Punk</string>
+		<key>bit_rate</key>
+		<integer>232</integer>
+		<key>genre</key>
+		<string>Soundtrack</string>
+		<key>play_count</key>
+		<integer>1</integer>
+		<key>rating</key>
+		<integer>20</integer>
+		<key>skip_count</key>
+		<integer>0</integer>
+		<key>title</key>
+		<string>Arrival</string>
+		<key>year</key>
+		<integer>2010</integer>
+	</dict>
+	<key>cache/2010.Daft Punk.Tron: Legacy (Amazon MP3 Exclusive Version).C.L.U..wav</key>
+	<dict>
+		<key>artist</key>
+		<string>Daft Punk</string>
+		<key>bit_rate</key>
+		<integer>251</integer>
+		<key>genre</key>
+		<string>Soundtrack</string>
+		<key>play_count</key>
+		<integer>1</integer>
+		<key>rating</key>
+		<integer>20</integer>
+		<key>skip_count</key>
+		<integer>0</integer>
+		<key>title</key>
+		<string>C.L.U.</string>
+		<key>year</key>
+		<integer>2010</integer>
+	</dict>
+	<key>cache/2010.Daft Punk.Tron: Legacy (Amazon MP3 Exclusive Version).Rectifier.wav</key>
+	<dict>
+		<key>artist</key>
+		<string>Daft Punk</string>
+		<key>bit_rate</key>
+		<integer>240</integer>
+		<key>genre</key>
+		<string>Soundtrack</string>
+		<key>play_count</key>
+		<integer>2</integer>
+		<key>rating</key>
+		<integer>60</integer>
+		<key>skip_count</key>
+		<integer>0</integer>
+		<key>title</key>
+		<string>Rectifier</string>
+		<key>year</key>
+		<integer>2010</integer>
+	</dict>
+	<key>cache/2010.Tyler Stenson.Bittersweet Parade.As the Crow Flies.wav</key>
+	<dict>
+		<key>artist</key>
+		<string>Tyler Stenson</string>
+		<key>bit_rate</key>
+		<integer>256</integer>
+		<key>genre</key>
+		<string>Folk</string>
+		<key>play_count</key>
+		<integer>3</integer>
+		<key>rating</key>
+		<integer>80</integer>
+		<key>skip_count</key>
+		<integer>1</integer>
+		<key>title</key>
+		<string>As the Crow Flies</string>
+		<key>year</key>
+		<integer>2010</integer>
+	</dict>
+	<key>cache/2010.Tyler Stenson.Bittersweet Parade.Blush.wav</key>
+	<dict>
+		<key>artist</key>
+		<string>Tyler Stenson</string>
+		<key>bit_rate</key>
+		<integer>256</integer>
+		<key>genre</key>
+		<string>Folk</string>
+		<key>play_count</key>
+		<integer>1</integer>
+		<key>rating</key>
+		<integer>80</integer>
+		<key>skip_count</key>
+		<integer>0</integer>
+		<key>title</key>
+		<string>Blush</string>
+		<key>year</key>
+		<integer>2010</integer>
+	</dict>
+	<key>cache/2010.Tyler Stenson.Bittersweet Parade.Explode.wav</key>
+	<dict>
+		<key>artist</key>
+		<string>Tyler Stenson</string>
+		<key>bit_rate</key>
+		<integer>256</integer>
+		<key>genre</key>
+		<string>Folk</string>
+		<key>play_count</key>
+		<integer>1</integer>
+		<key>rating</key>
+		<integer>60</integer>
+		<key>skip_count</key>
+		<integer>1</integer>
+		<key>title</key>
+		<string>Explode</string>
+		<key>year</key>
+		<integer>2010</integer>
+	</dict>
+	<key>cache/2010.Tyler Stenson.Bittersweet Parade.Fight til Dying Day.wav</key>
+	<dict>
+		<key>artist</key>
+		<string>Tyler Stenson</string>
+		<key>bit_rate</key>
+		<integer>256</integer>
+		<key>genre</key>
+		<string>Folk</string>
+		<key>play_count</key>
+		<integer>3</integer>
+		<key>rating</key>
+		<integer>60</integer>
+		<key>skip_count</key>
+		<integer>0</integer>
+		<key>title</key>
+		<string>Fight til Dying Day</string>
+		<key>year</key>
+		<integer>2010</integer>
+	</dict>
+	<key>cache/2010.Tyler Stenson.Bittersweet Parade.Great Man's Funeral.wav</key>
+	<dict>
+		<key>artist</key>
+		<string>Tyler Stenson</string>
+		<key>bit_rate</key>
+		<integer>256</integer>
+		<key>genre</key>
+		<string>Folk</string>
+		<key>play_count</key>
+		<integer>1</integer>
+		<key>rating</key>
+		<integer>40</integer>
+		<key>skip_count</key>
+		<integer>0</integer>
+		<key>title</key>
+		<string>Great Man's Funeral</string>
+		<key>year</key>
+		<integer>2010</integer>
+	</dict>
+	<key>cache/2010.Tyler Stenson.Bittersweet Parade.I Get No Sleep.wav</key>
+	<dict>
+		<key>artist</key>
+		<string>Tyler Stenson</string>
+		<key>bit_rate</key>
+		<integer>256</integer>
+		<key>genre</key>
+		<string>Folk</string>
+		<key>play_count</key>
+		<integer>0</integer>
+		<key>rating</key>
+		<integer>40</integer>
+		<key>skip_count</key>
+		<integer>0</integer>
+		<key>title</key>
+		<string>I Get No Sleep</string>
+		<key>year</key>
+		<integer>2010</integer>
+	</dict>
+	<key>cache/2010.Tyler Stenson.Bittersweet Parade.Push That River.wav</key>
+	<dict>
+		<key>artist</key>
+		<string>Tyler Stenson</string>
+		<key>bit_rate</key>
+		<integer>256</integer>
+		<key>genre</key>
+		<string>Folk</string>
+		<key>play_count</key>
+		<integer>3</integer>
+		<key>rating</key>
+		<integer>40</integer>
+		<key>skip_count</key>
+		<integer>0</integer>
+		<key>title</key>
+		<string>Push That River</string>
+		<key>year</key>
+		<integer>2010</integer>
+	</dict>
+	<key>cache/2010.Tyler Stenson.Bittersweet Parade.The Road.wav</key>
+	<dict>
+		<key>artist</key>
+		<string>Tyler Stenson</string>
+		<key>bit_rate</key>
+		<integer>256</integer>
+		<key>genre</key>
+		<string>Folk</string>
+		<key>play_count</key>
+		<integer>1</integer>
+		<key>rating</key>
+		<integer>60</integer>
+		<key>skip_count</key>
+		<integer>0</integer>
+		<key>title</key>
+		<string>The Road</string>
+		<key>year</key>
+		<integer>2010</integer>
+	</dict>
+	<key>cache/2010.Tyler Stenson.Bittersweet Parade.Welcome the Change.wav</key>
+	<dict>
+		<key>artist</key>
+		<string>Tyler Stenson</string>
+		<key>bit_rate</key>
+		<integer>256</integer>
+		<key>genre</key>
+		<string>Folk</string>
+		<key>play_count</key>
+		<integer>1</integer>
+		<key>rating</key>
+		<integer>60</integer>
+		<key>skip_count</key>
+		<integer>0</integer>
+		<key>title</key>
+		<string>Welcome the Change</string>
+		<key>year</key>
+		<integer>2010</integer>
+	</dict>
+	<key>cache/2010.Tyler Stenson.Bittersweet Parade.Wyoming.wav</key>
+	<dict>
+		<key>artist</key>
+		<string>Tyler Stenson</string>
+		<key>bit_rate</key>
+		<integer>256</integer>
+		<key>genre</key>
+		<string>Folk</string>
+		<key>play_count</key>
+		<integer>2</integer>
+		<key>rating</key>
+		<integer>40</integer>
+		<key>skip_count</key>
+		<integer>0</integer>
+		<key>title</key>
+		<string>Wyoming</string>
+		<key>year</key>
+		<integer>2010</integer>
+	</dict>
+	<key>cache/2010.Tyler Stenson.Bittersweet Parade.You Already Know.wav</key>
+	<dict>
+		<key>artist</key>
+		<string>Tyler Stenson</string>
+		<key>bit_rate</key>
+		<integer>256</integer>
+		<key>genre</key>
+		<string>Folk</string>
+		<key>play_count</key>
+		<integer>1</integer>
+		<key>rating</key>
+		<integer>40</integer>
+		<key>skip_count</key>
+		<integer>1</integer>
+		<key>title</key>
+		<string>You Already Know</string>
+		<key>year</key>
+		<integer>2010</integer>
+	</dict>
+	<key>cache/2012.Neil Davidge.Halo 4 (Original Soundtrack).The Beauty Of Cortana (Apocalyptica vs Neil Davidge).wav</key>
+	<dict>
+		<key>artist</key>
+		<string>Neil Davidge</string>
+		<key>bit_rate</key>
+		<integer>320</integer>
+		<key>genre</key>
+		<string>Score</string>
+		<key>play_count</key>
+		<integer>246</integer>
+		<key>rating</key>
+		<integer>60</integer>
+		<key>skip_count</key>
+		<integer>20</integer>
+		<key>title</key>
+		<string>The Beauty Of Cortana (Apocalyptica vs Neil Davidge)</string>
+		<key>year</key>
+		<integer>2012</integer>
+	</dict>
+	<key>cache/2012.The Staves.Dead &amp; Born &amp; Grown.Winter Trees.wav</key>
+	<dict>
+		<key>artist</key>
+		<string>The Staves</string>
+		<key>bit_rate</key>
+		<integer>320</integer>
+		<key>genre</key>
+		<string>Folk</string>
+		<key>play_count</key>
+		<integer>1</integer>
+		<key>rating</key>
+		<integer>60</integer>
+		<key>skip_count</key>
+		<integer>0</integer>
+		<key>title</key>
+		<string>Winter Trees</string>
+		<key>year</key>
+		<integer>2012</integer>
+	</dict>
+	<key>cache/2012.Trampled By Turtles.Stars and Satellites.Midnight on the Interstate.wav</key>
+	<dict>
+		<key>artist</key>
+		<string>Trampled By Turtles</string>
+		<key>bit_rate</key>
+		<integer>320</integer>
+		<key>genre</key>
+		<string>Bluegrass</string>
+		<key>play_count</key>
+		<integer>1</integer>
+		<key>rating</key>
+		<integer>40</integer>
+		<key>skip_count</key>
+		<integer>0</integer>
+		<key>title</key>
+		<string>Midnight on the Interstate</string>
+		<key>year</key>
+		<integer>2012</integer>
+	</dict>
+	<key>cache/2013.Gregory Alan Isakov.The Weatherman.All Shades of Blue.wav</key>
+	<dict>
+		<key>artist</key>
+		<string>Gregory Alan Isakov</string>
+		<key>bit_rate</key>
+		<integer>320</integer>
+		<key>genre</key>
+		<string>Folk</string>
+		<key>play_count</key>
+		<integer>1</integer>
+		<key>rating</key>
+		<integer>40</integer>
+		<key>skip_count</key>
+		<integer>1</integer>
+		<key>title</key>
+		<string>All Shades of Blue</string>
+		<key>year</key>
+		<integer>2013</integer>
+	</dict>
+	<key>cache/2013.OK Go.Twelve Months of OK Go.Hot In Herre (Nelly cover).wav</key>
+	<dict>
+		<key>artist</key>
+		<string>OK Go</string>
+		<key>bit_rate</key>
+		<integer>320</integer>
+		<key>genre</key>
+		<string>Indie Rock</string>
+		<key>play_count</key>
+		<integer>0</integer>
+		<key>rating</key>
+		<integer>20</integer>
+		<key>skip_count</key>
+		<integer>1</integer>
+		<key>title</key>
+		<string>Hot In Herre (Nelly cover)</string>
+		<key>year</key>
+		<integer>2013</integer>
+	</dict>
+	<key>cache/2013.Tyler Stenson.Lovely Little Victory.Ramblin Kind.wav</key>
+	<dict>
+		<key>artist</key>
+		<string>Tyler Stenson</string>
+		<key>bit_rate</key>
+		<integer>251</integer>
+		<key>genre</key>
+		<string>Singer/Songwriter</string>
+		<key>play_count</key>
+		<integer>6</integer>
+		<key>rating</key>
+		<integer>100</integer>
+		<key>skip_count</key>
+		<integer>0</integer>
+		<key>title</key>
+		<string>Ramblin Kind</string>
+		<key>year</key>
+		<integer>2013</integer>
+	</dict>
+	<key>cache/2013.Tyler Stenson.Lovely Little Victory.This Too Shall Pass (Remix).wav</key>
+	<dict>
+		<key>artist</key>
+		<string>Tyler Stenson</string>
+		<key>bit_rate</key>
+		<integer>241</integer>
+		<key>genre</key>
+		<string>Singer/Songwriter</string>
+		<key>play_count</key>
+		<integer>3</integer>
+		<key>rating</key>
+		<integer>100</integer>
+		<key>skip_count</key>
+		<integer>1</integer>
+		<key>title</key>
+		<string>This Too Shall Pass (Remix)</string>
+		<key>year</key>
+		<integer>2013</integer>
+	</dict>
+	<key>cache/2014.Angus &amp; Julia Stone.Angus &amp; Julia Stone (Deluxe Version).All This Love (Bonus Track).wav</key>
+	<dict>
+		<key>artist</key>
+		<string>Angus &amp; Julia Stone</string>
+		<key>bit_rate</key>
+		<integer>320</integer>
+		<key>genre</key>
+		<string>Pop</string>
+		<key>play_count</key>
+		<integer>17</integer>
+		<key>rating</key>
+		<integer>100</integer>
+		<key>skip_count</key>
+		<integer>1</integer>
+		<key>title</key>
+		<string>All This Love (Bonus Track)</string>
+		<key>year</key>
+		<integer>2014</integer>
+	</dict>
+	<key>cache/2014.Avicii.The Days  Nights WEB.The Nights (Felix Jaehn Remix).wav</key>
+	<dict>
+		<key>artist</key>
+		<string>Avicii</string>
+		<key>bit_rate</key>
+		<integer>320</integer>
+		<key>genre</key>
+		<string>Dance</string>
+		<key>play_count</key>
+		<integer>1</integer>
+		<key>rating</key>
+		<integer>60</integer>
+		<key>skip_count</key>
+		<integer>0</integer>
+		<key>title</key>
+		<string>The Nights (Felix Jaehn Remix)</string>
+		<key>year</key>
+		<integer>2014</integer>
+	</dict>
+	<key>cache/2014.Banda do Mar.Banda do Mar.Dia Clarear.wav</key>
+	<dict>
+		<key>artist</key>
+		<string>Banda do Mar</string>
+		<key>bit_rate</key>
+		<integer>320</integer>
+		<key>genre</key>
+		<string>Indie Rock</string>
+		<key>play_count</key>
+		<integer>2</integer>
+		<key>rating</key>
+		<integer>100</integer>
+		<key>skip_count</key>
+		<integer>0</integer>
+		<key>title</key>
+		<string>Dia Clarear</string>
+		<key>year</key>
+		<integer>2014</integer>
+	</dict>
+	<key>cache/2014.Beware of Safety.Lotusville.Repeater.wav</key>
+	<dict>
+		<key>artist</key>
+		<string>Beware of Safety</string>
+		<key>bit_rate</key>
+		<integer>234</integer>
+		<key>genre</key>
+		<string>Post Rock</string>
+		<key>play_count</key>
+		<integer>1</integer>
+		<key>rating</key>
+		<integer>60</integer>
+		<key>skip_count</key>
+		<integer>0</integer>
+		<key>title</key>
+		<string>Repeater</string>
+		<key>year</key>
+		<integer>2014</integer>
+	</dict>
+	<key>cache/2014.Buckethead.Pike 91.Pike 91.wav</key>
+	<dict>
+		<key>artist</key>
+		<string>Buckethead</string>
+		<key>bit_rate</key>
+		<integer>320</integer>
+		<key>genre</key>
+		<string>Rock</string>
+		<key>play_count</key>
+		<integer>0</integer>
+		<key>rating</key>
+		<integer>60</integer>
+		<key>skip_count</key>
+		<integer>0</integer>
+		<key>title</key>
+		<string>Pike 91</string>
+		<key>year</key>
+		<integer>2014</integer>
+	</dict>
+	<key>cache/2014.Bucketheadland.Snow Slug.O 38.wav</key>
+	<dict>
+		<key>artist</key>
+		<string>Bucketheadland</string>
+		<key>bit_rate</key>
+		<integer>320</integer>
+		<key>genre</key>
+		<string>Instrumental</string>
+		<key>play_count</key>
+		<integer>0</integer>
+		<key>rating</key>
+		<integer>40</integer>
+		<key>skip_count</key>
+		<integer>0</integer>
+		<key>title</key>
+		<string>O 38</string>
+		<key>year</key>
+		<integer>2014</integer>
+	</dict>
+	<key>cache/2014.Bucketheadland.Snow Slug.S 17.wav</key>
+	<dict>
+		<key>artist</key>
+		<string>Bucketheadland</string>
+		<key>bit_rate</key>
+		<integer>320</integer>
+		<key>genre</key>
+		<string>Instrumental</string>
+		<key>play_count</key>
+		<integer>1</integer>
+		<key>rating</key>
+		<integer>40</integer>
+		<key>skip_count</key>
+		<integer>0</integer>
+		<key>title</key>
+		<string>S 17</string>
+		<key>year</key>
+		<integer>2014</integer>
+	</dict>
+	<key>cache/2014.Bucketheadland.Snow Slug.SL 52.wav</key>
+	<dict>
+		<key>artist</key>
+		<string>Bucketheadland</string>
+		<key>bit_rate</key>
+		<integer>320</integer>
+		<key>genre</key>
+		<string>Instrumental</string>
+		<key>play_count</key>
+		<integer>0</integer>
+		<key>rating</key>
+		<integer>40</integer>
+		<key>skip_count</key>
+		<integer>1</integer>
+		<key>title</key>
+		<string>SL 52</string>
+		<key>year</key>
+		<integer>2014</integer>
+	</dict>
+	<key>cache/2014.Bucketheadland.Snow Slug.U 12.wav</key>
+	<dict>
+		<key>artist</key>
+		<string>Bucketheadland</string>
+		<key>bit_rate</key>
+		<integer>320</integer>
+		<key>genre</key>
+		<string>Instrumental</string>
+		<key>play_count</key>
+		<integer>0</integer>
+		<key>rating</key>
+		<integer>40</integer>
+		<key>skip_count</key>
+		<integer>1</integer>
+		<key>title</key>
+		<string>U 12</string>
+		<key>year</key>
+		<integer>2014</integer>
+	</dict>
+	<key>cache/2014.CHVRCHES.Under the Tide.The Mother We Share [Alucard Session].wav</key>
+	<dict>
+		<key>artist</key>
+		<string>CHVRCHES</string>
+		<key>bit_rate</key>
+		<integer>320</integer>
+		<key>genre</key>
+		<string>Pop</string>
+		<key>play_count</key>
+		<integer>1</integer>
+		<key>rating</key>
+		<integer>60</integer>
+		<key>skip_count</key>
+		<integer>0</integer>
+		<key>title</key>
+		<string>The Mother We Share [Alucard Session]</string>
+		<key>year</key>
+		<integer>2014</integer>
+	</dict>
+	<key>cache/2014.Carbon Leaf.Indian Summer Revisited.Let Your Troubles Roll By.wav</key>
+	<dict>
+		<key>artist</key>
+		<string>Carbon Leaf</string>
+		<key>bit_rate</key>
+		<integer>320</integer>
+		<key>genre</key>
+		<string>Rock</string>
+		<key>play_count</key>
+		<integer>1</integer>
+		<key>rating</key>
+		<integer>100</integer>
+		<key>skip_count</key>
+		<integer>0</integer>
+		<key>title</key>
+		<string>Let Your Troubles Roll By</string>
+		<key>year</key>
+		<integer>2014</integer>
+	</dict>
+	<key>cache/2014.Claudin de Sermisy.MUSC233 Exam 3.Tant que vivray.wav</key>
+	<dict>
+		<key>artist</key>
+		<string>Claudin de Sermisy</string>
+		<key>bit_rate</key>
+		<integer>256</integer>
+		<key>genre</key>
+		<string>Classical</string>
+		<key>play_count</key>
+		<integer>10</integer>
+		<key>rating</key>
+		<integer>60</integer>
+		<key>skip_count</key>
+		<integer>2</integer>
+		<key>title</key>
+		<string>Tant que vivray</string>
+		<key>year</key>
+		<integer>2014</integer>
+	</dict>
+	<key>cache/2014.Cold War Kids.Hold My Home.Go Quietly.wav</key>
+	<dict>
+		<key>artist</key>
+		<string>Cold War Kids</string>
+		<key>bit_rate</key>
+		<integer>255</integer>
+		<key>genre</key>
+		<string>Alternative</string>
+		<key>play_count</key>
+		<integer>3</integer>
+		<key>rating</key>
+		<integer>100</integer>
+		<key>skip_count</key>
+		<integer>1</integer>
+		<key>title</key>
+		<string>Go Quietly</string>
+		<key>year</key>
+		<integer>2014</integer>
+	</dict>
+	<key>cache/2014.Fences.Lesser Oceans.Running Off The Gods.wav</key>
+	<dict>
+		<key>artist</key>
+		<string>Fences</string>
+		<key>bit_rate</key>
+		<integer>320</integer>
+		<key>genre</key>
+		<string>Alternative</string>
+		<key>play_count</key>
+		<integer>42</integer>
+		<key>rating</key>
+		<integer>80</integer>
+		<key>skip_count</key>
+		<integer>4</integer>
+		<key>title</key>
+		<string>Running Off The Gods</string>
+		<key>year</key>
+		<integer>2014</integer>
+	</dict>
+	<key>cache/2014.Haerts.Haerts.Be the One.wav</key>
+	<dict>
+		<key>artist</key>
+		<string>Haerts</string>
+		<key>bit_rate</key>
+		<integer>320</integer>
+		<key>genre</key>
+		<string>Pop</string>
+		<key>play_count</key>
+		<integer>19</integer>
+		<key>rating</key>
+		<integer>80</integer>
+		<key>skip_count</key>
+		<integer>0</integer>
+		<key>title</key>
+		<string>Be the One</string>
+		<key>year</key>
+		<integer>2014</integer>
+	</dict>
+	<key>cache/2014.Henry Purcell.MUSC233 Exam 3.Dido and Aeneas: Lament, When I am laid in earth.wav</key>
+	<dict>
+		<key>artist</key>
+		<string>Henry Purcell</string>
+		<key>bit_rate</key>
+		<integer>256</integer>
+		<key>genre</key>
+		<string>Classical</string>
+		<key>play_count</key>
+		<integer>8</integer>
+		<key>rating</key>
+		<integer>60</integer>
+		<key>skip_count</key>
+		<integer>1</integer>
+		<key>title</key>
+		<string>Dido and Aeneas: Lament, When I am laid in earth</string>
+		<key>year</key>
+		<integer>2014</integer>
+	</dict>
+	<key>cache/2014.James Newton Howard.The Hunger Games - Mockingjay Pt. 1 (Original Motin Picture Score).Peeta's Broadcast.wav</key>
+	<dict>
+		<key>artist</key>
+		<string>James Newton Howard</string>
+		<key>bit_rate</key>
+		<integer>233</integer>
+		<key>genre</key>
+		<string>Score</string>
+		<key>play_count</key>
+		<integer>0</integer>
+		<key>rating</key>
+		<integer>40</integer>
+		<key>skip_count</key>
+		<integer>0</integer>
+		<key>title</key>
+		<string>Peeta's Broadcast</string>
+		<key>year</key>
+		<integer>2014</integer>
+	</dict>
+	<key>cache/2014.James Newton Howard.The Hunger Games - Mockingjay Pt. 1 (Original Motin Picture Score).Remind Her Who The Enemy Is.wav</key>
+	<dict>
+		<key>artist</key>
+		<string>James Newton Howard</string>
+		<key>bit_rate</key>
+		<integer>220</integer>
+		<key>genre</key>
+		<string>Score</string>
+		<key>play_count</key>
+		<integer>0</integer>
+		<key>rating</key>
+		<integer>40</integer>
+		<key>skip_count</key>
+		<integer>0</integer>
+		<key>title</key>
+		<string>Remind Her Who The Enemy Is</string>
+		<key>year</key>
+		<integer>2014</integer>
+	</dict>
+	<key>cache/2014.James Newton Howard.The Hunger Games - Mockingjay Pt. 1 (Original Motin Picture Score).The Mockingjay.wav</key>
+	<dict>
+		<key>artist</key>
+		<string>James Newton Howard</string>
+		<key>bit_rate</key>
+		<integer>219</integer>
+		<key>genre</key>
+		<string>Score</string>
+		<key>play_count</key>
+		<integer>0</integer>
+		<key>rating</key>
+		<integer>40</integer>
+		<key>skip_count</key>
+		<integer>0</integer>
+		<key>title</key>
+		<string>The Mockingjay</string>
+		<key>year</key>
+		<integer>2014</integer>
+	</dict>
+	<key>cache/2014.James Newton Howard.The Hunger Games - Mockingjay Pt. 1 (Original Motin Picture Score).They're Back.wav</key>
+	<dict>
+		<key>artist</key>
+		<string>James Newton Howard</string>
+		<key>bit_rate</key>
+		<integer>227</integer>
+		<key>genre</key>
+		<string>Score</string>
+		<key>play_count</key>
+		<integer>0</integer>
+		<key>rating</key>
+		<integer>40</integer>
+		<key>skip_count</key>
+		<integer>0</integer>
+		<key>title</key>
+		<string>They're Back</string>
+		<key>year</key>
+		<integer>2014</integer>
+	</dict>
+	<key>cache/2014.Joseph Haydn.MUSC233 Exam 2.String Quartet in E-flat Major, Op. 33, No. 2 (The Joke), Hob. III:38: Fourth movement, Finale: Presto.wav</key>
+	<dict>
+		<key>artist</key>
+		<string>Joseph Haydn</string>
+		<key>bit_rate</key>
+		<integer>256</integer>
+		<key>genre</key>
+		<string>Classical</string>
+		<key>play_count</key>
+		<integer>8</integer>
+		<key>rating</key>
+		<integer>60</integer>
+		<key>skip_count</key>
+		<integer>1</integer>
+		<key>title</key>
+		<string>String Quartet in E-flat Major, Op. 33, No. 2 (The Joke), Hob. III:38: Fourth movement, Finale: Presto</string>
+		<key>year</key>
+		<integer>2014</integer>
+	</dict>
+	<key>cache/2014.Kerretta.Pirohia.His Streets Of Honey, Her Mouth Of Gold.wav</key>
+	<dict>
+		<key>artist</key>
+		<string>Kerretta</string>
+		<key>bit_rate</key>
+		<integer>262</integer>
+		<key>genre</key>
+		<string>Instrumental</string>
+		<key>play_count</key>
+		<integer>1</integer>
+		<key>rating</key>
+		<integer>80</integer>
+		<key>skip_count</key>
+		<integer>1</integer>
+		<key>title</key>
+		<string>His Streets Of Honey, Her Mouth Of Gold</string>
+		<key>year</key>
+		<integer>2014</integer>
+	</dict>
+	<key>cache/2014.Kerretta.Pirohia.Kawea Tatou Ki Nga Hiwi.wav</key>
+	<dict>
+		<key>artist</key>
+		<string>Kerretta</string>
+		<key>bit_rate</key>
+		<integer>272</integer>
+		<key>genre</key>
+		<string>Instrumental</string>
+		<key>play_count</key>
+		<integer>4</integer>
+		<key>rating</key>
+		<integer>100</integer>
+		<key>skip_count</key>
+		<integer>0</integer>
+		<key>title</key>
+		<string>Kawea Tatou Ki Nga Hiwi</string>
+		<key>year</key>
+		<integer>2014</integer>
+	</dict>
+	<key>cache/2014.Kerretta.Pirohia.Sister, Come Home.wav</key>
+	<dict>
+		<key>artist</key>
+		<string>Kerretta</string>
+		<key>bit_rate</key>
+		<integer>254</integer>
+		<key>genre</key>
+		<string>Instrumental</string>
+		<key>play_count</key>
+		<integer>11</integer>
+		<key>rating</key>
+		<integer>80</integer>
+		<key>skip_count</key>
+		<integer>2</integer>
+		<key>title</key>
+		<string>Sister, Come Home</string>
+		<key>year</key>
+		<integer>2014</integer>
+	</dict>
+	<key>cache/2014.Kerretta.Pirohia.Warnlands.wav</key>
+	<dict>
+		<key>artist</key>
+		<string>Kerretta</string>
+		<key>bit_rate</key>
+		<integer>273</integer>
+		<key>genre</key>
+		<string>Instrumental</string>
+		<key>play_count</key>
+		<integer>2</integer>
+		<key>rating</key>
+		<integer>100</integer>
+		<key>skip_count</key>
+		<integer>0</integer>
+		<key>title</key>
+		<string>Warnlands</string>
+		<key>year</key>
+		<integer>2014</integer>
+	</dict>
+	<key>cache/2014.La Roux.Trouble in Paradise.Silent Partner.wav</key>
+	<dict>
+		<key>artist</key>
+		<string>La Roux</string>
+		<key>bit_rate</key>
+		<integer>320</integer>
+		<key>genre</key>
+		<string>Pop</string>
+		<key>play_count</key>
+		<integer>1</integer>
+		<key>rating</key>
+		<integer>100</integer>
+		<key>skip_count</key>
+		<integer>0</integer>
+		<key>title</key>
+		<string>Silent Partner</string>
+		<key>year</key>
+		<integer>2014</integer>
+	</dict>
+	<key>cache/2014.Lower Than Atlantis.Lower Than Atlantis (Deluxe).Ain't No Friend.wav</key>
+	<dict>
+		<key>artist</key>
+		<string>Lower Than Atlantis</string>
+		<key>bit_rate</key>
+		<integer>256</integer>
+		<key>genre</key>
+		<string>Alternative Rock</string>
+		<key>play_count</key>
+		<integer>61</integer>
+		<key>rating</key>
+		<integer>80</integer>
+		<key>skip_count</key>
+		<integer>0</integer>
+		<key>title</key>
+		<string>Ain't No Friend</string>
+		<key>year</key>
+		<integer>2014</integer>
+	</dict>
+	<key>cache/2014.Milky Chance.Sadnecessary.Becoming.wav</key>
+	<dict>
+		<key>artist</key>
+		<string>Milky Chance</string>
+		<key>bit_rate</key>
+		<integer>237</integer>
+		<key>genre</key>
+		<string>Pop</string>
+		<key>play_count</key>
+		<integer>0</integer>
+		<key>rating</key>
+		<integer>60</integer>
+		<key>skip_count</key>
+		<integer>0</integer>
+		<key>title</key>
+		<string>Becoming</string>
+		<key>year</key>
+		<integer>2014</integer>
+	</dict>
+	<key>cache/2014.OK Go.Hungry Ghosts.Bright As Your Eyes.wav</key>
+	<dict>
+		<key>artist</key>
+		<string>OK Go</string>
+		<key>bit_rate</key>
+		<integer>128</integer>
+		<key>genre</key>
+		<string>Alternative</string>
+		<key>play_count</key>
+		<integer>3</integer>
+		<key>rating</key>
+		<integer>80</integer>
+		<key>skip_count</key>
+		<integer>0</integer>
+		<key>title</key>
+		<string>Bright As Your Eyes</string>
+		<key>year</key>
+		<integer>2014</integer>
+	</dict>
+	<key>cache/2014.OK Go.Hungry Ghosts.I Won't Let You Down.wav</key>
+	<dict>
+		<key>artist</key>
+		<string>OK Go</string>
+		<key>bit_rate</key>
+		<integer>128</integer>
+		<key>genre</key>
+		<string>Alternative</string>
+		<key>play_count</key>
+		<integer>1</integer>
+		<key>rating</key>
+		<integer>60</integer>
+		<key>skip_count</key>
+		<integer>0</integer>
+		<key>title</key>
+		<string>I Won't Let You Down</string>
+		<key>year</key>
+		<integer>2014</integer>
+	</dict>
+	<key>cache/2014.Pentatonix.That's Christmas To Me.Hark! The Herald Angels Sing.wav</key>
+	<dict>
+		<key>artist</key>
+		<string>Pentatonix</string>
+		<key>bit_rate</key>
+		<integer>254</integer>
+		<key>genre</key>
+		<string>Holiday</string>
+		<key>play_count</key>
+		<integer>7</integer>
+		<key>rating</key>
+		<integer>60</integer>
+		<key>skip_count</key>
+		<integer>0</integer>
+		<key>title</key>
+		<string>Hark! The Herald Angels Sing</string>
+		<key>year</key>
+		<integer>2014</integer>
+	</dict>
+	<key>cache/2014.Pentatonix.That's Christmas To Me.Mary, Did You Know?.wav</key>
+	<dict>
+		<key>artist</key>
+		<string>Pentatonix</string>
+		<key>bit_rate</key>
+		<integer>236</integer>
+		<key>genre</key>
+		<string>Holiday</string>
+		<key>play_count</key>
+		<integer>100</integer>
+		<key>rating</key>
+		<integer>100</integer>
+		<key>skip_count</key>
+		<integer>3</integer>
+		<key>title</key>
+		<string>Mary, Did You Know?</string>
+		<key>year</key>
+		<integer>2014</integer>
+	</dict>
+	<key>cache/2014.Redbone.Guardians Of The Galaxy (Awesome Mix Vol. 1).Come and Get Your Love.wav</key>
+	<dict>
+		<key>artist</key>
+		<string>Redbone</string>
+		<key>bit_rate</key>
+		<integer>320</integer>
+		<key>genre</key>
+		<string>Soundtrack</string>
+		<key>play_count</key>
+		<integer>0</integer>
+		<key>rating</key>
+		<integer>40</integer>
+		<key>skip_count</key>
+		<integer>0</integer>
+		<key>title</key>
+		<string>Come and Get Your Love</string>
+		<key>year</key>
+		<integer>2014</integer>
+	</dict>
+	<key>cache/2014.Rise Against.The Black Market.The Great Die-Off.wav</key>
+	<dict>
+		<key>artist</key>
+		<string>Rise Against</string>
+		<key>bit_rate</key>
+		<integer>320</integer>
+		<key>genre</key>
+		<string>Rock</string>
+		<key>play_count</key>
+		<integer>2</integer>
+		<key>rating</key>
+		<integer>100</integer>
+		<key>skip_count</key>
+		<integer>1</integer>
+		<key>title</key>
+		<string>The Great Die-Off</string>
+		<key>year</key>
+		<integer>2014</integer>
+	</dict>
+	<key>cache/2014.So Cow.The Long Con.Operating at a Loss.wav</key>
+	<dict>
+		<key>artist</key>
+		<string>So Cow</string>
+		<key>bit_rate</key>
+		<integer>243</integer>
+		<key>genre</key>
+		<string>Punk</string>
+		<key>play_count</key>
+		<integer>5</integer>
+		<key>rating</key>
+		<integer>80</integer>
+		<key>skip_count</key>
+		<integer>0</integer>
+		<key>title</key>
+		<string>Operating at a Loss</string>
+		<key>year</key>
+		<integer>2014</integer>
+	</dict>
+	<key>cache/2014.So Cow.The Long Con.The Other One.wav</key>
+	<dict>
+		<key>artist</key>
+		<string>So Cow</string>
+		<key>bit_rate</key>
+		<integer>230</integer>
+		<key>genre</key>
+		<string>Punk</string>
+		<key>play_count</key>
+		<integer>1</integer>
+		<key>rating</key>
+		<integer>80</integer>
+		<key>skip_count</key>
+		<integer>0</integer>
+		<key>title</key>
+		<string>The Other One</string>
+		<key>year</key>
+		<integer>2014</integer>
+	</dict>
+	<key>cache/2014.Tarwater.Adrift.Rice and Fish.wav</key>
+	<dict>
+		<key>artist</key>
+		<string>Tarwater</string>
+		<key>bit_rate</key>
+		<integer>320</integer>
+		<key>genre</key>
+		<string>Post Rock</string>
+		<key>play_count</key>
+		<integer>0</integer>
+		<key>rating</key>
+		<integer>40</integer>
+		<key>skip_count</key>
+		<integer>0</integer>
+		<key>title</key>
+		<string>Rice and Fish</string>
+		<key>year</key>
+		<integer>2014</integer>
+	</dict>
+	<key>cache/2014.The Decemberists.What a Terrible World, What a Beautiful World.Mistral.wav</key>
+	<dict>
+		<key>artist</key>
+		<string>The Decemberists</string>
+		<key>bit_rate</key>
+		<integer>320</integer>
+		<key>genre</key>
+		<string>Indie Rock</string>
+		<key>play_count</key>
+		<integer>1</integer>
+		<key>rating</key>
+		<integer>60</integer>
+		<key>skip_count</key>
+		<integer>0</integer>
+		<key>title</key>
+		<string>Mistral</string>
+		<key>year</key>
+		<integer>2014</integer>
+	</dict>
+	<key>cache/2014.The Fray.Helios.Hurricane.wav</key>
+	<dict>
+		<key>artist</key>
+		<string>The Fray</string>
+		<key>bit_rate</key>
+		<integer>320</integer>
+		<key>genre</key>
+		<string>Rock</string>
+		<key>play_count</key>
+		<integer>71</integer>
+		<key>rating</key>
+		<integer>100</integer>
+		<key>skip_count</key>
+		<integer>0</integer>
+		<key>title</key>
+		<string>Hurricane</string>
+		<key>year</key>
+		<integer>2014</integer>
+	</dict>
+	<key>cache/2014.The Fray.Helios.Same As You.wav</key>
+	<dict>
+		<key>artist</key>
+		<string>The Fray</string>
+		<key>bit_rate</key>
+		<integer>320</integer>
+		<key>genre</key>
+		<string>Rock</string>
+		<key>play_count</key>
+		<integer>171</integer>
+		<key>rating</key>
+		<integer>100</integer>
+		<key>skip_count</key>
+		<integer>7</integer>
+		<key>title</key>
+		<string>Same As You</string>
+		<key>year</key>
+		<integer>2014</integer>
+	</dict>
+	<key>cache/2014.The Life And Times.Lost Bees.Passion Pit.wav</key>
+	<dict>
+		<key>artist</key>
+		<string>The Life And Times</string>
+		<key>bit_rate</key>
+		<integer>268</integer>
+		<key>genre</key>
+		<string>Alternative</string>
+		<key>play_count</key>
+		<integer>0</integer>
+		<key>rating</key>
+		<integer>60</integer>
+		<key>skip_count</key>
+		<integer>0</integer>
+		<key>title</key>
+		<string>Passion Pit</string>
+		<key>year</key>
+		<integer>2014</integer>
+	</dict>
+	<key>cache/2014.The Phoenix Foundation.Echoes.Return.wav</key>
+	<dict>
+		<key>artist</key>
+		<string>The Phoenix Foundation</string>
+		<key>bit_rate</key>
+		<integer>320</integer>
+		<key>genre</key>
+		<string>Punk Rock</string>
+		<key>play_count</key>
+		<integer>10</integer>
+		<key>rating</key>
+		<integer>80</integer>
+		<key>skip_count</key>
+		<integer>0</integer>
+		<key>title</key>
+		<string>Return</string>
+		<key>year</key>
+		<integer>2014</integer>
+	</dict>
+	<key>cache/2014.The Who.Who's Next (Deluxe Edition).Won't Get Fooled Again (Live).wav</key>
+	<dict>
+		<key>artist</key>
+		<string>The Who</string>
+		<key>bit_rate</key>
+		<integer>266</integer>
+		<key>genre</key>
+		<string>Rock</string>
+		<key>play_count</key>
+		<integer>0</integer>
+		<key>rating</key>
+		<integer>40</integer>
+		<key>skip_count</key>
+		<integer>0</integer>
+		<key>title</key>
+		<string>Won't Get Fooled Again (Live)</string>
+		<key>year</key>
+		<integer>2014</integer>
+	</dict>
+	<key>cache/2014.The World is a Beautiful Place &amp; I am No Longer Afraid to Die.Between Bodies.Blank #8  Precipice.wav</key>
+	<dict>
+		<key>artist</key>
+		<string>The World is a Beautiful Place &amp; I am No Longer Afraid to Die</string>
+		<key>bit_rate</key>
+		<integer>255</integer>
+		<key>genre</key>
+		<string>Post Rock</string>
+		<key>play_count</key>
+		<integer>1</integer>
+		<key>rating</key>
+		<integer>80</integer>
+		<key>skip_count</key>
+		<integer>0</integer>
+		<key>title</key>
+		<string>Blank #8 / Precipice</string>
+		<key>year</key>
+		<integer>2014</integer>
+	</dict>
+	<key>cache/2014.Wolfgang Amadeus Mozart.MUSC233 Exam 2.Symphony No. 41 in C Major (Jupiter) K. 551: Finale.wav</key>
+	<dict>
+		<key>artist</key>
+		<string>Wolfgang Amadeus Mozart</string>
+		<key>bit_rate</key>
+		<integer>256</integer>
+		<key>genre</key>
+		<string>Classical</string>
+		<key>play_count</key>
+		<integer>5</integer>
+		<key>rating</key>
+		<integer>60</integer>
+		<key>skip_count</key>
+		<integer>0</integer>
+		<key>title</key>
+		<string>Symphony No. 41 in C Major (Jupiter) K. 551: Finale</string>
+		<key>year</key>
+		<integer>2014</integer>
+	</dict>
+	<key>cache/2015.Brian Tyler.Avengers: Age of Ultron.Avengers: Age of Ultron Title.wav</key>
+	<dict>
+		<key>artist</key>
+		<string>Brian Tyler</string>
+		<key>bit_rate</key>
+		<integer>128</integer>
+		<key>genre</key>
+		<string>Score</string>
+		<key>play_count</key>
+		<integer>0</integer>
+		<key>rating</key>
+		<integer>60</integer>
+		<key>skip_count</key>
+		<integer>0</integer>
+		<key>title</key>
+		<string>Avengers: Age of Ultron Title</string>
+		<key>year</key>
+		<integer>2015</integer>
+	</dict>
+	<key>cache/2015.Brian Tyler.Avengers: Age of Ultron.Birth of Ultron.wav</key>
+	<dict>
+		<key>artist</key>
+		<string>Brian Tyler</string>
+		<key>bit_rate</key>
+		<integer>128</integer>
+		<key>genre</key>
+		<string>Score</string>
+		<key>play_count</key>
+		<integer>0</integer>
+		<key>rating</key>
+		<integer>60</integer>
+		<key>skip_count</key>
+		<integer>0</integer>
+		<key>title</key>
+		<string>Birth of Ultron</string>
+		<key>year</key>
+		<integer>2015</integer>
+	</dict>
+	<key>cache/2015.Brian Tyler.Avengers: Age of Ultron.Breaking and Entering.wav</key>
+	<dict>
+		<key>artist</key>
+		<string>Brian Tyler</string>
+		<key>bit_rate</key>
+		<integer>128</integer>
+		<key>genre</key>
+		<string>Score</string>
+		<key>play_count</key>
+		<integer>0</integer>
+		<key>rating</key>
+		<integer>60</integer>
+		<key>skip_count</key>
+		<integer>0</integer>
+		<key>title</key>
+		<string>Breaking and Entering</string>
+		<key>year</key>
+		<integer>2015</integer>
+	</dict>
+	<key>cache/2015.Brian Tyler.Avengers: Age of Ultron.Darkest of Intentions.wav</key>
+	<dict>
+		<key>artist</key>
+		<string>Brian Tyler</string>
+		<key>bit_rate</key>
+		<integer>128</integer>
+		<key>genre</key>
+		<string>Score</string>
+		<key>play_count</key>
+		<integer>0</integer>
+		<key>rating</key>
+		<integer>60</integer>
+		<key>skip_count</key>
+		<integer>0</integer>
+		<key>title</key>
+		<string>Darkest of Intentions</string>
+		<key>year</key>
+		<integer>2015</integer>
+	</dict>
+	<key>cache/2015.Brian Tyler.Avengers: Age of Ultron.Keys to the Past.wav</key>
+	<dict>
+		<key>artist</key>
+		<string>Brian Tyler</string>
+		<key>bit_rate</key>
+		<integer>128</integer>
+		<key>genre</key>
+		<string>Score</string>
+		<key>play_count</key>
+		<integer>0</integer>
+		<key>rating</key>
+		<integer>60</integer>
+		<key>skip_count</key>
+		<integer>0</integer>
+		<key>title</key>
+		<string>Keys to the Past</string>
+		<key>year</key>
+		<integer>2015</integer>
+	</dict>
+	<key>cache/2015.Cold War Kids.Five Quick Cuts - EP.One Song at a Time.wav</key>
+	<dict>
+		<key>artist</key>
+		<string>Cold War Kids</string>
+		<key>bit_rate</key>
+		<integer>320</integer>
+		<key>genre</key>
+		<string>Rock</string>
+		<key>play_count</key>
+		<integer>1</integer>
+		<key>rating</key>
+		<integer>60</integer>
+		<key>skip_count</key>
+		<integer>0</integer>
+		<key>title</key>
+		<string>One Song at a Time</string>
+		<key>year</key>
+		<integer>2015</integer>
+	</dict>
+	<key>cache/2015.Danny Elfman.Avengers: Age of Ultron.Avengers Unite.wav</key>
+	<dict>
+		<key>artist</key>
+		<string>Danny Elfman</string>
+		<key>bit_rate</key>
+		<integer>128</integer>
+		<key>genre</key>
+		<string>Score</string>
+		<key>play_count</key>
+		<integer>0</integer>
+		<key>rating</key>
+		<integer>60</integer>
+		<key>skip_count</key>
+		<integer>0</integer>
+		<key>title</key>
+		<string>Avengers Unite</string>
+		<key>year</key>
+		<integer>2015</integer>
+	</dict>
+	<key>cache/2015.Danny Elfman.Avengers: Age of Ultron.It Begins.wav</key>
+	<dict>
+		<key>artist</key>
+		<string>Danny Elfman</string>
+		<key>bit_rate</key>
+		<integer>128</integer>
+		<key>genre</key>
+		<string>Score</string>
+		<key>play_count</key>
+		<integer>0</integer>
+		<key>rating</key>
+		<integer>60</integer>
+		<key>skip_count</key>
+		<integer>0</integer>
+		<key>title</key>
+		<string>It Begins</string>
+		<key>year</key>
+		<integer>2015</integer>
+	</dict>
+	<key>cache/2015.Danny Elfman.Avengers: Age of Ultron.New Avengers - Avengers: Age of Ultron.wav</key>
+	<dict>
+		<key>artist</key>
+		<string>Danny Elfman</string>
+		<key>bit_rate</key>
+		<integer>128</integer>
+		<key>genre</key>
+		<string>Score</string>
+		<key>play_count</key>
+		<integer>0</integer>
+		<key>rating</key>
+		<integer>60</integer>
+		<key>skip_count</key>
+		<integer>0</integer>
+		<key>title</key>
+		<string>New Avengers - Avengers: Age of Ultron</string>
+		<key>year</key>
+		<integer>2015</integer>
+	</dict>
+	<key>cache/2015.Danny Elfman.Avengers: Age of Ultron.The Farm.wav</key>
+	<dict>
+		<key>artist</key>
+		<string>Danny Elfman</string>
+		<key>bit_rate</key>
+		<integer>128</integer>
+		<key>genre</key>
+		<string>Score</string>
+		<key>play_count</key>
+		<integer>0</integer>
+		<key>rating</key>
+		<integer>60</integer>
+		<key>skip_count</key>
+		<integer>0</integer>
+		<key>title</key>
+		<string>The Farm</string>
+		<key>year</key>
+		<integer>2015</integer>
+	</dict>
+	<key>cache/2015.Dawn And Hawkes.Golden Heart EP + Yours and Mine Preview.Polar Bears.wav</key>
+	<dict>
+		<key>artist</key>
+		<string>Dawn And Hawkes</string>
+		<key>bit_rate</key>
+		<integer>192</integer>
+		<key>genre</key>
+		<string>Singer/Songwriter</string>
+		<key>play_count</key>
+		<integer>1</integer>
+		<key>rating</key>
+		<integer>60</integer>
+		<key>skip_count</key>
+		<integer>0</integer>
+		<key>title</key>
+		<string>Polar Bears</string>
+		<key>year</key>
+		<integer>2015</integer>
+	</dict>
+	<key>cache/2015.God Is An Astronaut.Helios | Erebus.Finem Solis.wav</key>
+	<dict>
+		<key>artist</key>
+		<string>God Is An Astronaut</string>
+		<key>bit_rate</key>
+		<integer>320</integer>
+		<key>genre</key>
+		<string>Post Rock</string>
+		<key>play_count</key>
+		<integer>12</integer>
+		<key>rating</key>
+		<integer>100</integer>
+		<key>skip_count</key>
+		<integer>2</integer>
+		<key>title</key>
+		<string>Finem Solis</string>
+		<key>year</key>
+		<integer>2015</integer>
+	</dict>
+	<key>cache/2015.Great States.Great States.Carraway.wav</key>
+	<dict>
+		<key>artist</key>
+		<string>Great States</string>
+		<key>bit_rate</key>
+		<integer>192</integer>
+		<key>genre</key>
+		<string>Alternative</string>
+		<key>play_count</key>
+		<integer>4</integer>
+		<key>rating</key>
+		<integer>80</integer>
+		<key>skip_count</key>
+		<integer>0</integer>
+		<key>title</key>
+		<string>Carraway</string>
+		<key>year</key>
+		<integer>2015</integer>
+	</dict>
+	<key>cache/2015.Green River Ordinance.Chasing Down The Wind.Better Love.wav</key>
+	<dict>
+		<key>artist</key>
+		<string>Green River Ordinance</string>
+		<key>bit_rate</key>
+		<integer>192</integer>
+		<key>genre</key>
+		<string>Singer/Songwriter</string>
+		<key>play_count</key>
+		<integer>4</integer>
+		<key>rating</key>
+		<integer>60</integer>
+		<key>skip_count</key>
+		<integer>0</integer>
+		<key>title</key>
+		<string>Better Love</string>
+		<key>year</key>
+		<integer>2015</integer>
+	</dict>
+	<key>cache/2015.Howie Day.Lanterns.Favorite Song.wav</key>
+	<dict>
+		<key>artist</key>
+		<string>Howie Day</string>
+		<key>bit_rate</key>
+		<integer>320</integer>
+		<key>genre</key>
+		<string>Singer/Songwriter</string>
+		<key>play_count</key>
+		<integer>9</integer>
+		<key>rating</key>
+		<integer>100</integer>
+		<key>skip_count</key>
+		<integer>0</integer>
+		<key>title</key>
+		<string>Favorite Song</string>
+		<key>year</key>
+		<integer>2015</integer>
+	</dict>
+	<key>cache/2015.Joseph Trapanese.Insurgent (Original Motion Picture Soundtrack).Convergence (Score Suite From "Insurgent").wav</key>
+	<dict>
+		<key>artist</key>
+		<string>Joseph Trapanese</string>
+		<key>bit_rate</key>
+		<integer>320</integer>
+		<key>genre</key>
+		<string>Score</string>
+		<key>play_count</key>
+		<integer>69</integer>
+		<key>rating</key>
+		<integer>80</integer>
+		<key>skip_count</key>
+		<integer>0</integer>
+		<key>title</key>
+		<string>Convergence (Score Suite From "Insurgent")</string>
+		<key>year</key>
+		<integer>2015</integer>
+	</dict>
+	<key>cache/2015.Lana Del Rey.Honeymoon.Honeymoon.wav</key>
+	<dict>
+		<key>artist</key>
+		<string>Lana Del Rey</string>
+		<key>bit_rate</key>
+		<integer>320</integer>
+		<key>genre</key>
+		<string>Alternative</string>
+		<key>play_count</key>
+		<integer>19</integer>
+		<key>rating</key>
+		<integer>80</integer>
+		<key>skip_count</key>
+		<integer>2</integer>
+		<key>title</key>
+		<string>Honeymoon</string>
+		<key>year</key>
+		<integer>2015</integer>
+	</dict>
+	<key>cache/2015.Lowland Hum.Native Air.Twine.wav</key>
+	<dict>
+		<key>artist</key>
+		<string>Lowland Hum</string>
+		<key>bit_rate</key>
+		<integer>192</integer>
+		<key>genre</key>
+		<string>Singer/Songwriter</string>
+		<key>play_count</key>
+		<integer>11</integer>
+		<key>rating</key>
+		<integer>80</integer>
+		<key>skip_count</key>
+		<integer>0</integer>
+		<key>title</key>
+		<string>Twine</string>
+		<key>year</key>
+		<integer>2015</integer>
+	</dict>
+	<key>cache/2015.Lowland Hum.Native Air.White Stone.wav</key>
+	<dict>
+		<key>artist</key>
+		<string>Lowland Hum</string>
+		<key>bit_rate</key>
+		<integer>192</integer>
+		<key>genre</key>
+		<string>Singer/Songwriter</string>
+		<key>play_count</key>
+		<integer>9</integer>
+		<key>rating</key>
+		<integer>80</integer>
+		<key>skip_count</key>
+		<integer>0</integer>
+		<key>title</key>
+		<string>White Stone</string>
+		<key>year</key>
+		<integer>2015</integer>
+	</dict>
+	<key>cache/2015.Marina and The Diamonds.FROOT.Froot.wav</key>
+	<dict>
+		<key>artist</key>
+		<string>Marina and The Diamonds</string>
+		<key>bit_rate</key>
+		<integer>256</integer>
+		<key>genre</key>
+		<string>Pop</string>
+		<key>play_count</key>
+		<integer>14</integer>
+		<key>rating</key>
+		<integer>100</integer>
+		<key>skip_count</key>
+		<integer>4</integer>
+		<key>title</key>
+		<string>Froot</string>
+		<key>year</key>
+		<integer>2015</integer>
+	</dict>
+	<key>cache/2015.Marina and The Diamonds.FROOT.I'm A Ruin.wav</key>
+	<dict>
+		<key>artist</key>
+		<string>Marina and The Diamonds</string>
+		<key>bit_rate</key>
+		<integer>256</integer>
+		<key>genre</key>
+		<string>Pop</string>
+		<key>play_count</key>
+		<integer>1</integer>
+		<key>rating</key>
+		<integer>60</integer>
+		<key>skip_count</key>
+		<integer>0</integer>
+		<key>title</key>
+		<string>I'm A Ruin</string>
+		<key>year</key>
+		<integer>2015</integer>
+	</dict>
+	<key>cache/2015.Of Monsters And Men.Beneath The Skin.Organs.wav</key>
+	<dict>
+		<key>artist</key>
+		<string>Of Monsters And Men</string>
+		<key>bit_rate</key>
+		<integer>320</integer>
+		<key>genre</key>
+		<string>Indie Rock</string>
+		<key>play_count</key>
+		<integer>3</integer>
+		<key>rating</key>
+		<integer>60</integer>
+		<key>skip_count</key>
+		<integer>0</integer>
+		<key>title</key>
+		<string>Organs</string>
+		<key>year</key>
+		<integer>2015</integer>
+	</dict>
+	<key>cache/2015.Pentatonix.PTX.On My Way Home.wav</key>
+	<dict>
+		<key>artist</key>
+		<string>Pentatonix</string>
+		<key>bit_rate</key>
+		<integer>320</integer>
+		<key>genre</key>
+		<string>Pop</string>
+		<key>play_count</key>
+		<integer>52</integer>
+		<key>rating</key>
+		<integer>80</integer>
+		<key>skip_count</key>
+		<integer>0</integer>
+		<key>title</key>
+		<string>On My Way Home</string>
+		<key>year</key>
+		<integer>2015</integer>
+	</dict>
+	<key>cache/2015.Pentatonix.PTX.Papaoutai.wav</key>
+	<dict>
+		<key>artist</key>
+		<string>Pentatonix</string>
+		<key>bit_rate</key>
+		<integer>320</integer>
+		<key>genre</key>
+		<string>Pop</string>
+		<key>play_count</key>
+		<integer>33</integer>
+		<key>rating</key>
+		<integer>100</integer>
+		<key>skip_count</key>
+		<integer>0</integer>
+		<key>title</key>
+		<string>Papaoutai</string>
+		<key>year</key>
+		<integer>2015</integer>
+	</dict>
+	<key>cache/2015.Pentatonix.PTX.Say Something.wav</key>
+	<dict>
+		<key>artist</key>
+		<string>Pentatonix</string>
+		<key>bit_rate</key>
+		<integer>320</integer>
+		<key>genre</key>
+		<string>Pop</string>
+		<key>play_count</key>
+		<integer>10</integer>
+		<key>rating</key>
+		<integer>100</integer>
+		<key>skip_count</key>
+		<integer>1</integer>
+		<key>title</key>
+		<string>Say Something</string>
+		<key>year</key>
+		<integer>2015</integer>
+	</dict>
+	<key>cache/2015.The Best Pessimist.The Half-World.Lets Meet In Our Dreams Tonight.wav</key>
+	<dict>
+		<key>artist</key>
+		<string>The Best Pessimist</string>
+		<key>bit_rate</key>
+		<integer>320</integer>
+		<key>genre</key>
+		<string>Ambient</string>
+		<key>play_count</key>
+		<integer>18</integer>
+		<key>rating</key>
+		<integer>80</integer>
+		<key>skip_count</key>
+		<integer>0</integer>
+		<key>title</key>
+		<string>Lets Meet In Our Dreams Tonight</string>
+		<key>year</key>
+		<integer>2015</integer>
+	</dict>
+	<key>cache/2015.Tyler Stenson.Say No More.Best Laid Plans.wav</key>
+	<dict>
+		<key>artist</key>
+		<string>Tyler Stenson</string>
+		<key>bit_rate</key>
+		<integer>192</integer>
+		<key>genre</key>
+		<string>Singer/Songwriter</string>
+		<key>play_count</key>
+		<integer>8</integer>
+		<key>rating</key>
+		<integer>80</integer>
+		<key>skip_count</key>
+		<integer>0</integer>
+		<key>title</key>
+		<string>Best Laid Plans</string>
+		<key>year</key>
+		<integer>2015</integer>
+	</dict>
+	<key>cache/2015.Vitamin String Quartet.VSQ Performs the Hits of 2014 Vol. 3.Riptide (String Quartet Tribute to Vance Joy).wav</key>
+	<dict>
+		<key>artist</key>
+		<string>Vitamin String Quartet</string>
+		<key>bit_rate</key>
+		<integer>320</integer>
+		<key>genre</key>
+		<string>Pop</string>
+		<key>play_count</key>
+		<integer>47</integer>
+		<key>rating</key>
+		<integer>100</integer>
+		<key>skip_count</key>
+		<integer>1</integer>
+		<key>title</key>
+		<string>Riptide (String Quartet Tribute to Vance Joy)</string>
+		<key>year</key>
+		<integer>2015</integer>
+	</dict>
+	<key>cache/2015.White Morning.Scores.Catch It (Part I).wav</key>
+	<dict>
+		<key>artist</key>
+		<string>White Morning</string>
+		<key>bit_rate</key>
+		<integer>192</integer>
+		<key>genre</key>
+		<string>Instrumental</string>
+		<key>play_count</key>
+		<integer>0</integer>
+		<key>rating</key>
+		<integer>60</integer>
+		<key>skip_count</key>
+		<integer>0</integer>
+		<key>title</key>
+		<string>Catch It (Part I)</string>
+		<key>year</key>
+		<integer>2015</integer>
+	</dict>
+	<key>cache/2015.White Morning.Scores.Eddie's Song.wav</key>
+	<dict>
+		<key>artist</key>
+		<string>White Morning</string>
+		<key>bit_rate</key>
+		<integer>192</integer>
+		<key>genre</key>
+		<string>Instrumental</string>
+		<key>play_count</key>
+		<integer>1</integer>
+		<key>rating</key>
+		<integer>60</integer>
+		<key>skip_count</key>
+		<integer>0</integer>
+		<key>title</key>
+		<string>Eddie's Song</string>
+		<key>year</key>
+		<integer>2015</integer>
+	</dict>
+	<key>cache/2015.White Morning.Scores.Refuge.wav</key>
+	<dict>
+		<key>artist</key>
+		<string>White Morning</string>
+		<key>bit_rate</key>
+		<integer>192</integer>
+		<key>genre</key>
+		<string>Instrumental</string>
+		<key>play_count</key>
+		<integer>1</integer>
+		<key>rating</key>
+		<integer>80</integer>
+		<key>skip_count</key>
+		<integer>0</integer>
+		<key>title</key>
+		<string>Refuge</string>
+		<key>year</key>
+		<integer>2015</integer>
+	</dict>
+	<key>cache/2015.White Morning.Scores.They Shall Be Called (Part II).wav</key>
+	<dict>
+		<key>artist</key>
+		<string>White Morning</string>
+		<key>bit_rate</key>
+		<integer>192</integer>
+		<key>genre</key>
+		<string>Instrumental</string>
+		<key>play_count</key>
+		<integer>16</integer>
+		<key>rating</key>
+		<integer>60</integer>
+		<key>skip_count</key>
+		<integer>1</integer>
+		<key>title</key>
+		<string>They Shall Be Called (Part II)</string>
+		<key>year</key>
+		<integer>2015</integer>
+	</dict>
+	<key>cache/2015.Will Young.85% Proof (Deluxe Edition).Always On My Mind.wav</key>
+	<dict>
+		<key>artist</key>
+		<string>Will Young</string>
+		<key>bit_rate</key>
+		<integer>320</integer>
+		<key>genre</key>
+		<string>Pop</string>
+		<key>play_count</key>
+		<integer>0</integer>
+		<key>rating</key>
+		<integer>40</integer>
+		<key>skip_count</key>
+		<integer>0</integer>
+		<key>title</key>
+		<string>Always On My Mind</string>
+		<key>year</key>
+		<integer>2015</integer>
+	</dict>
+	<key>cache/2016.2CELLOS(SULIC &amp; HAUSER).Celloverse (Japan Version).Hysteria.wav</key>
+	<dict>
+		<key>artist</key>
+		<string>2CELLOS(SULIC &amp; HAUSER)</string>
+		<key>bit_rate</key>
+		<integer>320</integer>
+		<key>genre</key>
+		<string>Modern</string>
+		<key>play_count</key>
+		<integer>1</integer>
+		<key>rating</key>
+		<integer>60</integer>
+		<key>skip_count</key>
+		<integer>0</integer>
+		<key>title</key>
+		<string>Hysteria</string>
+		<key>year</key>
+		<integer>2016</integer>
+	</dict>
+	<key>cache/2016.2CELLOS(SULIC &amp; HAUSER).Celloverse (Japan Version).Street Spirit (Fade Out).wav</key>
+	<dict>
+		<key>artist</key>
+		<string>2CELLOS(SULIC &amp; HAUSER)</string>
+		<key>bit_rate</key>
+		<integer>320</integer>
+		<key>genre</key>
+		<string>Modern</string>
+		<key>play_count</key>
+		<integer>12</integer>
+		<key>rating</key>
+		<integer>100</integer>
+		<key>skip_count</key>
+		<integer>0</integer>
+		<key>title</key>
+		<string>Street Spirit (Fade Out)</string>
+		<key>year</key>
+		<integer>2016</integer>
+	</dict>
+	<key>cache/2016.2CELLOS(SULIC &amp; HAUSER).Celloverse (Japan Version).They Don't Care About Us.wav</key>
+	<dict>
+		<key>artist</key>
+		<string>2CELLOS(SULIC &amp; HAUSER)</string>
+		<key>bit_rate</key>
+		<integer>320</integer>
+		<key>genre</key>
+		<string>Modern</string>
+		<key>play_count</key>
+		<integer>13</integer>
+		<key>rating</key>
+		<integer>100</integer>
+		<key>skip_count</key>
+		<integer>0</integer>
+		<key>title</key>
+		<string>They Don't Care About Us</string>
+		<key>year</key>
+		<integer>2016</integer>
+	</dict>
+	<key>cache/2016.2CELLOS(SULIC &amp; HAUSER).Celloverse (Japan Version).Thunderstruck (Intro).wav</key>
+	<dict>
+		<key>artist</key>
+		<string>2CELLOS(SULIC &amp; HAUSER)</string>
+		<key>bit_rate</key>
+		<integer>320</integer>
+		<key>genre</key>
+		<string>Modern</string>
+		<key>play_count</key>
+		<integer>1</integer>
+		<key>rating</key>
+		<integer>60</integer>
+		<key>skip_count</key>
+		<integer>0</integer>
+		<key>title</key>
+		<string>Thunderstruck (Intro)</string>
+		<key>year</key>
+		<integer>2016</integer>
+	</dict>
+	<key>cache/2016.Albin Lee Meldau.NOON  182.Lou Lou.wav</key>
+	<dict>
+		<key>artist</key>
+		<string>Albin Lee Meldau</string>
+		<key>bit_rate</key>
+		<integer>128</integer>
+		<key>genre</key>
+		<string>Folk</string>
+		<key>play_count</key>
+		<integer>42</integer>
+		<key>rating</key>
+		<integer>80</integer>
+		<key>skip_count</key>
+		<integer>2</integer>
+		<key>title</key>
+		<string>Lou Lou</string>
+		<key>year</key>
+		<integer>2016</integer>
+	</dict>
+	<key>cache/2016.Albinoni.Concerto a cinque n.01 Op.10 in Bb.Concerto a cinque n.01 Op.10 in Bb - 2 Adagio.wav</key>
+	<dict>
+		<key>artist</key>
+		<string>Albinoni</string>
+		<key>bit_rate</key>
+		<integer>320</integer>
+		<key>genre</key>
+		<string>Classical</string>
+		<key>play_count</key>
+		<integer>0</integer>
+		<key>rating</key>
+		<integer>40</integer>
+		<key>skip_count</key>
+		<integer>0</integer>
+		<key>title</key>
+		<string>Concerto a cinque n.01 Op.10 in Bb - 2 Adagio</string>
+		<key>year</key>
+		<integer>2016</integer>
+	</dict>
+	<key>cache/2016.Albinoni.Concerto a cinque n.01 Op.10 in Bb.Concerto a cinque n.01 Op.10 in Bb - 3 Allegro.wav</key>
+	<dict>
+		<key>artist</key>
+		<string>Albinoni</string>
+		<key>bit_rate</key>
+		<integer>320</integer>
+		<key>genre</key>
+		<string>Classical</string>
+		<key>play_count</key>
+		<integer>0</integer>
+		<key>rating</key>
+		<integer>40</integer>
+		<key>skip_count</key>
+		<integer>0</integer>
+		<key>title</key>
+		<string>Concerto a cinque n.01 Op.10 in Bb - 3 Allegro</string>
+		<key>year</key>
+		<integer>2016</integer>
+	</dict>
+	<key>cache/2016.Bach.Brandenburg concerto n.1 BVW 1046 in F.Brandenburg concerto n.1 BVW 1046 in F - Allegro-Adagio-Allegro-Menuetto-Polacca.wav</key>
+	<dict>
+		<key>artist</key>
+		<string>Bach</string>
+		<key>bit_rate</key>
+		<integer>128</integer>
+		<key>genre</key>
+		<string>Classical</string>
+		<key>play_count</key>
+		<integer>0</integer>
+		<key>rating</key>
+		<integer>40</integer>
+		<key>skip_count</key>
+		<integer>0</integer>
+		<key>title</key>
+		<string>Brandenburg concerto n.1 BVW 1046 in F - Allegro-Adagio-Allegro-Menuetto-Polacca</string>
+		<key>year</key>
+		<integer>2016</integer>
+	</dict>
+	<key>cache/2016.Bach.Cello Suite n.1 BWV 1007 in G.Cello Suite n.1 BWV 1007 in G - 1 Prelude.wav</key>
+	<dict>
+		<key>artist</key>
+		<string>Bach</string>
+		<key>bit_rate</key>
+		<integer>256</integer>
+		<key>genre</key>
+		<string>Classical</string>
+		<key>play_count</key>
+		<integer>0</integer>
+		<key>rating</key>
+		<integer>40</integer>
+		<key>skip_count</key>
+		<integer>0</integer>
+		<key>title</key>
+		<string>Cello Suite n.1 BWV 1007 in G - 1 Prelude</string>
+		<key>year</key>
+		<integer>2016</integer>
+	</dict>
+	<key>cache/2016.Bach.Cello Suite n.1 BWV 1007 in G.Cello Suite n.1 BWV 1007 in G - 3 Courante.wav</key>
+	<dict>
+		<key>artist</key>
+		<string>Bach</string>
+		<key>bit_rate</key>
+		<integer>256</integer>
+		<key>genre</key>
+		<string>Classical</string>
+		<key>play_count</key>
+		<integer>0</integer>
+		<key>rating</key>
+		<integer>40</integer>
+		<key>skip_count</key>
+		<integer>0</integer>
+		<key>title</key>
+		<string>Cello Suite n.1 BWV 1007 in G - 3 Courante</string>
+		<key>year</key>
+		<integer>2016</integer>
+	</dict>
+	<key>cache/2016.Beethoven.Quartet for strings n.13 Op.130 'Lieb' in Bb.Quartet for strings n.13 Op.130 'Lieb' in Bb - 4 Alla danza tedesca (allegro assai).wav</key>
+	<dict>
+		<key>artist</key>
+		<string>Beethoven</string>
+		<key>bit_rate</key>
+		<integer>96</integer>
+		<key>genre</key>
+		<string>Classical</string>
+		<key>play_count</key>
+		<integer>0</integer>
+		<key>rating</key>
+		<integer>40</integer>
+		<key>skip_count</key>
+		<integer>0</integer>
+		<key>title</key>
+		<string>Quartet for strings n.13 Op.130 'Lieb' in Bb - 4 Alla danza tedesca (allegro assai)</string>
+		<key>year</key>
+		<integer>2016</integer>
+	</dict>
+	<key>cache/2016.Berlioz.Symphonie fantastique Op.14.Symphonie fantastique Op.14 - 1 Reveries - Passions.wav</key>
+	<dict>
+		<key>artist</key>
+		<string>Berlioz</string>
+		<key>bit_rate</key>
+		<integer>128</integer>
+		<key>genre</key>
+		<string>Classical</string>
+		<key>play_count</key>
+		<integer>0</integer>
+		<key>rating</key>
+		<integer>40</integer>
+		<key>skip_count</key>
+		<integer>0</integer>
+		<key>title</key>
+		<string>Symphonie fantastique Op.14 - 1 Reveries - Passions</string>
+		<key>year</key>
+		<integer>2016</integer>
+	</dict>
+	<key>cache/2016.Berlioz.Symphonie fantastique Op.14.Symphonie fantastique Op.14 - 4 Marche au supplice.wav</key>
+	<dict>
+		<key>artist</key>
+		<string>Berlioz</string>
+		<key>bit_rate</key>
+		<integer>128</integer>
+		<key>genre</key>
+		<string>Classical</string>
+		<key>play_count</key>
+		<integer>0</integer>
+		<key>rating</key>
+		<integer>40</integer>
+		<key>skip_count</key>
+		<integer>0</integer>
+		<key>title</key>
+		<string>Symphonie fantastique Op.14 - 4 Marche au supplice</string>
+		<key>year</key>
+		<integer>2016</integer>
+	</dict>
+	<key>cache/2016.Berlioz.Symphonie fantastique Op.14.Symphonie fantastique Op.14 - 5 Songe d'une nuit de Sabbat.wav</key>
+	<dict>
+		<key>artist</key>
+		<string>Berlioz</string>
+		<key>bit_rate</key>
+		<integer>128</integer>
+		<key>genre</key>
+		<string>Classical</string>
+		<key>play_count</key>
+		<integer>0</integer>
+		<key>rating</key>
+		<integer>40</integer>
+		<key>skip_count</key>
+		<integer>0</integer>
+		<key>title</key>
+		<string>Symphonie fantastique Op.14 - 5 Songe d'une nuit de Sabbat</string>
+		<key>year</key>
+		<integer>2016</integer>
+	</dict>
+	<key>cache/2016.Birdman.The Remixes Vol. 1.Money To Blow (E-603 Remix).wav</key>
+	<dict>
+		<key>artist</key>
+		<string>Birdman</string>
+		<key>bit_rate</key>
+		<integer>320</integer>
+		<key>genre</key>
+		<string>Remix</string>
+		<key>play_count</key>
+		<integer>0</integer>
+		<key>rating</key>
+		<integer>20</integer>
+		<key>skip_count</key>
+		<integer>0</integer>
+		<key>title</key>
+		<string>Money To Blow (E-603 Remix)</string>
+		<key>year</key>
+		<integer>2016</integer>
+	</dict>
+	<key>cache/2016.Bizet.Suite 'Carmen' n.1.Suite 'Carmen' n.1 - 1 Prelude (Andante moderato).wav</key>
+	<dict>
+		<key>artist</key>
+		<string>Bizet</string>
+		<key>bit_rate</key>
+		<integer>192</integer>
+		<key>genre</key>
+		<string>Classical</string>
+		<key>play_count</key>
+		<integer>0</integer>
+		<key>rating</key>
+		<integer>40</integer>
+		<key>skip_count</key>
+		<integer>0</integer>
+		<key>title</key>
+		<string>Suite 'Carmen' n.1 - 1 Prelude (Andante moderato)</string>
+		<key>year</key>
+		<integer>2016</integer>
+	</dict>
+	<key>cache/2016.Bizet.Suite 'Carmen' n.1.Suite 'Carmen' n.1 - 4 Segudilla (Allegretto).wav</key>
+	<dict>
+		<key>artist</key>
+		<string>Bizet</string>
+		<key>bit_rate</key>
+		<integer>192</integer>
+		<key>genre</key>
+		<string>Classical</string>
+		<key>play_count</key>
+		<integer>0</integer>
+		<key>rating</key>
+		<integer>40</integer>
+		<key>skip_count</key>
+		<integer>0</integer>
+		<key>title</key>
+		<string>Suite 'Carmen' n.1 - 4 Segudilla (Allegretto)</string>
+		<key>year</key>
+		<integer>2016</integer>
+	</dict>
+	<key>cache/2016.Bizet.Suite 'Carmen' n.1.Suite 'Carmen' n.1 - 6 Les toreadores (Allegro giocoso).wav</key>
+	<dict>
+		<key>artist</key>
+		<string>Bizet</string>
+		<key>bit_rate</key>
+		<integer>192</integer>
+		<key>genre</key>
+		<string>Classical</string>
+		<key>play_count</key>
+		<integer>0</integer>
+		<key>rating</key>
+		<integer>40</integer>
+		<key>skip_count</key>
+		<integer>0</integer>
+		<key>title</key>
+		<string>Suite 'Carmen' n.1 - 6 Les toreadores (Allegro giocoso)</string>
+		<key>year</key>
+		<integer>2016</integer>
+	</dict>
+	<key>cache/2016.Bizet.Suite 'Carmen' n.2.Suite 'Carmen' n.2 - 4 Chanson du toreador (Allegro moderato).wav</key>
+	<dict>
+		<key>artist</key>
+		<string>Bizet</string>
+		<key>bit_rate</key>
+		<integer>192</integer>
+		<key>genre</key>
+		<string>Classical</string>
+		<key>play_count</key>
+		<integer>0</integer>
+		<key>rating</key>
+		<integer>40</integer>
+		<key>skip_count</key>
+		<integer>0</integer>
+		<key>title</key>
+		<string>Suite 'Carmen' n.2 - 4 Chanson du toreador (Allegro moderato)</string>
+		<key>year</key>
+		<integer>2016</integer>
+	</dict>
+	<key>cache/2016.Blue October.Home.We Know Where You Go.wav</key>
+	<dict>
+		<key>artist</key>
+		<string>Blue October</string>
+		<key>bit_rate</key>
+		<integer>320</integer>
+		<key>genre</key>
+		<string>Alternative</string>
+		<key>play_count</key>
+		<integer>3</integer>
+		<key>rating</key>
+		<integer>100</integer>
+		<key>skip_count</key>
+		<integer>0</integer>
+		<key>title</key>
+		<string>We Know Where You Go</string>
+		<key>year</key>
+		<integer>2016</integer>
+	</dict>
+	<key>cache/2016.Borodin.In the steppes of central Asia.In the steppes of central Asia -.wav</key>
+	<dict>
+		<key>artist</key>
+		<string>Borodin</string>
+		<key>bit_rate</key>
+		<integer>320</integer>
+		<key>genre</key>
+		<string>Classical</string>
+		<key>play_count</key>
+		<integer>0</integer>
+		<key>rating</key>
+		<integer>40</integer>
+		<key>skip_count</key>
+		<integer>0</integer>
+		<key>title</key>
+		<string>In the steppes of central Asia -</string>
+		<key>year</key>
+		<integer>2016</integer>
+	</dict>
+	<key>cache/2016.Brahms.Ballade for piano n.1 Op.10 'Edward' in D minor.Ballade for piano n.1 Op.10 'Edward' in D minor - Andante.wav</key>
+	<dict>
+		<key>artist</key>
+		<string>Brahms</string>
+		<key>bit_rate</key>
+		<integer>320</integer>
+		<key>genre</key>
+		<string>Classical</string>
+		<key>play_count</key>
+		<integer>0</integer>
+		<key>rating</key>
+		<integer>40</integer>
+		<key>skip_count</key>
+		<integer>0</integer>
+		<key>title</key>
+		<string>Ballade for piano n.1 Op.10 'Edward' in D minor - Andante</string>
+		<key>year</key>
+		<integer>2016</integer>
+	</dict>
+	<key>cache/2016.Bruckner.Symphony n.4 'Romantic' in Eb.Symphony n.4 'Romantic' in Eb - 1 Ruhig bewegt.wav</key>
+	<dict>
+		<key>artist</key>
+		<string>Bruckner</string>
+		<key>bit_rate</key>
+		<integer>192</integer>
+		<key>genre</key>
+		<string>Classical</string>
+		<key>play_count</key>
+		<integer>0</integer>
+		<key>rating</key>
+		<integer>40</integer>
+		<key>skip_count</key>
+		<integer>0</integer>
+		<key>title</key>
+		<string>Symphony n.4 'Romantic' in Eb - 1 Ruhig bewegt</string>
+		<key>year</key>
+		<integer>2016</integer>
+	</dict>
+	<key>cache/2016.Bruckner.Symphony n.4 'Romantic' in Eb.Symphony n.4 'Romantic' in Eb - 4 Massig bewegt.wav</key>
+	<dict>
+		<key>artist</key>
+		<string>Bruckner</string>
+		<key>bit_rate</key>
+		<integer>192</integer>
+		<key>genre</key>
+		<string>Classical</string>
+		<key>play_count</key>
+		<integer>0</integer>
+		<key>rating</key>
+		<integer>40</integer>
+		<key>skip_count</key>
+		<integer>0</integer>
+		<key>title</key>
+		<string>Symphony n.4 'Romantic' in Eb - 4 Massig bewegt</string>
+		<key>year</key>
+		<integer>2016</integer>
+	</dict>
+	<key>cache/2016.Cameron Stahl.Cameron Stahl.C# Low.wav</key>
+	<dict>
+		<key>artist</key>
+		<string>Cameron Stahl</string>
+		<key>bit_rate</key>
+		<integer>192</integer>
+		<key>genre</key>
+		<string>Acoustic</string>
+		<key>play_count</key>
+		<integer>28</integer>
+		<key>rating</key>
+		<integer>60</integer>
+		<key>skip_count</key>
+		<integer>0</integer>
+		<key>title</key>
+		<string>C# Low</string>
+		<key>year</key>
+		<integer>2016</integer>
+	</dict>
+	<key>cache/2016.Chopin.Concerto for piano and orchestra n.2 Op.21.Concerto for piano and orchestra n.2 Op.21 - 1 Maestoso.wav</key>
+	<dict>
+		<key>artist</key>
+		<string>Chopin</string>
+		<key>bit_rate</key>
+		<integer>128</integer>
+		<key>genre</key>
+		<string>Classical</string>
+		<key>play_count</key>
+		<integer>0</integer>
+		<key>rating</key>
+		<integer>40</integer>
+		<key>skip_count</key>
+		<integer>0</integer>
+		<key>title</key>
+		<string>Concerto for piano and orchestra n.2 Op.21 - 1 Maestoso</string>
+		<key>year</key>
+		<integer>2016</integer>
+	</dict>
+	<key>cache/2016.Corelli.Sonata for violin and continuo n.02 Op.5 in Bb.Sonata for violin and continuo n.02 Op.5 in Bb - 1 Grave.wav</key>
+	<dict>
+		<key>artist</key>
+		<string>Corelli</string>
+		<key>bit_rate</key>
+		<integer>320</integer>
+		<key>genre</key>
+		<string>Classical</string>
+		<key>play_count</key>
+		<integer>0</integer>
+		<key>rating</key>
+		<integer>40</integer>
+		<key>skip_count</key>
+		<integer>0</integer>
+		<key>title</key>
+		<string>Sonata for violin and continuo n.02 Op.5 in Bb - 1 Grave</string>
+		<key>year</key>
+		<integer>2016</integer>
+	</dict>
+	<key>cache/2016.Corelli.Sonata for violin and continuo n.02 Op.5 in Bb.Sonata for violin and continuo n.02 Op.5 in Bb - 2 Allegro.wav</key>
+	<dict>
+		<key>artist</key>
+		<string>Corelli</string>
+		<key>bit_rate</key>
+		<integer>320</integer>
+		<key>genre</key>
+		<string>Classical</string>
+		<key>play_count</key>
+		<integer>0</integer>
+		<key>rating</key>
+		<integer>40</integer>
+		<key>skip_count</key>
+		<integer>0</integer>
+		<key>title</key>
+		<string>Sonata for violin and continuo n.02 Op.5 in Bb - 2 Allegro</string>
+		<key>year</key>
+		<integer>2016</integer>
+	</dict>
+	<key>cache/2016.Corelli.Sonata for violin and continuo n.02 Op.5 in Bb.Sonata for violin and continuo n.02 Op.5 in Bb - 3 Vivace.wav</key>
+	<dict>
+		<key>artist</key>
+		<string>Corelli</string>
+		<key>bit_rate</key>
+		<integer>320</integer>
+		<key>genre</key>
+		<string>Classical</string>
+		<key>play_count</key>
+		<integer>0</integer>
+		<key>rating</key>
+		<integer>40</integer>
+		<key>skip_count</key>
+		<integer>0</integer>
+		<key>title</key>
+		<string>Sonata for violin and continuo n.02 Op.5 in Bb - 3 Vivace</string>
+		<key>year</key>
+		<integer>2016</integer>
+	</dict>
+	<key>cache/2016.Daniel Kim.Pop Danthology.2014.wav</key>
+	<dict>
+		<key>artist</key>
+		<string>Daniel Kim</string>
+		<key>bit_rate</key>
+		<integer>320</integer>
+		<key>genre</key>
+		<string>Mashup</string>
+		<key>play_count</key>
+		<integer>69</integer>
+		<key>rating</key>
+		<integer>100</integer>
+		<key>skip_count</key>
+		<integer>1</integer>
+		<key>title</key>
+		<string>2014</string>
+		<key>year</key>
+		<integer>2016</integer>
+	</dict>
+	<key>cache/2016.Debussy.La Mer.La Mer - 1 De l'aube a midi sur la mer.wav</key>
+	<dict>
+		<key>artist</key>
+		<string>Debussy</string>
+		<key>bit_rate</key>
+		<integer>320</integer>
+		<key>genre</key>
+		<string>Classical</string>
+		<key>play_count</key>
+		<integer>0</integer>
+		<key>rating</key>
+		<integer>40</integer>
+		<key>skip_count</key>
+		<integer>0</integer>
+		<key>title</key>
+		<string>La Mer - 1 De l'aube a midi sur la mer</string>
+		<key>year</key>
+		<integer>2016</integer>
+	</dict>
+	<key>cache/2016.Debussy.La Mer.La Mer - 2 Jeux de vagues.wav</key>
+	<dict>
+		<key>artist</key>
+		<string>Debussy</string>
+		<key>bit_rate</key>
+		<integer>320</integer>
+		<key>genre</key>
+		<string>Classical</string>
+		<key>play_count</key>
+		<integer>0</integer>
+		<key>rating</key>
+		<integer>40</integer>
+		<key>skip_count</key>
+		<integer>0</integer>
+		<key>title</key>
+		<string>La Mer - 2 Jeux de vagues</string>
+		<key>year</key>
+		<integer>2016</integer>
+	</dict>
+	<key>cache/2016.Digitalism.Grey's Intro to Music Mixtape (Made With Love) [Vol.1].Digitalism in Cairo.wav</key>
+	<dict>
+		<key>artist</key>
+		<string>Digitalism</string>
+		<key>bit_rate</key>
+		<integer>256</integer>
+		<key>genre</key>
+		<string>Indie</string>
+		<key>play_count</key>
+		<integer>14</integer>
+		<key>rating</key>
+		<integer>100</integer>
+		<key>skip_count</key>
+		<integer>0</integer>
+		<key>title</key>
+		<string>Digitalism in Cairo</string>
+		<key>year</key>
+		<integer>2016</integer>
+	</dict>
+	<key>cache/2016.Duck House.NOON  179.Your Call.wav</key>
+	<dict>
+		<key>artist</key>
+		<string>Duck House</string>
+		<key>bit_rate</key>
+		<integer>128</integer>
+		<key>genre</key>
+		<string>Indie Electronic</string>
+		<key>play_count</key>
+		<integer>11</integer>
+		<key>rating</key>
+		<integer>80</integer>
+		<key>skip_count</key>
+		<integer>3</integer>
+		<key>title</key>
+		<string>Your Call</string>
+		<key>year</key>
+		<integer>2016</integer>
+	</dict>
+	<key>cache/2016.Dvorak.Concerto for cello and orchestra Op.104 in B minor.Concerto for cello and orchestra Op.104 in B minor - 1 Allegro.wav</key>
+	<dict>
+		<key>artist</key>
+		<string>Dvorak</string>
+		<key>bit_rate</key>
+		<integer>192</integer>
+		<key>genre</key>
+		<string>Classical</string>
+		<key>play_count</key>
+		<integer>0</integer>
+		<key>rating</key>
+		<integer>40</integer>
+		<key>skip_count</key>
+		<integer>0</integer>
+		<key>title</key>
+		<string>Concerto for cello and orchestra Op.104 in B minor - 1 Allegro</string>
+		<key>year</key>
+		<integer>2016</integer>
+	</dict>
+	<key>cache/2016.Four Tet.Randoms.The Reservoir.wav</key>
+	<dict>
+		<key>artist</key>
+		<string>Four Tet</string>
+		<key>bit_rate</key>
+		<integer>320</integer>
+		<key>genre</key>
+		<string>World</string>
+		<key>play_count</key>
+		<integer>1</integer>
+		<key>rating</key>
+		<integer>80</integer>
+		<key>skip_count</key>
+		<integer>0</integer>
+		<key>title</key>
+		<string>The Reservoir</string>
+		<key>year</key>
+		<integer>2016</integer>
+	</dict>
+	<key>cache/2016.Franck.Sonata for violin and piano M.8 in A.Sonata for violin and piano M.8 in A - 2 Allegro.wav</key>
+	<dict>
+		<key>artist</key>
+		<string>Franck</string>
+		<key>bit_rate</key>
+		<integer>224</integer>
+		<key>genre</key>
+		<string>Classical</string>
+		<key>play_count</key>
+		<integer>0</integer>
+		<key>rating</key>
+		<integer>40</integer>
+		<key>skip_count</key>
+		<integer>0</integer>
+		<key>title</key>
+		<string>Sonata for violin and piano M.8 in A - 2 Allegro</string>
+		<key>year</key>
+		<integer>2016</integer>
+	</dict>
+	<key>cache/2016.Franck.Sonata for violin and piano M.8 in A.Sonata for violin and piano M.8 in A - 4 Allegretto poco mosso.wav</key>
+	<dict>
+		<key>artist</key>
+		<string>Franck</string>
+		<key>bit_rate</key>
+		<integer>224</integer>
+		<key>genre</key>
+		<string>Classical</string>
+		<key>play_count</key>
+		<integer>0</integer>
+		<key>rating</key>
+		<integer>40</integer>
+		<key>skip_count</key>
+		<integer>0</integer>
+		<key>title</key>
+		<string>Sonata for violin and piano M.8 in A - 4 Allegretto poco mosso</string>
+		<key>year</key>
+		<integer>2016</integer>
+	</dict>
+	<key>cache/2016.Handel.Music for the royal fireworks.Music for the royal fireworks - 1 Ouverture.wav</key>
+	<dict>
+		<key>artist</key>
+		<string>Handel</string>
+		<key>bit_rate</key>
+		<integer>192</integer>
+		<key>genre</key>
+		<string>Classical</string>
+		<key>play_count</key>
+		<integer>0</integer>
+		<key>rating</key>
+		<integer>40</integer>
+		<key>skip_count</key>
+		<integer>0</integer>
+		<key>title</key>
+		<string>Music for the royal fireworks - 1 Ouverture</string>
+		<key>year</key>
+		<integer>2016</integer>
+	</dict>
+	<key>cache/2016.Handel.Music for the royal fireworks.Music for the royal fireworks - 4 La rejouissance.wav</key>
+	<dict>
+		<key>artist</key>
+		<string>Handel</string>
+		<key>bit_rate</key>
+		<integer>192</integer>
+		<key>genre</key>
+		<string>Classical</string>
+		<key>play_count</key>
+		<integer>0</integer>
+		<key>rating</key>
+		<integer>40</integer>
+		<key>skip_count</key>
+		<integer>0</integer>
+		<key>title</key>
+		<string>Music for the royal fireworks - 4 La rejouissance</string>
+		<key>year</key>
+		<integer>2016</integer>
+	</dict>
+	<key>cache/2016.Haydn.Sonata for piano n.35 H.16.Sonata for piano n.35 H.16-43 in Ab - 2 Menuetto I and II.wav</key>
+	<dict>
+		<key>artist</key>
+		<string>Haydn</string>
+		<key>bit_rate</key>
+		<integer>128</integer>
+		<key>genre</key>
+		<string>Classical</string>
+		<key>play_count</key>
+		<integer>0</integer>
+		<key>rating</key>
+		<integer>40</integer>
+		<key>skip_count</key>
+		<integer>0</integer>
+		<key>title</key>
+		<string>Sonata for piano n.35 H.16-43 in Ab - 2 Menuetto I and II</string>
+		<key>year</key>
+		<integer>2016</integer>
+	</dict>
+	<key>cache/2016.Haydn.Sonata for piano n.48 H.16.Sonata for piano n.48 H.16-35 in C - 3 Finale (Allegro).wav</key>
+	<dict>
+		<key>artist</key>
+		<string>Haydn</string>
+		<key>bit_rate</key>
+		<integer>128</integer>
+		<key>genre</key>
+		<string>Classical</string>
+		<key>play_count</key>
+		<integer>0</integer>
+		<key>rating</key>
+		<integer>40</integer>
+		<key>skip_count</key>
+		<integer>0</integer>
+		<key>title</key>
+		<string>Sonata for piano n.48 H.16-35 in C - 3 Finale (Allegro)</string>
+		<key>year</key>
+		<integer>2016</integer>
+	</dict>
+	<key>cache/2016.Haydn.Sonata for piano n.50 H.16.Sonata for piano n.50 H.16-37 in D - 1 Allegro con brio.wav</key>
+	<dict>
+		<key>artist</key>
+		<string>Haydn</string>
+		<key>bit_rate</key>
+		<integer>128</integer>
+		<key>genre</key>
+		<string>Classical</string>
+		<key>play_count</key>
+		<integer>0</integer>
+		<key>rating</key>
+		<integer>40</integer>
+		<key>skip_count</key>
+		<integer>0</integer>
+		<key>title</key>
+		<string>Sonata for piano n.50 H.16-37 in D - 1 Allegro con brio</string>
+		<key>year</key>
+		<integer>2016</integer>
+	</dict>
+	<key>cache/2016.Holst.The planets Op.32.The planets Op.32 - 1 Mars - Allegro.wav</key>
+	<dict>
+		<key>artist</key>
+		<string>Holst</string>
+		<key>bit_rate</key>
+		<integer>320</integer>
+		<key>genre</key>
+		<string>Classical</string>
+		<key>play_count</key>
+		<integer>0</integer>
+		<key>rating</key>
+		<integer>40</integer>
+		<key>skip_count</key>
+		<integer>0</integer>
+		<key>title</key>
+		<string>The planets Op.32 - 1 Mars - Allegro</string>
+		<key>year</key>
+		<integer>2016</integer>
+	</dict>
+	<key>cache/2016.Holst.The planets Op.32.The planets Op.32 - 3 Mercury - Vivace.wav</key>
+	<dict>
+		<key>artist</key>
+		<string>Holst</string>
+		<key>bit_rate</key>
+		<integer>320</integer>
+		<key>genre</key>
+		<string>Classical</string>
+		<key>play_count</key>
+		<integer>0</integer>
+		<key>rating</key>
+		<integer>40</integer>
+		<key>skip_count</key>
+		<integer>0</integer>
+		<key>title</key>
+		<string>The planets Op.32 - 3 Mercury - Vivace</string>
+		<key>year</key>
+		<integer>2016</integer>
+	</dict>
+	<key>cache/2016.Holst.The planets Op.32.The planets Op.32 - 4 Jupiter - Allegro giocoso-Andante maestoso-Tempo I-Lento maestoso-Presto.wav</key>
+	<dict>
+		<key>artist</key>
+		<string>Holst</string>
+		<key>bit_rate</key>
+		<integer>320</integer>
+		<key>genre</key>
+		<string>Classical</string>
+		<key>play_count</key>
+		<integer>0</integer>
+		<key>rating</key>
+		<integer>40</integer>
+		<key>skip_count</key>
+		<integer>0</integer>
+		<key>title</key>
+		<string>The planets Op.32 - 4 Jupiter - Allegro giocoso-Andante maestoso-Tempo I-Lento maestoso-Presto</string>
+		<key>year</key>
+		<integer>2016</integer>
+	</dict>
+	<key>cache/2016.Holst.The planets Op.32.The planets Op.32 - 6 Uranus - Allegro-Lento-Allegro-Largo.wav</key>
+	<dict>
+		<key>artist</key>
+		<string>Holst</string>
+		<key>bit_rate</key>
+		<integer>320</integer>
+		<key>genre</key>
+		<string>Classical</string>
+		<key>play_count</key>
+		<integer>0</integer>
+		<key>rating</key>
+		<integer>40</integer>
+		<key>skip_count</key>
+		<integer>0</integer>
+		<key>title</key>
+		<string>The planets Op.32 - 6 Uranus - Allegro-Lento-Allegro-Largo</string>
+		<key>year</key>
+		<integer>2016</integer>
+	</dict>
+	<key>cache/2016.KOLIDESCOPES.NOON  193.Memory Lane.wav</key>
+	<dict>
+		<key>artist</key>
+		<string>KOLIDESCOPES</string>
+		<key>bit_rate</key>
+		<integer>128</integer>
+		<key>genre</key>
+		<string>Indie Electronic</string>
+		<key>play_count</key>
+		<integer>21</integer>
+		<key>rating</key>
+		<integer>80</integer>
+		<key>skip_count</key>
+		<integer>1</integer>
+		<key>title</key>
+		<string>Memory Lane</string>
+		<key>year</key>
+		<integer>2016</integer>
+	</dict>
+	<key>cache/2016.Kim Carnes.Mistaken Identity.Betty Davis Eyes.wav</key>
+	<dict>
+		<key>artist</key>
+		<string>Kim Carnes</string>
+		<key>bit_rate</key>
+		<integer>128</integer>
+		<key>genre</key>
+		<string>Rock</string>
+		<key>play_count</key>
+		<integer>110</integer>
+		<key>rating</key>
+		<integer>80</integer>
+		<key>skip_count</key>
+		<integer>1</integer>
+		<key>title</key>
+		<string>Betty Davis Eyes</string>
+		<key>year</key>
+		<integer>2016</integer>
+	</dict>
+	<key>cache/2016.Lane 8.Rise (Remixed).Loving You feat. Lulu James (Moon Boots Remix).wav</key>
+	<dict>
+		<key>artist</key>
+		<string>Lane 8</string>
+		<key>bit_rate</key>
+		<integer>267</integer>
+		<key>genre</key>
+		<string>House</string>
+		<key>play_count</key>
+		<integer>1</integer>
+		<key>rating</key>
+		<integer>60</integer>
+		<key>skip_count</key>
+		<integer>0</integer>
+		<key>title</key>
+		<string>Loving You feat. Lulu James (Moon Boots Remix)</string>
+		<key>year</key>
+		<integer>2016</integer>
+	</dict>
+	<key>cache/2016.Liszt.A Faust Symphony.A Faust Symphony - 1 Faust.wav</key>
+	<dict>
+		<key>artist</key>
+		<string>Liszt</string>
+		<key>bit_rate</key>
+		<integer>320</integer>
+		<key>genre</key>
+		<string>Classical</string>
+		<key>play_count</key>
+		<integer>0</integer>
+		<key>rating</key>
+		<integer>40</integer>
+		<key>skip_count</key>
+		<integer>0</integer>
+		<key>title</key>
+		<string>A Faust Symphony - 1 Faust</string>
+		<key>year</key>
+		<integer>2016</integer>
+	</dict>
+	<key>cache/2016.Liszt.A Faust Symphony.A Faust Symphony - 4 Final chorus.wav</key>
+	<dict>
+		<key>artist</key>
+		<string>Liszt</string>
+		<key>bit_rate</key>
+		<integer>320</integer>
+		<key>genre</key>
+		<string>Classical</string>
+		<key>play_count</key>
+		<integer>0</integer>
+		<key>rating</key>
+		<integer>40</integer>
+		<key>skip_count</key>
+		<integer>0</integer>
+		<key>title</key>
+		<string>A Faust Symphony - 4 Final chorus</string>
+		<key>year</key>
+		<integer>2016</integer>
+	</dict>
+	<key>cache/2016.Mahler.Symphony n.9 in D.Symphony n.9 in D - 1d Mit Wut. Allegro risoluto.wav</key>
+	<dict>
+		<key>artist</key>
+		<string>Mahler</string>
+		<key>bit_rate</key>
+		<integer>320</integer>
+		<key>genre</key>
+		<string>Classical</string>
+		<key>play_count</key>
+		<integer>0</integer>
+		<key>rating</key>
+		<integer>40</integer>
+		<key>skip_count</key>
+		<integer>0</integer>
+		<key>title</key>
+		<string>Symphony n.9 in D - 1d Mit Wut. Allegro risoluto</string>
+		<key>year</key>
+		<integer>2016</integer>
+	</dict>
+	<key>cache/2016.Mahler.Symphony n.9 in D.Symphony n.9 in D - 1e Blechblaser.wav</key>
+	<dict>
+		<key>artist</key>
+		<string>Mahler</string>
+		<key>bit_rate</key>
+		<integer>320</integer>
+		<key>genre</key>
+		<string>Classical</string>
+		<key>play_count</key>
+		<integer>0</integer>
+		<key>rating</key>
+		<integer>40</integer>
+		<key>skip_count</key>
+		<integer>0</integer>
+		<key>title</key>
+		<string>Symphony n.9 in D - 1e Blechblaser</string>
+		<key>year</key>
+		<integer>2016</integer>
+	</dict>
+	<key>cache/2016.Matthew Wilder.I Don't Speak The Language.Break My Stride.wav</key>
+	<dict>
+		<key>artist</key>
+		<string>Matthew Wilder</string>
+		<key>bit_rate</key>
+		<integer>245</integer>
+		<key>genre</key>
+		<string>Pop</string>
+		<key>play_count</key>
+		<integer>0</integer>
+		<key>rating</key>
+		<integer>20</integer>
+		<key>skip_count</key>
+		<integer>0</integer>
+		<key>title</key>
+		<string>Break My Stride</string>
+		<key>year</key>
+		<integer>2016</integer>
+	</dict>
+	<key>cache/2016.Mogwai.Atomic.U-235.wav</key>
+	<dict>
+		<key>artist</key>
+		<string>Mogwai</string>
+		<key>bit_rate</key>
+		<integer>320</integer>
+		<key>genre</key>
+		<string>Post Rock</string>
+		<key>play_count</key>
+		<integer>6</integer>
+		<key>rating</key>
+		<integer>80</integer>
+		<key>skip_count</key>
+		<integer>0</integer>
+		<key>title</key>
+		<string>U-235</string>
+		<key>year</key>
+		<integer>2016</integer>
+	</dict>
+	<key>cache/2016.Mozart.Serenade for 11 winds K.375 in Eb.Serenade for 11 winds K.375 in Eb - 1 Allegro maestoso.wav</key>
+	<dict>
+		<key>artist</key>
+		<string>Mozart</string>
+		<key>bit_rate</key>
+		<integer>320</integer>
+		<key>genre</key>
+		<string>Classical</string>
+		<key>play_count</key>
+		<integer>0</integer>
+		<key>rating</key>
+		<integer>40</integer>
+		<key>skip_count</key>
+		<integer>0</integer>
+		<key>title</key>
+		<string>Serenade for 11 winds K.375 in Eb - 1 Allegro maestoso</string>
+		<key>year</key>
+		<integer>2016</integer>
+	</dict>
+	<key>cache/2016.Mozart.Serenade for 11 winds K.375 in Eb.Serenade for 11 winds K.375 in Eb - 5 Finale (Allegro).wav</key>
+	<dict>
+		<key>artist</key>
+		<string>Mozart</string>
+		<key>bit_rate</key>
+		<integer>320</integer>
+		<key>genre</key>
+		<string>Classical</string>
+		<key>play_count</key>
+		<integer>0</integer>
+		<key>rating</key>
+		<integer>40</integer>
+		<key>skip_count</key>
+		<integer>0</integer>
+		<key>title</key>
+		<string>Serenade for 11 winds K.375 in Eb - 5 Finale (Allegro)</string>
+		<key>year</key>
+		<integer>2016</integer>
+	</dict>
+	<key>cache/2016.Mozart.Symphony n.25 K.183 in G minor.Symphony n.25 K.183 in G minor - 4 Allegro.wav</key>
+	<dict>
+		<key>artist</key>
+		<string>Mozart</string>
+		<key>bit_rate</key>
+		<integer>192</integer>
+		<key>genre</key>
+		<string>Classical</string>
+		<key>play_count</key>
+		<integer>0</integer>
+		<key>rating</key>
+		<integer>40</integer>
+		<key>skip_count</key>
+		<integer>0</integer>
+		<key>title</key>
+		<string>Symphony n.25 K.183 in G minor - 4 Allegro</string>
+		<key>year</key>
+		<integer>2016</integer>
+	</dict>
+	<key>cache/2016.Mumford &amp; Sons.Johannesburg.Ngamila.wav</key>
+	<dict>
+		<key>artist</key>
+		<string>Mumford &amp; Sons</string>
+		<key>bit_rate</key>
+		<integer>320</integer>
+		<key>genre</key>
+		<string>World</string>
+		<key>play_count</key>
+		<integer>1</integer>
+		<key>rating</key>
+		<integer>60</integer>
+		<key>skip_count</key>
+		<integer>0</integer>
+		<key>title</key>
+		<string>Ngamila</string>
+		<key>year</key>
+		<integer>2016</integer>
+	</dict>
+	<key>cache/2016.Mumford &amp; Sons.Johannesburg.Si Tu Veux.wav</key>
+	<dict>
+		<key>artist</key>
+		<string>Mumford &amp; Sons</string>
+		<key>bit_rate</key>
+		<integer>320</integer>
+		<key>genre</key>
+		<string>World</string>
+		<key>play_count</key>
+		<integer>0</integer>
+		<key>rating</key>
+		<integer>60</integer>
+		<key>skip_count</key>
+		<integer>0</integer>
+		<key>title</key>
+		<string>Si Tu Veux</string>
+		<key>year</key>
+		<integer>2016</integer>
+	</dict>
+	<key>cache/2016.Mumford &amp; Sons.Johannesburg.There Will Be Time.wav</key>
+	<dict>
+		<key>artist</key>
+		<string>Mumford &amp; Sons</string>
+		<key>bit_rate</key>
+		<integer>320</integer>
+		<key>genre</key>
+		<string>World</string>
+		<key>play_count</key>
+		<integer>2</integer>
+		<key>rating</key>
+		<integer>80</integer>
+		<key>skip_count</key>
+		<integer>1</integer>
+		<key>title</key>
+		<string>There Will Be Time</string>
+		<key>year</key>
+		<integer>2016</integer>
+	</dict>
+	<key>cache/2016.Mumford &amp; Sons.Johannesburg.Wona.wav</key>
+	<dict>
+		<key>artist</key>
+		<string>Mumford &amp; Sons</string>
+		<key>bit_rate</key>
+		<integer>320</integer>
+		<key>genre</key>
+		<string>World</string>
+		<key>play_count</key>
+		<integer>2</integer>
+		<key>rating</key>
+		<integer>80</integer>
+		<key>skip_count</key>
+		<integer>0</integer>
+		<key>title</key>
+		<string>Wona</string>
+		<key>year</key>
+		<integer>2016</integer>
+	</dict>
+	<key>cache/2016.Mumford &amp; Sons.Sigh No More.Little Lion Man.wav</key>
+	<dict>
+		<key>artist</key>
+		<string>Mumford &amp; Sons</string>
+		<key>bit_rate</key>
+		<integer>128</integer>
+		<key>genre</key>
+		<string>Indie Folk</string>
+		<key>play_count</key>
+		<integer>327</integer>
+		<key>rating</key>
+		<integer>80</integer>
+		<key>skip_count</key>
+		<integer>26</integer>
+		<key>title</key>
+		<string>Little Lion Man</string>
+		<key>year</key>
+		<integer>2016</integer>
+	</dict>
+	<key>cache/2016.Mumford &amp; Sons.Sigh No More.White Blank Page.wav</key>
+	<dict>
+		<key>artist</key>
+		<string>Mumford &amp; Sons</string>
+		<key>bit_rate</key>
+		<integer>320</integer>
+		<key>genre</key>
+		<string>Indie Folk</string>
+		<key>play_count</key>
+		<integer>407</integer>
+		<key>rating</key>
+		<integer>80</integer>
+		<key>skip_count</key>
+		<integer>8</integer>
+		<key>title</key>
+		<string>White Blank Page</string>
+		<key>year</key>
+		<integer>2016</integer>
+	</dict>
+	<key>cache/2016.Murray Gold.Doctor Who.I Am The Doctor (Extended).wav</key>
+	<dict>
+		<key>artist</key>
+		<string>Murray Gold</string>
+		<key>bit_rate</key>
+		<integer>128</integer>
+		<key>genre</key>
+		<string>Score</string>
+		<key>play_count</key>
+		<integer>245</integer>
+		<key>rating</key>
+		<integer>60</integer>
+		<key>skip_count</key>
+		<integer>25</integer>
+		<key>title</key>
+		<string>I Am The Doctor (Extended)</string>
+		<key>year</key>
+		<integer>2016</integer>
+	</dict>
+	<key>cache/2016.OMEA All-State Choir 2012-2013.2013 OMEA.Dubula.wav</key>
+	<dict>
+		<key>artist</key>
+		<string>OMEA All-State Choir 2012-2013</string>
+		<key>bit_rate</key>
+		<integer>256</integer>
+		<key>genre</key>
+		<string>Classical</string>
+		<key>play_count</key>
+		<integer>10</integer>
+		<key>rating</key>
+		<integer>100</integer>
+		<key>skip_count</key>
+		<integer>0</integer>
+		<key>title</key>
+		<string>Dubula</string>
+		<key>year</key>
+		<integer>2016</integer>
+	</dict>
+	<key>cache/2016.OMEA All-State Choir 2012-2013.2013 OMEA.Os Justi.wav</key>
+	<dict>
+		<key>artist</key>
+		<string>OMEA All-State Choir 2012-2013</string>
+		<key>bit_rate</key>
+		<integer>256</integer>
+		<key>genre</key>
+		<string>Classical</string>
+		<key>play_count</key>
+		<integer>7</integer>
+		<key>rating</key>
+		<integer>20</integer>
+		<key>skip_count</key>
+		<integer>0</integer>
+		<key>title</key>
+		<string>Os Justi</string>
+		<key>year</key>
+		<integer>2016</integer>
+	</dict>
+	<key>cache/2016.Orff.Carmina Burana.Carmina Burana - 02 Fortuna Imperatix Mundi - Fortune plango vulnera.wav</key>
+	<dict>
+		<key>artist</key>
+		<string>Orff</string>
+		<key>bit_rate</key>
+		<integer>128</integer>
+		<key>genre</key>
+		<string>Classical</string>
+		<key>play_count</key>
+		<integer>0</integer>
+		<key>rating</key>
+		<integer>40</integer>
+		<key>skip_count</key>
+		<integer>0</integer>
+		<key>title</key>
+		<string>Carmina Burana - 02 Fortuna Imperatix Mundi - Fortune plango vulnera</string>
+		<key>year</key>
+		<integer>2016</integer>
+	</dict>
+	<key>cache/2016.Paganini.Capriccio n .23 Op.1 in Eb (Posato).Capriccio n .23 Op.1 in Eb (Posato).wav</key>
+	<dict>
+		<key>artist</key>
+		<string>Paganini</string>
+		<key>bit_rate</key>
+		<integer>256</integer>
+		<key>genre</key>
+		<string>Classical</string>
+		<key>play_count</key>
+		<integer>0</integer>
+		<key>rating</key>
+		<integer>40</integer>
+		<key>skip_count</key>
+		<integer>0</integer>
+		<key>title</key>
+		<string>Capriccio n .23 Op.1 in Eb (Posato)</string>
+		<key>year</key>
+		<integer>2016</integer>
+	</dict>
+	<key>cache/2016.Pfitzner.Sextet for clarinet, piano and strings Op.55.Sextet for clarinet, piano and strings Op.55 - 1 Allegro con passione.wav</key>
+	<dict>
+		<key>artist</key>
+		<string>Pfitzner</string>
+		<key>bit_rate</key>
+		<integer>85</integer>
+		<key>genre</key>
+		<string>Classical</string>
+		<key>play_count</key>
+		<integer>0</integer>
+		<key>rating</key>
+		<integer>40</integer>
+		<key>skip_count</key>
+		<integer>0</integer>
+		<key>title</key>
+		<string>Sextet for clarinet, piano and strings Op.55 - 1 Allegro con passione</string>
+		<key>year</key>
+		<integer>2016</integer>
+	</dict>
+	<key>cache/2016.Poulenc.Sonata for clarinet and piano.Sonata for clarinet and piano - 1 Allegro tristamente.wav</key>
+	<dict>
+		<key>artist</key>
+		<string>Poulenc</string>
+		<key>bit_rate</key>
+		<integer>320</integer>
+		<key>genre</key>
+		<string>Classical</string>
+		<key>play_count</key>
+		<integer>0</integer>
+		<key>rating</key>
+		<integer>40</integer>
+		<key>skip_count</key>
+		<integer>0</integer>
+		<key>title</key>
+		<string>Sonata for clarinet and piano - 1 Allegro tristamente</string>
+		<key>year</key>
+		<integer>2016</integer>
+	</dict>
+	<key>cache/2016.Poulenc.Sonata for clarinet and piano.Sonata for clarinet and piano - 2 Romanza.wav</key>
+	<dict>
+		<key>artist</key>
+		<string>Poulenc</string>
+		<key>bit_rate</key>
+		<integer>320</integer>
+		<key>genre</key>
+		<string>Classical</string>
+		<key>play_count</key>
+		<integer>0</integer>
+		<key>rating</key>
+		<integer>40</integer>
+		<key>skip_count</key>
+		<integer>0</integer>
+		<key>title</key>
+		<string>Sonata for clarinet and piano - 2 Romanza</string>
+		<key>year</key>
+		<integer>2016</integer>
+	</dict>
+	<key>cache/2016.Prokofiev.Concerto for piano and orchestra n.3 Op.26 in C.Concerto for piano and orchestra n.3 Op.26 in C - 2 Tema con variazioni.wav</key>
+	<dict>
+		<key>artist</key>
+		<string>Prokofiev</string>
+		<key>bit_rate</key>
+		<integer>320</integer>
+		<key>genre</key>
+		<string>Classical</string>
+		<key>play_count</key>
+		<integer>0</integer>
+		<key>rating</key>
+		<integer>40</integer>
+		<key>skip_count</key>
+		<integer>0</integer>
+		<key>title</key>
+		<string>Concerto for piano and orchestra n.3 Op.26 in C - 2 Tema con variazioni</string>
+		<key>year</key>
+		<integer>2016</integer>
+	</dict>
+	<key>cache/2016.Purcell.Sonata for 2 violins, basso and continuo n.02 Z.803 in Eb.Sonata for 2 violins, basso and continuo n.02 Z.803 in Eb - 2 Canzona (Allegro).wav</key>
+	<dict>
+		<key>artist</key>
+		<string>Purcell</string>
+		<key>bit_rate</key>
+		<integer>211</integer>
+		<key>genre</key>
+		<string>Classical</string>
+		<key>play_count</key>
+		<integer>0</integer>
+		<key>rating</key>
+		<integer>40</integer>
+		<key>skip_count</key>
+		<integer>0</integer>
+		<key>title</key>
+		<string>Sonata for 2 violins, basso and continuo n.02 Z.803 in Eb - 2 Canzona (Allegro)</string>
+		<key>year</key>
+		<integer>2016</integer>
+	</dict>
+	<key>cache/2016.Purcell.Sonata for 2 violins, basso and continuo n.02 Z.803 in Eb.Sonata for 2 violins, basso and continuo n.02 Z.803 in Eb - 3 Adagio.wav</key>
+	<dict>
+		<key>artist</key>
+		<string>Purcell</string>
+		<key>bit_rate</key>
+		<integer>212</integer>
+		<key>genre</key>
+		<string>Classical</string>
+		<key>play_count</key>
+		<integer>0</integer>
+		<key>rating</key>
+		<integer>40</integer>
+		<key>skip_count</key>
+		<integer>0</integer>
+		<key>title</key>
+		<string>Sonata for 2 violins, basso and continuo n.02 Z.803 in Eb - 3 Adagio</string>
+		<key>year</key>
+		<integer>2016</integer>
+	</dict>
+	<key>cache/2016.Rebecca McDade.White Square.White Square (Demo).wav</key>
+	<dict>
+		<key>artist</key>
+		<string>Rebecca McDade</string>
+		<key>bit_rate</key>
+		<integer>128</integer>
+		<key>genre</key>
+		<string>Folk</string>
+		<key>play_count</key>
+		<integer>4</integer>
+		<key>rating</key>
+		<integer>100</integer>
+		<key>skip_count</key>
+		<integer>0</integer>
+		<key>title</key>
+		<string>White Square (Demo)</string>
+		<key>year</key>
+		<integer>2016</integer>
+	</dict>
+	<key>cache/2016.Saint Saens.Symphony n.3 'Organ'.Symphony n.3 'Organ' - 2 Poco adagio.wav</key>
+	<dict>
+		<key>artist</key>
+		<string>Saint Saens</string>
+		<key>bit_rate</key>
+		<integer>320</integer>
+		<key>genre</key>
+		<string>Classical</string>
+		<key>play_count</key>
+		<integer>0</integer>
+		<key>rating</key>
+		<integer>40</integer>
+		<key>skip_count</key>
+		<integer>0</integer>
+		<key>title</key>
+		<string>Symphony n.3 'Organ' - 2 Poco adagio</string>
+		<key>year</key>
+		<integer>2016</integer>
+	</dict>
+	<key>cache/2016.Schmitt.Andantino for clarinet and piano n.1 Op.30.Andantino for clarinet and piano n.1 Op.30.wav</key>
+	<dict>
+		<key>artist</key>
+		<string>Schmitt</string>
+		<key>bit_rate</key>
+		<integer>320</integer>
+		<key>genre</key>
+		<string>Classical</string>
+		<key>play_count</key>
+		<integer>0</integer>
+		<key>rating</key>
+		<integer>40</integer>
+		<key>skip_count</key>
+		<integer>0</integer>
+		<key>title</key>
+		<string>Andantino for clarinet and piano n.1 Op.30</string>
+		<key>year</key>
+		<integer>2016</integer>
+	</dict>
+	<key>cache/2016.Schubert.Symphony n.5 D.485 in Bb.Symphony n.5 D.485 in Bb - 2 Andante con moto.wav</key>
+	<dict>
+		<key>artist</key>
+		<string>Schubert</string>
+		<key>bit_rate</key>
+		<integer>320</integer>
+		<key>genre</key>
+		<string>Classical</string>
+		<key>play_count</key>
+		<integer>0</integer>
+		<key>rating</key>
+		<integer>40</integer>
+		<key>skip_count</key>
+		<integer>0</integer>
+		<key>title</key>
+		<string>Symphony n.5 D.485 in Bb - 2 Andante con moto</string>
+		<key>year</key>
+		<integer>2016</integer>
+	</dict>
+	<key>cache/2016.Shostakovich.Symphony n.10 Op.93 in E minor.Symphony n.10 Op.93 in E minor - 1 Moderato.wav</key>
+	<dict>
+		<key>artist</key>
+		<string>Shostakovich</string>
+		<key>bit_rate</key>
+		<integer>320</integer>
+		<key>genre</key>
+		<string>Classical</string>
+		<key>play_count</key>
+		<integer>0</integer>
+		<key>rating</key>
+		<integer>40</integer>
+		<key>skip_count</key>
+		<integer>0</integer>
+		<key>title</key>
+		<string>Symphony n.10 Op.93 in E minor - 1 Moderato</string>
+		<key>year</key>
+		<integer>2016</integer>
+	</dict>
+	<key>cache/2016.Smetana.My Fatherland.My Fatherland - The Moldau.wav</key>
+	<dict>
+		<key>artist</key>
+		<string>Smetana</string>
+		<key>bit_rate</key>
+		<integer>320</integer>
+		<key>genre</key>
+		<string>Classical</string>
+		<key>play_count</key>
+		<integer>0</integer>
+		<key>rating</key>
+		<integer>40</integer>
+		<key>skip_count</key>
+		<integer>0</integer>
+		<key>title</key>
+		<string>My Fatherland - The Moldau</string>
+		<key>year</key>
+		<integer>2016</integer>
+	</dict>
+	<key>cache/2016.Starfucker.Grey's Intro to Music Mixtape (Made With Love) [Vol.1].German Love.wav</key>
+	<dict>
+		<key>artist</key>
+		<string>Starfucker</string>
+		<key>bit_rate</key>
+		<integer>256</integer>
+		<key>genre</key>
+		<string>Indie</string>
+		<key>play_count</key>
+		<integer>12</integer>
+		<key>rating</key>
+		<integer>100</integer>
+		<key>skip_count</key>
+		<integer>0</integer>
+		<key>title</key>
+		<string>German Love</string>
+		<key>year</key>
+		<integer>2016</integer>
+	</dict>
+	<key>cache/2016.Strauss R.Also Sprach Zarathustra Op.30.Also Sprach Zarathustra Op.30 - 2 Von Den Hinterweltlern.wav</key>
+	<dict>
+		<key>artist</key>
+		<string>Strauss R</string>
+		<key>bit_rate</key>
+		<integer>320</integer>
+		<key>genre</key>
+		<string>Classical</string>
+		<key>play_count</key>
+		<integer>0</integer>
+		<key>rating</key>
+		<integer>40</integer>
+		<key>skip_count</key>
+		<integer>0</integer>
+		<key>title</key>
+		<string>Also Sprach Zarathustra Op.30 - 2 Von Den Hinterweltlern</string>
+		<key>year</key>
+		<integer>2016</integer>
+	</dict>
+	<key>cache/2016.Strauss R.Also Sprach Zarathustra Op.30.Also Sprach Zarathustra Op.30 - 6 Von Der Wissenschaft.wav</key>
+	<dict>
+		<key>artist</key>
+		<string>Strauss R</string>
+		<key>bit_rate</key>
+		<integer>320</integer>
+		<key>genre</key>
+		<string>Classical</string>
+		<key>play_count</key>
+		<integer>0</integer>
+		<key>rating</key>
+		<integer>40</integer>
+		<key>skip_count</key>
+		<integer>0</integer>
+		<key>title</key>
+		<string>Also Sprach Zarathustra Op.30 - 6 Von Der Wissenschaft</string>
+		<key>year</key>
+		<integer>2016</integer>
+	</dict>
+	<key>cache/2016.Strauss.Pizzicato.Pizzicato-Polka.wav</key>
+	<dict>
+		<key>artist</key>
+		<string>Strauss</string>
+		<key>bit_rate</key>
+		<integer>128</integer>
+		<key>genre</key>
+		<string>Classical</string>
+		<key>play_count</key>
+		<integer>0</integer>
+		<key>rating</key>
+		<integer>40</integer>
+		<key>skip_count</key>
+		<integer>0</integer>
+		<key>title</key>
+		<string>Pizzicato-Polka</string>
+		<key>year</key>
+		<integer>2016</integer>
+	</dict>
+	<key>cache/2016.Stravinsky.L'oiseau de feu.L'oiseau de feu - 1 Introduction.wav</key>
+	<dict>
+		<key>artist</key>
+		<string>Stravinsky</string>
+		<key>bit_rate</key>
+		<integer>256</integer>
+		<key>genre</key>
+		<string>Classical</string>
+		<key>play_count</key>
+		<integer>0</integer>
+		<key>rating</key>
+		<integer>40</integer>
+		<key>skip_count</key>
+		<integer>0</integer>
+		<key>title</key>
+		<string>L'oiseau de feu - 1 Introduction</string>
+		<key>year</key>
+		<integer>2016</integer>
+	</dict>
+	<key>cache/2016.Sufjan Stevens.Pitchfork Music Festival Mixtape 2016.Impossible Soul.wav</key>
+	<dict>
+		<key>artist</key>
+		<string>Sufjan Stevens</string>
+		<key>bit_rate</key>
+		<integer>192</integer>
+		<key>genre</key>
+		<string>Indie Folk</string>
+		<key>play_count</key>
+		<integer>0</integer>
+		<key>rating</key>
+		<integer>60</integer>
+		<key>skip_count</key>
+		<integer>0</integer>
+		<key>title</key>
+		<string>Impossible Soul</string>
+		<key>year</key>
+		<integer>2016</integer>
+	</dict>
+	<key>cache/2016.Tall Heights.Man of Stone.Controlled Burn.wav</key>
+	<dict>
+		<key>artist</key>
+		<string>Tall Heights</string>
+		<key>bit_rate</key>
+		<integer>1411</integer>
+		<key>genre</key>
+		<string>Indie Folk</string>
+		<key>play_count</key>
+		<integer>49</integer>
+		<key>rating</key>
+		<integer>80</integer>
+		<key>skip_count</key>
+		<integer>3</integer>
+		<key>title</key>
+		<string>Controlled Burn</string>
+		<key>year</key>
+		<integer>2016</integer>
+	</dict>
+	<key>cache/2016.Tall Heights.Man of Stone.Eastern Standard Time.wav</key>
+	<dict>
+		<key>artist</key>
+		<string>Tall Heights</string>
+		<key>bit_rate</key>
+		<integer>1411</integer>
+		<key>genre</key>
+		<string>Indie Folk</string>
+		<key>play_count</key>
+		<integer>1</integer>
+		<key>rating</key>
+		<integer>40</integer>
+		<key>skip_count</key>
+		<integer>1</integer>
+		<key>title</key>
+		<string>Eastern Standard Time</string>
+		<key>year</key>
+		<integer>2016</integer>
+	</dict>
+	<key>cache/2016.Tall Heights.Man of Stone.Field of Snow.wav</key>
+	<dict>
+		<key>artist</key>
+		<string>Tall Heights</string>
+		<key>bit_rate</key>
+		<integer>1411</integer>
+		<key>genre</key>
+		<string>Indie Folk</string>
+		<key>play_count</key>
+		<integer>1</integer>
+		<key>rating</key>
+		<integer>60</integer>
+		<key>skip_count</key>
+		<integer>0</integer>
+		<key>title</key>
+		<string>Field of Snow</string>
+		<key>year</key>
+		<integer>2016</integer>
+	</dict>
+	<key>cache/2016.Tall Heights.Man of Stone.Flash Boom.wav</key>
+	<dict>
+		<key>artist</key>
+		<string>Tall Heights</string>
+		<key>bit_rate</key>
+		<integer>1411</integer>
+		<key>genre</key>
+		<string>Indie Folk</string>
+		<key>play_count</key>
+		<integer>0</integer>
+		<key>rating</key>
+		<integer>40</integer>
+		<key>skip_count</key>
+		<integer>0</integer>
+		<key>title</key>
+		<string>Flash Boom</string>
+		<key>year</key>
+		<integer>2016</integer>
+	</dict>
+	<key>cache/2016.Tall Heights.Man of Stone.Learn Again.wav</key>
+	<dict>
+		<key>artist</key>
+		<string>Tall Heights</string>
+		<key>bit_rate</key>
+		<integer>1411</integer>
+		<key>genre</key>
+		<string>Indie Folk</string>
+		<key>play_count</key>
+		<integer>1</integer>
+		<key>rating</key>
+		<integer>60</integer>
+		<key>skip_count</key>
+		<integer>0</integer>
+		<key>title</key>
+		<string>Learn Again</string>
+		<key>year</key>
+		<integer>2016</integer>
+	</dict>
+	<key>cache/2016.Tall Heights.Man of Stone.Man of Stone.wav</key>
+	<dict>
+		<key>artist</key>
+		<string>Tall Heights</string>
+		<key>bit_rate</key>
+		<integer>1411</integer>
+		<key>genre</key>
+		<string>Indie Folk</string>
+		<key>play_count</key>
+		<integer>6</integer>
+		<key>rating</key>
+		<integer>80</integer>
+		<key>skip_count</key>
+		<integer>0</integer>
+		<key>title</key>
+		<string>Man of Stone</string>
+		<key>year</key>
+		<integer>2016</integer>
+	</dict>
+	<key>cache/2016.Tall Heights.Man of Stone.Murmuring State.wav</key>
+	<dict>
+		<key>artist</key>
+		<string>Tall Heights</string>
+		<key>bit_rate</key>
+		<integer>1411</integer>
+		<key>genre</key>
+		<string>Indie Folk</string>
+		<key>play_count</key>
+		<integer>1</integer>
+		<key>rating</key>
+		<integer>60</integer>
+		<key>skip_count</key>
+		<integer>0</integer>
+		<key>title</key>
+		<string>Murmuring State</string>
+		<key>year</key>
+		<integer>2016</integer>
+	</dict>
+	<key>cache/2016.Tall Heights.Man of Stone.Out of the Ground.wav</key>
+	<dict>
+		<key>artist</key>
+		<string>Tall Heights</string>
+		<key>bit_rate</key>
+		<integer>1411</integer>
+		<key>genre</key>
+		<string>Indie Folk</string>
+		<key>play_count</key>
+		<integer>1</integer>
+		<key>rating</key>
+		<integer>60</integer>
+		<key>skip_count</key>
+		<integer>0</integer>
+		<key>title</key>
+		<string>Out of the Ground</string>
+		<key>year</key>
+		<integer>2016</integer>
+	</dict>
+	<key>cache/2016.Tall Heights.Man of Stone.Somewhere I Believe.wav</key>
+	<dict>
+		<key>artist</key>
+		<string>Tall Heights</string>
+		<key>bit_rate</key>
+		<integer>1411</integer>
+		<key>genre</key>
+		<string>Indie Folk</string>
+		<key>play_count</key>
+		<integer>1</integer>
+		<key>rating</key>
+		<integer>80</integer>
+		<key>skip_count</key>
+		<integer>0</integer>
+		<key>title</key>
+		<string>Somewhere I Believe</string>
+		<key>year</key>
+		<integer>2016</integer>
+	</dict>
+	<key>cache/2016.Tall Heights.Man of Stone.The Running of the Bulls.wav</key>
+	<dict>
+		<key>artist</key>
+		<string>Tall Heights</string>
+		<key>bit_rate</key>
+		<integer>1411</integer>
+		<key>genre</key>
+		<string>Indie Folk</string>
+		<key>play_count</key>
+		<integer>54</integer>
+		<key>rating</key>
+		<integer>80</integer>
+		<key>skip_count</key>
+		<integer>0</integer>
+		<key>title</key>
+		<string>The Running of the Bulls</string>
+		<key>year</key>
+		<integer>2016</integer>
+	</dict>
+	<key>cache/2016.Tall Heights.Rafters.Do Not Resuscitate.wav</key>
+	<dict>
+		<key>artist</key>
+		<string>Tall Heights</string>
+		<key>bit_rate</key>
+		<integer>1411</integer>
+		<key>genre</key>
+		<string>Indie Folk</string>
+		<key>play_count</key>
+		<integer>30</integer>
+		<key>rating</key>
+		<integer>80</integer>
+		<key>skip_count</key>
+		<integer>2</integer>
+		<key>title</key>
+		<string>Do Not Resuscitate</string>
+		<key>year</key>
+		<integer>2016</integer>
+	</dict>
+	<key>cache/2016.Tall Heights.Rafters.Hell and High Water.wav</key>
+	<dict>
+		<key>artist</key>
+		<string>Tall Heights</string>
+		<key>bit_rate</key>
+		<integer>1411</integer>
+		<key>genre</key>
+		<string>Indie Folk</string>
+		<key>play_count</key>
+		<integer>9</integer>
+		<key>rating</key>
+		<integer>60</integer>
+		<key>skip_count</key>
+		<integer>1</integer>
+		<key>title</key>
+		<string>Hell and High Water</string>
+		<key>year</key>
+		<integer>2016</integer>
+	</dict>
+	<key>cache/2016.Tall Heights.Rafters.Rafters.wav</key>
+	<dict>
+		<key>artist</key>
+		<string>Tall Heights</string>
+		<key>bit_rate</key>
+		<integer>1411</integer>
+		<key>genre</key>
+		<string>Indie Folk</string>
+		<key>play_count</key>
+		<integer>1</integer>
+		<key>rating</key>
+		<integer>40</integer>
+		<key>skip_count</key>
+		<integer>2</integer>
+		<key>title</key>
+		<string>Rafters</string>
+		<key>year</key>
+		<integer>2016</integer>
+	</dict>
+	<key>cache/2016.Tall Heights.Rafters.The Hollow.wav</key>
+	<dict>
+		<key>artist</key>
+		<string>Tall Heights</string>
+		<key>bit_rate</key>
+		<integer>1411</integer>
+		<key>genre</key>
+		<string>Indie Folk</string>
+		<key>play_count</key>
+		<integer>3</integer>
+		<key>rating</key>
+		<integer>60</integer>
+		<key>skip_count</key>
+		<integer>0</integer>
+		<key>title</key>
+		<string>The Hollow</string>
+		<key>year</key>
+		<integer>2016</integer>
+	</dict>
+	<key>cache/2016.Tall Heights.Rafters.To Be Young.wav</key>
+	<dict>
+		<key>artist</key>
+		<string>Tall Heights</string>
+		<key>bit_rate</key>
+		<integer>1411</integer>
+		<key>genre</key>
+		<string>Indie Folk</string>
+		<key>play_count</key>
+		<integer>1</integer>
+		<key>rating</key>
+		<integer>80</integer>
+		<key>skip_count</key>
+		<integer>0</integer>
+		<key>title</key>
+		<string>To Be Young</string>
+		<key>year</key>
+		<integer>2016</integer>
+	</dict>
+	<key>cache/2016.Tchaikovsky.Suite Op.71 'The Nutcracker'.Suite Op.71 'The Nutcracker' - 5 Dance arabe. Allegretto.wav</key>
+	<dict>
+		<key>artist</key>
+		<string>Tchaikovsky</string>
+		<key>bit_rate</key>
+		<integer>320</integer>
+		<key>genre</key>
+		<string>Classical</string>
+		<key>play_count</key>
+		<integer>0</integer>
+		<key>rating</key>
+		<integer>40</integer>
+		<key>skip_count</key>
+		<integer>0</integer>
+		<key>title</key>
+		<string>Suite Op.71 'The Nutcracker' - 5 Dance arabe. Allegretto</string>
+		<key>year</key>
+		<integer>2016</integer>
+	</dict>
+	<key>cache/2016.Tchaikovsky.Suite Op.71 'The Nutcracker'.Suite Op.71 'The Nutcracker' - 7 Dance des mitlitons. Moderato assai.wav</key>
+	<dict>
+		<key>artist</key>
+		<string>Tchaikovsky</string>
+		<key>bit_rate</key>
+		<integer>320</integer>
+		<key>genre</key>
+		<string>Classical</string>
+		<key>play_count</key>
+		<integer>0</integer>
+		<key>rating</key>
+		<integer>40</integer>
+		<key>skip_count</key>
+		<integer>0</integer>
+		<key>title</key>
+		<string>Suite Op.71 'The Nutcracker' - 7 Dance des mitlitons. Moderato assai</string>
+		<key>year</key>
+		<integer>2016</integer>
+	</dict>
+	<key>cache/2016.The Dunwells.Light Up The Sky.She Whispers.wav</key>
+	<dict>
+		<key>artist</key>
+		<string>The Dunwells</string>
+		<key>bit_rate</key>
+		<integer>320</integer>
+		<key>genre</key>
+		<string>Indie Rock</string>
+		<key>play_count</key>
+		<integer>3</integer>
+		<key>rating</key>
+		<integer>80</integer>
+		<key>skip_count</key>
+		<integer>0</integer>
+		<key>title</key>
+		<string>She Whispers</string>
+		<key>year</key>
+		<integer>2016</integer>
+	</dict>
+	<key>cache/2016.The Hotelier.Home, Like Noplace Is There.Among The Wildflowers.wav</key>
+	<dict>
+		<key>artist</key>
+		<string>The Hotelier</string>
+		<key>bit_rate</key>
+		<integer>128</integer>
+		<key>genre</key>
+		<string>Indie Rock</string>
+		<key>play_count</key>
+		<integer>0</integer>
+		<key>rating</key>
+		<integer>40</integer>
+		<key>skip_count</key>
+		<integer>1</integer>
+		<key>title</key>
+		<string>Among The Wildflowers</string>
+		<key>year</key>
+		<integer>2016</integer>
+	</dict>
+	<key>cache/2016.The Paper Kites.Woodland.Bloom.wav</key>
+	<dict>
+		<key>artist</key>
+		<string>The Paper Kites</string>
+		<key>bit_rate</key>
+		<integer>192</integer>
+		<key>genre</key>
+		<string>Folk</string>
+		<key>play_count</key>
+		<integer>1</integer>
+		<key>rating</key>
+		<integer>60</integer>
+		<key>skip_count</key>
+		<integer>0</integer>
+		<key>title</key>
+		<string>Bloom</string>
+		<key>year</key>
+		<integer>2016</integer>
+	</dict>
+	<key>cache/2016.Wagner.Tannhauser WWV 70.Tannhauser WWV 70 - Bacchanale (Venusberg).wav</key>
+	<dict>
+		<key>artist</key>
+		<string>Wagner</string>
+		<key>bit_rate</key>
+		<integer>320</integer>
+		<key>genre</key>
+		<string>Classical</string>
+		<key>play_count</key>
+		<integer>0</integer>
+		<key>rating</key>
+		<integer>40</integer>
+		<key>skip_count</key>
+		<integer>0</integer>
+		<key>title</key>
+		<string>Tannhauser WWV 70 - Bacchanale (Venusberg)</string>
+		<key>year</key>
+		<integer>2016</integer>
+	</dict>
+	<key>cache/2016.Woodkid.Desierto (Original Motion Picture Score).Flare Gun.wav</key>
+	<dict>
+		<key>artist</key>
+		<string>Woodkid</string>
+		<key>bit_rate</key>
+		<integer>320</integer>
+		<key>genre</key>
+		<string>Soundtrack</string>
+		<key>play_count</key>
+		<integer>3</integer>
+		<key>rating</key>
+		<integer>80</integer>
+		<key>skip_count</key>
+		<integer>0</integer>
+		<key>title</key>
+		<string>Flare Gun</string>
+		<key>year</key>
+		<integer>2016</integer>
+	</dict>
+	<key>cache/2016.XYLØ.America.BLK CLD.wav</key>
+	<dict>
+		<key>artist</key>
+		<string>XYLØ</string>
+		<key>bit_rate</key>
+		<integer>192</integer>
+		<key>genre</key>
+		<string>Alternative</string>
+		<key>play_count</key>
+		<integer>5</integer>
+		<key>rating</key>
+		<integer>80</integer>
+		<key>skip_count</key>
+		<integer>0</integer>
+		<key>title</key>
+		<string>BLK CLD</string>
+		<key>year</key>
+		<integer>2016</integer>
+	</dict>
+</dict>
+</plist>
