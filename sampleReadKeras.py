@@ -19,8 +19,8 @@ log_level = 2 							# 0: silent, 1: errors only, 2: normal, 3: verbose
 ## Neural Network settings
 batch_size = 16
 epoch_count = 50
-data_point_count = 100 					# number of data points to use for training; set to 0 for 'all'
-evaluation_data_point_count = 10 		# number of data points to evaluate against; set to 0 for 'all'
+data_point_count = 0 					# number of data points to use for training; set to 0 for 'all'
+evaluation_data_point_count = 0 		# number of data points to evaluate against; set to 0 for 'all'
 evaluation_split = 0.75 				# amount of dataset to use for training - in [0,1]. Default 0.75
 shuffle_at_epoch = True 				# shuffle the dataset at each epoch?
 NN_validation_split = 0.1 				# fraction of data to be held out as validation data, 0.<x<1
