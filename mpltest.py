@@ -12,7 +12,7 @@ X = np.linspace(0, 1, 32, endpoint=True)
 
 # Generate fake data
 art = np.random.uniform(low=0.0, high=0.5, size=(1,32))
-pop_feed = np.random.uniform(low=0.0, high=0.5, size=(1,32))
+pop_feed = np.random.uniform(low=0.1, high=0.6, size=(1,32))
 pop = []
 random.shuffle(pop_feed[0])
 for num in range(len(pop_feed)):
