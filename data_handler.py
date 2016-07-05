@@ -40,14 +40,17 @@ def get_next_sample_information(database_file="data/database.json"):
 		i += 1
 
 def convert_kind(kind):
+	out = []
 	if kind == "drum":
-		return [0, 1, 0, 0]
+		out= [0, 1, 0, 0]
 	elif kind == "guitar":
-		return [0, 0, 1, 0]
+		out= [0, 0, 1, 0]
 	elif kind == "vocal":
-		return [0, 0, 0, 1]
+		out= [0, 0, 0, 1]
 	else:
-		return [1, 0, 0, 0]
+		out= [1, 0, 0, 0]
+	output = np.asarray(out).reshape(1,4)
+	return output
 
 def feed_samples(window_length=1*44100, database_file="data/database.json"):
 	i = 0
@@ -59,6 +62,7 @@ def feed_samples(window_length=1*44100, database_file="data/database.json"):
 			try:
 				shaped_sample = samples[i].reshape(2,window_length)
 				shaped_sample = shaped_sample[1]
+				shaped_sample = shaped_sample.reshape(1,window_length)
 			except:
 				shaped_sample = samples[i].reshape(1,window_length)
 			yield (shaped_sample, convert_kind(kind))

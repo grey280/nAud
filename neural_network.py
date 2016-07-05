@@ -85,6 +85,7 @@ test_results = []
 print("Testing generator output")
 sampletest, kindtest = next(data_handler.feed_samples())
 print(sampletest)
+print("Shape: {}".format(sampletest.shape))
 print(kindtest)
 
 for i in range(tests_in_series):
