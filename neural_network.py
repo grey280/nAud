@@ -83,8 +83,7 @@ def save_weights(model, iteration, path=test_series_name):
 test_results = []
 
 print("Testing generator output")
-print(data_handler.get_next_sample_information())
-sampletest, kindtest = data_handler.feed_samples()
+sampletest, kindtest = next(data_handler.feed_samples())
 print(sampletest)
 print(kindtest)
 
