@@ -22,16 +22,17 @@ def get_sample(sample, kind, window_length=1*44100):
 	kind_arr = np.full(read.shape, kind)
 	return read, kind_arr
 
-t1 = ["song1", "guitar"]
-t2 = ["song2", "voice"]
-t3 = ["song3", "drum"]
-t4 = ["song4", "other"]
-testarr = [t1, t2, t3, t4]
+testdict = {
+	"song1": "guitar",
+	"song2": "voice",
+	"song3": "drum",
+	"song4": "other"
+}
 # outfile = open("test.txt", "w")
 # for i in testarr:
 # 	outfile.write("{}|{}\n".format(i[0], i[1]))
 with open("data.txt", "w") as outfile:
-	json.dump(testarr, outfile)
+	json.dump(testdict, outfile, sort_keys=True, indent=4, separators=(',',': '))
 
 foo = []
 
