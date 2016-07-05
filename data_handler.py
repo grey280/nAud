@@ -22,15 +22,28 @@ def get_sample(sample, kind, window_length=1*44100):
 	return read, kind_arr
 
 def get_next_sample_information(database_file="data/database.json"):
+	db = {}
 	with open(database_file) as raw_db:
 		db = json.load(raw_db)
-		samples_feed, kind_feed = [], []
-		for samples, kind in db.items():
-			samples_feed.append(samples)
-			kind_feed.append(kind)
-		i = 0
-		while true:
-			if i >= len(samples_feed):
-				i = 0
-			yield samples_feed[i], kind_feed[i]
-			i += 1
+	name_feed, kind_feed = [], []
+	for name, kind in db.items():
+		name_feed.append(name)
+		kind_feed.append(kind)
+	i = 0
+	while true:
+		if i >= len(name_feed):
+			i = 0
+		yield name_feed[i], kind_feed[i]
+		i += 1
+
+def feed_samples(window_length=1*44100, database_file="data/database.json"):
+	i = 0
+	samples = []
+	kind = ""
+	name = ""
+	while true:
+		try: # yield the next one out of the current array
+			yield samples[i], kind
+		except: # ran out of current array, get a new one
+			name, kind = get_next_sample_information(database_file=database_file)
+			samples = get_sample(name, kind, window_length=window_length)
