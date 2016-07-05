@@ -55,8 +55,13 @@ def feed_samples(window_length=1*44100, database_file="data/database.json"):
 	kind = ""
 	name = ""
 	while True:
-		try: # yield the next one out of the current array
-			yield (samples[i], convert_kind(kind))
+		try: # yield the next one out of the current array #.reshape((1,window_length))
+			try:
+				shaped_sample = samples[i].reshape(2,window_length)
+				shaped_sample = shaped_sample[1]
+			except:
+				shaped_sample = samples[i].reshape(1,window_length)
+			yield (shaped_sample, convert_kind(kind))
 		except GeneratorExit:
 			break
 		except: # ran out of current array, get a new one
