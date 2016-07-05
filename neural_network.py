@@ -97,7 +97,7 @@ for i in range(tests_in_series):
 		model.add(Dense(64, init='uniform'))
 		model.add(Activation('tanh'))
 		model.add(Dropout(0.5))
-		model.add(Dense(data_set.output_count, init='uniform'))
+		model.add(Dense(4, init='uniform'))
 		model.add(Activation('softmax'))
 
 		sgd = SGD(lr=0.01, decay=1e-6, momentum=0.9, nesterov=True)

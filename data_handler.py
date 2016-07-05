@@ -36,6 +36,16 @@ def get_next_sample_information(database_file="data/database.json"):
 		yield name_feed[i], kind_feed[i]
 		i += 1
 
+def convert_kind(kind):
+	if kind == "drum":
+		return [0, 1, 0, 0]
+	elif kind == "guitar":
+		return [0, 0, 1, 0]
+	elif kind == "vocal":
+		return [0, 0, 0, 1]
+	else:
+		return [1, 0, 0, 0]
+
 def feed_samples(window_length=1*44100, database_file="data/database.json"):
 	i = 0
 	samples = []
@@ -43,7 +53,7 @@ def feed_samples(window_length=1*44100, database_file="data/database.json"):
 	name = ""
 	while true:
 		try: # yield the next one out of the current array
-			yield samples[i], kind
+			yield samples[i], convert_kind(kind)
 		except: # ran out of current array, get a new one
 			name, kind = get_next_sample_information(database_file=database_file)
 			samples = get_sample(name, kind, window_length=window_length)
