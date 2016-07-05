@@ -9,6 +9,9 @@ def read_sample(sample, window_length=1*44100):
 	num_samples = len(samples)
 	out_array = []
 	for i in range(int(num_samples/(window_length*2))):
-		temp = samples[i*window_length:(i+1)*window_length]
+		try:
+			temp = samples[i*window_length:(i+1)*window_length]
+		except:
+			pass
 		out_array.append(temp)
 	return out_array
