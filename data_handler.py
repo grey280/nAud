@@ -30,10 +30,10 @@ def get_next_sample_information(database_file="data/database.json"):
 		name_feed.append(name)
 		kind_feed.append(kind)
 	i = 0
-	while true:
+	while True:
 		if i >= len(name_feed):
 			i = 0
-		yield name_feed[i], kind_feed[i]
+		yield (name_feed[i], kind_feed[i])
 		i += 1
 
 def convert_kind(kind):
@@ -51,9 +51,9 @@ def feed_samples(window_length=1*44100, database_file="data/database.json"):
 	samples = []
 	kind = ""
 	name = ""
-	while true:
+	while True:
 		try: # yield the next one out of the current array
-			yield samples[i], convert_kind(kind)
+			yield (samples[i], convert_kind(kind))
 		except: # ran out of current array, get a new one
-			name, kind = get_next_sample_information(database_file=database_file)
+			name, kind = next(get_next_sample_information(database_file=database_file))
 			samples = get_sample(name, kind, window_length=window_length)

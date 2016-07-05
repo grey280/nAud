@@ -82,6 +82,12 @@ def save_weights(model, iteration, path=test_series_name):
 # Multi-iteration crossing
 test_results = []
 
+print("Testing generator output")
+print(data_handler.get_next_sample_information())
+sampletest, kindtest = data_handler.feed_samples()
+print(sampletest)
+print(kindtest)
+
 for i in range(tests_in_series):
 	d.debug("Test {} of {}".format(i+1, tests_in_series))
 
@@ -116,7 +122,6 @@ for i in range(tests_in_series):
 			d.debug("Weights loaded.")
 	# Training
 	if do_train:
-		del information_feed
 		if d.debug_level == 3:
 			NN_log_level = 2
 		elif d.debug_level == 2:
