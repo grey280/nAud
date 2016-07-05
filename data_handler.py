@@ -61,4 +61,5 @@ def feed_samples(window_length=1*44100, database_file="data/database.json"):
 			break
 		except: # ran out of current array, get a new one
 			name, kind = next(get_next_sample_information(database_file=database_file))
-			samples = get_sample(name, kind, window_length=window_length)
+			samples, kinds = get_sample(name, kind, window_length=window_length)
+			del kinds
