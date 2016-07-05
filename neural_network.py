@@ -82,12 +82,6 @@ def save_weights(model, iteration, path=test_series_name):
 # Multi-iteration crossing
 test_results = []
 
-print("Testing generator output")
-sampletest, kindtest = next(data_handler.feed_samples())
-print(sampletest)
-print("Shape: {}".format(sampletest.shape))
-print(kindtest)
-
 for i in range(tests_in_series):
 	d.debug("Test {} of {}".format(i+1, tests_in_series))
 
@@ -133,7 +127,7 @@ for i in range(tests_in_series):
 		early_stopping = EarlyStopping(monitor='val_loss', patience=early_stopping_patience)
 
 		# model.fit(data_feed, answer_feed, nb_epoch=epoch_count, batch_size=batch_size, shuffle=shuffle_at_epoch, validation_split=NN_validation_split, verbose=NN_log_level, callbacks=[early_stopping, change_lr])
-		model.fit_generator(data_handler.feed_samples(), samples_per_epoch=16, nb_epoch=epoch_count, verbose=NN_log_level, callbacks=[early_stopping, change_lr], validation_data=data_handler.feed_samples(), nb_val_samples=evaluation_data_point_count)
+		model.fit_generator(data_handler.feed_samples(), samples_per_epoch=data_point_count, nb_epoch=epoch_count, verbose=NN_log_level, callbacks=[early_stopping, change_lr], validation_data=data_handler.feed_samples(), nb_val_samples=evaluation_data_point_count)
 		d.debug("Fit complete. Preparing to test.")
 
 	# Evaluate against test data
