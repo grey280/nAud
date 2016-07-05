@@ -3,7 +3,7 @@ import scipy.io.wavfile 		as wav
 import numpy					as np
 import random
 
-def handle(sample, window_length=1*44100):
+def read_sample(sample, window_length=1*44100):
 	read_in = wav.read(sample)
 	samples = read_in[1]
 	num_samples = len(samples)
