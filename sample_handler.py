@@ -8,7 +8,7 @@ def read_sample(sample, window_length=1*44100):
 	samples = read_in[1]
 	num_samples = len(samples)
 	out_array = []
-	for i in range(int(num_samples/window_length)):
+	for i in range(int(num_samples/(window_length*2))):
 		temp = samples[i*window_length:(i+1)*window_length]
 		out_array.append(temp)
 	return out_array
