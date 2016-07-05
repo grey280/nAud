@@ -15,3 +15,8 @@ def read_sample(sample, window_length=1*44100):
 			pass
 		out_array.append(temp)
 	return out_array
+
+def get_sample(sample, kind, window_length=1*44100):
+	read = read_sample("cache/{}/{}.wav".format(kind, sample), window_length)
+	kind_arr = np.full(read.shape, kind)
+	return read, kind_arr
