@@ -24,13 +24,13 @@ def get_sample(sample, kind, window_length=1*44100):
 def get_next_sample_information(database_file="data/database.json"):
 	with open(database_file) as raw_db:
 		db = json.load(raw_db)
-		key_feed, value_feed = [], []
-		for key, value in db.items():
-			key_feed.append(key)
-			value_feed.append(value)
+		samples_feed, kind_feed = [], []
+		for samples, kind in db.items():
+			samples_feed.append(samples)
+			kind_feed.append(kind)
 		i = 0
 		while true:
-			if i >= len(key_feed):
+			if i >= len(samples_feed):
 				i = 0
-			yield key_feed[i], value_feed[i]
+			yield samples_feed[i], kind_feed[i]
 			i += 1
