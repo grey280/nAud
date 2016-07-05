@@ -1,6 +1,6 @@
 import json
 
-working_file = "database.json"
+working_file = "data/database.json"
 # Song format: "file_name": "kind"
 # 	example provided
 songs_to_add={
