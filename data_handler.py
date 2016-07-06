@@ -31,8 +31,13 @@ def get_next_sample_information(database_file=database_file_default):
 	with open(database_file) as raw_db:
 		db = json.load(raw_db)
 	while True:
-		for name, kind in db.items():
-			yield name, kind
+		try:
+			for name, kind in db.items():
+				print("  name: {}, kind: {}".format(name, kind))
+				yield name, kind
+		except GeneratorExit:
+			print("generatorExit")
+			break
 	# global counter
 	# db = {}
 	# with open(database_file) as raw_db:
@@ -85,6 +90,7 @@ def feed_single_samples(window_length=window_length_default, database_file=datab
 	samples = []
 	kind = ""
 	name = ""
+	sample_generator = get_next_sample_information(database_file=database_file)
 	while True:
 		i += 1
 		try: # yield the next one out of the current array #.reshape((1,window_length))
@@ -98,7 +104,7 @@ def feed_single_samples(window_length=window_length_default, database_file=datab
 		except GeneratorExit:
 			break
 		except: # ran out of current array, get a new one
-			name, kind = next(get_next_sample_information(database_file=database_file))
+			name, kind = next(sample_generator)
 			samples, kinds = get_sample(name, kind, window_length=window_length)
 			del kinds
 
