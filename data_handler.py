@@ -73,14 +73,18 @@ def feed_single_samples(window_length=1*44100, database_file="data/database.json
 			samples, kinds = get_sample(name, kind, window_length=window_length)
 			del kinds
 
-def feed_samples(window_length=1*44100, database_file="data/database.json"):
+def feed_samples(window_length=1*44100, database_file="data/database.json", samples_in_parallel=4):
+	if samples_in_parallel > 4:
+		samples_in_parallel = 4
+	if samples_in_parallel < 1:
+		samples_in_parallel = 1
 	j = 0
 	i = [0, 0, 0, 0]
 	samples = [[], [], [], []]
 	kind = ["", "", "", ""]
 	name = ["", "", "", ""]
 	while True:
-		j = (j+1)%4 # select which sample group to use
+		j = (j+1)%samples_in_parallel # select which sample group to use
 		try: # yield the next one out of the current array. .reshape((1,window_length))
 			try:
 				shaped_sample = samples[j][i].reshape(2,window_length)
