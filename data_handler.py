@@ -52,7 +52,7 @@ def convert_kind(kind):
 	output = np.asarray(out).reshape(1,4)
 	return output
 
-def feed_samples(window_length=1*44100, database_file="data/database.json"):
+def feed_single_samples(window_length=1*44100, database_file="data/database.json"):
 	i = 0
 	samples = []
 	kind = ""
@@ -72,3 +72,27 @@ def feed_samples(window_length=1*44100, database_file="data/database.json"):
 			name, kind = next(get_next_sample_information(database_file=database_file))
 			samples, kinds = get_sample(name, kind, window_length=window_length)
 			del kinds
+
+def feed_samples(window_length=1*44100, database_file="data/database.json"):
+	j = 0
+	i = [0, 0, 0, 0]
+	samples = [[], [], [], []]
+	kind = []
+	name = []
+	while True:
+		j = (j+1)%4 # select which sample group to use
+		try: # yield the next one out of the current array. .reshape((1,window_length))
+			try:
+				shaped_sample = samples[j][i].reshape(2,window_length)
+				shaped_sample = shaped_sample[1]
+				shaped_sample = shaped_sample.reshape(1,window_length)
+			except: 
+				shaped_sample = samples[j][i].reshape(1,window_length)
+			yield (shaped_sample, convert_kind(kind[j]))
+		except GeneratorExit:
+			break
+		except: # ran out of current array, get a new one
+			name[j], kind[j] = next(get_sample_information(database_file=database_file))
+			samples[j], kinds = get_sample(name[j], kind[j], window_length=window_length)
+			del kinds
+
