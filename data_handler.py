@@ -112,7 +112,6 @@ def feed_samples(window_length=window_length_default, database_file=database_fil
 				shaped_sample = shaped_sample.reshape(1,window_length)
 			except: 
 				shaped_sample = samples[j][i[j]].reshape(1,window_length)
-			print("kind: {}".format(kind[j]))
 			yield (shaped_sample, convert_kind(kind[j]))
 		except GeneratorExit:
 			break
