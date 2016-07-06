@@ -10,8 +10,6 @@ def read_sample(sample, window_length=window_length_default):
 	read_in = wav.read(sample)
 	samples = read_in[1]
 	num_samples = len(samples)
-	print("read_sample: Number of samples: {}".format(num_samples))
-	print("read_sample: Calculated number of windows: {}".format(int(num_samples/(window_length/2))))
 	out_array = []
 	for i in range(int(num_samples/(window_length/2))): # double, so we get the half-second overlap
 		try:
@@ -112,7 +110,6 @@ def get_samples_from_file(file_to_read, window_length=window_length_default):
 	i = 0
 	samples = []
 	samples = read_sample(file_to_read, window_length=window_length)
-	print("Reading file {}, got {} samples.".format(file_to_read,len(samples)))
 	out_samples = []
 	for sample in samples:
 		try:

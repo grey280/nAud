@@ -55,14 +55,14 @@ d.debug("Neural network loaded.")
 test_data = data_handler.get_samples_from_file(file_to_read)
 results = []
 for sample in test_data:
-	score = model.predict(sample, batch_size=1)
+	score = model.predict_proba(sample, batch_size=1) # using predict_proba for now, but predict yields a similar result with the same inputs.
+	# could also switch for predict_classes, which would say "2" instead of "[0, 0, 1, 0]", if that's what you want
 	results.append(score)
 
 print("Analyzed {} samples, yielding {} results.".format(len(test_data),len(results)))
 
 for result in results:
-	pass
-	# print(result)
+	print(result)
 
 # Evaluate against test data
 # test_data, test_answers, test_info_feed = data_set.next_test_batch(evaluation_data_point_count)
