@@ -89,25 +89,15 @@ def feed_samples(window_length=1*44100, database_file="data/database.json", samp
 		i[j] += 1
 		try: # yield the next one out of the current array. .reshape((1,window_length))
 			try:
-				print("  try reshape")
 				shaped_sample = samples[j][i[j]].reshape(2,window_length)
-				print("  first reshape")
 				shaped_sample = shaped_sample[1]
-				print("  second reshape")
 				shaped_sample = shaped_sample.reshape(1,window_length)
-				print("  third reshape")
 			except: 
-				print("Inner exception triggered: feed_samples couldn't reshape")
-				# print(samples)
 				shaped_sample = samples[j][i[j]].reshape(1,window_length)
-				print("  reshaped from exception")
-			print("generator yielding, line 97")
 			yield (shaped_sample, convert_kind(kind[j]))
 		except GeneratorExit:
-			print("GeneratorExit exception triggered")
 			break
 		except IndexError: # ran out of current array, get a new one
-			print("Outer exception triggered: feed_samples ran out of current array")
 			name[j], kind[j] = next(get_next_sample_information(database_file=database_file))
 			samples[j], kinds = get_sample(name[j], kind[j], window_length=window_length)
 			del kinds
