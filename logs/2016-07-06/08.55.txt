@@ -1,0 +1,73 @@
+gpatt11-1:nAud greypatterson$ python neural_network.py 
+Using Theano backend.
+Test 1 of 1
+Model and SGD prepared.
+Epoch 1/50
+/Users/greypatterson/anaconda3/lib/python3.5/site-packages/scipy/io/wavfile.py:221: WavFileWarning: Chunk (non-data) not understood, skipping it.
+  WavFileWarning)
+500/500 [==============================] - 58s - loss: 7.2733 - acc: 0.5200 - val_loss: 6.5906 - val_acc: 0.5600
+Epoch 2/50
+500/500 [==============================] - 54s - loss: 5.5358 - acc: 0.6260 - val_loss: 2.8960 - val_acc: 0.7700
+Epoch 3/50
+500/500 [==============================] - 67s - loss: 4.8053 - acc: 0.6820 - val_loss: 1.5486 - val_acc: 0.9000
+Epoch 4/50
+500/500 [==============================] - 84s - loss: 3.1564 - acc: 0.7920 - val_loss: 1.6582 - val_acc: 0.8800
+Epoch 5/50
+500/500 [==============================] - 97s - loss: 2.6399 - acc: 0.8180 - val_loss: 0.7270 - val_acc: 0.9200
+Epoch 6/50
+500/500 [==============================] - 97s - loss: 1.6365 - acc: 0.8840 - val_loss: 0.6447 - val_acc: 0.9600
+Epoch 7/50
+500/500 [==============================] - 94s - loss: 0.9581 - acc: 0.9260 - val_loss: 1.1921e-07 - val_acc: 1.0000
+Epoch 8/50
+500/500 [==============================] - 97s - loss: 0.8346 - acc: 0.9400 - val_loss: 0.0097 - val_acc: 1.0000
+Epoch 9/50
+500/500 [==============================] - 100s - loss: 0.2554 - acc: 0.9780 - val_loss: 1.1921e-07 - val_acc: 1.0000
+Epoch 10/50
+500/500 [==============================] - 100s - loss: 0.1977 - acc: 0.9840 - val_loss: 1.1921e-07 - val_acc: 1.0000
+Epoch 11/50
+500/500 [==============================] - 104s - loss: 0.1007 - acc: 0.9920 - val_loss: 1.1921e-07 - val_acc: 1.0000
+Fit complete. Preparing to test.
+Finished writing model to disk.
+Finished writing weights to disk.
+gpatt11-1:nAud greypatterson$ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
