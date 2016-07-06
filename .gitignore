@@ -9,3 +9,5 @@ tempdump1.npy
 ~$Comparison 2.xlsx
 ~$Comparison.xlsx
 original_data.plist
+.DS_store
+*.pyc
