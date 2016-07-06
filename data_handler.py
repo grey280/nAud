@@ -3,10 +3,7 @@ import scipy.io.wavfile 		as wav
 import numpy					as np
 import json
 
-window_length_default = 1*44100
-database_file_default = "data/database.json"
-
-def read_sample(sample, window_length=window_length_default):
+def read_sample(sample, window_length=1*44100):
 	read_in = wav.read(sample)
 	samples = read_in[1]
 	num_samples = len(samples)
@@ -19,12 +16,12 @@ def read_sample(sample, window_length=window_length_default):
 		out_array.append(temp)
 	return out_array
 
-def get_sample(sample, kind, window_length=window_length_default):
+def get_sample(sample, kind, window_length=1*44100):
 	read = read_sample("cache/{}/{}.wav".format(kind, sample), window_length)
 	kind_arr = [kind for x in range(len(read))]
 	return read, kind_arr
 
-def get_next_sample_information(database_file=database_file_default):
+def get_next_sample_information(database_file="data/database.json"):
 	db = {}
 	with open(database_file) as raw_db:
 		db = json.load(raw_db)
@@ -55,7 +52,7 @@ def convert_kind(kind):
 	output = np.asarray(out).reshape(1,4)
 	return output
 
-def feed_single_samples(window_length=window_length_default, database_file=database_file_default):
+def feed_single_samples(window_length=1*44100, database_file="data/database.json"):
 	i = 0
 	samples = []
 	kind = ""
@@ -77,7 +74,7 @@ def feed_single_samples(window_length=window_length_default, database_file=datab
 			samples, kinds = get_sample(name, kind, window_length=window_length)
 			del kinds
 
-def feed_samples(window_length=window_length_default, database_file=database_file_default, samples_in_parallel=4):
+def feed_samples(window_length=1*44100, database_file="data/database.json", samples_in_parallel=4):
 	if samples_in_parallel > 4:
 		samples_in_parallel = 4
 	if samples_in_parallel < 1:
@@ -106,7 +103,7 @@ def feed_samples(window_length=window_length_default, database_file=database_fil
 			i[j] = 0
 			del kinds
 
-def feed_samples_from_file(window_length=window_length_default, file_to_read):
+def feed_samples_from_file(window_length=1*44100, file_to_read):
 	i = 0
 	samples = []
 	kind = ""
