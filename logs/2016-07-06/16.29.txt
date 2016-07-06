@@ -1,0 +1,82 @@
+tf_ubuntu@titan:~/Documents/grey/nAud$ python train_neural_network.py 
+Using TensorFlow backend.
+Test 1 of 3
+Model and SGD prepared.
+Epoch 1/50
+/usr/lib/python2.7/dist-packages/scipy/io/wavfile.py:172: WavFileWarning: Chunk (non-data) not understood, skipping it.
+  WavFileWarning)
+/usr/lib/python2.7/dist-packages/scipy/io/wavfile.py:42: WavFileWarning: Unknown wave file format
+  warnings.warn("Unknown wave file format", WavFileWarning)
+1500/1500 [==============================] - 294s - loss: 10.3128 - acc: 0.3360 - val_loss: 10.1445 - val_acc: 0.3620
+Epoch 2/50
+1500/1500 [==============================] - 297s - loss: 10.0638 - acc: 0.3667 - val_loss: 10.0335 - val_acc: 0.3740
+Epoch 3/50
+1381/1500 [==========================>...] - ETA: 22s - loss: 10.0411 - acc: 0.3650al   
+1500/1500 [==============================] - 298s - loss: 9.9710 - acc: 0.3693 - val_loss: 10.3775 - val_acc: 0.3480
+Epoch 4/50
+1500/1500 [==============================] - 300s - loss: 11.0256 - acc: 0.3060 - val_loss: 10.0236 - val_acc: 0.3700
+Epoch 5/50
+1500/1500 [==============================] - 298s - loss: 9.4781 - acc: 0.4027 - val_loss: 10.4856 - val_acc: 0.3380
+Epoch 6/50
+1500/1500 [==============================] - 300s - loss: 10.2702 - acc: 0.3520 - val_loss: 10.2491 - val_acc: 0.3580
+Epoch 7/50
+1500/1500 [==============================] - 299s - loss: 10.4840 - acc: 0.3427 - val_loss: 9.7500 - val_acc: 0.3840
+Epoch 8/50
+1500/1500 [==============================] - 301s - loss: 10.2518 - acc: 0.3573 - val_loss: 9.9493 - val_acc: 0.3740
+Epoch 9/50
+1500/1500 [==============================] - 302s - loss: 10.4603 - acc: 0.3433 - val_loss: 9.9126 - val_acc: 0.3760
+Epoch 10/50
+1500/1500 [==============================] - 302s - loss: 10.1060 - acc: 0.3627 - val_loss: 10.0073 - val_acc: 0.3760
+Epoch 11/50
+1500/1500 [==============================] - 301s - loss: 10.6353 - acc: 0.3313 - val_loss: 9.8282 - val_acc: 0.3820
+Fit complete. Preparing to test.
+   Test skipped - code not written. Oh well.
+Finished writing model to disk.
+Finished writing weights to disk.
+Test 2 of 3
+Model and SGD prepared.
+Epoch 1/50
+1500/1500 [==============================] - 296s - loss: 10.0885 - acc: 0.3480 - val_loss: 10.7614 - val_acc: 0.3180
+Epoch 2/50
+1500/1500 [==============================] - 299s - loss: 10.3334 - acc: 0.3400 - val_loss: 10.3485 - val_acc: 0.3500
+Epoch 3/50
+1500/1500 [==============================] - 302s - loss: 10.8954 - acc: 0.3153 - val_loss: 10.7692 - val_acc: 0.3160
+Epoch 4/50
+1500/1500 [==============================] - 300s - loss: 10.6837 - acc: 0.3287 - val_loss: 10.8204 - val_acc: 0.3140
+Epoch 5/50
+1500/1500 [==============================] - 300s - loss: 10.6313 - acc: 0.3313 - val_loss: 11.1412 - val_acc: 0.2940
+Epoch 6/50
+1500/1500 [==============================] - 300s - loss: 10.7157 - acc: 0.3260 - val_loss: 10.3934 - val_acc: 0.3440
+Fit complete. Preparing to test.
+   Test skipped - code not written. Oh well.
+Finished writing model to disk.
+Finished writing weights to disk.
+Test 3 of 3
+Model and SGD prepared.
+Epoch 1/50
+1500/1500 [==============================] - 293s - loss: 10.4972 - acc: 0.3200 - val_loss: 10.4100 - val_acc: 0.3420
+Epoch 2/50
+1500/1500 [==============================] - 296s - loss: 10.1900 - acc: 0.3560 - val_loss: 9.7737 - val_acc: 0.3760
+Epoch 3/50
+1500/1500 [==============================] - 298s - loss: 10.6292 - acc: 0.3320 - val_loss: 10.5117 - val_acc: 0.3300
+Epoch 4/50
+1500/1500 [==============================] - 298s - loss: 10.9786 - acc: 0.3073 - val_loss: 10.4465 - val_acc: 0.3480
+Epoch 5/50
+1500/1500 [==============================] - 299s - loss: 10.2031 - acc: 0.3573 - val_loss: 10.8011 - val_acc: 0.3240
+Epoch 6/50
+1500/1500 [==============================] - 298s - loss: 10.2029 - acc: 0.3587 - val_loss: 10.0259 - val_acc: 0.3680
+Fit complete. Preparing to test.
+   Test skipped - code not written. Oh well.
+Finished writing model to disk.
+Finished writing weights to disk.
+tf_ubuntu@titan:~/Documents/grey/nAud$ sla
+No command 'sla' found, did you mean:
+ Command 'sa' from package 'acct' (main)
+ Command 'slc' from package 'heimdal-multidev' (main)
+ Command 'sma' from package 'sma' (universe)
+ Command 'sea' from package 'alliance' (universe)
+ Command 'tla' from package 'tla' (universe)
+ Command 'sl' from package 'sl' (universe)
+ Command 'slay' from package 'slay' (universe)
+sla: command not found
+tf_ubuntu@titan:~/Documents/grey/nAud$ 
