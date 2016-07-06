@@ -55,6 +55,18 @@ def convert_kind(kind):
 	output = np.asarray(out).reshape(1,4)
 	return output
 
+def deconvert_kind(kind):
+	out = ""
+	if kind[0] == 1:
+		out = "other"
+	elif kind[1] == 1:
+		out = "drum"
+	elif kind[2] == 1:
+		out = "guitar"
+	elif kind[3] == 1:
+		out = "vocal"
+	return out
+
 def feed_single_samples(window_length=window_length_default, database_file=database_file_default):
 	i = 0
 	samples = []

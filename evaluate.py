@@ -16,7 +16,9 @@ log_level = 2 					# 0: silent, 1: errors only, 2: normal, 3: verbose
 ## IO settings
 test_series_name = "INS3"		# name of the test series - files are saved as test_series_name.iteration.json/hdf5
 window_size = 1*44100 			# size of windows to feed
-file_to_read = "cache/test/LizNelson_Rainfall_MIX.wav" # path to wav file to read
+# file_to_read = "cache/test/LizNelson_Rainfall_MIX.wav" # path to wav file to read
+# file_to_read = "cache/vocal/LizNelson_Rainfall_STEM_01.wav" #alternate: all vocal
+file_to_read = "cache/guitar/LizNelson_Rainfall_STEM_04.wav" #alternate: all guitar
 
 ## Operational settings
 do_load_model = False
@@ -62,10 +64,10 @@ for sample in test_data:
 	# could also switch for predict_classes, which would say "2" instead of "[0, 0, 1, 0]", if that's what you want
 	results.append(score)
 
-print("Analyzed {} samples, yielding {} results.".format(len(test_data),len(results)))
+d.debug("Analyzed {} samples, yielding {} results.".format(len(test_data),len(results)))
 
 for result in results:
-	print(result)
+	d.debug("{} -> {}".format(result, data_handler.deconvert_kind(result[0])))
 
 # Evaluate against test data
 # test_data, test_answers, test_info_feed = data_set.next_test_batch(evaluation_data_point_count)
