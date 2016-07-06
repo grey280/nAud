@@ -11,28 +11,28 @@ import data_handler
 
 # Settings
 ## Debug Settings
-log_level = 2 						# 0: silent, 1: errors only, 2: normal, 3: verbose
+log_level = 2 					# 0: silent, 1: errors only, 2: normal, 3: verbose
 
 ## Neural Network settings
 batch_size = 16
 epoch_count = 50
-data_point_count = 500 				# number of data points to use for training
+data_point_count = 500 			# number of data points to use for training
 evaluation_data_point_count = 100 	# number of data points to evaluate against
-shuffle_at_epoch = True 			# shuffle the dataset at each epoch?
-NN_validation_split = 0.1 			# fraction of data to be held out as validation data, 0.<x<1
-early_stopping_patience = 3 		# how many epochs without improvement it'll go before stopping
+shuffle_at_epoch = True 		# shuffle the dataset at each epoch?
+NN_validation_split = 0.1 		# fraction of data to be held out as validation data, 0.<x<1
+early_stopping_patience = 3 	# how many epochs without improvement it'll go before stopping
 
 ## IO settings
-test_series_name = "default"		# name of the test series - files are saved as test_series_name.iteration.json/hdf5
-tests_in_series = 1 				# number of tests to run in this series
-window_size = 1*44100 				# size of windows to feed
-samples_in_parallel = 2 			# number of files to be reading in parallel. (1<=n<=4)
+test_series_name = "INS1"		# name of the test series - files are saved as test_series_name.iteration.json/hdf5
+tests_in_series = 1 			# number of tests to run in this series
+window_size = 1*44100 			# size of windows to feed
+samples_in_parallel = 2 		# number of files to be reading in parallel. (1<=n<=4)
 
 ## Operational settings
 do_load_model = False
 do_load_weights = False
 load_from_previous_trial = False
-trial_iteration = 0 				# Which iteration of the trial series are you on? Used to load/save. Starts at 0.
+trial_iteration = 0 			# Which iteration of the trial series are you on? Used to load/save. Starts at 0.
 do_train = True
 do_save = True
 
