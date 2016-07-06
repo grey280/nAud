@@ -27,38 +27,22 @@ def get_sample(sample, kind, window_length=window_length_default):
 	return read, kind_arr
 
 def get_next_sample_information(database_file=database_file_default):
+	global counter # I hate that I need this but python calls GeneratorExit like there's no tomorrow so
 	db = {}
 	with open(database_file) as raw_db:
 		db = json.load(raw_db)
+	name_feed, kind_feed = [], []
+	for name, kind in db.items():
+		name_feed.append(name)
+		kind_feed.append(kind)
 	while True:
+		counter = (counter+1)%len(name_feed)
+		# print("Counter: {}".format(counter))
 		try:
-			for name, kind in db.items():
-				print("  name: {}, kind: {}".format(name, kind))
-				yield name, kind
+			# print(" name: {}, kind: {}".format(name_feed[counter],kind_feed[counter]))
+			yield (name_feed[counter], kind_feed[counter])
 		except GeneratorExit:
-			print("generatorExit")
 			break
-	# global counter
-	# db = {}
-	# with open(database_file) as raw_db:
-	# 	db = json.load(raw_db)
-	# name_feed, kind_feed = [], []
-	# for name, kind in db.items():
-	# 	name_feed.append(name)
-	# 	kind_feed.append(kind)
-	# # i = 0
-	# i = counter
-	# while True:
-	# 	if i+1 >= len(name_feed):
-	# 		i = 0
-	# 		counter = 0
-	# 	try:
-	# 		i+=1
-	# 		counter+=1
-	# 		print(" name: {}, kind: {}".format(name_feed[i],kind_feed[i]))
-	# 		yield (name_feed[i], kind_feed[i])
-	# 	except GeneratorExit:
-	# 		break
 
 def convert_kind(kind):
 	out = []
