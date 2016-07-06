@@ -6,6 +6,8 @@ import json
 window_length_default = 1*44100
 database_file_default = "data/database.json"
 
+counter = 0
+
 def read_sample(sample, window_length=window_length_default):
 	read_in = wav.read(sample)
 	samples = read_in[1]
@@ -28,19 +30,30 @@ def get_next_sample_information(database_file=database_file_default):
 	db = {}
 	with open(database_file) as raw_db:
 		db = json.load(raw_db)
-	name_feed, kind_feed = [], []
-	for name, kind in db.items():
-		name_feed.append(name)
-		kind_feed.append(kind)
-	i = 0
 	while True:
-		if i >= len(name_feed):
-			i = 0
-		try:
-			yield (name_feed[i], kind_feed[i])
-		except GeneratorExit:
-			break
-		i += 1
+		for name, kind in db.items():
+			yield name, kind
+	# global counter
+	# db = {}
+	# with open(database_file) as raw_db:
+	# 	db = json.load(raw_db)
+	# name_feed, kind_feed = [], []
+	# for name, kind in db.items():
+	# 	name_feed.append(name)
+	# 	kind_feed.append(kind)
+	# # i = 0
+	# i = counter
+	# while True:
+	# 	if i+1 >= len(name_feed):
+	# 		i = 0
+	# 		counter = 0
+	# 	try:
+	# 		i+=1
+	# 		counter+=1
+	# 		print(" name: {}, kind: {}".format(name_feed[i],kind_feed[i]))
+	# 		yield (name_feed[i], kind_feed[i])
+	# 	except GeneratorExit:
+	# 		break
 
 def convert_kind(kind):
 	out = []
@@ -109,6 +122,7 @@ def feed_samples(window_length=window_length_default, database_file=database_fil
 				shaped_sample = shaped_sample.reshape(1,window_length)
 			except: 
 				shaped_sample = samples[j][i[j]].reshape(1,window_length)
+			print("kind: {}".format(kind[j]))
 			yield (shaped_sample, convert_kind(kind[j]))
 		except GeneratorExit:
 			break
