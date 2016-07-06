@@ -23,10 +23,10 @@ NN_validation_split = 0.1 		# fraction of data to be held out as validation data
 early_stopping_patience = 3 	# how many epochs without improvement it'll go before stopping
 
 ## IO settings
-test_series_name = "INS1"		# name of the test series - files are saved as test_series_name.iteration.json/hdf5
-tests_in_series = 1 			# number of tests to run in this series
+test_series_name = "INS2"		# name of the test series - files are saved as test_series_name.iteration.json/hdf5
+tests_in_series = 3 			# number of tests to run in this series
 window_size = 1*44100 			# size of windows to feed
-samples_in_parallel = 2 		# number of files to be reading in parallel. (1<=n<=4)
+samples_in_parallel = 3 		# number of files to be reading in parallel. (1<=n<=4)
 
 ## Operational settings
 do_load_model = False
@@ -130,6 +130,7 @@ for i in range(tests_in_series):
 		# model.fit(data_feed, answer_feed, nb_epoch=epoch_count, batch_size=batch_size, shuffle=shuffle_at_epoch, validation_split=NN_validation_split, verbose=NN_log_level, callbacks=[early_stopping, change_lr])
 		model.fit_generator(data_handler.feed_samples(window_length=window_size, samples_in_parallel=samples_in_parallel), samples_per_epoch=data_point_count, nb_epoch=epoch_count, verbose=NN_log_level, callbacks=[early_stopping, change_lr], validation_data=data_handler.feed_samples(window_length=window_size, samples_in_parallel=samples_in_parallel), nb_val_samples=evaluation_data_point_count)
 		d.debug("Fit complete. Preparing to test.")
+		d.debug("   Test skipped - code not written. Oh well.")
 
 	# Evaluate against test data
 	# test_data, test_answers, test_info_feed = data_set.next_test_batch(evaluation_data_point_count)
