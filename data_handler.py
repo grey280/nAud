@@ -97,8 +97,9 @@ def feed_samples(window_length=1*44100, database_file="data/database.json", samp
 			yield (shaped_sample, convert_kind(kind[j]))
 		except GeneratorExit:
 			break
-		except IndexError: # ran out of current array, get a new one
+		except: # ran out of current array, get a new one
 			name[j], kind[j] = next(get_next_sample_information(database_file=database_file))
 			samples[j], kinds = get_sample(name[j], kind[j], window_length=window_length)
+			i[j] = 0
 			del kinds
 
