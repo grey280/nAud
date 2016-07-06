@@ -10,8 +10,10 @@ def read_sample(sample, window_length=window_length_default):
 	read_in = wav.read(sample)
 	samples = read_in[1]
 	num_samples = len(samples)
+	print("read_sample: Number of samples: {}".format(num_samples))
+	print("read_sample: Calculated number of windows: {}".format(int(num_samples/(window_length/2))))
 	out_array = []
-	for i in range(int(num_samples/(window_length*2))):
+	for i in range(int(num_samples/(window_length/2))): # double, so we get the half-second overlap
 		try:
 			temp = samples[i*window_length:(i+1)*window_length]
 		except:
@@ -106,23 +108,18 @@ def feed_samples(window_length=window_length_default, database_file=database_fil
 			i[j] = 0
 			del kinds
 
-def feed_samples_from_file(file_to_read, window_length=window_length_default):
+def get_samples_from_file(file_to_read, window_length=window_length_default):
 	i = 0
 	samples = []
-	kind = ""
-	name = ""
 	samples = read_sample(file_to_read, window_length=window_length)
-	while True:
-		i += 1
-		try: # yield the next one out of the current array #.reshape((1,window_length))
-			try:
-				shaped_sample = samples[i].reshape(2,window_length)
-				shaped_sample = shaped_sample[1]
-				shaped_sample = shaped_sample.reshape(1,window_length)
-			except:
-				shaped_sample = samples[i].reshape(1,window_length)
-			yield (shaped_sample, convert_kind(kind))
-		except GeneratorExit:
-			break
-		except: # ran out of current array, we're done
-			break
+	print("Reading file {}, got {} samples.".format(file_to_read,len(samples)))
+	out_samples = []
+	for sample in samples:
+		try:
+			shaped_sample = samples[i].reshape(2,window_length)
+			shaped_sample = shaped_sample[1]
+			shaped_sample = shaped_sample.reshape(1,window_length)
+		except:
+			shaped_sample = samples[i].reshape(1,window_length)
+		out_samples.append(shaped_sample)
+	return out_samples
