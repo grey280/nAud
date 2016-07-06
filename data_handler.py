@@ -106,7 +106,7 @@ def feed_samples(window_length=window_length_default, database_file=database_fil
 			i[j] = 0
 			del kinds
 
-def feed_samples_from_file(window_length=window_length_default, file_to_read):
+def feed_samples_from_file(file_to_read, window_length=window_length_default):
 	i = 0
 	samples = []
 	kind = ""
