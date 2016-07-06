@@ -77,8 +77,8 @@ def feed_samples(window_length=1*44100, database_file="data/database.json"):
 	j = 0
 	i = [0, 0, 0, 0]
 	samples = [[], [], [], []]
-	kind = []
-	name = []
+	kind = ["", "", "", ""]
+	name = ["", "", "", ""]
 	while True:
 		j = (j+1)%4 # select which sample group to use
 		try: # yield the next one out of the current array. .reshape((1,window_length))
@@ -92,7 +92,7 @@ def feed_samples(window_length=1*44100, database_file="data/database.json"):
 		except GeneratorExit:
 			break
 		except: # ran out of current array, get a new one
-			name[j], kind[j] = next(get_sample_information(database_file=database_file))
+			name[j], kind[j] = next(get_next_sample_information(database_file=database_file))
 			samples[j], kinds = get_sample(name[j], kind[j], window_length=window_length)
 			del kinds
 
