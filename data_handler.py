@@ -103,3 +103,23 @@ def feed_samples(window_length=1*44100, database_file="data/database.json", samp
 			i[j] = 0
 			del kinds
 
+def feed_samples_from_file(window_length=1*44100, file_to_read):
+	i = 0
+	samples = []
+	kind = ""
+	name = ""
+	samples = read_sample(file_to_read, window_length=window_length)
+	while True:
+		i += 1
+		try: # yield the next one out of the current array #.reshape((1,window_length))
+			try:
+				shaped_sample = samples[i].reshape(2,window_length)
+				shaped_sample = shaped_sample[1]
+				shaped_sample = shaped_sample.reshape(1,window_length)
+			except:
+				shaped_sample = samples[i].reshape(1,window_length)
+			yield (shaped_sample, convert_kind(kind))
+		except GeneratorExit:
+			break
+		except: # ran out of current array, we're done
+			break

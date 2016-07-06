@@ -49,13 +49,10 @@ sgd = SGD(lr=0.1, decay=1e-6, momentum=0.9, nesterov=True)
 model.compile(loss='categorical_crossentropy', optimizer=sgd, metrics=['accuracy'])
 load_weights(iteration=i)
 d.debug("Neural network loaded.")
-	# Evaluate against test data
-	# test_data, test_answers, test_info_feed = data_set.next_test_batch(evaluation_data_point_count)
-	# del test_info_feed
-	# score = model.evaluate(test_data, test_answers, batch_size=batch_size)
-	# result = "\nTest {} of {} complete. Loss: {}. Accuracy: {}%".format(i+1, tests_in_series, score[0], score[1]*100)
-	# test_results.append(result)
-	# d.debug(result)
-
-# for result in test_results:
-# 	d.debug(result)
+# Evaluate against test data
+# test_data, test_answers, test_info_feed = data_set.next_test_batch(evaluation_data_point_count)
+# del test_info_feed
+# score = model.evaluate(test_data, test_answers, batch_size=batch_size)
+# result = "\nTest {} of {} complete. Loss: {}. Accuracy: {}%".format(i+1, tests_in_series, score[0], score[1]*100)
+# test_results.append(result)
+# d.debug(result)
