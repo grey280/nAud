@@ -1,3 +1,4 @@
+@import 'https://fonts.googleapis.com/css?family=Inconsolata';
 html, body{
 	margin:0;
 	color:#2e3436;
@@ -28,6 +29,11 @@ span{
 .mir{
 	background-color:#ad7fa8;
 	color:#eeeeec;
+}
+.code{
+	background-color:#888a85;
+	color:#eeeeec;
+	font-family:"Inconsolata", monospace;
 }
 
 a:link, a:visited, a:active{

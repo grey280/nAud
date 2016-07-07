@@ -2,12 +2,18 @@
 <html>
 <head>
 	<link rel="stylesheet" type="text/css" href="../styles/global.css">
-	<title>Introduction</title>
+	<title>Input</title>
 	<style type="text/css">
 		
 	</style>
 </head>
 <body>
-<p>So if we put some content here with a <span class="neuralnet">nested neural network</span> reference, how does it look?</p>
+<p><span class="neuralnet">Neural networks</span> are basically algorithms: they have inputs and outputs, and do something to the input to yield the output.</p>
+<p>For audio processing, this input can be either <span class="mir">audio samples</span> or <span class="mir">Fast Fourier Transform data</span>. We elected to use raw audio samples throughout.</p>
+<p>The inputs, then, are <span class="mir">windows</span> of a fixed length, meaning that a fixed number of samples are being fed in.</p>
+<p>The samples are read in from .wav files by <span class="code">scipy.io.wavfile</span>, and look something like this:</p>
+<span class="code">0 821  1643  2461  3278  4092 4901 5705 6507 7294 8086 8859 9630 10389 11137 11876 12605 13314 14021 14702 15380 16036 16678 17304 17912 18502 19078 19629 20167 20679 21174 21651 22099 22535 22939 23329 23689 24033 24345 24642 24907 25152 25372 25564 25736 25878 25996 26092 26153 26202 26212 26206 26168 26106 26022 25905 25774 25600 25423 25201 24967 24703 24414 24108 23767 23416 23026 22632 ...</span>
+<p>And so on for quite a while - there's 44,100 of those numbers per second.</p>
+<p>That's a <em>lot</em> of numbers, which is where the windows come in - by picking one window, processing it, then moving forward a bit, using that as your new window, processing that, and then repeating, you can process a lot of audio.</p>
 </body>
 </html>
