@@ -1,23 +1,8 @@
 html, body{
-	padding:0;
+	padding:5px;
 	margin:0;
 	color:#2e3436;
 	font-family:Avenir;
-}
-table{
-	position:absolute;
-	width:100%;
-	height:100%;
-	border:none;
-}
-table tr{
-	height:25%;
-	width:100%;
-}
-table tr td{
-	width:25%;
-	text-align:center;
-	font-size:1em;
 }
 .poster{
 	background-color:#888a85;
