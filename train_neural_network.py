@@ -24,7 +24,7 @@ early_stopping_patience = 3 	# how many epochs without improvement it'll go befo
 
 ## IO settings
 test_series_name = "INS6"		# name of the test series - files are saved as test_series_name.iteration.json/hdf5
-tests_in_series = 1 			# number of tests to run in this series
+tests_in_series = 3 			# number of tests to run in this series
 window_size = 1*44100 			# size of windows to feed
 samples_in_parallel = 3 		# number of files to be reading in parallel. (1<=n<=4)
 
