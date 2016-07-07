@@ -1,0 +1,29 @@
+html, body{
+	padding:5px;
+	margin:0;
+	color:#2e3436;
+	font-family:Avenir;
+}
+.poster{
+	background-color:#babdb6;
+}
+.neuralnet{
+	background-color:#8ae234;
+}
+.genreID{
+	background-color:#729fcf;
+}
+.instID{
+	background-color:#fcaf3e;
+}
+a:link, a:visited, a:active{
+	color:#2e3436;
+	text-decoration: none;
+	border-bottom: 3px solid transparent;
+	padding-bottom:0px;
+	-webkit-transition:border-color .25s ease-in-out;
+	transition:border-color .25s ease-in-out;
+}
+a:link:hover, a:link:focus{
+	border-color:#2e3436;
+}
