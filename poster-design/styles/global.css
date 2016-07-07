@@ -1,8 +1,13 @@
 html, body{
-	padding:5px;
 	margin:0;
 	color:#2e3436;
 	font-family:Avenir;
+	font-size:1.1em;
+	padding:15px;
+}
+
+span{
+	padding:2.5px;
 }
 .poster{
 	background-color:#babdb6;
@@ -17,8 +22,10 @@ html, body{
 	background-color:#fcaf3e;
 }
 .mir{
-	
+	background-color:#ad7fa8;
+	color:#eeeeec;
 }
+
 a:link, a:visited, a:active{
 	color:#2e3436;
 	text-decoration: none;
