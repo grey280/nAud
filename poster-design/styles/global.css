@@ -12,6 +12,10 @@ span{
 .poster{
 	background-color:#babdb6;
 }
+.poster .poster, .neuralnet .neuralnet, .genreID .genreID, .instID .instID, .mir .mir{
+	background-color:white;
+	color:#2e3436;
+}
 .neuralnet{
 	background-color:#8ae234;
 }
