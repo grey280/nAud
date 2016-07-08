@@ -2,26 +2,31 @@
 <html>
 <head>
 <style type="text/css">
-iframe{
-	position:fixed;
-	top:0%;
-	left:0%;
-	width:25%;
-	border:none;
-}
-#meta{
-	height:75%;
-}
-#nav{
-	top:75%;
-	height:25%;
-}
-#display{
-	left:25%;
-	width:75%;
-	height:100%;
-}
+	iframe{
+		position:fixed;
+		top:0%;
+		left:0%;
+		width:25%;
+		border:none;
+	}
+	#meta{
+		height:75%;
+	}
+	#nav{
+		top:75%;
+		height:25%;
+	}
+	#display{
+		left:25%;
+		width:75%;
+		height:100%;
+	}
 </style>
+<script type="text/javascript">
+	function goTo(page){
+		document.getElementById('display').src=page;
+	}
+</script>
 <title>Poster</title>
 </head>
 <body>
