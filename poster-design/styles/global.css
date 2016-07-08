@@ -79,6 +79,10 @@ p.caption{
 	font-size:0.85em;
 	padding:0px 10%;
 }
+pre{
+	margin: 3px 3.5%;
+	line-height:1em;
+}
 
 /* Links */
 a:link, a:visited, a:active{
