@@ -8,10 +8,12 @@
 	</style>
 </head>
 <body>
-<p>The output of the <span class="neuralnet">neural network</span> can take a few different forms, depending on what you want.</p>
-<p>There's the <span class="neuralnet">categorization</span>, which will taken an input and give you the number of the category it's in, so <span class="code">nn.evaluate([0, 821, 1643, 2461, 3278, 4092, 4901,...])</span> would return <span class="code">2</span>, where 2 is the category ID for 'art.'</p>
-<p>Or you can use a <span class="neuralnet">softmax</span> layer, which will instead give you the neural network's probabilities for <em>all</em> of the categories.</p>
-<p><span class="code">nn.evaluate([0, 821, 1643, 2461, 3278, 4092, 4901,...])</span> would then give you <span class="code">[0.05, 0.11, 0.75, 0.08]</span>. Both tell you the same thing - it's probably category 2 - but with the softmax layer you can see how sure of the decision the neural network is.</p>
-<p>Because of this additional information, we used softmax outputs throughout.</p>
+<section>
+	<p>The output of the <span class="neuralnet">neural network</span> can take a few different forms, depending on what you want.</p>
+	<p>There's the <span class="neuralnet">categorization</span>, which will taken an input and give you the number of the category it's in, so <span class="code">nn.evaluate([0, 821, 1643, 2461, 3278, 4092, 4901,...])</span> would return <span class="code">2</span>, where 2 is the category ID for 'art.'</p>
+	<p>Or you can use a <span class="neuralnet">softmax</span> layer, which will instead give you the neural network's probabilities for <em>all</em> of the categories.</p>
+	<p><span class="code">nn.evaluate([0, 821, 1643, 2461, 3278, 4092, 4901,...])</span> would then give you <span class="code">[0.05, 0.11, 0.75, 0.08]</span>. Both tell you the same thing - it's probably category 2 - but with the softmax layer you can see how sure of the decision the neural network is.</p>
+	<p>Because of this additional information, we used softmax outputs throughout.</p>
+</section>
 </body>
 </html>
