@@ -4,13 +4,11 @@
 	<link rel="stylesheet" type="text/css" href="../styles/global.css">
 	<title>Output</title>
 	<style type="text/css">
-		section.custom{
-			min-height:60%;
-		}
+		
 	</style>
 </head>
 <body>
-<section class="custom">
+<section>
 	<p>The output of the <span class="neuralnet">neural network</span> can take a few different forms, depending on what you want.</p>
 	<p>There's the <span class="neuralnet">categorization</span>, which will taken an input and give you the number of the category it's in, so <span class="code">nn.evaluate([0, 821, 1643, 2461, 3278, 4092, 4901,...])</span> would return <span class="code">2</span>, where 2 is the category ID for 'art.'</p>
 	<p>Or you can use a <span class="neuralnet">softmax</span> layer, which will instead give you the neural network's probabilities for <em>all</em> of the categories.</p>

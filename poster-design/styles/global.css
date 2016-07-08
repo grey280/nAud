@@ -46,11 +46,7 @@ ul{
 	list-style-type:square;
 }
 section:only-child{
-	display:flex;
-	flex-direction:column;
-	justify-content:center;
-	position:absolute;
-	min-height:80%;
+	margin-top:10%;
 }
 section p{
 	padding:0px 3%;
