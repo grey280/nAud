@@ -6,6 +6,9 @@ html, body{
 	font-size:1.1em;
 	padding:15px;
 }
+p{
+	line-height:28px;
+}
 
 /* Various highlights */
 span{
@@ -16,10 +19,6 @@ span[title]{
 }
 .poster{
 	background-color:#babdb6;
-}
-.poster .poster, .neuralnet .neuralnet, .genreID .genreID, .instID .instID, .mir .mir{
-	background-color:white;
-	color:#2e3436;
 }
 .neuralnet{
 	background-color:#8ae234;
@@ -44,6 +43,7 @@ span[title]{
 /* Structure */
 ul{
 	list-style-type:square;
+	margin-left:16px;
 }
 section:only-child{
 	margin-top:10%;
@@ -53,6 +53,7 @@ section p{
 }
 section.poster, section.neuralnet, section.genreID, section.instID, section.mir{
 	background-color:transparent;
+	color:#2e3436;
 }
 section.poster div{
 	border-left: 3px solid #2e3436;
