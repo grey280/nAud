@@ -66,6 +66,14 @@ section.instID div{
 section.mir div{
 	border-left: 3px solid #ad7fa8;
 }
+img{
+	display:block;
+	margin:0 auto;
+}
+p.caption{
+	text-align:center;
+	font-size:0.9em;
+}
 
 /* Links */
 a:link, a:visited, a:active{
