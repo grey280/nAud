@@ -43,6 +43,7 @@ span[title]{
 /* Structure */
 ul{
 	list-style-type:square;
+	margin-left:16px;
 }
 section:only-child{
 	margin-top:10%;
