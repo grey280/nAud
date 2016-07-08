@@ -35,6 +35,14 @@ span{
 	color:#eeeeec;
 	font-family:"Inconsolata", monospace;
 }
+.citation::after{
+	content: "\2020";
+	font-size:0.65em;
+	vertical-align: super;
+}
+.citation::before{
+
+}
 
 a:link, a:visited, a:active{
 	color:#2e3436;
