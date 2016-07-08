@@ -11,6 +11,9 @@ html, body{
 span{
 	padding:2.5px;
 }
+span[title]{
+	cursor:help;
+}
 .poster{
 	background-color:#babdb6;
 }

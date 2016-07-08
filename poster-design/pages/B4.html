@@ -17,9 +17,16 @@
 	</div>
 </section>
 <section class="genreID">
-	<h1></h1>
+	<h1>Training</h1>
 	<div>
-		<p></p>
+		<p>Training was performed using the full dataset, with somewhere between 10 and 25 percent of the data being held aside as <span class="neuralnet">validation data.</span></p>
+		<p>Evaluation data saving was implemented later, with a similarly variable portion of the dataset being held aside for use as evaluation-only data. Both of these served to identify <span class="neuralnet" title="Overfitting is like memorizing the answers to a math test, rather than learning to do the problems.">overfitting</span> issues.</p>
+		<p>Several varying <span class="mir">windows</span> were used:</p>
+		<ul>
+			<li>The first 15 seconds of the song</li>
+			<li>The 15 seconds of the song from 1:00 to 1:15</li>
+			<li>15 seconds composed of 3 5-second clips, selected at random from within the song</li>
+		</ul>
 	</div>
 </section>
 <section class="genreID">
