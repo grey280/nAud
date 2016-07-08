@@ -7,6 +7,7 @@ html, body{
 	padding:15px;
 }
 
+/* Various highlights */
 span{
 	padding:2.5px;
 }
@@ -37,10 +38,15 @@ span{
 	border-bottom-color:#babdb6;
 }
 
+/* Structure */
 ul{
 	list-style-type:square;
 }
+section p{
+	padding-left: 3%;
+}
 
+/* Links */
 a:link, a:visited, a:active{
 	color:#2e3436;
 	text-decoration: none;
