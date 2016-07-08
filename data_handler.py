@@ -13,7 +13,8 @@ def read_sample(sample, window_length=window_length_default):
 	samples = read_in[1]
 	num_samples = len(samples)
 	out_array = []
-	for i in range(int(num_samples/(window_length/2))): # double, so we get the half-second overlap
+	overlap_size = window_length/44100
+	for i in range(int(num_samples/(window_length/overlap_size))): # double, so we get the half-second overlap
 		try:
 			temp = samples[i*window_length:(i+1)*window_length]
 		except:
