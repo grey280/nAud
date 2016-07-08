@@ -45,6 +45,24 @@ ul{
 section p{
 	padding-left: 3%;
 }
+section.poster, section.neuralnet, section.genreID, section.instID, section.mir{
+	background-color:transparent;
+}
+section.poster div{
+	border-left: 3px solid #2e3436;
+}
+section.neuralnet div{
+	border-left: 3px solid #8ae234;
+}
+section.genreID div{
+	border-left: 3px solid #729fcf;
+}
+section.instID div{
+	border-left: 3px solid #fcaf3e;
+}
+section.mir div{
+	border-left: 3px solid #ad7fa8;
+}
 
 /* Links */
 a:link, a:visited, a:active{

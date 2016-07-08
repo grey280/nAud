@@ -8,20 +8,26 @@
 	</style>
 </head>
 <body>
-<section>
+<section class="genreID">
 	<h1>Assembling the Data Set</h1>
-	<p>Initially, our dataset was composed out of the iTunes library of a member of the research team. <a class="citation code" target="_blank" href="https://ffmpeg.org">ffmpeg</a> was used to convert files to the .wav format, as Python (using <span class="code">scipy.io.wavfile</span>) handles that audio format best.</p>
-	<p>When this was found to be lacking in 'art' and 'traditional' music, steps were taken to expand the library in those directions, gathering open-domain recordings in both categories where available.</p>
-	<p>The files were renamed to a standardized format (<span class="code">year.artist.album.title.wav</span>) and stored in a single location. A separate library file was generated to hold additional metadata, where appropriate. <a class="citation" target="_blank" download href="../data/library.plist">The library file is available here.</a></p>
+	<div>
+		<p>Initially, our dataset was composed out of the iTunes library of a member of the research team. <a class="citation code" target="_blank" href="https://ffmpeg.org">ffmpeg</a> was used to convert files to the .wav format, as Python (using <span class="code">scipy.io.wavfile</span>) handles that audio format best.</p>
+		<p>When this was found to be lacking in 'art' and 'traditional' music, steps were taken to expand the library in those directions, gathering open-domain recordings in both categories where available.</p>
+		<p>The files were renamed to a standardized format (<span class="code">year.artist.album.title.wav</span>) and stored in a single location. A <a class="citation" target="_blank" download href="../data/library.plist">separate library file</a> was generated to hold additional metadata, where appropriate.</p>
+	</div>
 </section>
-<section>
+<section class="genreID">
 	<h1></h1>
-	<p></p>
+	<div>
+		<p></p>
+	</div>
 </section>
-<section>
+<section class="genreID">
 	<h1>Analysis</h1>
-	<p>A variety of neural network structures were attempted, with the resulting models and weights stored and the training-reported accuracies logged.</p>
-	<p>For some trials, we did an in-depth analysis, having the trained neural network run through the entire library, logging the 'correct' category and the <span class="neuralnet">softmax</span> result form the network. These were used to identify problems the network had.</p>
+	<div>
+		<p>A variety of neural network structures were attempted, with the resulting models and weights stored and the training-reported accuracies logged.</p>
+		<p>For some trials, we did an in-depth analysis, having the trained neural network run through the entire library, logging the 'correct' category and the <span class="neuralnet">softmax</span> result form the network. These were used to identify problems the network had.</p>
+	</div>
 </section>
 </body>
 </html>
