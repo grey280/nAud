@@ -34,14 +34,7 @@ span{
 	background-color:#888a85;
 	color:#eeeeec;
 	font-family:"Inconsolata", monospace;
-}
-.citation::after{
-	content: "\2020";
-	font-size:0.65em;
-	vertical-align: super;
-}
-.citation::before{
-
+	border-bottom-color:#babdb6;
 }
 
 ul{
@@ -53,9 +46,14 @@ a:link, a:visited, a:active{
 	text-decoration: none;
 	border-bottom: 3px solid transparent;
 	padding-bottom:0px;
+
 	-webkit-transition:border-color .25s ease-in-out;
 	transition:border-color .25s ease-in-out;
 }
-a:link:hover, a:link:focus{
-	border-color:#2e3436;
+a.citation:link, a.citation:visited, a.citation:active{
+	padding:1px 5px;
+	border-bottom-color:#babdb6;
+}
+a:link:hover, a:link:focus, a.citation:link:hover, a.citation:link:focus, a:visited:hover, a:visited:focus, a.citation:visited:hover, a.citation:visited:focus{
+	border-bottom-color:#2e3436;
 }
