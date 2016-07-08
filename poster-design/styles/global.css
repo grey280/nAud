@@ -44,6 +44,10 @@ span{
 
 }
 
+ul{
+	list-style-type:square;
+}
+
 a:link, a:visited, a:active{
 	color:#2e3436;
 	text-decoration: none;
