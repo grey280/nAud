@@ -30,7 +30,7 @@ span{
 	background-color:#ad7fa8;
 	color:#eeeeec;
 }
-.code{
+.code, a.code:link, a.code:visited, a.code:active{
 	background-color:#888a85;
 	color:#eeeeec;
 	font-family:"Inconsolata", monospace;
