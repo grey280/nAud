@@ -1,0 +1,86 @@
+@import 'https://fonts.googleapis.com/css?family=Inconsolata';
+html, body{
+	margin:0;
+	color:#2e3436;
+	font-family:Avenir;
+	font-size:1.1em;
+	padding:15px;
+}
+
+/* Various highlights */
+span{
+	padding:2.5px;
+}
+span[title]{
+	cursor:help;
+}
+.poster{
+	background-color:#babdb6;
+}
+.poster .poster, .neuralnet .neuralnet, .genreID .genreID, .instID .instID, .mir .mir{
+	background-color:white;
+	color:#2e3436;
+}
+.neuralnet{
+	background-color:#8ae234;
+}
+.genreID{
+	background-color:#729fcf;
+}
+.instID{
+	background-color:#fcaf3e;
+}
+.mir{
+	background-color:#ad7fa8;
+	color:#eeeeec;
+}
+.code, a.code:link, a.code:visited, a.code:active{
+	background-color:#888a85;
+	color:#eeeeec;
+	font-family:"Inconsolata", monospace;
+	border-bottom-color:#babdb6;
+}
+
+/* Structure */
+ul{
+	list-style-type:square;
+}
+section p{
+	padding-left: 3%;
+}
+section.poster, section.neuralnet, section.genreID, section.instID, section.mir{
+	background-color:transparent;
+}
+section.poster div{
+	border-left: 3px solid #2e3436;
+}
+section.neuralnet div{
+	border-left: 3px solid #8ae234;
+}
+section.genreID div{
+	border-left: 3px solid #729fcf;
+}
+section.instID div{
+	border-left: 3px solid #fcaf3e;
+}
+section.mir div{
+	border-left: 3px solid #ad7fa8;
+}
+
+/* Links */
+a:link, a:visited, a:active{
+	color:#2e3436;
+	text-decoration: none;
+	border-bottom: 3px solid transparent;
+	padding-bottom:0px;
+
+	-webkit-transition:border-color .25s ease-in-out;
+	transition:border-color .25s ease-in-out;
+}
+a.citation:link, a.citation:visited, a.citation:active{
+	padding:1px 5px;
+	border-bottom-color:#babdb6;
+}
+a:link:hover, a:link:focus, a.citation:link:hover, a.citation:link:focus, a:visited:hover, a:visited:focus, a.citation:visited:hover, a.citation:visited:focus{
+	border-bottom-color:#2e3436;
+}
