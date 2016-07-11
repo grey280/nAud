@@ -113,7 +113,8 @@ def feed_samples(window_length=window_length_default, database_file=database_fil
 				shaped_sample = shaped_sample.reshape(1,window_length)
 			except: 
 				shaped_sample = samples[j][i[j]].reshape(1,window_length)
-			yield (shaped_sample, convert_kind(kind[j]))
+			output = np.fft.fft(shaped_sample)
+			yield (output, convert_kind(kind[j]))
 		except GeneratorExit:
 			break
 		except: # ran out of current array, get a new one
