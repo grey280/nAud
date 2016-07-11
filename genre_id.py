@@ -10,7 +10,6 @@ import sounddevice		as sd
 
 import gdebug
 import gconvert			as conv
-import gdataset  		as ds
 
 # Settings
 ## Debug Settings
@@ -248,37 +247,22 @@ def load_weights(iteration=0, path=test_series_name):
 		load_path = "output/{}.hdf5".format(path)
 	model.load_weights(load_path)
 
-# Import data
-tracks = plistlib.readPlist(input_data)
-data_set = ds.Dataset(tracks, do_random=do_random_parse, sample_duration=sample_duration, start_point=start_point, vstack_split=vstack_split_size, log_level=0)
-
-data_point_count = data_set.get_data_point_count()
-
 model = load_model(iteration=trial_iteration_to_load)
 sgd = SGD(lr=0.1, decay=1e-6, momentum=0.9, nesterov=True)
 model.compile(loss='categorical_crossentropy', optimizer=sgd, metrics=['accuracy'])
-# d.debug("Model loaded and SGD prepared.")
 load_weights(iteration=trial_iteration_to_load)
-# d.debug("Weights loaded.")
-d.debug("song identifier/likelihood_art/likelihood_pop/likelihood_tradition/likely_type/was_art/was_pop/was_tradition/was_type")
-data_array_feed, answer_array_feed, information_feed = data_set.next_batch(data_point_count)
 
-for i in range(len(data_array_feed)):
-	# Prep for analysis
-	d1 = []
-	d1.append(data_array_feed[i])
-	outer_data = np.asarray(d1)
-	# Run analysis
-	result = model.predict(outer_data, batch_size=1, verbose=0)
-	# Prep result for printing
-	# one_hot = result[0]
-	as_int = conv.one_hot_to_int(result[0])
-	# as_label = conv.number_to_label(as_int)
-	# Prep 'correct' for printing
-	orig_as_int = conv.one_hot_to_int(answer_array_feed[i])
-	# orig_as_label = conv.number_to_label(orig_as_int)
+initial_data_feed = sd.rec(sample_duration*44100, samplerate=44100, channels=1, blocking=True)
+data_feed = np.asarray(initial_data_feed)
 
-	# Print
-	d.debug("{}/{}/{}/{}/{}/{}/{}/{}/{}".format(information_feed[i],result[0][0],result[0][1],result[0][2],as_int,answer_array_feed[0][0],answer_array_feed[0][1],answer_array_feed[0][2],orig_as_int))
+# data_array_feed, answer_array_feed, information_feed = data_set.next_batch(data_point_count)
 
-	# Output: song_identifier, likelihood_art, likelihood_pop, likelihood_tradition, was_art, was_pop, was_tradition
+while True:
+	result = model.predict(data_feed, batch_size=1, verbose=0)
+	## Print new result
+	print(result[0])
+
+	## Get next one to feed
+	new_data_feed = sd.rec(1*44100, samplerate=44100, channels=1, blocking=True)
+	data_feed = data_feed[44100:]
+	data_feed.append(new_data_feed)
