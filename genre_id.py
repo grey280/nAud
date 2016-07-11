@@ -260,7 +260,7 @@ data_feed = np.reshape(data_feed, (1, sample_duration*44100))
 while True:
 	result = model.predict(data_feed, batch_size=1, verbose=0)
 	## Print new result
-	print(result[0])
+	print("{} {}".format(result[0][0], result[0][1]))
 
 	## Get next one to feed
 	new_data_feed = sd.rec(1*44100, samplerate=44100, channels=1, blocking=True)
