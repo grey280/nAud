@@ -254,16 +254,8 @@ load_weights(iteration=trial_iteration_to_load)
 
 initial_data_feed = sd.rec(sample_duration*44100, samplerate=44100, channels=1, blocking=True)
 sd.wait()
-print(initial_data_feed)
 data_feed = np.asarray(initial_data_feed)
-print("As an array")
-print(data_feed)
 data_feed = np.reshape(data_feed, (1, sample_duration*44100))
-print("Reshaped")
-print(data_feed)
-
-
-# data_array_feed, answer_array_feed, information_feed = data_set.next_batch(data_point_count)
 
 while True:
 	result = model.predict(data_feed, batch_size=1, verbose=0)
@@ -275,10 +267,6 @@ while True:
 	sd.wait()
 	new_data_feed = np.reshape(new_data_feed, (1, 1*44100))
 	data_feed = data_feed[:,44100:]
-	print(data_feed.shape)
-	print(data_feed)
-	print(new_data_feed.shape)
-	print(new_data_feed)
 	data_feed = np.hstack((data_feed, new_data_feed))
 	
 
