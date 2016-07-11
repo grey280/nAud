@@ -30,7 +30,7 @@ do_random_parse = False					# true will use three 5-second clips from random pla
 
 ## Operational settings
 load_from_previous_trial = True
-trial_iteration_to_load = 0
+trial_iteration_to_load = 1
 trial_to_load = 0
 
 # Tools
