@@ -1,0 +1,71 @@
+tf_ubuntu@titan:~/Documents/grey/nAud$ python train_neural_network.py 
+Using TensorFlow backend.
+Test 1 of 3
+Model and SGD prepared.
+Epoch 1/50
+/usr/local/lib/python2.7/dist-packages/tensorflow/python/client/session.py:548: ComplexWarning: Casting complex values to real discards the imaginary part
+  np_val = np.array(subfeed_val, dtype=subfeed_t.dtype.as_numpy_dtype)
+1500/1500 [==============================] - 273s - loss: 8.9169 - acc: 0.3300 - val_loss: 15.0300 - val_acc: 0.0480
+Epoch 2/50
+ 483/1500 [========>.....................] - ETA: 177s - loss: 10.7297 - acc: 0.3106/usr/lib/python2.7/dist-packages/scipy/io/wavfile.py:172: WavFileWarning: Chunk (non-data) not understood, skipping it.
+  WavFileWarning)
+/usr/lib/python2.7/dist-packages/scipy/io/wavfile.py:42: WavFileWarning: Unknown wave file format
+  warnings.warn("Unknown wave file format", WavFileWarning)
+1500/1500 [==============================] - 271s - loss: 6.2198 - acc: 0.5887 - val_loss: 12.0563 - val_acc: 0.2520
+Epoch 3/50
+1500/1500 [==============================] - 270s - loss: 6.8386 - acc: 0.5753 - val_loss: 16.0536 - val_acc: 0.0040
+Epoch 4/50
+1500/1500 [==============================] - 270s - loss: 9.7138 - acc: 0.3973 - val_loss: 16.1181 - val_acc: 0.0000e+00
+Epoch 5/50
+1500/1500 [==============================] - 271s - loss: 11.6910 - acc: 0.2747 - val_loss: 15.4411 - val_acc: 0.0420
+Epoch 6/50
+1500/1500 [==============================] - 270s - loss: 4.4164 - acc: 0.7260 - val_loss: 12.0886 - val_acc: 0.2500
+Fit complete. Preparing to test.
+   Test skipped - code not written. Oh well.
+Finished writing model to disk.
+Finished writing weights to disk.
+Test 2 of 3
+Model and SGD prepared.
+Epoch 1/50
+1500/1500 [==============================] - 273s - loss: 8.9989 - acc: 0.3300 - val_loss: 11.0099 - val_acc: 0.2540
+Epoch 2/50
+1500/1500 [==============================] - 273s - loss: 7.2722 - acc: 0.5253 - val_loss: 12.0886 - val_acc: 0.2500
+Epoch 3/50
+1500/1500 [==============================] - 273s - loss: 13.4430 - acc: 0.1480 - val_loss: 10.0718 - val_acc: 0.3740
+Epoch 4/50
+1500/1500 [==============================] - 274s - loss: 10.5522 - acc: 0.3240 - val_loss: 11.1619 - val_acc: 0.2640
+Epoch 5/50
+1500/1500 [==============================] - 274s - loss: 11.4154 - acc: 0.2753 - val_loss: 11.2075 - val_acc: 0.3040
+Epoch 6/50
+1500/1500 [==============================] - 273s - loss: 10.9011 - acc: 0.3067 - val_loss: 12.2175 - val_acc: 0.2420
+Epoch 7/50
+1500/1500 [==============================] - 273s - loss: 8.4605 - acc: 0.4553 - val_loss: 12.0347 - val_acc: 0.2520
+Fit complete. Preparing to test.
+   Test skipped - code not written. Oh well.
+Finished writing model to disk.
+Finished writing weights to disk.
+Test 3 of 3
+Model and SGD prepared.
+Epoch 1/50
+1500/1500 [==============================] - 273s - loss: 9.2553 - acc: 0.3327 - val_loss: 11.2552 - val_acc: 0.2760
+Epoch 2/50
+1500/1500 [==============================] - 272s - loss: 8.2894 - acc: 0.4567 - val_loss: 10.8609 - val_acc: 0.2920
+Epoch 3/50
+1500/1500 [==============================] - 272s - loss: 8.9761 - acc: 0.4053 - val_loss: 15.7443 - val_acc: 0.0200
+Epoch 4/50
+1500/1500 [==============================] - 271s - loss: 6.4497 - acc: 0.5900 - val_loss: 14.1839 - val_acc: 0.1200
+Epoch 5/50
+1500/1500 [==============================] - 271s - loss: 14.0801 - acc: 0.1240 - val_loss: 12.1393 - val_acc: 0.2420
+Epoch 6/50
+1500/1500 [==============================] - 272s - loss: 12.9476 - acc: 0.1887 - val_loss: 11.6833 - val_acc: 0.2520
+Fit complete. Preparing to test.
+   Test skipped - code not written. Oh well.
+Finished writing model to disk.
+Finished writing weights to disk.
+tf_ubuntu@titan:~/Documents/grey/nAud$ 
+
+
+
+
+
+
