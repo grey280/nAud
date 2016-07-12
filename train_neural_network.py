@@ -23,7 +23,7 @@ NN_validation_split = 0.1 		# fraction of data to be held out as validation data
 early_stopping_patience = 3 	# how many epochs without improvement it'll go before stopping
 
 ## IO settings
-test_series_name = "FFT1"		# name of the test series - files are saved as test_series_name.iteration.json/hdf5
+test_series_name = "FFT2"		# name of the test series - files are saved as test_series_name.iteration.json/hdf5
 tests_in_series = 3 			# number of tests to run in this series
 window_size = 2*44100 			# size of windows to feed
 samples_in_parallel = 4 		# number of files to be reading in parallel. (1<=n<=4)
