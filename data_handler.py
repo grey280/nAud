@@ -13,8 +13,8 @@ def read_sample(sample, window_length=window_length_default):
 	samples = read_in[1]
 	num_samples = len(samples)
 	out_array = []
-	overlap_size = window_length/44100
-	for i in range(int(num_samples/(window_length/overlap_size))): # double, so we get the half-second overlap
+	overlap_size = window_length/(2*44100)
+	for i in range(int(num_samples/(window_length/overlap_size))):
 		try:
 			temp = samples[i*window_length:(i+1)*window_length]
 		except:
@@ -113,8 +113,8 @@ def feed_samples(window_length=window_length_default, database_file=database_fil
 				shaped_sample = shaped_sample.reshape(1,window_length)
 			except: 
 				shaped_sample = samples[j][i[j]].reshape(1,window_length)
-			output = np.fft.fft(shaped_sample)
-			yield (output, convert_kind(kind[j]))
+			# shaped_sample = np.fft.fft(shaped_sample)
+			yield (shaped_sample, convert_kind(kind[j]))
 		except GeneratorExit:
 			break
 		except: # ran out of current array, get a new one
