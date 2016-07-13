@@ -7,6 +7,7 @@ import plistlib
 import numpy 			as np
 import scipy.io.wavfile	as wav
 import sounddevice		as sd
+import OSC
 
 import gdebug
 
@@ -27,6 +28,10 @@ start_point = 60 						# seconds into the sample to read ((start_point+sample_du
 sample_duration = 20					# seconds of sample to read ((start_point+sample_duration)<sample length)
 do_random_parse = False					# true will use three 5-second clips from random places in the song, rather than a single 15-second block
 
+## OSC Settings
+osc_ip_address = '127.0.0.1'		# IP address to conncet to
+osc_port = 8020 					# IP port to connect to
+
 ## Operational settings
 load_from_previous_trial = True
 trial_iteration_to_load = 1
@@ -34,8 +39,8 @@ trial_to_load = 0
 
 # Tools
 d = gdebug.Debugger(debug_level = log_level)
-
-
+c = OSC.OSCClient()
+c.connect((osc_ip_address, osc_port))
 
 # Helper functions
 def load_model(iteration=0, path=test_series_name):
