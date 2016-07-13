@@ -74,6 +74,7 @@ while True:
 	result = model.predict(data_feed, batch_size=1, verbose=0)
 	## Send OSC Message
 	msg = osc_message_builder.OscMessageBuilder(address = "/tuio2/tok")
+	msg.add_arg(0, arg_type="i")
 	msg.add_arg(10003, arg_type="i")
 	msg.add_arg(result[0][0], arg_type="f") #first value
 	msg.add_arg(result[0][1], arg_type="f") #second value
