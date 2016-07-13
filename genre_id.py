@@ -71,9 +71,16 @@ data_feed = np.reshape(data_feed, (1, sample_duration*44100))
 
 while True:
 	result = model.predict(data_feed, batch_size=1, verbose=0)
-	## Print new result
-	print("{} {}".format(result[0][0], result[0][1]))
-
+	## Send OSC Message
+	oscmsg = OSC.OSCMessage()
+	oscmsg.setAddress("/tuio2/tok")
+	oscmsg.append(0) #not used
+	oscmsg.append(10003) #code for Grey's Sound Analyser program
+	oscmsg.append(result[0][0]) #first value
+	oscmsg.append(result[0][1]) #second value
+	oscmsg.append(result[0][2]) #third value
+	c.send(oscmsg)
+	
 	## Get next one to feed
 	new_data_feed = sd.rec(1*44100, samplerate=44100, channels=1, blocking=True)
 	sd.wait()
@@ -81,4 +88,3 @@ while True:
 	data_feed = data_feed[:,44100:]
 	data_feed = np.hstack((data_feed, new_data_feed))
 	
-
