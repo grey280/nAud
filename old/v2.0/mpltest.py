@@ -37,5 +37,5 @@ axes = plt.gca()
 axes.set_ylim([0, 1.0])
 
 # And draw it
-plt.legend(loc='upper right')
+plt.legend(loc='upper left')
 plt.show()
