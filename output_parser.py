@@ -1,10 +1,12 @@
 import json
 
+# Takes a JSON array-of-arrays input, converts it to a dictionary and saves that as JSON
+
 working_file = "output/raw.json"
 output_file = "output/parsed.json"
 
 inputs = []
-outputs = {}
+outputs = []
 
 def convert_kind(kind):
 	out = []
@@ -21,28 +23,41 @@ def convert_kind(kind):
 
 def revert_kind(kind):
 	out = ""
-	if kind[0] == 1:
+	if kind == 0:
 		out = "other"
-	elif kind[1] == 1:
+	elif kind == 1:
 		out = "drum"
-	elif kind[2] == 1:
+	elif kind == 2:
 		out = "guitar"
 	else:
 		out = "vocal"
 	return out
 
+def one_hot_to_int(one_hot):
+	currentMax = 0.0
+	currentMaxId = 0
+	for i in range(len(one_hot)):
+		if one_hot[i] > currentMax:
+			currentMax = one_hot[i]
+			currentMaxId = i
+	return currentMaxId
+
 # Load input
+temp_inputs = []
 with open(working_file, "r") as infile:
-	inputs = json.load(infile)
+	temp_inputs = json.load(infile)
+
+inputs = [one_hot_to_int(num) for num in temp_inputs] # I *think* this will work?
+
 
 currentKind = 5
 currentStart = 0
-currentEnd = 0
 for i in range(len(inputs)):
 	if inputs[i] != currentKind:
-		
-
-
+		this_one = {"start":currentStart, "stop":i, "category": revert_kind(inputs[i])}
+		outputs.append(this_one)
+		currentKind = inputs[i]
+		currentStart = i
 
 
 # Save output
