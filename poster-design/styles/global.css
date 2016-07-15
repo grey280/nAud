@@ -73,6 +73,7 @@ section.mir div{
 img{
 	display:block;
 	margin:0 auto;
+	max-width:100%;
 }
 p.caption{
 	text-align:center;
