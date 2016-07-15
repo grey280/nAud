@@ -10,9 +10,9 @@ audio = AudioSegment.from_file(src)
 data = np.fromstring(audio._data, np.int16)
 fs = audio.frame_rate
 
-BARS = 100
-BAR_HEIGHT = 60
-LINE_WIDTH = 5
+BARS = 150
+BAR_HEIGHT = 120
+LINE_WIDTH = 6
 
 length = len(data)
 RATIO = length/BARS
