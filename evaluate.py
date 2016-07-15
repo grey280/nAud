@@ -14,18 +14,18 @@ import data_handler
 log_level = 2 					# 0: silent, 1: errors only, 2: normal, 3: verbose
 
 ## IO settings
-test_series_name = "INS3"		# name of the test series - files are saved as test_series_name.iteration.json/hdf5
-window_size = 1*44100 			# size of windows to feed
+test_series_name = "SAM1"		# name of the test series - files are saved as test_series_name.iteration.json/hdf5
+window_size = 3*44100 			# size of windows to feed
 # file_to_read = "cache/test/LizNelson_Rainfall_MIX.wav" # path to wav file to read
 # file_to_read = "cache/vocal/LizNelson_Rainfall_STEM_01.wav" #alternate: all vocal
-file_to_read = "cache/guitar/LizNelson_Rainfall_STEM_04.wav" #alternate: all guitar
+file_to_read = "cache/test/WhiteSquareDemo.wav" #alternate: all guitar
 
 ## Operational settings
 do_load_model = False
 do_load_weights = False
 load_from_previous_trial = True
 trial_iteration = 1 			# Which iteration of the trial series are you on? Used to load/save. Starts at 0.
-which_iteration = 0 			# Which iteration to load
+which_iteration = 1 			# Which iteration to load
 
 # Tools
 d = gdebug.Debugger(debug_level = log_level)
@@ -54,7 +54,7 @@ model.compile(loss='categorical_crossentropy', optimizer=sgd, metrics=['accuracy
 load_weights(iteration=which_iteration)
 d.debug("Neural network loaded.")
 
-test_data = data_handler.get_samples_from_file(file_to_read)
+test_data = data_handler.get_samples_from_file(file_to_read, window_length=window_size)
 results = []
 i=0
 for sample in test_data:

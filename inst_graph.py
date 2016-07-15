@@ -4,7 +4,7 @@ from PIL import Image, ImageDraw
 import numpy as np
 import os
 
-src = "cache/test/LizNelson_Rainfall_MIX.wav"
+src = "cache/test/WhiteSquareDemo.wav"
 
 audio = AudioSegment.from_file(src)
 data = np.fromstring(audio._data, np.int16)
