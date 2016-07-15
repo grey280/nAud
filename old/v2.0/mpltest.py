@@ -7,8 +7,10 @@ art_color = '#204a87'
 pop_color = '#3465a4'
 tdt_color = '#729fcf'
 
-
+# Set up plot
 X = np.linspace(0, 1, 32, endpoint=True)
+plt.xlabel('Time')
+plt.ylabel('Probability')
 
 # Generate fake data
 art = np.random.uniform(low=0.0, high=0.5, size=(1,32))
@@ -26,13 +28,14 @@ plt.plot(X, art_array, color=art_color)
 plt.plot(X, pop_array, color=pop_color)
 
 # Fill the spaces between
-plt.fill_between(X, 0, art_array, color=art_color)
-plt.fill_between(X, art_array, pop_array, color=pop_color)
-plt.fill_between(X, pop_array, 1.0, color=tdt_color)
+plt.fill_between(X, 0, art_array, color=art_color, label="Art")
+plt.fill_between(X, art_array, pop_array, color=pop_color, label="Pop")
+plt.fill_between(X, pop_array, 1.0, color=tdt_color, label="Traditional")
 
 # Set the size of the plot
 axes = plt.gca()
 axes.set_ylim([0, 1.0])
 
 # And draw it
+plt.legend(loc='upper left')
 plt.show()
