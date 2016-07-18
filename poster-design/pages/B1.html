@@ -10,12 +10,11 @@
 <body>
 <section>
 	<p><span class="neuralnet">Neural networks</span> are an alternative to traditional programming.</p>
-	<p>Instead of writing an algorithm yourself, you provide training data - inputs, and the output you're expecting.</p>
-	<p>This looks something like this: <span class="code">([0, 821, 1643, 2461, 3278, 4092, 4901,...],"art")</span></p>
+	<p>Instead of writing an algorithm by hand, training data is given to the software - inputs and the expected output: <span class="code">([0, 821, 1643, 2461, 3278, 4092, 4901,...],"art")</span></p>
 	<p>The neural network itself is a series of <span class="neuralnet">layers</span>, each one consisting of one or more <span class="neuralnet">neurons</span>. Each neuron can have many inputs, and a single output that can be sent along to many other neurons.</p>
-	<p>What's important is the way the numbers move around - as a number moves from one neuron to another, it is altered by the <span class="neuralnet">weight</span> of that neuron.</p>
+	<p>What is important is the way the numbers move around - as a number moves from one neuron to another, it is altered by the <span class="neuralnet">weight</span> of that neuron.</p>
 	<p>The neural network software - in this case, the <a target="_blank" href="http://keras.io" class="code citation">Keras</a> library running on either the <span class="code">Theano</span> or <span class="code">TensorFlow</span> backend - takes the inputs and runs them through a neural network with randomly-generated weights.</p>
-	<p>Then the software changes all of the weights a bit and tries again. If it's closer to the right answer, it'll keep changing the weights in that direction; if it got worse, it'll go in a different direction. This is known as <span class="neuralnet">Stochastic Gradient Descent</span>.</p>
+	<p>Then the software changes all of the weights a bit and tries again. If it is closer to the right answer, it will keep changing the weights in that direction; if it got worse, it will go in a different direction. This is known as <span class="neuralnet">Stochastic Gradient Descent</span>.</p>
 </section>
 </body>
 </html>
