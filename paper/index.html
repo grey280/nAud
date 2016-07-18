@@ -145,7 +145,7 @@
 <header>
 	<img src="lsu.png" alt="Louisiana State University" id="LSUlogo">
 	<h1>neural audio: <span class="mir">music information retrieval</span> using <span class="neuralnet">deep neural networks</span></h1>
-	<h2>Grey Patterson (Linfield, CCT), Andrew Pfalz, and Jesse Allison, (LSU School of Music/CCT)</h2>
+	<h2>Grey Patterson (Linfield, CCT), Andrew Pfalz, and Jesse Allison (LSU School of Music/CCT)</h2>
 	<img src="nsf.png" alt="National Science Foundation" id="NSFlogo">
 </header>
 <section class="poster first" id="introduction">
@@ -185,12 +185,8 @@
 		<h2 class="genreID">methods</h2>
 		<p>Based on <a class="citation" >"Automatic Musical Pattern Feature Extraction Using Convolutional Neural Network" (Li, T., Chan, A., Chun, A..)</a>, we wanted to split music into at most four categories. For this, we opted to use Philip Tagg's axiomatic triangle, giving us <span class="genreID">three categories:</span> art, popular, or traditional.</p>
 		<p>Our dataset was composed of the iTunes library of a member of the research team, but was later expanded through the use of open-domain recordings of 'art' and 'traditional' music. 10-25% of the data was used as <span class="neuralnet">validation data.</span></p>
-		<p class="beforeBlock">Several varying <span class="mir">windows</span> were used:</p>
-		<ul>
-			<li>The first 15 seconds of the song</li>
-			<li>The 15 seconds of the song from 1:00 to 1:15</li>
-			<li>15 seconds composed of 3 5-second clips, selected at random from within the song</li>
-		</ul>
+		<p class="beforeBlock">Three <span class="mir">windows</span> were used:</p>
+		<img src="../data/figure_3.png" style="width:15in">
 		<p>A variety of neural network structures were attempted, with the resulting models and weights stored and the training-reported accuracies logged.</p>
 	</div>
 	<div>
