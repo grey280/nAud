@@ -21,7 +21,7 @@ span[title]{
 	background-color:#babdb6;
 }
 .neuralnet{
-	background-color:#8ae234;
+	background-color:#73d216;
 }
 .genreID{
 	background-color:#729fcf;
@@ -59,7 +59,7 @@ section.poster div{
 	border-left: 3px solid #2e3436;
 }
 section.neuralnet div{
-	border-left: 3px solid #8ae234;
+	border-left: 3px solid #73d216;
 }
 section.genreID div{
 	border-left: 3px solid #729fcf;
