@@ -45,6 +45,7 @@ section{
 	margin-right:.5in;
 	position:absolute;
 	background-color:transparent !important;
+	overflow:hidden;
 }
 section.first{
 	left:.5in;
@@ -65,7 +66,7 @@ section h2{
 	font-weight:normal;
 	float:left;
 	margin-top:0;
-	margin-right:.1in;
+	margin-right:.25in;
 }
 
 .neuralnet{
@@ -81,6 +82,13 @@ section h2{
 	background-color:#ad7fa8;
 	color:#eeeeec;
 }
+.code, a.code:link, a.code:visited, a.code:active{
+	background-color:#888a85;
+	color:#eeeeec;
+	font-family:"Inconsolata", monospace;
+	border-bottom-color:#babdb6;
+}
+
 section h1{
 	width:100%;
 	text-align:center;
@@ -97,6 +105,7 @@ section h1{
 </style>
 </head>
 <body>
+<div id="forceheight" style="position:absolute; height:5px; width:5px; top:36in; left:0px; background-color:red"></div>
 <header>
 	<img src="lsu.png" alt="Louisiana State University" id="LSUlogo">
 	<h1>neural audio: music information retrieval using deep neural networks</h1>
@@ -107,23 +116,21 @@ section h1{
 	<h1>introduction</h1>
 	<div>
 		<p>Neural networks are a form of <span class="neuralnet">machine learning</span> based off the functionality of the human brain. They consist of <span class="neuralnet">nodes</span> connected by <span class="neuralnet">weighted edges</span> - similar to the structure of neurons. Input goes in as floating-point numbers, and is propagated through the network from node to node along those edges.</p>
-		<p>The outputs and inputs can be basically anything you want: all of the image-recognition features in Google and Apple Photos are powered by neural networks; Microsoft's Skype Translate feature uses neural networks to perform real-time translation; the DeepMind group used neural networks to create AlphaGo, the world's best Go player.</p>
 	</div>
 	<div>
-		<p>To date, however, there has been very little use of this form of machine learning in the field of music information retrieval. Services like Pandora and Spotify provide algorithmic music detection, but their actual databases are assembled through human labor and data mining, respectively.</p>
-		<p>Music is rich in information - from things like what key and time signature are being played in up to the sociocultural context in which the lyrics were written. Musicologists work to extract this information in meaningful ways, but there is far more music in the world than there are musicologists. Providing automated tools to ease their efforts could be of significant benefit.</p>
-		<p>The field of <span class="mir">music information retrieval</span> exists to provide these tools, and they have: automated beat-detection is doable, and identifying the key can be done with some effort. More complex tasks, though, remain out of reach. There is no algorithm to identify the <span class="genreID">genre</span> of a piece, and no machine can identify which <span class="instID">instrument</span> is playing as easily as a human can.</p>
+		<p>There has been very little use of machine learning for music information retrieval. Services like Pandora and Spotify provide algorithmic music selection, but their actual databases are assembled through human labor and data mining.</p>
+		<p>Music is rich in information - from things like what key and time signature are being played in up to the sociocultural context in which the lyrics were written. Musicologists work to extract this information in meaningful ways, but there is far more music in the world than there are musicologists.</p>
+		<p>The field of <span class="mir">music information retrieval</span> exists to provide them with tools: automated beat-detection is doable, and identifying the key can be done with some effort. More complex tasks, though, remain out of reach. There is no algorithm to identify the <span class="genreID">genre</span> of a piece, and no machine can identify which <span class="instID">instrument</span> is playing as easily as a human can.</p>
 	</div>
 </section>
 <section class="neuralnet first" id="neurnet">
 	<h1>neural networks</h1>
 	<div>
 		<h2>input</h2>
-		<p><span class="neuralnet">Neural networks</span> are basically algorithms: they have inputs and outputs, and do something to the input to yield the output.</p>
-		<p>For audio processing, this input can be either <span class="mir">audio samples</span> or <span class="mir">Fast Fourier Transform data</span>. We elected to use raw audio samples throughout.</p>
-		<p>The inputs, then, are <span class="mir">windows</span> of a fixed length, meaning that a fixed number of samples are being fed in.</p>
-		<p>The samples are read in from .wav files by <span class="code">scipy.io.wavfile</span>, and look something like this:</p>
-		<p><span class="code">0 821  1643  2461  3278  4092 4901 5705 6507 7294 8086 8859 9630 10389 11137 11876 12605 13314 14021 14702 15380 16036 16678 17304 17912 18502 19078 19629 20167 20679 21174 21651 22099 22535 22939 23329 23689 24033 24345 24642 24907 25152 25372 25564 25736 25878 25996 26092 26153 26202 26212 26206 26168 26106 26022 25905 25774 25600 25423 25201 24967 24703 24414 24108 23767 23416 23026 22632 ...</span></p>
+		<p><span class="neuralnet">Neural networks</span> are basically algorithms: they have inputs and outputs, and do something to the input to yield the output. For audio processing, this input can be either <span class="mir">audio samples</span> or <span class="mir">Fast Fourier Transform data</span>. We elected to use raw audio samples throughout.</p>
+		<p>The inputs are <span class="mir">windows</span> of a fixed length: a set number of samples being fed in.</p>
+		<p>The samples are read in from .wav files and look something like this:</p>
+		<p><span class="code">0 821  1643  2461  3278  4092 4901 5705 6507 7294 8086 8859 ...</span></p>
 		<p>And so on for quite a while - there's 44,100 of those numbers per second.</p>
 		<p>That's a <em>lot</em> of numbers, which is where the windows come in - by picking one window, processing it, then moving forward a bit, using that as your new window, processing that, and then repeating, you can process a lot of audio.</p>
 	</div>
