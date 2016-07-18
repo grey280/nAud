@@ -18,7 +18,7 @@ test_series_name = "SAM1"		# name of the test series - files are saved as test_s
 window_size = 3*44100 			# size of windows to feed
 # file_to_read = "cache/test/LizNelson_Rainfall_MIX.wav" # path to wav file to read
 # file_to_read = "cache/vocal/LizNelson_Rainfall_STEM_01.wav" #alternate: all vocal
-file_to_read = "cache/test/WhiteSquareDemo.wav" #alternate: all guitar
+file_to_read = "cache/test/LizNelson_Rainfall_MIX.wav" #alternate: all guitar
 
 ## Operational settings
 do_load_model = False
