@@ -3,117 +3,117 @@
 <head>
 <title>neural audio: music information retrieval using deep neural networks</title>
 <style type="text/css">
-body{
-	height:36in;
-	width:48in;
-	font-family:Avenir;
-	position:relative;
-	font-size:30pt;
-}
-header{
-	text-align:center;
-	width:100%;
-	height:4in;
-}
-header img{
-	position:absolute;
-	max-height:3.5in;	
-	max-width:3.5in;
-	top:.5in;
-}
-header h1, header h2{
-	margin-left:4.5in;
-	margin-right:4.5in;
-	font-weight:normal;
-}
-header h1{
-	font-size:80pt;
-}
-header h2{
-	font-size:60pt;
-}
-#LSUlogo{
-	left:.5in;
-}
-#NSFlogo{
-	right:.5in;
-	top:0in;
-}
-section{
-	width:15in;
-	margin-left:.5in;
-	margin-right:.5in;
-	position:absolute;
-	background-color:transparent !important;
-	overflow:hidden;
-}
-section.first{
-	left:.5in;
-}
-section.second{
-	left:16in;
-}
-section.third{
-	right:.5in;
-}
+	body{
+		height:36in;
+		width:48in;
+		font-family:Avenir;
+		position:relative;
+		font-size:30pt;
+	}
+	header{
+		text-align:center;
+		width:100%;
+		height:4in;
+	}
+	header img{
+		position:absolute;
+		max-height:3.5in;	
+		max-width:3.5in;
+		top:.5in;
+	}
+	header h1, header h2{
+		margin-left:4.5in;
+		margin-right:4.5in;
+		font-weight:normal;
+	}
+	header h1{
+		font-size:80pt;
+	}
+	header h2{
+		font-size:60pt;
+	}
+	#LSUlogo{
+		left:.5in;
+	}
+	#NSFlogo{
+		right:.5in;
+		top:0in;
+	}
+	section{
+		width:15in;
+		margin-left:.5in;
+		margin-right:.5in;
+		position:absolute;
+		background-color:transparent !important;
+		overflow:hidden;
+	}
+	section.first{
+		left:.5in;
+	}
+	section.second{
+		left:16in;
+	}
+	section.third{
+		right:.5in;
+	}
 
-section h1{
-	width:100%;
-	text-align:center;
-	font-size:60pt;
-	font-weight:normal;
-	margin-bottom:.25in;
-	margin-top:.25in;
-}
-section h2{
-	font-size:50pt;
-	font-weight:normal;
-	float:left;
-	margin-top:0;
-	margin-right:.25in;
-	margin-bottom:.1in;
-}
+	section h1{
+		width:100%;
+		text-align:center;
+		font-size:60pt;
+		font-weight:normal;
+		margin-bottom:.25in;
+		margin-top:.25in;
+	}
+	section h2{
+		font-size:50pt;
+		font-weight:normal;
+		float:left;
+		margin-top:0;
+		margin-right:.25in;
+		margin-bottom:.1in;
+	}
 
-.neuralnet{
-	background-color:#8ae234;
-}
-.genreID{
-	background-color:#729fcf;
-}
-.instID{
-	background-color:#fcaf3e;
-}
-.mir{
-	background-color:#ad7fa8;
-	color:#eeeeec;
-}
-.code, a.code:link, a.code:visited, a.code:active{
-	background-color:#888a85;
-	color:#eeeeec;
-	font-family:"Inconsolata", monospace;
-	border-bottom-color:#babdb6;
-}
+	.neuralnet{
+		background-color:#8ae234;
+	}
+	.genreID{
+		background-color:#729fcf;
+	}
+	.instID{
+		background-color:#fcaf3e;
+	}
+	.mir{
+		background-color:#ad7fa8;
+		color:#eeeeec;
+	}
+	.code, a.code:link, a.code:visited, a.code:active{
+		background-color:#888a85;
+		color:#eeeeec;
+		font-family:"Inconsolata", monospace;
+		border-bottom-color:#babdb6;
+	}
 
-#introduction{
-	height:15in;
-}
-#neurnet{
-	top:16in;
-	height:20in;
+	#introduction{
+		height:15in;
+	}
+	#neurnet{
+		top:16in;
+		height:20in;
 
-}
+	}
 </style>
 </head>
 <body>
 <div id="forceheight" style="position:absolute; height:5px; width:5px; top:36in; left:0px; background-color:red"></div>
 <header>
 	<img src="lsu.png" alt="Louisiana State University" id="LSUlogo">
-	<h1>neural audio: music information retrieval using deep neural networks</h1>
-	<h2>Grey Patterson (Linfield), Andrew Pfalz, Dr. Jesse Allison (LSU CCT)</h2>
+	<h1>neural audio: <span class="mir">music information retrieval</span> using <span class="neuralnet">deep neural networks</span></h1>
+	<h2>Grey Patterson (Linfield, CCT), Andrew Pfalz, and Jesse Allison, (LSU School of Music/CCT)</h2>
 	<img src="nsf.png" alt="National Science Foundation" id="NSFlogo">
 </header>
 <section class="poster first" id="introduction">
-	<h1>introduction</h1>
+	<h1 class-"poster">introduction</h1>
 	<div>
 		<p>Neural networks are a form of <span class="neuralnet">machine learning</span> based off the functionality of the human brain. They consist of <span class="neuralnet">nodes</span> connected by <span class="neuralnet">weighted edges</span> - similar to the structure of neurons. Input goes in as floating-point numbers, and is propagated through the network from node to node along those edges.</p>
 	</div>
@@ -124,7 +124,7 @@ section h2{
 	</div>
 </section>
 <section class="neuralnet first" id="neurnet">
-	<h1>neural networks</h1>
+	<h1 class="neuralnet">neural networks</h1>
 	<div>
 		<h2>input</h2>
 		<p><span class="neuralnet">Neural networks</span> are algorithms: they have inputs and outputs, and do something to the input to yield the output. For audio processing, this input can be either <span class="mir">audio samples</span> or <span class="mir">Fast Fourier Transform data</span>. We elected to use raw audio samples throughout.</p>
@@ -132,7 +132,7 @@ section h2{
 	</div>
 	<div>
 		<h2>training</h2>
-		<p><span class="neuralnet">Neural networks</span> are an alternative to traditional programming. Instead of writing an algorithm yourself, you provide training data - inputs, and the output you're expecting.</p>
+		<p>Neural networks are an alternative to traditional programming. Instead of writing an algorithm yourself, you provide training data - inputs, and the output you're expecting.</p>
 		<p>This looks something like this: <span class="code">([0, 821, 1643, 4901,...],"art")</span></p>
 		<p>The neural network itself is a series of <span class="neuralnet">layers</span>, each one consisting of one or more <span class="neuralnet">neurons</span>. Each neuron can have many inputs, and a single output that can be sent along to many other neurons. As a number moves from one neuron to another, it is altered by the <span class="neuralnet">weight</span> of that neuron.</p>
 		<p>The software takes the inputs, runs them through a network with randomly-generated weights, then changes all the weights a bit and tries again.If it's closer to the right answer, it'll keep changing the weights in that direction; if it got worse, it'll go in a different direction. This is <span class="neuralnet">Stochastic Gradient Descent</span>.</p>
@@ -144,11 +144,50 @@ section h2{
 		<p>Both tell you the same thing - it's probably category 2 - but with the softmax layer you can see how sure of the decision the neural network is. Because of this additional information, we used softmax outputs throughout.</p>
 	</div>
 </section>
-<section class="genreid second">
-	<h1>genre identification</h1>
+<section class="genreID second">
+	<h1 class="genreID">genre identification</h1>
+	<div>
+		<h2>methods</h2>
+		<p>The first application of <span class="neuralnet">neural networks</span> for <span class="mir">music information retrieval</span> we looked at was for categorizing songs into different genres.</p>
+		<p>Based on <a class="citation" href="http://www.iaeng.org/publication/IMECS2010/IMECS2010_pp546-550.pdf" target="_blank">"Automatic Musical Pattern Feature Extraction Using Convolutional Neural Network" (Li, T., Chan, A., Chun, A..)</a>, we wanted to split music into at most four categories.</p>
+		<p>Following some brief attempts at coming up with our own categorizations, we opted to use Philip Tagg's axiomatic triangle, a system used by musicologists since the 1980s. This gives us <span class="genreID">three categories</span> into which all music can be sorted:</p>
+		<ul>
+			<li>Art music</li>
+			<li>Popular music</li>
+			<li>Traditional music</li>
+		</ul>
+		<p>Initially, our dataset was composed out of the iTunes library of a member of the research team. <a class="citation code" target="_blank" href="https://ffmpeg.org">ffmpeg</a> was used to convert files to the .wav format, as Python (using <span class="code">scipy.io.wavfile</span>) handles that audio format best.</p>
+		<p>When this was found to be lacking in 'art' and 'traditional' music, steps were taken to expand the library in those directions, gathering open-domain recordings in both categories where available.</p>
+		<p>The files were renamed to a standardized format (<span class="code">year.artist.album.title.wav</span>) and stored in a single location. A <a class="citation" target="_blank" download href="../data/library.plist">separate library file</a> was generated to hold additional metadata, where appropriate.</p>
+		<p>Training was performed using the full dataset, with somewhere between 10 and 25 percent of the data being held aside as <span class="neuralnet">validation data.</span></p>
+		<p>Evaluation data saving was implemented later, with a similarly variable portion of the dataset being held aside for use as evaluation-only data. Both of these served to identify <span class="neuralnet" title="Overfitting is like memorizing the answers to a math test, rather than learning to do the problems.">overfitting</span> issues.</p>
+		<p>Several varying <span class="mir">windows</span> were used:</p>
+		<ul>
+			<li>The first 15 seconds of the song</li>
+			<li>The 15 seconds of the song from 1:00 to 1:15</li>
+			<li>15 seconds composed of 3 5-second clips, selected at random from within the song</li>
+		</ul>
+		<p>A variety of neural network structures were attempted, with the resulting models and weights stored and the training-reported accuracies logged.</p>
+		<p>For some trials, we did an in-depth analysis, having the trained neural network run through the entire library, logging the 'correct' category and the <span class="neuralnet">softmax</span> result form the network. These were used to identify problems the network had.</p>
+	</div>
+	<div>
+		<h2>results</h2>
+		<p>The first series of test were largely homogenous in how effective they were, hovering around 75-80% accuracy.</p>
+		<p>Unfortunately, this level of accuracy, due to the biased nature of the sample set, is roughly what could be achieved by the neural network guessing 'popular' for every song in the dataset. This problem led to the creation of the limited series.</p>
+		<p>The last nine tests (named "The120" and "The120Repeat") used a limited variant of the sample library, pulling 40 songs in each category at random and feeding them through in a variety of different manners.</p>
+		<p>The highest accuracy achieved was 46.7%, but this is still better than the initial series- if it were guessing at random here, the success rate would be roughly 33%.</p>
+	</div>
+	<div>
+		<h2>conclusion</h2>
+		<img src="../data/Chart1.png">
+		<p class="caption">Note: y-axis is a logarithmic scale showing the number of songs</p>
+		<p>Identifying which of the <span title="Art music, popular music, or traditional music." class="mir">three categories</span> a song falls into is a difficult task at times. Even expert musicologists may disagree on certain things. Christmas music is a great example of how difficult this can be: <a class="citation" target="_blank" href="https://www.youtube.com/watch?v=WSUFzC6_fp8" title="Pentatonix - Carol of the Bells (YouTube)">Pentatonix' cover of <em>Carol of the Bells</em></a> is a three-year-old version of a song that was penned in 1914, which was itself based on an even older Ukranian folk song. Is this popular or traditional music?</p>
+		<p>Even allowing for the uncertain nature of <span class="genreID">genre identification</span>, the figure above shows that the neural networks were unable to achieve much success.</p>
+		<p>There are two potential sources of this: <span class="neuralnet">overfitting</span> to the definition of 'pop' was one concern, as the library featured significantly more samples in that category than either of the others. Another concern, and perhaps one of the reasons this task is difficult even for human experts, is the nature of music - popular music is based upon what came before it, and much research has gone into the different ways in which aspects of traditional and art music can be identified in popular music.</p>
+	</div>
 </section>
-<section class="instid third">
-	<h1>instrument identification</h1>
+<section class="instID third">
+	<h1 class="instID">instrument identification</h1>
 </section>
 </body>
 </html>
