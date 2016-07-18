@@ -70,23 +70,32 @@
 		font-weight:normal;
 		float:left;
 		margin-top:0;
-		margin-right:.25in;
+		margin-right:.125in;
+		padding-right:.125in;
 		margin-bottom:.1in;
+		border-right-width:5px;
+		border-right-style:solid;
+		background-color:transparent !important;
 	}
 	.poster{
 		background-color:#babdb6;
+		border-color:#babdb6;
 	}
 	.neuralnet{
 		background-color:#73d216;
+		border-color:#73d216;
 	}
 	.genreID{
 		background-color:#729fcf;
+		border-color:#729fcf;
 	}
 	.instID{
 		background-color:#fcaf3e;
+		border-color:#fcaf3e;
 	}
 	.mir{
 		background-color:#ad7fa8;
+		border-color:#ad7fa8;
 		color:#eeeeec;
 	}
 	.code, a.code:link, a.code:visited, a.code:active{
@@ -128,19 +137,19 @@
 <section class="neuralnet first" id="neurnet">
 	<h1 class="neuralnet">neural networks</h1>
 	<div>
-		<h2>input</h2>
-		<p><span class="neuralnet">Neural networks</span> are algorithms: they have inputs and outputs, and do something to the input to yield the output. For audio processing, this input can be either <span class="mir">audio samples</span> or <span class="mir">Fast Fourier Transform data</span>. We elected to use raw audio samples throughout.</p>
+		<h2 class="neuralnet">input</h2>
+		<p>Neural networks are algorithms: they have inputs and outputs, and do something to the input to yield the output. For audio processing, this input can be either <span class="mir">audio samples</span> or <span class="mir">Fast Fourier Transform data</span>. We elected to use raw audio samples throughout.</p>
 		<p>The inputs are <span class="mir">windows</span> of a fixed length: a set number of samples being fed in.</p>
 	</div>
 	<div>
-		<h2>training</h2>
+		<h2 class="neuralnet">training</h2>
 		<p>Neural networks are an alternative to traditional programming. Instead of writing an algorithm yourself, you provide training data - inputs, and the output you're expecting.</p>
 		<p>This looks something like this: <span class="code">([0, 821, 1643, 4901,...],"art")</span></p>
 		<p>The neural network itself is a series of <span class="neuralnet">layers</span>, each one consisting of one or more <span class="neuralnet">neurons</span>. Each neuron can have many inputs, and a single output that can be sent along to many other neurons. As a number moves from one neuron to another, it is altered by the <span class="neuralnet">weight</span> of that neuron.</p>
 		<p>The software takes the inputs, runs them through a network with randomly-generated weights, then changes all the weights a bit and tries again.If it's closer to the right answer, it'll keep changing the weights in that direction; if it got worse, it'll go in a different direction. This is <span class="neuralnet">Stochastic Gradient Descent</span>.</p>
 	</div>
 	<div>
-		<h2>output</h2>
+		<h2 class="neuralnet">output</h2>
 		<p>The output of the <span class="neuralnet">neural network</span> can take a few different forms, depending on what you want.</p>
 		<p>There's the <span class="neuralnet">categorization</span>, which will taken an input and give you the number of the category. Or you can use a <span class="neuralnet">softmax</span> layer, which will instead give you the neural network's probabilities for <em>all</em> of the categories.</p>
 		<p>Both tell you the same thing - it's probably category 2 - but with the softmax layer you can see how sure of the decision the neural network is. Because of this additional information, we used softmax outputs throughout.</p>
@@ -149,7 +158,7 @@
 <section class="genreID second">
 	<h1 class="genreID">genre identification</h1>
 	<div>
-		<h2>methods</h2>
+		<h2 class="genreID">methods</h2>
 		<p>Based on <a class="citation" >"Automatic Musical Pattern Feature Extraction Using Convolutional Neural Network" (Li, T., Chan, A., Chun, A..)</a>, we wanted to split music into at most four categories.</p>
 		<p>Following some brief attempts at coming up with our own categorizations, we opted to use Philip Tagg's axiomatic triangle, a system used by musicologists since the 1980s. This gives us <span class="genreID">three categories</span> into which all music can be sorted: art, popular, or traditional.</p>
 		<p>Our dataset was composed of the iTunes library of a member of the research team, but was later expanded through the use of open-domain recordings of 'art' and 'traditional' music. 10-25% of the data was used as <span class="neuralnet">validation data.</span></p>
@@ -163,11 +172,11 @@
 		<p>For some trials, we did an in-depth analysis, having the trained neural network run through the entire library, logging the 'correct' category and the <span class="neuralnet">softmax</span> result from the network. These were used to identify problems the network had.</p>
 	</div>
 	<div>
-		<h2>results</h2>
+		<h2 class="genreID">results</h2>
 		<p>The tests rarely got above the 'random guessing' success rate - one reached 46.7% accuracy on a 1/3 change at a guess.</p>
 	</div>
 	<div>
-		<h2>conclusion</h2>
+		<h2 class="genreID">conclusion</h2>
 		<p>Identifying which of the <span title="Art music, popular music, or traditional music." class="mir">three categories</span> a song falls into is a difficult task at times. Christmas music is a great example of how difficult this can be: <a class="citation" title="Pentatonix - Carol of the Bells (YouTube)">Pentatonix' cover of <em>Carol of the Bells</em></a> is a three-year-old version of a song that was penned in 1914, which was itself based on an even older Ukranian folk song. Is this popular or traditional music?</p>
 		<img src="../data/Chart1-mid.png" style="float:right; width:15in">
 		<p>There are two potential sources of error: <span class="neuralnet">overfitting</span> to the definition of 'pop' was one concern, as the library featured significantly more samples in that category than either of the others. Another concern, and perhaps one of the reasons this task is difficult even for human experts, is the nature of music - popular music is based upon what came before it, and much research has gone into the different ways in which aspects of traditional and art music can be identified in popular music.</p>
