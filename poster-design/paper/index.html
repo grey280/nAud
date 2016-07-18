@@ -104,6 +104,10 @@
 		border-color:#ad7fa8;
 		color:#eeeeec;
 	}
+	.wrong{ /* Putting this in here just so I have the red I used in the graph documented */
+		background-color:#DE1515;
+		border-color:#DE1515;
+	}
 	.code, a.code:link, a.code:visited, a.code:active{
 		background-color:#888a85;
 		color:#eeeeec;
@@ -161,9 +165,9 @@
 	</div>
 	<div>
 		<h2 class="neuralnet">output</h2>
-		<p>The output of the <span class="neuralnet">neural network</span> can take a few different forms, depending on what you want.</p>
-		<p>There is the <span class="neuralnet">categorization</span>, which will taken an input and give you the number of the category. Or you can use a <span class="neuralnet">softmax</span> layer, which will instead give you the neural network's probabilities for <em>all</em> of the categories.</p>
-		<p>Both tell you the same thing - it is probably category 2 - but with the softmax layer you can see how sure of the decision the neural network is. Because of this additional information, we used softmax outputs throughout.</p>
+		<p>The output of the <span class="neuralnet">neural network</span> can take a few different forms, depending on what is desired.</p>
+		<p>There is the <span class="neuralnet">categorization</span>, which will taken an input and return the number of the category. Alternately, a <span class="neuralnet">softmax</span> layer will return the neural network's probabilities for <em>all</em> of the categories.</p>
+		<p>Both give the same result - it is probably category 2 - but with the softmax layer it is visible how sure of the decision the neural network is. Because of this additional information, we used softmax outputs throughout.</p>
 	</div>
 </section>
 <section class="genreID second">
@@ -187,7 +191,7 @@
 	<div>
 		<h2 class="genreID">conclusion</h2>
 		<p style="margin-bottom:10px">Identifying which of the <span title="Art music, popular music, or traditional music." class="mir">three categories</span> a song falls into is a difficult task at times. Christmas music is a great example of how difficult this can be: <a class="citation" title="Pentatonix - Carol of the Bells (YouTube)">Pentatonix' cover of <em>Carol of the Bells</em></a> is a three-year-old version of a song that was penned in 1914, which was itself based on an even older Ukranian folk song. Is this popular or traditional music?</p>
-		<img src="../data/Chart1-mid.png" style="width:15in">
+		<img src="../data/Chart1.png" style="width:15in">
 		<p style="margin-top:10px">There are two potential sources of error: <span class="neuralnet">overfitting</span> to the definition of 'pop' was one concern, as the library featured significantly more samples in that category than either of the others. Another concern is the nature of music - popular music is based upon what came before it, and much research has gone into the different ways in which aspects of traditional and art music can be identified in popular music.</p>
 	</div>
 </section>
