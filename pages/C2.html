@@ -7,25 +7,19 @@
 		img{
 			min-height:125px;
 			max-height:45%;
+			max-width:50%;
+			margin-left:25px;
+			float:right;
+			margin-top:25px;
 		}
 	</style>
 </head>
 <body>
-<img src="../data/Chart2.png">
-<p class="caption">Full test records are available on request.</p>
-<section class="genreID">
-	<h1>Initial Series</h1>
-	<div>
-		<p>The first series of test were largely homogenous in how effective they were, hovering around 75-80% accuracy.</p>
-		<p>Unfortunately, this level of accuracy, due to the biased nature of the sample set, is roughly what could be achieved by the neural network guessing 'popular' for every song in the dataset. This problem led to the creation of the Limited Series.</p>
-	</div>
-</section>
-<section class="genreID">
-	<h1>Limited Series</h1>
-	<div>
-		<p>The last nine tests (named "The120" and "The120Repeat") used a limited variant of the sample library, pulling 40 songs in each category at random and feeding them through in a variety of different manners.</p>
-		<p>The highest accuracy achieved was only 46.7%, but this is still better than the initial series- if it were guessing at random here, the success rate would be roughly 33%.</p>
-	</div>
-</section>
+<img src="../data/Chart1.png">
+<p>Overfitting proves to be a significant problem - the graph at right shows that identification of 'art' and 'tradition' failed nearly all of the time, when trained against a biased dataset.</p>
+
+<p>Alleviating this by limiting the size of the sample set allows other trends to come to light. Most notable of these is a trend towards <span class="genreID">more accuracy when using randomized samples</span> from within the songs, as opposed to samples from a fixed point. Shuffling these samples while training, to create an increase in the amount of coverage of any given song, increased accuracy from 5-20 percentage points.</p>
+<img src="../data/Chart4.png">
+<p>Even within the biased sample set, using these randomized samples increased accuracy, more than any change to the structure of the neural network did. Comparing the three windows mentioned above showed a minimum 5 percentage point increase in accuracy.</p>
 </body>
 </html>
