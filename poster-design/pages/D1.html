@@ -19,22 +19,20 @@
 	<h1>Training</h1>
 	<div>
 		<p>This <span class="neuralnet">neural network</span> took advantage of a more aggressive form of <span class="mir">windowing</span> than the last did.</p>
-		<p>Rather than read in a single sample from each file, the software reads in the entire file, splitting it into overlapping windows of variable size. (We generally used 1-second windows, with a half-second of overlap in each direction for thorough coverage.)</p>
-		<p>Once divided like this, and entire file can be fed in in sequential order, yielding a timeline of the entire song indicating where solos were occurring.</p>
+		<p>Rather than read in a single sample from each file, the software reads in the entire file, splitting it into overlapping windows of variable size.</p>
+		<p>Once divided like this, an entire file can be fed in in sequential order, yielding a timeline of the entire song indicating where solos were occurring.</p>
 	</div>
 </section>
 <section class="instID">
 	<h1>Analysis</h1>
 	<div>
-		<p>After feeding an entire file through the network, an array of <span class="neuralnet">softmax</span> results was created.</p>
-		<p>For example: <span class="code">[[0.01, 0.02, 0.90, 0.07], [0.03, 0.02, 0.89, 0.0.6], ...]</span></p>
-		<p>This was then fed through a function that converted it from a direct linear array into an array of ranges, formatted as:</p>
+		<p>After feeding an entire file through the network, an array of <span class="neuralnet">softmax</span> results was created: <span class="code">[[0.01, 0.02, 0.90, 0.07], [0.03, 0.02, 0.89, 0.0.6], ...]</span></p>
+		<p>This was then fed through a function that converted it from a direct linear array into a more manageable array of ranges, formatted as:</p>
 		<pre class="code">[{
        "start": 10,
        "stop": 15,
        "category": "vocal"
  }, ...]</pre>
- 	<p>Formatted as such, this data is much more manageable.</p>
 	</div>
 </section>
 </body>
