@@ -11,18 +11,12 @@
 	</style>
 </head>
 <body>
-<img src="../data/Chart3.png">
+<img src="../data/Chart5.png">
 <p class="caption">Full test records are available on request.</p>
 <section class="instID">
-	<h1>Samples</h1>
 	<div>
-		<p>The 'sample' series of tests, in which the <span class="neuralnet">network</span> was fed raw sample data, was tested with a variety of network layouts. Unfortunately, the highest accuracy achieved was only 45%.</p>
-	</div>
-</section>
-<section class="instID">
-	<h1>Fourier Transform</h1>
-	<div>
-		<p>Feeding the network data that had been passed through a <span class="mir">Fast Fourier Transform</span> gave lower overall accuracy, but a single test that reported 47% accuracy. Further comparison between the two methods is recommended.</p>
+		<p>The highest single-test accuracy was produced by running the input through a <span class="mir">Fast Fourier Transform</span> prior to feeding it into the neural network; however, separate testing of that one revealed it to be not nearly as accurate, and we suspect there was an error in the input that allowed it to overfit to the sound of a guitar playing.</p>
+		<p>Feeding the networks raw samples, without the intermediate step of an FFT, yielded higher average accuracy in detection, routinely outperforming the 'random guess' level of accuracy that the FFT tests produced.</p>
 	</div>
 </section>
 </body>
