@@ -69,6 +69,7 @@
 		font-size:50pt;
 		font-weight:normal;
 		float:left;
+		clear:left;
 		margin-top:0;
 		margin-right:.15in;
 		padding-right:.15in;
@@ -202,32 +203,7 @@
 	<div>
 		<h2>methods</h2>
 		<p>We broke song stems and mixes from MedleyDB (R. Bittner, J. Salamon, M. Tierney, M. Mauch, C. Cannam and J. P. Bello) into four categories: vocal solo, guitar solo, drum solo, and non-solo 'other.'</p>
-		
-		
-		<p>Based on the use of modern popular music, it was easy to find a small set of categories to use for sorting. Once again, we used <span class="instID">four categories</span>:</p>
-		<ul>
-			<li>Vocal solo</li>
-			<li>Guitar solo</li>
-			<li>Drum solo</li>
-			<li>Other (not a solo)</li>
-		</ul>
-	</div>
-	<div>
-		<h2>Data Set</h2>
-		<p>The data set was composed of samples from the <a class="citation" target="_blank" href="http://medleydb.weebly.com">MedleyDB (R. Bittner, J. Salamon, M. Tierney, M. Mauch, C. Cannam and J. P. Bello)</a>.</p>
-		<p>For ease of processing, <a href="../data/instlib.json" class="citation" target="_blank" download>a small JSON file</a> was created with references to the file locations and their proper categorizations.</p>
-		<h2>Training</h2>
-		<p>This <span class="neuralnet">neural network</span> took advantage of a more aggressive form of <span class="mir">windowing</span> than the last did.</p>
-		<p>Rather than read in a single sample from each file, the software reads in the entire file, splitting it into overlapping windows of variable size.</p>
-		<p>Once divided like this, an entire file can be fed in in sequential order, yielding a timeline of the entire song indicating where solos were occurring.</p>
-		<h2>Analysis</h2>
-		<p>After feeding an entire file through the network, an array of <span class="neuralnet">softmax</span> results was created: <span class="code">[[0.01, 0.02, 0.90, 0.07], [0.03, 0.02, 0.89, 0.0.6], ...]</span></p>
-		<p>This was then fed through a function that converted it from a direct linear array into a more manageable array of ranges, formatted as:</p>
-		<pre class="code">[{
-       "start": 10,
-       "stop": 15,
-       "category": "vocal"
- }, ...]</pre>
+		<p>By breaking the songs into <span class="mir">samples</span> consisting of 1-3 seconds, with .5-1.5 seconds of overlap, we were able to process entire songs into an array of categorization results. With that, we generated an array of start/stop times and their categories.</p>
 	</div>
 	<div>
 		<img src="../data/figure_2.png">
