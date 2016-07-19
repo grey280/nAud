@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="../styles/global.css">
+	<title>Training</title>
+	<style type="text/css">
+		section:first-of-type{
+			margin-top:6%;
+		}
+	</style>
+</head>
+<body>
+<section class="neuralnet">
+	<h1>Activation</h1>
+	<div>
+		<p>There are a variety of <span class="neuralnet">activation functions</span> available for any given neuron. Throughout, we used the Tanh function:</p>
+		<img src="../data/tanh.svg">
+		<p>For any given neuron, the output is the average of the inputs as fed through the activation function: each input goes through the tanh function, and their results are summed and then divided by their number.</p>
+	</div>
+</section>
+<section class="neuralnet">
+	<h1>Loss</h1>
+	<div>
+		<p>The main metric used while training the neural networks is the loss - the software attempts to minimize loss, rather than maximimize accuracy. In our software, the networks were configured to use categorical cross entropy as their loss function.</p>
+		<p>Thus, given <em>p</em> and <em>q</em> as the correct answers and the calculated answers, respectively, the <span class="neuralnet">cross entropy</span> is</p>
+		<img src="../data/crossentropy.svg">
+	</div>
+</section>
+<section class="neuralnet">
+	<h1>Variation</h1>
+	<div>
+		<p>During training, the software works to minimize the loss function. There are a variety of options for how exactly to do this, but we utilized <span class="neuralnet">stochastic gradient descent</span> - essentially limited randomization with attention paid to the loss at any given point. In basic terminology, the software changes the weights across the network by a small, random amount, and then runs the network again. If the loss has decreased, it will continue changing the weights in that direction; if it has increased, it will alter them in a different direction and try again.</p>
+	</div>
+</section>
+</body>
+</html>
