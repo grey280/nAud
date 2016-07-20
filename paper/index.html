@@ -33,23 +33,20 @@
 		font-size:60pt;
 	}
 	.leftlogo{
-		left:1.5in;
-		
+		left:1.15in;
+		height:auto;
 	}
 	#LSUlogo{
-		left:1.5in;
-		top:1in;
+		top:2in;
 	}
 	#LinfieldLogo{
-		left:1.45in;
-		top:2.5in;
-		height:auto;
+		top:3in;
 	}
 	#NSFlogo{
 		right:1.5in;
 		top:0in;
-		max-height:3.5in;	
-		max-width:3.5in;
+		height:3.5in;
+		width:3.5in;
 	}
 
 	h1{
@@ -151,11 +148,11 @@
 	}
 
 	#instID{
-		height:29.5in;
+		height:27in;
 	}
 	#references{
-		top:30in;
-		font-size:30pt;
+		top:27.5in;
+		font-size:28pt;
 	}
 	img + p{
 		margin-top:10px;
@@ -218,7 +215,7 @@
 		<h2 class="genreID">methods</h2>
 		<p class="beforeBlock">We split input into <span class="genreID">three categories:</span> art, popular, and traditional. For reading in a song from the library, we used three <span class="mir">windows:</span></p>
 		<img src="../data/figure_3.png" style="width:15in">
-
+		<p>Each window of samples was fed into the neural network, which attempted to categorize it into one of the three genres; all inputs were annotated with 'correct' answers, used for training.</p>
 		
 		
 	</div>
@@ -231,28 +228,25 @@
 		<img src="../data/Chart4.png" style="/*float:left; width:8in; margin-right:.25in*/">
 		
 	</div>
-	<div>
-		<h2 class="genreID">conclusion</h2>
-		<p class="">Identifying which of the <span title="Art music, popular music, or traditional music." class="mir">three categories</span> a song falls into is a difficult task at times. Christmas music is a great example of how difficult this can be: <a class="citation" title="Pentatonix - Carol of the Bells (YouTube)">Pentatonix' cover of <em>Carol of the Bells</em></a> is a three-year-old version of a song that was penned in 1914, which was itself based on an even older Ukranian folk song. Is this popular or traditional music?</p>
-	</div>
 </section>
 <section class="instID third" id="instID">
 	<h1 class="instID">instrument identification</h1>
 	<div>
 		<h2 class="instID">methods</h2>
-		<p>We broke song stems and mixes from MedleyDB (R. Bittner, J. Salamon, M. Tierney, M. Mauch, C. Cannam and J. P. Bello) into four categories: vocal solo, guitar solo, drum solo, and ensemble 'other.'</p>
-		<img src="../data/figure_2.png" style="float:right; width:12in;">
+		<p>We broke song stems and mixes into four categories: vocal solo, guitar solo, drum solo, and ensemble 'other.'</p>
+		<img src="../data/figure_2.png" style="float:right; width:10in;">
 		<p>By breaking the songs into <span class="mir">samples</span> consisting of 1-3 seconds, with .5-1.5 seconds of overlap, we were able to process entire songs into an array of categorization results. With that, we generated an array of start/stop times and their categories.</p>
 	</div>
 	
 	<div>
-		<h2 style="padding-bottom:.1in" class="instID">results</h2>
+		<h2 style="padding-bottom:.1in" class="instID">results</h2><p>We found that using raw samples, rather than FFT data, yielded higher overall accuracy.</p>
 		<img src="../data/Chart5.png" style="/*float:left; clear:left; width:10in; margin-right:.25in*/">
-		<p>We found that using raw samples, rather than FFT data, yielded higher overall accuracy (ignoring the outlier).</p>
+		
 	</div>
 	<div>
 		<h2 class="instID">conclusion</h2>
-		<p>Instrument identification remains an interesting problem, and one that we feel should be given further consideration. Increasing the size of the windows that the network was given yielded slight increases in accuracy, but we were unable to explore the extent to which this continues. Overall, we recommend further research with the aim of identifying which factors have the largest effect on accuracy.</p>
+		<p>We're gonna give this two lines worth of conclusion and we're gonna be happy about it.</p>
+		<!-- for reference, any longer than that, and it's three lines. too bad! -->
 	</div>
 </section>
 <section class="poster third" id="references">
@@ -260,7 +254,7 @@
 	Chollet, F. <em>Keras</em>, 2015, https://github.com/fchollet/keras/<br />
 	Li, T., Chan, A., Chun, A.. <em>"Automatic Musical Pattern Feature Extraction Using Convolutional Neural Network"</em><br />
 	R. Bittner, J. Salamon, M. Tierney, M. Mauch, C. Cannam and J. P. Bello, <em>"MedleyDB: A Multitrack Dataset for Annotation-Intensive MIR Research"</em>, in 15th International Society for Music Information Retrieval Conference, Taipei, Taiwan, Oct. 2014.<br />
-	Work supported by the National Science Foundation, award OCI-1560410. Additional support from the Center for Computation &amp; Technology at LSU.
+	This material is based upon work supported by the National Science Foundation under award OCI-1560410 with additional support from the Center for Computation &amp; Technology at Louisiana State University.
 </section>
 </body>
 </html>
