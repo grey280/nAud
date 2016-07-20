@@ -151,7 +151,7 @@
 		height:27in;
 	}
 	#references{
-		top:27.5in;
+		top:28in;
 		font-size:28pt;
 	}
 	img + p{
@@ -166,7 +166,6 @@
 	ul{
 		margin-top:0;
 	}
-
 	img{
 		float:left;
 		width:15in;
@@ -175,7 +174,6 @@
 </style>
 </head>
 <body>
-<!-- <div id="forceheight" style="position:absolute; height:5px; width:5px; top:34.5in; left:0px; background-color:red"></div> -->
 <header>
 	<img src="../data/cct.jpg" alt="Louisiana State University" id="LSUlogo" class="leftlogo">
 	<img src="../data/linfield.gif" alt="Linfield College" id="LinfieldLogo" class="leftlogo">
@@ -216,17 +214,12 @@
 		<p class="beforeBlock">We split input into <span class="genreID">three categories:</span> art, popular, and traditional. For reading in a song from the library, we used three <span class="mir">windows:</span></p>
 		<img src="../data/figure_3.png" style="width:15in">
 		<p>Each window of samples was fed into the neural network, which attempted to categorize it into one of the three genres; all inputs were annotated with 'correct' answers, used for training.</p>
-		
-		
 	</div>
 	<div>
 		<h2 class="genreID">results</h2>
-		
 		<p>Overfitting proves to be a significant problem, but adjusting for it shows that randomizing samples within the song increases accuracy - though, at the same time, it decreased precision.</p>
 		<img src="../data/Chart1.png" style="/*float:right; width:8in; margin-left:.25in*/">
-		
 		<img src="../data/Chart4.png" style="/*float:left; width:8in; margin-right:.25in*/">
-		
 	</div>
 </section>
 <section class="instID third" id="instID">
@@ -235,18 +228,13 @@
 		<h2 class="instID">methods</h2>
 		<p>We broke song stems and mixes into four categories: vocal solo, guitar solo, drum solo, and ensemble 'other.'</p>
 		<img src="../data/figure_2.png" style="float:right; width:10in;">
-		<p>By breaking the songs into <span class="mir">samples</span> consisting of 1-3 seconds, with .5-1.5 seconds of overlap, we were able to process entire songs into an array of categorization results. With that, we generated an array of start/stop times and their categories.</p>
+		<p>We broke each song into <span class="mir">windows</span> of 1-3 seconds, with .5-1.5 seconds of overlap. In training, four files (one from each category) were read in concurrently, randomizing the input to avoid overfitting. In evaluation, we fed an entire song through sequentially, yielding an array of categorization results. With that, we generated an array of start/stop times and their categories. The graph above is a visual representation of this result.</p>
 	</div>
 	
 	<div>
 		<h2 style="padding-bottom:.1in" class="instID">results</h2><p>We found that using raw samples, rather than FFT data, yielded higher overall accuracy.</p>
 		<img src="../data/Chart5.png" style="/*float:left; clear:left; width:10in; margin-right:.25in*/">
 		
-	</div>
-	<div>
-		<h2 class="instID">conclusion</h2>
-		<p>We're gonna give this two lines worth of conclusion and we're gonna be happy about it.</p>
-		<!-- for reference, any longer than that, and it's three lines. too bad! -->
 	</div>
 </section>
 <section class="poster third" id="references">
