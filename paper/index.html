@@ -46,6 +46,8 @@
 		right:1.5in;
 		top:0in;
 	}
+
+
 	section{
 		width:15in;
 		margin-left:.5in;
@@ -63,6 +65,10 @@
 	section.third{
 		right:.5in;
 	}
+	p{
+		margin-bottom:.1in;
+		margin-top:.1in;
+	}
 
 	section h1{
 		width:100%;
@@ -77,7 +83,7 @@
 		font-weight:normal;
 		float:left;
 		clear:left;
-		margin-top:0;
+		margin-top:.25in;
 		margin-right:.15in;
 		padding-right:.15in;
 		margin-bottom:.1in;
@@ -181,13 +187,14 @@
 	<img src="../data/qr.png" style="width:5in; margin-right:.25in">
 	<p>Scan the QR code for the more verbose digital version of this poster.</p>
 	<p>Music is rich in information - from things like what key and time signature are being played in up to the sociocultural context in which the lyrics were written.</p>
-	<p>The field of music information retrieval exists to provide musicologists with automated tools. Complex tasks like <span class="genreID">genre recognition</span> remain out of reach. To solve this problem, we use neural networks: a form of <span class="neuralnet">machine learning</span> that consist of <span class="neuralnet">nodes</span> connected by <span class="neuralnet">weighted edges.</span> Input is propagated through the network from node to node along those edges.</p><!-- TODO: note about deep learning -->
+	<p>The field of music information retrieval exists to provide musicologists with automated tools. Complex tasks like <span class="genreID">genre recognition</span> remain out of reach. To solve this problem, we use neural networks: a form of <span class="neuralnet">machine learning</span> that consist of <span class="neuralnet">nodes</span> connected by <span class="neuralnet">weighted edges.</span> Input is propagated through the network from node to node along those edges.</p>
 </section>
 <section class="neuralnet first" id="neurnet">
 	<h1 class="neuralnet">neural networks</h1>
 	<div>
 		<h2 class="neuralnet">structure</h2>
 		<p>Neural networks are based on the structure of the human mind: nodes serve as neurons, and weighted lines between them alter the input values as they flow through the network.</p>
+		<p>A <span class="neuralnet">deep neural network</span> is one with several <span class="neuralnet">hidden layers</span>. (Any layer other than the input and output layers is considered 'hidden.')</p>
 		<img src="../data/NN.png" style="float:right; width:10in">
 	</div>
 	<div>
@@ -205,15 +212,16 @@
 	<h1 class="genreID">genre identification</h1>
 	<div>
 		<h2 class="genreID">methods</h2>
-		<p>Based on <a class="citation" >"Automatic Musical Pattern Feature Extraction Using Convolutional Neural Network" (Li, T., Chan, A., Chun, A..)</a>, we wanted to split music into at most four categories. We opted to use Philip Tagg's axiomatic triangle, giving us <span class="genreID">three categories:</span> art, popular, or traditional.</p>
-		<p class="beforeBlock">Three <span class="mir">windows</span> were used:</p>
+		<p class="beforeBlock">We split input into <span class="genreID">three categories:</span> art, popular, and traditional. For reading in a song from the library, we used three <span class="mir">windows:</span></p>
 		<img src="../data/figure_3.png" style="width:15in">
+
+		
 		
 	</div>
 	<div>
 		<h2 class="genreID">results</h2>
 		
-		<p>Overfitting proves to be a significant problem, but adjusting for it shows that randomizing samples within the song increases accuracy.</p>
+		<p>Overfitting proves to be a significant problem, but adjusting for it shows that randomizing samples within the song increases accuracy - though, at the same time, it decreased precision.</p>
 		<img src="../data/Chart1.png" style="/*float:right; width:8in; margin-left:.25in*/">
 		
 		<img src="../data/Chart4.png" style="/*float:left; width:8in; margin-right:.25in*/">
