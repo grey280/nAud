@@ -8,7 +8,7 @@
 		width:48in;
 		font-family:Avenir;
 		position:relative;
-		font-size:30pt;
+		font-size:38pt;
 	}
 	header{
 		text-align:center;
@@ -178,28 +178,27 @@
 </header>
 <section class="poster first" id="introduction">
 	<h1 class="poster">introduction</h1>
-	<img src="../data/qr.png" style="width:6in; margin-right:.25in">
+	<img src="../data/qr.png" style="width:5in; margin-right:.25in">
 	<p>Scan the QR code for the more verbose digital version of this poster.</p>
-	<p>Neural networks are a form of <span class="neuralnet">machine learning</span> that consist of <span class="neuralnet">nodes</span> connected by <span class="neuralnet">weighted edges.</span> Input goes in as floating-point numbers, and is propagated through the network from node to node along those edges.</p>
 	<p>Music is rich in information - from things like what key and time signature are being played in up to the sociocultural context in which the lyrics were written.</p>
-	<p>The field of music information retrieval exists to provide musicologists with automated tools. Complex tasks, though, remain out of reach. There is no algorithm to identify the <span class="genreID">genre</span> of a piece, and no machine can identify which <span class="instID">instrument</span> is playing as easily as a human can.</p>
+	<p>The field of music information retrieval exists to provide musicologists with automated tools. Complex tasks like <span class="genreID">genre recognition</span> remain out of reach. To solve this problem, we use neural networks: a form of <span class="neuralnet">machine learning</span> that consist of <span class="neuralnet">nodes</span> connected by <span class="neuralnet">weighted edges.</span> Input is propagated through the network from node to node along those edges.</p><!-- TODO: note about deep learning -->
 </section>
 <section class="neuralnet first" id="neurnet">
 	<h1 class="neuralnet">neural networks</h1>
 	<div>
 		<h2 class="neuralnet">structure</h2>
 		<p>Neural networks are based on the structure of the human mind: nodes serve as neurons, and weighted lines between them alter the input values as they flow through the network.</p>
-		<img src="../data/NN.png">
+		<img src="../data/NN.png" style="float:right; width:10in">
 	</div>
 	<div>
 		
 		<h2 class="neuralnet">training</h2>
 		<p>Neural networks are an alternative to traditional programming. Instead of writing an algorithm yourself, you provide training data - inputs, and the output expected: <span class="code">([0, 821, 1643,...],"art")</span></p>
-		<p>The software uses <span class="neuralnet">stochastic gradient descent</span> to minimize the <span class="neuralnet">cross-entropy</span> of the correct answers versus the calculated answers.</p>
+		<p>The software uses <span class="neuralnet">stochastic gradient descent</span> to minimize the <span class="neuralnet">cross-entropy</span> of the correct versus the calculated answers.</p>
 	</div>
 	<div>
 		<h2 class="neuralnet">output</h2>
-		<p>The output can be either a categorization ('2') or a <span class="neuralnet">softmax</span> ('[0.2, 0.2, 0.6]'). We chose to use softmax throughout.</p>
+		<p>The output can be either a direct categorization or a <span class="neuralnet">softmax</span> (weighted probability distribution). We chose to use softmax throughout.</p>
 	</div>
 </section>
 <section class="genreID second" id="genreID">
@@ -229,7 +228,7 @@
 	<h1 class="instID">instrument identification</h1>
 	<div>
 		<h2 class="instID">methods</h2>
-		<p>We broke song stems and mixes from MedleyDB (R. Bittner, J. Salamon, M. Tierney, M. Mauch, C. Cannam and J. P. Bello) into four categories: vocal solo, guitar solo, drum solo, and non-solo 'other.'</p>
+		<p>We broke song stems and mixes from MedleyDB (R. Bittner, J. Salamon, M. Tierney, M. Mauch, C. Cannam and J. P. Bello) into four categories: vocal solo, guitar solo, drum solo, and ensemble 'other.'</p>
 		<img src="../data/figure_2.png" style="float:right; width:12in;">
 		<p>By breaking the songs into <span class="mir">samples</span> consisting of 1-3 seconds, with .5-1.5 seconds of overlap, we were able to process entire songs into an array of categorization results. With that, we generated an array of start/stop times and their categories.</p>
 	</div>
@@ -250,7 +249,7 @@
 		<li>Chollet, F. <em>Keras</em>, 2015, https://github.com/fchollet/keras/</li>
 		<li>Li, T., Chan, A., Chun, A.. <em>"Automatic Musical Pattern Feature Extraction Using Convolutional Neural Network"</em></li>
 		<li>R. Bittner, J. Salamon, M. Tierney, M. Mauch, C. Cannam and J. P. Bello, <em>"MedleyDB: A Multitrack Dataset for Annotation-Intensive MIR Research"</em>, in 15th International Society for Music Information Retrieval Conference, Taipei, Taiwan, Oct. 2014.</li>
-		<li>Work supported by the National Science Foundation, award OCI-1263236. Additional support from the Center for Computation &amp; Technology at LSU.</li>
+		<li>Work supported by the National Science Foundation, award OCI-1560410. Additional support from the Center for Computation &amp; Technology at LSU.</li>
 	</ul>
 </section>
 </body>
