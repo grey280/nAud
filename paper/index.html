@@ -17,12 +17,10 @@
 	}
 	header img{
 		position:absolute;
-		/*max-width:5.5in;*/
 		top:.5in;
 		height:auto;
 	}
 	header h1, header h2{
-		/*margin-left:4.5in;*/
 		margin-left:1in;
 		margin-right:4.5in;
 		font-weight:normal;
@@ -34,7 +32,6 @@
 		font-size:60pt;
 	}
 	.leftlogo{
-		/*right:1.15in;*/
 		right:4.75in;
 		width:8in;
 		height:auto;
@@ -51,8 +48,6 @@
 		top:0in;
 		height:3.5in;
 		width:3.5in;
-		/*height:2in;
-		width:auto;*/
 	}
 
 	h1{
@@ -203,7 +198,6 @@
 		<img src="../data/NN.png" style="float:right; width:10in">
 	</div>
 	<div>
-		
 		<h2 class="neuralnet">training</h2>
 		<p>Neural networks are an alternative to traditional programming. Instead of writing an algorithm yourself, you provide training data - inputs, and the output expected: <span class="code">([0, 821, 1643,...],"art")</span></p>
 		<p>The software uses <span class="neuralnet">stochastic gradient descent</span> to minimize the <span class="neuralnet">cross-entropy</span> of the correct versus the calculated answers.</p>
@@ -236,11 +230,9 @@
 		<img src="../data/figure_2.png" style="float:right; width:10in;">
 		<p>We broke each song into <span class="mir">windows</span> of 1-3 seconds, with .5-1.5 seconds of overlap. In training, four files (one from each category) were read in concurrently, randomizing the input to avoid overfitting. In evaluation, we fed an entire song through sequentially, yielding an array of categorization results. With that, we generated an array of start/stop times and their categories. The graph above is a visual representation of this result.</p>
 	</div>
-	
 	<div>
 		<h2 style="padding-bottom:.1in" class="instID">results</h2><p>We found that using raw samples, rather than FFT data, yielded higher overall accuracy.</p>
 		<img src="../data/Chart5.png" style="/*float:left; clear:left; width:10in; margin-right:.25in*/">
-		
 	</div>
 </section>
 <section class="poster third" id="references">
