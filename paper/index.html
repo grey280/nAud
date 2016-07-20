@@ -17,9 +17,9 @@
 	}
 	header img{
 		position:absolute;
-		max-height:3.5in;	
-		max-width:3.5in;
+		max-width:5.5in;
 		top:.5in;
+		height:auto;
 	}
 	header h1, header h2{
 		margin-left:4.5in;
@@ -32,6 +32,10 @@
 	header h2{
 		font-size:60pt;
 	}
+	.leftlogo{
+		left:1.5in;
+		
+	}
 	#LSUlogo{
 		left:1.5in;
 		top:1in;
@@ -39,15 +43,18 @@
 	#LinfieldLogo{
 		left:1.45in;
 		top:2.5in;
-		height:.5in;
-		max-width:3.53in;
+		height:auto;
 	}
 	#NSFlogo{
 		right:1.5in;
 		top:0in;
+		max-height:3.5in;	
+		max-width:3.5in;
 	}
 
-
+	h1{
+		text-transform:capitalize;
+	}
 	section{
 		width:15in;
 		margin-left:.5in;
@@ -148,6 +155,7 @@
 	}
 	#references{
 		top:30in;
+		font-size:30pt;
 	}
 	img + p{
 		margin-top:10px;
@@ -167,17 +175,13 @@
 		width:15in;
 		margin-bottom:.1in;
 	}
-
-	#references ul{
-		font-size:20pt;
-	}
 </style>
 </head>
 <body>
 <!-- <div id="forceheight" style="position:absolute; height:5px; width:5px; top:34.5in; left:0px; background-color:red"></div> -->
 <header>
-	<img src="../data/lsu.png" alt="Louisiana State University" id="LSUlogo">
-	<img src="../data/linfield.gif" alt="Linfield College" id="LinfieldLogo">
+	<img src="../data/cct.jpg" alt="Louisiana State University" id="LSUlogo" class="leftlogo">
+	<img src="../data/linfield.gif" alt="Linfield College" id="LinfieldLogo" class="leftlogo">
 	<h1>neural audio: <span class="mir">music information retrieval</span> using <span class="neuralnet">deep neural networks</span></h1>
 	<h2>Grey Patterson (Linfield, CCT), Andrew Pfalz, and Jesse Allison (LSU School of Music/CCT)</h2>
 	<img src="../data/nsf.png" alt="National Science Foundation" id="NSFlogo">
@@ -253,12 +257,10 @@
 </section>
 <section class="poster third" id="references">
 	<h1 class="poster">references</h1>
-	<ul>
-		<li>Chollet, F. <em>Keras</em>, 2015, https://github.com/fchollet/keras/</li>
-		<li>Li, T., Chan, A., Chun, A.. <em>"Automatic Musical Pattern Feature Extraction Using Convolutional Neural Network"</em></li>
-		<li>R. Bittner, J. Salamon, M. Tierney, M. Mauch, C. Cannam and J. P. Bello, <em>"MedleyDB: A Multitrack Dataset for Annotation-Intensive MIR Research"</em>, in 15th International Society for Music Information Retrieval Conference, Taipei, Taiwan, Oct. 2014.</li>
-		<li>Work supported by the National Science Foundation, award OCI-1560410. Additional support from the Center for Computation &amp; Technology at LSU.</li>
-	</ul>
+	Chollet, F. <em>Keras</em>, 2015, https://github.com/fchollet/keras/<br />
+	Li, T., Chan, A., Chun, A.. <em>"Automatic Musical Pattern Feature Extraction Using Convolutional Neural Network"</em><br />
+	R. Bittner, J. Salamon, M. Tierney, M. Mauch, C. Cannam and J. P. Bello, <em>"MedleyDB: A Multitrack Dataset for Annotation-Intensive MIR Research"</em>, in 15th International Society for Music Information Retrieval Conference, Taipei, Taiwan, Oct. 2014.<br />
+	Work supported by the National Science Foundation, award OCI-1560410. Additional support from the Center for Computation &amp; Technology at LSU.
 </section>
 </body>
 </html>
