@@ -153,6 +153,7 @@
 	img{
 		float:left;
 		width:15in;
+		margin-bottom:.1in;
 	}
 </style>
 </head>
@@ -196,7 +197,7 @@
 	<h1 class="genreID">genre identification</h1>
 	<div>
 		<h2 class="genreID">methods</h2>
-		<p>Based on <a class="citation" >"Automatic Musical Pattern Feature Extraction Using Convolutional Neural Network" (Li, T., Chan, A., Chun, A..)</a>, we wanted to split music into at most four categories. For this, we opted to use Philip Tagg's axiomatic triangle, giving us <span class="genreID">three categories:</span> art, popular, or traditional.</p>
+		<p>Based on <a class="citation" >"Automatic Musical Pattern Feature Extraction Using Convolutional Neural Network" (Li, T., Chan, A., Chun, A..)</a>, we wanted to split music into at most four categories. We opted to use Philip Tagg's axiomatic triangle, giving us <span class="genreID">three categories:</span> art, popular, or traditional.</p>
 		<p class="beforeBlock">Three <span class="mir">windows</span> were used:</p>
 		<img src="../data/figure_3.png" style="width:15in">
 		
@@ -226,9 +227,8 @@
 	
 	<div>
 		<h2 style="padding-bottom:.1in" class="instID">results</h2>
-		<img src="../data/Chart5.png" style="float:left; clear:left; width:10in; margin-right:.25in">
-		<p>The highest single-test accuracy was produced by running the input through a <span class="mir">Fast Fourier Transform</span> prior to feeding it into the neural network; however, separate testing of that one revealed it to be not nearly as accurate, and we suspect there was an error in the input that allowed it to overfit to the sound of a guitar playing.</p>
-		<p>Feeding the networks raw samples, without the intermediate step of an FFT, yielded higher average accuracy in detection, routinely outperforming the 'random guess' level of accuracy that the FFT tests produced.</p>
+		<img src="../data/Chart5.png" style="/*float:left; clear:left; width:10in; margin-right:.25in*/">
+		<p>We found that using raw samples, rather than FFT data, yielded higher overall accuracy (ignoring the outlier).</p>
 	</div>
 	<div>
 		<h2 class="instID">conclusion</h2>
