@@ -149,6 +149,11 @@
 	ul{
 		margin-top:0;
 	}
+
+	img{
+		float:left;
+		width:15in;
+	}
 </style>
 </head>
 <body>
@@ -161,7 +166,7 @@
 </header>
 <section class="poster first" id="introduction">
 	<h1 class="poster">introduction</h1>
-	<img src="../data/qr.png" style="float:left; width:6in; margin-right:.25in">
+	<img src="../data/qr.png" style="width:6in; margin-right:.25in">
 	<p>Scan the QR code for the more verbose digital version of this poster.</p>
 	<p>Neural networks are a form of <span class="neuralnet">machine learning</span> that consist of <span class="neuralnet">nodes</span> connected by <span class="neuralnet">weighted edges.</span> Input goes in as floating-point numbers, and is propagated through the network from node to node along those edges.</p>
 	<p>Music is rich in information - from things like what key and time signature are being played in up to the sociocultural context in which the lyrics were written.</p>
@@ -192,24 +197,22 @@
 	<div>
 		<h2 class="genreID">methods</h2>
 		<p>Based on <a class="citation" >"Automatic Musical Pattern Feature Extraction Using Convolutional Neural Network" (Li, T., Chan, A., Chun, A..)</a>, we wanted to split music into at most four categories. For this, we opted to use Philip Tagg's axiomatic triangle, giving us <span class="genreID">three categories:</span> art, popular, or traditional.</p>
-		<p>Our dataset was composed of the iTunes library of a member of the research team, but was later expanded through the use of open-domain recordings of 'art' and 'traditional' music. 10-25% of the data was used as <span class="neuralnet">validation data.</span></p>
 		<p class="beforeBlock">Three <span class="mir">windows</span> were used:</p>
 		<img src="../data/figure_3.png" style="width:15in">
-		<p>A variety of neural network structures were attempted, with the resulting models and weights stored and the training-reported accuracies logged.</p>
+		
 	</div>
 	<div>
 		<h2 class="genreID">results</h2>
 		
-		<p>Overfitting proves to be a significant problem - the graph at right shows that identification of 'art' and 'tradition' failed nearly all of the time, when trained against a biased dataset.</p>
-		<img src="../data/Chart1.png" style="float:right; width:8in; margin-left:.25in">
-		<p class="beforeBlock">Alleviating this by limiting the size of the sample set allows other trends to come to light. Most notable of these is a trend towards <span class="genreID">more accuracy when using randomized samples</span> from within the songs, as opposed to samples from a fixed point. Shuffling these samples while training, to create an increase in the amount of coverage of any given song, increased accuracy from 5-20 percentage points.</p>
-		<img src="../data/Chart4.png" style="float:left; width:8in; margin-right:.25in">
-		<p>Even within the biased sample set, using these randomized samples increased accuracy, more than any change to the structure of the neural network did. Comparing the three windows mentioned above showed a minimum 5 percentage point increase in accuracy.</p>
+		<p>Overfitting proves to be a significant problem, but adjusting for it shows that randomizing samples within the song increases accuracy.</p>
+		<img src="../data/Chart1.png" style="/*float:right; width:8in; margin-left:.25in*/">
+		
+		<img src="../data/Chart4.png" style="/*float:left; width:8in; margin-right:.25in*/">
+		
 	</div>
 	<div>
 		<h2 class="genreID">conclusion</h2>
 		<p class="">Identifying which of the <span title="Art music, popular music, or traditional music." class="mir">three categories</span> a song falls into is a difficult task at times. Christmas music is a great example of how difficult this can be: <a class="citation" title="Pentatonix - Carol of the Bells (YouTube)">Pentatonix' cover of <em>Carol of the Bells</em></a> is a three-year-old version of a song that was penned in 1914, which was itself based on an even older Ukranian folk song. Is this popular or traditional music?</p>
-		<p>Another source of error could be the nature of music - popular music is based upon what came before it, and much research has gone into the different ways in which aspects of traditional and art music can be identified in popular music.</p>
 	</div>
 </section>
 <section class="instID third" id="instID">
@@ -217,7 +220,7 @@
 	<div>
 		<h2 class="instID">methods</h2>
 		<p>We broke song stems and mixes from MedleyDB (R. Bittner, J. Salamon, M. Tierney, M. Mauch, C. Cannam and J. P. Bello) into four categories: vocal solo, guitar solo, drum solo, and non-solo 'other.'</p>
-		<img src="../data/figure_2.png" style="float:right;">
+		<img src="../data/figure_2.png" style="float:right; width:10in;">
 		<p>By breaking the songs into <span class="mir">samples</span> consisting of 1-3 seconds, with .5-1.5 seconds of overlap, we were able to process entire songs into an array of categorization results. With that, we generated an array of start/stop times and their categories, which can then be passed through a visualization utility to produce graphs as above.</p>
 	</div>
 	
