@@ -176,21 +176,19 @@
 <section class="neuralnet first" id="neurnet">
 	<h1 class="neuralnet">neural networks</h1>
 	<div>
-		<h2 class="neuralnet">input</h2>
-		<p>Neural networks are algorithms: they have inputs and outputs, and do something to the input to yield the output. For audio processing, this input can be either <span class="mir">audio samples</span> or <span class="mir">Fast Fourier Transform data</span>. We elected to use raw audio samples throughout.</p>
-		<p>The inputs are <span class="mir">windows</span> of a fixed length: a set number of samples being fed in.</p>
+		<h2 class="neuralnet">structure</h2>
+		<p>Neural networks are based on the structure of the human mind: nodes serve as neurons, and weighted lines between them alter the input values as they flow through the network.</p>
+		<img src="../data/NN.png">
 	</div>
 	<div>
+		
 		<h2 class="neuralnet">training</h2>
 		<p>Neural networks are an alternative to traditional programming. Instead of writing an algorithm yourself, you provide training data - inputs, and the output expected: <span class="code">([0, 821, 1643,...],"art")</span></p>
-		<p>The neural network itself is a series of <span class="neuralnet">layers</span>, each one consisting of one or more <span class="neuralnet">neurons</span>. Each neuron can have many inputs, and a single output that can be sent along to many other neurons. As a number moves from one neuron to another, it is altered by the <span class="neuralnet">weight</span> of that neuron.</p>
-		<p>The software takes the inputs, runs them through a network with randomly-generated weights, then changes all the weights a bit and tries again.If it is closer to the right answer, it will keep changing the weights in that direction; if it got worse, it will go in a different direction. This is <span class="neuralnet">Stochastic Gradient Descent</span>.</p>
+		<p>The software uses <span class="neuralnet">stochastic gradient descent</span> to minimize the <span class="neuralnet">cross-entropy</span> of the correct answers versus the calculated answers.</p>
 	</div>
 	<div>
 		<h2 class="neuralnet">output</h2>
-		<p>The output of the <span class="neuralnet">neural network</span> can take a few different forms, depending on what is desired.</p>
-		<p>There is the <span class="neuralnet">categorization</span>, which will taken an input and return the number of the category. Alternately, a <span class="neuralnet">softmax</span> layer will return the neural network's probabilities for <em>all</em> of the categories.</p>
-		<p>Both give the same result - it is probably category 2 - but with the softmax layer it is visible how sure of the decision the neural network is. Because of this additional information, we used softmax outputs throughout.</p>
+		<p>The output can be either a categorization ('2') or a <span class="neuralnet">softmax</span> ('[0.2, 0.2, 0.6]'). We chose to use softmax throughout.</p>
 	</div>
 </section>
 <section class="genreID second" id="genreID">
@@ -222,7 +220,7 @@
 		<h2 class="instID">methods</h2>
 		<p>We broke song stems and mixes from MedleyDB (R. Bittner, J. Salamon, M. Tierney, M. Mauch, C. Cannam and J. P. Bello) into four categories: vocal solo, guitar solo, drum solo, and non-solo 'other.'</p>
 		<img src="../data/figure_2.png" style="float:right; width:10in;">
-		<p>By breaking the songs into <span class="mir">samples</span> consisting of 1-3 seconds, with .5-1.5 seconds of overlap, we were able to process entire songs into an array of categorization results. With that, we generated an array of start/stop times and their categories, which can then be passed through a visualization utility to produce graphs as above.</p>
+		<p>By breaking the songs into <span class="mir">samples</span> consisting of 1-3 seconds, with .5-1.5 seconds of overlap, we were able to process entire songs into an array of categorization results. With that, we generated an array of start/stop times and their categories.</p>
 	</div>
 	
 	<div>
