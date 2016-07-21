@@ -1,0 +1,82 @@
+Greys-MacBook-Pro:nAud greypatterson$ python sampleReadKeras.py 
+Using Theano backend.
+Start: read plist
+End: read plist
+Dataset built.
+Test 1 of 3
+Model and SGD prepared.
+Loading tracks: [====================] 93/93 complete    
+Epoch 1/50
+16/16 [==============================] - 48s - loss: 1.8361 - acc: 0.5000 - val_loss: 7.1598 - val_acc: 0.4000
+Epoch 2/50
+16/16 [==============================] - 35s - loss: 6.3369 - acc: 0.5625 - val_loss: 12.7062 - val_acc: 0.2000
+Epoch 3/50
+16/16 [==============================] - 30s - loss: 6.3350 - acc: 0.5625 - val_loss: 11.2827 - val_acc: 0.3000
+Epoch 4/50
+16/16 [==============================] - 30s - loss: 4.0295 - acc: 0.7500 - val_loss: 8.7570 - val_acc: 0.3000
+Epoch 5/50
+16/16 [==============================] - 30s - loss: 9.0664 - acc: 0.4375 - val_loss: 8.0590 - val_acc: 0.5000
+Fit complete. Preparing to test.
+Loading test tracks: [====================] 30/30 complete    
+30/30 [==============================] - 0s     
+
+Test 1 of 3 complete. Loss: 11.829528999328613. Accuracy: 26.666666964689888%
+Finished writing model to disk.
+Finished writing weights to disk.
+Test 2 of 3
+Model and SGD prepared.
+Loading tracks: [====================] 93/93 complete    
+Epoch 1/50
+16/16 [==============================] - 30s - loss: 4.7654 - acc: 0.1875 - val_loss: 7.8211 - val_acc: 0.4000
+Epoch 2/50
+16/16 [==============================] - 30s - loss: 10.3403 - acc: 0.3125 - val_loss: 11.9682 - val_acc: 0.2000
+Epoch 3/50
+16/16 [==============================] - 30s - loss: 7.3983 - acc: 0.4375 - val_loss: 11.2946 - val_acc: 0.3000
+Epoch 4/50
+16/16 [==============================] - 31s - loss: 9.1624 - acc: 0.3750 - val_loss: 11.2828 - val_acc: 0.3000
+Epoch 5/50
+16/16 [==============================] - 31s - loss: 9.5897 - acc: 0.3750 - val_loss: 8.0591 - val_acc: 0.5000
+Fit complete. Preparing to test.
+Loading test tracks: [====================] 30/30 complete    
+30/30 [==============================] - 0s     
+
+Test 2 of 3 complete. Loss: 11.730701382954916. Accuracy: 26.666667064030964%
+Finished writing model to disk.
+Finished writing weights to disk.
+Test 3 of 3
+Model and SGD prepared.
+Loading tracks: [====================] 93/93 complete    
+Epoch 1/50
+16/16 [==============================] - 31s - loss: 5.2488 - acc: 0.1250 - val_loss: 8.1286 - val_acc: 0.3000
+Epoch 2/50
+16/16 [==============================] - 29s - loss: 6.6994 - acc: 0.5000 - val_loss: 10.1814 - val_acc: 0.3000
+Epoch 3/50
+16/16 [==============================] - 31s - loss: 9.1719 - acc: 0.3750 - val_loss: 11.2827 - val_acc: 0.3000
+Epoch 4/50
+16/16 [==============================] - 31s - loss: 8.5185 - acc: 0.4375 - val_loss: 8.6743 - val_acc: 0.4000
+Epoch 5/50
+16/16 [==============================] - 31s - loss: 10.7366 - acc: 0.3125 - val_loss: 6.4543 - val_acc: 0.6000
+Epoch 6/50
+16/16 [==============================] - 30s - loss: 10.4104 - acc: 0.3125 - val_loss: 3.2236 - val_acc: 0.8000
+Epoch 7/50
+16/16 [==============================] - 30s - loss: 10.0738 - acc: 0.3750 - val_loss: 8.0590 - val_acc: 0.5000
+Epoch 8/50
+16/16 [==============================] - 29s - loss: 10.0738 - acc: 0.3750 - val_loss: 8.0590 - val_acc: 0.5000
+Epoch 9/50
+16/16 [==============================] - 33s - loss: 10.0783 - acc: 0.3750 - val_loss: 8.8738 - val_acc: 0.4000
+Epoch 10/50
+16/16 [==============================] - 32s - loss: 10.0738 - acc: 0.3750 - val_loss: 10.1225 - val_acc: 0.3000
+Fit complete. Preparing to test.
+Loading test tracks: [====================] 30/30 complete    
+30/30 [==============================] - 0s     
+
+Test 3 of 3 complete. Loss: 6.985367933909099. Accuracy: 56.66666785875957%
+Finished writing model to disk.
+Finished writing weights to disk.
+
+Test 1 of 3 complete. Loss: 11.829528999328613. Accuracy: 26.666666964689888%
+
+Test 2 of 3 complete. Loss: 11.730701382954916. Accuracy: 26.666667064030964%
+
+Test 3 of 3 complete. Loss: 6.985367933909099. Accuracy: 56.66666785875957%
+Greys-MacBook-Pro:nAud greypatterson$ 
