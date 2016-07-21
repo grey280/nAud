@@ -104,6 +104,7 @@ class Dataset:
 	def get_songs(self):
 		while True:
 			self.start += 1
+			print("\nget_songs with self.start = {} (/{})".format(self.start, len(self.locations)))
 			if self.start >= len(self.locations)+2:
 				self.start = 0
 			location = self.locations[self.start]
