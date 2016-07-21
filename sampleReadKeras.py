@@ -17,11 +17,11 @@ import gdataset 		as ds
 log_level = 2 							# 0: silent, 1: errors only, 2: normal, 3: verbose
 
 ## Neural Network settings
-batch_size = 16
+batch_size = 16**2
 epoch_count = 50
 data_point_count = 0 					# number of data points to use for training; set to 0 for 'all'
 evaluation_data_point_count = 0 		# number of data points to evaluate against; set to 0 for 'all'
-evaluation_split = 0.75 				# amount of dataset to use for training - in [0,1]. Default 0.75
+evaluation_split = 0.8 					# amount of dataset to use for training - in [0,1]. Default 0.75
 shuffle_at_epoch = True 				# shuffle the dataset at each epoch?
 NN_validation_split = 0.1 				# fraction of data to be held out as validation data, 0.<x<1
 early_stopping_patience = 3 			# how many epochs without improvement it'll go before stopping
@@ -39,10 +39,10 @@ sample_duration = 15					# seconds of sample to read ((start_point+sample_durati
 do_random_parse = True					# true will use three 5-second clips from random places in the song, rather than a single 15-second block
 
 ## Operational settings
-do_load_model = False
-do_load_weights = False
-load_from_previous_trial = False
-trial_iteration = 0 					# Which iteration of the trial series are you on? Used to load/save. Starts at 0.
+do_load_model = True
+do_load_weights = True
+load_from_previous_trial = True
+trial_iteration = 1 					# Which iteration of the trial series are you on? Used to load/save. Starts at 0.
 do_train = True
 do_save = True
 
@@ -153,7 +153,7 @@ for i in range(tests_in_series):
 		change_lr = LearningRateScheduler(scheduler)
 		early_stopping = EarlyStopping(monitor='val_loss', patience=early_stopping_patience)
 		# model.fit(data_feed, answer_feed, nb_epoch=epoch_count, batch_size=batch_size, shuffle=shuffle_at_epoch, validation_split=NN_validation_split, verbose=NN_log_level, callbacks=[early_stopping, change_lr])
-		model.fit_generator(data_set.get_songs(), samples_per_epoch=16, nb_epoch=epoch_count, verbose=NN_log_level, callbacks=[early_stopping, change_lr], validation_data=data_set.get_songs(), nb_val_samples=int(100/10))
+		model.fit_generator(data_set.get_songs(), samples_per_epoch=batch_size, nb_epoch=epoch_count, verbose=NN_log_level, callbacks=[early_stopping, change_lr], validation_data=data_set.get_songs(), nb_val_samples=int(100/10))
 		d.debug("Fit complete. Preparing to test.")
 
 	# Evaluate against test data

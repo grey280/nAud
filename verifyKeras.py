@@ -22,17 +22,17 @@ epoch_count = 50
 data_point_count = 0 					# number of data points to use for training; set to 0 for 'all'
 
 ## IO settings
-input_data = "cache/data.plist"
+input_data = "cache/the_120.plist"
 weights_file_name = ".json"		# name of model file to load
 model_file_name = ".hdf5"		# name of weights file to load
-test_series_name = "BGNN"			# name of the test series - files are saved as test_series_name.iteration.[json/hdf5]
+test_series_name = "default"			# name of the test series - files are saved as test_series_name.iteration.[json/hdf5]
 vstack_split_size = 35					# controls the speed/memory usage of loading tracks. 25-50 works well.
 start_point = 60 						# seconds into the sample to read ((start_point+sample_duration)<sample length)
 sample_duration = 20					# seconds of sample to read ((start_point+sample_duration)<sample length)
 do_random_parse = False					# true will use three 5-second clips from random places in the song, rather than a single 15-second block
 
 ## Operational settings
-load_from_previous_trial = True
+load_from_previous_trial = False
 trial_iteration_to_load = 0
 trial_to_load = 0
 
