@@ -28,7 +28,7 @@ early_stopping_patience = 3 			# how many epochs without improvement it'll go be
 
 ## IO settings
 input_data = "cache/the_120.plist" 		# location of the .plist file to read from
-test_series_name = "120.mix"			# name of the test series - files are saved as test_series_name.iteration.json/hdf5
+test_series_name = "120g.start"			# name of the test series - files are saved as test_series_name.iteration.json/hdf5
 tests_in_series = 3 					# number of tests to run in this series
 train_to = "Genre"						# train to identify what? "Genre", "Bitrate". Defaults to genre.
 
@@ -36,7 +36,7 @@ train_to = "Genre"						# train to identify what? "Genre", "Bitrate". Defaults t
 vstack_split_size = 35					# controls the speed/memory usage of loading tracks. 25-50 works well.
 start_point = 0 						# seconds into the sample to read ((start_point+sample_duration)<sample length)
 sample_duration = 15					# seconds of sample to read ((start_point+sample_duration)<sample length)
-do_random_parse = True					# true will use three 5-second clips from random places in the song, rather than a single 15-second block
+do_random_parse = False					# true will use three 5-second clips from random places in the song, rather than a single 15-second block
 
 ## Operational settings
 do_load_model = False
@@ -152,8 +152,8 @@ for i in range(tests_in_series):
 
 		change_lr = LearningRateScheduler(scheduler)
 		early_stopping = EarlyStopping(monitor='val_loss', patience=early_stopping_patience)
-		model.fit(data_feed, answer_feed, nb_epoch=epoch_count, batch_size=batch_size, shuffle=shuffle_at_epoch, validation_split=NN_validation_split, verbose=NN_log_level, callbacks=[early_stopping, change_lr])
-		# model.fit_generator(data_set.get_songs(), samples_per_epoch=16, nb_epoch=epoch_count, verbose=NN_log_level, callbacks=[early_stopping, change_lr], validation_data=data_set.get_songs(), nb_val_samples=int(10/10))
+		# model.fit(data_feed, answer_feed, nb_epoch=epoch_count, batch_size=batch_size, shuffle=shuffle_at_epoch, validation_split=NN_validation_split, verbose=NN_log_level, callbacks=[early_stopping, change_lr])
+		model.fit_generator(data_set.get_songs(), samples_per_epoch=16, nb_epoch=epoch_count, verbose=NN_log_level, callbacks=[early_stopping, change_lr], validation_data=data_set.get_songs(), nb_val_samples=int(10/10))
 		d.debug("Fit complete. Preparing to test.")
 
 	# Evaluate against test data
