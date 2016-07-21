@@ -1,0 +1,312 @@
+Greys-MacBook-Pro:nAud greypatterson$ python sampleReadKeras.py 
+Using Theano backend.
+Start: read plist
+End: read plist
+Dataset built.
+Test 1 of 3
+Model and SGD prepared.
+Loading tracks: [====================] 93/93 complete    
+
+get_songs with self.start = 2 (/93)Epoch 1/50
+
+self.start>=(len(self.locations)+2) : 2>=95 : False
+
+get_songs with self.start = 3 (/93)
+self.start>=(len(self.locations)+2) : 3>=95 : False
+
+get_songs with self.start = 4 (/93)
+self.start>=(len(self.locations)+2) : 4>=95 : False
+
+get_songs with self.start = 5 (/93)
+self.start>=(len(self.locations)+2) : 5>=95 : False
+
+get_songs with self.start = 6 (/93)
+self.start>=(len(self.locations)+2) : 6>=95 : False
+ 1/16 [>.............................] - ETA: 40s - loss: 1.3919 - acc: 0.0000e+00
+get_songs with self.start = 7 (/93)
+self.start>=(len(self.locations)+2) : 7>=95 : False
+
+get_songs with self.start = 8 (/93)
+self.start>=(len(self.locations)+2) : 8>=95 : False
+
+get_songs with self.start = 9 (/93)
+self.start>=(len(self.locations)+2) : 9>=95 : False
+ 2/16 [==>...........................] - ETA: 30s - loss: 1.4164 - acc: 0.0000e+00
+get_songs with self.start = 10 (/93)
+self.start>=(len(self.locations)+2) : 10>=95 : False
+
+get_songs with self.start = 11 (/93)
+self.start>=(len(self.locations)+2) : 11>=95 : False
+
+get_songs with self.start = 12 (/93)
+self.start>=(len(self.locations)+2) : 12>=95 : False
+
+get_songs with self.start = 13 (/93)
+self.start>=(len(self.locations)+2) : 13>=95 : False
+ 3/16 [====>.........................] - ETA: 26s - loss: 1.3852 - acc: 0.0000e+00
+get_songs with self.start = 14 (/93)
+self.start>=(len(self.locations)+2) : 14>=95 : False
+
+get_songs with self.start = 15 (/93)
+self.start>=(len(self.locations)+2) : 15>=95 : False
+ 4/16 [======>.......................] - ETA: 22s - loss: 1.6221 - acc: 0.0000e+00
+get_songs with self.start = 16 (/93)
+self.start>=(len(self.locations)+2) : 16>=95 : False
+ 5/16 [========>.....................] - ETA: 20s - loss: 1.6916 - acc: 0.0000e+00
+get_songs with self.start = 17 (/93)
+self.start>=(len(self.locations)+2) : 17>=95 : False
+ 6/16 [==========>...................] - ETA: 18s - loss: 2.0611 - acc: 0.0000e+00
+get_songs with self.start = 18 (/93)
+self.start>=(len(self.locations)+2) : 18>=95 : False
+ 7/16 [============>.................] - ETA: 15s - loss: 2.0019 - acc: 0.0000e+00
+get_songs with self.start = 19 (/93)
+self.start>=(len(self.locations)+2) : 19>=95 : False
+ 8/16 [==============>...............] - ETA: 13s - loss: 1.7517 - acc: 0.1250    
+get_songs with self.start = 20 (/93)
+self.start>=(len(self.locations)+2) : 20>=95 : False
+ 9/16 [===============>..............] - ETA: 12s - loss: 3.3479 - acc: 0.1111
+get_songs with self.start = 21 (/93)
+self.start>=(len(self.locations)+2) : 21>=95 : False
+10/16 [=================>............] - ETA: 10s - loss: 4.6250 - acc: 0.1000
+get_songs with self.start = 22 (/93)
+self.start>=(len(self.locations)+2) : 22>=95 : False
+11/16 [===================>..........] - ETA: 8s - loss: 5.2278 - acc: 0.0909 
+get_songs with self.start = 23 (/93)
+self.start>=(len(self.locations)+2) : 23>=95 : False
+12/16 [=====================>........] - ETA: 6s - loss: 5.4295 - acc: 0.0833
+get_songs with self.start = 24 (/93)
+self.start>=(len(self.locations)+2) : 24>=95 : False
+13/16 [=======================>......] - ETA: 5s - loss: 5.0334 - acc: 0.1538
+get_songs with self.start = 25 (/93)
+self.start>=(len(self.locations)+2) : 25>=95 : False
+14/16 [=========================>....] - ETA: 3s - loss: 5.5883 - acc: 0.1429
+get_songs with self.start = 26 (/93)
+self.start>=(len(self.locations)+2) : 26>=95 : False
+15/16 [===========================>..] - ETA: 1s - loss: 5.4599 - acc: 0.1333
+get_songs with self.start = 27 (/93)
+self.start>=(len(self.locations)+2) : 27>=95 : False
+
+get_songs with self.start = 28 (/93)
+self.start>=(len(self.locations)+2) : 28>=95 : False
+
+get_songs with self.start = 29 (/93)
+self.start>=(len(self.locations)+2) : 29>=95 : False
+
+get_songs with self.start = 30 (/93)
+self.start>=(len(self.locations)+2) : 30>=95 : False
+
+get_songs with self.start = 31 (/93)
+self.start>=(len(self.locations)+2) : 31>=95 : False
+
+get_songs with self.start = 32 (/93)
+self.start>=(len(self.locations)+2) : 32>=95 : False
+
+get_songs with self.start = 33 (/93)
+self.start>=(len(self.locations)+2) : 33>=95 : False
+
+get_songs with self.start = 34 (/93)
+self.start>=(len(self.locations)+2) : 34>=95 : False
+
+get_songs with self.start = 35 (/93)
+self.start>=(len(self.locations)+2) : 35>=95 : False
+
+get_songs with self.start = 36 (/93)
+self.start>=(len(self.locations)+2) : 36>=95 : False
+
+get_songs with self.start = 37 (/93)
+self.start>=(len(self.locations)+2) : 37>=95 : False
+
+get_songs with self.start = 38 (/93)
+self.start>=(len(self.locations)+2) : 38>=95 : False
+16/16 [==============================] - 28s - loss: 5.2127 - acc: 0.1250 - val_loss: 7.7650 - val_acc: 0.5000
+Epoch 2/50
+
+get_songs with self.start = 39 (/93)
+self.start>=(len(self.locations)+2) : 39>=95 : False
+ 1/16 [>.............................] - ETA: 24s - loss: 2.2650e-06 - acc: 1.0000
+get_songs with self.start = 40 (/93)
+self.start>=(len(self.locations)+2) : 40>=95 : False
+ 2/16 [==>...........................] - ETA: 22s - loss: 1.1921e-06 - acc: 1.0000
+get_songs with self.start = 41 (/93)
+self.start>=(len(self.locations)+2) : 41>=95 : False
+ 3/16 [====>.........................] - ETA: 20s - loss: 1.5238 - acc: 0.6667    
+get_songs with self.start = 42 (/93)
+self.start>=(len(self.locations)+2) : 42>=95 : False
+ 4/16 [======>.......................] - ETA: 19s - loss: 5.1724 - acc: 0.5000
+get_songs with self.start = 43 (/93)
+self.start>=(len(self.locations)+2) : 43>=95 : False
+ 5/16 [========>.....................] - ETA: 17s - loss: 4.1379 - acc: 0.6000
+get_songs with self.start = 44 (/93)
+self.start>=(len(self.locations)+2) : 44>=95 : False
+ 6/16 [==========>...................] - ETA: 16s - loss: 3.4483 - acc: 0.6667
+get_songs with self.start = 45 (/93)
+self.start>=(len(self.locations)+2) : 45>=95 : False
+ 7/16 [============>.................] - ETA: 14s - loss: 2.9559 - acc: 0.7143
+get_songs with self.start = 46 (/93)
+self.start>=(len(self.locations)+2) : 46>=95 : False
+ 8/16 [==============>...............] - ETA: 12s - loss: 4.6011 - acc: 0.6250
+get_songs with self.start = 47 (/93)
+self.start>=(len(self.locations)+2) : 47>=95 : False
+ 9/16 [===============>..............] - ETA: 11s - loss: 5.8808 - acc: 0.5556
+get_songs with self.start = 48 (/93)
+self.start>=(len(self.locations)+2) : 48>=95 : False
+10/16 [=================>............] - ETA: 9s - loss: 6.9045 - acc: 0.5000 
+get_songs with self.start = 49 (/93)
+self.start>=(len(self.locations)+2) : 49>=95 : False
+11/16 [===================>..........] - ETA: 8s - loss: 7.7421 - acc: 0.4545
+get_songs with self.start = 50 (/93)
+self.start>=(len(self.locations)+2) : 50>=95 : False
+12/16 [=====================>........] - ETA: 6s - loss: 7.0970 - acc: 0.5000
+get_songs with self.start = 51 (/93)
+self.start>=(len(self.locations)+2) : 51>=95 : False
+13/16 [=======================>......] - ETA: 4s - loss: 7.7909 - acc: 0.4615
+get_songs with self.start = 52 (/93)
+self.start>=(len(self.locations)+2) : 52>=95 : False
+14/16 [=========================>....] - ETA: 3s - loss: 8.3857 - acc: 0.4286
+get_songs with self.start = 53 (/93)
+self.start>=(len(self.locations)+2) : 53>=95 : False
+15/16 [===========================>..] - ETA: 1s - loss: 8.2087 - acc: 0.4000
+get_songs with self.start = 54 (/93)
+self.start>=(len(self.locations)+2) : 54>=95 : False
+
+get_songs with self.start = 55 (/93)
+self.start>=(len(self.locations)+2) : 55>=95 : False
+
+get_songs with self.start = 56 (/93)
+self.start>=(len(self.locations)+2) : 56>=95 : False
+
+get_songs with self.start = 57 (/93)
+self.start>=(len(self.locations)+2) : 57>=95 : False
+
+get_songs with self.start = 58 (/93)
+self.start>=(len(self.locations)+2) : 58>=95 : False
+
+get_songs with self.start = 59 (/93)
+self.start>=(len(self.locations)+2) : 59>=95 : False
+
+get_songs with self.start = 60 (/93)
+self.start>=(len(self.locations)+2) : 60>=95 : False
+
+get_songs with self.start = 61 (/93)
+self.start>=(len(self.locations)+2) : 61>=95 : False
+
+get_songs with self.start = 62 (/93)
+self.start>=(len(self.locations)+2) : 62>=95 : False
+
+get_songs with self.start = 63 (/93)
+self.start>=(len(self.locations)+2) : 63>=95 : False
+
+get_songs with self.start = 64 (/93)
+self.start>=(len(self.locations)+2) : 64>=95 : False
+
+get_songs with self.start = 65 (/93)
+self.start>=(len(self.locations)+2) : 65>=95 : False
+16/16 [==============================] - 29s - loss: 8.7030 - acc: 0.3750 - val_loss: 12.4767 - val_acc: 0.2000
+Epoch 3/50
+
+get_songs with self.start = 66 (/93)
+self.start>=(len(self.locations)+2) : 66>=95 : False
+ 1/16 [>.............................] - ETA: 24s - loss: 16.1181 - acc: 0.0000e+00
+get_songs with self.start = 67 (/93)
+self.start>=(len(self.locations)+2) : 67>=95 : False
+ 2/16 [==>...........................] - ETA: 23s - loss: 16.1181 - acc: 0.0000e+00
+get_songs with self.start = 68 (/93)
+self.start>=(len(self.locations)+2) : 68>=95 : False
+ 3/16 [====>.........................] - ETA: 21s - loss: 16.1181 - acc: 0.0000e+00
+get_songs with self.start = 69 (/93)
+self.start>=(len(self.locations)+2) : 69>=95 : False
+ 4/16 [======>.......................] - ETA: 19s - loss: 15.7334 - acc: 0.0000e+00
+get_songs with self.start = 70 (/93)
+self.start>=(len(self.locations)+2) : 70>=95 : False
+ 5/16 [========>.....................] - ETA: 18s - loss: 12.5867 - acc: 0.2000    
+get_songs with self.start = 71 (/93)
+self.start>=(len(self.locations)+2) : 71>=95 : False
+ 6/16 [==========>...................] - ETA: 16s - loss: 10.4889 - acc: 0.3333
+get_songs with self.start = 72 (/93)
+self.start>=(len(self.locations)+2) : 72>=95 : False
+ 7/16 [============>.................] - ETA: 15s - loss: 11.2931 - acc: 0.2857
+get_songs with self.start = 73 (/93)
+self.start>=(len(self.locations)+2) : 73>=95 : False
+ 8/16 [==============>...............] - ETA: 13s - loss: 9.9734 - acc: 0.2500 
+get_songs with self.start = 74 (/93)
+self.start>=(len(self.locations)+2) : 74>=95 : False
+ 9/16 [===============>..............] - ETA: 12s - loss: 10.6561 - acc: 0.2222
+get_songs with self.start = 75 (/93)
+self.start>=(len(self.locations)+2) : 75>=95 : False
+10/16 [=================>............] - ETA: 10s - loss: 9.6036 - acc: 0.3000 
+get_songs with self.start = 76 (/93)
+self.start>=(len(self.locations)+2) : 76>=95 : False
+11/16 [===================>..........] - ETA: 8s - loss: 10.1959 - acc: 0.2727
+get_songs with self.start = 77 (/93)
+self.start>=(len(self.locations)+2) : 77>=95 : False
+12/16 [=====================>........] - ETA: 6s - loss: 10.6894 - acc: 0.2500
+get_songs with self.start = 78 (/93)
+self.start>=(len(self.locations)+2) : 78>=95 : False
+13/16 [=======================>......] - ETA: 5s - loss: 9.9503 - acc: 0.2308 
+get_songs with self.start = 79 (/93)
+self.start>=(len(self.locations)+2) : 79>=95 : False
+14/16 [=========================>....] - ETA: 3s - loss: 10.2003 - acc: 0.2143
+get_songs with self.start = 80 (/93)
+self.start>=(len(self.locations)+2) : 80>=95 : False
+15/16 [===========================>..] - ETA: 1s - loss: 10.5948 - acc: 0.2000
+get_songs with self.start = 81 (/93)
+self.start>=(len(self.locations)+2) : 81>=95 : False
+
+get_songs with self.start = 82 (/93)
+self.start>=(len(self.locations)+2) : 82>=95 : False
+
+get_songs with self.start = 83 (/93)
+self.start>=(len(self.locations)+2) : 83>=95 : False
+
+get_songs with self.start = 84 (/93)
+self.start>=(len(self.locations)+2) : 84>=95 : False
+
+get_songs with self.start = 85 (/93)
+self.start>=(len(self.locations)+2) : 85>=95 : False
+
+get_songs with self.start = 86 (/93)
+self.start>=(len(self.locations)+2) : 86>=95 : False
+
+get_songs with self.start = 87 (/93)
+self.start>=(len(self.locations)+2) : 87>=95 : False
+
+get_songs with self.start = 88 (/93)
+self.start>=(len(self.locations)+2) : 88>=95 : False
+
+get_songs with self.start = 89 (/93)
+self.start>=(len(self.locations)+2) : 89>=95 : False
+
+get_songs with self.start = 90 (/93)
+self.start>=(len(self.locations)+2) : 90>=95 : False
+
+get_songs with self.start = 91 (/93)
+self.start>=(len(self.locations)+2) : 91>=95 : False
+
+get_songs with self.start = 92 (/93)
+self.start>=(len(self.locations)+2) : 92>=95 : False
+16/16 [==============================] - 30s - loss: 9.9326 - acc: 0.2500 - val_loss: 12.6688 - val_acc: 0.2000
+Epoch 4/50
+
+get_songs with self.start = 93 (/93)
+self.start>=(len(self.locations)+2) : 93>=95 : False
+Exception in thread Thread-1:
+Traceback (most recent call last):
+  File "/Users/greypatterson/anaconda3/lib/python3.5/threading.py", line 914, in _bootstrap_inner
+    self.run()
+  File "/Users/greypatterson/anaconda3/lib/python3.5/threading.py", line 862, in run
+    self._target(*self._args, **self._kwargs)
+  File "/Users/greypatterson/anaconda3/lib/python3.5/site-packages/keras/engine/training.py", line 404, in data_generator_task
+    generator_output = next(generator)
+  File "/Users/greypatterson/Documents/More/Bitbucket/nAud/gdataset.py", line 111, in get_songs
+    location = self.locations[self.start]
+IndexError: list index out of range
+
+ 1/16 [>.............................] - ETA: 26s - loss: 1.1921e-07 - acc: 1.0000Traceback (most recent call last):
+  File "sampleReadKeras.py", line 156, in <module>
+    model.fit_generator(data_set.get_songs(), samples_per_epoch=16, nb_epoch=epoch_count, verbose=NN_log_level, callbacks=[early_stopping, change_lr], validation_data=data_set.get_songs(), nb_val_samples=int(100/10))
+  File "/Users/greypatterson/anaconda3/lib/python3.5/site-packages/keras/models.py", line 656, in fit_generator
+    max_q_size=max_q_size)
+  File "/Users/greypatterson/anaconda3/lib/python3.5/site-packages/keras/engine/training.py", line 1358, in fit_generator
+    'or (x, y). Found: ' + str(generator_output))
+Exception: output of generator should be a tuple (x, y, sample_weight) or (x, y). Found: None
+Greys-MacBook-Pro:nAud greypatterson$ 
