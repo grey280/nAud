@@ -1,0 +1,83 @@
+Greys-MacBook-Pro:nAud greypatterson$ python sampleReadKeras.py 
+Using Theano backend.
+Start: read plist
+End: read plist
+Dataset built.
+Test 1 of 3
+Model and SGD prepared.
+Loading tracks: [====================] 93/93 complete    
+Train on 83 samples, validate on 10 samples
+Epoch 1/50
+83/83 [==============================] - 10s - loss: 1.3529 - acc: 0.3253 - val_loss: 1.2603 - val_acc: 0.4000
+Epoch 2/50
+83/83 [==============================] - 9s - loss: 1.1715 - acc: 0.4217 - val_loss: 1.7192 - val_acc: 0.2000
+Epoch 3/50
+83/83 [==============================] - 9s - loss: 1.2188 - acc: 0.5663 - val_loss: 1.0569 - val_acc: 0.5000
+Epoch 4/50
+83/83 [==============================] - 9s - loss: 1.4540 - acc: 0.4337 - val_loss: 2.1067 - val_acc: 0.3000
+Epoch 5/50
+83/83 [==============================] - 9s - loss: 1.3523 - acc: 0.5904 - val_loss: 3.6997 - val_acc: 0.2000
+Epoch 6/50
+83/83 [==============================] - 10s - loss: 2.3774 - acc: 0.5542 - val_loss: 4.0992 - val_acc: 0.2000
+Epoch 7/50
+83/83 [==============================] - 9s - loss: 1.1817 - acc: 0.7349 - val_loss: 5.1530 - val_acc: 0.3000
+Fit complete. Preparing to test.
+Loading test tracks: [====================] 30/30 complete    
+29/29 [==============================] - 0s     
+
+Test 1 of 3 complete. Loss: 2.739538686028842. Accuracy: 51.72413916423403%
+Finished writing model to disk.
+Finished writing weights to disk.
+Test 2 of 3
+Model and SGD prepared.
+Loading tracks: [====================] 93/93 complete    
+Train on 83 samples, validate on 10 samples
+Epoch 1/50
+83/83 [==============================] - 9s - loss: 1.3604 - acc: 0.2651 - val_loss: 1.2166 - val_acc: 0.5000
+Epoch 2/50
+83/83 [==============================] - 9s - loss: 1.1715 - acc: 0.4458 - val_loss: 1.0328 - val_acc: 0.3000
+Epoch 3/50
+83/83 [==============================] - 9s - loss: 1.0756 - acc: 0.5422 - val_loss: 2.1450 - val_acc: 0.3000
+Epoch 4/50
+83/83 [==============================] - 9s - loss: 1.0647 - acc: 0.6386 - val_loss: 2.7622 - val_acc: 0.2000
+Epoch 5/50
+83/83 [==============================] - 9s - loss: 1.2325 - acc: 0.5783 - val_loss: 1.6682 - val_acc: 0.6000
+Epoch 6/50
+83/83 [==============================] - 9s - loss: 2.4133 - acc: 0.5060 - val_loss: 3.3596 - val_acc: 0.4000
+Fit complete. Preparing to test.
+Loading test tracks: [====================] 30/30 complete    
+30/30 [==============================] - 0s     
+
+Test 2 of 3 complete. Loss: 3.4046484152475993. Accuracy: 20.000000099341076%
+Finished writing model to disk.
+Finished writing weights to disk.
+Test 3 of 3
+Model and SGD prepared.
+Loading tracks: [====================] 93/93 complete    
+Train on 83 samples, validate on 10 samples
+Epoch 1/50
+83/83 [==============================] - 9s - loss: 1.3649 - acc: 0.2771 - val_loss: 1.2199 - val_acc: 0.5000
+Epoch 2/50
+83/83 [==============================] - 10s - loss: 1.1528 - acc: 0.4458 - val_loss: 1.1335 - val_acc: 0.4000
+Epoch 3/50
+83/83 [==============================] - 9s - loss: 1.2754 - acc: 0.4337 - val_loss: 1.6167 - val_acc: 0.4000
+Epoch 4/50
+83/83 [==============================] - 9s - loss: 1.3223 - acc: 0.5422 - val_loss: 1.3735 - val_acc: 0.4000
+Epoch 5/50
+83/83 [==============================] - 10s - loss: 1.5237 - acc: 0.5060 - val_loss: 3.2350 - val_acc: 0.3000
+Epoch 6/50
+83/83 [==============================] - 11s - loss: 1.9108 - acc: 0.5422 - val_loss: 3.2836 - val_acc: 0.4000
+Fit complete. Preparing to test.
+Loading test tracks: [====================] 30/30 complete    
+28/28 [==============================] - 0s     
+
+Test 3 of 3 complete. Loss: 3.356964792524065. Accuracy: 25.00000021287373%
+Finished writing model to disk.
+Finished writing weights to disk.
+
+Test 1 of 3 complete. Loss: 2.739538686028842. Accuracy: 51.72413916423403%
+
+Test 2 of 3 complete. Loss: 3.4046484152475993. Accuracy: 20.000000099341076%
+
+Test 3 of 3 complete. Loss: 3.356964792524065. Accuracy: 25.00000021287373%
+Greys-MacBook-Pro:nAud greypatterson$ 
