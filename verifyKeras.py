@@ -60,7 +60,7 @@ def load_weights(iteration=0, path=test_series_name):
 
 # Import data
 tracks = plistlib.readPlist(input_data)
-data_set = ds.Dataset(tracks, do_random=do_random_parse, sample_duration=sample_duration, start_point=start_point, vstack_split=vstack_split_size, log_level=0)
+data_set = ds.Dataset(tracks, do_random=do_random_parse, sample_duration=sample_duration, start_point=start_point, vstack_split=vstack_split_size, log_level=0, train_size=1)
 
 # Load configuration, if necessary
 if data_point_count == 0:
