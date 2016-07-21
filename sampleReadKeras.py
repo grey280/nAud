@@ -28,13 +28,13 @@ early_stopping_patience = 3 			# how many epochs without improvement it'll go be
 
 ## IO settings
 input_data = "cache/the_120.plist" 		# location of the .plist file to read from
-test_series_name = "120.start"			# name of the test series - files are saved as test_series_name.iteration.json/hdf5
+test_series_name = "120.minute"			# name of the test series - files are saved as test_series_name.iteration.json/hdf5
 tests_in_series = 3 					# number of tests to run in this series
 train_to = "Genre"						# train to identify what? "Genre", "Bitrate". Defaults to genre.
 
 ## Data set settings
 vstack_split_size = 35					# controls the speed/memory usage of loading tracks. 25-50 works well.
-start_point = 0 						# seconds into the sample to read ((start_point+sample_duration)<sample length)
+start_point = 60 						# seconds into the sample to read ((start_point+sample_duration)<sample length)
 sample_duration = 15					# seconds of sample to read ((start_point+sample_duration)<sample length)
 do_random_parse = False					# true will use three 5-second clips from random places in the song, rather than a single 15-second block
 
