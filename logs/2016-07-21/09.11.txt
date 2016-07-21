@@ -1,0 +1,71 @@
+Greys-MacBook-Pro:nAud greypatterson$ python sampleReadKeras.py 
+Using Theano backend.
+Start: read plist
+End: read plist
+Dataset built.
+Test 1 of 3
+Model and SGD prepared.
+Loading tracks: [====================] 93/93 complete    
+Epoch 1/50
+16/16 [==============================] - 29s - loss: 2.8188 - acc: 0.5000 - val_loss: 8.2224 - val_acc: 0.0000e+00
+Epoch 2/50
+16/16 [==============================] - 26s - loss: 9.3826 - acc: 0.3750 - val_loss: 16.1181 - val_acc: 0.0000e+00
+Epoch 3/50
+16/16 [==============================] - 25s - loss: 10.5221 - acc: 0.3125 - val_loss: 16.1181 - val_acc: 0.0000e+00
+Epoch 4/50
+16/16 [==============================] - 25s - loss: 10.7937 - acc: 0.2500 - val_loss: 1.1921e-07 - val_acc: 1.0000
+Epoch 5/50
+10/16 [=================>............] - ETA: 9s - loss: 9.1217 - acc: 0.4000  Exception in thread Thread-1:
+Traceback (most recent call last):
+  File "/Users/greypatterson/anaconda3/lib/python3.5/threading.py", line 914, in _bootstrap_inner
+    self.run()
+  File "/Users/greypatterson/anaconda3/lib/python3.5/threading.py", line 862, in run
+    self._target(*self._args, **self._kwargs)
+  File "/Users/greypatterson/anaconda3/lib/python3.5/site-packages/keras/engine/training.py", line 404, in data_generator_task
+    generator_output = next(generator)
+  File "/Users/greypatterson/Documents/More/Bitbucket/nAud/gdataset.py", line 106, in get_songs
+    location = self.locations[self.start]
+IndexError: list index out of range
+
+11/16 [===================>..........] - ETA: 7s - loss: 8.2924 - acc: 0.4545Traceback (most recent call last):
+  File "sampleReadKeras.py", line 156, in <module>
+    model.fit_generator(data_set.get_songs(), samples_per_epoch=16, nb_epoch=epoch_count, verbose=NN_log_level, callbacks=[early_stopping, change_lr], validation_data=data_set.get_songs(), nb_val_samples=int(10/10))
+  File "/Users/greypatterson/anaconda3/lib/python3.5/site-packages/keras/models.py", line 656, in fit_generator
+    max_q_size=max_q_size)
+  File "/Users/greypatterson/anaconda3/lib/python3.5/site-packages/keras/engine/training.py", line 1358, in fit_generator
+    'or (x, y). Found: ' + str(generator_output))
+Exception: output of generator should be a tuple (x, y, sample_weight) or (x, y). Found: None
+Greys-MacBook-Pro:nAud greypatterson$ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

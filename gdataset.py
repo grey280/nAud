@@ -103,11 +103,11 @@ class Dataset:
 
 	def get_songs(self):
 		while True:
+			self.start += 1
+			if self.start >= len(self.locations)+2:
+				self.start = 0
 			location = self.locations[self.start]
 			data_point = self.input_values.get(location)
-			self.start += 1
-			if self.start >= len(self.locations)+1:
-				self.start = 0
 			genre, output = self.parse_track(location, data_point)
 			out = output.reshape(1, len(output))
 			g2 = genre.reshape(1, len(genre))
