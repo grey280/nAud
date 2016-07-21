@@ -22,17 +22,17 @@ epoch_count = 50
 data_point_count = 0 					# number of data points to use for training; set to 0 for 'all'
 
 ## IO settings
-input_data = "cache/data.plist"
-weights_file_name = ".json"		# name of model file to load
-model_file_name = ".hdf5"		# name of weights file to load
-test_series_name = "BGNN"			# name of the test series - files are saved as test_series_name.iteration.[json/hdf5]
+input_data = "cache/the_120.plist"
+weights_file_name = "120.minute.0.0.hdf5"		# name of model file to load
+model_file_name = "120.minute.0.0.json"		# name of weights file to load
+test_series_name = "default"			# name of the test series - files are saved as test_series_name.iteration.[json/hdf5]
 vstack_split_size = 35					# controls the speed/memory usage of loading tracks. 25-50 works well.
 start_point = 60 						# seconds into the sample to read ((start_point+sample_duration)<sample length)
-sample_duration = 20					# seconds of sample to read ((start_point+sample_duration)<sample length)
+sample_duration = 15					# seconds of sample to read ((start_point+sample_duration)<sample length)
 do_random_parse = False					# true will use three 5-second clips from random places in the song, rather than a single 15-second block
 
 ## Operational settings
-load_from_previous_trial = True
+load_from_previous_trial = False
 trial_iteration_to_load = 0
 trial_to_load = 0
 
@@ -41,24 +41,26 @@ d = gdebug.Debugger(debug_level = log_level)
 
 # Helper functions
 def load_model(iteration=0, path=test_series_name):
-	if load_from_previous_trial:
-		load_path = "output/{}.{}.{}.json".format(path, trial_to_load, iteration)
-	else:
-		load_path = "output/{}".format(model_file_name)
+	# if load_from_previous_trial:
+	# 	load_path = "output/{}.{}.{}.json".format(path, trial_to_load, iteration)
+	# else:
+	# 	load_path = "output/{}".format(model_file_name)
+	load_path = "output/{}".format(model_file_name)
 	model = open(load_path, 'r').read()
 	return model_from_json(model)
 
 def load_weights(iteration=0, path=test_series_name):
 	global model
-	if load_from_previous_trial:
-		load_path = "output/{}.{}.{}.hdf5".format(path, trial_to_load, iteration)
-	else:
-		load_path = "output/{}.hdf5".format(path)
+	# if load_from_previous_trial:
+	# 	load_path = "output/{}.{}.{}.hdf5".format(path, trial_to_load, iteration)
+	# else:
+	# 	load_path = "output/{}.hdf5".format(path)
+	load_path = "output/{}".format(weights_file_name)
 	model.load_weights(load_path)
 
 # Import data
 tracks = plistlib.readPlist(input_data)
-data_set = ds.Dataset(tracks, do_random=do_random_parse, sample_duration=sample_duration, start_point=start_point, vstack_split=vstack_split_size, log_level=0)
+data_set = ds.Dataset(tracks, do_random=do_random_parse, sample_duration=sample_duration, start_point=start_point, vstack_split=vstack_split_size, log_level=0, train_size=1)
 
 # Load configuration, if necessary
 if data_point_count == 0:

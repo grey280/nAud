@@ -1,0 +1,220 @@
+Greys-MacBook-Pro:nAud greypatterson$ python sampleReadKeras.py 
+Using Theano backend.
+Start: read plist
+End: read plist
+Dataset built.
+Test 1 of 3
+Model and SGD prepared.
+Loading tracks: [====================] 93/93 complete    
+
+get_songs with self.start = 2 (/93)
+Epoch 1/50
+
+get_songs with self.start = 3 (/93)
+
+get_songs with self.start = 4 (/93)
+
+get_songs with self.start = 5 (/93)
+ 1/16 [>.............................] - ETA: 36s - loss: 1.3260 - acc: 1.0000
+get_songs with self.start = 6 (/93)
+
+get_songs with self.start = 7 (/93)
+
+get_songs with self.start = 8 (/93)
+
+get_songs with self.start = 9 (/93)
+ 2/16 [==>...........................] - ETA: 29s - loss: 1.3476 - acc: 0.5000
+get_songs with self.start = 10 (/93)
+
+get_songs with self.start = 11 (/93)
+
+get_songs with self.start = 12 (/93)
+
+get_songs with self.start = 13 (/93)
+
+get_songs with self.start = 14 (/93)
+ 3/16 [====>.........................] - ETA: 25s - loss: 1.2236 - acc: 0.6667
+get_songs with self.start = 15 (/93)
+ 4/16 [======>.......................] - ETA: 22s - loss: 1.2020 - acc: 0.7500
+get_songs with self.start = 16 (/93)
+ 5/16 [========>.....................] - ETA: 20s - loss: 1.0175 - acc: 0.8000
+get_songs with self.start = 17 (/93)
+ 6/16 [==========>...................] - ETA: 17s - loss: 1.3613 - acc: 0.6667
+get_songs with self.start = 18 (/93)
+ 7/16 [============>.................] - ETA: 15s - loss: 1.6633 - acc: 0.5714
+get_songs with self.start = 19 (/93)
+ 8/16 [==============>...............] - ETA: 13s - loss: 2.3449 - acc: 0.5000
+get_songs with self.start = 20 (/93)
+ 9/16 [===============>..............] - ETA: 12s - loss: 2.2591 - acc: 0.4444
+get_songs with self.start = 21 (/93)
+10/16 [=================>............] - ETA: 10s - loss: 2.9264 - acc: 0.4000
+get_songs with self.start = 22 (/93)
+11/16 [===================>..........] - ETA: 8s - loss: 2.6628 - acc: 0.4545 
+get_songs with self.start = 23 (/93)
+12/16 [=====================>........] - ETA: 6s - loss: 3.6536 - acc: 0.4167
+get_songs with self.start = 24 (/93)
+13/16 [=======================>......] - ETA: 5s - loss: 3.3725 - acc: 0.4615
+get_songs with self.start = 25 (/93)
+14/16 [=========================>....] - ETA: 3s - loss: 3.3300 - acc: 0.4286
+get_songs with self.start = 26 (/93)
+15/16 [===========================>..] - ETA: 1s - loss: 3.1090 - acc: 0.4667
+get_songs with self.start = 27 (/93)
+
+get_songs with self.start = 28 (/93)
+
+get_songs with self.start = 29 (/93)
+
+get_songs with self.start = 30 (/93)
+
+get_songs with self.start = 31 (/93)
+
+get_songs with self.start = 32 (/93)
+
+get_songs with self.start = 33 (/93)
+
+get_songs with self.start = 34 (/93)
+
+get_songs with self.start = 35 (/93)
+
+get_songs with self.start = 36 (/93)
+
+get_songs with self.start = 37 (/93)
+
+get_songs with self.start = 38 (/93)
+16/16 [==============================] - 29s - loss: 3.5282 - acc: 0.4375 - val_loss: 10.3922 - val_acc: 0.3000
+Epoch 2/50
+
+get_songs with self.start = 39 (/93)
+ 1/16 [>.............................] - ETA: 24s - loss: 1.3558 - acc: 0.0000e+00
+get_songs with self.start = 40 (/93)
+ 2/16 [==>...........................] - ETA: 22s - loss: 0.6779 - acc: 0.5000    
+get_songs with self.start = 41 (/93)
+ 3/16 [====>.........................] - ETA: 20s - loss: 4.9344 - acc: 0.3333
+get_songs with self.start = 42 (/93)
+ 4/16 [======>.......................] - ETA: 19s - loss: 7.7303 - acc: 0.2500
+get_songs with self.start = 43 (/93)
+ 5/16 [========>.....................] - ETA: 17s - loss: 9.4079 - acc: 0.2000
+get_songs with self.start = 44 (/93)
+ 6/16 [==========>...................] - ETA: 15s - loss: 10.5262 - acc: 0.1667
+get_songs with self.start = 45 (/93)
+ 7/16 [============>.................] - ETA: 14s - loss: 9.0225 - acc: 0.2857 
+get_songs with self.start = 46 (/93)
+ 8/16 [==============>...............] - ETA: 12s - loss: 9.9094 - acc: 0.2500
+get_songs with self.start = 47 (/93)
+ 9/16 [===============>..............] - ETA: 11s - loss: 10.5993 - acc: 0.2222
+get_songs with self.start = 48 (/93)
+10/16 [=================>............] - ETA: 9s - loss: 11.1512 - acc: 0.2000 
+get_songs with self.start = 49 (/93)
+11/16 [===================>..........] - ETA: 8s - loss: 11.6027 - acc: 0.1818
+get_songs with self.start = 50 (/93)
+12/16 [=====================>........] - ETA: 6s - loss: 10.6358 - acc: 0.2500
+get_songs with self.start = 51 (/93)
+13/16 [=======================>......] - ETA: 4s - loss: 10.5593 - acc: 0.2308
+get_songs with self.start = 52 (/93)
+14/16 [=========================>....] - ETA: 3s - loss: 10.9563 - acc: 0.2143
+get_songs with self.start = 53 (/93)
+15/16 [===========================>..] - ETA: 1s - loss: 10.5486 - acc: 0.2000
+get_songs with self.start = 54 (/93)
+
+get_songs with self.start = 55 (/93)
+
+get_songs with self.start = 56 (/93)
+
+get_songs with self.start = 57 (/93)
+
+get_songs with self.start = 58 (/93)
+
+get_songs with self.start = 59 (/93)
+
+get_songs with self.start = 60 (/93)
+
+get_songs with self.start = 61 (/93)
+
+get_songs with self.start = 62 (/93)
+
+get_songs with self.start = 63 (/93)
+
+get_songs with self.start = 64 (/93)
+
+get_songs with self.start = 65 (/93)
+16/16 [==============================] - 29s - loss: 10.8967 - acc: 0.1875 - val_loss: 14.5063 - val_acc: 0.1000
+Epoch 3/50
+
+get_songs with self.start = 66 (/93)
+ 1/16 [>.............................] - ETA: 23s - loss: 1.1921e-07 - acc: 1.0000
+get_songs with self.start = 67 (/93)
+ 2/16 [==>...........................] - ETA: 22s - loss: 8.0590 - acc: 0.5000    
+get_songs with self.start = 68 (/93)
+ 3/16 [====>.........................] - ETA: 20s - loss: 10.7454 - acc: 0.3333
+get_songs with self.start = 69 (/93)
+ 4/16 [======>.......................] - ETA: 19s - loss: 12.0886 - acc: 0.2500
+get_songs with self.start = 70 (/93)
+ 5/16 [========>.....................] - ETA: 17s - loss: 12.8945 - acc: 0.2000
+get_songs with self.start = 71 (/93)
+ 6/16 [==========>...................] - ETA: 15s - loss: 13.4317 - acc: 0.1667
+get_songs with self.start = 72 (/93)
+ 7/16 [============>.................] - ETA: 14s - loss: 13.8155 - acc: 0.1429
+get_songs with self.start = 73 (/93)
+ 8/16 [==============>...............] - ETA: 12s - loss: 12.3181 - acc: 0.1250
+get_songs with self.start = 74 (/93)
+ 9/16 [===============>..............] - ETA: 11s - loss: 10.9494 - acc: 0.2222
+get_songs with self.start = 75 (/93)
+10/16 [=================>............] - ETA: 9s - loss: 9.8545 - acc: 0.3000  
+get_songs with self.start = 76 (/93)
+11/16 [===================>..........] - ETA: 7s - loss: 10.4239 - acc: 0.2727
+get_songs with self.start = 77 (/93)
+12/16 [=====================>........] - ETA: 6s - loss: 9.5552 - acc: 0.3333 
+get_songs with self.start = 78 (/93)
+13/16 [=======================>......] - ETA: 4s - loss: 9.6120 - acc: 0.3077
+get_songs with self.start = 79 (/93)
+14/16 [=========================>....] - ETA: 3s - loss: 10.0767 - acc: 0.2857
+get_songs with self.start = 80 (/93)
+15/16 [===========================>..] - ETA: 1s - loss: 9.8330 - acc: 0.2667 
+get_songs with self.start = 81 (/93)
+
+get_songs with self.start = 82 (/93)
+
+get_songs with self.start = 83 (/93)
+
+get_songs with self.start = 84 (/93)
+
+get_songs with self.start = 85 (/93)
+
+get_songs with self.start = 86 (/93)
+
+get_songs with self.start = 87 (/93)
+
+get_songs with self.start = 88 (/93)
+
+get_songs with self.start = 89 (/93)
+
+get_songs with self.start = 90 (/93)
+
+get_songs with self.start = 91 (/93)
+
+get_songs with self.start = 92 (/93)
+16/16 [==============================] - 29s - loss: 10.2258 - acc: 0.2500 - val_loss: 5.6481 - val_acc: 0.6000
+Epoch 4/50
+
+get_songs with self.start = 93 (/93)
+Exception in thread Thread-1:
+Traceback (most recent call last):
+  File "/Users/greypatterson/anaconda3/lib/python3.5/threading.py", line 914, in _bootstrap_inner
+    self.run()
+  File "/Users/greypatterson/anaconda3/lib/python3.5/threading.py", line 862, in run
+    self._target(*self._args, **self._kwargs)
+  File "/Users/greypatterson/anaconda3/lib/python3.5/site-packages/keras/engine/training.py", line 404, in data_generator_task
+    generator_output = next(generator)
+  File "/Users/greypatterson/Documents/More/Bitbucket/nAud/gdataset.py", line 110, in get_songs
+    location = self.locations[self.start]
+IndexError: list index out of range
+
+ 1/16 [>.............................] - ETA: 23s - loss: 7.2251 - acc: 0.0000e+00Traceback (most recent call last):
+  File "sampleReadKeras.py", line 156, in <module>
+    model.fit_generator(data_set.get_songs(), samples_per_epoch=16, nb_epoch=epoch_count, verbose=NN_log_level, callbacks=[early_stopping, change_lr], validation_data=data_set.get_songs(), nb_val_samples=int(100/10))
+  File "/Users/greypatterson/anaconda3/lib/python3.5/site-packages/keras/models.py", line 656, in fit_generator
+    max_q_size=max_q_size)
+  File "/Users/greypatterson/anaconda3/lib/python3.5/site-packages/keras/engine/training.py", line 1358, in fit_generator
+    'or (x, y). Found: ' + str(generator_output))
+Exception: output of generator should be a tuple (x, y, sample_weight) or (x, y). Found: None
+Greys-MacBook-Pro:nAud greypatterson$ 

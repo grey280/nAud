@@ -14,7 +14,7 @@ import gconvert 			as conv
 input_data = "data/iTunes.plist"	# "data/iTunes.plist" the plist file to read in
 output_data = "cache/the_120.plist"	# "cache/data.plist" the plist file to write to when done
 output_directory = "cache" 			# "cache" the directory (no trailing slash) to write processed songs to
-seconds_per_song = 0				# number of seconds of each song to keep; 0 for 'all'
+seconds_per_song = 80				# number of seconds of each song to keep; 0 for 'all'
 per_meta = 40 						# songs from each meta-genre to allow
 
 # Tools
