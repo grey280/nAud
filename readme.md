@@ -13,6 +13,11 @@ To run the genre identification network, you'll first need to build the database
 
 Run whichever variant of `buildLib` you opted to use - it'll take a while to run. From there, you can input the name of the database file it generates (in the `cache` folder) into `genreid_train.py` and run your code.
 
-To evaluate, make sure `genreid_evaluate.py` has the name of the correct library file, and then run it with the output being stored to disc. It can then be read into the spreadsheet software of your choice - the data is separated by the '/' character, though this *will* yield an extra column full of 'cache', as the output includes the full location of each file.
+To evaluate, make sure `genreid_evaluate.py` has the name of the correct library file and network files, and then run it with the output being stored to disc. It can then be read into the spreadsheet software of your choice - the data is separated by the '/' character, though this *will* yield an extra column full of 'cache', as the output includes the full location of each file.
 
 ## Instrument Identification
+Instrument identification requires a few more directories: in the `cache` folder, created `drum`, `guitar`, `other`, `vocal`, and `test`. The first four are used for training data, the final one for evaluation data.
+
+Delete `data/database.json` and, by editing `instid_database_builder.py`, create your own database file with whatever training data you'll be using.
+
+To train, you can run `instid_train.py`. Evaluation is similar to the genre ID code: input the name of the correct library file and saved neural network in `instid_evaluate.py`, and store the output of running the code to disc.
