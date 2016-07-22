@@ -21,3 +21,6 @@ Instrument identification requires a few more directories: in the `cache` folder
 Delete `data/database.json` and, by editing `instid_database_builder.py`, create your own database file with whatever training data you'll be using.
 
 To train, you can run `instid_train.py`. Evaluation is similar to the genre ID code: input the name of the correct library file and saved neural network in `instid_evaluate.py`, and store the output of running the code to disc.
+
+## Logs
+All of the relevant research data is stored in `logs`, sorted by date and time of experiment.
