@@ -31,7 +31,7 @@ sample_duration = 20					# seconds of sample to read ((start_point+sample_durati
 do_random_parse = False					# true will use three 5-second clips from random places in the song, rather than a single 15-second block
 
 ## OSC Settings
-osc_ip_address = '167.96.80.141'		# IP address to connect to
+osc_ip_address = '167.96.36.246'		# IP address to connect to
 osc_port = 8020 					# IP port to connect to
 
 ## Operational settings
@@ -72,6 +72,7 @@ data_feed = np.reshape(data_feed, (1, sample_duration*44100))
 
 while True:
 	result = model.predict(data_feed, batch_size=1, verbose=0)
+	print(result[0])
 	## Send OSC Message
 	msg = osc_message_builder.OscMessageBuilder(address = "/tuio2/tok")
 	msg.add_arg(0, arg_type="i")
