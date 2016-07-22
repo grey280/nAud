@@ -16,10 +16,12 @@
 </head>
 <body>
 <img src="../data/Chart1.png">
-<p>Overfitting proves to be a significant problem - the graph at right shows that identification of 'art' and 'tradition' failed nearly all of the time, when trained against a biased dataset.</p>
+<p>Overfitting proves to be a significant problem - the graph at right shows that the network (run using the '120.minute.0.0' setup) was able to identify traditional music fairly well, but further examination of the data shows that of the incorrect identifications in art and pop, they were mostly sorted into traditional.</p>
 
-<p>Alleviating this by limiting the size of the sample set allows other trends to come to light. Most notable of these is a trend towards <span class="genreID">more accuracy when using randomized samples</span> from within the songs, as opposed to samples from a fixed point. Shuffling these samples while training, to create an increase in the amount of coverage of any given song, increased accuracy from 5-20 percentage points.</p>
-<img src="../data/Chart4.png">
-<p>Even within the biased sample set, using these randomized samples increased accuracy, more than any change to the structure of the neural network did. Comparing the three windows mentioned above showed a minimum 5 percentage point increase in accuracy.</p>
+<p>Using a balanced sample set is quite important - an earlier test, using the entire iTunes library of one of our researchers (which heavily featured popular music), yielded extreme overfitting to popular music.</p>
+
+<p>In comparing which sample locations worked best, we found that using random points throughout the song and reading the first 15 seconds of the song yielded strikingly similar results, while a contiguous 15 seconds starting at 1 minute into the song was far more accurate, if not as precise.</p>
+
+
 </body>
 </html>
