@@ -3,12 +3,15 @@ import scipy.io.wavfile 		as wav
 import numpy					as np
 import json
 
+# Settings
 window_length_default = 1*44100
 database_file_default = "data/database.json"
 
+# Global variables, don't touch
 counter = 0
 
 def read_sample(sample, window_length=window_length_default):
+	# Read a song into samples
 	read_in = wav.read(sample)
 	samples = read_in[1]
 	num_samples = len(samples)
@@ -23,11 +26,13 @@ def read_sample(sample, window_length=window_length_default):
 	return out_array
 
 def get_sample(sample, kind, window_length=window_length_default):
+	# Get samples and their accompanying kinds
 	read = read_sample("cache/{}/{}.wav".format(kind, sample), window_length)
 	kind_arr = [kind for x in range(len(read))]
 	return read, kind_arr
 
 def get_next_sample_information(database_file=database_file_default):
+	# Generator to feed a sample and it's kind, one at a time
 	global counter # I hate that I need this but python calls GeneratorExit like there's no tomorrow so
 	db = {}
 	with open(database_file) as raw_db:
@@ -46,6 +51,7 @@ def get_next_sample_information(database_file=database_file_default):
 			break
 
 def convert_kind(kind):
+	# Helper function, converts a string kind to a one-hot
 	out = []
 	if kind == "drum":
 		out= [0, 1, 0, 0]
@@ -59,6 +65,7 @@ def convert_kind(kind):
 	return output
 
 def deconvert_kind(kind):
+	# Helper function, converts a one-hot kind to a string
 	out = ""
 	if kind[0] == 1:
 		out = "other"
@@ -71,6 +78,7 @@ def deconvert_kind(kind):
 	return out
 
 def feed_single_samples(window_length=window_length_default, database_file=database_file_default):
+	# Generator to feed a single sample and its kind (as a one-hot) at a time
 	i = 0
 	samples = []
 	kind = ""
@@ -94,6 +102,7 @@ def feed_single_samples(window_length=window_length_default, database_file=datab
 			del kinds
 
 def feed_samples(window_length=window_length_default, database_file=database_file_default, samples_in_parallel=4):
+	# Main generator - feeds several samples in parallel, which helps to avoid overfitting. (Hopefullly)
 	if samples_in_parallel > 4:
 		samples_in_parallel = 4
 	if samples_in_parallel < 1:
@@ -124,6 +133,7 @@ def feed_samples(window_length=window_length_default, database_file=database_fil
 			del kinds
 
 def get_samples_from_file(file_to_read, window_length=window_length_default):
+	# Basically reshapes the results of read_sample into something that Keras can use
 	i = 0
 	samples = []
 	samples = read_sample(file_to_read, window_length=window_length)

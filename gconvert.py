@@ -2,6 +2,16 @@
 import hashlib
 import numpy			as np
 
+# Global variables
+number_of_genres = 4
+meta_genres = {
+		"Other": 0,
+		"Art": 1,
+		"Pop": 2,
+		"Traditional": 3
+	}
+
+# Helper functions
 def string_to_int(original_name):
 	# uses a hash function to convert, no weird scaling stuff
 	temp = int(hashlib.sha1(original_name.encode('utf-8')).hexdigest(), 16) % (2**14)
@@ -43,19 +53,13 @@ def scale_rating(rating):
 	return output
 
 def scale_genre(genre):
+	# Converts an int genre to a one-hot
 	output = np.zeros(number_of_genres, dtype=int)
 	output[genre] = 1
 	return output
 
-number_of_genres = 4
-meta_genres = {
-		"Other": 0,
-		"Art": 1,
-		"Pop": 2,
-		"Traditional": 3
-	}
-
 def int_to_one_hot(input_val, oh_size=1024):
+	# Converts an int to a one-hot array
 	out = []
 	for i in range(oh_size):
 		if (i+1)==input_val:
@@ -65,6 +69,7 @@ def int_to_one_hot(input_val, oh_size=1024):
 	return out
 
 def convert_genre(genre):
+	# Convert a genre to a meta-genre.
 	genres = {
 		"Unknown": "Other",
 		"Acoustic": "Pop",
@@ -127,15 +132,14 @@ def convert_genre(genre):
 	return meta_genres.get(temp, 0)
 
 def number_to_label(genre_id):
+	# Convert a genre ID number to a string
 	meta_genres = ["Other", "Art", "Pop", "Traditional"]
 	if genre_id > len(meta_genres):
 		return meta_genres[0]
 	return meta_genres[genre_id]
 
-def descale_genre(genre):
-	return int(genre*number_of_genres)
-
 def one_hot_to_int(one_hot):
+	# Converts a one-hot to an integer
 	currentMax = 0.0
 	currentMaxId = 0
 	for i in range(len(one_hot)):
