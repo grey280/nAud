@@ -1,4 +1,5 @@
 # instid_graph: creates an unannotated graph of a song, roughly in the style of SoundCloud.
+# This code is a lightly modified version of [this gist](https://gist.github.com/moeseth/130cd92dc47c56c47030)
 
 from pydub import AudioSegment
 from matplotlib import pyplot as plot
@@ -6,7 +7,7 @@ from PIL import Image, ImageDraw
 import numpy as np
 import os
 
-src = "cache/test/WhiteSquareDemo.wav"
+src = "cache/test/default.wav"		# Wav file to read
 
 audio = AudioSegment.from_file(src)
 data = np.fromstring(audio._data, np.int16)
