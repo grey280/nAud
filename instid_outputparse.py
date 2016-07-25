@@ -9,6 +9,7 @@ inputs = []
 outputs = []
 
 def convert_kind(kind):
+	# Helper function - converts a string kind to a one-hot
 	out = []
 	if kind == "drum":
 		out= [0, 1, 0, 0]
@@ -22,6 +23,7 @@ def convert_kind(kind):
 	return output
 
 def revert_kind(kind):
+	# Helper funciton - converts a one-hot kind to a string
 	out = ""
 	if kind == 0:
 		out = "other"
@@ -34,6 +36,7 @@ def revert_kind(kind):
 	return out
 
 def one_hot_to_int(one_hot):
+	# Helper function - converts a one-hot to an integer
 	currentMax = 0.0
 	currentMaxId = 0
 	for i in range(len(one_hot)):
