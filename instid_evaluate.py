@@ -13,21 +13,19 @@ import data_handler
 
 # Settings
 ## Debug Settings
-log_level = 2 					# 0: silent, 1: errors only, 2: normal, 3: verbose
+log_level = 2 							# 0: silent, 1: errors only, 2: normal, 3: verbose
 
 ## IO settings
-test_series_name = "SAM1"		# name of the test series - files are saved as test_series_name.iteration.json/hdf5
-window_size = 3*44100 			# size of windows to feed
-# file_to_read = "cache/test/LizNelson_Rainfall_MIX.wav" # path to wav file to read
-# file_to_read = "cache/vocal/LizNelson_Rainfall_STEM_01.wav" #alternate: all vocal
-file_to_read = "cache/test/LizNelson_Rainfall_MIX.wav" #alternate: all guitar
+test_series_name = "default"			# name of the test series - files are saved as test_series_name.iteration.json/hdf5
+window_size = 3*44100 					# size of windows to feed
+file_to_read = "cache/test/default.wav" # path to wav file to read for testing
 
 ## Operational settings
 do_load_model = False
 do_load_weights = False
 load_from_previous_trial = True
-trial_iteration = 1 			# Which iteration of the trial series are you on? Used to load/save. Starts at 0.
-which_iteration = 1 			# Which iteration to load
+trial_iteration = 1 					# Which iteration of the trial series are you on? Used to load/save. Starts at 0.
+which_iteration = 1 					# Which iteration to load
 
 # Tools
 d = gdebug.Debugger(debug_level = log_level)

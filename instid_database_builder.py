@@ -4,10 +4,9 @@ import json
 
 working_file = "data/database.json"
 # Song format: "file_name": "kind"
-# 	example provided
 #   available kinds: guitar, vocal, drum, other
 songs_to_add={
-	# "LizNelson_Rainfall_STEM_04": "guitar"
+	# "LizNelson_Rainfall_STEM_04": "guitar" # example input
 }
 
 database = {}

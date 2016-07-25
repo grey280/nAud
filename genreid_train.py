@@ -30,7 +30,7 @@ early_stopping_patience = 3 			# how many epochs without improvement it'll go be
 
 ## IO settings
 input_data = "cache/the_120.plist" 		# location of the .plist file to read from
-test_series_name = "120g.mix"			# name of the test series - files are saved as test_series_name.iteration.json/hdf5
+test_series_name = "default"			# name of the test series - files are saved as test_series_name.iteration.json/hdf5
 tests_in_series = 3 					# number of tests to run in this series
 train_to = "Genre"						# train to identify what? "Genre", "Bitrate". Defaults to genre.
 

@@ -73,6 +73,7 @@ data_feed = np.asarray(initial_data_feed)
 data_feed = np.reshape(data_feed, (1, sample_duration*44100))
 
 while True:
+	# Main loop: this won't ever stop, this is intended to run indefinitely until quit by the user.
 	result = model.predict(data_feed, batch_size=1, verbose=0)
 	print(result[0])
 	## Send OSC Message
