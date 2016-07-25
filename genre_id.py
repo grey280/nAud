@@ -1,3 +1,5 @@
+# genre_id: Runs a genre identification neural network, transmits the data via OSC to the interactive poster display.
+
 from keras.models 		import Sequential, model_from_json
 from keras.layers 		import Dense, Dropout, Activation
 from keras.optimizers 	import SGD

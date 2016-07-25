@@ -1,3 +1,5 @@
+# genreid_buildLib: build a full-scale library for a genre identification neural network, using the local iTunes library.
+
 import plistlib
 import numpy				as np
 

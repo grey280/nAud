@@ -1,3 +1,5 @@
+# instid_graph: creates an unannotated graph of a song, roughly in the style of SoundCloud.
+
 from pydub import AudioSegment
 from matplotlib import pyplot as plot
 from PIL import Image, ImageDraw

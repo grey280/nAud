@@ -1,3 +1,5 @@
+# genreid_train: Train a neural network for genre identification.
+
 from keras.models 		import Sequential, model_from_json
 from keras.layers 		import Dense, Dropout, Activation
 from keras.optimizers 	import SGD

@@ -1,6 +1,6 @@
-import json
+# instid_outputparse: Takes a JSON array-of-arrays input, converts it to a dictionary and saves that as JSON
 
-# Takes a JSON array-of-arrays input, converts it to a dictionary and saves that as JSON
+import json
 
 working_file = "output/raw.json"
 output_file = "output/parsed.json"

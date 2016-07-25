@@ -1,3 +1,4 @@
+# gconvert: A bunch of helper functions for various conversions, used in both Genre ID and Instrument ID
 import hashlib
 import numpy			as np
 

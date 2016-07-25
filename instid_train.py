@@ -1,3 +1,5 @@
+# instid_train: Trains a neural network for instrument identification.
+
 from keras.models 		import Sequential, model_from_json
 from keras.layers 		import Dense, Dropout, Activation
 from keras.optimizers 	import SGD

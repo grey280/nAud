@@ -1,3 +1,5 @@
+# gdataset: Dataset class providing helper functions and sample management for Genre ID.
+
 import numpy 			as np
 import scipy.io.wavfile	as wav
 import random

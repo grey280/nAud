@@ -1,8 +1,11 @@
+# instid_database_builder: Database building utility for instrument identification. Any song in the songs_to_add dictionary is added to the database file indicated.
+
 import json
 
 working_file = "data/database.json"
 # Song format: "file_name": "kind"
 # 	example provided
+#   available kinds: guitar, vocal, drum, other
 songs_to_add={
 	# "LizNelson_Rainfall_STEM_04": "guitar"
 }

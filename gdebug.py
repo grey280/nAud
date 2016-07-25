@@ -1,4 +1,5 @@
-# gDebug: a quick-and-dirty debugging library for my own personal use
+# gDebug: A debugging library- basically a bunch of wrappers on print(), but I'm too used to JavaScript's console functions.
+
 import sys
 
 class Debugger:

@@ -1,3 +1,5 @@
+# genreid_evaluate: Evaluates an existing genre identification network - recommend printing to disc and then manipulating the data in a spreadsheet utility of your choice.
+
 from keras.models 		import Sequential, model_from_json
 from keras.layers 		import Dense, Dropout, Activation
 from keras.optimizers 	import SGD

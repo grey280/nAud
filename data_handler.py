@@ -1,4 +1,4 @@
-# sample_handler: given a file name, reads in a file and returns an array of windows
+# sample_handler: Interface for instrument ID neural networks, providing file I/O.
 import scipy.io.wavfile 		as wav
 import numpy					as np
 import json

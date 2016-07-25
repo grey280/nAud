@@ -1,3 +1,5 @@
+# genreid_buildLib_limited: similar to genreid_buildLib, but with a limited size, intended to balance the amount of songs in each category.
+
 import plistlib
 import numpy				as np
 
