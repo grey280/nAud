@@ -13,6 +13,8 @@ class Dataset:
 	start = 0
 	test_start = 0
 	def __init__(self, inpt, do_random=False, sample_duration=15, start_point=0, vstack_split=35, log_level=2, train_size=0.75, train_to="Genre"):
+		# Big ol' initializer function - defaults for everything, but lots of settings available.
+		# (Maybe one day I'll learn to use **kwargs. Today is not that day.)
 		self.input_values = inpt
 		self.locations=[]
 		self.test_locations=[]
@@ -38,10 +40,12 @@ class Dataset:
 				self.locations.append(temp_locs[i])
 
 	def shuffle(self):
-		# Shuffles the dataset. May be expanded in the future to better handle 'holding out test data' functionality.
+		# Shuffles the training dataset.
 		random.shuffle(self.locations)
 		self.start = 0
+
 	def shuffle_tests(self):
+		# Shuffles the test dataset.
 		random.shuffle(self.test_locations)
 		self.test_start = 0
 
@@ -98,12 +102,15 @@ class Dataset:
 		return scaled_genre, np.concatenate((data_1, data_2, data_3))
 
 	def get_data_point_count(self):
+		# Helper function, does what it says on the tin.
 		return len(self.locations)
 
 	def get_test_data_point_count(self):
+		# Helper function, does what it says on the tin.
 		return len(self.test_locations)
 
 	def get_songs(self):
+		# Generator to feed songs.
 		while True:
 			self.start += 1
 			# print("\nget_songs with self.start = {} (/{})".format(self.start, len(self.locations)))
@@ -118,6 +125,7 @@ class Dataset:
 			yield (out, g2)
 
 	def next_batch_infoless(self, data_point_count):
+		# Used for training - gets the next batch without the extra information.
 		data_array_feed, answer_array_feed, information_feed = self.next_batch(data_point_count)
 		return data_array_feed, answer_array_feed
 
@@ -164,6 +172,7 @@ class Dataset:
 		return data_array_feed, answer_array_feed, information_feed
 
 	def next_test_batch(self, data_point_count):
+		# Same as next_batch, but pulls from the test data rather than the training data.
 		location = self.test_locations[self.test_start]
 		data_point = self.input_values.get(location)
 		genre, output = self.parse_track(location, data_point)
