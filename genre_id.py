@@ -33,7 +33,7 @@ sample_duration = 20					# seconds of sample to read ((start_point+sample_durati
 do_random_parse = False					# true will use three 5-second clips from random places in the song, rather than a single 15-second block
 
 ## OSC Settings
-osc_ip_address = '167.96.36.246'		# IP address to connect to
+osc_ip_address = '167.96.17.77'		# IP address to connect to
 osc_port = 8020 					# IP port to connect to
 
 ## Operational settings
